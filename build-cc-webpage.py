@@ -202,7 +202,7 @@ def print_html():
                 plink(e, t) if e in glosses else e
                 for e, t in zip(entries, types)
             ]
-            print(f'<dt>Type</dt> <dd>{" / ".join(entrylinks)}</dd>')
+            print(f'<dt>Type</dt> <dd>{" / ".join(entrylinks)}</dd>')  # type: ignore
         if item['Alias']: print(f"<dt>Aliases</dt> <dd>{' | '.join(namestr(n) for n in item['Alias'])}</dd>")
         if item['InstanceOf']: print(f"<dt>Instance of</dt> <dd>{plink(item['InstanceOf'])}</dd>")
         if item['SubtypeOf']: print(f"<dt>Subtype of</dt> <dd>{' | '.join(plink(i) for i in item['SubtypeOf'])}</dd>")
