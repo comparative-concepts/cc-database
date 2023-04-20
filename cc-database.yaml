@@ -8225,7 +8225,7 @@
     a <a>referent</a> introduced into the discourse by the speaker that is not normally referred to again in subsequent discourse. The term <q>semantically specific</q> indicates that the referent is not in a nonreal context -- that is, it is not a nonspecific referent. We will use the shorter term <q>pragmatically nonspecific</q> and assume that such referents are also semantically specific. (Section 3.4.1)
 
 - Id: pragmatically specific (indefinite) article [cxn]
-  Type: cxn:obsolete
+  Type: cxn
   InstanceOf: pragmatically specific (indefinite) referent [inf] / article [cxn]
   Alias:
     - pragmatically specific (indefinite) article
@@ -8237,7 +8237,7 @@
   Definition: ""
 
 - Id: pragmatically specific (indefinite) referent [inf]
-  Type: inf:obsolete
+  Type: inf
   InstanceOf: pragmatically specific (indefinite) referent [inf] / article [cxn]
   Alias:
     - pragmatically specific (indefinite) referent
@@ -8250,7 +8250,7 @@
   Definition: ""
 
 - Id: pragmatically specific (indefinite) referent [inf] / article [cxn]
-  Type: inf/cxn:obsolete
+  Type: inf/cxn
   InstanceOf: ""
   Alias:
     - pragmatically specific (indefinite) referent/article
