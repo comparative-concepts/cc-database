@@ -1,11 +1,10 @@
 
 import sys
 import re
-# import json
 import yaml
 from datetime import datetime
 
-
+# Used when finding the closest match of a link
 TYPES = {
     'construction': '[cxn]',
     'constructions': '[cxn]',
@@ -23,6 +22,7 @@ TYPES = {
     'relations': '[sem]',
 }
 
+# What general definitions do different types correspond to?
 TYPE_TO_ENTRY = {
     'cxn': 'construction [def]',
     'str': 'strategy [def]',
@@ -30,23 +30,27 @@ TYPE_TO_ENTRY = {
     'sem': 'meaning [def]',
 }
 
+# Read the CC database
 _, glossfile = sys.argv
 with open(glossfile) as F:
     glosslist = yaml.load(F, Loader=yaml.CLoader)
 
 glosses = {item['Id']: item for item in glosslist}
 
-
+# Regexp to find links within a CC definition
 linkre = re.compile(r'<a *([^>]*?)>(.+?)</a>')
 
+# All possible names, ids and aliases
 allnames = {name.casefold(): id for id, item in glosses.items() for name in [id] + item['Alias']}
 allids = set(id.casefold() for id in glosses)
 
+# No alias should be an existing ID
 for id, item in glosses.items():
     for alias in item['Alias']: 
         assert alias.casefold() not in allids, (alias, item)
 
 
+# Clean a link by trying some very common English inflection patterns
 def clean_link(link):
     link = link.replace("’", "'").casefold()
     link = re.sub(r"[^'a-z/()-]+", ' ', link).strip()
@@ -71,6 +75,7 @@ def clean_link(link):
     return link
 
 
+# Find the closest CC id that a link refers to
 def find_closest(link):
     for name, id in allnames.items():
         if name == link:
@@ -86,6 +91,7 @@ def find_closest(link):
     print(f"*** ERROR ***  Can't find link '{link}'", file=sys.stderr)
 
 
+# Transform CC definitions into nicely formatted HTML
 def collect_deflinks():
     for item in glosses.values():
         defn = item['Definition']
@@ -118,6 +124,7 @@ def collect_deflinks():
         item['PrintDefinition'] = prdef
 
 
+# Very simple CSS for the HTML database
 CSS = """
 body {margin: 20px; font-family: Georgia, serif}
 dt {float: left; clear: left; width: 8em; font-weight: bold; margin-bottom: 5px}
@@ -130,7 +137,7 @@ q.dq {quotes: "“" "”"}
 """
 
 
-# Create URI-friendly id's
+# Make CC id's URI-friendly
 def idstr(id):
     return (id
         .replace('(', '').replace(')', '')
@@ -141,13 +148,16 @@ def idstr(id):
         .replace('--', '-')
     )
 
-# Make id's printing-friendly
+
+# Make CC id's printing-friendly
 def namestr(name):
     return (name
         .replace('--', '–')
         .replace('[', '(<i>').replace(']', '</i>)')
     )
 
+
+# Show a CC link in HTML, with an actual link to the CC in the database
 def plink(id, name=None):
     if name is None: name = id
     if id not in glosses:
@@ -164,6 +174,7 @@ def plink(id, name=None):
     return f'<a href="#{idstr(id)}" title="{title}">{namestr(name)}</a>'
 
 
+# Print the whole database as a single HTML file
 def print_html():
     print('<!DOCTYPE html>')
     print(f'<html><head><meta charset="utf-8"/><style>{CSS}</style></head><body>')
@@ -203,11 +214,16 @@ def print_html():
     print('</body></html>')
 
 
+# Here we collect all CC's and other terms that are not found in the database
 notfound_links = set()
 
+
+# Build HTML code for each of the CC definitions
 collect_deflinks()
 print_html()
 
+
+# Print the CC id's that were not found in the database
 if notfound_links:
     print(
         f"# {len(notfound_links)} ID's not found:\n -",
