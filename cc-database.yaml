@@ -7462,16 +7462,6 @@
   Definition: >-
     a type of <a>contrast</a> that involves two propositions that exhibit some sort of parallelism in their structure, and there is a difference in semantic components in parallel positions that is construed as a <a>salient</a> contrast. Three subtypes of parallel contrast are <a>listing contrast</a>, <a>verbal contrast</a>, and <a>nonverbal contrast</a>. (Section 11.4.1)
 
-- Id: parametric concessive conditional strategy [str]
-  Type: str:obsolete
-  InstanceOf: ""
-  Alias: []
-  SubtypeOf:
-    - strategy [def]
-  AssociatedTo:
-    - concessive conditional construction [cxn]
-  Definition: ""
-
 - Id: part--whole relation [sem]
   Type: sem
   InstanceOf: ""
