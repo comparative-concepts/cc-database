@@ -5893,17 +5893,6 @@
   Definition: >-
     a <a>predication</a> predicated of one <a>salient</a> <a>argument</a>. <i>Example</i>: in <i>Sarah is swimming</i>, swimming is an intransitive predication because it is predicated of one argument, Sarah. (Section 6.1.2)
 
-- Id: intransitive recruitment
-  Type: str:obsolete
-  InstanceOf: ""
-  Alias: []
-  SubtypeOf:
-    - recruitment strategy [str]
-  AssociatedTo:
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
-  Definition: ""
-
 - Id: introverted event [sem]
   Type: sem
   InstanceOf: introverted event [sem] / verb [cxn]
