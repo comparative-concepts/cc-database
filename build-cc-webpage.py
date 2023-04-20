@@ -23,6 +23,12 @@ TYPES = {
     'relations': '[sem]',
 }
 
+TYPE_TO_ENTRY = {
+    'cxn': 'construction [def]',
+    'str': 'strategy [def]',
+    'inf': 'information packaging [def]',
+    'sem': 'meaning [def]',
+}
 
 _, glossfile = sys.argv
 with open(glossfile) as F:
@@ -172,6 +178,20 @@ def print_html():
         print(f'<div class="definition">')
         print(f'<h2 id="{idstr(id)}"><a href="#{idstr(id)}"">{namestr(id)}</a></h2>')
         print(f'<dl>')
+        typ = item['Type']
+        types = typ.split('/')
+        entries = [TYPE_TO_ENTRY.get(t) for t in types]
+        if typ == 'def':
+            print(f'<dt>Type</dt> <dd>{typ}</dd>')
+        elif not all(entries):
+            notfound_links.add(typ)
+            print(f'<dt>Type</dt> <dd class="notfound">{typ}</dd>')
+        else:
+            entrylinks = [
+                plink(e, t) if e in glosses else e
+                for e, t in zip(entries, types)
+            ]
+            print(f'<dt>Type</dt> <dd>{" / ".join(entrylinks)}</dd>')
         if item['Alias']: print(f"<dt>Aliases</dt> <dd>{' | '.join(namestr(n) for n in item['Alias'])}</dd>")
         if item['InstanceOf']: print(f"<dt>Instance of</dt> <dd>{plink(item['InstanceOf'])}</dd>")
         if item['SubtypeOf']: print(f"<dt>Subtype of</dt> <dd>{' | '.join(plink(i) for i in item['SubtypeOf'])}</dd>")
