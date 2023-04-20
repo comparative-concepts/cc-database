@@ -9987,17 +9987,6 @@
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with a special form functioning as the nonsubject argument phrase. <i>Examples</i>: English <i>I saw myself</i> and <i>Mary and Sue praised each other</i> construe the participants -- I, and Mary and Sue, respectively -- as playing two roles in the seeing and praising event, but with special object forms <i>myself</i> and <i>each other</i> to express that the events are a reflexive event and a reciprocal event, respectively. (Section 7.2)
 
-- Id: specialized transitive recruitment
-  Type: str:obsolete
-  InstanceOf: ""
-  Alias: []
-  SubtypeOf:
-    - recruitment strategy [str]
-  AssociatedTo:
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
-  Definition: ""
-
 - Id: species term [cxn]
   Type: cxn
   InstanceOf: ""
