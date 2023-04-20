@@ -10892,17 +10892,6 @@
   Definition: >-
     a <a>predication</a> predicated of two <a>salient</a> <a>arguments</a>. <i>Example</i>: in <i>Sarah wrote the letter</i>, writing is a transitive predication because it is predicated of two arguments, Sarah and the letter. (Section 6.1.2)
 
-- Id: transitive recruitment
-  Type: str:obsolete
-  InstanceOf: ""
-  Alias: []
-  SubtypeOf:
-    - recruitment strategy [str]
-  AssociatedTo:
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
-  Definition: ""
-
 - Id: Transitivity Hierarchy [def]
   Type: def
   InstanceOf: ""
