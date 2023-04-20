@@ -212,7 +212,7 @@
   Alias:
     - actor
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -649,7 +649,7 @@
   Alias:
     - alternative proposition
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - contrast [inf]
     - identificational [inf]
@@ -2027,7 +2027,7 @@
   Alias:
     - comment
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - topic--comment [inf]
   Definition: >-
@@ -2801,7 +2801,7 @@
   Alias:
     - controller
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -2813,7 +2813,7 @@
   Alias:
     - converb
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - asyndetic [str]
     - converb strategy [str]
@@ -3518,7 +3518,8 @@
   SubtypeOf:
     - information packaging [def]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    some part of the information packaging that is related to the current discourse of the utterance.
 
 - Id: discourse deictic [inf]
   Type: inf
@@ -3620,7 +3621,7 @@
   Alias:
     - domain
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -3749,23 +3750,25 @@
   Definition: >-
     a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
 
-- Id: element (fnbr)
+- Id: strategy element [str]
   Type: inf:fnbr
   InstanceOf: ""
   Alias: []
   SubtypeOf:
     - information packaging [def]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    used exclusively for strategy concepts that are defined as part of another.
 
-- Id: element (fnbr) [str]
+- Id: information element [str]
   Type: str:fnbr
   InstanceOf: ""
   Alias: []
   SubtypeOf:
     - strategy [def]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    used exclusively for information packaging concepts that are defined as part of another.
 
 - Id: element [cxn]
   Type: cxn
@@ -4659,7 +4662,7 @@
   Alias:
     - focus
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - identificational [inf]
     - presupposed open proposition [inf]
@@ -5377,7 +5380,7 @@
   Alias:
     - index
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -5390,7 +5393,7 @@
     - indexation feature
     - agreement feature
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - controller [str]
     - index [str]
@@ -6132,7 +6135,7 @@
   Alias:
     - link
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - poset [inf]
   Definition: >-
@@ -8592,7 +8595,7 @@
     - POP
     - presupposed open proposition
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - identificational [inf]
   Definition: >-
@@ -8723,7 +8726,7 @@
   Alias:
     - prop
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -9589,7 +9592,7 @@
   Alias:
     - satellite
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - satellite-framing strategy [str]
   Definition: >-
@@ -9844,7 +9847,7 @@
   Alias:
     - setting
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -10607,7 +10610,7 @@
   Alias:
     - target
   SubtypeOf:
-    - element (fnbr) [str]
+    - information element [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -10786,7 +10789,7 @@
   Alias:
     - topic
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - topic--comment [inf]
     - topic phrase [cxn]
@@ -10984,7 +10987,7 @@
   Alias:
     - trigger
   SubtypeOf:
-    - element (fnbr)
+    - strategy element [str]
   AssociatedTo:
     - poset [inf]
   Definition: >-
