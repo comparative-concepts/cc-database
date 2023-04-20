@@ -4077,7 +4077,6 @@
     - evaluative predicate
   SubtypeOf:
     - complement-taking predicate [cxn]
-    - complement-taking predicate [cxn]
   AssociatedTo: []
   Definition: ""
 
@@ -6774,7 +6773,6 @@
   AssociatedTo:
     - complement clause construction [cxn]
     - complement-taking predicate [cxn]
-    - complement-taking predicate [cxn]
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the <a>meaning</a> of the <a>complement-taking predicate</a> requires that one or more <a>participants</a> of the <a>complement</a> <a>event</a> is shared with the event denoted by the complement-taking predicate. <i>Example</i>: in <i>I told Fred to bring me a screwdriver</i>, the <a>agent</a> of the complement bringing event is necessarily also the <a>causee</a> of the manipulative event of telling. (Section 18.2.2)
 
@@ -7004,7 +7002,6 @@
   Type: cxn
   InstanceOf: ""
   Alias:
-    - nonpredicational clauses
     - nonpredicational clauses
   SubtypeOf:
     - nonprototypical predication [cxn]
@@ -7685,7 +7682,6 @@
     - perception complement-taking predicate
   SubtypeOf:
     - complement-taking predicate [cxn]
-    - complement-taking predicate [cxn]
   AssociatedTo: []
   Definition: ""
 
@@ -7718,7 +7714,6 @@
   Alias:
     - perception verb
   SubtypeOf:
-    - complement-taking predicate [cxn]
     - complement-taking predicate [cxn]
   AssociatedTo: []
   Definition: ""
@@ -11150,7 +11145,6 @@
   Alias:
     - utterance predicate
   SubtypeOf:
-    - complement-taking predicate [cxn]
     - complement-taking predicate [cxn]
   AssociatedTo: []
   Definition: ""
