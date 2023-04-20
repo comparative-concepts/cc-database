@@ -212,7 +212,7 @@
   Alias:
     - actor
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -649,7 +649,7 @@
   Alias:
     - alternative proposition
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - contrast [inf]
     - identificational [inf]
@@ -2027,7 +2027,7 @@
   Alias:
     - comment
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - topic--comment [inf]
   Definition: >-
@@ -2801,7 +2801,7 @@
   Alias:
     - controller
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -2813,7 +2813,7 @@
   Alias:
     - converb
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - asyndetic [str]
     - converb strategy [str]
@@ -3621,7 +3621,7 @@
   Alias:
     - domain
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -3750,7 +3750,7 @@
   Definition: >-
     a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
 
-- Id: strategy element [str]
+- Id: strategy element (fnbr)
   Type: inf:fnbr
   InstanceOf: ""
   Alias: []
@@ -3760,7 +3760,7 @@
   Definition: >-
     used exclusively for strategy concepts that are defined as part of another.
 
-- Id: information element [str]
+- Id: information element (fnbr)
   Type: str:fnbr
   InstanceOf: ""
   Alias: []
@@ -4662,7 +4662,7 @@
   Alias:
     - focus
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - identificational [inf]
     - presupposed open proposition [inf]
@@ -5380,7 +5380,7 @@
   Alias:
     - index
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -5393,7 +5393,7 @@
     - indexation feature
     - agreement feature
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - controller [str]
     - index [str]
@@ -6124,7 +6124,7 @@
   Alias:
     - link
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - poset [inf]
   Definition: >-
@@ -8574,7 +8574,7 @@
     - POP
     - presupposed open proposition
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - identificational [inf]
   Definition: >-
@@ -8705,7 +8705,7 @@
   Alias:
     - prop
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -9571,7 +9571,7 @@
   Alias:
     - satellite
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - satellite-framing strategy [str]
   Definition: >-
@@ -9826,7 +9826,7 @@
   Alias:
     - setting
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -10578,7 +10578,7 @@
   Alias:
     - target
   SubtypeOf:
-    - information element [str]
+    - information element (fnbr)
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -10757,7 +10757,7 @@
   Alias:
     - topic
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - topic--comment [inf]
     - topic phrase [cxn]
@@ -10944,7 +10944,7 @@
   Alias:
     - trigger
   SubtypeOf:
-    - strategy element [str]
+    - strategy element (fnbr)
   AssociatedTo:
     - poset [inf]
   Definition: >-
