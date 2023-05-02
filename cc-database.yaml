@@ -230,7 +230,7 @@
   Alias:
     - actor
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -667,7 +667,7 @@
   Alias:
     - alternative proposition
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - contrast [inf]
     - identificational [inf]
@@ -2045,7 +2045,7 @@
   Alias:
     - comment
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - topic--comment [inf]
   Definition: >-
@@ -2819,7 +2819,7 @@
   Alias:
     - controller
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -2831,7 +2831,7 @@
   Alias:
     - converb
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - asyndetic [str]
     - converb strategy [str]
@@ -3639,7 +3639,7 @@
   Alias:
     - domain
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -3773,7 +3773,7 @@
   InstanceOf: ""
   Alias: []
   SubtypeOf:
-    - information packaging [def]
+    - strategy [def]
   AssociatedTo: []
   Definition: >-
     used exclusively for strategy concepts that are defined as part of another.
@@ -3783,7 +3783,7 @@
   InstanceOf: ""
   Alias: []
   SubtypeOf:
-    - strategy [def]
+    - information packaging [def]
   AssociatedTo: []
   Definition: >-
     used exclusively for information packaging concepts that are defined as part of another.
@@ -4679,7 +4679,7 @@
   Alias:
     - focus
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - identificational [inf]
     - presupposed open proposition [inf]
@@ -5397,7 +5397,7 @@
   Alias:
     - index
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -5410,7 +5410,7 @@
     - indexation feature
     - agreement feature
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - controller [str]
     - index [str]
@@ -6141,7 +6141,7 @@
   Alias:
     - link
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - poset [inf]
   Definition: >-
@@ -8587,7 +8587,7 @@
     - POP
     - presupposed open proposition
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - identificational [inf]
   Definition: >-
@@ -8718,7 +8718,7 @@
   Alias:
     - prop
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -9584,7 +9584,7 @@
   Alias:
     - satellite
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - satellite-framing strategy [str]
   Definition: >-
@@ -9839,7 +9839,7 @@
   Alias:
     - setting
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -10591,7 +10591,7 @@
   Alias:
     - target
   SubtypeOf:
-    - information element (FN-Br) [inf]
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -10770,7 +10770,7 @@
   Alias:
     - topic
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - topic--comment [inf]
     - topic phrase [cxn]
@@ -10957,7 +10957,7 @@
   Alias:
     - trigger
   SubtypeOf:
-    - strategy element (FN-Br) [str]
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - poset [inf]
   Definition: >-
