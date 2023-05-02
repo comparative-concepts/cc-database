@@ -1,4 +1,22 @@
 
+- Id: alignment system category (FN-Br) [str]
+  Type: str
+  InstanceOf: ""
+  Alias: []
+  SubtypeOf:
+    - strategy [def]
+  AssociatedTo: []
+  Definition: ""
+
+- Id: semantic relation (FN-Br) [sem]
+  Type: sem
+  InstanceOf: ""
+  Alias: []
+  SubtypeOf:
+    - meaning [def]
+  AssociatedTo: []
+  Definition: ""
+
 - Id: A role [sem]
   Type: sem
   InstanceOf: ""
@@ -55,7 +73,7 @@
   Alias:
     - absolutive category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - ergative alignment system [str]
     - S role [sem]
@@ -113,7 +131,7 @@
   Alias:
     - accusative category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - accusative alignment system [str]
     - P role [sem]
@@ -199,7 +217,7 @@
     - actor category
     - agentive category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - active alignment system [str]
     - active [inf]
@@ -212,7 +230,7 @@
   Alias:
     - actor
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -252,7 +270,7 @@
   Alias:
     - additive
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - additive (focus) operator [cxn]
     - conjunctive coordination [cxn]
@@ -649,7 +667,7 @@
   Alias:
     - alternative proposition
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - contrast [inf]
     - identificational [inf]
@@ -821,7 +839,7 @@
   Alias:
     - announcement
   SubtypeOf:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   AssociatedTo:
     - event-central [inf]
   Definition: >-
@@ -1016,7 +1034,7 @@
   Alias:
     - apprehensional
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - purpose [sem]
   Definition: >-
@@ -1224,7 +1242,7 @@
   Alias:
     - background description
   SubtypeOf:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   AssociatedTo:
     - event-central [inf]
   Definition: >-
@@ -1567,7 +1585,7 @@
   Alias:
     - causal
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - conditional relation [sem]
     - concessive relation [sem]
@@ -2027,7 +2045,7 @@
   Alias:
     - comment
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - topic--comment [inf]
   Definition: >-
@@ -2105,7 +2123,7 @@
   Alias:
     - comparative conditional relation
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - comparative conditional construction [cxn]
   Definition: ""
@@ -2392,7 +2410,7 @@
     - concessive conditional relation
     - conditional concessive relation
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - concessive conditional construction [cxn]
     - neutral epistemic stance [sem]
@@ -2429,7 +2447,7 @@
   Alias:
     - concessive relation
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - positive epistemic stance [sem]
     - concessive construction [cxn]
@@ -2534,7 +2552,7 @@
   Alias:
     - conditional relation
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - conditional construction [cxn]
   Definition: ""
@@ -2608,7 +2626,7 @@
   Alias:
     - consecutive
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - complex figure [inf]
   Definition: >-
@@ -2745,7 +2763,7 @@
   Alias:
     - contrast
   SubtypeOf:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   AssociatedTo:
     - identificational [cxn]
   Definition: >-
@@ -2801,7 +2819,7 @@
   Alias:
     - controller
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -2813,7 +2831,7 @@
   Alias:
     - converb
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - asyndetic [str]
     - converb strategy [str]
@@ -3263,7 +3281,7 @@
   Alias:
     - dependent time reference
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - complement clause construction [cxn]
     - reference point [sem]
@@ -3479,7 +3497,7 @@
   Alias:
     - direct object category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - indirective alignment system [str]
     - T role [sem]
@@ -3511,7 +3529,7 @@
   Definition: >-
     an <a>event</a> in which the change that a <a>participant</a> undergoes in the course of an event is in one <dq>direction</dq>. <i>Example</i>: in <i>The storm expanded</i>, there is a gradual unidirectional increase in size, and so the event is a directed change. (Section 6.2.1)
 
-- Id: discourse context (fnbr)
+- Id: discourse context (FN-Br) [inf]
   Type: inf:fnbr
   InstanceOf: ""
   Alias: []
@@ -3621,7 +3639,7 @@
   Alias:
     - domain
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -3750,8 +3768,8 @@
   Definition: >-
     a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
 
-- Id: strategy element (fnbr)
-  Type: inf:fnbr
+- Id: strategy element (FN-Br) [str]
+  Type: str:fnbr
   InstanceOf: ""
   Alias: []
   SubtypeOf:
@@ -3760,8 +3778,8 @@
   Definition: >-
     used exclusively for strategy concepts that are defined as part of another.
 
-- Id: information element (fnbr)
-  Type: str:fnbr
+- Id: information element (FN-Br) [inf]
+  Type: inf:fnbr
   InstanceOf: ""
   Alias: []
   SubtypeOf:
@@ -4040,7 +4058,7 @@
   Alias:
     - ergative category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - ergative alignment system [str]
     - A role [sem]
@@ -4249,7 +4267,7 @@
   Alias:
     - existential
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - existential negation construction [cxn]
     - thetic [inf]
@@ -4400,7 +4418,7 @@
   Alias:
     - explanation
   SubtypeOf:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   AssociatedTo:
     - event-central [inf]
   Definition: >-
@@ -4587,7 +4605,7 @@
     - locative relation
     - spatial figure--ground relation
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - locative modification construction [cxn]
     - location clause [cxn]
@@ -4661,7 +4679,7 @@
   Alias:
     - focus
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - identificational [inf]
     - presupposed open proposition [inf]
@@ -5246,7 +5264,7 @@
     - undergoer
     - stative category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - active alignment system [str]
     - inactive [inf]
@@ -5367,7 +5385,7 @@
   Alias:
     - independent time reference
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - complement clause construction [cxn]
   Definition: >-
@@ -5379,7 +5397,7 @@
   Alias:
     - index
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -5392,7 +5410,7 @@
     - indexation feature
     - agreement feature
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - controller [str]
     - index [str]
@@ -5478,7 +5496,7 @@
   Alias:
     - indirect object category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - indirective alignment system [str]
   Definition: >-
@@ -5578,7 +5596,7 @@
   Alias:
     - information gap
   SubtypeOf:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   AssociatedTo:
     - identificational [inf]
   Definition: >-
@@ -5863,7 +5881,7 @@
   Alias:
     - interruption
   SubtypeOf:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   AssociatedTo:
     - event-central [inf]
   Definition: >-
@@ -6123,7 +6141,7 @@
   Alias:
     - link
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - poset [inf]
   Definition: >-
@@ -6480,7 +6498,7 @@
     - means
     - positive circumstantial
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event accompanies the other event and further characterizes the other event in some way. <i>Example</i>: <i>He got into the army by lying about his age</i> is a <a>figure--ground construal</a> of the means relation in an <a>adverbial clause construction</a>, and <i>He lied about his age and got into the army</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the accompanying event is construed as the ground. (Section 15.3.1)
@@ -6808,7 +6826,7 @@
   Alias:
     - negative circumstantial
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - means [sem]
   Definition: >-
@@ -6916,7 +6934,7 @@
   Alias:
     - nominative category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - accusative alignment system [str]
     - A role [sem]
@@ -7998,7 +8016,7 @@
   Alias:
     - possession relation
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - possessive (modification) construction [cxn]
     - possession clause [cxn]
@@ -8136,7 +8154,7 @@
     - information packaging [def]
   AssociatedTo:
     - main clause [cxn]
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   Definition: >-
     the <a>information</a> added to the discourse context when a <u>sentence</u> is uttered, or, more precisely, <q>the proposition expressed by a sentence which the hearer is expected to know or take for granted as a result of hearing the sentence uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>Alarms ringing, the burglar fled</i>, the <a>clause</a> <i>the burglar fled</i> is pragmatically asserted. The criterion typically used for pragmatic assertion is that the content of a sentence can be negated or questioned, though other criteria are sometimes used, such as hedging. (Sections 13.2.1, <b>15.1.2</b>)
 
@@ -8150,7 +8168,7 @@
   SubtypeOf:
     - information packaging [def]
   AssociatedTo:
-    - discourse context (fnbr)
+    - discourse context (FN-Br) [inf]
   Definition: >-
     the set of <a>propositions</a> evoked by the <a>constructions</a> in a sentence <q>which the speaker assumes the hearer already knows or is ready to take for granted at the time the sentence is uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>I'm grateful that you finished cleaning the house</i>, the proposition that you finished cleaning the house is presupposed, while the proposition that I am grateful about it is <a>asserted</a>. (Section 11.4.1)
 
@@ -8569,7 +8587,7 @@
     - POP
     - presupposed open proposition
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - identificational [inf]
   Definition: >-
@@ -8617,7 +8635,7 @@
   Alias:
     - primary object category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - secundative (ditransitive) alignment [str]
     - R role [sem]
@@ -8700,7 +8718,7 @@
   Alias:
     - prop
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -8930,7 +8948,7 @@
   Alias:
     - purpose
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event serves as the intended outcome as a result of bringing about the other event. <i>Example</i>: <i>I will grab a stick to defend myself</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>I will grab a stick and defend myself</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the intended event is construed as the ground. The intended event is unrealized, which disfavors a complex figure construal (this problem is avoided in the example here because both events are future events). (Section 15.3.1)
@@ -9566,7 +9584,7 @@
   Alias:
     - satellite
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - satellite-framing strategy [str]
   Definition: >-
@@ -9640,7 +9658,7 @@
   Alias:
     - secondary object category
   SubtypeOf:
-    - role [def]
+    - alignment system category (FN-Br) [str]
   AssociatedTo:
     - indirective alignment system [str]
     - T role [sem]
@@ -9821,7 +9839,7 @@
   Alias:
     - setting
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - theater metaphor [inf]
   Definition: >-
@@ -9844,7 +9862,7 @@
   Alias:
     - simple contrast
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - adversative coordination [cxn]
   Definition: >-
@@ -9894,7 +9912,7 @@
     - simultaneous
     - overlap
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where two events temporally coincide or overlap. <i>Example</i>: <i>He sang while she played the banjo</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>He sang and she played the banjo</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. (Section 15.3.1)
@@ -10415,7 +10433,7 @@
   Alias:
     - substitutive
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event is characterized by the substitution of a second event that is not normally a part of the first event. <i>Example</i>: <i>We barbecued chicken at home instead of going out to eat</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>We didn't go out to eat, and barbecued chicken at home (instead)</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the substituted event is construed as the ground. (Section 15.3.1)
@@ -10426,7 +10444,7 @@
   Alias:
     - subtractive
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - additive [sem]
   Definition: >-
@@ -10573,7 +10591,7 @@
   Alias:
     - target
   SubtypeOf:
-    - information element (fnbr)
+    - information element (FN-Br) [inf]
   AssociatedTo:
     - indexical strategy, indexation [str]
   Definition: >-
@@ -10741,7 +10759,7 @@
   Alias:
     - token identity
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     two referents are the same individual. <i>Example</i>: in <i>I picked up a red candy and gave it to Greg</i>, the referent of <i>it</i> is the same individual as the referent of <i>a red candy</i>. Contrasts with <a>type identity</a>. (Section 5.4)
@@ -10752,7 +10770,7 @@
   Alias:
     - topic
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - topic--comment [inf]
     - topic phrase [cxn]
@@ -10939,7 +10957,7 @@
   Alias:
     - trigger
   SubtypeOf:
-    - strategy element (fnbr)
+    - strategy element (FN-Br) [str]
   AssociatedTo:
     - poset [inf]
   Definition: >-
@@ -10997,7 +11015,7 @@
   Alias:
     - type identity
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     two referents are of the same type but not the same individual. <i>Example</i>: in <i>I took a red candy and Greg took a green one</i>, the referent of <i>green one</i> is the same type as the referent of <i>red candy</i>, but is a different individual. (Section 5.4)
@@ -11087,7 +11105,7 @@
   Alias:
     - unexpected co-occurrence
   SubtypeOf:
-    - semantic relation [def]
+    - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - adversative coordination [cxn]
   Definition: >-
