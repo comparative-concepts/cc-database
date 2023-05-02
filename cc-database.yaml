@@ -202,7 +202,8 @@
   Alias:
     - active alignment system
     - active alignment
-  SubtypeOf: []
+  SubtypeOf: 
+    - alignment system [str]
   AssociatedTo: []
   Definition: >-
     a <a>system</a> in which some <a>S roles</a> are co-expressed with the <a>A role</a>, and other S roles are co-expressed with the <a>P role</a>. <i>Example</i>: in Lakhota, the <a>index</a> for the S role of <q>come</q> is the same <a>form</a> as the index for the A role of <q>help</q>, but the index for the S role of <q>be sick</q> is the same form as the index for the P role of <q>help</q>. (Section 6.3.3)
@@ -1672,7 +1673,7 @@
   Alias:
     - causative--applicative co-expression
   SubtypeOf:
-    - system [str]
+    - co-expression strategy [str]
   AssociatedTo: []
   Definition: >-
     a <a>system</a> in which the <a>causative construction</a> and an <a>applicative construction</a> are identical. <i>Example</i>: Kinyarwanda <i>Umugabo a-ra-andik-iiš-a umugabo ibárúwa</i> <q>The man is making the man write a letter</q> is a causative construction with the overt suffix <i>-iiš</i> on the verb, and <i>Umugabo a-ra-andik-iiš-a ikárámu ibárúwa</i> <q>The man is writing a letter with a pen</q> is an applicative construction with the <a>instrument role</a> expressed as <a>applicative object</a>, with the same suffix <i>-iiš</i> on the verb. (Section 9.3)
@@ -1899,7 +1900,8 @@
     - co-expression strategy
     - co-express
     - co-expression
-  SubtypeOf: []
+  SubtypeOf:
+    - system [str]
   AssociatedTo: []
   Definition: >-
     a <a>system</a> of two (or more) functionally related <a>constructions</a> that uses the same <a>form</a> to express a <a>role</a> in one construction and a role in the other construction. <i>Example</i>: Mandarin uses the same particle <i>de</i> for the <a>object</a> <a>modification</a> (<a genitive phrase>genitive</a>) <a>construction</a> and for the <a>action</a> <a>modification</a> (<a>relative clause</a>) <a>construction</a>. (Section 1.4)
@@ -2156,7 +2158,7 @@
   Alias:
     - comparative form
   SubtypeOf:
-    - degree modifier [str]
+    - admodifier [cxn]
   AssociatedTo:
     - comparative construction [cxn]
   Definition: >-
@@ -3183,8 +3185,9 @@
     - degree modifier
     - degree adverb
   SubtypeOf:
+    - overt (coding) strategy [str]
+  AssociatedTo:
     - admodifier [cxn]
-  AssociatedTo: []
   Definition: >-
     a scalar <a>admodifier</a> expressed by an independent word. <i>Example</i>: <i>very</i> in <i>very happy</i> is a degree modifier. (Section 4.1.2)
 
@@ -3714,7 +3717,7 @@
   Alias:
     - downtoner
   SubtypeOf:
-    - degree modifier [str]
+    - admodifier [cxn]
   AssociatedTo: []
   Definition: >-
     indicates a lower than normal value on a <a>property</a> scale. <i>Example</i>: in <i>somewhat long, somewhat</i> indicates a value shorter than is normal for length. (Section 4.1.2)
@@ -3725,10 +3728,10 @@
   Alias:
     - dual role strategy
   SubtypeOf:
-    - strategy [def]
+    - recruitment strategy [str]
   AssociatedTo:
     - reflexive construction [cxn]
-    - reciprocal event [sem]
+    - reciprocal construction [cxn]
     - transitive construction [cxn]
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: the Sa verb form <i>ir-ben-ir</i> [<sc>3du</sc>-shoot-<sc>3du</sc>] <q>They shoot them / they shoot themselves / they shoot each other</q> construes the plural participants as playing distinct roles, and thereby uses the transitive construction (<q>They shoot them</q>) to express either a reflexive event (<q>They shoot themselves</q>) or a reciprocal event (<q>They shoot each other</q>). (Section 7.2)
@@ -5237,8 +5240,7 @@
     - hortative
   SubtypeOf:
     - speech acts [inf]
-  AssociatedTo:
-    - speech acts [cxn]
+  AssociatedTo: []
   Definition: ""
 
 - Id: inactive [inf]
@@ -5734,7 +5736,7 @@
   Alias:
     - intensifier
   SubtypeOf:
-    - degree modifier [str]
+    - admodifier [cxn]
   AssociatedTo: []
   Definition: >-
     indicates a higher than normal value on a <a>property</a> scale. <i>Example</i>: in <i>very long, very</i> indicates a value longer than normal. (Section 4.1.2)
@@ -6521,7 +6523,7 @@
   Alias:
     - measurement
   SubtypeOf:
-    - degree modifier [str]
+    - admodifier [cxn]
   AssociatedTo: []
   Definition: >-
     indicates a calibratable value on a <a>property</a> scale. <i>Example</i>: in <i>three feet long, three feet</i> measures the value of length for the object in question. (Section 4.1.2)
@@ -6566,7 +6568,8 @@
   InstanceOf: ""
   Alias:
     - mental space
-  SubtypeOf: []
+  SubtypeOf: 
+    - meaning [def]
   AssociatedTo: []
   Definition: >-
     a context of belief, desire, or another mental state of a person which includes <a>propositions</a> that are taken to be true in that context, and <a>entities</a> that are taken to exist in that context. <i>Example</i>: in <i>Harry thinks that a mountain lion is in the pine tree</i>, the proposition that there is a mountain lion in the pine tree, and the existence of that particular mountain lion, is in the mental space of Harry's beliefs. (Sections 17.3.1, 18.2.2)
@@ -6898,8 +6901,7 @@
   SubtypeOf:
     - referring phrase [cxn]
     - prototypical construction [cxn]
-  AssociatedTo:
-    - object concept [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>referring phrase</a> whose <a>head</a> denotes an <a>object concept</a>. <i>Example</i>: <i>a large balloon</i> is a nominal phrase; the head <i>balloon</i> denotes an object concept. A nominal phrase is the prototypical referring phrase, and its head is a <a>noun</a>. (Section 2.2.3)
 
@@ -7316,9 +7318,9 @@
   InstanceOf: ""
   Alias:
     - oblique argument
-  SubtypeOf: []
-  AssociatedTo:
-    - oblique phrase [cxn]
+  SubtypeOf:
+    - argument [inf]
+  AssociatedTo: []
   Definition: >-
     an <a>argument</a> that is less salient than the <a>core arguments</a> of the same <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, <i>the wastebasket</i> is an oblique argument; it is less salient than Sally or the letter. (Sections 6.1.1, <b>6.2.1</b>)
 
@@ -7365,7 +7367,8 @@
   InstanceOf: ""
   Alias:
     - ontology
-  SubtypeOf: []
+  SubtypeOf:
+    - meaning [def]
   AssociatedTo: []
   Definition: >-
     a classification of concepts into their <a>semantic classes</a> or categories. (Section 2.1)
@@ -7959,7 +7962,7 @@
   SubtypeOf:
     - response [inf]
   AssociatedTo:
-    - polarity response [cxn]
+    - polarity question [inf]
   Definition: ""
 
 - Id: poset [inf]
@@ -9109,7 +9112,8 @@
     - recruitment
     - recruit
     - recruiting
-  SubtypeOf: []
+  SubtypeOf:
+    - strategy [def]
   AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for a <a>construction</a> that uses the same <a>morphosyntactic</a> form that is used for another construction. <i>Example</i>: in English, the expression of an illness (<i>Jane has pneumonia / a cold</i>) recruits the same strategy used for the <a>predication</a> of <a possession relation>possession</a> (<i>Jane has a convertible</i>). (Section 1.4)
@@ -9923,10 +9927,11 @@
   Alias:
     - single role strategy
   SubtypeOf:
-    - zero coded strategy [str]
+    - recruitment strategy [str]
   AssociatedTo:
     - reflexive construction [cxn]
     - reciprocal construction [cxn]
+    - intransitive construction [cxn]
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as a single <a>role</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by a single <a>argument phrase</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: English <i>Sam shaved</i> and <i>Mary and Sue met</i> construe the participants -- Sam, and Mary and Sue, respectively -- as playing a single role in the shaving and meeting events. The single role strategy may also be overtly coded: the Abkhaz Reflexive <i>l-c̜ə-l-k°abe-yt'</i> <q>She washed (herself)</q> is an Intransitive Verb form with the Reflexive prefix <i>c̜ə-</i>, and the Swahili Reciprocal <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
 
@@ -9993,7 +9998,7 @@
   Alias:
     - specialized dual role strategy
   SubtypeOf:
-    - overt (coding) strategy [str]
+    - dual role strategy [str]
   AssociatedTo:
     - reflexive construction [cxn]
     - reciprocal construction [cxn]
@@ -10469,7 +10474,7 @@
     - superlative form
     - superlative
   SubtypeOf:
-    - degree modifier [str]
+    - admodifier [cxn]
   AssociatedTo:
     - equative construction [cxn]
   Definition: >-
