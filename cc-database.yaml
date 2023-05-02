@@ -7073,16 +7073,6 @@
   AssociatedTo: []
   Definition: ""
 
-- Id: nonspecific article/pronoun [cxn]
-  Type: cxn
-  InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
-  Alias:
-    - nonspecific article/pronoun
-  SubtypeOf:
-    - determiner [cxn]
-  AssociatedTo: []
-  Definition: ""
-
 - Id: nonspecific pronoun [cxn]
   Type: cxn
   InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
@@ -7099,8 +7089,7 @@
     - nonspecific referent
   SubtypeOf:
     - information status [inf]
-  AssociatedTo:
-    - nonspecific article/pronoun [cxn]
+  AssociatedTo: []
   Definition: ""
 
 - Id: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
