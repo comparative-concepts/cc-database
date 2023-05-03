@@ -1,3 +1,3 @@
 
-docs/index.html: cc-database.yaml build_cc_webpage.py
-	python3 build_cc_webpage.py --html $< > $@
+docs/index.html: cc-database.yaml ccdb_parser.py
+	python3 ccdb_parser.py --html $< > $@
