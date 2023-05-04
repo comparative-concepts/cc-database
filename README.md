@@ -72,7 +72,7 @@ This concept doesn't have a definition, because it shares the same definition as
 
 The YAML database consists of a list of entries of the following form:
 ```
-- Id: string
+- Id: cc-id (a string)
   Type: one of sem/cxn/inf/str/def
   InstanceOf: cc-id (possibly empty)
   Alias: list of strings (possibly empty)
