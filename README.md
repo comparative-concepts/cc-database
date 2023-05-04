@@ -19,6 +19,8 @@ options:
   --html       Output HTML database.
 ```
 
+There's a Makefile that reads the database and creates the file `docs/index.html` which is then automatically published here: <https://spraakbanken.github.io/ComparativeConcepts>
+
 ## Organisation of the YAML database
 
 The CC database is stored in a YAML file. 
