@@ -3090,15 +3090,32 @@
   Definition: >-
     a <a>construction</a> that expresses <a>negative polarity</a> of a <a>declarative</a> <a>speech act</a>. <i>Example</i>: in English, <i>Kit didn't like the movie</i> is an instance of a declarative negation construction, with the morpheme <i>not</i> ~ <i>-n't</i> combining with the past tense <a>auxiliary</a> <i>did</i> to negate the declarative speech act <q>Kit liked the movie</q>. (Section 12.2)
 
+- Id: definite article [cxn]
+  Type: cxn
+  InstanceOf: definite pronoun/article [cxn]
+  Alias:
+    - definite article
+  SubtypeOf:
+    - article [cxn]
+  AssociatedTo: []
+  Definition: ""
+
+- Id: definite pronoun [cxn]
+  Type: cxn
+  InstanceOf: definite pronoun/article [cxn]
+  Alias:
+    - definite pronoun
+  SubtypeOf:
+    - pronoun [cxn]
+  AssociatedTo: []
+  Definition: ""
+
 - Id: definite pronoun/article [cxn]
   Type: cxn
   InstanceOf: ""
   Alias:
     - definite pronoun/article
-    - definite pronoun
-    - definite article
-  SubtypeOf:
-    - determiner [cxn]
+  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the top end of the <a>information status</a> continuum, where the identity of the referent is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: <i>the glass bowl</i> is an example of a definite referring phrase, used in a context where the individual glass bowl in question is identifiable by both speaker and hearer (Table 3.4, Section 3.3.1)
@@ -5301,15 +5318,32 @@
   Definition: >-
     alternative <a>strategies</a> found with <a>serial verb</a> and <a>auxiliary constructions</a>, whether they form a single word or not. <i>Example</i>: in Alamblak <i>yĕnt mi-ak-tita-r-t</i> <q>He carried the girl down there on his shoulders</q>, the verbs <i>ak</i> <q>get</q> and <i>tita</i> <q>carry on shoulders</q> form a single word. <a>Noun incorporation</a> refers to a strategy found in other constructions. (Sections 13.2, 13.3.2)
 
+- Id: indefinite article [cxn]
+  Type: cxn
+  InstanceOf: indefinite pronoun/article [cxn]
+  Alias:
+    - indefinite article
+  SubtypeOf:
+    - article [cxn]
+  AssociatedTo: []
+  Definition: ""
+
+- Id: indefinite pronoun [cxn]
+  Type: cxn
+  InstanceOf: indefinite pronoun/article [cxn]
+  Alias:
+    - indefinite pronoun
+  SubtypeOf:
+    - pronoun [cxn]
+  AssociatedTo: []
+  Definition: ""
+
 - Id: indefinite pronoun/article [cxn]
   Type: cxn
   InstanceOf: ""
   Alias:
     - indefinite pronoun/article
-    - indefinite pronoun
-    - indefinite article
-  SubtypeOf:
-    - determiner [cxn]
+  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific</a> referents (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a glass bowl</i> is an example of an indefinite referring phrase, used in a context where the individual glass bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
@@ -5684,8 +5718,8 @@
   Definition: >-
     the <a>recruitment</a> of <a>deranked</a> <a>clause constructions</a> to express a <b>nondeclarative main clause function</b>. <i>Example</i>: <i>No smoking</i> recruits the English Gerund Verb form ending in <i>-ing</i> in order to express an <a>imperative</a>. (Section 15.2.3)
 
-- Id: intensifier [sem]
-  Type: sem
+- Id: intensifier [cxn]
+  Type: cxn
   InstanceOf: ""
   Alias:
     - intensifier
@@ -5693,7 +5727,7 @@
     - admodifier [cxn]
   AssociatedTo: []
   Definition: >-
-    indicates a higher than normal value on a <a>property</a> scale. <i>Example</i>: in <i>very long, very</i> indicates a value longer than normal. (Section 4.1.2)
+    a construction that indicates a higher than normal value on a <a>property</a> scale. <i>Example</i>: in <i>very long, very</i> indicates a value longer than normal. (Section 4.1.2)
 
 - Id: interaction event [sem]
   Type: sem
@@ -7014,7 +7048,8 @@
   InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
   Alias:
     - nonspecific article
-  SubtypeOf: []
+  SubtypeOf:
+    - article [cxn]
   AssociatedTo: []
   Definition: ""
 
@@ -7023,7 +7058,8 @@
   InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
   Alias:
     - nonspecific pronoun
-  SubtypeOf: []
+  SubtypeOf:
+    - pronoun [cxn]
   AssociatedTo: []
   Definition: ""
 
@@ -7296,8 +7332,8 @@
   Definition: >-
     very broad semantic categories that play a role in distinguishing different types of pronouns and determiners. <i>Examples</i>: the ontological categories include: person, thing, place, time, quantity, and manner (this is not an exhaustive list). (Section 3.1.3)
 
-- Id: ontology [def]
-  Type: def
+- Id: ontology [sem]
+  Type: sem
   InstanceOf: ""
   Alias:
     - ontology
@@ -8618,7 +8654,7 @@
   Alias:
     - pronoun
   SubtypeOf:
-    - referent expression [cxn]
+    - referring phrase [cxn]
   AssociatedTo: []
   Definition: >-
     a linguistic <a>form</a> that <a reference>refers</a> to an individual via some <a>contextual</a> factor in the <a>speech act situation</a>. <i>Example</i>: <i>I</i> is a pronoun because it refers to a person via the role she is playing in the speech event (namely, speaker). (Section 3.1.1)
