@@ -2,6 +2,7 @@
 import sys
 import re
 import yaml
+import json
 import argparse
 from pathlib import Path
 from typing import Union, Optional
@@ -268,6 +269,40 @@ class CCDBParser:
     }
 
 
+    def convert_definition_to_karp(self, definition:ParsedDefinition) -> str:
+        """Convert a CC definition into a Karp-formatted string."""
+        karp_parts = []
+        for part in definition:
+            if isinstance(part, tuple):
+                part = f"<a {part[0]}>{part[1]}</a>"
+            karp_parts.append(part)
+        return ''.join(karp_parts)
+
+
+    def export_to_karp(self):
+        """Export the whole database as a single JSON-lines file for use in Karp (to stdout)."""
+        for id in sorted(self.glosses, key=str.casefold):
+            item = self.glosses[id]
+            out = {}
+            for key, outkey in self.KARP_KEYS:
+                if (value := item.get(key)):
+                    if key == 'ParsedDefinition':
+                        value = self.convert_definition_to_karp(value)
+                    out[outkey] = value
+            print(json.dumps(out))
+
+    # Input/output keys to include in the Karp JSON output
+    KARP_KEYS = [
+        ('Id', 'Id'),
+        ('Type', 'Type'),
+        ('Alias', 'Alias'),
+        ('InstanceOf', 'InstanceOf'),
+        ('SubtypeOf', 'SubtypeOf'),
+        ('AssociatedTo', 'AssociatedTo'),
+        ('ParsedDefinition', 'Definition'),
+    ]
+
+
     def error(self, err:str):
         """Report an error."""
         print("** ERROR **", err, file=sys.stderr)
@@ -285,16 +320,21 @@ class CCDBParser:
             )
 
 
-parser = argparse.ArgumentParser(description='Parse the comparative concepts database and print it in different formats (currently only HTML).')
-parser.add_argument('--html', action='store_true', help='Output HTML database.')
-parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts.')
+OutputFormats = ['html', 'karp']
+
+parser = argparse.ArgumentParser(description='Parse the comparative concepts database and export it in different formats.')
+parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
+parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
 if __name__ == '__main__':
     args = parser.parse_args()
+    if not args.format:
+        print("No output format selected, I will only validate the database.", file=sys.stderr)
     ccdb = CCDBParser()
     ccdb.parse_yaml_database(args.cc_database)
-    if args.html:
+    if args.format == 'html':
         ccdb.print_html()
-    if ccdb.errors > 0:
-        ccdb.error_report()
+    elif args.format == 'karp':
+        ccdb.export_to_karp()
+    ccdb.error_report()
 
