@@ -175,7 +175,7 @@ class CCDBParser:
                 title += " ⟹ " + parent
                 definition = self.glosses[parent]["Definition"].strip()
             if definition:
-                title += "\n\n" + re.sub(r"<[^<>]+>", "", definition)
+                title += "\n\n" + re.sub(r"</?\w[^<>]*>", "", definition)
             return f'<a href="#{href_id}" title="{title}">{html_name}</a>'
         else:
             return f'<a href="#{href_id}">{html_name}</a>'
@@ -303,6 +303,110 @@ class CCDBParser:
     ]
 
 
+    def convert_definition_to_fnbr(self, definition:ParsedDefinition) -> str:
+        """Convert a CC definition into an unformatted string, as used by FN-Brazil."""
+        fnbr_def = ''.join(
+            part[1] if isinstance(part, tuple) else part
+            for part in definition
+        )
+        fnbr_def = (fnbr_def
+            .replace('<q>', '\u2018').replace('</q>', '\u2019')
+            .replace('<dq>', '\u201c').replace('</dq>', '\u201d')
+            .replace('fi', '\ufb01').replace('fl', '\ufb02')
+            .replace('\u2019,', ',\u2019').replace('\u2019.', '.\u2019')
+            .replace('\u201d,', ',\u201d').replace('\u201d.', '.\u201d')
+            .replace('...', '\u2026').replace('-->', '\u2192')
+            .replace('--', '\u2013')
+            .replace("'", '\u2019')
+        )
+        fnbr_def = re.sub(r"<sc>(.+?)</sc>", lambda m:m.group(1).upper(), fnbr_def)
+        fnbr_def = re.sub(r"</?\w[^<>]*>", "", fnbr_def)
+        return fnbr_def
+
+
+    def export_to_fnbr(self):
+        """Export the database to the same JSON format as FrameNet Brazil."""
+        # Special cases (e.g., "strategy [def]" is "strategy [str]" in FNBr)
+        SPECIAL_FNBR_CCs = {
+            id: id.replace('[def]', '['+typ+']')
+            for typ, id in self.TYPE_TO_ENTRY.items()
+        }
+        out_ccs = []
+        for id in sorted(self.glosses, key=str.casefold):
+            item = self.glosses[id]
+            if not (item['Type'] in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
+                continue
+            out = {}
+            for key, outkey in self.FNBR_KEYS:
+                if outkey == 'associatedTo' and (parent := item.get('InstanceOf')):
+                    siblings = [
+                        sib for sib, sibitem in self.glosses.items() 
+                        if sib != id and sibitem.get('InstanceOf') == parent
+                    ]
+                    item.setdefault(key, []).extend(siblings)
+
+                if (value := item.get(key)):
+                    if outkey == 'definition':
+                        value = self.convert_definition_to_fnbr(value)
+                    else:
+                        if isinstance(value, str):
+                            value = value.replace('--', '-')  # we use "--" in ids, where FNBr uses "-"
+                            if outkey == 'id':
+                                # Special cases (e.g., "strategy [def]" --> "strategy [str]")
+                                value = SPECIAL_FNBR_CCs.get(id, value)
+                            elif outkey == 'name': # The name is the CC id minus the type information
+                                value = re.sub(r" *\[[\w/]+\]( +/)?", "", value)
+                            elif outkey == 'type':
+                                # Special cases (e.g., "strategy" has FNBr type "strategy")
+                                if id in SPECIAL_FNBR_CCs:
+                                    value = re.sub(r" *\[[\w/]+\]( +/)?", "", id)
+                                # Convert type names (e.g., "cxn" --> "construction")
+                                value = self.FNBR_TYPES.get(value, value)
+
+                        elif isinstance(value, list):
+                            value = [v.replace('--', '-') for v in value]  # we use "--" in ids, where FNBr uses "-"
+                            if outkey == 'subTypeOf':
+                                value = [SPECIAL_FNBR_CCs.get(parent, parent) for parent in value]
+
+                        else:
+                            self.error(f"{id}: Unknown type for key {key}: {type(value)}")
+
+                    out[outkey] = value
+
+                elif outkey == 'definition' and (parent := item.get('InstanceOf')):
+                    if (parent_def := self.glosses[parent].get('ParsedDefinition')):
+                        out[outkey] = self.convert_definition_to_fnbr(parent_def)
+            out_ccs.append(out)
+        final_output = {
+            'db-version': "export from cc-database",
+            'ccs': out_ccs,
+        }
+        jout = json.dumps(final_output, indent=2)
+        print(jout)
+
+    # Keys to include in the FrameNet Brazil output
+    FNBR_KEYS = [
+        ('Id', 'name'), # The name is the id minus the type information
+        ('ParsedDefinition', 'definition'),
+        ('Type', 'type'),
+        ('Id', 'id'),
+        ('AssociatedTo', 'associatedTo'),
+        ('SubtypeOf', 'subTypeOf'),
+        # ('Alias', 'alias'), # FNBR doesn't use this
+        # ('InstanceOf', 'instanceOf'), # FNBR doesn't use this - instead the siblings are added to associatedTo
+    ]
+
+    # What type names does FNBR use?
+    FNBR_TYPES = {
+        'cxn': 'construction',
+        'str': 'strategy',
+        'str:fnbr': 'strategy',
+        'inf': 'information packaging',
+        'inf:fnbr': 'information packaging',
+        'sem': 'meaning',
+    }
+
+
     def error(self, err:str):
         """Report an error."""
         print("** ERROR **", err, file=sys.stderr)
@@ -320,7 +424,7 @@ class CCDBParser:
             )
 
 
-OutputFormats = ['html', 'karp']
+OutputFormats = ['html', 'karp', 'fnbr']
 
 parser = argparse.ArgumentParser(description='Parse the comparative concepts database and export it in different formats.')
 parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
@@ -336,5 +440,7 @@ if __name__ == '__main__':
         ccdb.print_html()
     elif args.format == 'karp':
         ccdb.export_to_karp()
+    elif args.format == 'fnbr':
+        ccdb.export_to_fnbr()
     ccdb.error_report()
 
