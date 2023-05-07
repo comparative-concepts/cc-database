@@ -7719,15 +7719,6 @@
   Definition: >-
     a <a>strategy</a> for the <a>presentational construction</a> in which the <a>referring phrase</a> introducing the <a>referent</a> is expressed as the stimulus of a <a>perception event</a>. <i>Example</i>: an English example from the Pear Stories narrative is <i>and um then you see this little girl. Coming on a bicycle in the opposite direction, ...</i> More grammaticalized versions of this strategy include French <i><b>Voici</b> un coffre ... <b>Voilà</b> un autre coffre</i> <q>Here is a treasure chest ... There is another treasure chest</q>. (Section 10.4.3)
 
-- Id: perception verb/complement-taking predicate [cxn]
-  Type: cxn
-  InstanceOf: perception event [sem] / verb [cxn] / complement-taking predicate [cxn]
-  Alias:
-    - perception verb/complement-taking predicate
-  SubtypeOf: []
-  AssociatedTo: []
-  Definition: ""
-
 - Id: peripheral participant [sem]
   Type: sem
   InstanceOf: ""
