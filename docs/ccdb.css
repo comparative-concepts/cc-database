@@ -1,0 +1,40 @@
+
+/* Simple CSS for the HTML database */
+
+body {
+    margin: 20px;
+    font-family: Georgia, serif;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 8em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+dd {
+    margin-left: 8em;
+    margin-top: 5px;
+}
+
+.notfound {
+    color: red;
+}
+
+.sc {
+    font-variant: small-caps;
+}
+
+q {
+    quotes: "‘" "’";
+}
+
+q.dq {
+    quotes: "“" "”";
+}
+
+.separation::before {
+    content: " · ";
+}

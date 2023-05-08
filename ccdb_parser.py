@@ -210,7 +210,9 @@ class CCDBParser:
     def print_html(self):
         """Print the whole database as a single HTML file (to stdout)."""
         print('<!DOCTYPE html>')
-        print(f'<html><head><meta charset="utf-8"/><style>{self.CSS}</style></head><body>')
+        print('<html><head><meta charset="utf-8"/>')
+        print('<link rel="stylesheet" href="ccdb.css"/>')
+        print('</head><body>')
         print(f'<h1><a href="#">Database of Comparative Concepts</a></h1>')
         print(f"<p>Extracted from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
@@ -247,18 +249,6 @@ class CCDBParser:
             print('</div>')
 
         print('</body></html>')
-
-    # Simple CSS for the HTML database
-    CSS = """
-        body {margin: 20px; font-family: Georgia, serif}
-        dt {float: left; clear: left; width: 8em; font-weight: bold; margin-bottom: 5px}
-        dd {margin-left: 8em; margin-top: 5px}
-        .notfound {color: red}
-        .sc {font-variant: small-caps}
-        q {quotes: "‘" "’"}
-        q.dq {quotes: "“" "”"}
-        .separation::before {content: " · "}
-    """
 
     # What general definitions do different types correspond to?
     TYPE_TO_ENTRY = {
