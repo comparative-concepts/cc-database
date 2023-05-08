@@ -6,17 +6,17 @@ Cross-linked database of Comparative Concepts, extracted from "Morphosyntax: con
 The script `ccdb_parser.py` parses (and validates) the YAML database and outputs it in different formats. Currently only HTML output is supported.
 
 ```
-usage: ccdb_parser.py [-h] [--html] cc_database
+usage: ccdb_parser.py [-h] [--format {html,karp,fnbr}] cc_database
 
-Parse the comparative concepts database and print it in different formats (currently only
-HTML).
+Parse the comparative concepts database and export it in different formats.
 
 positional arguments:
-  cc_database  YAML database of comparative concepts.
+  cc_database           YAML database of comparative concepts
 
 options:
-  -h, --help   show this help message and exit
-  --html       Output HTML database.
+  -h, --help            show this help message and exit
+  --format {html,karp,fnbr}, -f {html,karp,fnbr}
+                        export format
 ```
 
 There's a Makefile that reads the database and creates the file `docs/index.html` which is then automatically published here: <https://spraakbanken.github.io/ComparativeConcepts>
