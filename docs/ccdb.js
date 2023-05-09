@@ -89,10 +89,13 @@ function filter_ccs() {
     new Mark(glosses).unmark();
 
     let current_id = window.location.href.replace(/^.*#/, '');
-    var current_name = document.getElementById(current_id).querySelector('.name');
-    new Mark(current_name).markRanges([{
-        start: 0, length: current_name.innerText.length,
-    }]);
+    let current_elem = document.getElementById(current_id);
+    if (current_elem) {
+        let current_name = current_elem.querySelector('.name');
+        new Mark(current_name).markRanges([{
+            start: 0, length: current_name.innerText.length,
+        }]);
+    }
 
     let search_term = SEARCH['box'].value;
     search_term = search_term.trim().replace(/ +/g, ' ');
