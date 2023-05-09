@@ -1,8 +1,6 @@
 
 window.addEventListener('DOMContentLoaded', initialize);
 
-var all_ccs = [];
-
 function initialize() {
     init_linktitles();
     init_searchfilter();
@@ -37,27 +35,18 @@ function set_link_title(event) {
 // Searching/filtering CCs
 
 const FILTER_TYPES = ['name', 'relation', 'definition'];
+var SEARCH = {};
+var ALL_CCS = [];
 
 function init_searchfilter() {
-    for (let cc of document.getElementsByClassName('cc')) {
-        let name = merge_cc_elements('|', [
-            cc.querySelector('.name'),
-            cc.querySelector('.aliases'),
-        ]);
-        let relation = merge_cc_elements('|', [
-            cc.querySelector('.instanceof'),
-            cc.querySelector('.subtypeof'),
-            cc.querySelector('.associatedto'),
-        ]);
-        let definition = merge_cc_elements('#', [
-            cc.querySelector('.definition'),
-        ]);
-        all_ccs.push({
-            'elem': cc,
-            'name': name,
-            'relation': relation,
-            'definition': definition,
-        })
+    for (let elem of document.getElementsByClassName('cc')) {
+        let cc = {elem: elem};
+        for (let type of FILTER_TYPES) {
+            let splitchar = type === 'definition' ? '#' : '|';
+            let content = merge_cc_elements(splitchar, elem.getElementsByClassName(type));
+            cc[type] = content;
+        }
+        ALL_CCS.push(cc); 
     }
 
     let checkboxes = FILTER_TYPES.map((type) =>
@@ -67,13 +56,16 @@ function init_searchfilter() {
     document.getElementById('search').innerHTML = `
         ${checkboxes.join('\n')} <br/>
         <input id="search-box" type="search"/> <br/>
-        Found <span id="search-info"></span> CCs (out of ${all_ccs.length})
+        <span id="search-info"></span>
     `.trim();
+    for (let key of FILTER_TYPES.concat(['box', 'info'])) {
+        SEARCH[key] = document.getElementById('search-' + key);
+    }
 
     for (let elem of document.getElementsByTagName('a')) {
         elem.addEventListener('click', () => setTimeout(filter_ccs, 100));
     }
-    for (let elem of document.getElementById('search').querySelectorAll('input')) {
+    for (let elem of document.getElementById('search').getElementsByTagName('input')) {
         elem.addEventListener('input', filter_ccs);
     }
     filter_ccs();
@@ -93,16 +85,33 @@ function merge_cc_elements(splitchar, elemlist) {
 }
 
 function filter_ccs() {
+    var glosses = document.getElementById('glosses');
+    new Mark(glosses).unmark();
+
     let current_id = window.location.href.replace(/^.*#/, '');
-    let search_term = document.getElementById('search-box').value;
-    let regex_str = search_term.replaceAll(' ', '[^#]*');  // # is the separator used by `merge_names` above
+    var current_name = document.getElementById(current_id).querySelector('.name');
+    new Mark(current_name).markRanges([{
+        start: 0, length: current_name.innerText.length,
+    }]);
+
+    let search_term = SEARCH['box'].value;
+    search_term = search_term.trim().replace(/ +/g, ' ');
+    if (search_term.length < 3) {
+        for (let cc of ALL_CCS) {
+            cc['elem'].style.display = '';
+        }
+        SEARCH['info'].innerText = `Type at least 3 characters`;
+        SEARCH['box'].focus();
+        return;
+    }
+
+    let regex_str = search_term.replaceAll(' ', '[^#]*?');  // # is the separator used by `merge_names` above
     let regex = new RegExp(regex_str, 'i');
-    let filter_types = FILTER_TYPES.filter((type) =>
-        document.getElementById('search-'+type).checked
-    );
+    let filter_types = FILTER_TYPES.filter((type) => SEARCH[type].checked);
     let count = 0;
-    for (let cc of all_ccs) {
-        let show = (cc['elem'].id === current_id);
+    for (let cc of ALL_CCS) {
+        let elem = cc['elem'];
+        let show = (elem.id === current_id);
         if (!show) {
             for (let type of filter_types) {
                 if (regex.test(cc[type])) {
@@ -111,9 +120,18 @@ function filter_ccs() {
                 }
             }
         }
-        cc['elem'].style.display = show ? '' : 'none';
-        if (show) count++;
+        if (show) {
+            elem.style.display = '';
+            for (let type of filter_types) {
+                let contents = elem.querySelectorAll('.' + type);
+                new Mark(contents).markRegExp(regex, {acrossElements: (type === 'definition')});
+            }
+            count++;
+        } else {
+            elem.style.display = 'none';
+        }
     }
-    document.getElementById('search-info').innerText = count;
-    document.getElementById('search-box').focus();
+
+    SEARCH['info'].innerText = `Found ${count} CCs (out of ${ALL_CCS.length})`;
+    SEARCH['box'].focus();
 }

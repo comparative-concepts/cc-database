@@ -201,6 +201,7 @@ class CCDBParser:
         """Print the whole database as a single HTML file (to stdout)."""
         print('<!DOCTYPE html>')
         print('<html><head><meta charset="utf-8"/>')
+        print('<script src="mark.min.js"></script>')
         print('<script src="ccdb.js"></script>')
         print('<link rel="stylesheet" href="ccdb.css"/>')
         print('</head><body>')
@@ -212,6 +213,7 @@ class CCDBParser:
         nlinks = sum(len(item['DefinitionLinks']) for item in self.glosses.values())
         print(f'<p><strong>Statistics:</strong> {len(self.glosses)} CCs, and {nlinks} links within CC definitions</p>')
 
+        print('<div id="glosses">')
         for id in sorted(self.glosses, key=str.casefold):
             item = self.glosses[id]
             print(f'<div class="cc" id="{self.uri_friendly_name(id)}">')
@@ -230,21 +232,21 @@ class CCDBParser:
                         self.error(f"{id}: Type not found: {type}")
                         self.notfound.add(type)
                         type = f'<span class="notfound">{type}</span>'
-                print(f'<dt>Type</dt> <dd>{type}</dd>')
+                print(f'<dt>Type</dt> <dd class="type">{type}</dd>')
             if (aliases := item['Alias']):
-                print('<dt>Aliases</dt> <dd class="aliases">' +
+                print('<dt>Aliases</dt> <dd class="name">' +
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</dd>')
             if (instanceOf := item['InstanceOf']):
-                print('<dt>Instance of</dt> <dd class="instanceof">' +
+                print('<dt>Instance of</dt> <dd class="relation">' +
                       self.convert_link_to_html(instanceOf) +
                       '</dd>')
             if (subtypeOf := item['SubtypeOf']):
-                print(f'<dt>Subtype of</dt> <dd class="subtypeof">' +
+                print(f'<dt>Subtype of</dt> <dd class="relation">' +
                       ' | '.join(map(self.convert_link_to_html, subtypeOf)) +
                       '</dd>')
             if (associatedTo := item['AssociatedTo']):
-                print(f'<dt>Associated to</dt> <dd class="associatedto">' +
+                print(f'<dt>Associated to</dt> <dd class="relation">' +
                       ' | '.join(map(self.convert_link_to_html, associatedTo)) +
                       '</dd>')
             if (parsedDefinition := item['ParsedDefinition']): 
@@ -253,7 +255,7 @@ class CCDBParser:
                       '</dd>')
             print('</dl>')
             print('</div>')
-
+        print('</div>')
         print('</body></html>')
 
     # What general definitions do different types correspond to?
