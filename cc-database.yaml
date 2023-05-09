@@ -3840,7 +3840,8 @@
   InstanceOf: ""
   Alias:
     - encoding strategy
-  SubtypeOf: []
+  SubtypeOf:
+    - strategy [def]
   AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for a <a>construction</a> defined by the presence (or absence) of certain <a>morphosyntactic</a> structures that are defined in a <a>crosslinguistically valid</a> fashion. (Section 1.4)
