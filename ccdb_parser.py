@@ -225,8 +225,9 @@ class CCDBParser:
                     entries = [self.TYPE_TO_ENTRY.get(t) for t in types]
                     if all(entries):
                         type = ' / '.join(
-                            self.convert_link_to_html(e, t) if e in self.glosses else e
-                            for e, t in zip(entries, types)
+                            ( self.convert_link_to_html(e, re.sub(r" *\[\w+\] *", "", e)) 
+                              if e in self.glosses else e )
+                            for e in entries
                         )
                     else:
                         self.error(f"{id}: Type not found: {type}")
