@@ -104,37 +104,38 @@ function filter_ccs() {
             cc['elem'].style.display = '';
         }
         SEARCH['info'].innerText = `Type at least 3 characters`;
-        SEARCH['box'].focus();
-        return;
     }
 
-    let regex_str = search_term.replaceAll(' ', '[^#]*?');  // # is the separator used by `merge_names` above
-    let regex = new RegExp(regex_str, 'i');
-    let filter_types = FILTER_TYPES.filter((type) => SEARCH[type].checked);
-    let count = 0;
-    for (let cc of ALL_CCS) {
-        let elem = cc['elem'];
-        let show = (elem.id === current_id);
-        if (!show) {
-            for (let type of filter_types) {
-                if (regex.test(cc[type])) {
-                    show = true;
-                    break;
+    else {
+        let regex_str = search_term.replaceAll(' ', '[^#]*?');  // # is the separator used by `merge_names` above
+        let regex = new RegExp(regex_str, 'i');
+        let filter_types = FILTER_TYPES.filter((type) => SEARCH[type].checked);
+        let count = 0;
+        for (let cc of ALL_CCS) {
+            let elem = cc['elem'];
+            let show = (elem.id === current_id);
+            if (!show) {
+                for (let type of filter_types) {
+                    if (regex.test(cc[type])) {
+                        show = true;
+                        break;
+                    }
                 }
             }
-        }
-        if (show) {
-            elem.style.display = '';
-            for (let type of filter_types) {
-                let contents = elem.querySelectorAll('.' + type);
-                new Mark(contents).markRegExp(regex, {acrossElements: (type === 'definition')});
+            if (show) {
+                elem.style.display = '';
+                for (let type of filter_types) {
+                    let contents = elem.querySelectorAll('.' + type);
+                    new Mark(contents).markRegExp(regex, {acrossElements: (type === 'definition')});
+                }
+                count++;
+            } else {
+                elem.style.display = 'none';
             }
-            count++;
-        } else {
-            elem.style.display = 'none';
         }
+        SEARCH['info'].innerText = `Found ${count} CCs (out of ${ALL_CCS.length})`;
     }
 
-    SEARCH['info'].innerText = `Found ${count} CCs (out of ${ALL_CCS.length})`;
     SEARCH['box'].focus();
+    if (current_elem) current_elem.scrollIntoView();
 }
