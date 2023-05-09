@@ -3521,7 +3521,7 @@
     an <a>event</a> in which the change that a <a>participant</a> undergoes in the course of an event is in one <dq>direction</dq>. <i>Example</i>: in <i>The storm expanded</i>, there is a gradual unidirectional increase in size, and so the event is a directed change. (Section 6.2.1)
 
 - Id: discourse context (FN-Br) [inf]
-  Type: inf:fnbr
+  Type: inf
   InstanceOf: ""
   Alias: []
   SubtypeOf:
@@ -3760,7 +3760,7 @@
     a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
 
 - Id: strategy element (FN-Br) [str]
-  Type: str:fnbr
+  Type: str
   InstanceOf: ""
   Alias: []
   SubtypeOf:
@@ -3770,7 +3770,7 @@
     used exclusively for strategy concepts that are defined as part of another.
 
 - Id: information element (FN-Br) [inf]
-  Type: inf:fnbr
+  Type: inf
   InstanceOf: ""
   Alias: []
   SubtypeOf:
