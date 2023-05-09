@@ -162,23 +162,13 @@ class CCDBParser:
         )
 
 
-    def convert_link_to_html(self, id:str, name:Optional[str]=None, showtitle:bool=True) -> str:
+    def convert_link_to_html(self, id:str, name:Optional[str]=None) -> str:
         """Convert a CC link into HTML, with an actual link to the CC in the database."""
         if name is None: 
             name = id
         href_id = self.uri_friendly_name(id)
         html_name = self.html_friendly_name(name)
-        if showtitle:
-            title = id
-            definition = self.glosses[id]["Definition"].strip()
-            while not definition and (parent := self.glosses[id]["InstanceOf"]):
-                title += " ⟹ " + parent
-                definition = self.glosses[parent]["Definition"].strip()
-            if definition:
-                title += "\n\n" + re.sub(r"</?\w[^<>]*>", "", definition)
-            return f'<a href="#{href_id}" title="{title}">{html_name}</a>'
-        else:
-            return f'<a href="#{href_id}">{html_name}</a>'
+        return f'<a href="#{href_id}">{html_name}</a>'
 
 
     def convert_definition_to_html(self, definition:ParsedDefinition) -> str:
@@ -211,8 +201,10 @@ class CCDBParser:
         """Print the whole database as a single HTML file (to stdout)."""
         print('<!DOCTYPE html>')
         print('<html><head><meta charset="utf-8"/>')
+        print('<script src="ccdb.js"></script>')
         print('<link rel="stylesheet" href="ccdb.css"/>')
         print('</head><body>')
+        print('<div id="search"></div>')
         print(f'<h1><a href="#">Database of Comparative Concepts</a></h1>')
         print(f"<p>Extracted from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
@@ -222,29 +214,43 @@ class CCDBParser:
 
         for id in sorted(self.glosses, key=str.casefold):
             item = self.glosses[id]
-            print(f'<div class="definition">')
-            print(f'<h2 id="{self.uri_friendly_name(id)}">{self.convert_link_to_html(id, showtitle=False)}</h2>')
+            print(f'<div class="cc" id="{self.uri_friendly_name(id)}">')
+            print(f'<h2 class="name">{self.convert_link_to_html(id)}</h2>')
             print(f'<dl>')
-            type = item['Type']
-            if type != 'def':
-                types = type.split('/')
-                entries = [self.TYPE_TO_ENTRY.get(t) for t in types]
-                if all(entries):
-                    entrylinks = [
-                        self.convert_link_to_html(e, t) if e in self.glosses else e
-                        for e, t in zip(entries, types)
-                    ]
-                    type = ' / '.join(entrylinks)
-                else:
-                    self.error(f"{id}: Type not found: {type}")
-                    self.notfound.add(type)
-                    type = f'<span class="notfound">{type}</span>'
-            print(f'<dt>Type</dt> <dd>{type}</dd>')
-            if item['Alias']: print(f"<dt>Aliases</dt> <dd>{' | '.join(self.html_friendly_name(n) for n in item['Alias'])}</dd>")
-            if item['InstanceOf']: print(f"<dt>Instance of</dt> <dd>{self.convert_link_to_html(item['InstanceOf'])}</dd>")
-            if item['SubtypeOf']: print(f"<dt>Subtype of</dt> <dd>{' | '.join(self.convert_link_to_html(i) for i in item['SubtypeOf'])}</dd>")
-            if item['AssociatedTo']: print(f"<dt>Associated to</dt> <dd>{' | '.join(self.convert_link_to_html(i) for i in item['AssociatedTo'])}</dd>")
-            if item['ParsedDefinition']: print(f"<dt>Definition</dt> <dd>{self.convert_definition_to_html(item['ParsedDefinition'])}</dd>")
+            if (type := item['Type']):
+                if type != 'def':
+                    types = type.split('/')
+                    entries = [self.TYPE_TO_ENTRY.get(t) for t in types]
+                    if all(entries):
+                        type = ' / '.join(
+                            self.convert_link_to_html(e, t) if e in self.glosses else e
+                            for e, t in zip(entries, types)
+                        )
+                    else:
+                        self.error(f"{id}: Type not found: {type}")
+                        self.notfound.add(type)
+                        type = f'<span class="notfound">{type}</span>'
+                print(f'<dt>Type</dt> <dd>{type}</dd>')
+            if (aliases := item['Alias']):
+                print('<dt>Aliases</dt> <dd class="aliases">' +
+                      ' | '.join(map(self.html_friendly_name, aliases)) +
+                      '</dd>')
+            if (instanceOf := item['InstanceOf']):
+                print('<dt>Instance of</dt> <dd class="instanceof">' +
+                      self.convert_link_to_html(instanceOf) +
+                      '</dd>')
+            if (subtypeOf := item['SubtypeOf']):
+                print(f'<dt>Subtype of</dt> <dd class="subtypeof">' +
+                      ' | '.join(map(self.convert_link_to_html, subtypeOf)) +
+                      '</dd>')
+            if (associatedTo := item['AssociatedTo']):
+                print(f'<dt>Associated to</dt> <dd class="associatedto">' +
+                      ' | '.join(map(self.convert_link_to_html, associatedTo)) +
+                      '</dd>')
+            if (parsedDefinition := item['ParsedDefinition']): 
+                print(f'<dt>Definition</dt> <dd class="definition">' +
+                      self.convert_definition_to_html(parsedDefinition) +
+                      '</dd>')
             print('</dl>')
             print('</div>')
 
