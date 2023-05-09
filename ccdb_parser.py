@@ -302,27 +302,6 @@ class CCDBParser:
     ]
 
 
-    def convert_definition_to_fnbr(self, definition:ParsedDefinition) -> str:
-        """Convert a CC definition into an unformatted string, as used by FN-Brazil."""
-        fnbr_def = ''.join(
-            part[1] if isinstance(part, tuple) else part
-            for part in definition
-        )
-        fnbr_def = (fnbr_def
-            .replace('<q>', '\u2018').replace('</q>', '\u2019')
-            .replace('<dq>', '\u201c').replace('</dq>', '\u201d')
-            .replace('fi', '\ufb01').replace('fl', '\ufb02')
-            .replace('\u2019,', ',\u2019').replace('\u2019.', '.\u2019')
-            .replace('\u201d,', ',\u201d').replace('\u201d.', '.\u201d')
-            .replace('...', '\u2026').replace('-->', '\u2192')
-            .replace('--', '\u2013')
-            .replace("'", '\u2019')
-        )
-        fnbr_def = re.sub(r"<sc>(.+?)</sc>", lambda m:m.group(1).upper(), fnbr_def)
-        fnbr_def = re.sub(r"</?\w[^<>]*>", "", fnbr_def)
-        return fnbr_def
-
-
     def export_to_fnbr(self):
         """Export the database to the same JSON format as FrameNet Brazil."""
         # Special cases (e.g., "strategy [def]" is "strategy [str]" in FNBr)
@@ -335,46 +314,54 @@ class CCDBParser:
             item = self.glosses[id]
             if not (item['Type'] in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
                 continue
+            if any(instance.get('InstanceOf') == id for instance in self.glosses.values()):
+                continue
             out = {}
             for key, outkey in self.FNBR_KEYS:
-                if outkey == 'associatedTo' and (parent := item.get('InstanceOf')):
+                if outkey == 'associatedTo' and item['Type'] != 'cxn' and (parent := item.get('InstanceOf')):
+                    # Find the constructions that are instance-siblings, 
+                    # but only if the item itself is not a construction
                     siblings = [
                         sib for sib, sibitem in self.glosses.items() 
                         if sib != id and sibitem.get('InstanceOf') == parent
+                        if sibitem.get('Type') == 'cxn'
                     ]
                     item.setdefault(key, []).extend(siblings)
 
                 if (value := item.get(key)):
-                    if outkey == 'definition':
-                        value = self.convert_definition_to_fnbr(value)
+                    if isinstance(value, str):
+                        if outkey != 'definition':
+                            # we use "--" in ids, where FNBr uses "-"
+                            value = value.replace('--', '-')
+                        if outkey == 'id':
+                            # Special cases (e.g., "strategy [def]" --> "strategy [str]")
+                            value = SPECIAL_FNBR_CCs.get(id, value)
+                        elif outkey == 'name': 
+                            # The name is the CC id minus the type information
+                            value = re.sub(r" *\[[\w/]+\]( +/)?", "", value)
+                        elif outkey == 'type':
+                            # Special cases (e.g., "strategy" has FNBr type "strategy")
+                            if id in SPECIAL_FNBR_CCs:
+                                value = re.sub(r" *\[[\w/]+\]( +/)?", "", id)
+                            # Convert type names (e.g., "cxn" --> "construction")
+                            value = self.FNBR_TYPES.get(value, value)
+
+                    elif isinstance(value, list):
+                        # we use "--" in ids, where FNBr uses "-"
+                        value = [v.replace('--', '-') for v in value]
+                        if outkey == 'subTypeOf':
+                            value = [SPECIAL_FNBR_CCs.get(parent, parent) for parent in value]
+
                     else:
-                        if isinstance(value, str):
-                            value = value.replace('--', '-')  # we use "--" in ids, where FNBr uses "-"
-                            if outkey == 'id':
-                                # Special cases (e.g., "strategy [def]" --> "strategy [str]")
-                                value = SPECIAL_FNBR_CCs.get(id, value)
-                            elif outkey == 'name': # The name is the CC id minus the type information
-                                value = re.sub(r" *\[[\w/]+\]( +/)?", "", value)
-                            elif outkey == 'type':
-                                # Special cases (e.g., "strategy" has FNBr type "strategy")
-                                if id in SPECIAL_FNBR_CCs:
-                                    value = re.sub(r" *\[[\w/]+\]( +/)?", "", id)
-                                # Convert type names (e.g., "cxn" --> "construction")
-                                value = self.FNBR_TYPES.get(value, value)
-
-                        elif isinstance(value, list):
-                            value = [v.replace('--', '-') for v in value]  # we use "--" in ids, where FNBr uses "-"
-                            if outkey == 'subTypeOf':
-                                value = [SPECIAL_FNBR_CCs.get(parent, parent) for parent in value]
-
-                        else:
-                            self.error(f"{id}: Unknown type for key {key}: {type(value)}")
+                        self.error(f"{id}: Unknown type for key {key}: {type(value)}")
 
                     out[outkey] = value
 
-                elif outkey == 'definition' and (parent := item.get('InstanceOf')):
-                    if (parent_def := self.glosses[parent].get('ParsedDefinition')):
-                        out[outkey] = self.convert_definition_to_fnbr(parent_def)
+                elif outkey == 'definition':
+                    out[outkey] = ""
+                    if (parent := item.get('InstanceOf')):
+                        if (parent_definition := self.glosses[parent].get('Definition')):
+                            out[outkey] = parent_definition
             out_ccs.append(out)
         final_output = {
             'db-version': "export from cc-database",
@@ -386,7 +373,7 @@ class CCDBParser:
     # Keys to include in the FrameNet Brazil output
     FNBR_KEYS = [
         ('Id', 'name'), # The name is the id minus the type information
-        ('ParsedDefinition', 'definition'),
+        ('Definition', 'definition'),
         ('Type', 'type'),
         ('Id', 'id'),
         ('AssociatedTo', 'associatedTo'),
