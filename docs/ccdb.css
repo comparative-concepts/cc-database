@@ -54,29 +54,3 @@ q.dq {
 #search-box {
     width: 100%;
 }
-
-/* a[title] {
-    position: relative;
-}
-
-a[title]::after {
-    content: attr(title);
-    visibility: hidden;
-    opacity: 0;
-    widths: max-content;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 110%;
-}
-
-a[title]:hover::after {
-    opacity: 1;
-    visibility: visible;
-} */
