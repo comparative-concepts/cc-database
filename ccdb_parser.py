@@ -162,13 +162,16 @@ class CCDBParser:
         )
 
 
-    def convert_link_to_html(self, id:str, name:Optional[str]=None) -> str:
+    def convert_link_to_html(self, id:str, name:Optional[str]=None, selfid:Optional[str]=None) -> str:
         """Convert a CC link into HTML, with an actual link to the CC in the database."""
         if name is None: 
             name = id
         href_id = self.uri_friendly_name(id)
         html_name = self.html_friendly_name(name)
-        return f'<a href="#{href_id}">{html_name}</a>'
+        if id == selfid:
+            return f'<strong>{html_name}</strong>'
+        else:
+            return f'<a href="#{href_id}">{html_name}</a>'
 
 
     def convert_definition_to_html(self, definition:ParsedDefinition) -> str:
@@ -210,15 +213,30 @@ class CCDBParser:
         print(f"<p>Extracted from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
 
-        nlinks = sum(len(item['DefinitionLinks']) for item in self.glosses.values())
-        print(f'<p><strong>Statistics:</strong> {len(self.glosses)} CCs, and {nlinks} links within CC definitions</p>')
+        glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[0]))
+
+        nlinks = sum(len(item['DefinitionLinks']) for _, item in glossitems)
+        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, and {nlinks} links within CC definitions</p>')
 
         print('<div id="glosses">')
-        for id in sorted(self.glosses, key=str.casefold):
-            item = self.glosses[id]
+        for id, item in glossitems:
             print(f'<div class="cc" id="{self.uri_friendly_name(id)}">')
             print(f'<h2 class="name">{self.convert_link_to_html(id)}</h2>')
-            print(f'<dl>')
+            print(f'<table>')
+
+            if any(child.get('InstanceOf') == id for _, child in glossitems):
+                parent = id
+            else:
+                parent = item.get('InstanceOf')
+            if parent:
+                children = [chid for chid, child in glossitems if child.get('InstanceOf') == parent]
+                print('<tr><th>Umbrella</th> <td class="ccinfo relation">')
+                print(f'<table><tr><td class="flex"><span>')
+                print(self.convert_link_to_html(parent, selfid=id))
+                print('</span></td></tr><tr><td class="flex"><span>')
+                print('</span><span>'.join(self.convert_link_to_html(ch, selfid=id) for ch in children))
+                print('</span></td></tr></table></td></tr>')
+
             if (type := item['Type']):
                 if type != 'def':
                     types = type.split('/')
@@ -233,28 +251,44 @@ class CCDBParser:
                         self.error(f"{id}: Type not found: {type}")
                         self.notfound.add(type)
                         type = f'<span class="notfound">{type}</span>'
-                print(f'<dt>Type</dt> <dd class="type">{type}</dd>')
-            if (aliases := item['Alias']):
-                print('<dt>Aliases</dt> <dd class="name">' +
+                print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
+
+            if (aliases := item.get('Alias')):
+                print('<th>Alias(es)</th> <td class="ccinfo name">' +
                       ' | '.join(map(self.html_friendly_name, aliases)) +
-                      '</dd>')
-            if (instanceOf := item['InstanceOf']):
-                print('<dt>Instance of</dt> <dd class="relation">' +
-                      self.convert_link_to_html(instanceOf) +
-                      '</dd>')
-            if (subtypeOf := item['SubtypeOf']):
-                print(f'<dt>Subtype of</dt> <dd class="relation">' +
-                      ' | '.join(map(self.convert_link_to_html, subtypeOf)) +
-                      '</dd>')
+                      '</td></tr>')
+
             if (associatedTo := item['AssociatedTo']):
-                print(f'<dt>Associated to</dt> <dd class="relation">' +
+                print(f'<tr><th>Associated</th> <td class="ccinfo relation">' +
                       ' | '.join(map(self.convert_link_to_html, associatedTo)) +
-                      '</dd>')
+                      '</td></tr>')
+
+            supertypes = item.get('SubtypeOf', [])
+            subtypes = [chid for chid, child in glossitems if id in child.get('SubtypeOf', ())]
+            if supertypes or subtypes:
+                print(f'<tr><th>Hiererchy</th> <td class="ccinfo relation"> <table>')
+                print(f'<table>')
+                if supertypes:
+                    print('<tr><td class="flex">')
+                    for parent in supertypes:
+                        print(f'<span>{self.convert_link_to_html(parent)}</span>')
+                    print('</td></tr>')
+                print('<tr><td>')
+                print(self.convert_link_to_html(id, selfid=id))
+                print('</td></tr>')
+                if subtypes:
+                    print('<tr><td class="flex">')
+                    for child in subtypes:
+                        print(f'<span>{self.convert_link_to_html(child)}</span>')
+                    print('</td></tr>')
+                print('</table></td></tr>')
+
             if (parsedDefinition := item['ParsedDefinition']): 
-                print(f'<dt>Definition</dt> <dd class="definition">' +
+                print(f'<tr><th>Definition</th> <td class="ccinfo definition">' +
                       self.convert_definition_to_html(parsedDefinition) +
-                      '</dd>')
-            print('</dl>')
+                      '</td></tr>')
+
+            print('</table>')
             print('</div>')
         print('</div>')
         print('</body></html>')
