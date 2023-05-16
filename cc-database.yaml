@@ -6380,7 +6380,8 @@
     - manner event
   SubtypeOf:
     - event [sem]
-  AssociatedTo: []
+  AssociatedTo:
+    - manner complex predicate [cxn]
   Definition: ""
 
 - Id: manner event [sem] / verb [cxn]
