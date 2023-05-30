@@ -266,7 +266,7 @@ class CCDBParser:
             supertypes = item.get('SubtypeOf', [])
             subtypes = [chid for chid, child in glossitems if id in child.get('SubtypeOf', ())]
             if supertypes or subtypes:
-                print(f'<tr><th>Hiererchy</th> <td class="ccinfo relation"> <table>')
+                print(f'<tr><th>Hierarchy</th> <td class="ccinfo relation"> <table>')
                 print(f'<table>')
                 if supertypes:
                     print('<tr><td class="flex">')
