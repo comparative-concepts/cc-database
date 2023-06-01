@@ -35,6 +35,7 @@ function set_link_title(event) {
 // Searching/filtering CCs
 
 const FILTER_TYPES = ['name', 'relation', 'definition'];
+const MATCH_TYPES = ['contains', 'starts with', 'words start with']
 var SEARCH = {};
 var ALL_CCS = [];
 
@@ -49,12 +50,17 @@ function init_searchfilter() {
         ALL_CCS.push(cc); 
     }
 
-    let checkboxes = FILTER_TYPES.map((type) =>
-        `<label><input id="search-${type}" type="checkbox" ${type=='name' ? 'checked' : ''}/> ${type}</label>`
+    let checkboxes = FILTER_TYPES.map((type, i) =>
+        `<label><input id="search-${type}" type="checkbox" ${i===0 ? 'checked' : ''}/> ${type}</label>`
+    );
+
+    let radioboxes = MATCH_TYPES.map((type, i) =>
+        `<label><input name="matchtype" type="radio" value="${type}" ${i===0 ? 'checked' : ''}/> ${type}</label>`
     );
 
     document.getElementById('search').innerHTML = `
-        ${checkboxes.join('\n')} <br/>
+        Find a ${checkboxes.join('\n')} <br/>
+        that ${radioboxes.join('\n')} <br/>
         <input id="search-box" type="search"/> <br/>
         <span id="search-info"></span>
     `.trim();
@@ -81,7 +87,7 @@ function merge_cc_elements(splitchar, elemlist) {
             }
         }
     }
-    return names.join('#');  // # doesn't occur in the CC database
+    return names.join('#');  // '#' doesn't occur in the CC database
 }
 
 function filter_ccs() {
@@ -97,8 +103,11 @@ function filter_ccs() {
         }]);
     }
 
+    let checked_radio = document.querySelector('input[name="matchtype"]:checked');
+    let match_type = checked_radio ? checked_radio.value : 'contains';
     let search_term = SEARCH['box'].value;
-    search_term = search_term.trim().replace(/ +/g, ' ');
+    // We only care about alphanumeric characters
+    search_term = search_term.trim().replace(/\W+/g, ' ');
     if (search_term.length < 3) {
         for (let cc of ALL_CCS) {
             cc['elem'].style.display = '';
@@ -107,7 +116,15 @@ function filter_ccs() {
     }
 
     else {
-        let regex_str = search_term.replaceAll(' ', '[^#]*?');  // # is the separator used by `merge_names` above
+        let regex_str = search_term;
+        if (match_type !== 'contains') {
+            // Each search term must start a word
+            regex_str = search_term.replaceAll(' ', ' \\b');
+            // The first search term must either start the text or just a word
+            regex_str = (match_type==='starts with' ? '^' : '\\b') + regex_str;
+        }
+        // '#' is the separator used by `merge_cc_elements` above, so we don't want to accept that
+        regex_str = regex_str.replaceAll(' ', '[^#]*?');
         let regex = new RegExp(regex_str, 'i');
         let filter_types = FILTER_TYPES.filter((type) => SEARCH[type].checked);
         let count = 0;
@@ -126,7 +143,7 @@ function filter_ccs() {
                 elem.style.display = '';
                 for (let type of filter_types) {
                     let contents = elem.querySelectorAll('.' + type);
-                    new Mark(contents).markRegExp(regex, {acrossElements: (type === 'definition')});
+                    new Mark(contents).markRegExp(regex, {acrossElements: true});
                 }
                 count++;
             } else {
