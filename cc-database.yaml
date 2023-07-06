@@ -492,36 +492,28 @@
 
 - Id: affecting event [sem]
   Type: sem
-  InstanceOf: affecting event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - affecting event
+    - affecting
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo:
     - stimulus-oriented strategy [str]
-  Definition: ""
-
-- Id: affecting event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - affecting event/verb
-    - affecting
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> which describes the <a>stimulus</a> causing a change in mental state of the <a>experiencer</a>; and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>The dog surprised me</i> is an instance of an affecting event, and <i>surprise</i> is an affecting verb. (Section 7.4)
+    an <a>experiential event</a> which describes the <a>stimulus</a> causing a change in mental state of the <a>experiencer</a>. <i>Example</i>: <i>The dog surprised me</i> is an instance of an affecting event. (Section 7.4)
 
 - Id: affecting verb [cxn]
   Type: cxn
-  InstanceOf: affecting event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - affecting verb
     - affect
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an <a>affecting event</a>. <i>Example</i>: <i>The dog surprised me</i> is an instance of an affecting event, and <i>surprise</i> is an affecting verb. (Section 7.4)
 
 - Id: affixation [str]
   Type: str
@@ -558,35 +550,26 @@
 
 - Id: agentive change of state event [sem]
   Type: sem
-  InstanceOf: agentive change of state event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - agentive change of state event
   SubtypeOf:
     - change of state event [sem]
   AssociatedTo:
     - bivalent event [sem]
-  Definition: ""
-
-- Id: agentive change of state event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - agentive change of state event/verb
-    - agentive change of state
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>change of state event</a> in which an external volitional <a>agent</a> brings about a change in a <a>patient</a> such that the patient enters a resulting <a>state</a>; and the <a>verb</a> that expresses such an event. <i>Example</i>: the event of a person drying dishes is an agentive change of state event, and <i>dry</i> is an agentive change of state verb. (Section 6.2.1)
+    a <a>change of state event</a> in which an external volitional <a>agent</a> brings about a change in a <a>patient</a> such that the patient enters a resulting <a>state</a>. <i>Example</i>: the event of a person drying dishes is an agentive change of state event. (Section 6.2.1)
 
 - Id: agentive change of state verb [cxn]
   Type: cxn
-  InstanceOf: agentive change of state event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - agentive change of state verb
   SubtypeOf:
     - change of state verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an agentive change of state event. <i>Example</i>: the event of a person drying dishes is an agentive change of state event, and <i>dry</i> is an agentive change of state verb. (Section 6.2.1)
 
 - Id: agree/disagree alignment strategy [str]
   Type: str
@@ -675,33 +658,26 @@
 
 - Id: alternative question [cxn]
   Type: cxn
-  InstanceOf: alternative question [inf/cxn]
+  InstanceOf: ""
   Alias:
     - alternative question
   SubtypeOf:
     - interrogative [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: alternative question [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - alternative question
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an interrogative in which the speaker offers a closed list of alternatives to fill in the unknown piece of information in the propositional content; and the construction expressing this function. <i>Example</i>: <i>Do you prefer beer or wine?</i> is an instance of an alternative question construction, where the alternatives offered are beer and wine. (Section 12.3.1)
+    a construction expressing the <a>alternative question function</a>. <i>Example</i>: <i>Do you prefer beer or wine?</i> is an instance of an alternative question construction, where the alternatives offered are beer and wine. (Section 12.3.1)
 
 - Id: alternative question [inf]
   Type: inf
-  InstanceOf: alternative question [inf/cxn]
+  InstanceOf: ""
   Alias:
     - alternative question
+    - alternative question function
   SubtypeOf:
     - interrogative [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    an interrogative in which the speaker offers a closed list of alternatives to fill in the unknown piece of information in the propositional content. <i>Example</i>: <i>Do you prefer beer or wine?</i> is an instance of an alternative question construction, where the alternatives offered are beer and wine. (Section 12.3.1)
 
 - Id: amount term [cxn]
   Type: cxn
@@ -914,68 +890,55 @@
 
 - Id: apodosis [cxn]
   Type: cxn
-  InstanceOf: apodosis [sem/cxn]
+  InstanceOf: ""
   Alias:
     - apodosis
+    - apodosis clause
   SubtypeOf:
     - clause [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>clause</a> expressing the causally consequent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a>protasis</a>. (Section 17.3.1)
 
-- Id: apodosis [sem/cxn]
-  Type: sem/cxn
+- Id: apodosis [sem]
+  Type: sem
   InstanceOf: ""
   Alias:
     - apodosis
     - consequent
-  SubtypeOf: []
-  AssociatedTo: []
-  Definition: >-
-    the <a>clause</a> expressing the causally consequent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>; or the proposition or event denoted by the clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a>protasis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>apodosis</q> can be distinguished as <q>apodosis proposition</q> or <q>apodosis event</q>. (Section 17.3.1)
-
-- Id: apodosis [sem]
-  Type: sem
-  InstanceOf: apodosis [sem/cxn]
-  Alias:
-    - apodosis
   SubtypeOf:
+    - event [sem]
     - proposition [sem]
   AssociatedTo:
     - conditional relation [sem]
-  Definition: ""
+  Definition: >-
+    the proposition or event denoted by an <a>apodosis clause</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a>protasis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>apodosis</q> can be distinguished as <q>apodosis proposition</q> or <q>apodosis event</q>. (Section 17.3.1)
 
 - Id: application event [sem]
   Type: sem
-  InstanceOf: application event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - application event
+    - application
+    - putting event
   SubtypeOf:
     - trivalent event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: application event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - application event/verb
-    - application
-    - putting event/verb
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing placing or applying one <a>object</a> onto (2-dimensional) or into (3-dimensional) another object; and the <a>verb</a> expressing such an event. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
+    an <a>event</a> describing placing or applying one <a>object</a> onto (2-dimensional) or into (3-dimensional) another object. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
 
 - Id: application verb [cxn]
   Type: cxn
-  InstanceOf: application event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - application verb
+    - putting verb
   SubtypeOf:
     - result verb [cxn]
     - manner verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing an <a>application event</a>. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
 
 - Id: applicative construction [cxn]
   Type: cxn
@@ -1166,36 +1129,28 @@
 
 - Id: attending event [sem]
   Type: sem
-  InstanceOf: attending event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - attending event
+    - attending
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo:
     - experiential verb [cxn]
     - experiencer-oriented strategy [str]
-  Definition: ""
-
-- Id: attending event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - attending event/verb
-    - attending
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> which describes the <a>experiencer</a> directing her/his attention to the <a>stimulus</a>; and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>I am looking at the sandhill crane</i> is an instance of an attending event, and <i>look (at)</i> is an attending verb. (Section 7.4)
+    an <a>experiential event</a> which describes the <a>experiencer</a> directing her/his attention to the <a>stimulus</a>. <i>Example</i>: <i>I am looking at the sandhill crane</i> is an instance of an attending event. (Section 7.4)
 
 - Id: attending verb [cxn]
   Type: cxn
-  InstanceOf: attending event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - attending verb
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+     a <a>verb</a> that expresses an <a>attending event</a>. <i>Example</i>: <i>I am looking at the sandhill crane</i> is an instance of an attending event, and <i>look (at)</i> is an attending verb. (Section 7.4)
 
 - Id: attributive phrase [cxn]
   Type: cxn
@@ -1392,100 +1347,74 @@
 
 - Id: bodily action [sem]
   Type: sem
-  InstanceOf: bodily action [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
+    - bodily
     - bodily action
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: bodily action [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - bodily action/predicate
-    - bodily
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the <a>event</a> class of normally uncontrolled actions involving one's body; and the <a>predicates</a> that express events in this class. <i>Example</i>: coughing is a bodily action, and <i>cough</i> is a bodily action predicate. (Section 6.3.3)
+    the <a>event</a> class of normally uncontrolled actions involving one's body. <i>Example</i>: coughing is a bodily action. (Section 6.3.3)
 
 - Id: bodily motion event [sem]
   Type: sem
-  InstanceOf: bodily motion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - bodily motion event
   SubtypeOf:
     - monovalent event [sem]
   AssociatedTo:
     - middle voice [str]
-  Definition: ""
-
-- Id: bodily motion event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - bodily motion event/verb
-    - bodily motion
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>monovalent event</a> involving an internal bodily motion; and the <a>verb</a> expressing that event. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
+    a <a>monovalent event</a> involving an internal bodily motion. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
 
 - Id: bodily motion verb [cxn]
   Type: cxn
-  InstanceOf: bodily motion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - bodily motion verb
   SubtypeOf:
     - introverted verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>bodily motion event</a>. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
 
 - Id: bodily predicate [cxn]
   Type: cxn
-  InstanceOf: bodily action [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - bodily predicate
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicates</a> that express events in the <a>bodily action<a> event class. <i>Example</i>: coughing is a bodily action, and <i>cough</i> is a bodily action predicate. (Section 6.3.3)
 
 - Id: body care event [sem]
   Type: sem
-  InstanceOf: body care event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - body care event
+    - body care
     - grooming event
   SubtypeOf:
     - monovalent event [sem]
   AssociatedTo:
     - middle voice [str]
-  Definition: ""
-
-- Id: body care event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - body care event/verb
-    - body care
-    - grooming event/verb
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>monovalent event</a> involving a person acting on that person's own body, generally for grooming or hygiene; and the <a>verb</a> expressing that event. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
+    a <a>monovalent event</a> involving a person acting on that person's own body, generally for grooming or hygiene. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
 
 - Id: body care verb [cxn]
   Type: cxn
-  InstanceOf: body care event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - body care verb
   SubtypeOf:
     - introverted verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>body care event</a>. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
 
 - Id: body part relation [sem]
   Type: sem
@@ -1501,40 +1430,39 @@
 
 - Id: body position event [sem]
   Type: sem
-  InstanceOf: body position event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - body position event
+    - body position
+    - posture event
+    - posture
+    - maintain position event
+    - maintain position
+    - locative stative event
+    - locative stative
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: body position event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - body position event/predicate
-    - body position
-    - posture event/predicate
-    - maintain position event/predicate
-    - locative stative event/predicate
-    - locative stative
-    - maintain position
-    - posture
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the event class of maintaining a particular body posture or position; and the <a>predicates</a> that express events in this class. <i>Example</i>: standing is a body position event, and <i>stand</i> is a body position predicate. (Section 6.3.3)
+    the event class of maintaining a particular body posture or position. <i>Example</i>: standing is a body position event. (Section 6.3.3)
 
 - Id: body position predicate [cxn]
   Type: cxn
-  InstanceOf: body position event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - body position predicate
+    - body position
+    - posture predicate
+    - posture
+    - maintain position predicate
+    - maintain position
+    - locative stative predicate
+    - locative stative
   SubtypeOf:
     - predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicates</a> that express events in the <a>body position event</a> class. <i>Example</i>: standing is a body position event, and <i>stand</i> is a body position predicate. (Section 6.3.3)
 
 - Id: cardinal numeral [cxn]
   Type: cxn
@@ -1717,38 +1645,30 @@
 
 - Id: chaining construction [cxn]
   Type: cxn
-  InstanceOf: chaining event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - chaining construction
   SubtypeOf:
     - reference tracking [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> expressing such a <a>chaining event</a>. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
 
 - Id: chaining event [sem]
   Type: sem
-  InstanceOf: chaining event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - chaining event
+    - chaining
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: chaining event [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - chaining event/construction
-    - chaining
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on a third participant in the same way, and so on; and the <a>construction</a> expressing such an event. That is, each participant in the chain is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action -- except the first in the chain, who is only an initiator, and the last, who is only an endpoint. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
+    an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on a third participant in the same way, and so on. That is, each participant in the chain is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action -- except the first in the chain, who is only an initiator, and the last, who is only an endpoint. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
 
 - Id: change in (body) position event [sem]
   Type: sem
-  InstanceOf: change in (body) position event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - change in (body) position event
     - change in body position event
@@ -1759,26 +1679,12 @@
     - monovalent event [sem]
   AssociatedTo:
     - middle voice [str]
-  Definition: ""
-
-- Id: change in (body) position event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - change in (body) position event/verb
-    - change in (body) position
-    - change in body position
-    - change in position
-    - assume position
-    - change in posture
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>monovalent event</a> involving a person changing their bodily position; and the <a>verb</a> expressing that event. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
+    a <a>monovalent event</a> involving a person changing their bodily position. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
 
 - Id: change in (body) position verb [cxn]
   Type: cxn
-  InstanceOf: change in (body) position event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - change in (body) position verb
     - change in body position verb
@@ -1788,41 +1694,35 @@
   SubtypeOf:
     - introverted verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>change in body position event</a>. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
 
 - Id: change of state event [sem]
   Type: sem
-  InstanceOf: change of state event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - change of state event
+    - change of state
+    - COS event
+    - COS
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - monovalent event [sem]
-  Definition: ""
-
-- Id: change of state event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - change of state event/verb
-    - change of state
-    - COS event/verb
-    - COS
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> in which a <a>participant</a>, the <a>patient</a>, undergoes a change such that the patient enters a resulting <a>state</a>, usually a change of physical state; and the <a>verb</a> expressing that event. <i>Example</i>: the event of dishes becoming dry is a change of state event, and <i>dry</i> is a change of state verb. (Sections 6.1.2, <b>6.2.1</b>)
+    an <a>event</a> in which a <a>participant</a>, the <a>patient</a>, undergoes a change such that the patient enters a resulting <a>state</a>, usually a change of physical state. <i>Example</i>: the event of dishes becoming dry is a change of state event. (Sections 6.1.2, <b>6.2.1</b>)
 
 - Id: change of state verb [cxn]
   Type: cxn
   InstanceOf: change of state event [sem] / verb [cxn]
   Alias:
     - change of state verb
+    - COS verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>change of state event</a>. <i>Example</i>: the event of dishes becoming dry is a change of state event, and <i>dry</i> is a change of state verb. (Sections 6.1.2, <b>6.2.1</b>)
 
 - Id: choosing [inf]
   Type: inf
@@ -1910,67 +1810,51 @@
 
 - Id: cognition event [sem]
   Type: sem
-  InstanceOf: cognition event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - cognition event
+    - cognition
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: cognition event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - cognition event/verb
-    - cognition
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> involving an <a>experiencer</a>'s cognition directed toward a <a>stimulus</a>; and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>Tim thought about the war</i> is an example of a cognition event, and <i>think (about)</i> is the cognition verb. (Section 7.4)
+    an <a>experiential event</a> involving an <a>experiencer</a>'s cognition directed toward a <a>stimulus</a>. <i>Example</i>: <i>Tim thought about the war</i> is an example of a cognition event. (Section 7.4)
 
 - Id: cognition verb [cxn]
   Type: cxn
-  InstanceOf: cognition event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - cognition verb
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses a <a>cognition event</a>. <i>Example</i>: <i>Tim thought about the war</i> is an example of a cognition event, and <i>think (about)</i> is the cognition verb. (Section 7.4)
 
 - Id: collective construction [cxn]
   Type: cxn
-  InstanceOf: collective event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - collective construction
   SubtypeOf:
     - reference tracking [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> expressing a <a>collective event</a>. <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
 
 - Id: collective event [sem]
   Type: sem
-  InstanceOf: collective event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - collective event
+    - collective
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - reciprocal construction [cxn]
     - reflexive construction [cxn]
-  Definition: ""
-
-- Id: collective event [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - collective event/construction
-    - collective
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> type in which two <a>participants</a> both play the same role in two related events (that is, they do it <dq>together</dq>); and the <a>construction</a> expressing such an event. <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
+    an <a>event</a> type in which two <a>participants</a> both play the same role in two related events (that is, they do it <dq>together</dq>). <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
 
 - Id: color term [cxn]
   Type: cxn
@@ -1985,35 +1869,27 @@
 
 - Id: combining event [sem]
   Type: sem
-  InstanceOf: combining event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - combining event
+    - combining
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: combining event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - combining event/verb
-    - combining
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing the combining of two <a>objects</a>; and the <a>verb</a> expressing such an event. <i>Example</i>: blending is a combining event. (Section 7.3.2)
+    an <a>event</a> describing the combining of two <a>objects</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
 
 - Id: combining verb [cxn]
   Type: cxn
-  InstanceOf: combining event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - combining verb
   SubtypeOf:
     - result verb [cxn]
     - manner verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>combining event</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
 
 - Id: comitative [sem]
   Type: sem
@@ -2040,25 +1916,16 @@
 
 - Id: commentative event [sem]
   Type: sem
-  InstanceOf: commentative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - commentative event
+    - commentative
   SubtypeOf:
     - evaluative event [sem]
   AssociatedTo:
     - factive event [sem]
-  Definition: ""
-
-- Id: commentative event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - commentative event/predicate
-    - commentative
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>evaluative event</a> in which an evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>positive epistemic stance</a> by the speaker toward the proposition; and the <a>predicate</a> expressing that event. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
+    an <a>evaluative event</a> in which an evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>positive epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
 
 - Id: commentative predicate [cxn]
   Type: cxn
@@ -2068,7 +1935,8 @@
   SubtypeOf:
     - evaluative predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing a <a>commentative event</a>. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
 
 - Id: common noun [cxn]
   Type: cxn
@@ -2095,31 +1963,23 @@
 
 - Id: comparative conditional construction [cxn]
   Type: cxn
-  InstanceOf: comparative conditional relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - comparative conditional construction
   SubtypeOf:
     - adverbial clause construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a construction that expresses a <a>comparative conditional relation</a>. <i>Example</i>: <i>The longer that Bill had to wait, the angrier he got</i> is an instance of the comparative conditional relation and construction: a degree of length of time that Bill had to wait can (in a <a>generic conditional</a>) or does (in an ordinary, specific <a>conditional</a>) cause the occurrence of the corresponding degree of Bill's anger. (Section 17.4.1)
 
 - Id: comparative conditional relation [sem]
   Type: sem
-  InstanceOf: comparative conditional relation [sem] / construction [cxn]
-  Alias:
-    - comparative conditional relation
-  SubtypeOf:
-    - semantic relation (FN-Br) [sem]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: comparative conditional relation [sem] / construction [cxn]
-  Type: sem/cxn
   InstanceOf: ""
   Alias:
-    - comparative conditional relation/construction
+    - comparative conditional relation
     - comparative conditional
-  SubtypeOf: []
+  SubtypeOf:
+    - semantic relation (FN-Br) [sem]
   AssociatedTo: []
   Definition: >-
     a relation between two events, each on a <a>gradable predicative scale</a>, such that an event at one degree on the first predicative scale causes an event at the corresponding degree on the second predicative scale. <i>Example</i>: <i>The longer that Bill had to wait, the angrier he got</i> is an instance of the comparative conditional relation and construction: a degree of length of time that Bill had to wait can (in a <a>generic conditional</a>) or does (in an ordinary, specific <a>conditional</a>) cause the occurrence of the corresponding degree of Bill's anger. (Section 17.4.1)
@@ -2129,6 +1989,7 @@
   InstanceOf: ""
   Alias:
     - comparative construction
+    - comparative
   SubtypeOf:
     - adverbial clause construction [cxn]
   AssociatedTo: []
@@ -2155,7 +2016,8 @@
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>pronoun</a> expressing a <a>comparative referent</a>. <i>Example</i>: in <i>The boy runs as fast as anyone in his class</i>, <i>anyone</i> is a comparative pronoun expressing a hypothetical referent selected from the class representing the standard to which the boy's running is being compared. (Section 3.5)
 
 - Id: comparative referent [inf]
   Type: inf
@@ -2164,16 +2026,6 @@
     - comparative referent
   SubtypeOf:
     - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: comparative referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - comparative referent/pronoun
-    - comparative
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an unspecified <a>referent</a> occurring in the <a>standard</a> of comparison in a <a>comparative construction</a>. <i>Example</i>: in <i>The boy runs as fast as anyone in his class</i>, <i>anyone</i> is a comparative pronoun expressing a hypothetical referent selected from the class representing the standard to which the boy's running is being compared. (Section 3.5)
@@ -2378,72 +2230,55 @@
 
 - Id: concessive conditional construction [cxn]
   Type: cxn
-  InstanceOf: concessive conditional relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - concessive conditional construction
     - conditional concessive construction
   SubtypeOf:
     - adverbial clause construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the construction that expresses a <a>concessive conditional relation</a>. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
 
 - Id: concessive conditional relation [sem]
   Type: sem
-  InstanceOf: concessive conditional relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - concessive conditional relation
     - conditional concessive relation
+    - concessive conditional
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - neutral epistemic stance [sem]
     - concessive relation [sem]
     - conditional relation [sem]
-  Definition: ""
-
-- Id: concessive conditional relation [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - concessive conditional relation/construction
-    - concessive conditional
-    - conditional concessive
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events; and the construction that expresses that relation. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
+    a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
 
 - Id: concessive construction [cxn]
   Type: cxn
-  InstanceOf: concessive relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - concessive construction
   SubtypeOf:
     - adverbial clause construction [cxn]
   AssociatedTo:
     - adversative coordination [cxn]
-  Definition: ""
+  Definition: >-
+    the construction that expresses a <a>concessive relation</a>.. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
 
 - Id: concessive relation [sem]
   Type: sem
-  InstanceOf: concessive relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - concessive relation
+    - concessive
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - positive epistemic stance [sem]
     - unexpected co-occurrence [sem]
-  Definition: ""
-
-- Id: concessive relation [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - concessive relation/construction
-    - concessive
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
     a relation between two <a>events</a> such that there is an expected <a>causal relation</a> between the two events, but the opposite of the second event, expressed in the <a>apodosis</a>, unexpectedly occurs. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
 
@@ -2460,13 +2295,14 @@
 
 - Id: conditional construction [cxn]
   Type: cxn
-  InstanceOf: conditional relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - conditional construction
   SubtypeOf:
     - adverbial clause construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> that expresses a <a>conditional relation</a>. <i>Example</i>: <i>If you press this button, the door will open</i> is an instance of the conditional relation and construction. The causally antecedent proposition is the <a>protasis</a>, and the causally consequent proposition is the <a>apodosis</a>. A conditional may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a> or <a>speech act causal relation</a>. (Section 17.3.1)
 
 - Id: conditional deranking system [str]
   Type: str
@@ -2498,55 +2334,37 @@
 
 - Id: conditional pronoun [cxn]
   Type: cxn
-  InstanceOf: conditional referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - conditional pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a conditional pronoun that expresses a <a>conditional referent</a>. <i>Example</i>: in <i>If you hear <b>anything</b>, tell me</i>, <i>anything</i> is a conditional pronoun expressing a referent that is found only in the hypothetical world introduced by the protasis of the conditional construction. (Section 3.5)
 
 - Id: conditional referent [inf]
   Type: inf
-  InstanceOf: conditional referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - conditional referent
   SubtypeOf:
     - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: conditional referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - conditional referent/pronoun
-    - conditional
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an unspecified <a>referent</a> in the <a>protasis</a> in a <a>conditional construction</a>. <i>Example</i>: in <i>If you hear <b>anything</b>, tell me</i>, <i>anything</i> is a conditional pronoun expressing a referent that is found only in the hypothetical world introduced by the protasis of the conditional construction. (Section 3.5)
 
 - Id: conditional relation [sem]
   Type: sem
-  InstanceOf: conditional relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - conditional relation
+    - conditional
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: conditional relation [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - conditional relation/construction
-    - conditional
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a semantic relation between two <a>events</a> that involves a logical material implication relation between their corresponding <a>propositions</a>, some type of <a>causal relation</a> between the corresponding <a>events</a>, and non-positive <a>epistemic stance</a>; and the <a>construction</a> that expresses that relation. <i>Example</i>: <i>If you press this button, the door will open</i> is an instance of the conditional relation and construction. The causally antecedent proposition is the <a>protasis</a>, and the causally consequent proposition is the <a>apodosis</a>. A conditional may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a> or <a>speech act causal relation</a>. (Section 17.3.1)
+    a semantic relation between two <a>events</a> that involves a logical material implication relation between their corresponding <a>propositions</a>, some type of <a>causal relation</a> between the corresponding <a>events</a>, and non-positive <a>epistemic stance</a>. <i>Example</i>: <i>If you press this button, the door will open</i> is an instance of the conditional relation and construction. The causally antecedent proposition is the <a>protasis</a>, and the causally consequent proposition is the <a>apodosis</a>. A conditional may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a> or <a>speech act causal relation</a>. (Section 17.3.1)
 
 - Id: conjoined comparative [str]
   Type: str
@@ -2637,34 +2455,26 @@
 
 - Id: contact by impact event [sem]
   Type: sem
-  InstanceOf: contact by impact event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - contact by impact event
+    - contact by impact
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: contact by impact event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - contact by impact event/verb
-    - contact by impact
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing contact by impact; and the <a>verb</a> expressing such an event. <i>Example</i>: hitting is a contact by impact event, and <i>hit</i> is a contact by impact verb. (Section 7.3.2)
+    an <a>event</a> describing contact by impact. <i>Example</i>: hitting is a contact by impact event. (Section 7.3.2)
 
 - Id: contact by impact verb [cxn]
   Type: cxn
-  InstanceOf: contact by impact event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - contact by impact verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>contact by impact event</a>. <i>Example</i>: hitting is a contact by impact event, and <i>hit</i> is a contact by impact verb. (Section 7.3.2)
 
 - Id: container term [cxn]
   Type: cxn
@@ -2679,7 +2489,7 @@
 
 - Id: content causal construction [cxn]
   Type: cxn
-  InstanceOf: content causal relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - content causal construction
   SubtypeOf:
@@ -2688,28 +2498,19 @@
     - concessive construction [cxn]
     - concessive conditional construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the construction expressing a <a>content causal relation</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, there is a content causal relation between the event of your pressing the button and the event of the door opening. (Section 17.3.1)
 
 - Id: content causal relation [sem]
   Type: sem
-  InstanceOf: content causal relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - content causal relation
   SubtypeOf:
     - causal [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: content causal relation [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - content causal relation/construction
-    - content causal
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the semantic relation in a <a>conditional</a>, <a>causal</a>, <a>concessive</a>, or <a>conditional concessive construction</a> that expresses a <a>causal relation</a> between events in the world; and the construction expressing that relation. <i>Example</i>: in <i>If you press this button, the door will open</i>, there is a content causal relation between the event of your pressing the button and the event of the door opening. A content causal relation contrasts with an <a>epistemic causal relation</a> or a <a>speech act causal relation</a>. (Section 17.3.1)
+    the semantic relation in a <a>conditional</a>, <a>causal</a>, <a>concessive</a>, or <a>conditional concessive construction</a> that expresses a <a>causal relation</a> between events in the world. <i>Example</i>: in <i>If you press this button, the door will open</i>, there is a content causal relation between the event of your pressing the button and the event of the door opening. A content causal relation contrasts with an <a>epistemic causal relation</a> or a <a>speech act causal relation</a>. (Section 17.3.1)
 
 - Id: contextual [sem]
   Type: sem
@@ -2761,34 +2562,25 @@
 
 - Id: controlled activity [sem]
   Type: sem
-  InstanceOf: controlled activity [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - controlled activity
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: controlled activity [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - controlled activity/predicate
-    - controlled
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the <a>event</a> class of agentive processes, and the <a>predicates</a> that express events in this class. <i>Example</i>: running is a controlled activity event, and <i>run</i> is a controlled activity predicate. (Section 6.3.3)
+    the <a>event</a> class of agentive processes. <i>Example</i>: running is a controlled activity event. (Section 6.3.3)
 
 - Id: controlled predicate [cxn]
   Type: cxn
-  InstanceOf: controlled activity [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - controlled predicate
   SubtypeOf:
     - predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicates</a> that express events in the <a>controlled activity</a> class. <i>Example</i>: running is a controlled activity event, and <i>run</i> is a controlled activity predicate. (Section 6.3.3)
 
 - Id: controller [str]
   Type: str
@@ -3017,35 +2809,26 @@
 
 - Id: damage event [sem]
   Type: sem
-  InstanceOf: damage event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - damage event
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: damage event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - damage event/verb
-    - damage
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing material damage to an <a>object</a>; and the <a>verb</a> expressing such an event. <i>Example</i>: scratching something is a damage event, and <i>scratch</i> is a damage verb. (Section 7.3.2)
+    an <a>event</a> describing material damage to an <a>object</a>. <i>Example</i>: scratching something is a damage event. (Section 7.3.2)
 
 - Id: damage verb [cxn]
   Type: cxn
-  InstanceOf: damage event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - damage verb
   SubtypeOf:
     - manner verb [cxn]
     - result verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>damage event</a>. <i>Example</i>: scratching something is a damage event, and <i>scratch</i> is a damage verb. (Section 7.3.2)
 
 - Id: declarative [cxn]
   Type: cxn
@@ -3055,17 +2838,8 @@
   SubtypeOf:
     - speech acts [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: declarative [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - declarative
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>speech act</a> which simply asserts its <a>propositional content</a>, and the <a>construction</a> that expresses this speech act. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. The declarative is the most common speech act construction, and is considered the default speech act construction. (Section 12.1)
+    the <a>construction</a> that expresses a <a>declarative</a> speech act. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. The declarative is the most common speech act construction, and is considered the default speech act construction. (Section 12.1)
 
 - Id: declarative [inf]
   Type: inf
@@ -3075,7 +2849,8 @@
   SubtypeOf:
     - speech acts [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>speech act</a> which simply asserts its <a>propositional content</a>. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. (Section 12.1)
 
 - Id: declarative negation construction [cxn]
   Type: cxn
@@ -3092,30 +2867,22 @@
 
 - Id: definite article [cxn]
   Type: cxn
-  InstanceOf: definite pronoun/article [cxn]
+  InstanceOf: ""
   Alias:
     - definite article
   SubtypeOf:
     - article [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the top end of the <a>information status</a> continuum, where the identity of the referent is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: <i>the glass bowl</i> is an example of a definite referring phrase, used in a context where the individual glass bowl in question is identifiable by both speaker and hearer (Table 3.4, Section 3.3.1)
 
 - Id: definite pronoun [cxn]
   Type: cxn
-  InstanceOf: definite pronoun/article [cxn]
+  InstanceOf: ""
   Alias:
     - definite pronoun
   SubtypeOf:
     - pronoun [cxn]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: definite pronoun/article [cxn]
-  Type: cxn
-  InstanceOf: ""
-  Alias:
-    - definite pronoun/article
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the top end of the <a>information status</a> continuum, where the identity of the referent is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: <i>the glass bowl</i> is an example of a definite referring phrase, used in a context where the individual glass bowl in question is identifiable by both speaker and hearer (Table 3.4, Section 3.3.1)
@@ -3347,35 +3114,27 @@
 
 - Id: desiderative event [sem]
   Type: sem
-  InstanceOf: desiderative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - desiderative event
+    - desiderative
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - dependent time reference [sem]
-  Definition: ""
-
-- Id: desiderative event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - desiderative event/predicate
-    - desiderative
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> that expresses a desire toward the realization of a future event that is expressed by the complement; and the <a>predicate</a> that expresses the event. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
+    an <a>event</a> that expresses a desire toward the realization of a future event that is expressed by the complement. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
 
 - Id: desiderative predicate [cxn]
   Type: cxn
-  InstanceOf: desiderative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - desiderative predicate
   SubtypeOf:
     - predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> that expresses a <a>desiderative event</a>. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
 
 - Id: detached (topic phrase) [str]
   Type: str
@@ -3453,31 +3212,22 @@
 
 - Id: direct negation pronoun [cxn]
   Type: cxn
-  InstanceOf: direct negation referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - direct negation pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>pronoun</a> that expresses a <a>direct negation referent</a>. <i>Example</i>: in <i>I noticed nothing</i>, <i>nothing</i> is a direct negation pronoun expressing a referent found only in the negative alternative world to the real world. (Section 3.5)
 
 - Id: direct negation referent [inf]
   Type: inf
-  InstanceOf: direct negation referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - direct negation referent
   SubtypeOf:
     - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: direct negation referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - direct negation referent/pronoun
-    - direct negation
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an unspecified <a>referent</a> which is in the scope of <a>negation</a> in the same <a>clause</a>. <i>Example</i>: in <i>I noticed nothing</i>, <i>nothing</i> is a direct negation pronoun expressing a referent found only in the negative alternative world to the real world. (Section 3.5)
@@ -3806,34 +3556,25 @@
 
 - Id: emotion event [sem]
   Type: sem
-  InstanceOf: emotion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - emotion event
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: emotion event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - emotion event/verb
-    - emotion
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> involving an <a>experiencer</a>'s emotions directed toward a <a>stimulus</a>; and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>He fears dogs</i> is an example of an emotion event, and <i>fear</i> is the emotion verb. (Section 7.4)
+    an <a>experiential event</a> involving an <a>experiencer</a>'s emotions directed toward a <a>stimulus</a>. <i>Example</i>: <i>He fears dogs</i> is an example of an emotion event. (Section 7.4)
 
 - Id: emotion verb [cxn]
   Type: cxn
-  InstanceOf: emotion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - emotion verb
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an <a>emotion event</a>. <i>Example</i>: <i>He fears dogs</i> is an example of an emotion event, and <i>fear</i> is the emotion verb. (Section 7.4)
 
 - Id: encoding strategy [str]
   Type: str
@@ -3872,37 +3613,29 @@
 
 - Id: entity-central [cxn]
   Type: cxn
-  InstanceOf: entity-central [inf/cxn]
+  InstanceOf: ""
   Alias:
     - entity-central
   SubtypeOf:
     - thetic [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: entity-central [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - entity-central
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a type of <a>thetic</a> in which the most important new information being presented is the identity of the <a>object</a> (entity); and the <a>construction</a> that expresses that information packaging. <i>Example</i>: <i>There's a snake in the kitchen sink</i> is an instance of an entity-central thetic construction, where the primary new information being presented is the snake. (Sections 10.1.2, <b>11.3.1</b>)
+    the <a>construction</a> that expresses an <a>entity-central</a> information packaging. <i>Example</i>: <i>There's a snake in the kitchen sink</i> is an instance of an entity-central thetic construction, where the primary new information being presented is the snake. (Sections 10.1.2, <b>11.3.1</b>)
 
 - Id: entity-central [inf]
   Type: inf
-  InstanceOf: entity-central [inf/cxn]
+  InstanceOf: ""
   Alias:
     - entity-central
   SubtypeOf:
     - thetic [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a type of <a>thetic</a> in which the most important new information being presented is the identity of the <a>object</a> (entity). <i>Example</i>: <i>There's a snake in the kitchen sink</i> is an instance of an entity-central thetic construction, where the primary new information being presented is the snake. (Sections 10.1.2, <b>11.3.1</b>)
 
 - Id: epistemic causal construction [cxn]
   Type: cxn
-  InstanceOf: epistemic causal relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - epistemic causal construction
   SubtypeOf:
@@ -3911,28 +3644,19 @@
     - concessive construction [cxn]
     - concessive conditional construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the construction expressing an <a>epistemic causal relation</a>. <i>Example</i>: in <i>If Professor Smith's door is closed, then she is not on campus</i>, there is an epistemic causal relation between the fact that Professor Smith's office door is closed and the inference that she is not on campus. (Section 17.3.1)
 
 - Id: epistemic causal relation [sem]
   Type: sem
-  InstanceOf: epistemic causal relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - epistemic causal relation
   SubtypeOf:
     - causal [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: epistemic causal relation [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - epistemic causal relation/construction
-    - epistemic causal
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the semantic relation in a <a>conditional</a>, <a>causal</a>, <a>concessive</a>, or <a>conditional concessive construction</a> that expresses an epistemic inferential relation between two propositions; and the construction expressing that relation. <i>Example</i>: in <i>If Professor Smith's door is closed, then she is not on campus</i>, there is an epistemic causal relation between the fact that Professor Smith's office door is closed and the inference that she is not on campus. An epistemic causal relation contrasts with a <a>content causal relation</a> and a <a>speech act causal relation</a>. (Section 17.3.1)
+    the semantic relation in a <a>conditional</a>, <a>causal</a>, <a>concessive</a>, or <a>conditional concessive construction</a> that expresses an epistemic inferential relation between two propositions. <i>Example</i>: in <i>If Professor Smith's door is closed, then she is not on campus</i>, there is an epistemic causal relation between the fact that Professor Smith's office door is closed and the inference that she is not on campus. An epistemic causal relation contrasts with a <a>content causal relation</a> and a <a>speech act causal relation</a>. (Section 17.3.1)
 
 - Id: epistemic modality [sem]
   Type: sem
@@ -3974,7 +3698,7 @@
 
 - Id: equational [cxn]
   Type: cxn
-  InstanceOf: equational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - equational
   SubtypeOf:
@@ -3982,27 +3706,19 @@
     - nonpredicational clauses [cxn]
   AssociatedTo:
     - predicate nominal construction [cxn]
-  Definition: ""
-
-- Id: equational [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - equational
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a type of <a>identificational information packaging</a> in which two <a>referents</a> that the hearer assumed were different individuals are asserted to be, in fact, one and the same individual; and the <a>construction</a> that expresses that information packaging. <i>Example</i>: in <i>The Morning Star is the Evening Star</i>, it is asserted that two celestial objects that were once thought to be distinct objects (and given distinct names) are one and the same, namely the planet Venus. (Section 10.1.2)
+    the <a>construction</a> that expresses an <a>equational</a> information packaging. <i>Example</i>: in <i>The Morning Star is the Evening Star</i>, it is asserted that two celestial objects that were once thought to be distinct objects (and given distinct names) are one and the same, namely the planet Venus. (Section 10.1.2)
 
 - Id: equational [inf]
   Type: inf
-  InstanceOf: equational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - equational
   SubtypeOf:
     - identificational [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a type of <a>identificational information packaging</a> in which two <a>referents</a> that the hearer assumed were different individuals are asserted to be, in fact, one and the same individual. <i>Example</i>: in <i>The Morning Star is the Evening Star</i>, it is asserted that two celestial objects that were once thought to be distinct objects (and given distinct names) are one and the same, namely the planet Venus. (Section 10.1.2)
 
 - Id: equative construction [cxn]
   Type: cxn
@@ -4055,35 +3771,27 @@
 
 - Id: evaluative event [sem]
   Type: sem
-  InstanceOf: evaluative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - evaluative event
+    - evaluative
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - independent time reference [sem]
-  Definition: ""
-
-- Id: evaluative event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - evaluative event/predicate
-    - evaluative
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> in which an evaluative judgment is made about the truth of the <a>proposition</a> expressed in its <a>complement</a>; and a <a>predicate</a> expressing this event. Evaluative events may assume different <a>epistemic stances</a> toward the proposition expressed in their complement. <a>Commentative events</a> assume a positive epistemic stance; <a>hoping</a> and <a>fearing events</a> assume a <a>neutral epistemic stance</a>; and <a>wishing events</a> assume a <a>negative epistemic stance</a>. (Section 18.2.2)
+    an <a>event</a> in which an evaluative judgment is made about the truth of the <a>proposition</a> expressed in its <a>complement</a>. Evaluative events may assume different <a>epistemic stances</a> toward the proposition expressed in their complement. <a>Commentative events</a> assume a positive epistemic stance; <a>hoping</a> and <a>fearing events</a> assume a <a>neutral epistemic stance</a>; and <a>wishing events</a> assume a <a>negative epistemic stance</a>. (Section 18.2.2)
 
 - Id: evaluative predicate [cxn]
   Type: cxn
-  InstanceOf: evaluative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - evaluative predicate
   SubtypeOf:
     - complement-taking predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>predicate</a> expressing an <a>evaluative event</a>. (Section 18.2.2)
 
 - Id: event [sem]
   Type: sem
@@ -4103,33 +3811,25 @@
 
 - Id: event-central [cxn]
   Type: cxn
-  InstanceOf: event-central [inf/cxn]
+  InstanceOf: ""
   Alias:
     - event-central
   SubtypeOf:
     - thetic [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: event-central [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - event-central
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a type of <a>thetic</a> in which the more important new information being presented is the <a>event</a> reported; and the <a>construction</a> that expresses that information packaging. <i>Example</i>: in <i>The PHONE's ringing</i>, the most important new information is the ringing of the phone, not the existence of the phone. (Sections 10.1.2, <b>11.3.1</b>)
+    a <a>construction</a> that expresses an <a>event-central</a> information packaging. <i>Example</i>: in <i>The PHONE's ringing</i>, the most important new information is the ringing of the phone, not the existence of the phone. (Sections 10.1.2, <b>11.3.1</b>)
 
 - Id: event-central [inf]
   Type: inf
-  InstanceOf: event-central [inf/cxn]
+  InstanceOf: ""
   Alias:
     - event-central
   SubtypeOf:
     - thetic [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a type of <a>thetic</a> in which the more important new information being presented is the <a>event</a> reported. <i>Example</i>: in <i>The PHONE's ringing</i>, the most important new information is the ringing of the phone, not the existence of the phone. (Sections 10.1.2, <b>11.3.1</b>)
 
 - Id: event-oriented [sem]
   Type: sem
@@ -4181,33 +3881,25 @@
 
 - Id: exclamative [cxn]
   Type: cxn
-  InstanceOf: exclamative [inf/cxn]
+  InstanceOf: ""
   Alias:
     - exclamative
   SubtypeOf:
     - speech acts [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: exclamative [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - exclamative
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>speech act</a> which expresses a strong emotional reaction to the <a>propositional content</a> that it conveys; and the <a>construction</a> that expresses this speech act. More precisely, the exclamative speech act expresses the speaker's surprise toward the <a>degree</a> of a scalar <a>property</a> contained in the propositional content of the speech act; the rest of the propositional content consists of a <a>presupposed open proposition</a>. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
+    a <a>speech act</a> which expresses a strong emotional reaction to the <a>propositional content</a> that it conveys. More precisely, the exclamative speech act expresses the speaker's surprise toward the <a>degree</a> of a scalar <a>property</a> contained in the propositional content of the speech act; the rest of the propositional content consists of a <a>presupposed open proposition</a>. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
 
 - Id: exclamative [inf]
   Type: inf
-  InstanceOf: exclamative [inf/cxn]
+  InstanceOf: ""
   Alias:
     - exclamative
   SubtypeOf:
     - speech acts [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>construction</a> that expresses an <a>exclamative</a> speech act. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
 
 - Id: exclusive disjunctive coordination [cxn]
   Type: cxn
@@ -4285,35 +3977,26 @@
 
 - Id: experience event [sem]
   Type: sem
-  InstanceOf: experience event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - experience event
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo:
     - experiential verb [cxn]
-  Definition: ""
-
-- Id: experience event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - experience event/verb
-    - experience
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> which describes the state holding between an <a>experiencer</a> directing her/his attention to a <a>stimulus</a> and the stimulus altering the mental state of the experiencer (or the inception of such a state); and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>I saw the dog</i> is an instance of an experience event, and <i>see</i> is an experience verb. (Section 7.4)
+    an <a>experiential event</a> which describes the state holding between an <a>experiencer</a> directing her/his attention to a <a>stimulus</a> and the stimulus altering the mental state of the experiencer (or the inception of such a state). <i>Example</i>: <i>I saw the dog</i> is an instance of an experience event. (Section 7.4)
 
 - Id: experience verb [cxn]
   Type: cxn
-  InstanceOf: experience event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - experience verb
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an <a>experience event</a>. <i>Example</i>: <i>I saw the dog</i> is an instance of an experience event, and <i>see</i> is an experience verb. (Section 7.4)
 
 - Id: experiencer [sem]
   Type: sem
@@ -4354,24 +4037,14 @@
 
 - Id: experiential event [sem]
   Type: sem
-  InstanceOf: experiential event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - experiential event
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: experiential event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - experiential event/verb
-    - experiential
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> that involves a human internal mental or bodily experience; and a <a>verb</a> that expresses such an event. Experiential events include <a>perception events</a>, <a>cognition events</a>, <a>emotion events</a>, and <a sensation event>(bodily) sensation events</a>; <a>ingestion events</a> also exhibit some semantic similarities to experiential events. (Sections 6.1.2, <b>7.4</b>)
+    an <a>event</a> that involves a human internal mental or bodily experience. (Sections 6.1.2, <b>7.4</b>)
 
 - Id: experiential verb [cxn]
   Type: cxn
@@ -4382,7 +4055,8 @@
     - verb [cxn]
   AssociatedTo:
     - experiential construction [cxn]
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an <a>experiential event</a>. Experiential events include <a>perception events</a>, <a>cognition events</a>, <a>emotion events</a>, and <a sensation event>(bodily) sensation events</a>; <a>ingestion events</a> also exhibit some semantic similarities to experiential events. (Sections 6.1.2, <b>7.4</b>)
 
 - Id: expertum [sem]
   Type: sem
@@ -4472,34 +4146,25 @@
 
 - Id: extroverted event [sem]
   Type: sem
-  InstanceOf: extroverted event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - extroverted event
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: extroverted event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - extroverted event/verb
-    - extroverted
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an event not normally performed on oneself or on each other; and a <a>verb</a> expressing such an event. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
+    an event not normally performed on oneself or on each other. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
 
 - Id: extroverted verb [cxn]
   Type: cxn
-  InstanceOf: extroverted event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - extroverted verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> expressing an <a>extroverted event</a>. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
 
 - Id: factive event [sem]
   Type: sem
@@ -4525,35 +4190,26 @@
 
 - Id: fearing event [sem]
   Type: sem
-  InstanceOf: fearing event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - fearing event
   SubtypeOf:
     - evaluative event [sem]
   AssociatedTo:
     - neutral epistemic stance [sem]
-  Definition: ""
-
-- Id: fearing event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - fearing event/predicate
-    - fearing
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>evaluative event</a> in which a negative evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition; and the <a>predicate</a> expressing this event. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
+    an <a>evaluative event</a> in which a negative evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
 
 - Id: fearing predicate [cxn]
   Type: cxn
-  InstanceOf: fearing event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - fearing predicate
   SubtypeOf:
     - evaluative predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing a <a>fearing event</a>. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
 
 - Id: figure [sem]
   Type: sem
@@ -4729,31 +4385,22 @@
 
 - Id: free choice pronoun [cxn]
   Type: cxn
-  InstanceOf: free choice referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - free choice pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <pronoun> that expresses a <a>free choice referent</a>. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
 
 - Id: free choice referent [inf]
   Type: inf
-  InstanceOf: free choice referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - free choice referent
   SubtypeOf:
     - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: free choice referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - free choice referent/pronoun
-    - free choice
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an unspecified <a>referent</a> in certain contexts, whose identity can be freely chosen without affecting the truth value of the utterance. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
@@ -4772,7 +4419,7 @@
     - concessive conditional construction [cxn]
     - concessive construction [cxn]
   Definition: >-
-    a <a>relative clause construction</a> in which the head has one of several possible <a indefinite pronoun/article>indefinite</a> functions -- that is, <a specific known referent/pronoun>specific</a>, <a>irrealis</a>, <a free choice referent/pronoun>free choice</a>, and/or <a universal pronoun>universal</a>. <i>Example</i>: in <i>Take what(ever) you like</i>, <i>what(ever) you like</i> is a free relative clause using a <a>headless strategy</a>, and in <i>Take anything you like</i>, <i>anything you like</i> is a free relative clause using an <a>overt head strategy</a>. (Section 19.4)
+    a <a>relative clause construction</a> in which the head has one of several possible <a indefinite pronoun>indefinite</a> functions -- that is, <a specific known referent>specific</a>, <a irrealis referent>irrealis</a>, <a free choice referent>free choice</a>, and/or <a universal pronoun>universal</a>. <i>Example</i>: in <i>Take what(ever) you like</i>, <i>what(ever) you like</i> is a free relative clause using a <a>headless strategy</a>, and in <i>Take anything you like</i>, <i>anything you like</i> is a free relative clause using an <a>overt head strategy</a>. (Section 19.4)
 
 - Id: function [def]
   Type: def
@@ -4894,31 +4541,23 @@
 
 - Id: generic conditional construction [cxn]
   Type: cxn
-  InstanceOf: generic conditional relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - generic conditional construction
   SubtypeOf:
     - conditional construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a construction that expresses a <a>generic conditional relation</a>. <i>Example</i>: <i>If/When/Whenever a dog starts barking, I run away</i> is an instance of a generic conditional relation and construction -- it doesn't describe a specific instance of a dog barking causing me to run away; instead, it describes a general or habitual pattern of this causal sequence of events. (Section 17.3.1)
 
 - Id: generic conditional relation [sem]
   Type: sem
-  InstanceOf: generic conditional relation [sem] / construction [cxn]
-  Alias:
-    - generic conditional relation
-  SubtypeOf:
-    - conditional relation [sem]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: generic conditional relation [sem] / construction [cxn]
-  Type: sem/cxn
   InstanceOf: ""
   Alias:
-    - generic conditional relation/construction
+    - generic conditional relation
     - generic conditional
-  SubtypeOf: []
+  SubtypeOf:
+    - conditional relation [sem]
   AssociatedTo: []
   Definition: >-
     a subtype of the conditional relation in which an event causes another event generically or habitually. <i>Example</i>: <i>If/When/Whenever a dog starts barking, I run away</i> is an instance of a generic conditional relation and construction -- it doesn't describe a specific instance of a dog barking causing me to run away; instead, it describes a general or habitual pattern of this causal sequence of events. (Section 17.3.1)
@@ -5033,35 +4672,27 @@
 
 - Id: hoping event [sem]
   Type: sem
-  InstanceOf: hoping event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - hoping event
+    - hoping
   SubtypeOf:
     - evaluative event [sem]
   AssociatedTo:
     - neutral epistemic stance [sem]
-  Definition: ""
-
-- Id: hoping event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - hoping event/predicate
-    - hoping
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition; and the predicate expressing such an event. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
+    an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
 
 - Id: hoping predicate [cxn]
   Type: cxn
-  InstanceOf: hoping event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - hoping predicate
   SubtypeOf:
     - evaluative predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the predicate expressing a <a>hoping event</a>. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
 
 - Id: human [sem]
   Type: sem
@@ -5129,33 +4760,25 @@
 
 - Id: identificational [cxn]
   Type: cxn
-  InstanceOf: identificational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - identificational
   SubtypeOf:
     - clause [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: identificational [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - identificational
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    <a>information packaging</a> in which a particular piece of information (the <a>focus</a>) is equated with the <dq>open slot</dq> in a <a>presupposed open proposition</a>; and the <a>construction</a> that expresses that information packaging. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
+    the <a>construction</a> that expresses a <a>identificational</a> information packaging. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
 
 - Id: identificational [inf]
   Type: inf
-  InstanceOf: identificational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - identificational
   SubtypeOf:
     - predication [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    <a>information packaging</a> in which a particular piece of information (the <a>focus</a>) is equated with the <dq>open slot</dq> in a <a>presupposed open proposition</a>. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
 
 - Id: identity statements [def]
   Type: def
@@ -5184,7 +4807,7 @@
 
 - Id: imperative--hortative [cxn]
   Type: cxn
-  InstanceOf: imperative--hortative [inf/cxn]
+  InstanceOf: ""
   Alias:
     - imperative--hortative
     - imperative
@@ -5192,24 +4815,12 @@
   SubtypeOf:
     - speech acts [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: imperative--hortative [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - imperative--hortative
-    - imperative
-    - hortative
-    - jussive
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>speech act</a> which requests that the action expressed in the propositional content of the imperative--hortative be carried out, prototypically by the addressee but possibly by other persons; and the <a>construction</a> that expresses this speech act. <i>Example</i>: <i>Dance!</i> is an example of the English imperative--hortative construction for the <a person>second person</a>, and <i>Let's dance!</i> is an example of the same for the <a person>first person</a> <a number>plural</a>. The term <q>hortative</q> is sometimes used for a first person imperative--hortative, and <q>jussive</q> for a third person imperative--hortative. A negative imperative--hortative is a <a>prohibitive</a>. (Sections 12.1, 12.4)
+    the <a>construction</a> that expresses a <a>imperative--hortative</a> speech act. <i>Example</i>: <i>Dance!</i> is an example of the English imperative--hortative construction for the <a person>second person</a>, and <i>Let's dance!</i> is an example of the same for the <a person>first person</a> <a number>plural</a>. The term <q>hortative</q> is sometimes used for a first person imperative--hortative, and <q>jussive</q> for a third person imperative--hortative. A negative imperative--hortative is a <a>prohibitive</a>. (Sections 12.1, 12.4)
 
 - Id: imperative--hortative [inf]
   Type: inf
-  InstanceOf: imperative--hortative [inf/cxn]
+  InstanceOf: ""
   Alias:
     - imperative--hortative
     - imperative
@@ -5217,7 +4828,8 @@
   SubtypeOf:
     - speech acts [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>speech act</a> which requests that the action expressed in the propositional content of the imperative--hortative be carried out, prototypically by the addressee but possibly by other persons. <i>Example</i>: <i>Dance!</i> is an example of the English imperative--hortative construction for the <a person>second person</a>, and <i>Let's dance!</i> is an example of the same for the <a person>first person</a> <a number>plural</a>. The term <q>hortative</q> is sometimes used for a first person imperative--hortative, and <q>jussive</q> for a third person imperative--hortative. A negative imperative--hortative is a <a>prohibitive</a>. (Sections 12.1, 12.4)
 
 - Id: inactive [inf]
   Type: inf
@@ -5321,33 +4933,25 @@
 
 - Id: indefinite article [cxn]
   Type: cxn
-  InstanceOf: indefinite pronoun/article [cxn]
+  InstanceOf: ""
   Alias:
     - indefinite article
   SubtypeOf:
     - article [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a glass bowl</i> is an example of an indefinite referring phrase, used in a context where the individual glass bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
 
 - Id: indefinite pronoun [cxn]
   Type: cxn
-  InstanceOf: indefinite pronoun/article [cxn]
+  InstanceOf: ""
   Alias:
     - indefinite pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: indefinite pronoun/article [cxn]
-  Type: cxn
-  InstanceOf: ""
-  Alias:
-    - indefinite pronoun/article
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific</a> referents (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a glass bowl</i> is an example of an indefinite referring phrase, used in a context where the individual glass bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
+    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a glass bowl</i> is an example of an indefinite referring phrase, used in a context where the individual glass bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
 
 - Id: independent referring phrase strategy [str]
   Type: str
@@ -5455,31 +5059,22 @@
 
 - Id: indirect negation pronoun [cxn]
   Type: cxn
-  InstanceOf: indirect negation referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - indirect negation pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <pronoun> that expresses an <a>indirect negation referent</a>. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
 
 - Id: indirect negation referent [inf]
   Type: inf
-  InstanceOf: indirect negation referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - indirect negation referent
   SubtypeOf:
     - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: indirect negation referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - indirect negation referent/pronoun
-    - indirect negation
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an unspecified <a>referent</a> which is in a <a>clause</a> embedded in a <a negative>negated</a> clause. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
@@ -5549,7 +5144,7 @@
 
 - Id: information (question) response [cxn]
   Type: cxn
-  InstanceOf: information (question) response [inf/cxn]
+  InstanceOf: ""
   Alias:
     - information (question) response
     - information question response
@@ -5557,23 +5152,12 @@
   SubtypeOf:
     - response [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: information (question) response [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - information (question) response
-    - information question response
-    - information response
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the answer to an <a>information question</a>, and the <a>construction</a> that expresses that answer. <i>Example</i>: the answer to the English information question <i>Who is coming?</i> could be <i>Sandra is coming, Sandra is</i>, or just <i>Sandra</i>. (Section 12.3.3)
+    the <a>construction</a> that expresses the <a information (question) response>answer to an information question<a>. <i>Example</i>: the answer to the English information question <i>Who is coming?</i> could be <i>Sandra is coming, Sandra is</i>, or just <i>Sandra</i>. (Section 12.3.3)
 
 - Id: information (question) response [inf]
   Type: inf
-  InstanceOf: information (question) response [inf/cxn]
+  InstanceOf: ""
   Alias:
     - information (question) response
     - information question response
@@ -5581,7 +5165,8 @@
   SubtypeOf:
     - response [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the answer to an <a>information question</a>. <i>Example</i>: the answer to the English information question <i>Who is coming?</i> could be <i>Sandra is coming, Sandra is</i>, or just <i>Sandra</i>. (Section 12.3.3)
 
 - Id: information gap [inf]
   Type: inf
@@ -5610,35 +5195,25 @@
 
 - Id: information question [cxn]
   Type: cxn
-  InstanceOf: information question [inf/cxn]
+  InstanceOf: ""
   Alias:
     - information question
   SubtypeOf:
     - interrogative [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: information question [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - information question
-    - content question
-    - WH question
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>interrogative</a> in which the unknown piece of the <a>propositional content</a> requested of the addressee is a semantic component of the <a>proposition</a> other than its <a>polarity</a>; and the <a>construction</a> expressing this <a>function</a>. <i>Example</i>: <i>Who is coming?</i> is an instance of the English information question construction, expecting an answer identifying the person(s) who is/are coming. Information questions, unlike <a>polarity questions</a>, contain an <a>interrogative pronoun</a>. (Section 12.3.1)
+    the <a>construction</a> expressing an <a>information question</a> <a>function</a>. <i>Example</i>: <i>Who is coming?</i> is an instance of the English information question construction, expecting an answer identifying the person(s) who is/are coming. Information questions, unlike <a>polarity questions</a>, contain an <a>interrogative pronoun</a>. (Section 12.3.1)
 
 - Id: information question [inf]
   Type: inf
-  InstanceOf: information question [inf/cxn]
+  InstanceOf: ""
   Alias:
     - information question
   SubtypeOf:
     - interrogative [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    an <a>interrogative</a> in which the unknown piece of the <a>propositional content</a> requested of the addressee is a semantic component of the <a>proposition</a> other than its <a>polarity</a>. <i>Example</i>: <i>Who is coming?</i> is an instance of the English information question construction, expecting an answer identifying the person(s) who is/are coming. (Section 12.3.1)
 
 - Id: information status [inf]
   Type: inf
@@ -5655,34 +5230,25 @@
 
 - Id: ingestion event [sem]
   Type: sem
-  InstanceOf: ingestion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - ingestion event
   SubtypeOf:
     - controlled activity [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: ingestion event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - ingestion event/verb
-    - ingestion
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> which describes the ingestion of food or drink by a person or animal, causing the food to disappear but also causing a change in the physiological state of the person/animal; and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>Elena ate a lot of veggie chips</i> is an instance of an ingestion event, and <i>eat</i> is an ingestion verb. (Section 7.4)
+    an <a>event</a> which describes the ingestion of food or drink by a person or animal, causing the food to disappear but also causing a change in the physiological state of the person/animal. <i>Example</i>: <i>Elena ate a lot of veggie chips</i> is an instance of an ingestion event. (Section 7.4)
 
 - Id: ingestion verb [cxn]
   Type: cxn
-  InstanceOf: ingestion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - ingestion verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an <a>ingestion event</a>. <i>Example</i>: <i>Elena ate a lot of veggie chips</i> is an instance of an ingestion event, and <i>eat</i> is an ingestion verb. (Section 7.4)
 
 - Id: initiator [sem]
   Type: sem
@@ -5732,34 +5298,25 @@
 
 - Id: interaction event [sem]
   Type: sem
-  InstanceOf: interaction event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - interaction event
   SubtypeOf:
     - event [sem]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: interaction event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - interaction event/verb
-    - interaction
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an <a>event</a> in which one <a>participant</a> acts on a second participant, but the change that occurs to the second participant is at least partly independent of the <a>force</a> <u>transmitted</u> by the first participant. <i>Examples</i>: interaction events include <a>pursuit events</a>, events involving two agents such as ordering someone (to do something) or supervising someone, and events involving an agent and an event, state, social institution, and so on, such as managing a budget, avoiding situations, or conforming to institutional standards. (Section 7.3)
 
 - Id: interaction verb [cxn]
   Type: cxn
-  InstanceOf: interaction event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - interaction verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses an <a>interaction event</a>. (Section 7.3)
 
 - Id: interlinear morpheme translation [def]
   Type: def
@@ -5813,34 +5370,25 @@
 
 - Id: interrogative [cxn]
   Type: cxn
-  InstanceOf: interrogative [inf/cxn]
+  InstanceOf: ""
   Alias:
     - interrogative
   SubtypeOf:
     - speech acts [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: interrogative [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - interrogative
-    - question
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>speech act</a> which requests information, usually of the addressee, regarding uncertain or unknown information that is part of the <a>propositional content</a> of the question; and the <a>construction</a> that expresses this speech act. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
+    a <a>speech act</a> which requests information, usually of the addressee, regarding uncertain or unknown information that is part of the <a>propositional content</a> of the question. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
 
 - Id: interrogative [inf]
   Type: inf
-  InstanceOf: interrogative [inf/cxn]
+  InstanceOf: ""
   Alias:
     - interrogative
   SubtypeOf:
     - speech acts [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> that expresses a <a>interrogative</a> speech act. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
 
 - Id: interrogative complement [cxn]
   Type: cxn
@@ -5901,62 +5449,45 @@
 
 - Id: introverted event [sem]
   Type: sem
-  InstanceOf: introverted event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - introverted event
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: introverted event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - introverted event/verb
-    - introverted
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> typically performed on oneself or by oneself, but that could be performed on someone else; and a <a>verb</a> expressing such an event. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events, and <i>shave</i>, <i>lay (down)</i>, and <i>quarrel</i> are introverted verbs. (Section 7.2)
+    an <a>event</a> typically performed on oneself or by oneself, but that could be performed on someone else. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events. (Section 7.2)
 
 - Id: introverted verb [cxn]
   Type: cxn
-  InstanceOf: introverted event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - introverted verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> expressing an <a>introverted event</a>. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events, and <i>shave</i>, <i>lay (down)</i>, and <i>quarrel</i> are introverted verbs. (Section 7.2)
 
 - Id: irrealis pronoun [cxn]
   Type: cxn
-  InstanceOf: irrealis referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - irrealis pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <pronoun> that expresses an <a>irrealis referent</a>. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
 
 - Id: irrealis referent [inf]
   Type: inf
-  InstanceOf: irrealis referent [inf] / pronoun [cxn]
-  Alias:
-    - irrealis referent
-  SubtypeOf:
-    - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: irrealis referent [inf] / pronoun [cxn]
-  Type: inf/cxn
   InstanceOf: ""
   Alias:
-    - irrealis referent/pronoun
+    - irrealis referent
     - irrealis
-  SubtypeOf: []
+  SubtypeOf:
+    - nonspecific referent [inf]
   AssociatedTo: []
   Definition: >-
     a <a>referent</a> which is in the <dq>world</dq> or <a>mental space</a> representing a person's desire, wish, command, etc. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
@@ -5974,7 +5505,7 @@
 
 - Id: killing/injuring event [sem]
   Type: sem
-  InstanceOf: killing/injuring event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - killing/injuring event
     - killing event
@@ -5982,26 +5513,12 @@
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: killing/injuring event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - killing/injuring event/verb
-    - killing/injuring
-    - killing event/verb
-    - killing
-    - injuring event/verb
-    - injuring
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing the injuring of an individual, including to the point that the individual dies; and the <a>verb</a> expressing such an event. <i>Example</i>: stabbing is a killing/injuring event, and <i>stab</i> is a killing/injuring verb. (Section 7.3.2)
+    an <a>event</a> describing the injuring of an individual, including to the point that the individual dies. <i>Example</i>: stabbing is a killing/injuring event. (Section 7.3.2)
 
 - Id: killing/injuring verb [cxn]
   Type: cxn
-  InstanceOf: killing/injuring event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - killing/injuring verb
     - killing verb
@@ -6010,7 +5527,8 @@
     - manner verb [cxn]
     - result verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing such a <a>killing/injuring event</a>. <i>Example</i>: stabbing is a killing/injuring event, and <i>stab</i> is a killing/injuring verb. (Section 7.3.2)
 
 - Id: kinship relation [sem]
   Type: sem
@@ -6027,35 +5545,27 @@
 
 - Id: knowledge event [sem]
   Type: sem
-  InstanceOf: knowledge event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - knowledge event
+    - knowledge
   SubtypeOf:
     - propositional attitude event [sem]
   AssociatedTo:
     - epistemic stance [sem]
-  Definition: ""
-
-- Id: knowledge event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - knowledge event/predicate
-    - knowledge
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>propositional attitude event</a> in which a <a>positive epistemic stance</a> toward the relevant <a>proposition</a> expressed is presupposed to be taken by the <u>speaker</u>; and the <a>predicate</a> expressing such an event. <i>Example</i>: in <i>Sally knows that Donald won the election</i>, Sally's belief with respect to the proposition that Donald won the election is reported by the speaker; and, in addition, a <a>positive epistemic stance</a> is taken by the speaker toward that proposition (i.e., the speaker believes that Donald indeed won the election). (Section 18.2.2)
+    a <a>propositional attitude event</a> in which a <a>positive epistemic stance</a> toward the relevant <a>proposition</a> expressed is presupposed to be taken by the <u>speaker</u>. <i>Example</i>: in <i>Sally knows that Donald won the election</i>, Sally's belief with respect to the proposition that Donald won the election is reported by the speaker; and, in addition, a <a>positive epistemic stance</a> is taken by the speaker toward that proposition (i.e., the speaker believes that Donald indeed won the election). (Section 18.2.2)
 
 - Id: knowledge predicate [cxn]
   Type: cxn
-  InstanceOf: knowledge event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - knowledge predicate
   SubtypeOf:
     - propositional attitude predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing a <a>knowledge event</a>. <i>Example</i>: in <i>Sally knows that Donald won the election</i>, Sally's belief with respect to the proposition that Donald won the election is reported by the speaker; and, in addition, a <a>positive epistemic stance</a> is taken by the speaker toward that proposition (i.e., the speaker believes that Donald indeed won the election). (Section 18.2.2)
 
 - Id: labile [str]
   Type: str
@@ -6176,7 +5686,7 @@
     - nonprototypical predication [cxn]
   AssociatedTo: []
   Definition: >-
-    a <a>clause</a> in which a locative relation is expressed, either <a>predicationally</a> or <a>presentationally</a>. These two types of location clauses are <a>locative predication</a> and <a>presentational locative</a>, respectively. (Section 10.4.1)
+    a <a>clause</a> in which a locative relation is expressed, either <a>predicationally</a> or <a>presentationally</a>. These two types of location clauses are <a predicational location>locative predication</a> and <a>presentational locative</a>, respectively. (Section 10.4.1)
 
 - Id: locational possessive strategy [str]
   Type: str
@@ -6330,35 +5840,27 @@
 
 - Id: manipulative event [sem]
   Type: sem
-  InstanceOf: manipulative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - manipulative event
+    - manipulative
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - dependent time reference [sem]
-  Definition: ""
-
-- Id: manipulative event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - manipulative event/predicate
-    - manipulative
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> where an <a>agent</a> acts to bring about the event expressed by the <a>complement</a>; and the <a>predicate</a> expressing such an event. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative events include causative and permissive events, and manipulative <a>complement clause constructions</a> overlap with <a>causative constructions</a>. The complement event of manipulative events has <a>dependent time reference</a>. (Section 18.2.2)
+    an <a>event</a> where an <a>agent</a> acts to bring about the event expressed by the <a>complement</a>. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative events include causative and permissive events. The complement event of manipulative events has <a>dependent time reference</a>. (Section 18.2.2)
 
 - Id: manipulative predicate [cxn]
   Type: cxn
-  InstanceOf: manipulative event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - manipulative predicate
   SubtypeOf:
     - predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing a <a>manipulative event</a>. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative <a>complement clause constructions</a> overlap with <a>causative constructions</a>. (Section 18.2.2)
 
 - Id: manner complex predicate [cxn]
   Type: cxn
@@ -6375,67 +5877,50 @@
 
 - Id: manner event [sem]
   Type: sem
-  InstanceOf: manner event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - manner event
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - manner complex predicate [cxn]
-  Definition: ""
-
-- Id: manner event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - manner event/verb
-    - manner
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
     an event that is described in terms of the manner by which the process progresses (or is brought about by an external cause). <i>Example</i>: in <i>She smeared jam on the toast</i>, the event is described in terms of the manner by which the jam is applied to the toast. (Section 7.3.2)
 
 - Id: manner of motion event [sem]
   Type: sem
-  InstanceOf: manner of motion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - manner of motion event
+    - manner of motion
   SubtypeOf:
     - motion event [sem]
     - manner event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: manner of motion event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - manner of motion event/verb
-    - manner of motion
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an event that describes motion of a <a>figure</a> in terms of how the figure travels; and the <a>verb</a> expressing such an event. <i>Example</i>: in <i>Sam strode into the room, stride</i> is a manner of motion verb expressing a manner of motion event. (Sections 7.3.1, 14.2)
+    an event that describes motion of a <a>figure</a> in terms of how the figure travels. <i>Example</i>: in <i>Sam strode into the room, stride</i> is a manner of motion verb expressing a manner of motion event. (Sections 7.3.1, 14.2)
 
 - Id: manner of motion verb [cxn]
   Type: cxn
-  InstanceOf: manner of motion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - manner of motion verb
   SubtypeOf:
     - manner verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>manner of motion event</a>. <i>Example</i>: in <i>Sam strode into the room, stride</i> is a manner of motion verb expressing a manner of motion event. (Sections 7.3.1, 14.2)
 
 - Id: manner verb [cxn]
   Type: cxn
-  InstanceOf: manner event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - manner verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> expressing a <a>manner event</a>. <i>Example</i>: in <i>She smeared jam on the toast</i>, the event is described in terms of the manner by which the jam is applied to the toast. (Section 7.3.2)
 
 - Id: material term [cxn]
   Type: cxn
@@ -6733,36 +6218,28 @@
 
 - Id: motion event [sem]
   Type: sem
-  InstanceOf: motion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - motion event
+    - motion
   SubtypeOf:
     - monovalent event [sem]
   AssociatedTo:
     - middle voice [str]
     - ground [sem]
-  Definition: ""
-
-- Id: motion event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - motion event/verb
-    - motion
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion); and the <a>verb</a> expressing that event. <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
+    a <a>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
 
 - Id: motion verb [cxn]
   Type: cxn
-  InstanceOf: motion event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - motion verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>motion event</a>. <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. (Sections 7.2, 7.3.1, 14.4)
 
 - Id: necessary participant sharing [sem]
   Type: sem
@@ -7047,41 +6524,33 @@
 
 - Id: nonspecific article [cxn]
   Type: cxn
-  InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - nonspecific article
   SubtypeOf:
     - article [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    an <a>article</a> that is used for a <a>nonspecific referent</a>. (Section 3.5)
 
 - Id: nonspecific pronoun [cxn]
   Type: cxn
-  InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - nonspecific pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>pronoun</a> that expresses a <a>nonspecific referent</a>. (Section 3.5)
 
 - Id: nonspecific referent [inf]
   Type: inf
-  InstanceOf: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - nonspecific referent
   SubtypeOf:
     - information status [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: nonspecific referent [inf] / article [cxn] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - nonspecific referent/article/pronoun
-    - nonspecific
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     the information status of a referent whose identity cannot be known to the speaker and the hearer because the referent is only <a>type identifiable</a>. <i>Example</i>: in <i>A student came to my office</i>, the hearer does not know the identity of the student, and hence that referent is nonspecific. (Section 3.5)
@@ -7619,34 +7088,22 @@
 
 - Id: path (of motion) event [sem]
   Type: sem
-  InstanceOf: path (of motion) event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - path (of motion) event
     - path of motion event
+    - path of motion
     - path event
+    - path
   SubtypeOf:
     - motion event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: path (of motion) event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - path (of motion) event/verb
-    - path (of motion)
-    - path of motion event/verb
-    - path of motion
-    - path event/verb
-    - path
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an event that describes motion of a <a>figure</a> along a spatial path relative to a <a>ground</a>; and the <a>verb</a> expressing such an event. <i>Example</i>: in <i>The guests entered the reception hall, enter</i> is a path of motion verb expressing a path of motion event. (Sections 7.3.1, 14.2)
+    an event that describes motion of a <a>figure</a> along a spatial path relative to a <a>ground</a>. <i>Example</i>: in <i>The guests entered the reception hall, enter</i> is a path of motion verb expressing a path of motion event. (Sections 7.3.1, 14.2)
 
 - Id: path (of motion) verb [cxn]
   Type: cxn
-  InstanceOf: path (of motion) event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - path (of motion) verb
     - path of motion verb
@@ -7654,7 +7111,8 @@
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing such a <a>path of motion event</a>. <i>Example</i>: in <i>The guests entered the reception hall, enter</i> is a path of motion verb expressing a path of motion event. (Sections 7.3.1, 14.2)
 
 - Id: patient [sem]
   Type: sem
@@ -7669,45 +7127,40 @@
 
 - Id: perception complement-taking predicate [cxn]
   Type: cxn
-  InstanceOf: perception event [sem] / verb [cxn] / complement-taking predicate [cxn]
+  InstanceOf: ""
   Alias:
     - perception complement-taking predicate
   SubtypeOf:
     - complement-taking predicate [cxn]
-  AssociatedTo: []
-  Definition: ""
+  AssociatedTo:
+    - perception event [sem]
+  Definition: >-
+    A perception complement-taking predicate is a <a>predicate</a> that expresses perceiving an event, which is expressed as the <a>complement</a> event of the predicate. <i>Example</i>: in <i>We watched the elk graze in the caldera</i>, watched denotes a perception event. The complement event has <a>dependent time reference</a>; the complement event must be occurring at the same time as the perceiving event (although modern media allowing watching a prior event via a recording). (Section 18.2.2)
 
 - Id: perception event [sem]
   Type: sem
-  InstanceOf: perception event [sem] / verb [cxn] / complement-taking predicate [cxn]
+  InstanceOf: ""
   Alias:
     - perception event
+    - perception
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo:
     - dependent time reference [sem]
-  Definition: ""
-
-- Id: perception event [sem] / verb [cxn] / complement-taking predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - perception event/verb/complement-taking predicate
-    - perception
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a>object</a> or an <a>event</a>. A perception verb is a <a>verb</a> that expresses the event of perceiving an object. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4). A perception complement-taking predicate is a <a>predicate</a> that expresses perceiving an event, which is expressed as the <a>complement</a> event of the predicate. <i>Example</i>: in <i>We watched the elk graze in the caldera</i>, watched denotes a perception event. The complement event has <a>dependent time reference</a>; the complement event must be occurring at the same time as the perceiving event (although modern media allowing watching a prior event via a recording). (Section 18.2.2)
+    an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
 
 - Id: perception verb [cxn]
   Type: cxn
-  InstanceOf: perception event [sem] / verb [cxn] / complement-taking predicate [cxn]
+  InstanceOf: ""
   Alias:
     - perception verb
   SubtypeOf:
     - complement-taking predicate [cxn]
-  AssociatedTo: []
-  Definition: ""
+  AssociatedTo:
+    - perception event [sem]
+  Definition: >-
+    a perception verb is a <a>verb</a> that expresses the event of perceiving an object. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
 
 - Id: perception verb strategy [str]
   Type: str
@@ -7863,67 +7316,54 @@
 
 - Id: polarity question [cxn]
   Type: cxn
-  InstanceOf: polarity question [inf/cxn]
-  Alias:
-    - polarity question
-  SubtypeOf:
-    - interrogative [cxn]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: polarity question [inf/cxn]
-  Type: inf/cxn
   InstanceOf: ""
   Alias:
     - polarity question
     - yes/no question
     - Y/N question
-  SubtypeOf: []
+  SubtypeOf:
+    - interrogative [cxn]
   AssociatedTo: []
   Definition: >-
-    an <a>interrogative</a> in which the unknown piece of the <a>propositional content</a> requested of the addressee is the <a>polarity</a> (<a>positive</a> or <a>negative</a>) of the proposition; and the <a>construction</a> expressing this function. <i>Example</i>: <i>Are you coming?</i> is an instance of the English polarity question construction, expecting a <q>yes</q> or <q>no</q> answer. (Section 12.3.1)
+    the <a>construction</a> expressing the <a>polarity question function</a>. <i>Example</i>: <i>Are you coming?</i> is an instance of the English polarity question construction, expecting a <q>yes</q> or <q>no</q> answer. (Section 12.3.1)
 
 - Id: polarity question [inf]
   Type: inf
-  InstanceOf: polarity question [inf/cxn]
+  InstanceOf: ""
   Alias:
     - polarity question
+    - polarity question function
   SubtypeOf:
     - interrogative [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    an <a>interrogative</a> in which the unknown piece of the <a>propositional content</a> requested of the addressee is the <a>polarity</a> (<a>positive</a> or <a>negative</a>) of the proposition. (Section 12.3.1)
 
 - Id: polarity response [cxn]
   Type: cxn
-  InstanceOf: polarity response [inf/cxn]
+  InstanceOf: ""
   Alias:
     - polarity response
+    - polarity answer
   SubtypeOf:
     - response [cxn]
   AssociatedTo:
     - polarity question [cxn]
-  Definition: ""
-
-- Id: polarity response [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - polarity response
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the <u>answer</u> to a <a>polarity question</a>, and the <a>construction</a> that expresses that answer. <i>Example</i>: the polarity response to <i>Do you have any money?</i> in English is <i>Yes (I do)</i> or <i>No (I don't)</i>. (This is excluding other less cooperative responses such as <i>I don't know</i> or <i>It's none of your business</i>.) (Section 12.3.3)
+    the <a>construction</a> that expresses a <a>polarity answer</a>. <i>Example</i>: the polarity response to <i>Do you have any money?</i> in English is <i>Yes (I do)</i> or <i>No (I don't)</i>. (This is excluding other less cooperative responses such as <i>I don't know</i> or <i>It's none of your business</i>.) (Section 12.3.3)
 
 - Id: polarity response [inf]
   Type: inf
-  InstanceOf: polarity response [inf/cxn]
+  InstanceOf: ""
   Alias:
     - polarity response
+    - polarity answer
   SubtypeOf:
     - response [inf]
   AssociatedTo:
     - polarity question [inf]
-  Definition: ""
+  Definition: >-
+    the <u>answer</u> to a <a>polarity question</a>. <i>Example</i>: the polarity response to <i>Do you have any money?</i> in English is <i>Yes (I do)</i> or <i>No (I don't)</i>. (This is excluding other less cooperative responses such as <i>I don't know</i> or <i>It's none of your business</i>.) (Section 12.3.3)
 
 - Id: poset [inf]
   Type: inf
@@ -8137,7 +7577,7 @@
 
 - Id: pragmatically nonspecific (but semantically specific) (indefinite) article [cxn]
   Type: cxn
-  InstanceOf: pragmatically nonspecific (but semantically specific) (indefinite) referent [inf] / article [cxn]
+  InstanceOf: ""
   Alias:
     - pragmatically nonspecific (but semantically specific) (indefinite) article
     - pragmatically nonspecific (but semantically specific) indefinite article
@@ -8151,15 +7591,17 @@
   SubtypeOf:
     - article [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    an <a>article</a> that is used for a <a>pragmatically nonspecific (but semantically specific) indefinite referent</a>. (Section 3.4.1)
 
 - Id: pragmatically nonspecific (but semantically specific) (indefinite) referent [inf]
   Type: inf
-  InstanceOf: pragmatically nonspecific (but semantically specific) (indefinite) referent [inf] / article [cxn]
+  InstanceOf: ""
   Alias:
     - pragmatically nonspecific (but semantically specific) (indefinite) referent
     - pragmatically nonspecific (but semantically specific) indefinite referent
     - pragmatically nonspecific (but semantically specific) referent
+    - pragmatically nonspecific (but semantically specific)
     - pragmatically nonspecific but semantically specific (indefinite) referent
     - pragmatically nonspecific but semantically specific indefinite referent
     - pragmatically nonspecific but semantically specific referent
@@ -8169,39 +7611,12 @@
   SubtypeOf:
     - information status [inf]
   AssociatedTo: []
-  Definition: ""
-
-- Id: pragmatically nonspecific (but semantically specific) (indefinite) referent [inf] / article [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - pragmatically nonspecific (but semantically specific) (indefinite) referent/article
-    - pragmatically nonspecific (but semantically specific) (indefinite)
-    - pragmatically nonspecific (but semantically specific) indefinite referent/article
-    - pragmatically nonspecific (but semantically specific) indefinite
-    - pragmatically nonspecific (but semantically specific) referent/article
-    - pragmatically nonspecific (but semantically specific)
-    - pragmatically nonspecific but semantically specific (indefinite) referent/article
-    - pragmatically nonspecific but semantically specific (indefinite)
-    - pragmatically nonspecific but semantically specific indefinite referent/article
-    - pragmatically nonspecific but semantically specific indefinite
-    - pragmatically nonspecific but semantically specific referent/article
-    - pragmatically nonspecific but semantically specific
-    - pragmatically nonspecific (indefinite) referent/article
-    - pragmatically nonspecific (indefinite)
-    - pragmatically nonspecific indefinite referent/article
-    - pragmatically nonspecific indefinite
-    - pragmatically nonspecific referent/article
-    - pragmatically nonspecific
-    - semantically specific
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
     a <a>referent</a> introduced into the discourse by the speaker that is not normally referred to again in subsequent discourse. The term <q>semantically specific</q> indicates that the referent is not in a nonreal context -- that is, it is not a nonspecific referent. We will use the shorter term <q>pragmatically nonspecific</q> and assume that such referents are also semantically specific. (Section 3.4.1)
 
 - Id: pragmatically specific (indefinite) article [cxn]
   Type: cxn
-  InstanceOf: pragmatically specific (indefinite) referent [inf] / article [cxn]
+  InstanceOf: ""
   Alias:
     - pragmatically specific (indefinite) article
     - pragmatically specific indefinite article
@@ -8209,31 +7624,19 @@
   SubtypeOf:
     - article [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    an <a>article</a> that is used for a <a>pragmatically specific referent</a>. (Section 3.4.1)
 
 - Id: pragmatically specific (indefinite) referent [inf]
   Type: inf
-  InstanceOf: pragmatically specific (indefinite) referent [inf] / article [cxn]
+  InstanceOf: ""
   Alias:
     - pragmatically specific (indefinite) referent
     - pragmatically specific indefinite referent
     - pragmatically specific referent
+    - pragmatically specific
   SubtypeOf:
     - information status [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: pragmatically specific (indefinite) referent [inf] / article [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - pragmatically specific (indefinite) referent/article
-    - pragmatically specific (indefinite)
-    - pragmatically specific indefinite referent/article
-    - pragmatically specific indefinite
-    - pragmatically specific referent/article
-    - pragmatically specific
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     a referent introduced into the discourse by the speaker that is normally referred to again in subsequent discourse. We will use the shorter term <q>pragmatically specific</q>. (Section 3.4.1)
@@ -8303,7 +7706,7 @@
 
 - Id: predicational [cxn]
   Type: cxn
-  InstanceOf: predicational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - predicational
   SubtypeOf:
@@ -8311,60 +7714,42 @@
     - nonprototypical predication [cxn]
   AssociatedTo:
     - predicate nominal construction [cxn]
-  Definition: ""
-
-- Id: predicational [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - predicational
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the subtype of <a>topic--comment</a> or <a>predication information packaging</a> in which membership in an <a>object</a> category is what is being predicated; and the <a>construction</a> that expresses that information packaging. <i>Example</i>: in <i>Bill is a teacher</i>, what is being predicated of Bill is that he is a member of the object category of teacher. In other words, <q>predicational</q> is synonymous with <a>object</a> <a>predication</a>. (Section 10.1.2)
+    the <a>construction</a> that expresses a <a>predicational</a> information packaging. <i>Example</i>: in <i>Bill is a teacher</i>, what is being predicated of Bill is that he is a member of the object category of teacher. (Section 10.1.2)
 
 - Id: predicational [inf]
   Type: inf
-  InstanceOf: predicational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - predicational
   SubtypeOf:
     - topic--comment [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the subtype of <a>topic--comment</a> or <a>predication information packaging</a> in which membership in an <a>object</a> category is what is being predicated. <i>Example</i>: in <i>Bill is a teacher</i>, what is being predicated of Bill is that he is a member of the object category of teacher. In other words, <q>predicational</q> is synonymous with <a>object</a> <a>predication</a>. (Section 10.1.2)
 
 - Id: predicational location [cxn]
   Type: cxn
-  InstanceOf: predicational location [inf/cxn]
+  InstanceOf: ""
   Alias:
     - predicational location
   SubtypeOf:
     - location clause [cxn]
     - predicational [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: predicational location [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - predicational location
-    - predicational locative
-    - locative predication
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a spatial location situation with a <a>predicational</a> (<a>topic--comment</a>) <a>information packaging</a>, such that the <a>figure</a> in the spatial relation is the <a>topic</a> and its location (including the <a>ground</a>) is the <a>comment</a>; and the <a>construction</a> expressing that <a>function</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
+    the <a>construction</a> expressing a <a>predicational location</a> <a>function</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
 
 - Id: predicational location [inf]
   Type: inf
-  InstanceOf: predicational location [inf/cxn]
+  InstanceOf: ""
   Alias:
     - predicational location
   SubtypeOf:
     - predicational [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a spatial location situation with a <a>predicational</a> (<a>topic--comment</a>) <a>information packaging</a>, such that the <a>figure</a> in the spatial relation is the <a>topic</a> and its location (including the <a>ground</a>) is the <a>comment</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
 
 - Id: predicational locative strategy [str]
   Type: str
@@ -8462,7 +7847,7 @@
 
 - Id: presentational [cxn]
   Type: cxn
-  InstanceOf: presentational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - presentational
   SubtypeOf:
@@ -8470,31 +7855,23 @@
     - nonpredicational clauses [cxn]
   AssociatedTo:
     - predicate nominal construction [cxn]
-  Definition: ""
-
-- Id: presentational [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - presentational
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a type of <a>entity-central</a> <a>thetic information packaging</a> that introduces a <a>referent</a> into the discourse, in order to make the identity of the referent known to the hearer; and the <a>construction</a> that expresses that information packaging. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. Subtypes of the presentational construction are the <a>presentational location</a> and the <a>presentational possession constructions</a>. (Sections 10.1.2, 10.4)
+    the <a>construction</a> that expresses a <a>presentational</a> information packaging. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. Subtypes of the presentational construction are the <a>presentational location</a> and the <a>presentational possession constructions</a>. (Sections 10.1.2, 10.4)
 
 - Id: presentational [inf]
   Type: inf
-  InstanceOf: presentational [inf/cxn]
+  InstanceOf: ""
   Alias:
     - presentational
   SubtypeOf:
     - entity-central [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a type of <a>entity-central</a> <a>thetic information packaging</a> that introduces a <a>referent</a> into the discourse, in order to make the identity of the referent known to the hearer. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. (Sections 10.1.2, 10.4)
 
 - Id: presentational location [cxn]
   Type: cxn
-  InstanceOf: presentational location [inf/cxn]
+  InstanceOf: ""
   Alias:
     - presentational location
     - presentational locative
@@ -8502,27 +7879,19 @@
     - presentational [cxn]
     - location clause [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: presentational location [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - presentational location
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>presentational information packaging</a> of the spatial location relation in which the <a>figure</a> in the locative relation is introduced in the discourse, <a>anchored</a> by the <a>ground</a> <a>object</a>; and the <a>construction</a> expressing this <a>function</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
+    the <a>construction</a> expressing the <a>presentational location</a> <a>function</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
 
 - Id: presentational location [inf]
   Type: inf
-  InstanceOf: presentational location [inf/cxn]
+  InstanceOf: ""
   Alias:
     - presentational location
   SubtypeOf:
     - presentational [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>presentational information packaging</a> of the spatial location relation in which the <a>figure</a> in the locative relation is introduced in the discourse, <a>anchored</a> by the <a>ground</a> <a>object</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
 
 - Id: presentational possession [cxn]
   Type: cxn
@@ -8552,38 +7921,27 @@
 
 - Id: pretense event [sem]
   Type: sem
-  InstanceOf: pretense event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - pretence event
     - pretense event
   SubtypeOf:
     - propositional attitude event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: pretense event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - pretense event/predicate
-    - pretense
-    - pretence event/predicate
-    - pretence
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>propositional attitude event</a> in which the speaker, or the <a>experiencer</a> of the pretense event, presents the <a>proposition</a> expressed by the <a>complement</a> as true in an alternative reality or <a>mental space</a>; and a <a>predicate</a> expressing such an event. <i>Example</i>: in <i>Ira pretended that the guests had already left</i>, the proposition that the guests had already left is presented as true in an alternative reality from the shared beliefs of the interlocutors (or, for that matter, Ira). There is a strong implicature that the proposition does not hold in reality (that is, the shared beliefs of the interlocutors). (Section 18.2.2)
+    a <a>propositional attitude event</a> in which the speaker, or the <a>experiencer</a> of the pretense event, presents the <a>proposition</a> expressed by the <a>complement</a> as true in an alternative reality or <a>mental space</a>. <i>Example</i>: in <i>Ira pretended that the guests had already left</i>, the proposition that the guests had already left is presented as true in an alternative reality from the shared beliefs of the interlocutors (or, for that matter, Ira). There is a strong implicature that the proposition does not hold in reality (that is, the shared beliefs of the interlocutors). (Section 18.2.2)
 
 - Id: pretense predicate [cxn]
   Type: cxn
-  InstanceOf: pretense event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - pretense predicate
     - pretence predicate
   SubtypeOf:
     - propositional attitude predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>predicate</a> expressing a <a>pretense event</a>. <i>Example</i>: in <i>Ira pretended that the guests had already left</i>, the proposition that the guests had already left is presented as true in an alternative reality from the shared beliefs of the interlocutors (or, for that matter, Ira). There is a strong implicature that the proposition does not hold in reality (that is, the shared beliefs of the interlocutors). (Section 18.2.2)
 
 - Id: primary object category [str]
   Type: str
@@ -8601,34 +7959,26 @@
 
 - Id: prohibitive [cxn]
   Type: cxn
-  InstanceOf: prohibitive [inf/cxn]
+  InstanceOf: ""
   Alias:
     - prohibitive
   SubtypeOf:
     - imperative--hortative [cxn]
     - negation construction [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: prohibitive [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - prohibitive
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>negative</a> <a>imperative--hortative</a> <a>speech act</a>, and the <a>construction</a> that expresses that speech act. <i>Example</i>: English <i>Don't be a fool!</i> is an instance of a prohibitive; the construction uses a special prohibitive morpheme <i>Don't</i> to express prohibitive function. (Section 12.4.1)
+    the <a>construction</a> that expresses a <a>prohibitive</a> speech act. <i>Example</i>: English <i>Don't be a fool!</i> is an instance of a prohibitive; the construction uses a special prohibitive morpheme <i>Don't</i> to express prohibitive function. (Section 12.4.1)
 
 - Id: prohibitive [inf]
   Type: inf
-  InstanceOf: prohibitive [inf/cxn]
+  InstanceOf: ""
   Alias:
     - prohibitive
   SubtypeOf:
     - imperative--hortative [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>negative</a> <a>imperative--hortative</a> <a>speech act</a>. <i>Example</i>: English <i>Don't be a fool!</i> is an instance of a prohibitive. (Section 12.4.1)
 
 - Id: pronominal argument complex predicate [cxn]
   Type: cxn
@@ -8745,35 +8095,27 @@
 
 - Id: propositional attitude event [sem]
   Type: sem
-  InstanceOf: propositional attitude event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - propositional attitude event
+    - propositional attitude
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - independent time reference [sem]
-  Definition: ""
-
-- Id: propositional attitude event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - propositional attitude event/predicate
-    - propositional attitude
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> of thinking, believing, and so on that expresses an attitude of the <a>experiencer</a> toward the truth of the <a>proposition</a> expressed by the <a>complement</a>; and the <a>predicate</a> expressing such an event. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. Special cases of propositional attitude events are <a>knowledge events</a> and <a>pretense events</a>. (Section 18.2.2)
+    an <a>event</a> of thinking, believing, and so on that expresses an attitude of the <a>experiencer</a> toward the truth of the <a>proposition</a> expressed by the <a>complement</a>. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. Special cases of propositional attitude events are <a>knowledge events</a> and <a>pretense events</a>. (Section 18.2.2)
 
 - Id: propositional attitude predicate [cxn]
   Type: cxn
-  InstanceOf: propositional attitude event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - propositional attitude predicate
   SubtypeOf:
     - complement-taking predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing such a <a>propositional attitude event</a>. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. (Section 18.2.2)
 
 - Id: propositional content [sem]
   Type: sem
@@ -8803,36 +8145,29 @@
 
 - Id: protasis [cxn]
   Type: cxn
-  InstanceOf: protasis [sem/cxn]
-  Alias:
-    - protasis
-  SubtypeOf:
-    - clause [cxn]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: protasis [sem/cxn]
-  Type: sem/cxn
   InstanceOf: ""
   Alias:
     - protasis
     - antecedent
-  SubtypeOf: []
+  SubtypeOf:
+    - clause [cxn]
   AssociatedTo: []
   Definition: >-
-    the <a>clause</a> expressing the causally antecedent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>; or the proposition or <a>event</a> denoted by the clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a>apodosis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>protasis</q> can be distinguished as <q>protasis proposition</q> or <q>protasis event</q>. (Section 17.3.1)
+    the <a>clause</a> expressing the causally antecedent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a>apodosis</a>. (Section 17.3.1)
 
 - Id: protasis [sem]
   Type: sem
-  InstanceOf: protasis [sem/cxn]
+  InstanceOf: ""
   Alias:
     - protasis
   SubtypeOf:
     - proposition [sem]
+    - event [sem]
   AssociatedTo:
     - epistemic stance [sem]
     - conditional relation [sem]
-  Definition: ""
+  Definition: >-
+    the proposition or <a>event</a> denoted by a <a>protasis</a> clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a>apodosis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>protasis</q> can be distinguished as <q>protasis proposition</q> or <q>protasis event</q>. (Section 17.3.1)
 
 - Id: prototypical construction [cxn]
   Type: cxn
@@ -8908,34 +8243,25 @@
 
 - Id: pursuit event [sem]
   Type: sem
-  InstanceOf: pursuit event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - pursuit event
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: pursuit event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - pursuit event/verb
-    - pursuit
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    <a>events</a> in which one <a>participant's</a> motion or location is directed toward another participant; and the <a>verb</a> expressing such an event. <i>Examples</i>: pursuit events include following, chasing, searching for something, and waiting for someone/something; and <i>follow</i>, <i>chase</i>, <i>search (for)</i>, and <i>wait (for)</i> are pursuit verbs. (Section 7.3.3)
+    <a>events</a> in which one <a>participant's</a> motion or location is directed toward another participant. <i>Examples</i>: pursuit events include following, chasing, searching for something, and waiting for someone/something; and <i>follow</i>, <i>chase</i>, <i>search (for)</i>, and <i>wait (for)</i> are pursuit verbs. (Section 7.3.3)
 
 - Id: pursuit verb [cxn]
   Type: cxn
-  InstanceOf: pursuit event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - pursuit verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>pursuit event</a>. <i>Examples</i>: pursuit events include following, chasing, searching for something, and waiting for someone/something; and <i>follow</i>, <i>chase</i>, <i>search (for)</i>, and <i>wait (for)</i> are pursuit verbs. (Section 7.3.3)
 
 - Id: quantifier [cxn]
   Type: cxn
@@ -8951,32 +8277,23 @@
 
 - Id: question pronoun [cxn]
   Type: cxn
-  InstanceOf: question referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - question pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo:
     - information question [cxn]
-  Definition: ""
+  Definition: >-
+    a <a>pronoun</a> that expresses a <a>question referent</a>. (Section 3.5)
 
 - Id: question referent [inf]
   Type: inf
-  InstanceOf: question referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - question referent
   SubtypeOf:
     - nonspecific referent [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: question referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - question referent/pronoun
-    - question
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     an unspecified <a>referent</a> in the scope of <a interrogative>interrogation</a>, especially <a polarity>polar</a> <a>interrogatives</a>. <i>Example</i>: in <i>Can you hear <b>anything</b>?</i>, <i>anything</i> is a question pronoun expressing a referent that only <dq>exists</dq> in a hypothetical world, the possibility of whose existence is being entertained by the questioner. (Section 3.5)
@@ -9022,35 +8339,26 @@
 
 - Id: reciprocal construction [cxn]
   Type: cxn
-  InstanceOf: reciprocal event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - reciprocal construction
   SubtypeOf:
     - reference tracking [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> expressing such a <a>reciprocal event</a>. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
 
 - Id: reciprocal event [sem]
   Type: sem
-  InstanceOf: reciprocal event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - reciprocal event
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - monoclausal transitive reciprocal strategy [str]
-  Definition: ""
-
-- Id: reciprocal event [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - reciprocal event/construction
-    - reciprocal
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on the first in the same way; and the <a>construction</a> expressing such an event. That is, each participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
+    an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on the first in the same way. That is, each participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
 
 - Id: recruitment strategy [str]
   Type: str
@@ -9134,34 +8442,26 @@
 
 - Id: reflexive construction [cxn]
   Type: cxn
-  InstanceOf: reflexive event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - reflexive construction
   SubtypeOf:
     - reference tracking [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> expressing a <a>reflexive event</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
 
 - Id: reflexive event [sem]
   Type: sem
-  InstanceOf: reflexive event [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - reflexive event
+    - reflexive
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: reflexive event [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - reflexive event/construction
-    - reflexive
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> type in which a <a>participant</a> acts upon themself -- that is, the participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a>; and the <a>construction</a> expressing such an event. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
+    an <a>event</a> type in which a <a>participant</a> acts upon themself -- that is, the participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
 
 - Id: rejecting [inf]
   Type: inf
@@ -9293,7 +8593,7 @@
   AssociatedTo:
     - equative construction [cxn]
   Definition: >-
-    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a free relative clause>free</a> (<a indefinite pronoun/article>indefinite head</a>) <a relative clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
+    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a free relative clause>free</a> (<a indefinite pronoun>indefinite head</a>) <a relative clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
 
 - Id: relativizer [str]
   Type: str
@@ -9309,35 +8609,27 @@
 
 - Id: removal event [sem]
   Type: sem
-  InstanceOf: removal event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - removal event
+    - removal
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: removal event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - removal event/verb
-    - removal
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing removal of an <a>object</a> from another object; and the <a>verb</a> expressing such an event. <i>Example</i>: scrubbing is a removal event, and <i>scrub</i> is a removal verb. (Section 7.3.2)
+    an <a>event</a> describing removal of an <a>object</a> from another object. <i>Example</i>: scrubbing is a removal event. (Section 7.3.2)
 
 - Id: removal verb [cxn]
   Type: cxn
-  InstanceOf: removal event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - removal verb
   SubtypeOf:
     - manner verb [cxn]
     - result verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>removal event</a>. <i>Example</i>: scrubbing is a removal event, and <i>scrub</i> is a removal verb. (Section 7.3.2)
 
 - Id: repeater [str]
   Type: str
@@ -9363,35 +8655,28 @@
 
 - Id: response [cxn]
   Type: cxn
-  InstanceOf: response [inf/cxn]
+  InstanceOf: ""
   Alias:
     - response
   SubtypeOf:
     - speech acts [cxn]
   AssociatedTo:
     - interrogative [cxn]
-  Definition: ""
-
-- Id: response [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - response
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the answer to an <a>interrogative</a> (question) <a>speech act</a>; and the <a>construction</a> expressing the answer. Like interrogatives, responses are divided into <a>polarity responses</a> and <a>information (question) responses</a>.
+    the <a>construction</a> expressing a <a>answer</a> <a>function</a>. Like interrogatives, responses are divided into <a>polarity responses</a> and <a>information (question) responses</a>.
 
 - Id: response [inf]
   Type: inf
-  InstanceOf: response [inf/cxn]
+  InstanceOf: ""
   Alias:
     - response
+    - answer
   SubtypeOf:
     - speech acts [inf]
   AssociatedTo:
     - interrogative [inf]
-  Definition: ""
+  Definition: >-
+    the answer to an <a>interrogative</a> (question) <a>speech act</a>. Like interrogatives, responses are divided into <a>polarity responses</a> and <a>information (question) responses</a>.
 
 - Id: restricting [inf]
   Type: inf
@@ -9432,34 +8717,26 @@
 
 - Id: result event [sem]
   Type: sem
-  InstanceOf: result event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - result event
+    - result
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: result event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - result event/verb
-    - result
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> that is described in terms of reaching a result state, often by means of a scalar change (<a>directed change</a>), and the <a>verb</a> expressing such an event. <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
+    an <a>event</a> that is described in terms of reaching a result state, often by means of a scalar change (<a>directed change</a>). <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
 
 - Id: result verb [cxn]
   Type: cxn
-  InstanceOf: result event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - result verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>result event</a>. <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
 
 - Id: resultative (complex predicate) [cxn]
   Type: cxn
@@ -9715,35 +8992,26 @@
 
 - Id: sensation event [sem]
   Type: sem
-  InstanceOf: sensation event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - sensation event
     - bodily sensation event
   SubtypeOf:
     - experiential event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: sensation event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - sensation event/verb
-    - sensation
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> involving an internal bodily or physiological sensation; and a <a>verb</a> that expresses such an event. <i>Example</i>: <i>My head aches</i> is an example of a sensation event, and <i>ache</i> is the sensation verb. (Section 7.4)
+    an <a>experiential event</a> involving an internal bodily or physiological sensation. <i>Example</i>: <i>My head aches</i> is an example of a sensation event. (Section 7.4)
 
 - Id: sensation verb [cxn]
   Type: cxn
-  InstanceOf: sensation event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - sensation verb
   SubtypeOf:
     - experiential verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses a <a>sensation event</a>. <i>Example</i>: <i>My head aches</i> is an example of a sensation event, and <i>ache</i> is the sensation verb. (Section 7.4)
 
 - Id: separative comparative [str]
   Type: str
@@ -9963,69 +9231,51 @@
 
 - Id: specific known pronoun [cxn]
   Type: cxn
-  InstanceOf: specific known referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - specific known pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>pronoun</a> that expresses a <a>specific known referent</a>. <i>Example</i>: if <i>Masha met with someone near the university</i> is used in a context where the speaker knows the identity of the person Masha met, then <i>someone</i> is a specific known pronoun expressing a specific known referent. (Section 3.5)
 
 - Id: specific known referent [inf]
   Type: inf
-  InstanceOf: specific known referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - specific known referent
   SubtypeOf:
     - identifiability, identity [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: specific known referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - specific known referent/pronoun
-    - specific known
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     a real-world <a>referent</a> whose identity is known to the speaker but not the hearer. <i>Example</i>: if <i>Masha met with someone near the university</i> is used in a context where the speaker knows the identity of the person Masha met, then <i>someone</i> is a specific known pronoun expressing a specific known referent. (Section 3.5)
 
 - Id: specific unknown pronoun [cxn]
   Type: cxn
-  InstanceOf: specific unknown referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - specific unknown pronoun
   SubtypeOf:
     - pronoun [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    a <a>pronoun</a> that expresses a <a>specific unknown referent</a>. <i>Example</i>: if <i>Masha met with somebody near the university</i> is used in a context where the speaker does not know the identity of the person Masha met, then <i>somebody</i> is a specific unknown pronoun expressing a specific unknown referent. (Section 3.5)
 
 - Id: specific unknown referent [inf]
   Type: inf
-  InstanceOf: specific unknown referent [inf] / pronoun [cxn]
+  InstanceOf: ""
   Alias:
     - specific unknown referent
   SubtypeOf:
     - identifiability, identity [inf]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: specific unknown referent [inf] / pronoun [cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - specific unknown referent/pronoun
-    - specific unknown
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     a real-world <a>referent</a> whose identity is known neither to the speaker nor to the hearer. <i>Example</i>: if <i>Masha met with somebody near the university</i> is used in a context where the speaker does not know the identity of the person Masha met, then <i>somebody</i> is a specific unknown pronoun expressing a specific unknown referent. (Section 3.5)
 
 - Id: speech act causal construction [cxn]
   Type: cxn
-  InstanceOf: speech act causal relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - speech act causal construction
   SubtypeOf:
@@ -10034,25 +9284,16 @@
     - concessive construction [cxn]
     - concessive conditional construction [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the construction expressing a <a>speech act causal relation</a>. <i>Example</i>: in <i>Since you asked, ten isn't a prime number</i>, there is a speech act causal relation between the request of the speaker whether ten is a prime number, and the performance of the speech act asserting that ten isn't a prime number. (Section 17.3.1)
 
 - Id: speech act causal relation [sem]
   Type: sem
-  InstanceOf: speech act causal relation [sem] / construction [cxn]
+  InstanceOf: ""
   Alias:
     - speech act causal relation
   SubtypeOf:
     - causal [sem]
-  AssociatedTo: []
-  Definition: ""
-
-- Id: speech act causal relation [sem] / construction [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - speech act causal relation/construction
-    - speech act causal
-  SubtypeOf: []
   AssociatedTo: []
   Definition: >-
     the semantic relation in a <a>conditional</a>, <a>causal</a>, <a>concessive</a>, or <a>conditional concessive construction</a> that expresses a relation between a condition on performing a <a>speech act</a> and the performance of that speech act; and the construction expressing that relation. <i>Example</i>: in <i>Since you asked, ten isn't a prime number</i>, there is a speech act causal relation between the request of the speaker whether ten is a prime number, and the performance of the speech act asserting that ten isn't a prime number. A speech act causal relation contrasts with a <a>content causal relation</a> and an <a>epistemic causal relation</a>. (Section 17.3.1)
@@ -10069,33 +9310,25 @@
 
 - Id: speech acts [cxn]
   Type: cxn
-  InstanceOf: speech acts [inf/cxn]
+  InstanceOf: ""
   Alias:
     - speech acts
   SubtypeOf:
     - construction [def]
   AssociatedTo: []
-  Definition: ""
-
-- Id: speech acts [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - speech acts
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    speech acts package the <a>propositional content</a> of the utterance in such a way that the speaker wants or requires an explicit response from the addressee with respect to the propositional content; and the <a>constructions</a> used to express this function. The speech acts that are most likely to be expressed as distinct constructions are the <a>declarative</a>, the <a>interrogative</a>, the <a>imperative--hortative</a> and its negative the <a>prohibitive</a>, and the <a>exclamative</a>. (Section 12.1)
+    the <a>constructions</a> used to express <a>speech acts</a> functions. (Section 12.1)
 
 - Id: speech acts [inf]
   Type: inf
-  InstanceOf: speech acts [inf/cxn]
+  InstanceOf: ""
   Alias:
     - speech acts
   SubtypeOf:
     - information packaging [def]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    speech acts package the <a>propositional content</a> of the utterance in such a way that the speaker wants or requires an explicit response from the addressee with respect to the propositional content. The speech acts that are most likely to be expressed as distinct constructions are the <a>declarative</a>, the <a>interrogative</a>, the <a>imperative--hortative</a> and its negative the <a>prohibitive</a>, and the <a>exclamative</a>. (Section 12.1)
 
 - Id: split argument structure strategy [str]
   Type: str
@@ -10125,35 +9358,26 @@
 
 - Id: spontaneous event [sem]
   Type: sem
-  InstanceOf: spontaneous event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - spontaneous event
   SubtypeOf:
     - monovalent event [sem]
   AssociatedTo:
     - middle voice [str]
-  Definition: ""
-
-- Id: spontaneous event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - spontaneous event/verb
-    - spontaneous
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>monovalent event</a> involving a <a>participant</a> that undergoes a change without an external cause; and the <a>verb</a> expressing that event. <i>Examples</i>: dying and melting are spontaneous events, and <i>die</i> and <i>melt</i> are spontaneous event verbs. (Sections 6.3.4, 7.2)
+    a <a>monovalent event</a> involving a <a>participant</a> that undergoes a change without an external cause. <i>Examples</i>: dying and melting are spontaneous events. (Sections 6.3.4, 7.2)
 
 - Id: spontaneous verb [cxn]
   Type: cxn
-  InstanceOf: spontaneous event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - spontaneous verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>verb</a> expressing a <a>spontaneous event</a>. <i>Examples</i>: dying and melting are spontaneous events, and <i>die</i> and <i>melt</i> are spontaneous event verbs. (Sections 6.3.4, 7.2)
 
 - Id: stable [sem]
   Type: sem
@@ -10557,34 +9781,25 @@
 
 - Id: temporary predicate [cxn]
   Type: cxn
-  InstanceOf: temporary state [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - temporary predicate
   SubtypeOf:
     - predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicates</a> that express the class of <a>temporary state</a> events. <i>Example</i>: being sick is a temporary state, and <i>(be) sick</i> is a temporary state predicate. (Section 6.3.3)
 
 - Id: temporary state [sem]
   Type: sem
-  InstanceOf: temporary state [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - temporary state
   SubtypeOf:
     - state [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: temporary state [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - temporary state/predicate
-    - temporary
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the <a>event</a> class of <a>stative</a> properties that are temporary and thus have come about through some process; and the <a>predicates</a> that express events in this class. <i>Example</i>: being sick is a temporary state, and <i>(be) sick</i> is a temporary state predicate. (Section 6.3.3)
+    the <a>event</a> class of <a>stative</a> properties that are temporary and thus have come about through some process. <i>Example</i>: being sick is a temporary state. (Section 6.3.3)
 
 - Id: tense [sem]
   Type: sem
@@ -10635,34 +9850,26 @@
 
 - Id: thetic [cxn]
   Type: cxn
-  InstanceOf: thetic [inf/cxn]
+  InstanceOf: ""
   Alias:
     - thetic
   SubtypeOf:
     - clause [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>construction</a> that expresses a <a>thetic</a> information packaging. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
 
-- Id: thetic [inf/cxn]
-  Type: inf/cxn
+- Id: thetic [inf]
+  Type: inf
   InstanceOf: ""
   Alias:
     - thetic
     - all new
-  SubtypeOf: []
-  AssociatedTo: []
-  Definition: >-
-    <a>information packaging</a> that does not split the information into a <a>topic</a> and a <a>comment</a>, as is done in the <a>topic--comment</a> information packaging; and the <a>construction</a> that expresses that information packaging. Instead, the information is presented as a single whole, hence the alternative name <q>all new</q>. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
-
-- Id: thetic [inf]
-  Type: inf
-  InstanceOf: thetic [inf/cxn]
-  Alias:
-    - thetic
   SubtypeOf:
     - predication [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    <a>information packaging</a> that does not split the information into a <a>topic</a> and a <a>comment</a>, as is done in the <a>topic--comment</a> information packaging. Instead, the information is presented as a single whole, hence the alternative name <q>all new</q>. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
 
 - Id: third person pronoun [cxn]
   Type: cxn
@@ -10750,34 +9957,25 @@
 
 - Id: topic--comment [cxn]
   Type: cxn
-  InstanceOf: topic--comment [inf/cxn]
+  InstanceOf: ""
   Alias:
     - topic--comment
   SubtypeOf:
     - clause [cxn]
   AssociatedTo: []
-  Definition: ""
-
-- Id: topic--comment [inf/cxn]
-  Type: inf/cxn
-  InstanceOf: ""
-  Alias:
-    - topic--comment
-    - categorical
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a predicated>predicated about</a> another concept which is <a reference>referred</a> to (the <a>topic</a>); and the <a>construction</a> that expresses that information packaging. <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
+    the <a>construction</a> that expresses a <a>topic--comment</a> information packaging. <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
 
 - Id: topic--comment [inf]
   Type: inf
-  InstanceOf: topic--comment [inf/cxn]
+  InstanceOf: ""
   Alias:
     - topic--comment
   SubtypeOf:
     - predication [inf]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a predicated>predicated about</a> another concept which is <a reference>referred</a> to (the <a>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
 
 - Id: topic-locational hybrid possessive strategy [str]
   Type: str
@@ -10793,35 +9991,26 @@
 
 - Id: transfer event [sem]
   Type: sem
-  InstanceOf: transfer event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - transfer event
   SubtypeOf:
     - trivalent event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: transfer event [sem] / verb [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - transfer event/verb
-    - transfer
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    a <a>trivalent event</a> involving physical transfer, usually also extended to <dq>mental transfer</dq>, that is used in defining the <a>ditransitive construction</a>; and a <a>verb</a> that expresses such an event. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
+    a <a>trivalent event</a> involving physical transfer, usually also extended to <dq>mental transfer</dq>, that is used in defining the <a>ditransitive construction</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
 
 - Id: transfer verb [cxn]
   Type: cxn
-  InstanceOf: transfer event [sem] / verb [cxn]
+  InstanceOf: ""
   Alias:
     - transfer verb
   SubtypeOf:
     - verb [cxn]
   AssociatedTo:
     - ditransitive construction [cxn]
-  Definition: ""
+  Definition: >-
+    a <a>verb</a> that expresses a <a>transfer event</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
 
 - Id: transitive construction [cxn]
   Type: cxn
@@ -11000,34 +10189,25 @@
 
 - Id: uncontrolled activity [sem]
   Type: sem
-  InstanceOf: uncontrolled activity [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - uncontrolled activity
   SubtypeOf:
     - event [sem]
   AssociatedTo: []
-  Definition: ""
-
-- Id: uncontrolled activity [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - uncontrolled activity/predicate
-    - uncontrolled
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    the <a>event</a> class of activities not under the control of an <a>agent</a> (apart from uncontrolled <a>bodily actions</a> and <a>change of state</a>); and the <a>predicates</a> that express events in this class. <i>Example</i>: dying is an uncontrolled activity, and <i>die</i> is an uncontrolled activity predicate. (Section 6.3.3)
+    the <a>event</a> class of activities not under the control of an <a>agent</a> (apart from uncontrolled <a>bodily actions</a> and <a>change of state</a>). <i>Example</i>: dying is an uncontrolled activity. (Section 6.3.3)
 
 - Id: uncontrolled predicate [cxn]
   Type: cxn
-  InstanceOf: uncontrolled activity [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - uncontrolled predicate
   SubtypeOf:
     - predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicates</a> that express the class of <a>uncontrolled activity</a> events. <i>Example</i>: dying is an uncontrolled activity, and <i>die</i> is an uncontrolled activity predicate. (Section 6.3.3)
 
 - Id: undirected change [sem]
   Type: sem
@@ -11078,35 +10258,27 @@
 
 - Id: utterance event [sem]
   Type: sem
-  InstanceOf: utterance event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - utterance event
+    - utterance
   SubtypeOf:
     - event [sem]
   AssociatedTo:
     - independent time reference [sem]
-  Definition: ""
-
-- Id: utterance event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - utterance event/predicate
-    - utterance
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>event</a> of saying in which one <a>participant</a> is the <u>speaker</u> of the utterance and another participant is the utterance itself; and the <a>predicate</a> expressing such an event. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
+    an <a>event</a> of saying in which one <a>participant</a> is the <u>speaker</u> of the utterance and another participant is the utterance itself. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. (Section 18.2.2)
 
 - Id: utterance predicate [cxn]
   Type: cxn
-  InstanceOf: utterance event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - utterance predicate
   SubtypeOf:
     - complement-taking predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing such an <a>utterance event</a>. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
 
 - Id: vague numeral [cxn]
   Type: cxn
@@ -11268,7 +10440,7 @@
 
 - Id: wishing event [sem]
   Type: sem
-  InstanceOf: wishing event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - wishing event
   SubtypeOf:
@@ -11276,28 +10448,19 @@
   AssociatedTo:
     - evaluative predicate [cxn]
     - negative epistemic stance [sem]
-  Definition: ""
-
-- Id: wishing event [sem] / predicate [cxn]
-  Type: sem/cxn
-  InstanceOf: ""
-  Alias:
-    - wishing event/predicate
-    - wishing
-  SubtypeOf: []
-  AssociatedTo: []
   Definition: >-
-    an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the wishing event is made, and there is a <a>negative epistemic stance</a> by the speaker toward the proposition; and the <a>predicate</a> expressing such an event. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
+    an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the wishing event is made, and there is a <a>negative epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
 
 - Id: wishing predicate [cxn]
   Type: cxn
-  InstanceOf: wishing event [sem] / predicate [cxn]
+  InstanceOf: ""
   Alias:
     - wishing predicate
   SubtypeOf:
     - evaluative predicate [cxn]
   AssociatedTo: []
-  Definition: ""
+  Definition: >-
+    the <a>predicate</a> expressing a <a>wishing event</a>. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
 
 - Id: with-possessive strategy [str]
   Type: str
