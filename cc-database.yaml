@@ -10278,7 +10278,7 @@
     - complement-taking predicate [cxn]
   AssociatedTo: []
   Definition: >-
-    the <a>predicate</a> expressing such an <a>utterance event</a>. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
+    the <a>predicate</a> expressing an <a>utterance event</a>. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
 
 - Id: vague numeral [cxn]
   Type: cxn
