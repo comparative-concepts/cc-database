@@ -2874,7 +2874,7 @@
     - article [cxn]
   AssociatedTo: []
   Definition: >-
-    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the top end of the <a>information status</a> continuum, where the identity of the referent is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: <i>the glass bowl</i> is an example of a definite referring phrase, used in a context where the individual glass bowl in question is identifiable by both speaker and hearer (Table 3.4, Section 3.3.1)
+    an <a>article</a> that is associated with the top end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: <i>the bowl</i> is an example of a definite referring phrase with a definite article <i>the</i> combined with a <a>common noun</a> bowl, used in a context where the individual bowl in question is identifiable by both speaker and hearer. (Table 3.4, Section 3.3.1)
 
 - Id: definite pronoun [cxn]
   Type: cxn
@@ -2885,7 +2885,7 @@
     - pronoun [cxn]
   AssociatedTo: []
   Definition: >-
-    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the top end of the <a>information status</a> continuum, where the identity of the referent is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: <i>the glass bowl</i> is an example of a definite referring phrase, used in a context where the individual glass bowl in question is identifiable by both speaker and hearer (Table 3.4, Section 3.3.1)
+    a <a>pronoun</a> that is associated with the top end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is already known to both speaker and hearer. This includes <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a> referents. <i>Example</i>: in <i>It is under the bed</i>, <i>it</i> is an example of a definite pronoun, used in a context where the referent of it is identifiable by both speaker and hearer. (Table 3.4, Section 3.3.1)
 
 - Id: degree [sem]
   Type: sem
@@ -4940,7 +4940,7 @@
     - article [cxn]
   AssociatedTo: []
   Definition: >-
-    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a glass bowl</i> is an example of an indefinite referring phrase, used in a context where the individual glass bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
+    an <a>article</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: <i>a bowl</i> is an example of an indefinite article <i>a</i> combined with a <a>common noun</a> bowl, used in a context where the individual bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1) 
 
 - Id: indefinite pronoun [cxn]
   Type: cxn
@@ -4951,7 +4951,7 @@
     - pronoun [cxn]
   AssociatedTo: []
   Definition: >-
-    this term is applied to <a>referring phrases</a> -- <a>pronouns</a> and <a>articles</a> combined with <a>nouns</a> -- that are associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a glass bowl</i> is an example of an indefinite referring phrase, used in a context where the individual glass bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
+    a <a>pronoun</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: in <i>Something is under the bed</i>, <i>something</i> is an example of an indefinite pronoun, used in a context where the referent is not identifiable by the hearer. (Table 3.4, Section 3.3.1) 
 
 - Id: independent referring phrase strategy [str]
   Type: str
