@@ -3888,7 +3888,7 @@
     - speech acts [cxn]
   AssociatedTo: []
   Definition: >-
-    a <a>speech act</a> which expresses a strong emotional reaction to the <a>propositional content</a> that it conveys. More precisely, the exclamative speech act expresses the speaker's surprise toward the <a>degree</a> of a scalar <a>property</a> contained in the propositional content of the speech act; the rest of the propositional content consists of a <a>presupposed open proposition</a>. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
+    a <a>construction</a> that expresses an <a>exclamative</a> speech act. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
 
 - Id: exclamative [inf]
   Type: inf
@@ -3899,7 +3899,7 @@
     - speech acts [inf]
   AssociatedTo: []
   Definition: >-
-    a <a>construction</a> that expresses an <a>exclamative</a> speech act. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
+    a <a>speech act</a> which expresses a strong emotional reaction to the <a>propositional content</a> that it conveys. More precisely, the exclamative speech act expresses the speaker's surprise toward the <a>degree</a> of a scalar <a>property</a> contained in the propositional content of the speech act; the rest of the propositional content consists of a <a>presupposed open proposition</a>. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
 
 - Id: exclusive disjunctive coordination [cxn]
   Type: cxn
@@ -4560,7 +4560,7 @@
     - conditional relation [sem]
   AssociatedTo: []
   Definition: >-
-    a subtype of the conditional relation in which an event causes another event generically or habitually. <i>Example</i>: <i>If/When/Whenever a dog starts barking, I run away</i> is an instance of a generic conditional relation and construction -- it doesn't describe a specific instance of a dog barking causing me to run away; instead, it describes a general or habitual pattern of this causal sequence of events. (Section 17.3.1)
+    a subtype of the <a>conditional relation</a> in which an event causes another event generically or habitually. <i>Example</i>: <i>If/When/Whenever a dog starts barking, I run away</i> is an instance of a generic conditional relation and construction -- it doesn't describe a specific instance of a dog barking causing me to run away; instead, it describes a general or habitual pattern of this causal sequence of events. (Section 17.3.1)
 
 - Id: generic pronoun [cxn]
   Type: cxn
@@ -5377,7 +5377,7 @@
     - speech acts [cxn]
   AssociatedTo: []
   Definition: >-
-    a <a>speech act</a> which requests information, usually of the addressee, regarding uncertain or unknown information that is part of the <a>propositional content</a> of the question. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
+    the <a>construction</a> that expresses a <a>interrogative</a> speech act. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
 
 - Id: interrogative [inf]
   Type: inf
@@ -5388,7 +5388,7 @@
     - speech acts [inf]
   AssociatedTo: []
   Definition: >-
-    the <a>construction</a> that expresses a <a>interrogative</a> speech act. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
+    a <a>speech act</a> which requests information, usually of the addressee, regarding uncertain or unknown information that is part of the <a>propositional content</a> of the question. Interrogatives are divided into <a>polarity questions</a>, <a>information questions</a>, and <a>alternative questions</a>. (Sections 12.1, 12.3)
 
 - Id: interrogative complement [cxn]
   Type: cxn
