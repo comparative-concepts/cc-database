@@ -34,15 +34,17 @@ function set_link_title(event) {
 ///////////////////////////////////////////////////////////////////////////////
 // Searching/filtering CCs
 
+const CC_TYPES = ['construction', 'strategy', 'meaning', 'information packaging', 'definition', 'other']
 const FILTER_TYPES = ['name', 'relation', 'definition'];
 const MATCH_TYPES = ['contains', 'starts with', 'words start with']
+var TYPE = {}
 var SEARCH = {};
 var ALL_CCS = [];
 
 function init_searchfilter() {
     for (let elem of document.getElementsByClassName('cc')) {
         let cc = {elem: elem};
-        for (let type of FILTER_TYPES) {
+        for (let type of FILTER_TYPES.concat('type')) {
             let splitchar = type === 'definition' ? '#' : '|';
             let content = merge_cc_elements(splitchar, elem.getElementsByClassName(type));
             cc[type] = content;
@@ -50,7 +52,12 @@ function init_searchfilter() {
         ALL_CCS.push(cc); 
     }
 
-    let checkboxes = FILTER_TYPES.map((type, i) =>
+    let checkboxes_types = CC_TYPES.map((type, i) =>
+        `<label><input id="type-${type.replace(' ', '-')}" type="checkbox" checked/> ${type}</label>
+        ${(i+1) % 3 == 0 ? '<br/> &emsp; ' : ''}`
+    );
+
+    let checkboxes_filters = FILTER_TYPES.map((type, i) =>
         `<label><input id="search-${type}" type="checkbox" ${i===0 ? 'checked' : ''}/> ${type}</label>`
     );
 
@@ -59,11 +66,16 @@ function init_searchfilter() {
     );
 
     document.getElementById('search').innerHTML = `
-        Find a ${checkboxes.join('\n')} <br/>
+        Show <br/>&emsp; ${checkboxes_types.join('\n')} <br/>
+        Find a ${checkboxes_filters.join('\n')} <br/>
         that ${radioboxes.join('\n')} <br/>
         <input id="search-box" type="search"/> <br/>
         <span id="search-info"></span>
     `.trim();
+
+    for (let key of CC_TYPES) {
+        TYPE[key] = document.getElementById('type-' + key.replace(' ', '-'));
+    }
     for (let key of FILTER_TYPES.concat(['box', 'info'])) {
         SEARCH[key] = document.getElementById('search-' + key);
     }
@@ -103,19 +115,25 @@ function filter_ccs() {
         }]);
     }
 
-    let checked_radio = document.querySelector('input[name="matchtype"]:checked');
-    let match_type = checked_radio ? checked_radio.value : 'contains';
+    // Define search variables, based on current search term
     let search_term = SEARCH['box'].value;
     // We only care about alphanumeric characters
     search_term = search_term.trim().replace(/\W+/g, ' ');
+    let is_search, regex, filter_types;
+
     if (search_term.length < 3) {
+        is_search = false;
+        regex = null;
+        filter_types = null;
+
         for (let cc of ALL_CCS) {
             cc['elem'].style.display = '';
         }
         SEARCH['info'].innerText = `Type at least 3 characters`;
-    }
-
-    else {
+    } else {
+        is_search = true;
+        let checked_radio = document.querySelector('input[name="matchtype"]:checked');
+        let match_type = checked_radio ? checked_radio.value : 'contains';
         let regex_str = search_term;
         if (match_type !== 'contains') {
             // Each search term must start a word
@@ -125,32 +143,56 @@ function filter_ccs() {
         }
         // '#' is the separator used by `merge_cc_elements` above, so we don't want to accept that
         regex_str = regex_str.replaceAll(' ', '[^#]*?');
-        let regex = new RegExp(regex_str, 'i');
-        let filter_types = FILTER_TYPES.filter((type) => SEARCH[type].checked);
-        let count = 0;
-        for (let cc of ALL_CCS) {
-            let elem = cc['elem'];
-            let show = (elem.id === current_id);
-            if (!show) {
-                for (let type of filter_types) {
-                    if (regex.test(cc[type])) {
-                        show = true;
-                        break;
-                    }
+        regex = new RegExp(regex_str, 'i');
+        filter_types = FILTER_TYPES.filter((type) => SEARCH[type].checked);
+    }
+
+    // Set CC types to be filtered
+    let all_cc_types = new Set(CC_TYPES);
+    let cc_types = new Set(CC_TYPES.filter((type) => TYPE[type].checked));
+
+    let count = 0;
+
+    for (let cc of ALL_CCS) {
+        let elem = cc['elem'];
+        let type = cc['type'];
+        let is_current = (elem.id === current_id);
+        let show;
+
+        if (all_cc_types.has(type)) {
+            show = cc_types.has(type);
+        } else {
+            show = cc_types.has('other');
+        }
+
+        if (show && is_search) {
+            show = false;
+            for (let type of filter_types) {
+                if (regex.test(cc[type])) {
+                    show = true;
+                    break;
                 }
             }
-            if (show) {
-                elem.style.display = '';
+        }
+
+        if (show || is_current) {
+            elem.style.display = '';
+            count++;
+
+            if (is_search) {
                 for (let type of filter_types) {
                     let contents = elem.querySelectorAll('.' + type);
                     new Mark(contents).markRegExp(regex, {acrossElements: true});
                 }
-                count++;
-            } else {
-                elem.style.display = 'none';
             }
+        } else {
+            elem.style.display = 'none';
+            console.log(cc);
         }
-        SEARCH['info'].innerText = `Found ${count} CCs (out of ${ALL_CCS.length})`;
+    }
+
+    if (count < ALL_CCS.length) {
+        SEARCH['info'].innerText = `${is_search ? 'Found' : 'Showing '} ${count} CCs (out of ${ALL_CCS.length})`;
     }
 
     SEARCH['box'].focus();

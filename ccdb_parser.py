@@ -251,6 +251,9 @@ class CCDBParser:
                         self.error(f"{id}: Type not found: {type}")
                         self.notfound.add(type)
                         type = f'<span class="notfound">{type}</span>'
+                else:
+                    # Just a better alias for the HTML
+                    type = 'definition'
                 print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
 
             if (aliases := item.get('Alias')):
