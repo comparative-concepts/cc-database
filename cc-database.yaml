@@ -36,8 +36,7 @@
     - A--not-A
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - polarity question [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy for <a>polarity question constructions</a> in which both the <a>positive</a> and <a>negative</a> form of the proposition are expressed. <i>Example</i>: Mandarin <i>tā zài jiā bu zài jiā</i> [lit. <q>S/he at home not at home</q>] <q>Is s/he at home?</q> is an instance of the A--not-A strategy for polarity questions. The A--not-A strategy is essentially the recruitment of the <a>alternative question</a> construction for the polarity question function.
 
@@ -50,8 +49,7 @@
     - about
   SubtypeOf:
     - information packaging [def]
-  AssociatedTo:
-    - topic--comment [inf]
+  AssociatedTo: []
   Definition: >-
     the relation between what is expressed in a <a>topic--comment</a> sentence and the <a>referent</a> or <a>topic</a> that the comment or <a>predication</a> is predicated of. <i>Example</i>: in <i>The coyote ran across the lawn</i>, the sentence is about the coyote. Aboutness is intended to capture the notion that an utterance is relevant to <q>a matter of standing interest or concern</q> (Strawson 1964:97). (Section 11.2.1)
 
@@ -62,8 +60,7 @@
     - absolute deranking system
   SubtypeOf:
     - system [str]
-  AssociatedTo:
-    - deranked, deranking [str]
+  AssociatedTo: []
   Definition: >-
     a <a>system</a> where both the <a>same-subject</a> <a>reference tracking construction</a> and the <a>different-subject</a> reference tracking construction use a <a>deranked strategy</a>. The deranked reference tracking construction may be the same for both same-subject and different-subject constructions. <i>Example</i>: Tamil <i>avaru kadite eɽudiiʈʈu naaval moɽipeyarttaaru</i> <q>He wrote poetry and then translated a novel</q> (same-subject) and <i>naan paɳam kuɖuttu avan sinimaavukku poonaan</i> <q>I gave (him) money and he went to the movie</q> (different-subject) both use the deranked Adverbial Participle predicate forms -- <i>eɽudiiʈʈu</i> <q>write</q> [<sc>adv.part</sc>] and <i>kuɖuttu</i> <q>give</q> [<sc>adv.part</sc>] respectively. If the same-subject and different-subject constructions systematically use different deranked reference tracking constructions, then it is a <a>switch-reference system</a>. (Section 16.3)
 
@@ -74,10 +71,7 @@
     - absolutive category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - ergative alignment system [str]
-    - S role [sem]
-    - P role [sem]
+  AssociatedTo: []
   Definition: >-
     the category in the <a>ergative alignment strategy</a> that <a>co-expresses</a> both <a>S</a> and <a>P roles</a>. <i>Example</i>: Yuwaalaraay <a>argument phrases</a> use the same <a zero strategy>zero</a> <a>flag</a> to express the S and P roles, and hence this is an absolutive flag. (Section 6.3.1)
 
@@ -132,9 +126,7 @@
     - accusative category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - accusative alignment system [str]
-    - P role [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>accusative alignment system</a> that exclusively expresses the <a>P role</a>. <i>Example</i>: the English accusative <a>pronoun</a> forms <i>me</i>, <i>him</i>, <i>her</i>, <i>us</i>, and <i>them</i> are used only for the P role (the S and A roles use the <a nominative category>nominative</a> forms <i>I</i>, <i>he</i>, <i>she</i>, <i>we</i>, and <i>they</i>), and represent the accusative <a>flag</a> (morphologically manifested in English as base modification). (Section 6.3.1)
 
@@ -145,8 +137,7 @@
     - achievement
   SubtypeOf:
     - aspect [sem]
-  AssociatedTo:
-    - complement clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a type of <a>aspect</a> that indicates the success or failure in carrying out the <a>complement</a> <a>event</a>. Achievement is often, but not always, expressed by a <a>complement-taking predicate</a> in a <a>complement clause construction</a>. <i>Example</i>: in <i>She managed to solve the riddle, managed</i> expresses achievement -- namely, the successful execution of the complement event of solving the riddle. (Section 18.2.2)
 
@@ -220,7 +211,6 @@
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   AssociatedTo:
-    - active alignment system [str]
     - active [inf]
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>active alignment system</a> that <a>co-expresses</a> some <a>S roles</a> -- in particular, the S role of <q>walk</q> -- and the <a>A role</a>. <i>Example</i>: in Lakhota, the index <i>ya-</i> <q>you (sg.)</q> in <i>ó-ma-ya-kiye</i> <q>you help/helped me</q> and <i>ya-ʔu</i> <q>you (sg.) are coming</q> expresses the active category. (Section 6.3.3)
@@ -274,7 +264,6 @@
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - additive (focus) operator [cxn]
-    - conjunctive coordination [cxn]
   Definition: >-
     a relation between two or more <a>entities</a> such that the entities are construed as combined in a sort of totality. The additive relation may be construed as a <a>complex figure</a>, as in <i>The robins drank water and the juncos ate fennel seeds</i>, or in a <a>figure--ground</a> relation, as in <i>Besides missing my bus, I got my feet all wet</i>. The additive relation is considered the prototype for <a>conjunctive coordination</a>. (Section 15.2.1)
 
@@ -298,8 +287,7 @@
   SubtypeOf:
     - prototypical construction [cxn]
     - modifier [cxn]
-  AssociatedTo:
-    - attributive phrase [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>head</a> of an <a>attributive phrase</a> that denotes a <a>property</a>. <i>Example</i>: the word <i>new</i> in <i>a very new book</i> is an adjective -- it is a property concept that is the head of the attributive phrase <i>very new</i> and <a modifier>modifies</a> <i>book</i>. (Sections 2.2.3, 4.1.1)
 
@@ -311,9 +299,7 @@
   SubtypeOf:
     - non-indexed [str]
     - balanced, balancing [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
-    - manner complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that does not <a>index</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Manchu <i>sargan jui hocikon ucule-he</i> <q>The girl sang beautifully</q>, <i>hocikon</i> <q>beautifully</q> does not index <i>sargan jui</i> <q>girl</q>. (Section 14.2)
 
@@ -326,7 +312,6 @@
     - indexed [str]
     - balanced, balancing [str]
   AssociatedTo:
-    - stative complex predicate [cxn]
     - depictive (complex predicate) [cxn]
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that <a>indexes</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Latin <i>mendicus a me tristis stipem petivit</i> <q>The beggar asked me sadly for a gift</q>, the form <i>tristis</i> <q>sadly</q> indexes the subject <i>mendicus</i> <q>beggar</q> in <a>case</a>, <a>number</a> and <a>gender/class</a>. (Section 14.2)
@@ -339,8 +324,7 @@
     - adjoined
   SubtypeOf:
     - juxtaposition [str]
-  AssociatedTo:
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>relative clause construction</a> in which the <a>relative clause</a> is juxtaposed to the <a>matrix clause</a>. <i>Example</i>: Warlpiri <i>ŋatʲuluɭu ɳa yankiri pantuɳu</i> [<i>kutʲalpa ŋapa ŋaɳu</i>] <q>I speared the emu which was drinking water</q> illustrates the adjoined strategy -- the relative clause <i>kutʲalpa ŋapa ŋaɳu</i> <q>which was drinking water</q> is juxtaposed to the matrix clause <i>ŋatʲuluɭu ɳa yankiri pantuɳu</i> <q>I speared the emu</q>, and not adjacent to the relative clause head <i>yankiri</i> <q>emu</q>. The adjoined strategy is quite rare and largely found in Australian languages, where it is identical to the <u>temporal</u> <a>adverbial clause construction</a> and presumably recruited from it. (Section 19.2.3)
 
@@ -361,8 +345,7 @@
     - admodification
   SubtypeOf:
     - modification [inf]
-  AssociatedTo:
-    - modifier [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>information packaging</a> function of qualifying a <a>modifier</a>, usually via semantically expressing <a>degree</a> or hedging of the <a>property</a> denoted by the modifier. <i>Example</i>: in <i>very slow</i>, the degree <a>admodifier</a> <i>very</i> intensifies the value of the speed dimension denoted by <i>slow</i>. (Section 2.2.2)
 
@@ -388,9 +371,7 @@
   SubtypeOf:
     - internal possessor strategy [str]
     - actual information packaging strategy [str]
-  AssociatedTo:
-    - presentational possession [cxn]
-    - possessive (modification) construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed not by an <a>argument phrase</a> but with a <a>possessive modification construction</a>. <i>Example</i>: Mokilese <i>mine woaroa-n woal-o war</i> [exist <sc>clf-3sg</sc> man-that canoe] <q>That man has a canoe</q> [lit. <q>That man's canoe exists</q>] is an instance of the adnominal possessive strategy. The adnominal possessive strategy is an instance of the <a>internal possessor strategy</a>. (Section 10.4.2)
 
@@ -425,9 +406,7 @@
     - adpositional strategy
   SubtypeOf:
     - deranked, deranking [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
-    - manner complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed with a <a>case marker</a> just like an <a>argument phrase</a>, either in the basic lexical form or in a nominalized form of the stative concept word. <i>Example</i>: in Mordvin <i>t'ejt'er-es mor-i mazi-ste</i> <q>The girls sings beautifully</q>, <i>mazi</i> <q>beautiful</q> takes the Elative <a oblique phrase>oblique</a> flag <i>-ste</i>. (Section 14.2)
 
@@ -450,8 +429,7 @@
     - adverbial dependent clause
   SubtypeOf:
     - dependent clause [cxn]
-  AssociatedTo:
-    - adverbial clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>dependent clause</a> in an <a>adverbial clause construction</a>; it is construed as the ground in the <a>figure--ground</a> <a>information packaging</a> of the construction. <i>Example</i>: in <i>I left early because I was bored, I was bored</i> is the adverbial dependent clause. (Section 15.3.1)
 
@@ -462,8 +440,7 @@
     - adverbial strategy
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - manner complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed using a distinct and unique <a>morphosyntactic</a> form. <i>Example</i>: in English <i>The girl sang beautiful-ly</i>, <i>beautiful</i> uses the unique suffix <i>-ly</i> to combine with the <a>event</a> <a>predicate</a> <i>sang</i>. The adverbial strategy is probably a more <a>grammaticalized</a> version of other strategies for stative complex predicates. (Section 14.2)
 
@@ -474,8 +451,7 @@
     - adverbializer
   SubtypeOf:
     - conjunction [str]
-  AssociatedTo:
-    - adverbial clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a morpheme that overtly expresses the semantic relation in an <a>adverbial clause construction</a>. <i>Example</i>: in <i>I left the party because I was tired, because</i> is the adverbializer. An adverbial clause construction with an adverbializer is an example of <a>syndetic</a> <a subordinate clause>subordination</a>. If the morpheme is affixed to a <a>predicate</a>, it is not an adverbializer but an overt marker of <a>deranked</a> status. (Section 15.3.2)
 
@@ -580,8 +556,7 @@
     - disagree alignment strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - polarity response [cxn]
+  AssociatedTo: []
   Definition: >-
     an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer agrees/disagrees with the polarity of the question. <i>Example</i>: in Gulf Arabic, the answers to the negative polarity question <i>maa ʕindik fluus, muu chidhi?</i> <q>You don't have any money, right?</q> are <i>naʕam</i> <q>yes, I have no money</q> (agreeing with the speaker) or <i>bala</i> <q>no, I do have money</q> (disagreeing with the speaker). (Section 12.3.3)
 
@@ -625,8 +600,7 @@
     - allative comparative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - comparative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>comparative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as an <a>oblique argument phrase</a> using a spatial <a>flag</a> with an allative (<q>to</q>) <a>meaning</a>. <i>Example</i>: Nuer <i>diid ne gän ke ji</i> <q>I am bigger than you</q> is an instance of the allative comparative -- <i>diid ne gän</i> asserts that I am big, and <i>ke ji</i> expresses the standard, you, with a flag <i>ke</i> meaning <q>to</q>. (Section 17.2.2)
 
@@ -637,9 +611,7 @@
     - alternative concessive conditional strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - concessive conditional construction [cxn]
-    - scalar model [sem]
+  AssociatedTo: []
   Definition: >-
     a strategy for expressing a <a>concessive conditional construction</a> where the <a>protasis</a>, which specifies the set of conditions for the concessive conditional, invokes the two polar alternatives possible in the <a>scalar model</a>; the <a>apodosis</a> expresses the unexpected opposite of the expected causal relation between either alternative and the outcome, and so implies the same outcome no matter what. <i>Example</i>: <i>Whether he is right or not, we must support him</i> uses the alternative concessive conditional strategy -- either he is right or he is wrong, and under either of those conditions that make up the scalar model, we must support him. (Section 17.3.3)
 
@@ -651,7 +623,6 @@
   SubtypeOf:
     - information element (FN-Br) [inf]
   AssociatedTo:
-    - contrast [inf]
     - identificational [inf]
   Definition: >-
     when a <a>contrast</a> situation is construed as an <a>identificational construction</a>, the <a>propositional content</a> is asserted against a background of an alternative <a>proposition</a> (or propositions) expressed or evoked in the discourse context. <i>Example</i>: in the exchange <i>John bought apples. No, he bought PEACHES</i>, the proposition that John bought peaches is asserted against the background of the alternative proposition that John bought apples. The shared part of the proposition and its alternative, that John bought something, is presupposed -- that is, <q>John bought X</q> is a <a>presupposed open proposition</a>. (Section 11.4.1)
@@ -721,8 +692,7 @@
     - anaphoric-head construction
   SubtypeOf:
     - phrase [cxn]
-  AssociatedTo:
-    - anaphoric-head relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     an anaphoric-head construction contains a <a>modifier</a> that modifies a (semantic) <a>head</a> that <a reference>refers</a> to an <a>individual</a> of the same <a>type</a> as one previously referred to. <i>Example</i>: in <i>I took a red candy and Greg took a green one, a green one</i> is an anaphoric-head construction, referring to a green candy. An <a>anaphoric-head relative clause construction</a> is a special case of the anaphoric-head construction. (Sections 5.4, 19.4)
 
@@ -790,8 +760,7 @@
     - animacy-based split ergativity
   SubtypeOf:
     - flag, flagging [str]
-  AssociatedTo:
-    - passive--inverse voice construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a distinct, <a overt strategy>overt</a> <a>flag</a> of higher-<a>salience</a> <a>P</a> <a>participants</a> and also for lower-salience <a>A</a> <a>participants</a>. <i>Example</i>: in Dyirbal, the Accusative Case suffix <i>-na</i> is used for <a first person pronoun>first</a> and <a second person pronoun>second pronominal</a> P participants, and the Ergative Case suffix <i>-ŋu</i> is used for <a third person pronoun>third person</a> pronominal and <a>common noun</a> A participants. (Section 8.3)
 
@@ -826,8 +795,7 @@
     - antecedent role
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - causal structure [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>participant role</a> that is antecedent to the participant role expressed as <a>object</a> in the <a>causal chain</a> / <a>causal structure</a> of an <a>event</a>. <i>Example</i>: in <i>Jack broke the window with a hammer</i>, the hammer is antecedent to the window in the breaking causal chain (Jack --> hammer --> window), and the window is expressed as object. (Section 6.1.2)
 
@@ -838,8 +806,7 @@
     - anterior
   SubtypeOf:
     - consecutive [sem]
-  AssociatedTo:
-    - figure--ground [inf]
+  AssociatedTo: []
   Definition: >-
     a temporal sequential relation between two <a>events</a> such that the following event serves as the reference point for the preceding event. <i>Example</i>: in <i>He washed the car before driving to the party</i>, washing the car has an anterior temporal relation with respect to driving to the party. Used to describe a sequential temporal relation between events in a <a>figure--ground information packaging</a>. (Section 15.1.3)
 
@@ -959,8 +926,7 @@
     - applicative object
   SubtypeOf:
     - object phrase [cxn]
-  AssociatedTo:
-    - applicative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>participant role</a> which is expressed as the <a>object</a> in an <a>applicative construction</a>. <i>Example</i>: in Nomatsiguenga <i>na-manantë-ne-ro kayeta</i> <q>I bought crackers for her</q>, the <a>beneficiary</a> referred to by <q>her</q> is expressed as the object, with the <sc>3sg</sc> Object suffix <i>-ro</i>. (Section 9.3)
 
@@ -994,8 +960,7 @@
     - apprehensional
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - purpose [sem]
+  AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event serves as the opposite of the intended outcome of bringing about the other event. In this respect, the apprehensional relation is a <dq>negative</dq> version of the <a>purpose</a> relation. <i>Examples</i>: <i>I grabbed a stick lest he attack me</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>Grab a stick or he will attack you</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the <dq>negatively intended</dq> event is construed as the ground. As with the purpose relation, the apprehensional event is unrealized; the complex figure construal is possible because the <a>matrix clause</a> event is also unrealized. (Section 15.3.1)
 
@@ -1098,8 +1063,7 @@
     - associative equative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>equative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as an <a>oblique argument phrase</a> with a spatial <a>flag</a> with an associative (<q>with</q>) <a>meaning</a>. <i>Example</i>: Mandarin Chinese <i>Tā gēn nǐ yíyàng gāo</i> <q>She is as tall as you</q> is an instance of an associative equative -- the predicate is <i>yíyàng gāo</i> <q>[is] one.manner tall</q> and the standard <i>nǐ</i> <q>you</q> uses the flag <i>gēn</i> <q>with</q>. The associative marker may also be a <a coordinate construction>coordinating</a> <a>conjunction</a>. (Section 17.2.4)
 
@@ -1110,9 +1074,7 @@
     - asyndetic
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - complex sentence [cxn]
-    - coordinate construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the combination of <a>clauses</a> in <a>complex sentence constructions</a>, and of <a>coordinands</a> in <a>coordinate constructions</a> (whether the coordinands are clauses or not), by simple <a>juxtaposition</a>. <i>Example</i>: in Lavukaleve <i>ngabakala ngauia tula</i> [my:paddle my:knife small] <q>my paddle and my small knife</q>, the coordinate construction is asyndetic. (Section 15.2.2)
 
@@ -1171,8 +1133,7 @@
     - auxiliary
   SubtypeOf:
     - element [cxn]
-  AssociatedTo:
-    - auxiliary construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>element</a> expressing <a>TAMP</a> <a>meaning</a> in an <a>auxiliary construction</a>. <i>Example</i>: in <i>The cats have eaten, have</i> is the auxiliary in the auxiliary construction <i>have eaten</i>. (Section 13.4)
 
@@ -1209,9 +1170,7 @@
     - balancing
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - complex sentence [cxn]
-    - complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which the <a>predicate</a> in a <a>complex sentence construction</a> or a <a>complex predicate construction</a> <a>recruits</a> the predicate construction in a simple predication, inflections and all. <i>Example</i>: <i>The robins drank water and the juncos ate fennel seeds</i> is an instance of a balanced <a>coordinate clause construction</a>: <i>drank</i> and <i>ate</i> are in the same <a>form</a> as in the simple predications <i>The robins drank water</i> and <i>The juncos ate fennel seeds</i>. (Sections 14.2, <b>15.2.3</b>)
 
@@ -1222,8 +1181,7 @@
     - bare verb stem
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - imperative--hortative [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>imperative--hortative construction</a>, particularly the <a>second person</a> variant, in which the <a>verb</a> stem without any inflection is used. <i>Example</i>: English <i>Dance!</i> is an instance of the bare verb stem strategy for the second person imperative--hortative. (Section 12.4.1)
 
@@ -1293,8 +1251,7 @@
     - biclausal reciprocal
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - reciprocal construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> a <a>construction</a> with two <a>clauses</a> to use as a <a>reciprocal construction</a>. <i>Example</i>: Colloquial Cantonese <i>léih hóyíh bōng ngóh ngóh hóyíh bōng léih</i> <q>We can help each other</q> is literally <q>You can help me, I can help you</q>. (Section 7.2)
 
@@ -1483,8 +1440,7 @@
     - case
   SubtypeOf:
     - ontological categories [sem]
-  AssociatedTo:
-    - case affix [str]
+  AssociatedTo: []
   Definition: >-
     a semantic category expressed by <a>case affixes</a> which encodes the types of relations that occur between <a>predicate</a> and <a>arguments</a>, or the relation between an <a>object</a> <a>modifier</a> and its <a>head</a> in <a>nominal modification constructions</a>. <i>Example</i>: in Finnish <i>kukassa</i> <q>in a/the flower</q>, the Inessive Case Suffix <i>-ssa</i> expresses the <q>in</q> locative relation. (Section 4.4.2)
 
@@ -1507,9 +1463,6 @@
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
-    - conditional relation [sem]
-    - concessive relation [sem]
-    - concessive conditional relation [sem]
     - comparative conditional relation [sem]
   Definition: >-
     the semantic relation between two <a>events</a> where one event causes the other. <i>Example</i>: <i>I left the party because I was tired</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>I was tired and (so) I left the party</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the causing event (the <a>protasis</a>; Section 17.3.2) is construed as the ground, and expressed in the <a>adverbial dependent clause</a>. Causal relations also occur in <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, and <a>comparative conditional constructions</a>. Causal relations are divided into <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, and <a speech act causal relation>speech act relations</a>. (Sections 15.3.1, 17.2.1, 17.3.2)
@@ -1615,8 +1568,7 @@
     - causee
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - causative event [sem]
+  AssociatedTo: []
   Definition: >-
     in a <a>causative event</a>, the <a>participant role</a> that is the initiator of the <a>causal chain</a> of the <a>base event</a>. <i>Example</i>: in <i>Sandra had Phil sweep the patio</i>, Phil fills the participant role of causee because Phil is the initiator of the sweeping event. The term <q>causee</q> is used only when there is a <a>causer</a> in the event as well. (Section 9.2)
 
@@ -1776,8 +1728,7 @@
     - cleft strategy
   SubtypeOf:
     - copula [str]
-  AssociatedTo:
-    - identificational [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for <a>identificational constructions</a> that uses an <a>equational</a> <a>copula</a> to link the <a>focus</a> and the <a>presupposed open proposition</a> that makes up the remainder of the <a>clause</a>. <i>Example</i>: the English Pseudocleft Construction that is the second sentence in <i>Nikki Caine, 19, doesn't want to be a movie star. What she hopes to do is be a star on the horse-show circuit</i>, uses the cleft strategy: the equational copula <i>is</i> links the presupposed open proposition <i>what she hopes to do</i> and the focus <i>be a star on the horse-show circuit</i>. (Section 11.4.2)
 
@@ -1803,8 +1754,7 @@
     - cognate object
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - argument complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for an <a>argument complex predicate</a> in which the <a>verb</a> and the <a>noun</a> (<a>argument phrase</a>) are phonologically related (and sometimes even identical). <i>Example</i>: in Maale <i>ʔízí ʃeeʃi ʃéék'k'-á-ne</i> <q>He is urinating</q>, <i>ʃeeʃi</i> <q>urine</q> and <i>ʃéék'k'</i> <q>urinate</q> are morphologically related as well as semantically extremely close. (Section 13.6)
 
@@ -1909,8 +1859,7 @@
     - comment
   SubtypeOf:
     - information element (FN-Br) [inf]
-  AssociatedTo:
-    - topic--comment [inf]
+  AssociatedTo: []
   Definition: >-
     in a <a>topic--comment information packaging</a>, the comment is the information that is predicated of the <a>topic</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is the comment that is predicated of Bill. Comment is basically synonymous with <a>predication</a>. (Section 10.1.2)
 
@@ -2037,8 +1986,7 @@
     - comparee
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - gradable predicative scale [sem]
+  AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or <a>equative construction</a>, the <a>referent</a> whose position on the <a>gradable predicative scale</a> is specified relative to the position of the <a>standard</a> on the predicative scale. <i>Example</i>: in the comparative construction <i>Your cat is bigger than my dog</i>, the cat is the comparee -- it is asserted to exceed the dog on the scale of size. (Sections 17.2.1, 17.2.4)
 
@@ -2110,8 +2058,7 @@
     - complementizer
   SubtypeOf:
     - conjunction [str]
-  AssociatedTo:
-    - complement clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a morpheme that overtly expresses the semantic relation in a <a>complement clause construction</a>. <i>Example</i>: in <i>She thought that he was tired, that</i> is the complementizer. A complement clause construction with a complementizer is an example of <a>syndetic</a> <a subordinate clause>subordination</a>. If the morpheme is affixed to a <a>predicate</a>, it is not a complementizer but an overt marker of <a>deranked</a> status. (Section 18.3.1)
 
@@ -2162,7 +2109,6 @@
   SubtypeOf:
     - overt (coding) strategy [str]
   AssociatedTo:
-    - applicative construction [cxn]
     - complex predicate [cxn]
   Definition: >-
     a <a>strategy</a> for the <a>applicative construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that there is an <a>applicative object</a>. <i>Example</i>: Yoruba <i>ó ra iṣu fún mi</i> <q>He bought a yam for me</q> is an instance of a complex predicate applicative strategy with the verbs <i>ra</i> <q>buy</q> and <i>fún</i> <q>give</q>. (Section 9.3)
@@ -2177,7 +2123,6 @@
     - overt (coding) strategy [str]
   AssociatedTo:
     - complex predicate [cxn]
-    - causative construction [cxn]
   Definition: >-
     a <a>strategy</a> for the <a>causative construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that this is a <a>causative event</a> with a <a>causer</a> <a>participant role</a> added to the <a>causal chain</a> of the <a>base event</a>. <i>Example</i>: the English Periphrastic Causative Construction, illustrated by <i>Sandra had Phil sweep the patio</i>, is an example of the complex predicate causative strategy; there is a second verb <i>had</i> accompanying the verb <i>sweep</i> that indicates that Sandra is the causer of the causative event. (Section 9.2)
 
@@ -2191,7 +2136,6 @@
   SubtypeOf:
     - overt (coding) strategy [str]
   AssociatedTo:
-    - passive--inverse voice construction [cxn]
     - complex predicate [cxn]
   Definition: >-
     a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that the <a>subject</a> <a>referring phrase</a> expresses the <a>P</a> <a>participant</a>. <i>Example</i>: in Vietnamese <i>Nam bị Nga đánh</i> <q>Nam was beaten by Nga</q>, the verb <i>bi</i> <q>suffer</q> accompanying the main verb <i>đánh</i> <q>beat</q> is an instance of the complex predicate passive--inverse voice strategy. (Section 8.3)
@@ -2277,7 +2221,6 @@
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
-    - positive epistemic stance [sem]
     - unexpected co-occurrence [sem]
   Definition: >-
     a relation between two <a>events</a> such that there is an expected <a>causal relation</a> between the two events, but the opposite of the second event, expressed in the <a>apodosis</a>, unexpectedly occurs. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a content causal relation>content</a>, <a epistemic causal relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
@@ -2312,10 +2255,7 @@
     - conditionally deranked
   SubtypeOf:
     - system [str]
-  AssociatedTo:
-    - reference tracking [cxn]
-    - deranked, deranking [str]
-    - balanced, balancing [str]
+  AssociatedTo: []
   Definition: >-
     a <a>system</a> where a <a>same-subject</a> <a>reference tracking construction</a> uses a <a>deranking strategy</a>, whereas the <a>different-subject</a> reference tracking construction uses a <a>balanced</a> strategy. <i>Example</i>: Wolof <i>dem na ma <b>à o</b> ko</i> <q>I went and called him</q> [same-subject] uses a Serial Marker <i>à</i> and a deranked Subjunctive verb form <i>o</i>; <i>nyeu <b>on na</b> te wakh <b>on na</b> ma ko</i> <q>He came and I told (it to) him</q> uses the balanced construction with the simple verb form, the Past Tense <i>on</i> and the Indicative Marker <i>na</i>. (Section 16.3)
 
@@ -2327,7 +2267,6 @@
   SubtypeOf:
     - system [str]
   AssociatedTo:
-    - reference tracking [cxn]
     - balanced, balancing [str]
   Definition: >-
     a <a>system</a> where a <a>same-subject</a> <a>reference tracking construction</a> uses a different <a>strategy</a> from the standard discourse reference strategies found in connected discourse. This is essentially the use of <a>zero anaphora</a> in the same-subject reference tracking construction that is conditional on the construction rather than on the discourse context. <i>Example</i>: the coordination clause construction illustrated in <i>Bilbo<sub>i</sub> found a ring and Ø<sub>i</sub> put it in his pocket</i> uses zero anaphora in the second clause; zero anaphora is not generally allowed in discourse reference (*<i>Put it in his pocket</i>). (Section 16.2)
@@ -2374,9 +2313,7 @@
   SubtypeOf:
     - derived-case [str]
     - independent strategy [str]
-  AssociatedTo:
-    - comparative construction [cxn]
-    - coordinate clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>derived-case</a> <a>comparative</a> <a>strategy</a> which consists of a <a>coordinate clause construction</a> where the two <a>clauses</a> assert that the <a>gradable predicative scale</a> applies to the <a>comparee</a> and the <a>standard</a>. <i>Example</i>: Sika <i>dzarang tica gahar, dzarang rei kesik</i> <q>That horse is bigger than this horse</q> is an instance of the conjoined comparative -- it conjoins <i>dzarang tica gahar</i> <q>That horse is big</q> and <i>dzarang rei kesik</i> <q>This horse is small</q>. (Section 17.2.2)
 
@@ -2388,8 +2325,7 @@
     - conjoined exceed
   SubtypeOf:
     - derived-case [str]
-  AssociatedTo:
-    - comparative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a rare <a>strategy</a> for the <a>comparative construction</a> which recruits a <a>coordinate clause construction</a> (making it similar to the <a>conjoined comparative</a>), but where one <a>clause</a> expresses the <a>proposition</a> that the <a>comparee</a> exceeds the <a>standard</a> (making it similar to the <a>exceed comparative</a>), while the other clause expresses that the <a>gradable predicative scale</a> applies to the comparee, or, sometimes, to the standard instead. <i>Example</i>: Acholi <i>gwok mera dit ki kato meri</i> <q>My dog is bigger than yours</q> is an instance of the conjoined exceed comparative strategy -- the first clause <i>gwok mera dit</i> <q>my dog [is] big</q> attributes size to the comparee, the dog; the second clause <i>kato meri</i> <q>[it] exceeds yours</q> expresses the relation of the comparee to the standard, your dog; and the clauses are conjoined by <i>ki</i> <q>and</q>. (Section 17.2.3)
 
@@ -2401,7 +2337,6 @@
   SubtypeOf:
     - overt (coding) strategy [str]
   AssociatedTo:
-    - complex sentence [cxn]
     - syndetic [str]
     - discourse markers [cxn]
   Definition: >-
@@ -2425,8 +2360,7 @@
     - consecutive
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - complex figure [inf]
+  AssociatedTo: []
   Definition: >-
     a sequential relation between two <a>events</a>, as expressed by a <a>complex figure</a> construal of the relation between the two events. <i>Example</i>: in <i>He washed the car and drove to the party</i>, the washing of the car and the driving to the party are in a consecutive relation. Used to describe the temporal relation between two events in a <a>complex figure information packaging</a>. (Section 15.1.3)
 
@@ -2555,8 +2489,7 @@
     - control-based causative strategies
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - causative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     <u>monoclausal</u> <a>strategies</a> for the <a>causative construction</a> in which the <a>causee</a> is coded differently depending on how much control the causee has in the outcome of the event. <i>Example</i>: in Hungarian, there is a contrast between encoding the causee in the Accusative Case when the causee has no control (<i>Köhögtettem a gyerek<b>-et</b></i> <q>I made the boy [<sc>acc</sc>] cough</q>) and encoding the causee in the Instrumental Case when the causee has some control over the outcome (<i>Köhögtettem a gyerek-<b>kel</b></i> <q>I had the boy [<sc>inst</sc>] cough</q>). (Section 9.2)
 
@@ -2589,8 +2522,7 @@
     - controller
   SubtypeOf:
     - strategy element (FN-Br) [str]
-  AssociatedTo:
-    - indexical strategy, indexation [str]
+  AssociatedTo: []
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the <a>referring phrase</a> that denotes the same <a>referent</a> that is denoted by the <a>index</a>. <i>Example</i>: in Spanish <i>los libros rojos</i> <q>the red books</q>, <i>libros</i> is the controller; it denotes the same referent that the masculine singular nonperson index <i>-os</i> in <i>rojos</i> does. The controller is almost always a referring phrase. (Section 4.4)
 
@@ -2602,9 +2534,7 @@
   SubtypeOf:
     - strategy element (FN-Br) [str]
   AssociatedTo:
-    - asyndetic [str]
     - converb strategy [str]
-    - adverbial clause construction [cxn]
   Definition: >-
     a <a>deranked</a> predicate form in an <a>asyndetic</a> <a>deranked</a> <a>adverbial clause construction</a> that lacks <a>subject</a> <a>person indexation</a>. <i>Example</i>: in <i>Sitting in front of his desk, he noticed a bright light out the window, sitting</i> is a converb. Haspelmath (1995:5) excludes from the converb category forms that are deranked with subject person indexation that is different from that found with <a>declarative</a> <a>main clause</a> <a>predication</a>.
 
@@ -2616,8 +2546,7 @@
   SubtypeOf:
     - non-indexed [str]
     - deranked, deranking [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a coordination>coordinated</a> with the <a>event</a> predication using a <a>deranked</a> <a>complex sentence</a> <a>strategy</a>. However, the stative predicate does not index (any of) its argument(s). <i>Example</i>: in Turkana <i>è-pès-e-tè nɪ-a-ron-o-nì̥</i> <q>They kick him badly</q> [lit. <q>They kick him, it being bad</q>] the form of <i>nɪ-a-ron-o-nì̥</i> <q>be bad</q> is a Neuter deranked form, not indexing the third person plural subject of <q>kick</q>. (Section 14.2)
 
@@ -2629,8 +2558,7 @@
     - conjunct
   SubtypeOf:
     - element [cxn]
-  AssociatedTo:
-    - coordinate construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a component of a <a>coordinate construction</a>. <i>Example</i>: in <i>Jerry played the guitar and Billy was on drums, Jerry played the guitar</i> is one of the coordinands and <i>Billy was on drums</i> is the other coordinand. Since coordination constructions link entities other than <a>events</a> and the clause constructions that express them, coordinands may also be other constructions than clauses -- in particular, coordinands are often <a>referring phrases</a>. (Section 15.2.1)
 
@@ -2669,8 +2597,7 @@
   SubtypeOf:
     - non-indexed [str]
     - balanced, balancing [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a coordination>coordinated</a> with the <a>event</a> predication using a <a>balanced</a> <a>complex sentence</a> <a>strategy</a>. However, the stative predicate does not index (any of) its argument(s). <i>Example</i>: in Koasati <i>wayóhka-k ho-palkálki-palámni-n</i> <q>They fly all very fast</q> [lit. <q>They fly (and) it is fast</q>], the second clause <i>ho-palkálki-palámni-n</i> recruits the form of a main clause predicate, but does not index the fliers. (Section 14.2)
 
@@ -2682,8 +2609,7 @@
   SubtypeOf:
     - indexed [str]
     - balanced, balancing [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a coordination>coordinated</a> with the <a>event</a> predication using a <a>balanced</a> <a>complex sentence</a> <a>strategy</a>. In addition, the stative predicate <a>indexes</a> (one of) its argument(s). <i>Example</i>: in Muna <i>ne-rimba no-tende</i> <q>he runs fast</q> [lit. <q>He is fast (and) he runs</q>], <i>ne-rimba</i> [<sc>3sg.rl</sc>-be_fast] recruits the form of a simple predicate and indexes its subject argument. (Section 14.2)
 
@@ -2696,7 +2622,6 @@
     - conjunction [str]
   AssociatedTo:
     - coordinate clause construction [cxn]
-    - syndetic [str]
   Definition: >-
     a morpheme that overtly expresses the coordination relation in a <a>coordinate construction</a>. <i>Example</i>: in <i>She picked up the pieces and dumped them in the wastebasket</i>, <i>and</i> is the coordinator. A coordinate construction with a coordinator is an example of <a>syndetic</a> coordination. If the morpheme is affixed to a predicate, it is not a coordinator but an overt marker of <a>deranked</a> status. (Section 15.2.2)
 
@@ -2721,8 +2646,7 @@
     - indexed [str]
     - deranked, deranking [str]
     - copula [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> recruits a <a>nonprototypical predication</a> construction that employs a <a>copula</a>, and in addition the copula is in a <a>deranked</a> form. <i>Example</i>: in Malayalam <i>aval bhamgiy-aayi prasamgiccu</i> <q>She spoke beautifully</q>, <i>bhamgiy</i> <q>beauty</q> is suffixed with a deranked form of the copula <i>-aayi</i>. (Section 14.2)
 
@@ -2744,8 +2668,7 @@
     - core arguments
   SubtypeOf:
     - argument [inf]
-  AssociatedTo:
-    - core argument phrase [cxn]
+  AssociatedTo: []
   Definition: >-
     the most <a>salient</a> <a>arguments</a> associated with a <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, Sally and the letter are construed as the most salient arguments; in <i>The letter was thrown into the wastebasket</i>, only the letter is construed as a salient argument. When there are two core arguments, the more salient argument is the <a>subject</a> and the less salient argument is the <a>object</a>. Core arguments are expressed by <a>core argument phrases</a>. (Section 6.1.1)
 
@@ -2758,7 +2681,6 @@
   SubtypeOf:
     - reference, referent [inf]
   AssociatedTo:
-    - complex sentence [cxn]
     - reference tracking [cxn]
   Definition: >-
     the act of <a reference>referring</a> to a <a>referent</a> that recurs in different occasions in a stretch of discourse. The stretch of discourse may constitute a single <a>construction</a>, such as a <a>complex sentence construction</a>. This is the primary context in which coreference is discussed in this book. <i>Example</i>: in <i>Jared<sub>i</sub> praised his<sub>i</sub> father, but his<sub>i</sub> father ignored him<sub>i</sub></i>, the referent Jared recurs four times in the sentence, and so represents an example of coreference. In linguistic analysis, coreference is often notated by subscript indexes such as <i>i</i> in the example. (Section 16.1)
@@ -2771,8 +2693,7 @@
     - correlative
   SubtypeOf:
     - juxtaposition [str]
-  AssociatedTo:
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>relative clause construction</a> in which the <a>relative clause</a> is juxtaposed to the <a>matrix clause</a> (not unlike the <a>adjoined strategy</a>), the <a>necessarily shared participant</a> is expressed in the relative clause (not unlike the <a>internally headed strategy</a>) accompanied by a relative clause marking morpheme (which may be a <a>relative pronoun</a> form), and the shared participant is also expressed in the matrix clause, as either a <a>noun</a> or a <a>pronoun</a>. <i>Example</i>: Hindi [<i>ādmī ne jis cākū se murgī ko mārāthā</i>] <i>us cākū ko rām ne dekhā</i> <q>Ram saw the knife with which the man killed the chicken</q> is an instance of the correlative strategy: the relative clause <i>ādmī ne jis cākū se murgī ko mārāthā</i> <q>The man killed the chicken with which knife</q> contains the relative clause head <i>cākū</i> <q>knife</q>, modified by the relative pronoun <i>jis</i> <q>which</q>, and is preposed to the matrix clause <i>us cākū ko rām ne dekhā</i> <q>that knife Ram saw</q>, which contains a second expression of the relative clause head <i>us cākū</i> <q>that knife</q>. (Section 19.2.3)
 
@@ -2919,8 +2840,7 @@
     - degree equative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>equative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as a <a>nominal modifier</a> of a word denoting <q>degree</q>, <q>manner</q>, or <q>quantity</q>. <i>Example</i>: Harar Oromo <i>isíin akká isaaní d'eertuu</i> <q>She is as tall as them</q> is an instance of the degree equative strategy, with the predicate <i>d'eertuu</i> <q>is tall</q>, and the standard, <i>isaaní</i> <q>they [<sc>gen</sc>]</q>, modifies <i>akká</i> <q>manner</q>. (Section 17.2.4)
 
@@ -2943,8 +2863,7 @@
     - degree adverb
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - admodifier [cxn]
+  AssociatedTo: []
   Definition: >-
     a scalar <a>admodifier</a> expressed by an independent word. <i>Example</i>: <i>very</i> in <i>very happy</i> is a degree modifier. (Section 4.1.2)
 
@@ -3030,8 +2949,7 @@
   SubtypeOf:
     - clause [cxn]
     - dependent [cxn]
-  AssociatedTo:
-    - complex sentence [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>clause</a> that is a <a>dependent</a> of a <a>matrix clause</a> in a <a>complex sentence construction</a>. <a>Adverbial clauses</a>, <a>complement clauses</a>, and <a>relative clauses</a> are all examples of dependent clauses. <i>Example</i>: in <i>She watered the plants before she ate lunch, before she ate lunch</i> is an instance of an (adverbial) dependent clause. Dependent clauses are often, but not always, <a>subordinate clauses</a>. (Section 15.1.2)
 
@@ -3043,7 +2961,6 @@
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
-    - complement clause construction [cxn]
     - reference point [sem]
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the time reference of the <a>complement</a> <a>event</a> is determined by the time reference of the <a>matrix clause</a> <a>event</a>. <i>Example</i>: in <i>Sally persuaded John to make the cake</i>, the time reference of John's making the cake is dependent on the time reference of Sally's persuading him -- it must follow the persuading event. (Section 18.2.2)
@@ -3078,9 +2995,7 @@
     - nominalization
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - complex sentence [cxn]
-    - complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which the <a>predicate</a> in a <a>complex sentence</a> or a <a>complex predicate construction</a> does not <a>recruit</a> the predicate construction in a simple predication, in contrast to the <a>balanced</a> strategy. Instead, the deranked predicate either: (i) lacks the inflections of the predicate; (ii) uses different inflections from the predicate; (iii) has an affix that overtly codes its relation to the other predicate; or some combination of these three possibilities. <i>Example</i>: in <i>Reaching the top of the hill, Ron found a stone monument</i>, the predicate <i>reaching</i> is a deranked form: it lacks verbal inflections and is overtly coded by the suffix <i>-ing</i>. Deranked predicate forms are also called infinitives, gerunds, <a>participles</a>, verbal nouns, masdars, <a>action nominals</a>, and nominalizations. (Sections 12.4.2, 14.2, <b>15.2.3</b>)
 
@@ -3091,10 +3006,7 @@
     - derived intransitive
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - intransitive construction [cxn]
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> the <a>intransitive construction</a> for use in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with <a>overt coding</a> of the predicate indicating the <a>reflexive event</a> or <a>reciprocal event</a> type. <i>Examples</i>: Abkhaz <i>l-çə-l-k°abe-yt'</i> <q>she washed herself</q> is an Intransitive Verb form with the Reflexive prefix <i>çə-</i>, and Swahili <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
 
@@ -3105,10 +3017,7 @@
     - derived-case
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - comparative construction [cxn]
-    - equative construction [cxn]
-    - flag, flagging [str]
+  AssociatedTo: []
   Definition: >-
     a set of strategies found in <a>comparative</a> and <a>equative constructions</a> in which the <a>flagging</a> of the <a>standard</a> is derived from the flagging of the <a>comparee</a>. <i>Example</i>: <i>I love you more than him</i> uses a derived-case strategy -- the referring phrase referring to the standard, <i>him</i>, uses the Object flag because the referring phrase referring to the comparee, <i>you</i>, is in the Object case. Derived-case strategies include the <a>conjoined comparative strategy</a>, the <a>particle comparative</a> and <a particle equative>equative</a> <a>strategies</a>, the <a>conjoined exceed comparative strategy</a>, the <a>relative-based equative strategy</a>, and the <a>relative equal equative strategy</a>. (Section 17.2.2)
 
@@ -3171,8 +3080,7 @@
     - DS
   SubtypeOf:
     - reference, referent [inf]
-  AssociatedTo:
-    - complex sentence [cxn]
+  AssociatedTo: []
   Definition: >-
     in <a>complex sentence constructions</a> that express <a>reference tracking</a>, the situation where the <a>salient</a> <a>participant</a> in the current <a>clause</a> is indicated as not <a>coreferential</a> with the salient participant in another clause in the construction. The salient participant is typically, but not always, encoded as the <a>subject</a> of the <a>predicate</a>. <i>Example</i>: in <i>Harry having finished preparing the salad, Bill brought it to the table</i>, the overt referring phrase <i>Harry</i> in <i>Harry having finished preparing the salad</i> signals that the subject referent of finishing the salad is not coreferential with the subject referent of the <a>matrix clause</a> -- namely, Bill. (Section 16.1)
 
@@ -3239,10 +3147,7 @@
     - direct object category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - indirective alignment system [str]
-    - T role [sem]
-    - P role [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>indirective alignment system</a> that <a>co-expresses</a> both <a>T</a> and <a>P roles</a>. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the T role (<i>the car</i>) is expressed in the same way as the P role in <i>Randy started the car</i>. (Section 7.5.2)
 
@@ -3309,9 +3214,7 @@
     - discourse reference system
   SubtypeOf:
     - system [str]
-  AssociatedTo:
-    - reference tracking [cxn]
-    - balanced, balancing [str]
+  AssociatedTo: []
   Definition: >-
     a <a>system</a> where both <a>same-subject</a> and <a>different-subject</a> <a>reference tracking constructions</a> use the standard discourse reference strategies found in connected discourse. Discourse reference systems are found when both same-subject and different-subject constructions are <a>balanced</a>. <i>Example</i>: in Spanish, <a>syndetic</a> <a>coordinate constructions</a> such as <i>El Gobierno Nacional volvió a prorrogar los actuales mandatos en los sindicatos y Ø<sub>i</sub> suspend<b>ió</b> los preocesos electorales hasta 2021</i> express the same-subject relation in the same way as in connected discourse -- namely, with zero anaphora and subject person indexation on the verb. (Section 16.2)
 
@@ -3381,8 +3284,7 @@
     - domain
   SubtypeOf:
     - strategy element (FN-Br) [str]
-  AssociatedTo:
-    - indexical strategy, indexation [str]
+  AssociatedTo: []
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the construction as a whole that the <a>controller</a>, <a>target</a>, and <a>index</a> occur in. <i>Example</i>: in Spanish <i>los libros rojos</i> <q>the red books</q>, the domain is the <a>modification construction</a> including the <a>modifier</a> <i>rojos</i> <q>red</q> (the target), the modifier suffix <i>-os</i> <q>[Masculine Plural]</q>, and the <a>head</a> <a>noun</a> <i>libros</i> <q>books</q> (the controller). (Section 4.4)
 
@@ -3397,7 +3299,6 @@
     - strategy [def]
   AssociatedTo:
     - complex predicate [cxn]
-    - motion event [sem]
   Definition: >-
     a <a>strategy</a> for the expression of <a>motion events</a> in which the <a>path of motion</a> is expressed as (at least) part of the <a>predicate</a> and also as a <a>satellite</a>. <i>Example</i>: in Russian <i>Ja vy-bežal iz doma</i> <q>I ran out of the house</q>, the path of going out of the house is expressed both as part of the <a>verb</a> (the prefix <i>vy-</i> in <i>vy-bežal</i>) and as the <a>flag</a> <i>iz</i>. (Section 14.5)
 
@@ -3408,8 +3309,7 @@
     - double negation strategy
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - declarative negation construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found in <a>negation constructions</a>, particularly <a>declarative negation constructions</a>, in which there are two morphemes that express <a>negative polarity</a>. <i>Example</i>: in the French sentence <i>Je <b>ne</b> vois <b>pas</b> la lune</i> <q>I do not see the moon</q>, negative polarity is expressed by both <i>ne</i> and <i>pas</i>. (Section 12.2)
 
@@ -3420,8 +3320,7 @@
     - double-coding strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - experiential construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used for <a>experiential constructions</a> in which both <a>experiencer</a> and <a>stimulus</a> are expressed with the same <a>core argument phrase</a> (either <a>subject</a> or <a>object</a>). <i>Example</i>: in the Japanese sentence <i>Dare ga eiga ga suki desu ka</i> <q>Who likes movies?</q>, both the experiencer <i>dare</i> <q>who</q> and the stimulus <i>eiga</i> <q>movie</q> are expressed with the Subject <a>flag</a> <i>ga</i>. (Section 7.4)
 
@@ -3432,8 +3331,7 @@
     - double-oblique strategy
   SubtypeOf:
     - flag, flagging [str]
-  AssociatedTo:
-    - experiential construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used for <a>experiential constructions</a> in which both <a>experiencer</a> and <a>stimulus</a> are expressed in an <a>oblique argument phrase</a> (the two participant roles are usually expressed with different oblique <a>flags</a>). <i>Example</i>: in Ancient Greek <i>mélei moi toúto:n hô:n ero:táis</i> <q>I care about what you ask</q>, the experiencer argument phrase <i>moi</i> <q>I</q> uses the oblique (Dative) flag, and the stimulus argument phrase <i>toúto:n hô:n ero:táis</i> <q>what you ask</q> uses the oblique (Genitive) flag. (Section 7.4)
 
@@ -3468,8 +3366,6 @@
   SubtypeOf:
     - recruitment strategy [str]
   AssociatedTo:
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
     - transitive construction [cxn]
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: the Sa verb form <i>ir-ben-ir</i> [<sc>3du</sc>-shoot-<sc>3du</sc>] <q>They shoot them / they shoot themselves / they shoot each other</q> construes the plural participants as playing distinct roles, and thereby uses the transitive construction (<q>They shoot them</q>) to express either a reflexive event (<q>They shoot themselves</q>) or a reciprocal event (<q>They shoot each other</q>). (Section 7.2)
@@ -3504,8 +3400,7 @@
     - echo strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - polarity response [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
 
@@ -3549,7 +3444,6 @@
   SubtypeOf:
     - strategy [def]
   AssociatedTo:
-    - identificational [cxn]
     - information (question) response [cxn]
   Definition: >-
     a <a>strategy</a> for <a>identificational constructions</a> in which the <a>presupposed open proposition</a> is deleted, or sometimes expressed only by a <q>pro-verb</q>. <i>Example</i>: in English, elliptical responses to the question <i>Who took the cookies?</i> are <i>It was JIM, JIM</i>, or <i>JIM did</i> (with the pro-verb form <i>did</i>), in contrast to the full <a prosody>prosodic strategy</a> <i>JIM took the cookies</i> or the <a>equational</a> <a>strategy</a> <i>It was JIM who took the cookies</i>. (Section 11.4.2)
@@ -3594,8 +3488,7 @@
     - endpoint
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - causal chain [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>participant role</a> defined in terms of the <a>participant</a> being acted upon by another participant in a <a>causal chain</a>. <i>Example</i>: in <i>The cats scratched the furniture</i>, the furniture is the endpoint of the causal chain [cats --> furniture]. (Sections 6.1.1, 6.1.2)
 
@@ -3691,8 +3584,7 @@
     - equal equative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>equative constructions</a> in which there are two <a>predicates</a>, one which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and another which asserts that the comparee is identical to the <a>standard</a> on that scale. <i>Example</i>: Nkore-Kiga <i>noingana Mugasho oburaingwa</i> <q>You are as tall as Mugasho</q> [lit. <q>you-are-equal-to Mugasho in-height</q>] is an instance of the equal equative strategy. (Section 17.2.4)
 
@@ -3738,9 +3630,7 @@
     - equipollent
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - noncausal event [sem]
-    - causal event [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which a <a>noncausal event</a> and its counterpart <a>causal event</a> are expressed by <a>forms</a> of equal morphological structure. <i>Example</i>: in German, the causal event <a>predicate</a> <i>aufwechen</i> <q>wake (someone) up</q> and the noncausal event predicate <i>aufwachen</i> <q>wake up</q> are expressed by morphologically related forms, but neither form is morphologically more complex than the other. In English, the suppletive causal event predicate <i>kill</i> vs. noncausal event predicate <i>die</i> are also analyzed as instances of the equipollent strategy. The term <q>equipollent</q> is used for the same strategy in other constructions as well. (Section 6.3.4)
 
@@ -3763,9 +3653,7 @@
     - ergative category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - ergative alignment system [str]
-    - A role [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>ergative alignment system</a> that exclusively expresses the <a>A role</a>. <i>Example</i>: The Yuwaalaraay <a>flag</a> <i>-gu</i> exclusively expresses the A role, and hence is an ergative flag. (Section 6.3.1)
 
@@ -3861,9 +3749,7 @@
     - evidentiality
   SubtypeOf:
     - modality [sem]
-  AssociatedTo:
-    - epistemic modality [sem]
-    - proposition [sem]
+  AssociatedTo: []
   Definition: >-
     a category related to <a>epistemic modality</a> which indicates the epistemic justification for believing a <a>proposition</a>. <i>Example</i>: English <i>I hear you're going to Stanford this fall</i> is an evidential construction, using the first singular simple present form <i>I hear...</i>, which indicates that my evidence for your going to Stanford in the fall is hearsay. (Section 12.3.4)
 
@@ -3874,8 +3760,7 @@
     - exceed comparative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - comparative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>comparative constructions</a> in which there are two <a>predicates</a>, one which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and another which asserts that the comparee exceeds the <a>standard</a> on that scale. <i>Example</i>: Swahili <i>mti huu ni mrefu ku-shinda ule</i> <q>This tree is taller than that (tree)</q> is an instance of the exceed comparative: the first part <i>mti huu ni mrefu</i> <q>this tree is big</q> attributes a degree of height to this tree, and the second part <i>ku-shinda ule</i> <q>exceed [<sc>inf</sc>] that (tree)</q> asserts that this tree exceeds that tree in height. (Section 17.2.2)
 
@@ -3947,7 +3832,6 @@
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
     - existential negation construction [cxn]
-    - thetic [inf]
   Definition: >-
     a situation in which the existence of some entity is presented. Existential situations favor a <a>thetic</a> construal. <i>Example</i>: <i>There are apples in the kitchen</i> expresses the existence of the relevant set of apples. (Section 11.3.1)
 
@@ -3970,8 +3854,7 @@
     - expanding
   SubtypeOf:
     - counterpresuppositional contrast [inf]
-  AssociatedTo:
-    - additive (focus) operator [cxn]
+  AssociatedTo: []
   Definition: >-
     a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by adding something else to the rejected component, rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES</i>, the speaker rejects that what John bought was just apples, and adds peaches to what John bought. <i>Also</i> is an <a>additive (focus) operator</a>. (Section 11.4.1)
 
@@ -4005,8 +3888,7 @@
     - experiencer
   SubtypeOf:
     - semantic role [sem]
-  AssociatedTo:
-    - experiential event [sem]
+  AssociatedTo: []
   Definition: >-
     the person who experiences the internal mental phenomenon or bodily sensation in an <a>experiential event</a>. <i>Example</i>: in <i>Freddy saw the bear</i>, Freddy is the experiencer. The experiencer is almost always human. (Sections 6.1.2, <b>7.4</b>)
 
@@ -4018,9 +3900,7 @@
     - experiencer-subject strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - experiential construction [cxn]
-    - subject phrase [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for an <a>experiential construction</a> in which the <a>experiencer</a> <a>argument phrase</a> is <a>co-expressed</a> with the <a>subject</a> argument phrase of a <a transitive construction>transitive</a> or <a>intransitive construction</a>. <i>Example</i>: the <a>argument structure construction</a> found in <i>I fear dogs</i>, with the experiencer argument phrase <i>I</i> co-expressed with the prototypical subject in English, is an instance of the experiencer-oriented strategy. (Section 7.4)
 
@@ -4113,7 +3993,6 @@
   SubtypeOf:
     - strategy [def]
   AssociatedTo:
-    - possession relation [sem]
     - argument phrase [cxn]
   Definition: >-
     a <a>strategy</a> in which a <a>referent</a> in a <a possession relation>possessive relation</a> to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed as an <a>argument</a> of the <a>predicate</a> instead of in a <a>possessive modification construction</a>. <i>Example</i>: in Maasai <i>áa-bʊak-ıtá ɔldía</i> <q>My dog is barking</q>, the portmanteau index <i>áa-</i> <a>indexes</a> the owner of the dog as the <a>object</a> argument of the predicate. (Section 7.5.3)
@@ -4126,7 +4005,6 @@
   SubtypeOf:
     - strategy [def]
   AssociatedTo:
-    - relative clause construction [cxn]
     - necessary participant sharing [sem]
   Definition: >-
     a <a>relative clause construction</a> in which the <a>relative clause head</a> is expressed as an <a>argument</a> of the <a>matrix clause</a> <a>predicate</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is an externally headed relative clause; the relative clause head is <i>the cheesecake</i>, which is the Direct Object of the matrix predicate <i>ate</i>. The externally headed strategy is by far the most common strategy for relative clause constructions. Externally headed relative clauses may be <a>prenominal</a>, <a>postnominal</a>, or <a>extraposed</a>. Externally headed relative clauses may use a <a>gap</a>, <a>pronoun-retention</a>, or <a>relative pronoun strategy</a>. (Section 19.2.2)
@@ -4173,8 +4051,7 @@
     - factive event
   SubtypeOf:
     - event [sem]
-  AssociatedTo:
-    - positive epistemic stance [sem]
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> in which a <a>positive epistemic stance</a> is taken by the speaker toward a <a>proposition</a> denoted by some part of that construction. <i>Example</i>: <i>It is appalling that Donald won the election</i> -- an example of a <a>commentative</a> <a>complement clause construction</a> -- is factive in that the speaker takes a positive epistemic stance toward the <a>complement</a> proposition that Donald won the election.
 
@@ -4195,8 +4072,7 @@
     - fearing event
   SubtypeOf:
     - evaluative event [sem]
-  AssociatedTo:
-    - neutral epistemic stance [sem]
+  AssociatedTo: []
   Definition: >-
     an <a>evaluative event</a> in which a negative evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
 
@@ -4231,7 +4107,6 @@
   SubtypeOf:
     - information packaging [def]
   AssociatedTo:
-    - adverbial clause construction [cxn]
     - relative clause construction [cxn]
   Definition: >-
     a construal or <a>information packaging</a> of two <a>events</a> such that one event (the <a>ground</a>) serves as the reference point for the other event (the <a>figure</a>). <i>Example</i>: in <i>Cindy quit after Jim was promoted</i>, the two events are in a figure--ground packaging, such that Jim's being promoted serves as the reference point for the time of Cindy's quitting. This is an extension of the figure--ground construal beyond spatial relations. This information packaging is found in <a>adverbial clause constructions</a>. (Section 15.1.3)
@@ -4246,7 +4121,6 @@
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   AssociatedTo:
-    - locative modification construction [cxn]
     - location clause [cxn]
   Definition: >-
     a spatial relation that holds between two <a>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
@@ -4291,9 +4165,7 @@
     - fixed-case
   SubtypeOf:
     - flag, flagging [str]
-  AssociatedTo:
-    - comparative construction [cxn]
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a set of strategies found in <a>comparative</a> and <a>equative constructions</a> in which the <a>flag</a> of the <a>standard</a> is fixed (unchanging). <i>Example</i>: Mundari <i>sadom-ete hati mananga-i</i> <q>The elephant is bigger than the horse</q> is an instance of the fixed-case strategy: <i>sadom-ete</i> <q>horse-from</q> always occurs with the flag <i>-ete</i> <q>from</q>. (Section 17.2.2)
 
@@ -4319,9 +4191,7 @@
     - focus
   SubtypeOf:
     - information element (FN-Br) [inf]
-  AssociatedTo:
-    - identificational [inf]
-    - presupposed open proposition [inf]
+  AssociatedTo: []
   Definition: >-
     in <a>identificational information packaging</a>, the information which is identified as the <dq>filler</dq> for the open part of the <a>presupposed open proposition</a>. <i>Example</i>: in <i>It was Jack who stole my cookies!</i>, the presupposed open proposition is <q>X stole my cookies</q>, and the filler of X is Jack -- i.e. X = Jack. The focus may be any part of the information in the clause, not just an argument. The term <q>focus construction</q> is sometimes used as a synonym for <q>identificational construction</q>, but we avoid that usage here. (Section 11.4.1)
 
@@ -4332,9 +4202,7 @@
     - focus marker
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - focus [inf]
-    - identificational [cxn]
+  AssociatedTo: []
   Definition: >-
     expression by a separate morpheme of the information in an <a>identificational construction</a> that is the <a>focus</a>. <i>Example</i>: in Rendille <i>ínam-é y-imi</i> <q>The BOY came</q>, the suffix <i>-é</i> marks the Noun <i>ínam-</i> <q>(the) boy</q> as the focus. (Section 11.4.2)
 
@@ -4345,8 +4213,7 @@
     - focus operator
   SubtypeOf:
     - element [cxn]
-  AssociatedTo:
-    - identificational [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>construction</a> that indicates the range of the <a>focus</a> of an <a>identificational construction</a>. Focus operators may be <a>additive</a> or <a restricting>restrictive</a>. (Section 11.4.1)
 
@@ -4472,8 +4339,7 @@
     - gap
   SubtypeOf:
     - externally headed [str]
-  AssociatedTo:
-    - relative clause [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant is not expressed at all in the relative clause. <i>Example</i>: <i>I ate the cheesecake</i> [<i>that Carol baked</i>] uses the gap strategy because the shared participant, the cheesecake, is expressed only as the external <a>relative clause head</a>, and not at all in the relative clause <i>that Carol baked</i>. (Section 19.2.2)
 
@@ -4498,8 +4364,7 @@
   SubtypeOf:
     - property (concept) [sem]
     - ontological categories [sem]
-  AssociatedTo:
-    - indexation feature [str]
+  AssociatedTo: []
   Definition: >-
     a <a>semantic</a> category that is expressed as an <a>indexation feature</a>, and covers both distinctions based primarily on sex and animacy (<q>gender</q>) and distinctions based on animacy, sex, and various semantic properties of inanimate -- or at least nonhuman -- <a>objects</a>. (Section 4.4.2)
 
@@ -4510,8 +4375,7 @@
     - general extender
   SubtypeOf:
     - syndetic [str]
-  AssociatedTo:
-    - non-exhaustive list coordination [cxn]
+  AssociatedTo: []
   Definition: >-
     a form used as part of a <a>non-exhaustive coordination construction</a> that indicates the non-exhaustiveness of the list. <i>Example</i>: in the non-exhaustive coordination construction in <i>She sold baskets, pots, and stuff / and everything</i>, <i>and stuff</i> or <i>and everything</i> are general extenders. (Section 15.2.2)
 
@@ -4581,10 +4445,7 @@
     - predicative scale
   SubtypeOf:
     - state [sem]
-  AssociatedTo:
-    - comparative construction [cxn]
-    - equative construction [cxn]
-    - scalar model [sem]
+  AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or an <a>equative construction</a>, the <a>predicate</a> that defines the <a scalar model>scale</a> on which the <a>comparee</a> and <a>standard</a> are located. <i>Example</i>: in <i>Your cat is as big as my dog</i>, size is the gradable predicative scale on which it is asserted that the position of the cat is the same as the position of the dog. (Section 17.2.1)
 
@@ -4641,8 +4502,7 @@
     - action strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational possession [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed in a <a>subject phrase</a>, and the <a>possessum</a> in an <a>object phrase</a>. <i>Example</i>: English <i>Kerry has a laptop</i> is an instance of the have-possessive strategy. (Section 10.4.2)
 
@@ -4665,8 +4525,7 @@
     - null anaphoric head
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - anaphoric-head construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>anaphoric-head construction</a> in which there is no <a overt strategy>overt</a> morpheme that functions as the <a>head</a>. <i>Example</i>: in <i>My bicycle is older than Greg's</i>, the anaphoric-head construction <i>Greg's</i> has no overt morpheme functioning as the head. (Section 5.4)
 
@@ -4678,8 +4537,7 @@
     - hoping
   SubtypeOf:
     - evaluative event [sem]
-  AssociatedTo:
-    - neutral epistemic stance [sem]
+  AssociatedTo: []
   Definition: >-
     an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
 
@@ -4753,8 +4611,7 @@
     - identity
   SubtypeOf:
     - information packaging [def]
-  AssociatedTo:
-    - reference, referent [inf]
+  AssociatedTo: []
   Definition: >-
     how identifiable a particular <a>referent</a>/token is to the speaker and hearer, based on the description of the referent/token provided by the <a>referring phrase</a>. <i>Examples</i>: felicitous use of <i>the student</i> or <i>she</i> requires that the identity of the referent is known to the speaker and hearer; if <i>a student</i> is used for a real-world referent, then the identity of the referent is unknown to the hearer, and possibly also to the speaker; <i>a student</i> may also refer to a referent that is only <a>type identifiable</a>, hence its individual identity cannot be known to the speaker and hearer. (Section 3.2)
 
@@ -4799,9 +4656,7 @@
     - ideophone strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - stative complex predicate [cxn]
-    - predicate adjectival construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which a concept is expressed by a phonologically distinctive word, in which there is argued to be some sort of sound-symbolic relationship between the phonological form and its <a>meaning</a>. A common function for which ideophones are used is as the <a>stative</a> component of a <a>stative complex predicate</a>; they are probably next most commonly used as <a property predication construction>property predications</a> or as <a>property</a> <a>modifiers</a> in <a>referring phrases</a>. <i>Example</i>: in Emai <i>ó o hian oí dúdúdú</i> <q>He cuts it [wood] energetically</q>, <i>dúdúdú</i> <q>energetically</q> is an ideophone that describes the manner of cutting using a reduplicated form; reduplication is a common characteristic of ideophones. (Section 14.4)
 
@@ -4856,7 +4711,6 @@
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   AssociatedTo:
-    - active alignment system [str]
     - inactive [inf]
   Definition: >-
     the category in the <a>active alignment system</a> that <a>co-expresses</a> some <a>S roles</a> -- in particular, the S role of <q>die</q> -- and the <a>P role</a>. <i>Example</i>: in Lakhota, the index <i>ma-</i> <q>I/me</q> in <i>ó-ma-ya-kiye</i> <q>you help / helped me</q> and <i>ma-khuže</i> <q>I am sick</q> expresses the inactive category. (Section 6.3.3)
@@ -4960,8 +4814,7 @@
     - independent referring phrase strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational construction</a> in which the <a>referring phrase</a> introducing the <a>referent</a> in the discourse is the only <a>element</a> in the construction. <i>Example</i>: in spoken English, the independent referring strategy is used, for example, in the Pear Stories narrative example <i>and then a little boy, /about/ a bic a red bicycle, that was too big for him, he stopped, ...</i>, <i>a little boy</i> is an independent referring phrase that is used to present a new referent in the discourse. (Section 10.4.3)
 
@@ -4972,9 +4825,7 @@
     - independent strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - comparative construction [cxn]
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> for <a>comparative</a> (and possibly <a equative construction>equative</a>) <a>constructions</a> which directly expresses two of the <a>propositions</a> that form the <a>meaning</a> of the <a>comparative</a>: that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and that the scale applies to the <a>standard</a>. That is to say, the independent strategy <a>recruits</a> a <a>different-subject</a>, <a>simultaneous</a> <u>temporal</u> <a>complex sentence construction</a> (usually a <a>coordinate clause construction</a>) to express comparison. The <a>conjoined comparative</a> and <a particle comparative>particle</a> <a>strategies</a> are examples of the independent strategy. (Section 17.2.3)
 
@@ -4985,8 +4836,7 @@
     - independent time reference
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - complement clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the time reference of the <a>complement</a> <a>event</a> is not determined by the time reference of the <a>matrix clause</a> <a>event</a>. <i>Example</i>: in <i>Sally thinks John made / is making / will make the cake</i>, the time reference of John's making the cake is independent of the time reference of Sally's thought. (Section 18.2.2)
 
@@ -4997,8 +4847,7 @@
     - index
   SubtypeOf:
     - strategy element (FN-Br) [str]
-  AssociatedTo:
-    - indexical strategy, indexation [str]
+  AssociatedTo: []
   Definition: >-
     the morpheme in an <a>indexical strategy</a> which <a reference>refers</a> to (indexes) the referent. <i>Example</i>: in Spanish <i>las chicas cantaban</i> <q>the girls were singing</q>, the 3rd person plural suffix <i>-an</i> on the imperfective form of <q>sing</q> is the index, referring to the same referent as <i>las chicas</i> <q>the girls</q>. (Section 4.4)
 
@@ -5012,8 +4861,6 @@
     - strategy element (FN-Br) [str]
   AssociatedTo:
     - controller [str]
-    - index [str]
-    - indexical strategy, indexation [str]
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the categories of the <a>referent</a> that the <a>index</a> expresses. Typical categories are <a>person</a>, <a>gender/class</a>, and <a>number</a>. <i>Example</i>: in Spanish <i>los libros roj-os</i> <q>the red books</q>, the suffix <i>-os</i> on the modifier <i>rojos</i> <q>red</q> indexes the plural number and masculine gender of <i>libros</i> <q>books</q>. (Section 4.4)
 
@@ -5025,7 +4872,6 @@
   SubtypeOf:
     - overt (coding) strategy [str]
   AssociatedTo:
-    - stative complex predicate [cxn]
     - participant-oriented [sem]
   Definition: >-
     a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> <a>indexes</a> an <a>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
@@ -5086,8 +4932,7 @@
     - indirect object category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - indirective alignment system [str]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>indirective alignment system</a> that exclusively expresses the <a>R role</a>. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the <a>flag</a> <i>to</i> exclusively expresses the R role. (Section 7.5.2)
 
@@ -5098,8 +4943,7 @@
     - indirect report
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - complement (dependent clause) [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy for the <a>complement</a> of an <a>utterance event</a> in which only the content of an utterance is expressed. <i>Example</i>: in <i>Sandy said that she was buying the house</i>, only the content of Sandy's utterance is reported (contrast with the direct report strategy in <i>Sandy said, <q>I'm buying the house</q></i>). (Section 18.2.2)
 
@@ -5175,8 +5019,7 @@
     - information gap
   SubtypeOf:
     - discourse context (FN-Br) [inf]
-  AssociatedTo:
-    - identificational [inf]
+  AssociatedTo: []
   Definition: >-
     a discourse context which favors an <a>identificational</a> construal. An information gap is a proposition in the discourse context with a <dq>missing</dq> piece of information. <i>Example</i>: in <i>So I learned to sew books. They're really good books. <b>It's just the covers that are rotten</b></i>, asserting that the books are really good evokes an information gap in that something is not good / rotten, since the books need repairing. The proposition with the information gap is the <a>presupposed open proposition</a>. (Section 11.4.1)
 
@@ -5224,7 +5067,6 @@
     - information packaging [def]
   AssociatedTo:
     - referent expression [cxn]
-    - reference, referent [inf]
   Definition: >-
     the information status of a <a>referent</a> in discourse is a characterization of how the interlocutors identify an <a>individual</a> as the intended referent of a <a>referring phrase</a>. Information status represents a subdivision of the <a>information packaging</a> <a>function</a> of <a>reference</a>: a more fine-grained means to pick out the referent. <i>Examples</i>: some examples of information status categories are <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and other categories listed in the third column of Table 3.4. (Section 3.2)
 
@@ -5257,8 +5099,7 @@
     - initiator
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - causal chain [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>participant role</a> defined in terms of the <a>participant</a> acting on another participant in a <a>causal chain</a>. <i>Example</i>: in <i>The cats scratched the furniture</i>, the cats are the initiator of the causal chain cats --> furniture. (Sections 6.1.1, 6.1.2)
 
@@ -5337,8 +5178,7 @@
     - internal possessor strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - possessive (modification) construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which an <a>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
 
@@ -5349,8 +5189,7 @@
     - internal recipient strategy
   SubtypeOf:
     - internal possessor strategy [str]
-  AssociatedTo:
-    - ditransitive construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>ditransitive construction</a> in which the <a>T role</a> and <a>R role</a> are co-expressed with the <a>possessive modification construction</a>, so that the <a>noun</a> denoting the <a>participant</a> in the T role is the <a>head</a> and the noun denoting the participant in the R role is the possessive <a>modifier</a>. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to/for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>. The internal recipient strategy is an instance of the <a>internal possessor strategy</a>. (Section 7.5.3)
 
@@ -5362,9 +5201,7 @@
     - internally headed
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - relative clause construction [cxn]
-    - necessary participant sharing [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause construction</a>, in which the <a>relative clause head</a> denoting the shared participant is expressed only inside the <a>relative clause</a>. <i>Example</i>: in Imbabura Quechua [<i>kan kwitsaman kwintuta villashka</i>]<i>-ka ali kwitsami</i> <q>The girl to whom you told the story is a good girl</q>, the relative clause <i>kan kwitsaman kwintuta villashka</i> <q>you told the story to the girl</q> contains the relative clause head <i>kwitsaman</i> <q>(to) the girl</q>, and the girl is not expressed in the <a>matrix clause</a> ... <i>ali kwitsami</i> <q>... is a good girl</q>. The internally headed relative clause as a whole functions as an <a>argument</a> of the matrix clause <a>predicate</a> and may be recruited from the <a>complement clause construction</a>. The internally headed strategy is rare but fairly widely dispersed among the languages of the world. (Section 19.2.3)
 
@@ -5576,9 +5413,7 @@
     - lexical causative
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - noncausal event [sem]
-    - causal event [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which the <a>verb</a> expressing a <a>noncausal event</a> and the verb expressing its counterpart <a>causal event</a> are identical. <i>Example</i>: in English, the same verb <i>break</i> is used for the causal event <i>I broke the vase</i> and the noncausal event <i>The vase broke</i>. (Section 6.3.4)
 
@@ -5637,8 +5472,7 @@
     - link
   SubtypeOf:
     - information element (FN-Br) [inf]
-  AssociatedTo:
-    - poset [inf]
+  AssociatedTo: []
   Definition: >-
     a concept expressed in a sentence that is linked to a <a>trigger</a> concept previously evoked, and forms a <a>poset</a> with the trigger (and other potentially evoked concepts). <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the song mentioned in the second turn serves as the link to the album which is the trigger mentioned in the first turn. (Section 11.2.3)
 
@@ -5697,9 +5531,7 @@
     - goal strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational possession [cxn]
-    - location clause [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy for the <a>presentational possession construction</a> in which the <a>possessum</a> is expressed in a <a>subject phrase</a> and the <a>possessor</a> in an <a>oblique phrase</a> which is locative, or probably locative, in origin. <i>Example</i>: Russian <i>u menja mašina</i> [at me car] <q>I have a car</q> is an instance of the locational possessive strategy. The locational possessive strategy essentially <a>recruits</a> a <a>locative clause</a>, in particular a <a>presentational locative</a>, to express possession. (Section 10.4.2)
 
@@ -5738,8 +5570,7 @@
     - locative comparative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - comparative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>comparative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as an oblique <a>argument phrase</a> using a spatial flag with a locative (<q>on, at</q>) <a>meaning</a>. <i>Example</i>: Ubykh <i>yi-gune wo-gune-n ca-qasaqa-j</i> <q>This tree is taller than that tree</q> is an instance of the locative comparative: <i>yi-gune ca-qasaqa-j</i> asserts that this tree is bigger, and <i>wo-gune-n</i> expresses the standard, that tree, with a suffix <i>-n</i> meaning <q>on</q>. (Section 17.2.2)
 
@@ -5773,8 +5604,7 @@
   SubtypeOf:
     - reference tracking [cxn]
     - complement clause construction [cxn]
-  AssociatedTo:
-    - pronoun [cxn]
+  AssociatedTo: []
   Definition: >-
     the construction in a <a>logophoric system</a> for <a>complement clause constructions</a> that is used when a <a>participant</a> in the <a>complement</a> <a>event</a> is <a>coreferential</a> with the <u>speaker</u>, <u>addressee</u>, or <a>experiencer</a> of an <a>utterance</a>, <a>propositional attitude</a>, <a>knowledge</a>, or <a>commentative event</a>. <i>Example</i>: Donno Sɔ <i>Oumar Anta inyemɛñ waa be gi</i> <q>Oumar<sub>i</sub> said that Anta had seen him<sub>i</sub></q> is an instance of the logophoric construction -- the reference to Oumar in the complement clause uses a special <a>pronoun</a> form <i>inyemɛñ</i>. (Section 18.4.2)
 
@@ -5785,8 +5615,7 @@
     - logophoric system
   SubtypeOf:
     - system [str]
-  AssociatedTo:
-    - logophoric construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>system</a> found with certain <a>complement clause constructions</a> where one <a>strategy</a> is used when a <a>participant</a> in the <a>complement</a> <a>event</a> is <a>coreferential</a> with the <u>speaker</u>, <u>addressee</u>, or <a>experiencer</a> of an <a>utterance</a>, <a>propositional attitude</a>, <a>knowledge</a>, or <a>commentative event</a> (the <a>logophoric construction</a>), and a different strategy is used when there is no such coreference relation. <i>Example</i>: in Donno Sɔ <i>Oumar Anta inyemɛñ waa be gi</i> <q>Oumar<sub>i</sub> said that Anta had seen him<sub>i</sub></q>, the reference to Oumar in the complement clause uses a special <a>pronoun</a> form <i>inyemɛñ</i>, but in <i>Oumar Anta woñ waa be gi</i> <q>Oumar<sub>i</sub> said that Anta had seen him<sub>k</sub></q>, the referent in the complement is not Oumar, and so the ordinary <a>third person</a> <a>anaphoric pronoun</a> <i>woñ</i> is used. (Section 18.4.2)
 
@@ -5797,9 +5626,7 @@
     - long-distance reflexive
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - logophoric construction [cxn]
-    - pronoun [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which a <a>reflexive</a> <a>pronoun</a> is used where the <a>referring phrase</a> denoting the referent with which the reflexive pronoun is <a>coreferential</a> does not occur in the same <a>clause</a> (more or less; the precise definition of <q>local</q> uses of the reflexive pronoun varies). In particular, in the context of this textbook, a reflexive pronoun is used in a <a>logophoric construction</a>. <i>Example</i>: in Japanese <i>Takasi wa Taroo ni Yosiko ga zibun o nikundeiru koto o hanasita</i> <q>Takasi<sub>i</sub> told Taroo that Yosiko hated him<sub>i</sub></q>, the reflexive pronoun <i>zibun</i> in the <a>utterance</a> <a>complement</a> <i>Yosiko ga zibun o nikundeiru koto o</i> is coreferential with the <u>speaker participant</u> <i>Takasi</i> in the <a>matrix clause</a>. It appears that use of a long-distance reflexive in a logophoric construction is part of a larger range of uses of long-distance reflexives, and may not represent a true <a>logophoric system</a>. (Section 18.4.2)
 
@@ -5810,8 +5637,7 @@
     - main clause
   SubtypeOf:
     - clause [cxn]
-  AssociatedTo:
-    - complex sentence [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>clause</a> that is <a>pragmatically asserted</a>, typically in the context of identifying the pragmatically asserted clause in a <a>complex sentence construction</a>. <i>Example</i>: in <i>Jerry played the guitar while Phil played the bass</i>, the clause <i>Jerry played the guitar</i> is the main clause, whereas <i>while Phil played the bass</i> is a <a>subordinate clause</a>. Main clauses are generally <a>matrix clauses</a>, but matrix clauses need not be main clauses, and <a>dependent clauses</a> may be pragmatically asserted -- i.e. function as main clauses. (Section 15.1.2)
 
@@ -5846,8 +5672,7 @@
     - manipulative
   SubtypeOf:
     - event [sem]
-  AssociatedTo:
-    - dependent time reference [sem]
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> where an <a>agent</a> acts to bring about the event expressed by the <a>complement</a>. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative events include causative and permissive events. The complement event of manipulative events has <a>dependent time reference</a>. (Section 18.2.2)
 
@@ -5941,8 +5766,7 @@
     - matrix clause
   SubtypeOf:
     - clause [cxn]
-  AssociatedTo:
-    - complex sentence [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>clause</a> in a <a>complex sentence construction</a> that also contains a <a>dependent clause</a>; the <a>dependent clause</a> is a <a>dependent</a> of the matrix clause. <i>Example</i>: in <i>She watered the plants before she ate lunch, She watered the plants</i> is an instance of a matrix clause; <i>before she ate lunch</i> is a dependent clause. A matrix clause is often, but not always, a <a>main clause</a>; it may be a <a>subordinate clause</a> that is itself dependent on another matrix clause.
 
@@ -6002,8 +5826,7 @@
     - mensural classifier
   SubtypeOf:
     - classifier [str]
-  AssociatedTo:
-    - mensural construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used for the <a>mensural construction</a> that is morphosyntactically similar to the <a sortal classifier>(sortal) classifier strategy</a> used in the language. <i>Example</i>: in Cantonese <i>léuhng wún faahn</i> <q>two bowls of rice</q>, <i>wún</i> <q>bowl</q> is a mensural classifier that recruits the same construction as is used for sortal classifiers in the language. (Section 5.2.2)
 
@@ -6048,8 +5871,7 @@
     - merged argument structure strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - complement clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found in <a>complement clause constructions</a> in which there is a single <a>argument structure construction</a> associated with the combination of the <a>complement-taking predicate</a> and the <a>complement</a> <a>predicate</a>. <i>Example</i>: French <i>J'ai fait manger le pain par le chat</i> <q>I made the cat eat the bread</q> has a single argument structure for the participants of the combined event of <q>making eat</q>: the <a>causer</a> <i>J'</i> <q>I</q> is the Subject, the <a>causee</a>/<a>agent</a> <i>par le chat</i> <q>(by) the cat</q> is an Oblique, and the <a>patient</a> of the eating event <i>le pain</i> <q>the bread</q> is the Object. A merged argument structure strategy is essentially a simple argument structure construction that is found with a biclausal complement clause construction, <a>balanced</a> or <a>deranked</a>. (Section 18.4.1)
 
@@ -6071,9 +5893,7 @@
   SubtypeOf:
     - strategy [def]
   AssociatedTo:
-    - intransitive construction [cxn]
     - reflexive construction [cxn]
-    - reciprocal construction [cxn]
   Definition: >-
     a <a>strategy</a> for the <a>intransitive construction</a> that <a>recruits</a> a <a>reflexive</a> or <a>reciprocal construction</a>, for the expression of a subset of <a>monovalent events</a>. <i>Example</i>: Ancient Greek <i>pete-sthai</i> <q>fly</q> is an example of a middle voice form, using the suffix <i>-sthai</i>. The middle voice construction may be a more <a>grammaticalized</a> form of the original construction. (Section 7.2)
 
@@ -6085,7 +5905,6 @@
   SubtypeOf:
     - modality [sem]
   AssociatedTo:
-    - propositional content [sem]
     - thetic [cxn]
     - exclamative [cxn]
   Definition: >-
@@ -6153,7 +5972,6 @@
   SubtypeOf:
     - head [cxn]
   AssociatedTo:
-    - attributive phrase [cxn]
     - anaphoric-head construction [cxn]
   Definition: >-
     the <a>head</a> of an <a>attributive phrase</a>. <i>Example</i>: in <i>nearly fifty trees</i>, <i>fifty</i> is a modifier. A prototypical modifier, a <a>property concept</a>, is an <a>adjective</a>. (Section 2.2.4)
@@ -6165,9 +5983,7 @@
     - monoclausal transitive reciprocal strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - reciprocal construction [cxn]
-    - transitive construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> the <a>transitive construction</a> to use as a <a>reciprocal construction</a> but with only one <q>direction</q> of the reciprocal <a>event</a> directly expressed. <i>Example</i>: the Tonga sentence <i>Joni ba-la-yand-ana amukaintu wakwe</i> <q>John and his wife love each other</q> is literally <q>John mutually-loves his wife</q>, with <i>amukaintu wakwe</i> <q>his wife</q> as Direct Object and also an <a overt strategy>overt</a> Reciprocal suffix <i>-ana</i> on the <a>verb</a>. (Section 7.2)
 
@@ -6249,9 +6065,7 @@
     - necessarily shared participant
   SubtypeOf:
     - meaning [def]
-  AssociatedTo:
-    - complement clause construction [cxn]
-    - complement-taking predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the <a>meaning</a> of the <a>complement-taking predicate</a> requires that one or more <a>participants</a> of the <a>complement</a> <a>event</a> is shared with the event denoted by the complement-taking predicate. <i>Example</i>: in <i>I told Fred to bring me a screwdriver</i>, the <a>agent</a> of the complement bringing event is necessarily also the <a>causee</a> of the manipulative event of telling. (Section 18.2.2)
 
@@ -6288,8 +6102,7 @@
     - negative circumstantial
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - means [sem]
+  AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event does not accompany the other event and further characterizes the other event in some way. In this respect, the negative circumstantial relation is a <dq>negative</dq> version of the <a>means</a> or positive circumstantial relation. <i>Example</i>: <i>She carried the punch into the living room without spilling a drop</i> is a <a>figure--ground construal</a> of the negative circumstantial relation in an <a>adverbial clause construction</a>, and <i>She carried the punch into the living room, and she didn't spill a drop!</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the non-accompanying event is construed as the ground. (Section 15.3.1)
 
@@ -6372,7 +6185,6 @@
     - strategy [def]
   AssociatedTo:
     - clause [cxn]
-    - equational [cxn]
   Definition: >-
     either the <a>nonverbal copula strategy</a> or the <a>zero strategy</a> for <a>predication</a> <a>constructions</a>. These two strategies are grouped together because both strategies appear to originate in <a>equational constructions</a>, are first recruited by object predication constructions, and then are recruited by other predication constructions. (Section 10.2)
 
@@ -6395,10 +6207,7 @@
     - nominative category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - accusative alignment system [str]
-    - A role [sem]
-    - S role [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>accusative alignment system</a> that <a>co-expresses</a> both <a>A</a> and <a>S roles</a>. <i>Example</i>: English verbs use the same <a>index</a> in the Present Tense (3rd Person Singular <i>-s</i>, otherwise zero) for both A and S roles (<i>Emily sing-s, Emily play-s the piano</i>), hence the <i>-s/-Ø</i> index is a nominative index. (Section 6.3.1)
 
@@ -6423,7 +6232,6 @@
   SubtypeOf:
     - zero coded strategy [str]
   AssociatedTo:
-    - stative complex predicate [cxn]
     - event-oriented [sem]
   Definition: >-
     a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> does not <a>index</a> an <a>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
@@ -6574,8 +6382,7 @@
     - nonverbal copula
   SubtypeOf:
     - copula [str]
-  AssociatedTo:
-    - nonprototypical predication [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> for <a>nonprototypical predication</a> that employs an uninflecting <a>copula</a>, typically derived from a <a personal pronoun>personal</a> or <a>demonstrative pronoun</a>, <a>topic</a> <u>marker</u>, or <a>focus marker</a>. <i>Example</i>: Nakanai <i>eia <b>la</b> taua sesele</i> <q>he is truly a spirit</q> uses the demonstrative form <i>la</i> for object predication. (Section 10.2)
 
@@ -6587,8 +6394,7 @@
   SubtypeOf:
     - prototypical construction [cxn]
     - referent expression [cxn]
-  AssociatedTo:
-    - referring phrase [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>head</a> of a nominal phrase -- that is, <a>referring phrase</a> -- that denotes an <a>object</a>. <i>Example</i>: the word <i>violin</i> in the referring phrase <i>an old violin</i> is a noun -- it is an object concept that is the head of the referring phrase. (Sections 2.2.3, 3.1)
 
@@ -6599,8 +6405,7 @@
     - noun complement
   SubtypeOf:
     - complement (dependent clause) [cxn]
-  AssociatedTo:
-    - noun complement clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a modification>modifying</a> <a>clause</a> in a <a>noun complement clause construction</a>. <i>Example</i>: in <i>the fact that the student bought the book, that the student bought the book</i> is the noun complement. (Section 19.2.4)
 
@@ -6622,8 +6427,7 @@
     - noun incorporation
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - antipassive construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used for a range of <a>functions</a> but mostly for the <a>antipassive construction</a> function, in which the <a>noun</a> expressing the <a>P</a> <a>participant</a> is morphologically reduced and compounded with the <a>verb</a>. <i>Example</i>: in <i>He is off mountain-climbing</i>, the P participant, the mountain, is expressed by the noun <i>mountain</i> compounded with the verb form <i>climbing</i>. (Section 8.4)
 
@@ -6635,9 +6439,7 @@
     - noun-modifying clause
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - noun complement clause construction [cxn]
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> of employing the same <a>morphosyntactic</a> structure for both the <a>noun complement clause construction</a> and the <a>relative clause construction</a>. <i>Example</i>: Japanese uses the noun-modifying clause strategy -- the same <a>externally headed</a> strategy is used for both the relative clause construction ([<i>gakusei ga katta</i>] <i>hon</i> <q>the book that the student bought</q>) and the noun complement clause construction ([<i>gakusei ga hon o katta</i>] <i>zizitu</i> <q>the fact that the student bought the book</q>). (Section 19.2.4)
 
@@ -6661,10 +6463,7 @@
     - numeral
   SubtypeOf:
     - relational [sem]
-  AssociatedTo:
-    - cardinal numeral [cxn]
-    - ordinal numeral [cxn]
-    - vague numeral [cxn]
+  AssociatedTo: []
   Definition: >-
     a word that specifies the precise cardinality of a set of referents. Numerals most typically are packaged as modifiers. Two common types of numerals are <a>cardinal numerals</a> and <a>ordinal numerals</a> (there are other types not discussed here); see also <a>vague numerals</a>. <i>Example</i>: in <i>three women, three</i> is a cardinal numeral functioning as a modifier of <i>women</i>. (Section 4.1.3)
 
@@ -6726,8 +6525,7 @@
     - object
   SubtypeOf:
     - core argument phrase [cxn]
-  AssociatedTo:
-    - transitive construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>argument phrase</a> expressing the second most <a>salient</a> <a>core argument</a> in a <a>transitive construction</a>. <i>Example</i>: in <i>Emily read the paper, the paper</i> is the object. (Sections 6.1.1, <b>6.3.2</b>)
 
@@ -6749,8 +6547,7 @@
     - oblique P strategy
   SubtypeOf:
     - flag, flagging [str]
-  AssociatedTo:
-    - antipassive construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> of the <a>antipassive construction</a> in which the <a>P</a> <a>participant</a> is expressed with an <a oblique phrase>oblique</a> <a>flag</a>. <i>Example</i>: in West Greenlandic <i>inun-nik tuqut-si-vuq</i> <q>He killed people</q>, the P participant is encoded with the oblique Instrumental Case suffix <i>-nik</i>. (Section 8.4)
 
@@ -6785,8 +6582,7 @@
     - omitted P strategy
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - antipassive construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> of the <a>antipassive construction</a> in which the <a>P</a> <a>participant</a> is unexpressed. <i>Example</i>: in <i>She ate</i>, the P participant (the food eaten) is left unexpressed. (Section 8.4)
 
@@ -6823,8 +6619,6 @@
     - strategy [def]
   AssociatedTo:
     - deranked, deranking [str]
-    - comparative construction [cxn]
-    - equative construction [cxn]
   Definition: >-
     the <a>strategy</a> for <a>comparative</a> (and possibly <a equative construction>equative</a>) <a>constructions</a> which metaphorically expresses the comparison of the <a>comparee</a> and the <a>standard</a> on the <a>gradable predicative scale</a> as a spatial <a>path</a> between the comparee (as spatial <a>figure</a>) and the standard (as the <a>ground</a>). In comparative constructions, the ordered strategy <a>recruits</a> a <a>different-subject</a>, <a absolute deranking system>absolutely deranked</a>, <a>simultaneous</a>, or <a>consecutive</a> <u>temporal</u> <a>complex sentence construction</a> to express comparison. The <a separative comparative>separative</a>, <a allative comparative>allative</a>, and <a>locative comparatives</a> are examples of the ordered strategy. (Section 17.2.3)
 
@@ -6866,8 +6660,7 @@
     - overt head strategy
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - anaphoric-head construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>anaphoric-head construction</a> in which there is an <a overt strategy>overt</a> morpheme that functions as the <a>head</a>. <i>Example</i>: in <i>I took a red candy and Greg took a green one, a green one</i> is an example of the overtly headed strategy for the anaphoric-head construction, because <i>one</i> serves as an anaphoric head (with respect to <a>type identity</a>) in the construction. (Section 5.4)
 
@@ -6931,7 +6724,6 @@
     - possession relation [sem]
   AssociatedTo:
     - inalienable possession [cxn]
-    - inanimate [sem]
   Definition: >-
     a relation between an <a>object</a>, particularly an <a>inanimate</a> object, and a part of that object. <i>Example</i>: <i>a drawer of the desk</i> is a <a>possession construction</a> expressing a part--whole relation. The part--whole relation is a generalization of the <a>body part relation</a>. (Section 4.1.4)
 
@@ -6942,11 +6734,7 @@
     - partially merged argument structure strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - complement clause construction [cxn]
-    - argument structure construction [cxn]
-    - deranked, deranking [str]
-    - necessary participant sharing [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found in <a>complement clause constructions</a> in which the <a>argument structure construction</a> associated with the <a>complement-taking predicate</a> (CTP) is only partially distinct from the argument structure construction associated with the <a>complement</a> <a>predicate</a>. <i>Example</i>: in <i>I made him cook dinner</i>, the CTP <i>made</i> and the complement predicate <i>cook</i> each has its own Object (<i>him</i> and <i>dinner</i>, respectively), indicating that the argument structure constructions are at least partially distinct; but the <a>necessarily shared participant</a> <i>him</i> is expressed only once, as the Object of the CTP. A partially merged argument structure strategy is typically, but not always, associated with a <a>deranked</a> complement clause construction. A partially merged argument structure strategy always involves the expression of a <a>participant</a> in the <a>complement</a> as an <a>argument phrase</a> dependent on the <a>matrix clause</a> predicate -- or, eventually, the <a>complex predicate</a> made up of the former matrix clause and complement clause predicates. (Section 18.4.1)
 
@@ -6960,7 +6748,6 @@
   AssociatedTo:
     - argument [inf]
     - participant role [sem]
-    - event [sem]
   Definition: >-
     <a>entities</a> that play a role in an <a>event</a>. <i>Example</i>: in <i>Janet set the books on the floor</i>, Janet, the books, and the floor are participants in the setting event. (Section 6.1.1)
 
@@ -6987,7 +6774,6 @@
   AssociatedTo:
     - resultative (complex predicate) [cxn]
     - depictive (complex predicate) [cxn]
-    - participant [sem]
   Definition: >-
     a stative <a>element</a> in a <a>stative complex predicate</a> that describes a <a>state</a> of one of the <a>participants</a> in the <a>event</a> denoted by the complex predicate. <i>Example</i>: in English <i>I ate the carrots raw</i>, <i>raw</i> is a property of the carrots, not the event of eating. Contrasts with <a>event-oriented</a>. (Section 14.1)
 
@@ -6999,8 +6785,7 @@
   SubtypeOf:
     - indexed [str]
     - deranked, deranking [str]
-  AssociatedTo:
-    - stative complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a coordination>coordinated</a> with the <a>event</a> predication using a <a>deranked</a> <a>complex sentence</a> <a>strategy</a>. In addition, the stative predicate is predicated of, and ideally <a>indexes</a>, (one of) its argument(s). <i>Example</i>: in Sanuma <i>opi-i a kali-palo-ma</i> <q>He worked slowly</q> [lit. <q>being slow, he worked</q>] <i>opi-i</i> <q>be slow</q> is in a deranked form with suffix <i>-i</i>; the suffix, however, indicates that <i>opi</i> <q>slow</q> has the same subject as <i>kali-palo-ma</i> <q>worked</q> -- namely, <q>he</q>. (Section 14.2)
 
@@ -7025,8 +6810,7 @@
   SubtypeOf:
     - derived-case [str]
     - independent strategy [str]
-  AssociatedTo:
-    - comparative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>derived-case</a> <a>comparative</a> <a>strategy</a> that consists of two <a>clauses</a> which assert that the <a>gradable predicative scale</a> applies to the <a>comparee</a> and the <a>standard</a>, but the second clause uses the <a>zero strategy</a> for <a>predicate identity</a>, and the <a>conjunction</a> is a particle with diverse etymological origins. <i>Example</i>: <i>Randy is older than Tom (is)</i> is an instance of the particle strategy: the clause <i>Randy is older</i> is followed by the particle <i>than</i> which introduces the standard phrase <i>Tom</i> without its own <a>predicate</a> (only an optional auxiliary <i>is</i>). (Section 17.2.2)
 
@@ -7037,8 +6821,7 @@
     - particle equative
   SubtypeOf:
     - derived-case [str]
-  AssociatedTo:
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>matrix clause</a> which expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a <a>dependent clause</a> expressing that the same scale applies to the <a>standard</a>. The dependent clause is in the form of a particle acting as a <a>conjunction</a>, and the <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a>predicate identity</a>. <i>Example</i>: Chechen <i>aħa döšu as sanna</i> <q>You read like I [do]</q> is an instance of the particle equative strategy: the matrix clause <i>aħa döšu</i> <q>You read</q> predicates the scale of the comparee; the particle <i>sanna</i> <q>like</q> introduces the standand <i>as</i> <q>I</q>, which is in the same <a>case</a> as the comparee (the Ergative). (Section 17.2.4)
 
@@ -7169,8 +6952,7 @@
     - perception verb strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational construction</a> in which the <a>referring phrase</a> introducing the <a>referent</a> is expressed as the stimulus of a <a>perception event</a>. <i>Example</i>: an English example from the Pear Stories narrative is <i>and um then you see this little girl. Coming on a bicycle in the opposite direction, ...</i> More grammaticalized versions of this strategy include French <i><b>Voici</b> un coffre ... <b>Voilà</b> un autre coffre</i> <q>Here is a treasure chest ... There is another treasure chest</q>. (Section 10.4.3)
 
@@ -7229,8 +7011,7 @@
     - phasal aspect
   SubtypeOf:
     - aspect [sem]
-  AssociatedTo:
-    - complement clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a type of <a>aspect</a> that expresses the phases of an <a>event</a>: beginning, continuing, terminating, or completion. Phasal aspect is often, but not always, expressed by a <a>complement-taking predicate</a> in a <a>complement clause construction</a>. <i>Example</i>: in <i>Bill started to play the piano, started</i> expresses phasal aspect -- namely, the beginning phase of the complement event of playing the piano. (Section 18.2.2)
 
@@ -7347,8 +7128,7 @@
     - polarity answer
   SubtypeOf:
     - response [cxn]
-  AssociatedTo:
-    - polarity question [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>construction</a> that expresses a <a>polarity answer</a>. <i>Example</i>: the polarity response to <i>Do you have any money?</i> in English is <i>Yes (I do)</i> or <i>No (I don't)</i>. (This is excluding other less cooperative responses such as <i>I don't know</i> or <i>It's none of your business</i>.) (Section 12.3.3)
 
@@ -7462,9 +7242,7 @@
     - possessive locative strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational [cxn]
-    - presentational possession [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational construction</a> in which the <a>referring phrase</a> introducing the <a>referent</a> is expressed as the <a>possessum</a> in a <a>presentational possession construction</a>. <i>Example</i>: Swahili <i>ku na mgeni nyumba-ni</i> [<sc>loc.clf</sc> with stranger home-at] <q>There is a stranger at home</q>, uses the <a>with-possessive strategy</a> of the presentational possessive construction to express the stranger as the possessum; the location at home is expressed by a locative phrase. (Section 10.4.3)
 
@@ -7476,8 +7254,7 @@
     - possessor
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - possession relation [sem]
+  AssociatedTo: []
   Definition: >-
     the person who has control over the <a>possessum</a> in a <a>possession relation</a>. <i>Example</i>: in <i>I have a car</i>, I am the possessor. The possessor may also serve as the <a>modifier</a> in a <a>possessive modification construction</a>. (Sections 4.1.4, 10.4.2)
 
@@ -7491,8 +7268,7 @@
     - possessum
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - possession relation [sem]
+  AssociatedTo: []
   Definition: >-
     the object that is controlled by the <a>possessor</a> in a <a>possession relation</a>. <i>Example</i>: in <i>I have a car</i>, the car is the possessum. The possessum may also serve as the head in a <a>possessive modification construction</a>. (Sections 4.1.4, 10.4.2)
 
@@ -7503,8 +7279,7 @@
     - posterior
   SubtypeOf:
     - consecutive [sem]
-  AssociatedTo:
-    - figure--ground [inf]
+  AssociatedTo: []
   Definition: >-
     a temporal sequential relation between two <a>events</a> such that the preceding event serves as the reference point for the following event. <i>Example</i>: in <i>He drove to the party after washing the car</i>, driving to the party has a posterior temporal relation with respect to washing the car. Used to describe a sequential temporal relation between events in a <a>figure--ground information packaging</a>. (Section 15.1.3)
 
@@ -7648,8 +7423,7 @@
     - predicate
   SubtypeOf:
     - head [cxn]
-  AssociatedTo:
-    - clause [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>head</a> of a <a>clause</a>, which is not necessarily an <a>action</a>. <i>Example</i>: in <i>The dog is old, (is) old</i> is the predicate. (Section 2.2.4)
 
@@ -7760,7 +7534,6 @@
     - strategy [def]
   AssociatedTo:
     - presentational [cxn]
-    - predicational location [cxn]
   Definition: >-
     a <a>strategy</a> for the <a>presentational location construction</a> (and <a>presentational</a> constructions in general) which recruits the <a>predicational location construction</a>. The predicational locative strategy has a fixed-order subtype, where the word order of figure phrase and locative phrase remains the same. <i>Example</i>: Welsh <i>mae car yma</i> <q>There is a car here</q> has the same word order as the predicational locative <i>Mae'r car yma</i> <q>The car is here</q>. The predicational locative strategy also has a reverse-order subtype, where the word order is reversed so that the locative phrase precedes the figure phrase. <i>Example</i>: <i>On the table was a large bowl</i> has the same structure as <i>The large bowl was on the table</i>, except that the order of <i>on the table</i> and <i>a/the large bowl</i> is reversed. More <a>grammaticalized</a> versions of this strategy include English <i><b>There's</b> a snake in the back yard</i>. (Section 10.4.3)
 
@@ -7784,8 +7557,7 @@
     - predicational strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - stative complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> or other <a stative>stative component</a> is <a information packaging>packaged</a> as the sole <a>predication</a>, and the <a>event</a> is packaged as the <a>subject argument</a> of the manner predication. <i>Example</i>: in Mokilese <i>ah kijou dahr</i> <q>He runs fast</q> [lit. <q>his running is fast</q>], the speed is predicated of the event. (Section 14.2)
 
@@ -7796,8 +7568,7 @@
     - predicativization possessive strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational possession [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessum</a> is <u>incorporated</u> as part of the possessive <a>predicate</a>. <i>Examples</i>: Tundra Yukaghir <i>mārqa-n lāme-n'-ŋi</i> [one dog-with-<sc>3pl.intr</sc>] <q>They had one dog</q> is an instance of the flexional (inflected) subtype of the predicativization possessive strategy, and Pitjantjatjara <i>ngankulukula-tjara</i> [I spear-<sc>proprietive</sc>] <q>I have a spear</q> [lit. <q>I am spear-having</q>] is an instance of the copular/zero (uninflected) subtype of the strategy. (Section 10.4.2)
 
@@ -7914,8 +7685,7 @@
     - presupposed open proposition
   SubtypeOf:
     - information element (FN-Br) [inf]
-  AssociatedTo:
-    - identificational [inf]
+  AssociatedTo: []
   Definition: >-
     in <a>identificational information packaging</a>, the <a>proposition</a> with an unknown part (hence <dq>open</dq> proposition) which is already part of the shared knowledge of the speaker and hearer (that is, it is presupposed). <i>Example</i>: in <i>It was Jack who stole my cookies!</i>, the presupposed open proposition is <q>X stole my cookies</q>; in the appropriate discourse context, it is already known that someone stole my cookies. (Section 11.4.1)
 
@@ -7950,10 +7720,7 @@
     - primary object category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - secundative (ditransitive) alignment [str]
-    - R role [sem]
-    - P role [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>secundative alignment system</a> that <a>co-expresses</a> both <a>R</a> and <a>P roles</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, the <a>index</a> <i>wa-</i> <q><sc>3pl</q></sc> is the same used to index <i>tɨɨri</i> <q>children</q> in <i>uukaraawiciizɨ tɨɨri me-wa-zeiya</i> <q>The women see the children</q>, and hence represents the primary object category. (Section 7.5.2)
 
@@ -8010,10 +7777,7 @@
     - pronoun-retention
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - anaphoric pronoun [cxn]
-    - externally headed [str]
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant is expressed in the relative clause by an <a>anaphoric pronoun</a>. <i>Example</i>: the Modern Hebrew construction illustrated by <i>hasarim</i> [<i>she-ha-nasi shalax otam la mitsraim</i>] <q>the ministers that the President sent to Egypt</q>, uses the pronoun-retention strategy: the anaphoric pronoun <i>otam</i> <q>them</q> occurs in the relative clause <i>she-ha-nasi shalax otam la mitsraim</i> <q>that the President sent them to Egypt</q>, and refers to the external <a>relative clause head</a> <i>hasarim</i> <q>the ministers</q>. (Section 19.2.2)
 
@@ -8124,8 +7888,7 @@
     - propositional content
   SubtypeOf:
     - meaning [def]
-  AssociatedTo:
-    - clause [cxn]
+  AssociatedTo: []
   Definition: >-
     the semantic content of a <a>clause</a>, separately from whether it is packaged as <a>topic--comment</a>, <a>thetic</a>, or <a>identificational</a>. Propositional content corresponds basically to <q>who did what to whom</q>. <i>Example</i>: In <i>There's a coyote running down the street!, It's a coyote that's running down the street</i>, and <i>The coyote is running down the street</i>, the propositional content shared by the thetic, identificational, and topic--comment constructions, respectively, is the current running <a>event</a> with a coyote as the runner and the street as the location of the running. (Section 11.1)
 
@@ -8202,9 +7965,7 @@
     - pseudo-partitive
   SubtypeOf:
     - classifier [str]
-  AssociatedTo:
-    - mensural construction [cxn]
-    - possessive (modification) construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for <a>mensural constructions</a> in which a <a>possessive modification construction</a> is <a>recruited</a> (or was recruited, as the pseudo-partitive often differs from the counterpart modification construction) to express the mensural relation. (Section 5.2.2)
 
@@ -8305,8 +8066,7 @@
     - quotative marker
   SubtypeOf:
     - complementizer [str]
-  AssociatedTo:
-    - direct report [str]
+  AssociatedTo: []
   Definition: >-
     a <a>complementizer</a> used with <a>direct reports</a>. <i>Example</i>: in Kobon <i>ban nöp hagöp</i> [<i>yad ram arabin</i>] <i>a göp</i> <q>Who said to you, <dq>I am going home</dq>?</q>, <i>a</i> is a quotative marker used with the direct report <a>utterance</a> <a>complement</a> <i>yad ram arabin</i> <q>I am going home</q>. Like the direct report <a>strategy</a> it accompanies, a quotative marker originates with utterance <a>complement clause constructions</a> but is extended to other complement clause constructions lower in the <a>Binding Hierarchy</a>. (Section 18.3.2)
 
@@ -8395,8 +8155,7 @@
     - reference-tracking
   SubtypeOf:
     - complex (construction) [cxn]
-  AssociatedTo:
-    - complex sentence [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>construction</a> that indicates <a>coreference</a> or lack thereof with respect to a referent occurring elsewhere in the discourse, including one occurring elsewhere in the same construction, such as a <a>complex sentence construction</a>. Coreference may be indicated by <a>zero anaphora</a> as well as by an overt expression. <i>Example</i>: in the discourse passage <i>and there's a man at the top of the ladder, you can't see him yet...</i>, the pronoun <i>him</i> serves to track the referent as recurrence of the man in the second reported event. (Section 16.1)
 
@@ -8422,7 +8181,6 @@
   SubtypeOf:
     - head [cxn]
   AssociatedTo:
-    - referring phrase [cxn]
     - modification construction [cxn]
   Definition: >-
     the <a>head</a> of a <a>referring phrase</a>, which is not necessarily an <a>object</a>. <i>Example</i>: in <i>Hiking in the desert is wonderful</i>, <i>hiking</i> is a referent expression. (Section 2.2.4)
@@ -8503,8 +8261,7 @@
     - relative clause
   SubtypeOf:
     - dependent clause [cxn]
-  AssociatedTo:
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>dependent clause</a> in a <a>relative clause construction</a>. The relative clause denotes the <a>event</a> that is used to <a modification>modify</a> the <a>relative clause head</a> <a>referent</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is the relative clause. (Section 19.1)
 
@@ -8527,8 +8284,7 @@
   SubtypeOf:
     - referring phrase [cxn]
     - head [cxn]
-  AssociatedTo:
-    - relative clause [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>referring phrase</a> that denotes the <a>necessarily shared participant</a> in a <a>relative clause construction</a> -- that is, the <a>participant</a> that plays a <a>semantic role</a> in both the <a>event</a> denoted by the <a>relative clause</a> and the event denoted by the <a>matrix clause</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>the cheesecake</i> is the relative clause head. The relative clause head is an <a>argument</a> of the matrix clause predicate, and is <a modification>modified</a> by the relative clause. (Section 19.1)
 
@@ -8539,8 +8295,7 @@
     - relative equal equative
   SubtypeOf:
     - derived-case [str]
-  AssociatedTo:
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for <a>equative constructions</a> which combines two predicates, one expressing equality of the comparee on the <a>gradable predicative scale</a>, similar to the <a>equal equative</a>, and the other expressing the standard in a structure similar to the <a>relative-based equative</a>. Like the relative-based equative, but unlike the equal equative, the relative equal equative is a <a>derived-case</a> strategy. <i>Example</i>: Spanish <i>Douglas y Pedro son igual de altos que María</i> <q>Douglas and Pedro are as tall as María</q> is an instance of the relative equal equative; the matrix predicate is <i>son igual</i> <q>[they] are equal</q> and the deranked <i>de altos</i> describes the scale. (Section 17.2.4)
 
@@ -8551,8 +8306,7 @@
     - relative pronoun
   SubtypeOf:
     - pronoun [cxn]
-  AssociatedTo:
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>pronoun</a> form that is unique to the <a>relative clause construction</a>, and is found in the <a>externally headed</a> relative clause construction using the <a>relative pronoun strategy</a>. <i>Example</i>: in <i>He stole the emerald</i> [<i>which he gave to his wife</i>], <i>which</i> is the relative pronoun. (Section 19.2.2)
 
@@ -8563,9 +8317,7 @@
     - relative pronoun strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - relative pronoun [cxn]
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant in the relative clause is expressed by a <a>relative pronoun</a> unique to the relative clause construction. <i>Example</i>: in <i>He stole the emerald</i> [<i>which he gave to his wife</i>], the relative clause is introduced by the relative pronoun <i>which</i>, which refers to the emerald, which is also expressed by the external <a>relative clause head</a> <i>the emerald</i>. The relative pronoun strategy is rare crosslinguistically, and largely restricted to the European area. (Section 19.2.2)
 
@@ -8576,10 +8328,7 @@
     - relative strategy
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - comparative construction [cxn]
-    - equative construction [cxn]
-    - conditional deranking system [str]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> for <a>comparative</a> (and possibly <a equative construction>equative</a>) <a>constructions</a> which directly expresses two of the <a>propositions</a> that form the <a>meaning</a> of the comparative -- that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and that the comparee exceeds the <a>standard</a> on the scale. That is to say, the relative strategy <a>recruits</a> a <a>same-subject</a>, <a>conditionally deranked</a>, usually <a>simultaneous</a> <u>temporal</u> <a>complex sentence construction</a> to express comparison. The <a>exceed comparative</a> is an example of the relative strategy; the <a>conjoined exceed strategy</a> appears to be a related type. (Section 17.2.3)
 
@@ -8590,8 +8339,7 @@
     - relative-based equative
   SubtypeOf:
     - derived-case [str]
-  AssociatedTo:
-    - equative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a free relative clause>free</a> (<a indefinite pronoun>indefinite head</a>) <a relative clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
 
@@ -8602,8 +8350,7 @@
     - relativizer
   SubtypeOf:
     - conjunction [str]
-  AssociatedTo:
-    - relative clause construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a form that signals that an <a>action</a> is being used as a <a>modifier</a> -- that is, it signals a <a>relative clause</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that</i> is the relativizer. A relativizer makes a <a>relative clause construction</a> <a>syndetic</a>. (Section 19.2.1)
 
@@ -8660,8 +8407,7 @@
     - response
   SubtypeOf:
     - speech acts [cxn]
-  AssociatedTo:
-    - interrogative [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>construction</a> expressing a <a>answer</a> <a>function</a>. Like interrogatives, responses are divided into <a>polarity responses</a> and <a>information (question) responses</a>.
 
@@ -8786,8 +8532,7 @@
     - salient
   SubtypeOf:
     - information packaging [def]
-  AssociatedTo:
-    - reference, referent [inf]
+  AssociatedTo: []
   Definition: >-
     the degree of attention directed to a <a>referent</a> by the interlocutors at a given point in the discourse. <i>Example</i>: it is generally the case that, in a sentence like <i>He ate the cookies</i>, the <a>subject</a> referent is more salient than the <a>object</a> referent in discourse. Salience is also considered to vary across different <a>object concepts</a>, other things being equal: people are more interested in other people, somewhat less so in <a>animate</a> objects, and less still in <a>inanimate</a> objects. Salience is the motivation for the <a>Animacy Hierarchy</a> and the <a>Extended Animacy Hierarchy</a>. (Section 6.1.1)
 
@@ -8799,8 +8544,7 @@
     - SS
   SubtypeOf:
     - reference, referent [inf]
-  AssociatedTo:
-    - reference tracking [cxn]
+  AssociatedTo: []
   Definition: >-
     in <a>complex sentence constructions</a> that express <a>reference tracking</a>, the situation where the <a>salient</a> <a>participant</a> in the current <a>clause</a> is indicated to be <a>coreferential</a> with the salient participant in another clause in the construction. The salient participant is typically, but not always, encoded as the <a>subject</a> of the <a>predicate</a>. <i>Example</i>: in <i>Having finished the chapter, Bill went to bed</i>, the zero anaphora in <i>Having finished the chapter</i> signals that the subject referent of finishing the chapter is coreferential with the subject referent of the <a>matrix clause</a>, namely Bill. (Section 16.1)
 
@@ -8823,8 +8567,7 @@
     - satellite-framing strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - manner verb [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for expressing <a>events</a> such that the manner of how the event comes about is expressed by a <a>manner verb</a>, and the <a>result</a> <a>state</a> (including also paths of motion) is expressed in a <a>satellite</a>. <i>Example</i>: <i>Sam strode into the room</i> uses the satellite-framing strategy -- <i>stride</i> is a manner of motion verb, and the path of motion is expressed by the oblique phrase <i>into the room</i>. (Section 7.3.1)
 
@@ -8835,9 +8578,7 @@
     - scalar concessive conditional strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - scalar model [sem]
-    - concessive conditional construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy for expressing a <a>concessive conditional construction</a> where the <a>protasis</a>, which specifies the set of conditions for the concessive conditional, invokes the most informative or <dq>strongest</dq> condition in the <a>scalar model</a>; the <a>apodosis</a> expresses the unexpected opposite of the expected causal relation between the most extreme condition and the outcome, and so implies the same outcome under the less extreme conditions. <i>Example</i>: <i>Even if you drink (only) a little, your boss will fire you</i> uses the scalar concessive conditional strategy: drinking only a little is the least likely condition (in the scalar model of drinking to various degrees) to lead to your boss firing you, and yet it will lead to your boss firing you. (Section 17.3.3)
 
@@ -8885,9 +8626,7 @@
     - secondary object category
   SubtypeOf:
     - alignment system category (FN-Br) [str]
-  AssociatedTo:
-    - indirective alignment system [str]
-    - T role [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>indirective alignment system</a> that exclusively expresses the <a>T role</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, <i>uuki</i> <q>man</q> is exclusively expressed by the absence of <a>indexation</a> on the <a>verb</a> form <i>ne-wa-puuzeiyastɨa</i> <q>I showed them</q>. (Section 7.5.2)
 
@@ -8938,8 +8677,6 @@
   AssociatedTo:
     - topic--comment [cxn]
     - hanging topic phrase [cxn]
-    - predicate nominal construction [cxn]
-    - nonprototypical construction [cxn]
   Definition: >-
     a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>predicate nominal constructions</a> which express <a>predication</a> of an <a>object concept</a>. The semantic IP strategy is to <a>recruit</a> the strategy used for the prototypical <a>information packaging</a> function of the (actual) information packaging in the nonprototypical construction. <i>Example</i>: in the English Predicate Nominal Construction exemplified by <i>Rich is an excellent violinist</i>, the semantic <a>object concept</a> <i>violinist</i> that is being predicated recruits the construction used for object <a>reference</a>, the prototypical object construction: it is preceded by the article <i>an</i> and the adjective <i>excellent</i>. The semantic IP strategy contrasts with the <a>actual IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
 
@@ -9020,8 +8757,7 @@
     - separative comparative
   SubtypeOf:
     - fixed-case [str]
-  AssociatedTo:
-    - comparative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>fixed-case strategy</a> in <a>comparative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as an <a>oblique argument phrase</a> with a spatial <a>flag</a> with an ablative (<q>from</q>) <a>meaning</a>. <i>Example</i>: Mundari <i>sadom-ete hati mananga-i</i> <q>The elephant is bigger than the horse</q> is an instance of the separative comparative -- <i>hati mananga-i</i> asserts that the elephant is big, and <i>sadom-ete</i> expresses the standard, the horse, with a suffix <i>-ete</i> meaning <q>from</q>. (Section 17.2.2)
 
@@ -9080,8 +8816,7 @@
     - simple contrast
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - adversative coordination [cxn]
+  AssociatedTo: []
   Definition: >-
     a semantic relation between two <a>events</a> in which there is only a simple contrast, or a construal of a simple contrast, between the two. Simple contrast is considered the prototype for <a>adversative coordination</a>. <i>Example</i>: Ponapean <i>i laid ah e meir</i> [I fish <sc>conj</sc> he sleep] <q>I fished, but he slept</q>, is an instance of simple contrast. (Section 15.2.1)
 
@@ -9092,8 +8827,7 @@
     - simple predicate applicative strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - applicative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>applicative construction</a> in which the <a>event</a> including the <a>participant</a> expressed as the <a>applicative object</a> is expressed in a single <a>clause</a> with a simple <a>predicate</a> (not a <a>complex predicate</a>). <i>Example</i>: Nomatsiguenga <i>na-manantë-ne-ro kayeta</i> [I-buy-<sc>ben.appl</sc>-her cracker] <q>I bought crackers for her</q> is an example of the monoclausal/simple predicate applicative strategy, with a single <a>verb</a> <i>na-manantë-ne-ro</i>. (Section 9.3)
 
@@ -9106,8 +8840,7 @@
     - morphological causative
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - causative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>causative construction</a> in which the <a>causative event</a> is expressed in a single <a>clause</a> with a simple <a>predicate</a> (not a <a>complex predicate</a>). <i>Example</i>: in Hungarian, <i>Köhögtettem a gyerek-et</i> <q>I made the boy cough</q> is an instance of the monoclausal causative strategy; there is only a single verb <i>köhögtettem</i> [cough: <sc>caus:1sg.pst</sc>] <q>(I) made cough</q>. (Section 9.2)
 
@@ -9142,8 +8875,6 @@
   SubtypeOf:
     - recruitment strategy [str]
   AssociatedTo:
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
     - intransitive construction [cxn]
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as a single <a>role</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by a single <a>argument phrase</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: English <i>Sam shaved</i> and <i>Mary and Sue met</i> construe the participants -- Sam, and Mary and Sue, respectively -- as playing a single role in the shaving and meeting events. The single role strategy may also be overtly coded: the Abkhaz Reflexive <i>l-c̜ə-l-k°abe-yt'</i> <q>She washed (herself)</q> is an Intransitive Verb form with the Reflexive prefix <i>c̜ə-</i>, and the Swahili Reciprocal <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
@@ -9200,8 +8931,7 @@
     - special P strategy
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - passive--inverse voice construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> of the <a>passive--inverse voice construction</a> in which the <a>P</a> <a>participant</a> is encoded by a form that is not found for either the <a>A</a> <a>participant</a> or the P participant in the <a>basic voice construction</a>. <i>Example</i>: in Upriver Halkomelem <i>tə́s-l-əm θúƛ'à tə swíyəqə</i> <q>She was bumped into by the man</q>, the P participant (the woman referred to by <q>she</q>) is <a>indexed</a> by the suffix <i>-əm</i>, which is distinct from the expression of A or P participants in the basic voice construction. (Section 8.3)
 
@@ -9212,9 +8942,7 @@
     - specialized dual role strategy
   SubtypeOf:
     - dual role strategy [str]
-  AssociatedTo:
-    - reflexive construction [cxn]
-    - reciprocal construction [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with a special form functioning as the nonsubject argument phrase. <i>Examples</i>: English <i>I saw myself</i> and <i>Mary and Sue praised each other</i> construe the participants -- I, and Mary and Sue, respectively -- as playing two roles in the seeing and praising event, but with special object forms <i>myself</i> and <i>each other</i> to express that the events are a reflexive event and a reciprocal event, respectively. (Section 7.2)
 
@@ -9337,9 +9065,7 @@
     - split argument structure strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - complement clause construction [cxn]
-    - argument structure construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found in <a>complement clause constructions</a> in which the <a>argument structure construction</a> associated with the <a>complement-taking predicate</a> is completely distinct from the argument structure construction associated with the <a>complement</a> <a>predicate</a>. <i>Example</i>: the sentence <i>Terry believes that the company will give her a raise next month</i> uses a split argument structure strategy: the CTP <i>believes</i> has its own Subject (<i>Terry</i>) and Object (the complement clause), and the complement predicate <i>will give</i> has its own Subject (<i>the company</i>), Objects (<i>her</i> and <i>a raise</i>), and Oblique (<i>next month</i>). (Section 18.4.1)
 
@@ -9350,9 +9076,7 @@
     - split structure
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - thetic [cxn]
-    - topic--comment [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy found for the expression of <a>thetic constructions</a>. In a split structure, the information normally expressed as the comment or <a>predicate</a> in a <a>topic--comment construction</a> may be expressed in a different <a>form</a>, usually some sort of <a>subordinate clause</a>-like form. The information normally expressed as the <a>topic</a> in the topic--comment construction may be expressed in a different form, usually with a <a>presentational construction</a>; or both types of information are expressed differently. <i>Example</i>: in French <i>Voilà la sirène | qui hurle</i> [There's a siren | that's wailing] <q>The SIREN is wailing</q>, the <a>interruption</a> thetic construction expresses the participant (the siren) in a presentational construction, and expresses the event in a <a>relative clause construction</a>. (Section 11.3.2)
 
@@ -9398,8 +9122,7 @@
     - STAMP strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - auxiliary construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found with <a>auxiliary constructions</a> in which the <a>auxiliary</a> <a>element</a> expressing <a>TAMP</a> is morphologically combined with the <a>subject phrase</a>, usually a subject <a>pronoun</a>, rather than with the <a>verb</a> of the auxiliary construction. <i>Example</i>: English <i>I'll think about it</i>, the future auxiliary <i>will</i> is reduced and combined morphologically with the subject pronoun <i>I</i>. (Section 13.4)
 
@@ -9410,8 +9133,7 @@
     - standard
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - gradable predicative scale [sem]
+  AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or <a>equative construction</a>, the <a>referent</a> whose position on the <a>gradable predicative scale</a> serves as the reference point for the position of the <a>comparee</a> on the predicative scale. <i>Example</i>: in <i>Your cat is bigger than my dog</i>, the dog serves as the standard for the position of the cat on the scale of size -- it is asserted that the cat exceeds the dog on that scale. (Section 17.2.1)
 
@@ -9459,9 +9181,7 @@
     - stimulus
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - experiential event [sem]
-    - experiencer [sem]
+  AssociatedTo: []
   Definition: >-
     the <a>participant</a> in an <a>experiential event</a> which stimulates the internal mental or bodily experience in the <a>experiencer</a>. <i>Example</i>: in <i>Freddy saw the bear</i>, the bear is the stimulus. (Sections 6.1.2, <b>7.4</b>)
 
@@ -9473,8 +9193,7 @@
     - experiencer-object strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - experiential construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for an <a>experiential construction</a> in which the <a>stimulus</a> <a>argument phrase</a> is <a>co-expressed</a> with the <a>subject</a> argument phrase of a <a transitive construction>transitive</a> or <a>intransitive construction</a>. <i>Example</i>: the <a>argument structure construction</a> found in <i>Dogs frighten me</i>, with the stimulus argument phrase <i>Dogs</i> co-expressed with the prototypical subject <a>participant</a> in English, is an instance of the stimulus-oriented strategy. (Section 7.4)
 
@@ -9592,8 +9311,7 @@
     - subsequent role
   SubtypeOf:
     - participant role [sem]
-  AssociatedTo:
-    - causal structure [sem]
+  AssociatedTo: []
   Definition: >-
     a <a>participant role</a> that is subsequent to the participant role expressed as <a>object</a> in the <a>causal chain</a> / <a>causal structure</a> of an <a>event</a>. <i>Example</i>: in <i>Terry made lunch for Sandy</i>, Sandy is subsequent to the lunch in the foodmaking causal chain (Terry --> lunch --> Sandy), and the lunch is expressed as object. (Section 6.1.2)
 
@@ -9615,8 +9333,7 @@
     - subtractive
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - additive [sem]
+  AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event is additionally characterized by the absence of a second event that is normally a part of the first event. In this respect, the subtractive relation is somewhat like a <dq>negative</dq> version of the <a>additive</a> relation. <i>Example</i>: <i>He did all the problems correctly except (that) he missed the proof on the last one</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>He did all the problems correctly but he missed the proof on the last one</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the absent event is construed as the ground. (Section 15.3.1)
 
@@ -9627,8 +9344,7 @@
     - summarizer
   SubtypeOf:
     - syndetic [str]
-  AssociatedTo:
-    - exhaustive list coordination [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>form</a> used as part of an <a>exhaustive coordination construction</a> that indicates that the list is exhaustive. <i>Example</i>: in Classical Tibetan <i>lus ŋag yid gsum</i> [body speech mind three] <q>body, speech and mind</q>, the numeral functions as a summarizer for the exhaustive list. (Section 15.2.2)
 
@@ -9654,9 +9370,7 @@
     - light verb
   SubtypeOf:
     - verb [cxn]
-  AssociatedTo:
-    - support verb construction [cxn]
-    - complex predicate [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>element</a> in a <a>support verb construction</a> that has undergone semantic change -- specifically, semantic generalization -- such that it makes a minimal semantic contribution to the <a>meaning</a> of the whole <a>complex predicate</a>. <i>Example</i>: in English <i>They had a drink, had</i> is the support verb in the support verb construction <i>had a drink</i>. <a>Copulas</a> are analyzed as a subtype of a support verb. (Section 13.5)
 
@@ -9737,8 +9451,7 @@
     - tag
   SubtypeOf:
     - overt (coding) strategy [str]
-  AssociatedTo:
-    - polarity question [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy for <a>polarity question constructions</a> which consists of a word or phrase added to the <a>clause</a>, functioning to signal that the clause expresses a polarity question. <i>Example</i>: in the Russian polarity question <i>Ty ego slyšal, pravda?</i> [lit. <q>You heard him, true?</q>], <i>pravda</i> <q>true?</q> is the tag. Tags typically make the polarity question into a biased question, unlike a simple interrogative marker. (Section 12.3.2)
 
@@ -9751,7 +9464,6 @@
     - meaning [def]
   AssociatedTo:
     - auxiliary [cxn]
-    - predicate [cxn]
   Definition: >-
     an abbreviation for the set of <a>semantic</a> categories of <a>tense</a>, <a>aspect</a>, <a>modality</a>, and <a>polarity</a>, which primarily describe certain semantic characteristics of the <a>event</a> denoted by a <a>predicate</a>. TAMP is morphosyntactically generally associated with the predicate, typically as a predicate inflection or expressed in an <a>auxiliary construction</a>. (Section 13.1.2)
 
@@ -9762,8 +9474,7 @@
     - target
   SubtypeOf:
     - strategy element (FN-Br) [str]
-  AssociatedTo:
-    - indexical strategy, indexation [str]
+  AssociatedTo: []
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the <a>element</a> of the construction with which the <a>index</a> is combined, usually as an affix. <i>Example</i>: in Spanish <i>los libros rojos</i> <q>the red books</q>, the target is the modifier <i>rojos</i> <q>red</q>, which has the Masculine Plural index <i>-os</i> suffixed to it. (Section 4.4)
 
@@ -9832,8 +9543,7 @@
     - theater metaphor
   SubtypeOf:
     - information packaging [def]
-  AssociatedTo:
-    - information status [inf]
+  AssociatedTo: []
   Definition: >-
     a metaphor used to describe the <a>information status</a> of <a>referents</a> in discourse, especially narrative discourse. The theater metaphor divides referents into three categories: <a>actors</a>, <a>props</a>, and <a>settings</a>. (Section 3.4.1)
 
@@ -9923,7 +9633,6 @@
   SubtypeOf:
     - information element (FN-Br) [inf]
   AssociatedTo:
-    - topic--comment [inf]
     - topic phrase [cxn]
   Definition: >-
     in a <a>topic--comment information packaging</a>, the topic is the <a>referent</a> that the <a>comment</a> is <a predicated>predicated about</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is predicated about the referent Bill. A topic is a referent; arguably, all referents are topics, although some referents are more topical and others are less topical. (Section 10.1.2)
@@ -9950,8 +9659,7 @@
     - distributed subject possessive strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational possession [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed as a <a>topic phrase</a>, and the <a>possessum</a> is expressed in a <a>subject phrase</a>, usually the subject of a <a>verb</a> glossed as <q>exist</q>. <i>Example</i>: Cupeño <i>neʔ ne-mixen ʔiket miyexwe</i> [I my net is] <q>I have a net</q> is an instance of the topic possessive strategy, with <q>I</q> expressed in a topic phrase and <q>my net</q> in a subject phrase. (Section 10.4.2)
 
@@ -9984,8 +9692,7 @@
     - topic-locational hybrid possessive strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational possession [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessum</a> is expressed in a <a>subject phrase</a>, usually the subject of a <a>verb</a> glossed as <q>exist</q>, and the <a>possessor</a> is expressed both as a <a>topic phrase</a> and as a <a location>locative</a> <a>argument phrase</a> (like the <a>locational possessive strategy</a>) <a>coreferential</a> with the topic phrase. <i>Example</i>: Eastern Tarafit <i>lɣula ttuɣa ɣr-es idž n wəzɛuq</i> [ogress was at-her one of little_donkey] <q>The ogress had a little donkey</q> is an instance of the topic-locational hybrid possessive strategy: the ogress is expressed as both a topic phrase <i>lɣula</i> and as a coreferential locative argument phrase <i>ɣr-es</i> <q>at her</q>. (Section 10.4.2)
 
@@ -10054,8 +9761,7 @@
     - transitivity-based causative strategies
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - causative construction [cxn]
+  AssociatedTo: []
   Definition: >-
     <u>monoclausal</u> <a>strategies</a> for the <a>causative construction</a> in which the <a>causee</a> in the <a>causative event</a> is coded differently depending on the <a>valency</a> of the corresponding <a>base event</a>. <i>Example</i>: in Turkish, the causee in a causative event is encoded in the Accusative Case if the base event is <a>monovalent</a> (<i>Ali Hasan<b>-t</b> öl-dür-dü</i> <q>Ali killed Hasan [<sc>acc</sc>]</q>), and in the Dative Case if the base event is <a>bivalent</a> (<i>Dişçi mektub-u müdür<b>-e</b> imzala-t-tí</i> <q>The dentist got the director [<sc>dat</sc>] to sign the letter</q>). (Section 9.2)
 
@@ -10091,7 +9797,6 @@
   SubtypeOf:
     - information element (FN-Br) [inf]
   AssociatedTo:
-    - poset [inf]
   Definition: >-
     a concept evoked or inferrable in the prior discourse that is a member of a <a>poset</a> that also includes the <a>link</a>. <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the album mentioned in the first turn is the trigger that generates a poset together with the song mentioned in the second turn; the latter serves as the link to the trigger. (Section 11.2.3)
 
@@ -10228,8 +9933,7 @@
     - unexpected co-occurrence
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
-  AssociatedTo:
-    - adversative coordination [cxn]
+  AssociatedTo: []
   Definition: >-
     a semantic relation between two <a>events</a> in which two events are juxtposed and the second event is unexpected. Unexpected co-occurrence is often expressed with <a>adversative coordination</a>. <i>Example</i>: Russian <i>Vanja prostudilsja, no poshël v shkolu</i> [Vanja caught_cold <sc>conj</sc> went to school] <q>Vanja caught a cold, but went to school</q> is an instance of the unexpected co-occurrence relation, using a <a>coordinator</a> <i>no</i> which is distinct from the coordinator <i>a</i> which is used for <a>simple contrast</a>. (Section 15.2.1)
 
@@ -10240,8 +9944,7 @@
     - universal concessive conditional strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - concessive conditional construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a strategy for expressing a <a>concessive conditional construction</a> where the <a>protasis</a>, which specifies the set of conditions for the concessive conditional, quantifies over all the alternatives possible in the <a>scalar model</a>; the <a>apodosis</a> expresses that the outcome is the same under all conditions. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> uses the universal concessive conditional strategy: the protasis quantifies over all amounts of advice that you could give him, and the apodosis asserts that he does exactly what he wants to do under any of those conditions. (Section 17.3.3)
 
@@ -10324,8 +10027,7 @@
   SubtypeOf:
     - prototypical construction [cxn]
     - predicate [cxn]
-  AssociatedTo:
-    - verbal clause [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>head</a> of a <a>verbal clause</a> -- that is, a <a>clause</a> that denotes an <a>action</a>. <i>Example</i>: the word <i>jumped</i> in the clause <i>She jumped</i>, is a verb -- it is an action word that is the head of the clause and is predicated of <i>She</i>. (Sections 2.2.3, 6.1.1)
 
@@ -10338,7 +10040,6 @@
   SubtypeOf:
     - overt (coding) strategy [str]
   AssociatedTo:
-    - relative clause [cxn]
     - necessary participant sharing [sem]
   Definition: >-
     a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a voice construction>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a instrument>instrumental</a> <a applicative object>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
@@ -10350,8 +10051,7 @@
     - verb-framing strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - path (of motion) verb [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for expressing <a>motion events</a> such that the path of motion is expressed by a <a>path verb</a>. <i>Example</i>: <i>The guests entered the reception hall</i> uses the verb-framing strategy: the path verb <i>enter</i> describes a <a>path of motion event</a>. (Section 7.3.1)
 
@@ -10398,8 +10098,7 @@
     - verbal strategy
   SubtypeOf:
     - actual information packaging strategy [str]
-  AssociatedTo:
-    - nonprototypical predication [cxn]
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> what was originally the <a>action</a> <a>predication</a> <a>construction</a> for <a>nonprototypical predication</a>. It is presumed that an originally action predication construction lacks an <a>auxiliary</a>, and it expresses certain grammatical categories, in particular <a>person indexation</a> and <a>negation</a>. <i>Example</i>: Nahuatl <i>ni-ti:citl</i> [<sc>1sg</sc>-doctor] <q>I am a doctor</q> recruits the action predication construction for <a>object</a> <a>predication</a>; cf. <i>ni-cho:ca</i> [<sc>1sg</sc>-cry] <q>I am crying</q>. (Section 10.2)
 
@@ -10447,7 +10146,6 @@
     - evaluative event [sem]
   AssociatedTo:
     - evaluative predicate [cxn]
-    - negative epistemic stance [sem]
   Definition: >-
     an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the wishing event is made, and there is a <a>negative epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
 
@@ -10470,8 +10168,7 @@
     - companion strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - presentational possession [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed in a <a>subject phrase</a>, and the <a>possessum</a> is expressed in a <a>comitative</a> <a>phrase</a>. <i>Example</i>: Amele <i>ija sigin <b>ca</b></i> [I knife <b>with</b>] <q>I have a knife</q> [lit. <q>I am with a knife</q>] is an instance of the with-possessive strategy. (Section 10.4.2)
 
@@ -10515,8 +10212,7 @@
     - no alignment strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - polarity response [cxn]
+  AssociatedTo: []
   Definition: >-
     an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a>polarity question</a> aligns the polarity of the answer, not the polarity of the speaker's question. <i>Example</i>: in English, the answer to the negative polarity question <i>Do you not have any money?</i> where the addressee does not have any money is <i>No</i>; the polarity of the response matches the polarity of the answer (that the addressee does not have any money). (Section 12.3.3)
 
@@ -10530,8 +10226,7 @@
     - disagree alignment strategy
   SubtypeOf:
     - strategy [def]
-  AssociatedTo:
-    - polarity response [cxn]
+  AssociatedTo: []
   Definition: >-
     an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a>polarity question</a> aligns the polarity of the answer when the answer is negative, but uses a special disagreeing form when the answer is positive. <i>Example</i>: in French, when the question is <q>Do you not have any money?</q>, the answer <i>non</i> <q>no</q> indicates that the respondent has no money, but the answer <i>si</i> (different from the positive answer <i>oui</i> <q>yes</q>) indicates that the respondent disagrees with the speaker and indeed does have money. (Section 12.3.3)
 
@@ -10561,8 +10256,7 @@
     - null anaphora
   SubtypeOf:
     - reference tracking [cxn]
-  AssociatedTo:
-    - referring phrase [cxn]
+  AssociatedTo: []
   Definition: >-
     the absence of a <a>referring phrase</a> for a <a>referent</a> in a construction. Zero anaphora is frequently used when the referent is <a>active</a>. (Section 3.3.1)
 
@@ -10586,7 +10280,6 @@
     - zero verb-coded voice strategy
   SubtypeOf:
     - zero coded strategy [str]
-  AssociatedTo:
-    - voice construction [cxn]
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> with any of the different kinds of <a>voice constructions</a> in which there is <a>zero coding</a> of the <a>function</a> of the voice construction on the <a>verb</a>. <i>Example</i>: <i>John planted the garden with trees</i> is an applicative construction without any overt coding of the applicative function on the verb <i>planted</i>. (Section 9.4)
