@@ -28,10 +28,11 @@
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf:
+    - bivalent event [sem]
+  AssociatedTo:
     - active category [str]
     - ergative category [str]
     - nominative category [str]
-  AssociatedTo: []
   Definition: >-
     the <a>agent</a> or agent-like <a>central participant role</a> in the prototypical <a>bivalent event</a> (that is, a breaking event) or the prototypical <a>trivalent event</a> (that is, a giving event). <i>Examples</i>: in <i>Jack broke the window</i>, Jack plays the A role in the breaking event; and in <i>Jill gave Joe the keys</i>, Jill plays the A role in the giving event. (Section 6.3.1)
 
@@ -2863,9 +2864,9 @@
     - coordinator
   SubtypeOf:
     - conjunction [str]
-  ConstituentOf:
+  ConstituentOf: []
+  AssociatedTo:
     - coordinate clause construction [cxn]
-  AssociatedTo: []
   Definition: >-
     a morpheme that overtly expresses the coordination relation in a <a>coordinate construction</a>. <i>Example</i>: in <i>She picked up the pieces and dumped them in the wastebasket</i>, <i>and</i> is the coordinator. A coordinate construction with a coordinator is an example of <a>syndetic</a> coordination. If the morpheme is affixed to a predicate, it is not a coordinator but an overt marker of <a>deranked</a> status. (Section 15.2.2)
 
@@ -7305,12 +7306,13 @@
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf:
+    - bivalent event [sem]
+  AssociatedTo:
     - absolutive category [str]
     - accusative category [str]
     - direct object category [str]
     - inactive category [str]
     - primary object category [str]
-  AssociatedTo: []
   Definition: >-
     the <a>patient</a> or patient-like <a>central participant role</a> in the prototypical <a>bivalent event</a> (that is, a breaking event). <i>Example</i>: in <i>Jack broke the window</i>, the window plays the P role in the breaking event. (Section 6.3.1)
 
@@ -9292,11 +9294,12 @@
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf:
+    - monovalent event [sem]
+  AssociatedTo:
     - active category [str]
     - absolutive category [str]
     - inactive category [str]
     - nominative category [str]
-  AssociatedTo: []
   Definition: >-
     the one <a>central participant role</a> in a <a>monovalent event</a>. <i>Example</i>: in <i>Jack ran</i> or <i>Jack died</i>, Jack plays the S role in the running and dying events, respectively. It is not entirely clear what event best serves as the exemplar monovalent event for defining the S role (Sections 6.3.1, 6.3.3)
 
@@ -10299,9 +10302,10 @@
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf:
+    - transfer event [sem]
+  AssociatedTo:
     - direct object category [str]
     - secondary object category [str]
-  AssociatedTo: []
   Definition: >-
     the <a>theme</a> <a>central participant role</a> in a <a>transfer event</a> -- that is, the <a>participant</a> that is transferred from the <a>agent</a> (<a>A</a>) to the <a>recipient</a> (<a>R</a>). <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the car is in the T role. (Section 7.5.2)
 
