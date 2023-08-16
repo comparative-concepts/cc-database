@@ -261,6 +261,11 @@ class CCDBParser:
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</td></tr>')
 
+            if (constituentOf := item['ConstituentOf']):
+                print(f'<tr><th>Part of</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, constituentOf)) +
+                      '</td></tr>')
+
             if (associatedTo := item['AssociatedTo']):
                 print(f'<tr><th>Associated</th> <td class="ccinfo relation">' +
                       ' | '.join(map(self.convert_link_to_html, associatedTo)) +
