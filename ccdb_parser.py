@@ -5,24 +5,38 @@ import yaml
 import json
 import argparse
 from pathlib import Path
-from typing import Union, Optional
+from typing import TypedDict, Union, Optional
 from datetime import datetime
 
 # A parsed definition is a list of either strings or links (as pairs of strings)
 ParsedDefinition = list[Union[str, tuple[str, str]]]
 
+# The type of glossary items
+class GlossItem(TypedDict):
+    Id: str
+    Type: str
+    InstanceOf: str
+    Alias: list[str]
+    SubtypeOf: list[str]
+    ConstituentOf: list[str]
+    AssociatedTo: list[str]
+    Definition: str
+    DefinitionLinks: list[str]
+    ParsedDefinition: ParsedDefinition
+
+
 class CCDBParser:
-    glosses: dict[str, dict]
+    glosses: dict[str, GlossItem]
     allnames: dict[str, str]
-    notfound: set
+    notfound: set[str]
     errors: int
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.errors = 0
         self.notfound = set()
 
 
-    def parse_yaml_database(self, glossfile:Union[str,Path]):
+    def parse_yaml_database(self, glossfile: Union[str,Path]) -> None:
         """Parse a YAML database."""
         with open(glossfile) as F:
             self.glosses = {
@@ -51,10 +65,10 @@ class CCDBParser:
             item['DefinitionLinks'] = links
 
 
-    def parse_definition(self, id:str, definition:str) -> tuple[ParsedDefinition, list[str]]:
+    def parse_definition(self, id: str, definition: str) -> tuple[ParsedDefinition, list[str]]:
         """Parse a definition and return the expanded definition and the list of links."""
-        links = []
-        expanded_definition = []
+        links: list[str] = []
+        expanded_definition: ParsedDefinition = []
         for part in re.split(r'(<a[^<>]*>.+?</a>)', definition):
             if (m := re.match(r'<a *([^<>]*?)>(.+?)</a>', part)):
                 name = m.group(2)
@@ -78,7 +92,7 @@ class CCDBParser:
         return expanded_definition, links
 
 
-    def clean_link(self, link:str) -> Optional[str]:
+    def clean_link(self, link: str) -> Optional[str]:
         """Clean a link by trying some very common English inflection patterns."""
         link = link.casefold()
         link = re.sub(r"[^'a-z/()-]+", ' ', link).strip()
@@ -103,7 +117,7 @@ class CCDBParser:
         return link
 
 
-    def find_closest(self, link:str) -> Optional[str]:
+    def find_closest(self, link: str) -> Optional[str]:
         """Find the closest CC id that a link refers to."""
         for name, id in self.allnames.items():
             if name == link:
@@ -128,7 +142,7 @@ class CCDBParser:
     }
 
 
-    def expand_link(self, id:str, name:Optional[str]=None) -> str:
+    def expand_link(self, id: str, name: Optional[str] = None) -> str:
         """Expand an abbreviated link "<a>name</a>" into the form "<a id>name</a>"."""
         if name is None: 
             name = id
@@ -140,7 +154,7 @@ class CCDBParser:
 
 
     @staticmethod
-    def uri_friendly_name(name:str) -> str:
+    def uri_friendly_name(name: str) -> str:
         """Make CC names (ids, aliases) URI-friendly."""
         return (name
             .replace('(', '').replace(')', '')
@@ -153,7 +167,7 @@ class CCDBParser:
 
 
     @staticmethod
-    def html_friendly_name(name:str) -> str:
+    def html_friendly_name(name: str) -> str:
         """Make CC names (ids, aliases) html-friendly."""
         return (name
             .replace('---', '\u2014') # em-dash
@@ -162,7 +176,7 @@ class CCDBParser:
         )
 
 
-    def convert_link_to_html(self, id:str, name:Optional[str]=None, selfid:Optional[str]=None) -> str:
+    def convert_link_to_html(self, id: str, name: Optional[str] = None, selfid: Optional[str] = None) -> str:
         """Convert a CC link into HTML, with an actual link to the CC in the database."""
         if name is None: 
             name = id
@@ -174,9 +188,9 @@ class CCDBParser:
             return f'<a href="#{href_id}">{html_name}</a>'
 
 
-    def convert_definition_to_html(self, definition:ParsedDefinition) -> str:
+    def convert_definition_to_html(self, definition: ParsedDefinition) -> str:
         """Convert a CC definition into HTML, with actual links to the CCs in the database."""
-        html_parts = []
+        html_parts: list[str] = []
         for part in definition:
             if isinstance(part, tuple):
                 part = self.convert_link_to_html(*part)
@@ -185,7 +199,7 @@ class CCDBParser:
 
 
     @staticmethod
-    def clean_definition_html(definition:str) -> str:
+    def clean_definition_html(definition: str) -> str:
         """Standard HTML conversions."""
         return (definition
             .replace('</a> <a', '</a> <span class="separation"/> <a')
@@ -237,10 +251,11 @@ class CCDBParser:
                 print('</span><span>'.join(self.convert_link_to_html(ch, selfid=id) for ch in children))
                 print('</span></td></tr></table></td></tr>')
 
-            if (type := item['Type']):
+            type: str = item['Type']
+            if type:
                 if type != 'def':
-                    types = type.split('/')
-                    entries = [self.TYPE_TO_ENTRY.get(t) for t in types]
+                    types: list[str] = type.split('/')
+                    entries: list[str] = [self.TYPE_TO_ENTRY.get(t, "") for t in types]
                     if all(entries):
                         type = ' / '.join(
                             ( self.convert_link_to_html(e, re.sub(r" *\[\w+\] *", "", e)) 
@@ -256,17 +271,20 @@ class CCDBParser:
                     type = 'definition'
                 print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
 
-            if (aliases := item.get('Alias')):
+            aliases: list[str] = item.get('Alias', [])
+            if aliases:
                 print('<th>Alias(es)</th> <td class="ccinfo name">' +
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</td></tr>')
 
-            if (constituentOf := item['ConstituentOf']):
+            constituentOf: list[str] = item['ConstituentOf']
+            if constituentOf:
                 print(f'<tr><th>Part of</th> <td class="ccinfo relation">' +
                       ' | '.join(map(self.convert_link_to_html, constituentOf)) +
                       '</td></tr>')
 
-            if (associatedTo := item['AssociatedTo']):
+            associatedTo: list[str] = item['AssociatedTo']
+            if associatedTo:
                 print(f'<tr><th>Associated</th> <td class="ccinfo relation">' +
                       ' | '.join(map(self.convert_link_to_html, associatedTo)) +
                       '</td></tr>')
@@ -291,7 +309,8 @@ class CCDBParser:
                     print('</td></tr>')
                 print('</table></td></tr>')
 
-            if (parsedDefinition := item['ParsedDefinition']): 
+            parsedDefinition: ParsedDefinition = item['ParsedDefinition']
+            if parsedDefinition: 
                 print(f'<tr><th>Definition</th> <td class="ccinfo definition">' +
                       self.convert_definition_to_html(parsedDefinition) +
                       '</td></tr>')
@@ -310,9 +329,9 @@ class CCDBParser:
     }
 
 
-    def convert_definition_to_karp(self, definition:ParsedDefinition) -> str:
+    def convert_definition_to_karp(self, definition: ParsedDefinition) -> str:
         """Convert a CC definition into a Karp-formatted string."""
-        karp_parts = []
+        karp_parts: list[str] = []
         for part in definition:
             if isinstance(part, tuple):
                 part = f"<a {part[0]}>{part[1]}</a>"
@@ -323,12 +342,14 @@ class CCDBParser:
     def export_to_karp(self):
         """Export the whole database as a single JSON-lines file for use in Karp (to stdout)."""
         for id in sorted(self.glosses, key=str.casefold):
-            item = self.glosses[id]
+            item: GlossItem = self.glosses[id]
             out = {}
             for key, outkey in self.KARP_KEYS:
-                if (value := item.get(key)):
+                if key in item:
                     if key == 'ParsedDefinition':
-                        value = self.convert_definition_to_karp(value)
+                        value = self.convert_definition_to_karp(item[key])
+                    else:
+                        value = item[key]
                     out[outkey] = value
             print(json.dumps(out))
 
@@ -351,26 +372,29 @@ class CCDBParser:
             id: id.replace('[def]', '['+typ+']')
             for typ, id in self.TYPE_TO_ENTRY.items()
         }
-        out_ccs = []
+        out_ccs: list[dict[str, Union[str, list[str]]]] = []
         for id in sorted(self.glosses, key=str.casefold):
             item = self.glosses[id]
             if not (item['Type'] in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
                 continue
             if any(instance.get('InstanceOf') == id for instance in self.glosses.values()):
                 continue
-            out = {}
+            out: dict[str, Union[str, list[str]]] = {}
             for key, outkey in self.FNBR_KEYS:
-                if outkey == 'associatedTo' and item['Type'] != 'cxn' and (parent := item.get('InstanceOf')):
-                    # Find the constructions that are instance-siblings, 
-                    # but only if the item itself is not a construction
-                    siblings = [
-                        sib for sib, sibitem in self.glosses.items() 
-                        if sib != id and sibitem.get('InstanceOf') == parent
-                        if sibitem.get('Type') == 'cxn'
-                    ]
-                    item.setdefault(key, []).extend(siblings)
+                if key == 'AssociatedTo' and item['Type'] != 'cxn':
+                    parent: str = item.get('InstanceOf', "")
+                    if parent:
+                        # Find the constructions that are instance-siblings, 
+                        # but only if the item itself is not a construction
+                        siblings = [
+                            sib for sib, sibitem in self.glosses.items() 
+                            if sib != id and sibitem.get('InstanceOf') == parent
+                            if sibitem.get('Type') == 'cxn'
+                        ]
+                        item.setdefault(key, []).extend(siblings)
 
-                if (value := item.get(key)):
+                value: Optional[Union[str, list[str]]] = item.get(key)
+                if value:
                     if isinstance(value, str):
                         if outkey != 'definition':
                             # we use "--" in ids, where FNBr uses "-"
@@ -388,7 +412,7 @@ class CCDBParser:
                             # Convert type names (e.g., "cxn" --> "construction")
                             value = self.FNBR_TYPES.get(value, value)
 
-                    elif isinstance(value, list):
+                    elif isinstance(value, list):  # type: ignore
                         # we use "--" in ids, where FNBr uses "-"
                         value = [v.replace('--', '-') for v in value]
                         if outkey == 'subTypeOf':
@@ -401,8 +425,10 @@ class CCDBParser:
 
                 elif outkey == 'definition':
                     out[outkey] = ""
-                    if (parent := item.get('InstanceOf')):
-                        if (parent_definition := self.glosses[parent].get('Definition')):
+                    parent: str = item.get('InstanceOf', "")
+                    if parent:
+                        parent_definition: str = self.glosses[parent].get('Definition', "")
+                        if parent_definition:
                             out[outkey] = parent_definition
             out_ccs.append(out)
         final_output = {
