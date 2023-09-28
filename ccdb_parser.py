@@ -27,7 +27,7 @@ class GlossItem(TypedDict):
 
 class CCDBParser:
     glosses: dict[str, GlossItem]
-    allnames: dict[str, str]
+    allnames: dict[str, tuple[str,...]]
     notfound: set[str]
     errors: int
 
@@ -85,11 +85,11 @@ class CCDBParser:
             }
 
         # All possible names (ids and aliases)
-        self.allnames = {
-            name.casefold(): id 
-            for id, item in self.glosses.items() 
-            for name in [id, item['Name']] + item['Alias']
-        }
+        allnames: dict[str, set[str]] = {}
+        for id, item in self.glosses.items():
+            for name in [id, item['Name']] + item['Alias']:
+                allnames.setdefault(name.casefold(), set()).add(id)
+        self.allnames = {name: tuple(ids) for name, ids in allnames.items()}
 
         # Sanity check: No alias should be an existing id
         allids = set(id.casefold() for id in self.glosses)
@@ -117,14 +117,15 @@ class CCDBParser:
                 if not link:
                     self.error(f"{id}: Could not clean link '{original_link}'")
                     link = original_link
-                if link in self.allnames:
-                    linkid = self.allnames[link]
-                else:
-                    linkid = self.find_closest(link)
-                if not linkid:
+                linkids = self.find_closest(link)
+                if not linkids:
                     self.error(f"{id}: Could not find any matching id for link '{link}'")
                     self.notfound.add(link)
                     linkid = link
+                else:
+                    if len(linkids) > 1:
+                        self.error(f"{id}: Ambiguous link '{link}', maps to any of {linkids}")
+                    linkid = linkids[0]
                 links.append(linkid)
                 part = (linkid, name)
             if part:
@@ -157,28 +158,28 @@ class CCDBParser:
         return link
 
 
-    def find_closest(self, link: str) -> Optional[str]:
-        """Find the closest CC id that a link refers to."""
-        for name, id in self.allnames.items():
-            if name == link:
-                return id
-            for idtype, nametypes in self.TYPE_ENDINGS.items():
-                for nametype in nametypes:
-                    if link.endswith(' '+nametype) and id.endswith(' '+idtype):
-                        if name == link[:-len(nametype)].strip():
-                            return id
-                        if name.endswith(' '+idtype):
-                            if name[:-len(idtype)].strip() == link[:-len(nametype)].strip():
-                                return id
+    def find_closest(self, link: str) -> tuple[str, ...]:
+        """Find the closest CC ids that a link refers to."""
+        if link in self.allnames:
+            return self.allnames[link]
+        for name, ids in self.allnames.items():
+            for id in ids:
+                idtype, _, _ = id.partition(":")
+                for nametype in self.TYPE_ENDINGS[idtype]:
+                    if link.endswith(' '+nametype) and id.startswith(idtype+':'):
+                        linkname = link[:-len(nametype)].strip()
+                        if name == linkname:
+                            return (id,)
                         break
-        return None
+        return ()
 
     # Used when finding the closest match of a link
     TYPE_ENDINGS = {
-        '[cxn]': ['construction', 'constructions'],
-        '[str]': ['strategy', 'strategies', 'category', 'categories'],
-        '[inf]': ['construal', 'information packaging', 'referent', 'referents'],
-        '[sem]': ['role', 'roles', 'relation', 'relations'],
+        'cxn': ['construction', 'constructions'],
+        'str': ['strategy', 'strategies', 'category', 'categories'],
+        'inf': ['construal', 'information packaging', 'referent', 'referents'],
+        'sem': ['role', 'roles', 'relation', 'relations'],
+        'def': [],
     }
 
 
@@ -194,19 +195,6 @@ class CCDBParser:
 
 
     @staticmethod
-    def uri_friendly_name(name: str) -> str:
-        """Make CC names (ids, aliases) URI-friendly."""
-        return (name
-            .replace('(', '').replace(')', '')
-            .replace('[', '(').replace(']', ')')
-            .replace('/', '-')
-            .replace(' ', '-')
-            .replace('---', '-')
-            .replace('--', '-')
-        )
-
-
-    @staticmethod
     def html_friendly_name(name: str) -> str:
         """Make CC names (ids, aliases) html-friendly."""
         return (name
@@ -219,13 +207,13 @@ class CCDBParser:
     def convert_link_to_html(self, id: str, name: Optional[str] = None, selfid: Optional[str] = None) -> str:
         """Convert a CC link into HTML, with an actual link to the CC in the database."""
         if name is None: 
-            name = id
-        href_id = self.uri_friendly_name(id)
+            item = self.glosses[id]
+            name = f"{item['Name']} [{item['Type']}]"
         html_name = self.html_friendly_name(name)
         if id == selfid:
             return f'<strong>{html_name}</strong>'
         else:
-            return f'<a href="#{href_id}">{html_name}</a>'
+            return f'<a href="#{id}">{html_name}</a>'
 
 
     def convert_definition_to_html(self, definition: ParsedDefinition) -> str:
@@ -267,35 +255,31 @@ class CCDBParser:
         print(f"<p>Extracted from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
 
-        glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[0]))
+        glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1]['Name']))
 
         nlinks = sum(len(item['DefinitionLinks']) for _, item in glossitems)
         print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, and {nlinks} links within CC definitions</p>')
 
         print('<div id="glosses">')
         for id, item in glossitems:
-            print(f'<div class="cc" id="{self.uri_friendly_name(id)}">')
+            print(f'<div class="cc" id="{id}">')
             print(f'<h2 class="name">{self.convert_link_to_html(id)}</h2>')
             print(f'<table>')
 
             type: str = item['Type']
             if type:
-                if type != 'def':
-                    types: list[str] = type.split('/')
-                    entries: list[str] = [self.TYPE_TO_ENTRY.get(t, "") for t in types]
-                    if all(entries):
-                        type = ' / '.join(
-                            ( self.convert_link_to_html(e, re.sub(r" *\[\w+\] *", "", e)) 
-                              if e in self.glosses else e )
-                            for e in entries
-                        )
-                    else:
-                        self.error(f"{id}: Type not found: {type}")
-                        self.notfound.add(type)
-                        type = f'<span class="notfound">{type}</span>'
-                else:
+                entry = self.TYPE_TO_ENTRY.get(type)
+                if entry:
+                    _, _, entryname = entry.partition(":")
+                    entryname = entryname.replace("-", " ")
+                    type = self.convert_link_to_html(entry, entryname)
+                elif type == 'def':
                     # Just a better alias for the HTML
                     type = 'definition'
+                else:
+                    self.error(f"{id}: Type not found: {type}")
+                    self.notfound.add(type)
+                    type = f'<span class="notfound">{type}</span>'
                 print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
 
             aliases: list[str] = [item['Name']] + item.get('Alias', [])
@@ -349,10 +333,10 @@ class CCDBParser:
 
     # What general definitions do different types correspond to?
     TYPE_TO_ENTRY = {
-        'cxn': 'construction [def]',
-        'str': 'strategy [def]',
-        'inf': 'information packaging [def]',
-        'sem': 'meaning [def]',
+        'cxn': 'def:construction',
+        'str': 'def:strategy',
+        'inf': 'def:information-packaging',
+        'sem': 'def:meaning',
     }
 
 
@@ -458,9 +442,7 @@ class CCDBParser:
     FNBR_TYPES = {
         'cxn': 'construction',
         'str': 'strategy',
-        'str:fnbr': 'strategy',
         'inf': 'information packaging',
-        'inf:fnbr': 'information packaging',
         'sem': 'meaning',
     }
 
