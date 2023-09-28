@@ -53,7 +53,10 @@ class CCDBParser:
                 for id2, item2 in self.glosses.items():
                     if id != id2 and item['Type'] == item2['Type']: 
                         assert item['Name'] != item2['Name'], f"Name also occurs in {id2!r}"
-                assert item['Name'] not in item['Alias'], f"Name occurs as Alias"
+                # an alias should not be a name
+                for alias in item['Alias']:
+                    for id2, item2 in self.glosses.items():
+                        assert alias != item2['Name'], f"Alias {alias!r} is also the name for id {id2!r}"
                 assert len(set(item['Alias'])) == len(item['Alias']), f"Duplicate aliases"
                 # check that ids exits
                 for key in ('SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
