@@ -214,7 +214,6 @@
   Name: active category
   Alias:
     - agentive
-    - actor
     - actor category
     - agentive category
   SubtypeOf:
@@ -4747,7 +4746,6 @@
   Type: str
   Name: inactive category
   Alias:
-    - stative
     - patientive
     - undergoer
     - stative category
@@ -8573,7 +8571,6 @@
   Name: role
   Alias:
     - slot
-    - function
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
