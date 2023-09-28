@@ -65,7 +65,10 @@ class CCDBParser:
                             if isinstance(relid, str): continue
                             relid = relid[0] # type: ignore
                         assert relid in self.glosses, f"{key} id doesn't exist: {relid!r}"
-                
+                # check the CC type
+                typ = item['Type']
+                assert typ in ('cxn', 'inf', 'sem', 'str', 'def'), f"Unknown CC type: {typ}"
+
             except AssertionError as e:
                 self.error(f"{id}: {e}")
 
