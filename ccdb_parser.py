@@ -4,7 +4,6 @@ import re
 import yaml
 import json
 import argparse
-from inspect import currentframe
 from pathlib import Path
 from typing import TypedDict, Union, Optional
 from datetime import datetime
@@ -465,8 +464,10 @@ class CCDBParser:
 
     def error(self, err:str):
         """Report an error."""
-        lineno = currentframe().f_back.f_lineno  # type: ignore
-        print(f"[line {lineno}] **ERROR** {err}", file=sys.stderr)
+        print(f"**ERROR** {err}", file=sys.stderr)
+        # from inspect import currentframe
+        # lineno = currentframe().f_back.f_lineno  # type: ignore
+        # print(f"[line {lineno}] **ERROR** {err}", file=sys.stderr)
         self.errors += 1
 
 
