@@ -37,6 +37,40 @@ class CCDBParser:
         self.notfound = set()
 
 
+    def validate_database(self) -> None:
+        for id, item in self.glosses.items():
+            try:
+                assert id == item['Id'], f"Mismatched id, != {item['Id']!r}"
+                # type check
+                for key in ('Id', 'Name', 'Type', 'InstanceOf', 'Definition'):
+                    assert isinstance(item[key], str), f"Type error: {key} is not str"
+                for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks'):
+                    assert isinstance(item[key], list) and all(isinstance(x, str) for x in item[key]), f"Type error: {key} is not list[str]"
+                for key in ('ParsedDefinition',):
+                    for x in item[key]:
+                        if isinstance(x, str): continue
+                        assert isinstance(x, tuple) and len(x) == 2 and all(isinstance(y, str) for y in x), f"Type error: {key} is not of type {ParsedDefinition}"
+                # the name must be unique among names (with the same type)
+                for id2, item2 in self.glosses.items():
+                    if id != id2 and item['Type'] == item2['Type']: 
+                        assert item['Name'] != item2['Name'], f"Name also occurs in {id2!r}"
+                assert item['Name'] not in item['Alias'], f"Name occurs as Alias"
+                assert len(set(item['Alias'])) == len(item['Alias']), f"Duplicate aliases"
+                # check that ids exits
+                for key in ('InstanceOf', 'SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
+                    relids = item[key]
+                    if isinstance(relids, str): relids = [relids]
+                    for relid in relids:
+                        if not relid: continue
+                        if key == 'ParsedDefinition':
+                            if isinstance(relid, str): continue
+                            relid = relid[0] # type: ignore
+                        assert relid in self.glosses, f"{key} id doesn't exist: {relid!r}"
+                
+            except AssertionError as e:
+                self.error(f"{id}: {e}")
+
+
     def parse_yaml_database(self, glossfile: Union[str,Path]) -> None:
         """Parse a YAML database."""
         with open(glossfile) as F:
@@ -489,6 +523,7 @@ if __name__ == '__main__':
         print("No output format selected, I will only validate the database.", file=sys.stderr)
     ccdb = CCDBParser()
     ccdb.parse_yaml_database(args.cc_database)
+    ccdb.validate_database()
     if args.format == 'html':
         ccdb.print_html()
     elif args.format == 'karp':
