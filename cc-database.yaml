@@ -202,7 +202,7 @@
   Name: active alignment system
   Alias:
     - active alignment
-  SubtypeOf: 
+  SubtypeOf:
     - alignment system [str]
   ConstituentOf: []
   AssociatedTo: []
@@ -4839,7 +4839,7 @@
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>article</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: <i>a bowl</i> is an example of an indefinite article <i>a</i> combined with a <a>common noun</a> bowl, used in a context where the individual bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1) 
+    an <a>article</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: <i>a bowl</i> is an example of an indefinite article <i>a</i> combined with a <a>common noun</a> bowl, used in a context where the individual bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
 
 - Id: indefinite pronoun [cxn]
   Type: cxn
@@ -4850,7 +4850,7 @@
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>pronoun</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: in <i>Something is under the bed</i>, <i>something</i> is an example of an indefinite pronoun, used in a context where the referent is not identifiable by the hearer. (Table 3.4, Section 3.3.1) 
+    a <a>pronoun</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: in <i>Something is under the bed</i>, <i>something</i> is an example of an indefinite pronoun, used in a context where the referent is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
 
 - Id: independent referring phrase strategy [str]
   Type: str
@@ -5907,7 +5907,7 @@
   Type: sem
   Name: mental space
   Alias: []
-  SubtypeOf: 
+  SubtypeOf:
     - meaning [def]
   ConstituentOf: []
   AssociatedTo: []
@@ -6020,7 +6020,7 @@
   Alias: []
   SubtypeOf:
     - head [cxn]
-  ConstituentOf: 
+  ConstituentOf:
     - attributive phrase [cxn]
   AssociatedTo:
     - anaphoric-head construction [cxn]
