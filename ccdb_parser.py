@@ -16,7 +16,6 @@ class GlossItem(TypedDict):
     Id: str
     Name: str
     Type: str
-    InstanceOf: str
     Alias: list[str]
     SubtypeOf: list[str]
     ConstituentOf: list[str]
@@ -42,7 +41,7 @@ class CCDBParser:
             try:
                 assert id == item['Id'], f"Mismatched id, != {item['Id']!r}"
                 # type check
-                for key in ('Id', 'Name', 'Type', 'InstanceOf', 'Definition'):
+                for key in ('Id', 'Name', 'Type', 'Definition'):
                     assert isinstance(item[key], str), f"Type error: {key} is not str"
                 for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks'):
                     assert isinstance(item[key], list) and all(isinstance(x, str) for x in item[key]), f"Type error: {key} is not list[str]"
@@ -57,7 +56,7 @@ class CCDBParser:
                 assert item['Name'] not in item['Alias'], f"Name occurs as Alias"
                 assert len(set(item['Alias'])) == len(item['Alias']), f"Duplicate aliases"
                 # check that ids exits
-                for key in ('InstanceOf', 'SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
+                for key in ('SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
                     relids = item[key]
                     if isinstance(relids, str): relids = [relids]
                     for relid in relids:
@@ -273,19 +272,6 @@ class CCDBParser:
             print(f'<h2 class="name">{self.convert_link_to_html(id)}</h2>')
             print(f'<table>')
 
-            if any(child.get('InstanceOf') == id for _, child in glossitems):
-                parent = id
-            else:
-                parent = item.get('InstanceOf')
-            if parent:
-                children = [chid for chid, child in glossitems if child.get('InstanceOf') == parent]
-                print('<tr><th>Umbrella</th> <td class="ccinfo relation">')
-                print(f'<table><tr><td class="flex"><span>')
-                print(self.convert_link_to_html(parent, selfid=id))
-                print('</span></td></tr><tr><td class="flex"><span>')
-                print('</span><span>'.join(self.convert_link_to_html(ch, selfid=id) for ch in children))
-                print('</span></td></tr></table></td></tr>')
-
             type: str = item['Type']
             if type:
                 if type != 'def':
@@ -394,7 +380,6 @@ class CCDBParser:
         ('Type', 'Type'),
         ('Name', 'Name'),
         ('Alias', 'Alias'),
-        ('InstanceOf', 'InstanceOf'),
         ('SubtypeOf', 'SubtypeOf'),
         ('AssociatedTo', 'AssociatedTo'),
         ('ParsedDefinition', 'Definition'),
@@ -413,22 +398,8 @@ class CCDBParser:
             item = self.glosses[id]
             if not (item['Type'] in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
                 continue
-            if any(instance.get('InstanceOf') == id for instance in self.glosses.values()):
-                continue
             out: dict[str, Union[str, list[str]]] = {}
             for key, outkey in self.FNBR_KEYS:
-                if key == 'AssociatedTo' and item['Type'] != 'cxn':
-                    parent: str = item.get('InstanceOf', "")
-                    if parent:
-                        # Find the constructions that are instance-siblings, 
-                        # but only if the item itself is not a construction
-                        siblings = [
-                            sib for sib, sibitem in self.glosses.items() 
-                            if sib != id and sibitem.get('InstanceOf') == parent
-                            if sibitem.get('Type') == 'cxn'
-                        ]
-                        item.setdefault(key, []).extend(siblings)
-
                 value: Optional[Union[str, list[str]]] = item.get(key)
                 if value:
                     if isinstance(value, str):
@@ -458,11 +429,6 @@ class CCDBParser:
 
                 elif outkey == 'definition':
                     out[outkey] = ""
-                    parent: str = item.get('InstanceOf', "")
-                    if parent:
-                        parent_definition: str = self.glosses[parent].get('Definition', "")
-                        if parent_definition:
-                            out[outkey] = parent_definition
             out_ccs.append(out)
         final_output = {
             'db-version': "export from cc-database",
@@ -480,7 +446,6 @@ class CCDBParser:
         ('AssociatedTo', 'associatedTo'),
         ('SubtypeOf', 'subTypeOf'),
         # ('Alias', 'alias'), # FNBR doesn't use this
-        # ('InstanceOf', 'instanceOf'), # FNBR doesn't use this - instead the siblings are added to associatedTo
     ]
 
     # What type names does FNBR use?
