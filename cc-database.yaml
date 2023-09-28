@@ -1998,7 +1998,8 @@
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
-  AssociatedTo: []
+  AssociatedTo:
+    - comparative pronoun [cxn]
   Definition: >-
     an unspecified <a>referent</a> occurring in the <a>standard</a> of comparison in a <a>comparative construction</a>. <i>Example</i>: in <i>The boy runs as fast as anyone in his class</i>, <i>anyone</i> is a comparative pronoun expressing a hypothetical referent selected from the class representing the standard to which the boy's running is being compared. (Section 3.5)
 
@@ -2797,7 +2798,8 @@
   SubtypeOf:
     - speech acts [inf]
   ConstituentOf: []
-  AssociatedTo: []
+  AssociatedTo:
+    - declarative [cxn]
   Definition: >-
     a <a>speech act</a> which simply asserts its <a>propositional content</a>. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. (Section 12.1)
 
