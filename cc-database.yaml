@@ -2,7 +2,9 @@
 - Id: alignment system category (FN-Br) [str]
   Type: str
   InstanceOf: ""
-  Alias: []
+  Alias:
+    - alignment system category (FN-Br)
+    - alignment system category
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -12,7 +14,9 @@
 - Id: semantic relation (FN-Br) [sem]
   Type: sem
   InstanceOf: ""
-  Alias: []
+  Alias:
+    - semantic relation (FN-Br)
+    - semantic relation
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -3472,7 +3476,9 @@
 - Id: discourse context (FN-Br) [inf]
   Type: inf
   InstanceOf: ""
-  Alias: []
+  Alias:
+    - discourse context (FN-Br)
+    - discourse context
   SubtypeOf:
     - information packaging [def]
   ConstituentOf: []
@@ -3722,7 +3728,9 @@
 - Id: strategy element (FN-Br) [str]
   Type: str
   InstanceOf: ""
-  Alias: []
+  Alias:
+    - strategy element (FN-Br)
+    - strategy element
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3733,7 +3741,9 @@
 - Id: information element (FN-Br) [inf]
   Type: inf
   InstanceOf: ""
-  Alias: []
+  Alias:
+    - information element (FN-Br)
+    - information element
   SubtypeOf:
     - information packaging [def]
   ConstituentOf: []
