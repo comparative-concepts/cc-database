@@ -14,6 +14,7 @@ ParsedDefinition = list[Union[str, tuple[str, str]]]
 # The type of glossary items
 class GlossItem(TypedDict):
     Id: str
+    Name: str
     Type: str
     InstanceOf: str
     Alias: list[str]
@@ -48,13 +49,13 @@ class CCDBParser:
         self.allnames = {
             name.casefold(): id 
             for id, item in self.glosses.items() 
-            for name in [id] + item['Alias']
+            for name in [id, item['Name']] + item['Alias']
         }
 
         # Sanity check: No alias should be an existing id
         allids = set(id.casefold() for id in self.glosses)
         for item in self.glosses.values():
-            for alias in item['Alias']: 
+            for alias in [item['Name']] + item['Alias']: 
                 assert alias.casefold() not in allids, (alias, item)
 
         # Expand all definitions by converting abbreviated links 
@@ -271,7 +272,7 @@ class CCDBParser:
                     type = 'definition'
                 print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
 
-            aliases: list[str] = item.get('Alias', [])
+            aliases: list[str] = [item['Name']] + item.get('Alias', [])
             if aliases:
                 print('<th>Alias(es)</th> <td class="ccinfo name">' +
                       ' | '.join(map(self.html_friendly_name, aliases)) +
@@ -357,6 +358,7 @@ class CCDBParser:
     KARP_KEYS = [
         ('Id', 'Id'),
         ('Type', 'Type'),
+        ('Name', 'Name'),
         ('Alias', 'Alias'),
         ('InstanceOf', 'InstanceOf'),
         ('SubtypeOf', 'SubtypeOf'),
@@ -402,9 +404,6 @@ class CCDBParser:
                         if outkey == 'id':
                             # Special cases (e.g., "strategy [def]" --> "strategy [str]")
                             value = SPECIAL_FNBR_CCs.get(id, value)
-                        elif outkey == 'name': 
-                            # The name is the CC id minus the type information
-                            value = re.sub(r" *\[[\w/]+\]( +/)?", "", value)
                         elif outkey == 'type':
                             # Special cases (e.g., "strategy" has FNBr type "strategy")
                             if id in SPECIAL_FNBR_CCs:
@@ -440,7 +439,7 @@ class CCDBParser:
 
     # Keys to include in the FrameNet Brazil output
     FNBR_KEYS = [
-        ('Id', 'name'), # The name is the id minus the type information
+        ('Name', 'name'),
         ('Definition', 'definition'),
         ('Type', 'type'),
         ('Id', 'id'),

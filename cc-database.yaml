@@ -2,8 +2,8 @@
 - Id: alignment system category (FN-Br) [str]
   Type: str
   InstanceOf: ""
+  Name: alignment system category (FN-Br)
   Alias:
-    - alignment system category (FN-Br)
     - alignment system category
   SubtypeOf:
     - strategy [def]
@@ -14,8 +14,8 @@
 - Id: semantic relation (FN-Br) [sem]
   Type: sem
   InstanceOf: ""
+  Name: semantic relation (FN-Br)
   Alias:
-    - semantic relation (FN-Br)
     - semantic relation
   SubtypeOf:
     - meaning [def]
@@ -26,8 +26,8 @@
 - Id: A role [sem]
   Type: sem
   InstanceOf: ""
+  Name: A role
   Alias:
-    - A role
     - A
   SubtypeOf:
     - semantic role [sem]
@@ -43,8 +43,8 @@
 - Id: A--not-A [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - A--not-A
+  Name: A--not-A
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -55,8 +55,8 @@
 - Id: about(ness) [inf]
   Type: inf
   InstanceOf: ""
+  Name: about(ness)
   Alias:
-    - about(ness)
     - aboutness
     - about
   SubtypeOf:
@@ -69,8 +69,8 @@
 - Id: absolute deranking system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - absolute deranking system
+  Name: absolute deranking system
+  Alias: []
   SubtypeOf:
     - system [str]
   ConstituentOf: []
@@ -81,8 +81,8 @@
 - Id: absolutive category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - absolutive category
+  Name: absolutive category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -94,8 +94,8 @@
 - Id: accessibility [inf]
   Type: inf
   InstanceOf: ""
+  Name: accessibility
   Alias:
-    - accessibility
     - activation
     - topic continuity
   SubtypeOf:
@@ -108,8 +108,8 @@
 - Id: Accessibility Hierarchy [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - Accessibility Hierarchy
+  Name: Accessibility Hierarchy
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -119,8 +119,8 @@
 - Id: Accessibility Scale [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - Accessibility Scale
+  Name: Accessibility Scale
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -130,8 +130,8 @@
 - Id: accusative alignment system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - accusative alignment system
+  Name: accusative alignment system
+  Alias: []
   SubtypeOf:
     - alignment system [str]
   ConstituentOf: []
@@ -142,8 +142,8 @@
 - Id: accusative category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - accusative category
+  Name: accusative category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -155,8 +155,8 @@
 - Id: achievement [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - achievement
+  Name: achievement
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf: []
@@ -167,8 +167,8 @@
 - Id: action (concept) [sem]
   Type: sem
   InstanceOf: ""
+  Name: action (concept)
   Alias:
-    - action (concept)
     - action concept
     - action
   SubtypeOf:
@@ -187,8 +187,8 @@
 - Id: action nominal [str]
   Type: str
   InstanceOf: ""
+  Name: action nominal
   Alias:
-    - action nominal
     - nominalization
   SubtypeOf:
     - deranked, deranking [str]
@@ -201,8 +201,8 @@
 - Id: active [inf]
   Type: inf
   InstanceOf: ""
+  Name: active
   Alias:
-    - active
     - in focus
   SubtypeOf:
     - accessibility [inf]
@@ -216,8 +216,8 @@
 - Id: active alignment system [str]
   Type: str
   InstanceOf: ""
+  Name: active alignment system
   Alias:
-    - active alignment system
     - active alignment
   SubtypeOf: 
     - alignment system [str]
@@ -229,8 +229,8 @@
 - Id: active category [str]
   Type: str
   InstanceOf: ""
+  Name: active category
   Alias:
-    - active category
     - agentive
     - actor
     - actor category
@@ -247,8 +247,8 @@
 - Id: actor [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - actor
+  Name: actor
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf:
@@ -260,8 +260,8 @@
 - Id: actual information packaging strategy [str]
   Type: str
   InstanceOf: ""
+  Name: actual information packaging strategy
   Alias:
-    - actual information packaging strategy
     - actual IP strategy
   SubtypeOf:
     - strategy [def]
@@ -275,8 +275,8 @@
 - Id: additive (focus) operator [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: additive (focus) operator
   Alias:
-    - additive (focus) operator
     - additive focus operator
     - additive operator
     - inclusive focus operator
@@ -290,8 +290,8 @@
 - Id: additive [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - additive
+  Name: additive
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -303,8 +303,8 @@
 - Id: adjectival phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - adjectival phrase
+  Name: adjectival phrase
+  Alias: []
   SubtypeOf:
     - attributive phrase [cxn]
     - prototypical construction [cxn]
@@ -316,8 +316,8 @@
 - Id: adjective [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - adjective
+  Name: adjective
+  Alias: []
   SubtypeOf:
     - prototypical construction [cxn]
     - modifier [cxn]
@@ -329,8 +329,8 @@
 - Id: adjective impersonal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adjective impersonal strategy
+  Name: adjective impersonal strategy
+  Alias: []
   SubtypeOf:
     - non-indexed [str]
     - balanced, balancing [str]
@@ -342,8 +342,8 @@
 - Id: adjective personal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adjective personal strategy
+  Name: adjective personal strategy
+  Alias: []
   SubtypeOf:
     - indexed [str]
     - balanced, balancing [str]
@@ -356,8 +356,8 @@
 - Id: adjoined strategy [str]
   Type: str
   InstanceOf: ""
+  Name: adjoined strategy
   Alias:
-    - adjoined strategy
     - adjoined
   SubtypeOf:
     - juxtaposition [str]
@@ -369,8 +369,8 @@
 - Id: adjunct [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - adjunct
+  Name: adjunct
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -380,8 +380,8 @@
 - Id: admodification [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - admodification
+  Name: admodification
+  Alias: []
   SubtypeOf:
     - modification [inf]
   ConstituentOf: []
@@ -392,8 +392,8 @@
 - Id: admodifier [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - admodifier
+  Name: admodifier
+  Alias: []
   SubtypeOf:
     - modifier [cxn]
     - nonprototypical construction [cxn]
@@ -406,8 +406,8 @@
 - Id: adnominal possessive strategy [str]
   Type: str
   InstanceOf: ""
+  Name: adnominal possessive strategy
   Alias:
-    - adnominal possessive strategy
     - genitive strategy
   SubtypeOf:
     - internal possessor strategy [str]
@@ -420,8 +420,8 @@
 - Id: adposition [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adposition
+  Name: adposition
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -432,8 +432,8 @@
 - Id: adpositional personal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adpositional personal strategy
+  Name: adpositional personal strategy
+  Alias: []
   SubtypeOf:
     - indexed [str]
     - deranked, deranking [str]
@@ -446,8 +446,8 @@
 - Id: adpositional strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adpositional strategy
+  Name: adpositional strategy
+  Alias: []
   SubtypeOf:
     - deranked, deranking [str]
   ConstituentOf: []
@@ -458,8 +458,8 @@
 - Id: adverbial clause construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: adverbial clause construction
   Alias:
-    - adverbial clause construction
     - adverbial clause
   SubtypeOf:
     - complex sentence [cxn]
@@ -471,8 +471,8 @@
 - Id: adverbial dependent clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - adverbial dependent clause
+  Name: adverbial dependent clause
+  Alias: []
   SubtypeOf:
     - dependent clause [cxn]
   ConstituentOf:
@@ -484,8 +484,8 @@
 - Id: adverbial strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adverbial strategy
+  Name: adverbial strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -496,8 +496,8 @@
 - Id: adverbializer [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - adverbializer
+  Name: adverbializer
+  Alias: []
   SubtypeOf:
     - conjunction [str]
   ConstituentOf: []
@@ -508,8 +508,8 @@
 - Id: adversative coordination [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - adversative coordination
+  Name: adversative coordination
+  Alias: []
   SubtypeOf:
     - coordinate construction [cxn]
   ConstituentOf: []
@@ -520,8 +520,8 @@
 - Id: affecting event [sem]
   Type: sem
   InstanceOf: ""
+  Name: affecting event
   Alias:
-    - affecting event
     - affecting
   SubtypeOf:
     - experiential event [sem]
@@ -534,8 +534,8 @@
 - Id: affecting verb [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: affecting verb
   Alias:
-    - affecting verb
     - affect
   SubtypeOf:
     - experiential verb [cxn]
@@ -547,8 +547,8 @@
 - Id: affixation [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - affixation
+  Name: affixation
+  Alias: []
   SubtypeOf:
     - simple strategy [str]
   ConstituentOf: []
@@ -559,8 +559,8 @@
 - Id: age term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - age term
+  Name: age term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -571,8 +571,8 @@
 - Id: agent [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - agent
+  Name: agent
+  Alias: []
   SubtypeOf:
     - A role [sem]
   ConstituentOf: []
@@ -583,8 +583,8 @@
 - Id: agentive change of state event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - agentive change of state event
+  Name: agentive change of state event
+  Alias: []
   SubtypeOf:
     - change of state event [sem]
   ConstituentOf: []
@@ -596,8 +596,8 @@
 - Id: agentive change of state verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - agentive change of state verb
+  Name: agentive change of state verb
+  Alias: []
   SubtypeOf:
     - change of state verb [cxn]
   ConstituentOf: []
@@ -608,8 +608,8 @@
 - Id: agree/disagree alignment strategy [str]
   Type: str
   InstanceOf: ""
+  Name: agree/disagree alignment strategy
   Alias:
-    - agree/disagree alignment strategy
     - agree alignment strategy
     - disagree alignment strategy
   SubtypeOf:
@@ -622,8 +622,8 @@
 - Id: Agreement Hierarchy [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - Agreement Hierarchy
+  Name: Agreement Hierarchy
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -633,8 +633,8 @@
 - Id: alienable possession [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - alienable possession
+  Name: alienable possession
+  Alias: []
   SubtypeOf:
     - possessive (modification) construction [cxn]
   ConstituentOf: []
@@ -645,8 +645,8 @@
 - Id: alignment system [str]
   Type: str
   InstanceOf: ""
+  Name: alignment system
   Alias:
-    - alignment system
     - alignment strategy
   SubtypeOf:
     - system [str]
@@ -658,8 +658,8 @@
 - Id: allative comparative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - allative comparative
+  Name: allative comparative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -670,8 +670,8 @@
 - Id: alternative concessive conditional strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - alternative concessive conditional strategy
+  Name: alternative concessive conditional strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -682,8 +682,8 @@
 - Id: alternative proposition [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - alternative proposition
+  Name: alternative proposition
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf: []
@@ -695,8 +695,8 @@
 - Id: alternative question [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - alternative question
+  Name: alternative question
+  Alias: []
   SubtypeOf:
     - interrogative [cxn]
   ConstituentOf: []
@@ -707,8 +707,8 @@
 - Id: alternative question [inf]
   Type: inf
   InstanceOf: ""
+  Name: alternative question
   Alias:
-    - alternative question
     - alternative question function
   SubtypeOf:
     - interrogative [inf]
@@ -720,8 +720,8 @@
 - Id: amount term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - amount term
+  Name: amount term
+  Alias: []
   SubtypeOf:
     - quantifier [cxn]
   ConstituentOf: []
@@ -732,8 +732,8 @@
 - Id: anaphoric (definite) article [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: anaphoric (definite) article
   Alias:
-    - anaphoric (definite) article
     - anaphoric definite article
     - anaphoric article
   SubtypeOf:
@@ -746,8 +746,8 @@
 - Id: anaphoric pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - anaphoric pronoun
+  Name: anaphoric pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -758,8 +758,8 @@
 - Id: anaphoric-head construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - anaphoric-head construction
+  Name: anaphoric-head construction
+  Alias: []
   SubtypeOf:
     - phrase [cxn]
   ConstituentOf: []
@@ -770,8 +770,8 @@
 - Id: anaphoric-head relative clause construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - anaphoric-head relative clause construction
+  Name: anaphoric-head relative clause construction
+  Alias: []
   SubtypeOf:
     - relative clause construction [cxn]
   ConstituentOf: []
@@ -782,8 +782,8 @@
 - Id: anchor [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - anchor
+  Name: anchor
+  Alias: []
   SubtypeOf:
     - reference, referent [inf]
   ConstituentOf:
@@ -796,8 +796,8 @@
 - Id: anchoring [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - anchoring
+  Name: anchoring
+  Alias: []
   SubtypeOf:
     - situating [inf]
   ConstituentOf: []
@@ -809,8 +809,8 @@
 - Id: anchoring construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - anchoring construction
+  Name: anchoring construction
+  Alias: []
   SubtypeOf:
     - nominal modification [cxn]
   ConstituentOf: []
@@ -821,8 +821,8 @@
 - Id: Animacy Hierarchy [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - Animacy Hierarchy
+  Name: Animacy Hierarchy
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -832,8 +832,8 @@
 - Id: animacy-based split ergativity [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - animacy-based split ergativity
+  Name: animacy-based split ergativity
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -844,8 +844,8 @@
 - Id: animate [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - animate
+  Name: animate
+  Alias: []
   SubtypeOf:
     - object concept [sem]
     - ontological categories [sem]
@@ -857,8 +857,8 @@
 - Id: announcement [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - announcement
+  Name: announcement
+  Alias: []
   SubtypeOf:
     - discourse context (FN-Br) [inf]
   ConstituentOf: []
@@ -870,8 +870,8 @@
 - Id: antecedent role [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - antecedent role
+  Name: antecedent role
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -883,8 +883,8 @@
 - Id: anterior [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - anterior
+  Name: anterior
+  Alias: []
   SubtypeOf:
     - consecutive [sem]
   ConstituentOf: []
@@ -895,8 +895,8 @@
 - Id: anterior deranking [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - anterior deranking
+  Name: anterior deranking
+  Alias: []
   SubtypeOf:
     - deranked, deranking [str]
   ConstituentOf: []
@@ -908,8 +908,8 @@
 - Id: anticausative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - anticausative
+  Name: anticausative
+  Alias: []
   SubtypeOf:
     - system [str]
   ConstituentOf: []
@@ -920,8 +920,8 @@
 - Id: antipassive construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - antipassive construction
+  Name: antipassive construction
+  Alias: []
   SubtypeOf:
     - nonbasic voice construction [cxn]
   ConstituentOf: []
@@ -932,8 +932,8 @@
 - Id: antonyms [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - antonyms
+  Name: antonyms
+  Alias: []
   SubtypeOf:
     - construction [def]
   ConstituentOf: []
@@ -944,8 +944,8 @@
 - Id: apodosis [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: apodosis
   Alias:
-    - apodosis
     - apodosis clause
   SubtypeOf:
     - clause [cxn]
@@ -962,8 +962,8 @@
 - Id: apodosis [sem]
   Type: sem
   InstanceOf: ""
+  Name: apodosis
   Alias:
-    - apodosis
     - consequent
   SubtypeOf:
     - event [sem]
@@ -977,8 +977,8 @@
 - Id: application event [sem]
   Type: sem
   InstanceOf: ""
+  Name: application event
   Alias:
-    - application event
     - application
     - putting event
   SubtypeOf:
@@ -991,8 +991,8 @@
 - Id: application verb [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: application verb
   Alias:
-    - application verb
     - putting verb
   SubtypeOf:
     - result verb [cxn]
@@ -1005,8 +1005,8 @@
 - Id: applicative construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - applicative construction
+  Name: applicative construction
+  Alias: []
   SubtypeOf:
     - nonbasic voice construction [cxn]
     - ditransitive construction [cxn]
@@ -1018,8 +1018,8 @@
 - Id: applicative object [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - applicative object
+  Name: applicative object
+  Alias: []
   SubtypeOf:
     - object phrase [cxn]
   ConstituentOf:
@@ -1031,8 +1031,8 @@
 - Id: apposition [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - apposition
+  Name: apposition
+  Alias: []
   SubtypeOf:
     - juxtaposition [str]
   ConstituentOf: []
@@ -1043,8 +1043,8 @@
 - Id: appositive modification [inf]
   Type: inf
   InstanceOf: ""
+  Name: appositive modification
   Alias:
-    - appositive modification
     - nonrestrictive modification
   SubtypeOf:
     - modification [inf]
@@ -1056,8 +1056,8 @@
 - Id: apprehensional [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - apprehensional
+  Name: apprehensional
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -1068,8 +1068,8 @@
 - Id: argument [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - argument
+  Name: argument
+  Alias: []
   SubtypeOf:
     - reference, referent [inf]
   ConstituentOf: []
@@ -1082,8 +1082,8 @@
 - Id: argument complex predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - argument complex predicate
+  Name: argument complex predicate
+  Alias: []
   SubtypeOf:
     - complex predicate [cxn]
   ConstituentOf: []
@@ -1094,8 +1094,8 @@
 - Id: argument phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - argument phrase
+  Name: argument phrase
+  Alias: []
   SubtypeOf:
     - referring phrase [cxn]
   ConstituentOf: []
@@ -1106,8 +1106,8 @@
 - Id: argument structure construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - argument structure construction
+  Name: argument structure construction
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf: []
@@ -1118,8 +1118,8 @@
 - Id: arrival [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - arrival
+  Name: arrival
+  Alias: []
   SubtypeOf:
     - path (of motion) event [sem]
   ConstituentOf: []
@@ -1130,8 +1130,8 @@
 - Id: article [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - article
+  Name: article
+  Alias: []
   SubtypeOf:
     - determiner [cxn]
   ConstituentOf: []
@@ -1142,8 +1142,8 @@
 - Id: aspect [sem]
   Type: sem
   InstanceOf: ""
+  Name: aspect
   Alias:
-    - aspect
     - aspectual structure
   SubtypeOf:
     - TAMP [sem]
@@ -1156,8 +1156,8 @@
 - Id: associative construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - associative construction
+  Name: associative construction
+  Alias: []
   SubtypeOf:
     - complex (construction) [cxn]
   ConstituentOf: []
@@ -1168,8 +1168,8 @@
 - Id: associative equative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - associative equative
+  Name: associative equative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -1180,8 +1180,8 @@
 - Id: asyndetic [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - asyndetic
+  Name: asyndetic
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -1192,8 +1192,8 @@
 - Id: atelic [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - atelic
+  Name: atelic
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf: []
@@ -1204,8 +1204,8 @@
 - Id: attending event [sem]
   Type: sem
   InstanceOf: ""
+  Name: attending event
   Alias:
-    - attending event
     - attending
   SubtypeOf:
     - experiential event [sem]
@@ -1219,8 +1219,8 @@
 - Id: attending verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - attending verb
+  Name: attending verb
+  Alias: []
   SubtypeOf:
     - experiential verb [cxn]
   ConstituentOf: []
@@ -1231,8 +1231,8 @@
 - Id: attributive phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - attributive phrase
+  Name: attributive phrase
+  Alias: []
   SubtypeOf:
     - phrase [cxn]
   ConstituentOf:
@@ -1244,8 +1244,8 @@
 - Id: auxiliary [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - auxiliary
+  Name: auxiliary
+  Alias: []
   SubtypeOf:
     - element [cxn]
   ConstituentOf:
@@ -1257,8 +1257,8 @@
 - Id: auxiliary construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - auxiliary construction
+  Name: auxiliary construction
+  Alias: []
   SubtypeOf:
     - eventive complex predicate [cxn]
   ConstituentOf: []
@@ -1269,8 +1269,8 @@
 - Id: background description [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - background description
+  Name: background description
+  Alias: []
   SubtypeOf:
     - discourse context (FN-Br) [inf]
   ConstituentOf: []
@@ -1282,8 +1282,8 @@
 - Id: balanced, balancing [str]
   Type: str
   InstanceOf: ""
+  Name: balanced, balancing
   Alias:
-    - balanced, balancing
     - balanced/balancing
     - balanced
     - balancing
@@ -1298,8 +1298,8 @@
 - Id: bare verb stem [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - bare verb stem
+  Name: bare verb stem
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -1310,8 +1310,8 @@
 - Id: base event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - base event
+  Name: base event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -1322,8 +1322,8 @@
 - Id: basic voice construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: basic voice construction
   Alias:
-    - basic voice construction
     - basic voice
     - active voice
     - direct voice
@@ -1338,8 +1338,8 @@
 - Id: basic word order [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - basic word order
+  Name: basic word order
+  Alias: []
   SubtypeOf:
     - word order [str]
   ConstituentOf: []
@@ -1350,8 +1350,8 @@
 - Id: behavioral potential [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - behavioral potential
+  Name: behavioral potential
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -1361,8 +1361,8 @@
 - Id: beneficiary [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - beneficiary
+  Name: beneficiary
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf: []
@@ -1374,8 +1374,8 @@
 - Id: biclausal reciprocal [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - biclausal reciprocal
+  Name: biclausal reciprocal
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -1386,8 +1386,8 @@
 - Id: Binding Hierarchy [def]
   Type: def
   InstanceOf: ""
+  Name: Binding Hierarchy
   Alias:
-    - Binding Hierarchy
     - Complement Deranking-Argument Hierarchy
   SubtypeOf: []
   ConstituentOf: []
@@ -1398,8 +1398,8 @@
 - Id: binominal lexeme construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: binominal lexeme construction
   Alias:
-    - binominal lexeme construction
     - binominal lexeme
   SubtypeOf:
     - typifying construction [cxn]
@@ -1411,8 +1411,8 @@
 - Id: bisyndetic [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - bisyndetic
+  Name: bisyndetic
+  Alias: []
   SubtypeOf:
     - syndetic [str]
   ConstituentOf: []
@@ -1423,8 +1423,8 @@
 - Id: bivalent event [sem]
   Type: sem
   InstanceOf: ""
+  Name: bivalent event
   Alias:
-    - bivalent event
     - bivalent
   SubtypeOf:
     - valency, valency class [sem]
@@ -1437,9 +1437,8 @@
 - Id: bodily action [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - bodily
-    - bodily action
+  Name: bodily action
+  Alias: []
   SubtypeOf:
     - experiential event [sem]
   ConstituentOf: []
@@ -1450,8 +1449,8 @@
 - Id: bodily motion event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - bodily motion event
+  Name: bodily motion event
+  Alias: []
   SubtypeOf:
     - monovalent event [sem]
   ConstituentOf: []
@@ -1463,8 +1462,8 @@
 - Id: bodily motion verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - bodily motion verb
+  Name: bodily motion verb
+  Alias: []
   SubtypeOf:
     - introverted verb [cxn]
   ConstituentOf: []
@@ -1475,8 +1474,8 @@
 - Id: bodily predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - bodily predicate
+  Name: bodily predicate
+  Alias: []
   SubtypeOf:
     - experiential verb [cxn]
   ConstituentOf: []
@@ -1487,8 +1486,8 @@
 - Id: body care event [sem]
   Type: sem
   InstanceOf: ""
+  Name: body care event
   Alias:
-    - body care event
     - body care
     - grooming event
   SubtypeOf:
@@ -1502,8 +1501,8 @@
 - Id: body care verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - body care verb
+  Name: body care verb
+  Alias: []
   SubtypeOf:
     - introverted verb [cxn]
   ConstituentOf: []
@@ -1514,8 +1513,8 @@
 - Id: body part relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: body part relation
   Alias:
-    - body part relation
     - body part
   SubtypeOf:
     - part--whole relation [sem]
@@ -1527,8 +1526,8 @@
 - Id: body position event [sem]
   Type: sem
   InstanceOf: ""
+  Name: body position event
   Alias:
-    - body position event
     - body position
     - posture event
     - posture
@@ -1546,8 +1545,8 @@
 - Id: body position predicate [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: body position predicate
   Alias:
-    - body position predicate
     - body position
     - posture predicate
     - posture
@@ -1565,8 +1564,8 @@
 - Id: cardinal numeral [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - cardinal numeral
+  Name: cardinal numeral
+  Alias: []
   SubtypeOf:
     - modifier [cxn]
     - nonprototypical construction [cxn]
@@ -1578,8 +1577,8 @@
 - Id: case [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - case
+  Name: case
+  Alias: []
   SubtypeOf:
     - ontological categories [sem]
   ConstituentOf: []
@@ -1590,8 +1589,8 @@
 - Id: case affix [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - case affix
+  Name: case affix
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -1602,8 +1601,8 @@
 - Id: causal [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - causal
+  Name: causal
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -1615,8 +1614,8 @@
 - Id: causal chain [sem]
   Type: sem
   InstanceOf: ""
+  Name: causal chain
   Alias:
-    - causal chain
     - transmission of force
   SubtypeOf:
     - causal structure [sem]
@@ -1628,8 +1627,8 @@
 - Id: causal event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - causal event
+  Name: causal event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -1640,8 +1639,8 @@
 - Id: causal structure [sem]
   Type: sem
   InstanceOf: ""
+  Name: causal structure
   Alias:
-    - causal structure
     - force dynamics
     - transmission of force
   SubtypeOf:
@@ -1655,8 +1654,8 @@
 - Id: causative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - causative
+  Name: causative
+  Alias: []
   SubtypeOf:
     - system [str]
   ConstituentOf: []
@@ -1667,8 +1666,8 @@
 - Id: causative construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - causative construction
+  Name: causative construction
+  Alias: []
   SubtypeOf:
     - adverbial clause construction [cxn]
   ConstituentOf: []
@@ -1680,8 +1679,8 @@
 - Id: causative event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - causative event
+  Name: causative event
+  Alias: []
   SubtypeOf:
     - causal event [sem]
   ConstituentOf: []
@@ -1693,8 +1692,8 @@
 - Id: causative--applicative co-expression [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - causative--applicative co-expression
+  Name: causative--applicative co-expression
+  Alias: []
   SubtypeOf:
     - co-expression strategy [str]
   ConstituentOf: []
@@ -1705,8 +1704,8 @@
 - Id: cause [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - cause
+  Name: cause
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf: []
@@ -1717,8 +1716,8 @@
 - Id: causee [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - causee
+  Name: causee
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -1730,8 +1729,8 @@
 - Id: causer [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - causer
+  Name: causer
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -1744,8 +1743,8 @@
 - Id: central participant [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - central participant
+  Name: central participant
+  Alias: []
   SubtypeOf:
     - participant [sem]
   ConstituentOf: []
@@ -1756,8 +1755,8 @@
 - Id: chaining construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - chaining construction
+  Name: chaining construction
+  Alias: []
   SubtypeOf:
     - reference tracking [cxn]
   ConstituentOf: []
@@ -1768,8 +1767,8 @@
 - Id: chaining event [sem]
   Type: sem
   InstanceOf: ""
+  Name: chaining event
   Alias:
-    - chaining event
     - chaining
   SubtypeOf:
     - event [sem]
@@ -1781,8 +1780,8 @@
 - Id: change in (body) position event [sem]
   Type: sem
   InstanceOf: ""
+  Name: change in (body) position event
   Alias:
-    - change in (body) position event
     - change in body position event
     - change in position event
     - assume position event
@@ -1798,8 +1797,8 @@
 - Id: change in (body) position verb [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: change in (body) position verb
   Alias:
-    - change in (body) position verb
     - change in body position verb
     - change in position verb
     - assume position verb
@@ -1814,8 +1813,8 @@
 - Id: change of state event [sem]
   Type: sem
   InstanceOf: ""
+  Name: change of state event
   Alias:
-    - change of state event
     - change of state
     - COS event
     - COS
@@ -1830,8 +1829,8 @@
 - Id: change of state verb [cxn]
   Type: cxn
   InstanceOf: change of state event [sem] / verb [cxn]
+  Name: change of state verb
   Alias:
-    - change of state verb
     - COS verb
   SubtypeOf:
     - verb [cxn]
@@ -1843,8 +1842,8 @@
 - Id: choosing [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - choosing
+  Name: choosing
+  Alias: []
   SubtypeOf:
     - counterpresuppositional contrast [inf]
   ConstituentOf: []
@@ -1855,8 +1854,8 @@
 - Id: circumposition [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - circumposition
+  Name: circumposition
+  Alias: []
   SubtypeOf:
     - adposition [str]
   ConstituentOf: []
@@ -1867,8 +1866,8 @@
 - Id: classifier [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - classifier
+  Name: classifier
+  Alias: []
   SubtypeOf:
     - indexical strategy, indexation [str]
   ConstituentOf: []
@@ -1879,8 +1878,8 @@
 - Id: clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - clause
+  Name: clause
+  Alias: []
   SubtypeOf:
     - complex (construction) [cxn]
     - element [cxn]
@@ -1892,8 +1891,8 @@
 - Id: cleft strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - cleft strategy
+  Name: cleft strategy
+  Alias: []
   SubtypeOf:
     - copula [str]
   ConstituentOf: []
@@ -1904,8 +1903,8 @@
 - Id: co-expression strategy [str]
   Type: str
   InstanceOf: ""
+  Name: co-expression strategy
   Alias:
-    - co-expression strategy
     - co-express
     - co-expression
   SubtypeOf:
@@ -1918,8 +1917,8 @@
 - Id: cognate head--dependent strategy [str]
   Type: str
   InstanceOf: ""
+  Name: cognate head--dependent strategy
   Alias:
-    - cognate head--dependent strategy
     - cognate object strategy
     - cognate object
   SubtypeOf:
@@ -1932,8 +1931,8 @@
 - Id: cognition event [sem]
   Type: sem
   InstanceOf: ""
+  Name: cognition event
   Alias:
-    - cognition event
     - cognition
   SubtypeOf:
     - experiential event [sem]
@@ -1945,8 +1944,8 @@
 - Id: cognition verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - cognition verb
+  Name: cognition verb
+  Alias: []
   SubtypeOf:
     - experiential verb [cxn]
   ConstituentOf: []
@@ -1957,8 +1956,8 @@
 - Id: collective construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - collective construction
+  Name: collective construction
+  Alias: []
   SubtypeOf:
     - reference tracking [cxn]
   ConstituentOf: []
@@ -1969,8 +1968,8 @@
 - Id: collective event [sem]
   Type: sem
   InstanceOf: ""
+  Name: collective event
   Alias:
-    - collective event
     - collective
   SubtypeOf:
     - event [sem]
@@ -1984,8 +1983,8 @@
 - Id: color term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - color term
+  Name: color term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -1996,8 +1995,8 @@
 - Id: combining event [sem]
   Type: sem
   InstanceOf: ""
+  Name: combining event
   Alias:
-    - combining event
     - combining
   SubtypeOf:
     - event [sem]
@@ -2009,8 +2008,8 @@
 - Id: combining verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - combining verb
+  Name: combining verb
+  Alias: []
   SubtypeOf:
     - result verb [cxn]
     - manner verb [cxn]
@@ -2022,8 +2021,8 @@
 - Id: comitative [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - comitative
+  Name: comitative
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf: []
@@ -2034,8 +2033,8 @@
 - Id: comment [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - comment
+  Name: comment
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf:
@@ -2047,8 +2046,8 @@
 - Id: commentative event [sem]
   Type: sem
   InstanceOf: ""
+  Name: commentative event
   Alias:
-    - commentative event
     - commentative
   SubtypeOf:
     - evaluative event [sem]
@@ -2061,8 +2060,8 @@
 - Id: commentative predicate [cxn]
   Type: cxn
   InstanceOf: commentative event [sem] / predicate [cxn]
-  Alias:
-    - commentative predicate
+  Name: commentative predicate
+  Alias: []
   SubtypeOf:
     - evaluative predicate [cxn]
   ConstituentOf: []
@@ -2073,8 +2072,8 @@
 - Id: common noun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - common noun
+  Name: common noun
+  Alias: []
   SubtypeOf:
     - noun [cxn]
   ConstituentOf: []
@@ -2086,8 +2085,8 @@
 - Id: comparative concept [def]
   Type: def
   InstanceOf: ""
+  Name: comparative concept
   Alias:
-    - comparative concept
     - crosslinguistic category
   SubtypeOf: []
   ConstituentOf: []
@@ -2098,8 +2097,8 @@
 - Id: comparative conditional construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - comparative conditional construction
+  Name: comparative conditional construction
+  Alias: []
   SubtypeOf:
     - adverbial clause construction [cxn]
   ConstituentOf: []
@@ -2110,8 +2109,8 @@
 - Id: comparative conditional relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: comparative conditional relation
   Alias:
-    - comparative conditional relation
     - comparative conditional
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
@@ -2123,8 +2122,8 @@
 - Id: comparative construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: comparative construction
   Alias:
-    - comparative construction
     - comparative
   SubtypeOf:
     - adverbial clause construction [cxn]
@@ -2136,8 +2135,8 @@
 - Id: comparative form [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - comparative form
+  Name: comparative form
+  Alias: []
   SubtypeOf:
     - admodifier [cxn]
   ConstituentOf: []
@@ -2149,8 +2148,8 @@
 - Id: comparative pronoun [cxn]
   Type: cxn
   InstanceOf: comparative referent [inf] / pronoun [cxn]
-  Alias:
-    - comparative pronoun
+  Name: comparative pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -2161,8 +2160,8 @@
 - Id: comparative referent [inf]
   Type: inf
   InstanceOf: comparative referent [inf] / pronoun [cxn]
-  Alias:
-    - comparative referent
+  Name: comparative referent
+  Alias: []
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
@@ -2173,8 +2172,8 @@
 - Id: comparee [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - comparee
+  Name: comparee
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -2186,9 +2185,10 @@
 - Id: complement (dependent clause) [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: complement (dependent clause)
   Alias:
-    - complement
     - complement dependent clause
+    - complement
   SubtypeOf:
     - dependent clause [cxn]
   ConstituentOf:
@@ -2200,8 +2200,8 @@
 - Id: complement clause construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: complement clause construction
   Alias:
-    - complement clause construction
     - complement clause
   SubtypeOf:
     - complex sentence [cxn]
@@ -2213,8 +2213,8 @@
 - Id: complement-taking predicate [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: complement-taking predicate
   Alias:
-    - complement-taking predicate
     - CTP
   SubtypeOf:
     - predicate [cxn]
@@ -2226,8 +2226,8 @@
 - Id: complementary [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - complementary
+  Name: complementary
+  Alias: []
   SubtypeOf:
     - construction [def]
   ConstituentOf: []
@@ -2238,8 +2238,8 @@
 - Id: complementative [inf]
   Type: inf
   InstanceOf: ""
+  Name: complementative
   Alias:
-    - complementative
     - predicative complement
   SubtypeOf:
     - modification [inf]
@@ -2252,8 +2252,8 @@
 - Id: complementizer [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - complementizer
+  Name: complementizer
+  Alias: []
   SubtypeOf:
     - conjunction [str]
   ConstituentOf: []
@@ -2264,8 +2264,8 @@
 - Id: complex (construction) [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: complex (construction)
   Alias:
-    - complex (construction)
     - complex construction
     - complex
   SubtypeOf:
@@ -2278,8 +2278,8 @@
 - Id: complex figure [inf]
   Type: inf
   InstanceOf: ""
+  Name: complex figure
   Alias:
-    - complex figure
     - symmetric
   SubtypeOf:
     - information packaging [def]
@@ -2293,8 +2293,8 @@
 - Id: complex predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - complex predicate
+  Name: complex predicate
+  Alias: []
   SubtypeOf:
     - predicate [cxn]
     - complex (construction) [cxn]
@@ -2306,8 +2306,8 @@
 - Id: complex predicate applicative strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - complex predicate applicative strategy
+  Name: complex predicate applicative strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -2319,8 +2319,8 @@
 - Id: complex predicate causative strategy [str]
   Type: str
   InstanceOf: ""
+  Name: complex predicate causative strategy
   Alias:
-    - complex predicate causative strategy
     - periphrastic causative strategy
   SubtypeOf:
     - overt (coding) strategy [str]
@@ -2333,8 +2333,8 @@
 - Id: complex predicate passive--inverse (voice) strategy [str]
   Type: str
   InstanceOf: ""
+  Name: complex predicate passive--inverse (voice) strategy
   Alias:
-    - complex predicate passive--inverse (voice) strategy
     - complex predicate passive--inverse voice strategy
     - complex predicate passive--inverse strategy
   SubtypeOf:
@@ -2348,8 +2348,8 @@
 - Id: complex sentence [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - complex sentence
+  Name: complex sentence
+  Alias: []
   SubtypeOf:
     - complex (construction) [cxn]
   ConstituentOf: []
@@ -2360,8 +2360,8 @@
 - Id: compounding [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - compounding
+  Name: compounding
+  Alias: []
   SubtypeOf:
     - simple strategy [str]
   ConstituentOf: []
@@ -2372,8 +2372,8 @@
 - Id: conceptual space [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - conceptual space
+  Name: conceptual space
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -2383,8 +2383,8 @@
 - Id: concessive conditional construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: concessive conditional construction
   Alias:
-    - concessive conditional construction
     - conditional concessive construction
   SubtypeOf:
     - adverbial clause construction [cxn]
@@ -2396,8 +2396,8 @@
 - Id: concessive conditional relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: concessive conditional relation
   Alias:
-    - concessive conditional relation
     - conditional concessive relation
     - concessive conditional
   SubtypeOf:
@@ -2413,8 +2413,8 @@
 - Id: concessive construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - concessive construction
+  Name: concessive construction
+  Alias: []
   SubtypeOf:
     - adverbial clause construction [cxn]
   ConstituentOf: []
@@ -2426,8 +2426,8 @@
 - Id: concessive relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: concessive relation
   Alias:
-    - concessive relation
     - concessive
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
@@ -2440,8 +2440,8 @@
 - Id: concomitant role [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - concomitant role
+  Name: concomitant role
+  Alias: []
   SubtypeOf:
     - antecedent role [sem]
   ConstituentOf: []
@@ -2452,8 +2452,8 @@
 - Id: conditional construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - conditional construction
+  Name: conditional construction
+  Alias: []
   SubtypeOf:
     - adverbial clause construction [cxn]
   ConstituentOf: []
@@ -2464,8 +2464,8 @@
 - Id: conditional deranking system [str]
   Type: str
   InstanceOf: ""
+  Name: conditional deranking system
   Alias:
-    - conditional deranking system
     - conditionally deranked
   SubtypeOf:
     - system [str]
@@ -2477,8 +2477,8 @@
 - Id: conditional discourse reference system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - conditional discourse reference system
+  Name: conditional discourse reference system
+  Alias: []
   SubtypeOf:
     - system [str]
   ConstituentOf: []
@@ -2490,8 +2490,8 @@
 - Id: conditional pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - conditional pronoun
+  Name: conditional pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -2502,8 +2502,8 @@
 - Id: conditional referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - conditional referent
+  Name: conditional referent
+  Alias: []
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
@@ -2514,8 +2514,8 @@
 - Id: conditional relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: conditional relation
   Alias:
-    - conditional relation
     - conditional
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
@@ -2527,8 +2527,8 @@
 - Id: conjoined comparative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - conjoined comparative
+  Name: conjoined comparative
+  Alias: []
   SubtypeOf:
     - derived-case [str]
     - independent strategy [str]
@@ -2540,8 +2540,8 @@
 - Id: conjoined exceed comparative [str]
   Type: str
   InstanceOf: ""
+  Name: conjoined exceed comparative
   Alias:
-    - conjoined exceed comparative
     - conjoined exceed
   SubtypeOf:
     - derived-case [str]
@@ -2553,8 +2553,8 @@
 - Id: conjunction [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - conjunction
+  Name: conjunction
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -2567,8 +2567,8 @@
 - Id: conjunctive coordination [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - conjunctive coordination
+  Name: conjunctive coordination
+  Alias: []
   SubtypeOf:
     - coordinate construction [cxn]
   ConstituentOf: []
@@ -2579,8 +2579,8 @@
 - Id: consecutive [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - consecutive
+  Name: consecutive
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -2591,8 +2591,8 @@
 - Id: construction [def]
   Type: def
   InstanceOf: ""
+  Name: construction
   Alias:
-    - construction
     - criteria (for word classes and other grammatical categories)
     - evidence (for word classes and other grammatical categories)
     - tests (for word classes and other grammatical categories)
@@ -2605,8 +2605,8 @@
 - Id: construction grammar [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - construction grammar
+  Name: construction grammar
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -2616,8 +2616,8 @@
 - Id: contact by impact event [sem]
   Type: sem
   InstanceOf: ""
+  Name: contact by impact event
   Alias:
-    - contact by impact event
     - contact by impact
   SubtypeOf:
     - event [sem]
@@ -2629,8 +2629,8 @@
 - Id: contact by impact verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - contact by impact verb
+  Name: contact by impact verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -2641,8 +2641,8 @@
 - Id: container term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - container term
+  Name: container term
+  Alias: []
   SubtypeOf:
     - mensural term [cxn]
   ConstituentOf: []
@@ -2653,8 +2653,8 @@
 - Id: content causal construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - content causal construction
+  Name: content causal construction
+  Alias: []
   SubtypeOf:
     - conditional construction [cxn]
     - causative construction [cxn]
@@ -2668,8 +2668,8 @@
 - Id: content causal relation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - content causal relation
+  Name: content causal relation
+  Alias: []
   SubtypeOf:
     - causal [sem]
   ConstituentOf: []
@@ -2680,8 +2680,8 @@
 - Id: contextual [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - contextual
+  Name: contextual
+  Alias: []
   SubtypeOf:
     - entity [sem]
   ConstituentOf: []
@@ -2694,8 +2694,8 @@
 - Id: contiguity of serial verbs [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - contiguity of serial verbs
+  Name: contiguity of serial verbs
+  Alias: []
   SubtypeOf:
     - serial verb strategy [str]
   ConstituentOf: []
@@ -2706,8 +2706,8 @@
 - Id: contrast [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - contrast
+  Name: contrast
+  Alias: []
   SubtypeOf:
     - discourse context (FN-Br) [inf]
   ConstituentOf: []
@@ -2719,8 +2719,8 @@
 - Id: control-based causative strategies [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - control-based causative strategies
+  Name: control-based causative strategies
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -2731,8 +2731,8 @@
 - Id: controlled activity [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - controlled activity
+  Name: controlled activity
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -2743,8 +2743,8 @@
 - Id: controlled predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - controlled predicate
+  Name: controlled predicate
+  Alias: []
   SubtypeOf:
     - predicate [cxn]
   ConstituentOf: []
@@ -2755,8 +2755,8 @@
 - Id: controller [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - controller
+  Name: controller
+  Alias: []
   SubtypeOf:
     - strategy element (FN-Br) [str]
   ConstituentOf:
@@ -2768,8 +2768,8 @@
 - Id: converb [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - converb
+  Name: converb
+  Alias: []
   SubtypeOf:
     - strategy element (FN-Br) [str]
   ConstituentOf:
@@ -2782,8 +2782,8 @@
 - Id: converb strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - converb strategy
+  Name: converb strategy
+  Alias: []
   SubtypeOf:
     - non-indexed [str]
     - deranked, deranking [str]
@@ -2795,8 +2795,8 @@
 - Id: coordinand [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: coordinand
   Alias:
-    - coordinand
     - conjunct
   SubtypeOf:
     - element [cxn]
@@ -2809,8 +2809,8 @@
 - Id: coordinate clause construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: coordinate clause construction
   Alias:
-    - coordinate clause construction
     - clause chaining
     - cosubordination
     - medial verb construction
@@ -2825,8 +2825,8 @@
 - Id: coordinate construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: coordinate construction
   Alias:
-    - coordinate construction
     - coordination
   SubtypeOf:
     - complex (construction) [cxn]
@@ -2838,8 +2838,8 @@
 - Id: coordinate impersonal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - coordinate impersonal strategy
+  Name: coordinate impersonal strategy
+  Alias: []
   SubtypeOf:
     - non-indexed [str]
     - balanced, balancing [str]
@@ -2851,8 +2851,8 @@
 - Id: coordinate personal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - coordinate personal strategy
+  Name: coordinate personal strategy
+  Alias: []
   SubtypeOf:
     - indexed [str]
     - balanced, balancing [str]
@@ -2864,8 +2864,8 @@
 - Id: coordinator [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - coordinator
+  Name: coordinator
+  Alias: []
   SubtypeOf:
     - conjunction [str]
   ConstituentOf: []
@@ -2877,8 +2877,8 @@
 - Id: copula [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - copula
+  Name: copula
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
     - nominal strategy [str]
@@ -2890,8 +2890,8 @@
 - Id: copular participle strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - copular participle strategy
+  Name: copular participle strategy
+  Alias: []
   SubtypeOf:
     - indexed [str]
     - deranked, deranking [str]
@@ -2904,8 +2904,8 @@
 - Id: core argument phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - core argument phrase
+  Name: core argument phrase
+  Alias: []
   SubtypeOf:
     - argument phrase [cxn]
   ConstituentOf: []
@@ -2916,8 +2916,8 @@
 - Id: core arguments [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - core arguments
+  Name: core arguments
+  Alias: []
   SubtypeOf:
     - argument [inf]
   ConstituentOf: []
@@ -2928,8 +2928,8 @@
 - Id: coreference [inf]
   Type: inf
   InstanceOf: ""
+  Name: coreference
   Alias:
-    - coreference
     - coreferential
   SubtypeOf:
     - reference, referent [inf]
@@ -2942,8 +2942,8 @@
 - Id: correlative strategy [str]
   Type: str
   InstanceOf: ""
+  Name: correlative strategy
   Alias:
-    - correlative strategy
     - correlative
   SubtypeOf:
     - juxtaposition [str]
@@ -2955,8 +2955,8 @@
 - Id: counterpresuppositional contrast [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - counterpresuppositional contrast
+  Name: counterpresuppositional contrast
+  Alias: []
   SubtypeOf:
     - contrast [inf]
   ConstituentOf: []
@@ -2967,8 +2967,8 @@
 - Id: crosslinguistically valid [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - crosslinguistically valid
+  Name: crosslinguistically valid
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -2978,8 +2978,8 @@
 - Id: cumulation [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - cumulation
+  Name: cumulation
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -2989,8 +2989,8 @@
 - Id: damage event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - damage event
+  Name: damage event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -3001,8 +3001,8 @@
 - Id: damage verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - damage verb
+  Name: damage verb
+  Alias: []
   SubtypeOf:
     - manner verb [cxn]
     - result verb [cxn]
@@ -3014,8 +3014,8 @@
 - Id: declarative [cxn]
   Type: cxn
   InstanceOf: declarative [inf/cxn]
-  Alias:
-    - declarative
+  Name: declarative
+  Alias: []
   SubtypeOf:
     - speech acts [cxn]
   ConstituentOf: []
@@ -3026,8 +3026,8 @@
 - Id: declarative [inf]
   Type: inf
   InstanceOf: declarative [inf/cxn]
-  Alias:
-    - declarative
+  Name: declarative
+  Alias: []
   SubtypeOf:
     - speech acts [inf]
   ConstituentOf: []
@@ -3038,8 +3038,8 @@
 - Id: declarative negation construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: declarative negation construction
   Alias:
-    - declarative negation construction
     - declarative negation
   SubtypeOf:
     - declarative [cxn]
@@ -3052,8 +3052,8 @@
 - Id: definite article [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - definite article
+  Name: definite article
+  Alias: []
   SubtypeOf:
     - article [cxn]
   ConstituentOf: []
@@ -3064,8 +3064,8 @@
 - Id: definite pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - definite pronoun
+  Name: definite pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -3076,8 +3076,8 @@
 - Id: degree [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - degree
+  Name: degree
+  Alias: []
   SubtypeOf:
     - property (concept) [sem]
   ConstituentOf: []
@@ -3090,8 +3090,8 @@
 - Id: degree affix [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - degree affix
+  Name: degree affix
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -3103,8 +3103,8 @@
 - Id: degree equative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - degree equative
+  Name: degree equative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -3115,8 +3115,8 @@
 - Id: degree marker [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - degree marker
+  Name: degree marker
+  Alias: []
   SubtypeOf:
     - admodifier [cxn]
   ConstituentOf: []
@@ -3127,8 +3127,8 @@
 - Id: degree modifier [str]
   Type: str
   InstanceOf: ""
+  Name: degree modifier
   Alias:
-    - degree modifier
     - degree adverb
   SubtypeOf:
     - overt (coding) strategy [str]
@@ -3140,8 +3140,8 @@
 - Id: deixis/deictic [sem]
   Type: sem
   InstanceOf: ""
+  Name: deixis/deictic
   Alias:
-    - deixis/deictic
     - deixis
     - deictic
     - situational
@@ -3156,8 +3156,8 @@
 - Id: demonstrative attributive [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - demonstrative attributive
+  Name: demonstrative attributive
+  Alias: []
   SubtypeOf:
     - determiner [cxn]
   ConstituentOf: []
@@ -3168,8 +3168,8 @@
 - Id: demonstrative pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - demonstrative pronoun
+  Name: demonstrative pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -3181,8 +3181,8 @@
 - Id: deontic modality [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - deontic modality
+  Name: deontic modality
+  Alias: []
   SubtypeOf:
     - modality [sem]
   ConstituentOf: []
@@ -3196,8 +3196,8 @@
 - Id: departure [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - departure
+  Name: departure
+  Alias: []
   SubtypeOf:
     - path (of motion) event [sem]
   ConstituentOf: []
@@ -3208,8 +3208,8 @@
 - Id: dependent [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - dependent
+  Name: dependent
+  Alias: []
   SubtypeOf:
     - element [cxn]
   ConstituentOf: []
@@ -3220,8 +3220,8 @@
 - Id: dependent clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - dependent clause
+  Name: dependent clause
+  Alias: []
   SubtypeOf:
     - clause [cxn]
     - dependent [cxn]
@@ -3234,8 +3234,8 @@
 - Id: dependent time reference [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - dependent time reference
+  Name: dependent time reference
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -3247,8 +3247,8 @@
 - Id: depictive (complex predicate) [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: depictive (complex predicate)
   Alias:
-    - depictive (complex predicate)
     - depictive complex predicate
     - depictive
     - depictive secondary predicate
@@ -3263,8 +3263,8 @@
 - Id: deranked, deranking [str]
   Type: str
   InstanceOf: ""
+  Name: deranked, deranking
   Alias:
-    - deranked, deranking
     - deranked/deranking
     - deranked
     - deranking
@@ -3284,8 +3284,8 @@
 - Id: derived intransitive [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - derived intransitive
+  Name: derived intransitive
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -3296,8 +3296,8 @@
 - Id: derived-case [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - derived-case
+  Name: derived-case
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3308,8 +3308,8 @@
 - Id: desiderative event [sem]
   Type: sem
   InstanceOf: ""
+  Name: desiderative event
   Alias:
-    - desiderative event
     - desiderative
   SubtypeOf:
     - event [sem]
@@ -3322,8 +3322,8 @@
 - Id: desiderative predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - desiderative predicate
+  Name: desiderative predicate
+  Alias: []
   SubtypeOf:
     - predicate [cxn]
   ConstituentOf: []
@@ -3334,8 +3334,8 @@
 - Id: detached (topic phrase) [str]
   Type: str
   InstanceOf: ""
+  Name: detached (topic phrase)
   Alias:
-    - detached (topic phrase)
     - detached topic phrase
     - detached
   SubtypeOf:
@@ -3350,8 +3350,8 @@
 - Id: determiner [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - determiner
+  Name: determiner
+  Alias: []
   SubtypeOf:
     - element [cxn]
   ConstituentOf: []
@@ -3363,8 +3363,8 @@
 - Id: different-subject [inf]
   Type: inf
   InstanceOf: ""
+  Name: different-subject
   Alias:
-    - different-subject
     - DS
   SubtypeOf:
     - reference, referent [inf]
@@ -3376,8 +3376,8 @@
 - Id: differential object marking [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - differential object marking
+  Name: differential object marking
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -3389,8 +3389,8 @@
 - Id: dimension term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - dimension term
+  Name: dimension term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -3401,8 +3401,8 @@
 - Id: direct causation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - direct causation
+  Name: direct causation
+  Alias: []
   SubtypeOf:
     - causative event [sem]
   ConstituentOf: []
@@ -3413,8 +3413,8 @@
 - Id: direct negation pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - direct negation pronoun
+  Name: direct negation pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -3425,8 +3425,8 @@
 - Id: direct negation referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - direct negation referent
+  Name: direct negation referent
+  Alias: []
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
@@ -3437,8 +3437,8 @@
 - Id: direct object category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - direct object category
+  Name: direct object category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -3450,8 +3450,8 @@
 - Id: direct report [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - direct report
+  Name: direct report
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3463,8 +3463,8 @@
 - Id: directed change [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - directed change
+  Name: directed change
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -3476,8 +3476,8 @@
 - Id: discourse context (FN-Br) [inf]
   Type: inf
   InstanceOf: ""
+  Name: discourse context (FN-Br)
   Alias:
-    - discourse context (FN-Br)
     - discourse context
   SubtypeOf:
     - information packaging [def]
@@ -3489,8 +3489,8 @@
 - Id: discourse deictic [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - discourse deictic
+  Name: discourse deictic
+  Alias: []
   SubtypeOf:
     - reference, referent [inf]
   ConstituentOf: []
@@ -3501,8 +3501,8 @@
 - Id: discourse markers [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - discourse markers
+  Name: discourse markers
+  Alias: []
   SubtypeOf:
     - construction [def]
   ConstituentOf: []
@@ -3513,8 +3513,8 @@
 - Id: discourse reference system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - discourse reference system
+  Name: discourse reference system
+  Alias: []
   SubtypeOf:
     - system [str]
   ConstituentOf: []
@@ -3525,8 +3525,8 @@
 - Id: disjunctive coordination [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - disjunctive coordination
+  Name: disjunctive coordination
+  Alias: []
   SubtypeOf:
     - coordinate construction [cxn]
   ConstituentOf: []
@@ -3537,8 +3537,8 @@
 - Id: distal (deixis) [sem]
   Type: sem
   InstanceOf: ""
+  Name: distal (deixis)
   Alias:
-    - distal (deixis)
     - distal deixis
     - distal
   SubtypeOf:
@@ -3552,8 +3552,8 @@
 - Id: distributive quantifier [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - distributive quantifier
+  Name: distributive quantifier
+  Alias: []
   SubtypeOf:
     - quantifier [cxn]
   ConstituentOf: []
@@ -3564,8 +3564,8 @@
 - Id: ditransitive construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - ditransitive construction
+  Name: ditransitive construction
+  Alias: []
   SubtypeOf:
     - argument structure construction [cxn]
   ConstituentOf: []
@@ -3576,8 +3576,8 @@
 - Id: ditransitive predication [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - ditransitive predication
+  Name: ditransitive predication
+  Alias: []
   SubtypeOf:
     - predication [inf]
   ConstituentOf: []
@@ -3589,8 +3589,8 @@
 - Id: domain [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - domain
+  Name: domain
+  Alias: []
   SubtypeOf:
     - strategy element (FN-Br) [str]
   ConstituentOf:
@@ -3602,8 +3602,8 @@
 - Id: double expression [str]
   Type: str
   InstanceOf: ""
+  Name: double expression
   Alias:
-    - double expression
     - double marking
     - double framing
   SubtypeOf:
@@ -3617,8 +3617,8 @@
 - Id: double negation strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - double negation strategy
+  Name: double negation strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -3629,8 +3629,8 @@
 - Id: double-coding strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - double-coding strategy
+  Name: double-coding strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3641,8 +3641,8 @@
 - Id: double-oblique strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - double-oblique strategy
+  Name: double-oblique strategy
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -3653,8 +3653,8 @@
 - Id: doubling [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - doubling
+  Name: doubling
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3666,8 +3666,8 @@
 - Id: downtoner [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - downtoner
+  Name: downtoner
+  Alias: []
   SubtypeOf:
     - admodifier [cxn]
   ConstituentOf: []
@@ -3678,8 +3678,8 @@
 - Id: dual role strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - dual role strategy
+  Name: dual role strategy
+  Alias: []
   SubtypeOf:
     - recruitment strategy [str]
   ConstituentOf: []
@@ -3691,8 +3691,8 @@
 - Id: durative [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - durative
+  Name: durative
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf: []
@@ -3703,8 +3703,8 @@
 - Id: dynamic [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - dynamic
+  Name: dynamic
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf:
@@ -3716,8 +3716,8 @@
 - Id: echo strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - echo strategy
+  Name: echo strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3728,8 +3728,8 @@
 - Id: strategy element (FN-Br) [str]
   Type: str
   InstanceOf: ""
+  Name: strategy element (FN-Br)
   Alias:
-    - strategy element (FN-Br)
     - strategy element
   SubtypeOf:
     - strategy [def]
@@ -3741,8 +3741,8 @@
 - Id: information element (FN-Br) [inf]
   Type: inf
   InstanceOf: ""
+  Name: information element (FN-Br)
   Alias:
-    - information element (FN-Br)
     - information element
   SubtypeOf:
     - information packaging [def]
@@ -3754,8 +3754,8 @@
 - Id: element [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - element
+  Name: element
+  Alias: []
   SubtypeOf:
     - construction [def]
   ConstituentOf:
@@ -3767,8 +3767,8 @@
 - Id: ellipsis [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - ellipsis
+  Name: ellipsis
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3780,8 +3780,8 @@
 - Id: emotion event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - emotion event
+  Name: emotion event
+  Alias: []
   SubtypeOf:
     - experiential event [sem]
   ConstituentOf: []
@@ -3792,8 +3792,8 @@
 - Id: emotion verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - emotion verb
+  Name: emotion verb
+  Alias: []
   SubtypeOf:
     - experiential verb [cxn]
   ConstituentOf: []
@@ -3804,8 +3804,8 @@
 - Id: encoding strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - encoding strategy
+  Name: encoding strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3816,8 +3816,8 @@
 - Id: endpoint [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - endpoint
+  Name: endpoint
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -3829,8 +3829,8 @@
 - Id: entity [sem]
   Type: sem
   InstanceOf: ""
+  Name: entity
   Alias:
-    - entity
     - entities
   SubtypeOf:
     - meaning [def]
@@ -3842,8 +3842,8 @@
 - Id: entity-central [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - entity-central
+  Name: entity-central
+  Alias: []
   SubtypeOf:
     - thetic [cxn]
   ConstituentOf: []
@@ -3854,8 +3854,8 @@
 - Id: entity-central [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - entity-central
+  Name: entity-central
+  Alias: []
   SubtypeOf:
     - thetic [inf]
   ConstituentOf: []
@@ -3866,8 +3866,8 @@
 - Id: epistemic causal construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - epistemic causal construction
+  Name: epistemic causal construction
+  Alias: []
   SubtypeOf:
     - conditional construction [cxn]
     - causative construction [cxn]
@@ -3881,8 +3881,8 @@
 - Id: epistemic causal relation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - epistemic causal relation
+  Name: epistemic causal relation
+  Alias: []
   SubtypeOf:
     - causal [sem]
   ConstituentOf: []
@@ -3893,8 +3893,8 @@
 - Id: epistemic modality [sem]
   Type: sem
   InstanceOf: ""
+  Name: epistemic modality
   Alias:
-    - epistemic modality
     - epistemic modal
   SubtypeOf:
     - modality [sem]
@@ -3908,8 +3908,8 @@
 - Id: epistemic stance [sem]
   Type: sem
   InstanceOf: ""
+  Name: epistemic stance
   Alias:
-    - epistemic stance
     - hypotheticality
   SubtypeOf:
     - meaning [def]
@@ -3921,8 +3921,8 @@
 - Id: equal equative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - equal equative
+  Name: equal equative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -3933,8 +3933,8 @@
 - Id: equational [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - equational
+  Name: equational
+  Alias: []
   SubtypeOf:
     - identificational [cxn]
     - nonpredicational clauses [cxn]
@@ -3947,8 +3947,8 @@
 - Id: equational [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - equational
+  Name: equational
+  Alias: []
   SubtypeOf:
     - identificational [inf]
   ConstituentOf: []
@@ -3959,8 +3959,8 @@
 - Id: equative construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - equative construction
+  Name: equative construction
+  Alias: []
   SubtypeOf:
     - complex sentence [cxn]
   ConstituentOf: []
@@ -3971,8 +3971,8 @@
 - Id: equipollent [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - equipollent
+  Name: equipollent
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -3983,8 +3983,8 @@
 - Id: ergative alignment system [str]
   Type: str
   InstanceOf: ""
+  Name: ergative alignment system
   Alias:
-    - ergative alignment system
     - ergative alignment
   SubtypeOf:
     - alignment system [str]
@@ -3996,8 +3996,8 @@
 - Id: ergative category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - ergative category
+  Name: ergative category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -4009,8 +4009,8 @@
 - Id: evaluative event [sem]
   Type: sem
   InstanceOf: ""
+  Name: evaluative event
   Alias:
-    - evaluative event
     - evaluative
   SubtypeOf:
     - event [sem]
@@ -4023,8 +4023,8 @@
 - Id: evaluative predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - evaluative predicate
+  Name: evaluative predicate
+  Alias: []
   SubtypeOf:
     - complement-taking predicate [cxn]
   ConstituentOf: []
@@ -4035,8 +4035,8 @@
 - Id: event [sem]
   Type: sem
   InstanceOf: ""
+  Name: event
   Alias:
-    - event
     - eventuality
     - situation
     - state of affairs
@@ -4052,8 +4052,8 @@
 - Id: event-central [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - event-central
+  Name: event-central
+  Alias: []
   SubtypeOf:
     - thetic [cxn]
   ConstituentOf: []
@@ -4064,8 +4064,8 @@
 - Id: event-central [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - event-central
+  Name: event-central
+  Alias: []
   SubtypeOf:
     - thetic [inf]
   ConstituentOf: []
@@ -4076,8 +4076,8 @@
 - Id: event-oriented [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - event-oriented
+  Name: event-oriented
+  Alias: []
   SubtypeOf:
     - state [sem]
   ConstituentOf: []
@@ -4089,8 +4089,8 @@
 - Id: eventive complex predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - eventive complex predicate
+  Name: eventive complex predicate
+  Alias: []
   SubtypeOf:
     - complex predicate [cxn]
   ConstituentOf: []
@@ -4101,8 +4101,8 @@
 - Id: evidentiality [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - evidentiality
+  Name: evidentiality
+  Alias: []
   SubtypeOf:
     - modality [sem]
   ConstituentOf: []
@@ -4113,8 +4113,8 @@
 - Id: exceed comparative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - exceed comparative
+  Name: exceed comparative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -4125,8 +4125,8 @@
 - Id: exclamative [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - exclamative
+  Name: exclamative
+  Alias: []
   SubtypeOf:
     - speech acts [cxn]
   ConstituentOf: []
@@ -4137,8 +4137,8 @@
 - Id: exclamative [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - exclamative
+  Name: exclamative
+  Alias: []
   SubtypeOf:
     - speech acts [inf]
   ConstituentOf: []
@@ -4149,8 +4149,8 @@
 - Id: exclusive disjunctive coordination [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: exclusive disjunctive coordination
   Alias:
-    - exclusive disjunctive coordination
     - exclusive disjunction
   SubtypeOf:
     - disjunctive coordination [cxn]
@@ -4163,8 +4163,8 @@
 - Id: exclusive pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - exclusive pronoun
+  Name: exclusive pronoun
+  Alias: []
   SubtypeOf:
     - first person pronoun [cxn]
   ConstituentOf: []
@@ -4175,8 +4175,8 @@
 - Id: exhaustive list coordination [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: exhaustive list coordination
   Alias:
-    - exhaustive list coordination
     - summary conjunction
     - exhaustive coordination
   SubtypeOf:
@@ -4189,8 +4189,8 @@
 - Id: existential [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - existential
+  Name: existential
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -4202,8 +4202,8 @@
 - Id: existential negation construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: existential negation construction
   Alias:
-    - existential negation construction
     - existential negation
   SubtypeOf:
     - negation construction [cxn]
@@ -4215,8 +4215,8 @@
 - Id: expanding [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - expanding
+  Name: expanding
+  Alias: []
   SubtypeOf:
     - counterpresuppositional contrast [inf]
   ConstituentOf: []
@@ -4227,8 +4227,8 @@
 - Id: experience event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - experience event
+  Name: experience event
+  Alias: []
   SubtypeOf:
     - experiential event [sem]
   ConstituentOf: []
@@ -4240,8 +4240,8 @@
 - Id: experience verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - experience verb
+  Name: experience verb
+  Alias: []
   SubtypeOf:
     - experiential verb [cxn]
   ConstituentOf: []
@@ -4252,8 +4252,8 @@
 - Id: experiencer [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - experiencer
+  Name: experiencer
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf:
@@ -4265,8 +4265,8 @@
 - Id: experiencer-oriented strategy [str]
   Type: str
   InstanceOf: ""
+  Name: experiencer-oriented strategy
   Alias:
-    - experiencer-oriented strategy
     - experiencer-subject strategy
   SubtypeOf:
     - strategy [def]
@@ -4278,8 +4278,8 @@
 - Id: experiential construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - experiential construction
+  Name: experiential construction
+  Alias: []
   SubtypeOf:
     - argument structure construction [cxn]
   ConstituentOf: []
@@ -4290,8 +4290,8 @@
 - Id: experiential event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - experiential event
+  Name: experiential event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -4302,8 +4302,8 @@
 - Id: experiential verb [cxn]
   Type: cxn
   InstanceOf: experiential event [sem] / verb [cxn]
-  Alias:
-    - experiential verb
+  Name: experiential verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -4315,8 +4315,8 @@
 - Id: expertum [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - expertum
+  Name: expertum
+  Alias: []
   SubtypeOf:
     - experiential event [sem]
     - participant [sem]
@@ -4328,8 +4328,8 @@
 - Id: explanation [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - explanation
+  Name: explanation
+  Alias: []
   SubtypeOf:
     - discourse context (FN-Br) [inf]
   ConstituentOf: []
@@ -4341,8 +4341,8 @@
 - Id: explicitness [def]
   Type: def
   InstanceOf: ""
+  Name: explicitness
   Alias:
-    - explicitness
     - recoverability
     - explicit
   SubtypeOf: []
@@ -4354,8 +4354,8 @@
 - Id: Extended Animacy Hierarchy [def]
   Type: def
   InstanceOf: ""
+  Name: Extended Animacy Hierarchy
   Alias:
-    - Extended Animacy Hierarchy
     - Referentiality Hierarchy
   SubtypeOf: []
   ConstituentOf: []
@@ -4366,8 +4366,8 @@
 - Id: external possessor strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - external possessor strategy
+  Name: external possessor strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -4379,8 +4379,8 @@
 - Id: externally headed [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - externally headed
+  Name: externally headed
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -4392,8 +4392,8 @@
 - Id: extraposed strategy [str]
   Type: str
   InstanceOf: ""
+  Name: extraposed strategy
   Alias:
-    - extraposed strategy
     - extraposed
   SubtypeOf:
     - word order [str]
@@ -4406,8 +4406,8 @@
 - Id: extroverted event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - extroverted event
+  Name: extroverted event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -4418,8 +4418,8 @@
 - Id: extroverted verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - extroverted verb
+  Name: extroverted verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -4430,8 +4430,8 @@
 - Id: factive event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - factive event
+  Name: factive event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -4442,8 +4442,8 @@
 - Id: false cumulation [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - false cumulation
+  Name: false cumulation
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -4453,8 +4453,8 @@
 - Id: fearing event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - fearing event
+  Name: fearing event
+  Alias: []
   SubtypeOf:
     - evaluative event [sem]
   ConstituentOf: []
@@ -4465,8 +4465,8 @@
 - Id: fearing predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - fearing predicate
+  Name: fearing predicate
+  Alias: []
   SubtypeOf:
     - evaluative predicate [cxn]
   ConstituentOf: []
@@ -4477,8 +4477,8 @@
 - Id: figure [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - figure
+  Name: figure
+  Alias: []
   SubtypeOf:
     - figure--ground spatial relation [sem]
   ConstituentOf: []
@@ -4489,8 +4489,8 @@
 - Id: figure--ground [inf]
   Type: inf
   InstanceOf: ""
+  Name: figure--ground
   Alias:
-    - figure--ground
     - asymmetric
   SubtypeOf:
     - information packaging [def]
@@ -4503,8 +4503,8 @@
 - Id: figure--ground spatial relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: figure--ground spatial relation
   Alias:
-    - figure--ground spatial relation
     - locative relation
     - spatial figure--ground relation
   SubtypeOf:
@@ -4518,8 +4518,8 @@
 - Id: figure-incorporating [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - figure-incorporating
+  Name: figure-incorporating
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -4530,8 +4530,8 @@
 - Id: file metaphor [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - file metaphor
+  Name: file metaphor
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -4541,8 +4541,8 @@
 - Id: first person pronoun [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: first person pronoun
   Alias:
-    - first person pronoun
     - first person
   SubtypeOf:
     - personal pronoun [cxn]
@@ -4554,8 +4554,8 @@
 - Id: fixed-case [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - fixed-case
+  Name: fixed-case
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -4566,8 +4566,8 @@
 - Id: flag, flagging [str]
   Type: str
   InstanceOf: ""
+  Name: flag, flagging
   Alias:
-    - flag, flagging
     - flag/flagging
     - flag
     - flagging
@@ -4582,8 +4582,8 @@
 - Id: focus [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - focus
+  Name: focus
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf: []
@@ -4594,8 +4594,8 @@
 - Id: focus marker [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - focus marker
+  Name: focus marker
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -4606,8 +4606,8 @@
 - Id: focus operator [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - focus operator
+  Name: focus operator
+  Alias: []
   SubtypeOf:
     - element [cxn]
   ConstituentOf:
@@ -4619,8 +4619,8 @@
 - Id: force [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - force
+  Name: force
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf: []
@@ -4631,8 +4631,8 @@
 - Id: form [def]
   Type: def
   InstanceOf: ""
+  Name: form
   Alias:
-    - form
     - expression
   SubtypeOf: []
   ConstituentOf: []
@@ -4643,8 +4643,8 @@
 - Id: form term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - form term
+  Name: form term
+  Alias: []
   SubtypeOf:
     - mensural term [cxn]
   ConstituentOf: []
@@ -4655,8 +4655,8 @@
 - Id: free choice pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - free choice pronoun
+  Name: free choice pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -4667,8 +4667,8 @@
 - Id: free choice referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - free choice referent
+  Name: free choice referent
+  Alias: []
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
@@ -4679,8 +4679,8 @@
 - Id: free relative clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - free relative clause
+  Name: free relative clause
+  Alias: []
   SubtypeOf:
     - relative clause construction [cxn]
   ConstituentOf: []
@@ -4696,8 +4696,8 @@
 - Id: function [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - function
+  Name: function
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -4707,8 +4707,8 @@
 - Id: functionalism [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - functionalism
+  Name: functionalism
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -4718,8 +4718,8 @@
 - Id: fusion [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - fusion
+  Name: fusion
+  Alias: []
   SubtypeOf:
     - relational strategy [str]
   ConstituentOf: []
@@ -4730,8 +4730,8 @@
 - Id: future-oriented [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - future-oriented
+  Name: future-oriented
+  Alias: []
   SubtypeOf:
     - tense [sem]
   ConstituentOf: []
@@ -4743,8 +4743,8 @@
 - Id: gap strategy [str]
   Type: str
   InstanceOf: ""
+  Name: gap strategy
   Alias:
-    - gap strategy
     - gap
   SubtypeOf:
     - externally headed [str]
@@ -4756,8 +4756,8 @@
 - Id: gender term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - gender term
+  Name: gender term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -4768,8 +4768,8 @@
 - Id: gender/class [sem]
   Type: sem
   InstanceOf: ""
+  Name: gender/class
   Alias:
-    - gender/class
     - gender
     - class
   SubtypeOf:
@@ -4783,8 +4783,8 @@
 - Id: general extender [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - general extender
+  Name: general extender
+  Alias: []
   SubtypeOf:
     - syndetic [str]
   ConstituentOf: []
@@ -4795,8 +4795,8 @@
 - Id: generic [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - generic
+  Name: generic
+  Alias: []
   SubtypeOf:
     - information status [inf]
   ConstituentOf: []
@@ -4809,8 +4809,8 @@
 - Id: generic article [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - generic article
+  Name: generic article
+  Alias: []
   SubtypeOf:
     - article [cxn]
   ConstituentOf: []
@@ -4821,8 +4821,8 @@
 - Id: generic conditional construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - generic conditional construction
+  Name: generic conditional construction
+  Alias: []
   SubtypeOf:
     - conditional construction [cxn]
   ConstituentOf: []
@@ -4833,8 +4833,8 @@
 - Id: generic conditional relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: generic conditional relation
   Alias:
-    - generic conditional relation
     - generic conditional
   SubtypeOf:
     - conditional relation [sem]
@@ -4846,8 +4846,8 @@
 - Id: generic pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - generic pronoun
+  Name: generic pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -4858,8 +4858,8 @@
 - Id: gradable predicative scale [sem]
   Type: sem
   InstanceOf: ""
+  Name: gradable predicative scale
   Alias:
-    - gradable predicative scale
     - predicative scale
   SubtypeOf:
     - state [sem]
@@ -4871,8 +4871,8 @@
 - Id: grammaticalization [def]
   Type: def
   InstanceOf: ""
+  Name: grammaticalization
   Alias:
-    - grammaticalization
     - grammaticalize
   SubtypeOf: []
   ConstituentOf: []
@@ -4883,8 +4883,8 @@
 - Id: ground [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - ground
+  Name: ground
+  Alias: []
   SubtypeOf:
     - figure--ground spatial relation [sem]
   ConstituentOf: []
@@ -4896,8 +4896,8 @@
 - Id: group term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - group term
+  Name: group term
+  Alias: []
   SubtypeOf:
     - mensural term [cxn]
   ConstituentOf: []
@@ -4908,8 +4908,8 @@
 - Id: hanging topic phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - hanging topic phrase
+  Name: hanging topic phrase
+  Alias: []
   SubtypeOf:
     - topic phrase [cxn]
   ConstituentOf: []
@@ -4920,8 +4920,8 @@
 - Id: have-possessive strategy [str]
   Type: str
   InstanceOf: ""
+  Name: have-possessive strategy
   Alias:
-    - have-possessive strategy
     - action strategy
   SubtypeOf:
     - strategy [def]
@@ -4933,8 +4933,8 @@
 - Id: head [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - head
+  Name: head
+  Alias: []
   SubtypeOf:
     - element [cxn]
   ConstituentOf: []
@@ -4945,8 +4945,8 @@
 - Id: headless [str]
   Type: str
   InstanceOf: ""
+  Name: headless
   Alias:
-    - headless
     - null anaphoric head
   SubtypeOf:
     - zero coded strategy [str]
@@ -4958,8 +4958,8 @@
 - Id: hoping event [sem]
   Type: sem
   InstanceOf: ""
+  Name: hoping event
   Alias:
-    - hoping event
     - hoping
   SubtypeOf:
     - evaluative event [sem]
@@ -4971,8 +4971,8 @@
 - Id: hoping predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - hoping predicate
+  Name: hoping predicate
+  Alias: []
   SubtypeOf:
     - evaluative predicate [cxn]
   ConstituentOf: []
@@ -4983,8 +4983,8 @@
 - Id: human [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - human
+  Name: human
+  Alias: []
   SubtypeOf:
     - object concept [sem]
     - ontological categories [sem]
@@ -4996,8 +4996,8 @@
 - Id: human propensity term [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: human propensity term
   Alias:
-    - human propensity term
     - disposition
   SubtypeOf:
     - adjective [cxn]
@@ -5009,9 +5009,9 @@
 - Id: hybrid information packaging strategy [str]
   Type: str
   InstanceOf: ""
+  Name: hybrid information packaging strategy
   Alias:
     - hybrid IP strategy
-    - hybrid information packaging strategy
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -5023,8 +5023,8 @@
 - Id: hypothetical [sem]
   Type: sem
   InstanceOf: ""
+  Name: hypothetical
   Alias:
-    - hypothetical
     - non-factive
   SubtypeOf:
     - epistemic stance [sem]
@@ -5036,8 +5036,8 @@
 - Id: identifiability, identity [inf]
   Type: inf
   InstanceOf: ""
+  Name: identifiability, identity
   Alias:
-    - identifiability, identity
     - identifiability/identity
     - identifiability
     - identity
@@ -5051,8 +5051,8 @@
 - Id: identificational [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - identificational
+  Name: identificational
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf: []
@@ -5063,8 +5063,8 @@
 - Id: identificational [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - identificational
+  Name: identificational
+  Alias: []
   SubtypeOf:
     - predication [inf]
   ConstituentOf: []
@@ -5075,8 +5075,8 @@
 - Id: identity statements [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - identity statements
+  Name: identity statements
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -5086,8 +5086,8 @@
 - Id: ideophones [str]
   Type: str
   InstanceOf: ""
+  Name: ideophones
   Alias:
-    - ideophones
     - mimetics
     - ideophone strategy
   SubtypeOf:
@@ -5100,8 +5100,8 @@
 - Id: imperative--hortative [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: imperative--hortative
   Alias:
-    - imperative--hortative
     - imperative
     - hortative
   SubtypeOf:
@@ -5114,8 +5114,8 @@
 - Id: imperative--hortative [inf]
   Type: inf
   InstanceOf: ""
+  Name: imperative--hortative
   Alias:
-    - imperative--hortative
     - imperative
     - hortative
   SubtypeOf:
@@ -5128,8 +5128,8 @@
 - Id: inactive [inf]
   Type: inf
   InstanceOf: ""
+  Name: inactive
   Alias:
-    - inactive
     - noncontaining inferrable
   SubtypeOf:
     - accessibility [inf]
@@ -5142,8 +5142,8 @@
 - Id: inactive category [str]
   Type: str
   InstanceOf: ""
+  Name: inactive category
   Alias:
-    - inactive category
     - stative
     - patientive
     - undergoer
@@ -5160,8 +5160,8 @@
 - Id: inalienable possession [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - inalienable possession
+  Name: inalienable possession
+  Alias: []
   SubtypeOf:
     - possessive (modification) construction [cxn]
   ConstituentOf: []
@@ -5172,8 +5172,8 @@
 - Id: inanimate [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - inanimate
+  Name: inanimate
+  Alias: []
   SubtypeOf:
     - object concept [sem]
     - ontological categories [sem]
@@ -5185,8 +5185,8 @@
 - Id: inclusive disjunctive coordination [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: inclusive disjunctive coordination
   Alias:
-    - inclusive disjunctive coordination
     - inclusive disjunction
   SubtypeOf:
     - disjunctive coordination [cxn]
@@ -5199,8 +5199,8 @@
 - Id: inclusive pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - inclusive pronoun
+  Name: inclusive pronoun
+  Alias: []
   SubtypeOf:
     - first person pronoun [cxn]
   ConstituentOf: []
@@ -5211,8 +5211,8 @@
 - Id: inclusory construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - inclusory construction
+  Name: inclusory construction
+  Alias: []
   SubtypeOf:
     - complex (construction) [cxn]
   ConstituentOf: []
@@ -5223,8 +5223,8 @@
 - Id: incorporation of serial verbs [str]
   Type: str
   InstanceOf: ""
+  Name: incorporation of serial verbs
   Alias:
-    - incorporation of serial verbs
     - morphological boundness of serial verbs
   SubtypeOf:
     - serial verb strategy [str]
@@ -5236,8 +5236,8 @@
 - Id: indefinite article [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - indefinite article
+  Name: indefinite article
+  Alias: []
   SubtypeOf:
     - article [cxn]
   ConstituentOf: []
@@ -5248,8 +5248,8 @@
 - Id: indefinite pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - indefinite pronoun
+  Name: indefinite pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -5260,8 +5260,8 @@
 - Id: independent referring phrase strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - independent referring phrase strategy
+  Name: independent referring phrase strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -5272,8 +5272,8 @@
 - Id: independent strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - independent strategy
+  Name: independent strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -5284,8 +5284,8 @@
 - Id: independent time reference [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - independent time reference
+  Name: independent time reference
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -5296,8 +5296,8 @@
 - Id: index [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - index
+  Name: index
+  Alias: []
   SubtypeOf:
     - strategy element (FN-Br) [str]
   ConstituentOf:
@@ -5309,8 +5309,8 @@
 - Id: indexation feature [str]
   Type: str
   InstanceOf: ""
+  Name: indexation feature
   Alias:
-    - indexation feature
     - agreement feature
   SubtypeOf:
     - strategy element (FN-Br) [str]
@@ -5323,8 +5323,8 @@
 - Id: indexed [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - indexed
+  Name: indexed
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -5336,8 +5336,8 @@
 - Id: indexical strategy, indexation [str]
   Type: str
   InstanceOf: ""
+  Name: indexical strategy, indexation
   Alias:
-    - indexical strategy, indexation
     - indexical strategy/indexation
     - indexical strategy
     - indexation
@@ -5353,8 +5353,8 @@
 - Id: indirect causation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - indirect causation
+  Name: indirect causation
+  Alias: []
   SubtypeOf:
     - causative event [sem]
   ConstituentOf: []
@@ -5365,8 +5365,8 @@
 - Id: indirect negation pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - indirect negation pronoun
+  Name: indirect negation pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -5377,8 +5377,8 @@
 - Id: indirect negation referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - indirect negation referent
+  Name: indirect negation referent
+  Alias: []
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
@@ -5389,8 +5389,8 @@
 - Id: indirect object category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - indirect object category
+  Name: indirect object category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -5402,8 +5402,8 @@
 - Id: indirect report [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - indirect report
+  Name: indirect report
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -5414,8 +5414,8 @@
 - Id: indirective alignment system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - indirective alignment system
+  Name: indirective alignment system
+  Alias: []
   SubtypeOf:
     - alignment system [str]
   ConstituentOf: []
@@ -5427,8 +5427,8 @@
 - Id: individual [sem]
   Type: sem
   InstanceOf: ""
+  Name: individual
   Alias:
-    - individual
     - instance
     - token
   SubtypeOf:
@@ -5442,8 +5442,8 @@
 - Id: inferrable [inf]
   Type: inf
   InstanceOf: ""
+  Name: inferrable
   Alias:
-    - inferrable
     - containing inferrable
   SubtypeOf:
     - accessibility [inf]
@@ -5456,8 +5456,8 @@
 - Id: information (question) response [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: information (question) response
   Alias:
-    - information (question) response
     - information question response
     - information response
   SubtypeOf:
@@ -5470,8 +5470,8 @@
 - Id: information (question) response [inf]
   Type: inf
   InstanceOf: ""
+  Name: information (question) response
   Alias:
-    - information (question) response
     - information question response
     - information response
   SubtypeOf:
@@ -5484,8 +5484,8 @@
 - Id: information gap [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - information gap
+  Name: information gap
+  Alias: []
   SubtypeOf:
     - discourse context (FN-Br) [inf]
   ConstituentOf: []
@@ -5496,9 +5496,9 @@
 - Id: information packaging [def]
   Type: def
   InstanceOf: ""
+  Name: information packaging
   Alias:
     - IP
-    - information packaging
     - information structure
     - discourse function
   SubtypeOf: []
@@ -5510,8 +5510,8 @@
 - Id: information question [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - information question
+  Name: information question
+  Alias: []
   SubtypeOf:
     - interrogative [cxn]
   ConstituentOf: []
@@ -5522,8 +5522,8 @@
 - Id: information question [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - information question
+  Name: information question
+  Alias: []
   SubtypeOf:
     - interrogative [inf]
   ConstituentOf: []
@@ -5534,8 +5534,8 @@
 - Id: information status [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - information status
+  Name: information status
+  Alias: []
   SubtypeOf:
     - information packaging [def]
   ConstituentOf: []
@@ -5547,8 +5547,8 @@
 - Id: ingestion event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - ingestion event
+  Name: ingestion event
+  Alias: []
   SubtypeOf:
     - controlled activity [sem]
   ConstituentOf: []
@@ -5559,8 +5559,8 @@
 - Id: ingestion verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - ingestion verb
+  Name: ingestion verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -5571,8 +5571,8 @@
 - Id: initiator [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - initiator
+  Name: initiator
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -5584,8 +5584,8 @@
 - Id: instrument [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - instrument
+  Name: instrument
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf: []
@@ -5596,8 +5596,8 @@
 - Id: insubordination [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - insubordination
+  Name: insubordination
+  Alias: []
   SubtypeOf:
     - deranked, deranking [str]
   ConstituentOf: []
@@ -5609,8 +5609,8 @@
 - Id: intensifier [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - intensifier
+  Name: intensifier
+  Alias: []
   SubtypeOf:
     - admodifier [cxn]
   ConstituentOf: []
@@ -5621,8 +5621,8 @@
 - Id: interaction event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - interaction event
+  Name: interaction event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -5633,8 +5633,8 @@
 - Id: interaction verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - interaction verb
+  Name: interaction verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -5645,8 +5645,8 @@
 - Id: interlinear morpheme translation [def]
   Type: def
   InstanceOf: ""
+  Name: interlinear morpheme translation
   Alias:
-    - interlinear morpheme translation
     - IMT
     - gloss
   SubtypeOf: []
@@ -5658,8 +5658,8 @@
 - Id: internal possessor strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - internal possessor strategy
+  Name: internal possessor strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -5670,8 +5670,8 @@
 - Id: internal recipient strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - internal recipient strategy
+  Name: internal recipient strategy
+  Alias: []
   SubtypeOf:
     - internal possessor strategy [str]
   ConstituentOf: []
@@ -5682,8 +5682,8 @@
 - Id: internally headed strategy [str]
   Type: str
   InstanceOf: ""
+  Name: internally headed strategy
   Alias:
-    - internally headed strategy
     - internally headed
   SubtypeOf:
     - strategy [def]
@@ -5695,8 +5695,8 @@
 - Id: interrogative [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - interrogative
+  Name: interrogative
+  Alias: []
   SubtypeOf:
     - speech acts [cxn]
   ConstituentOf: []
@@ -5707,8 +5707,8 @@
 - Id: interrogative [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - interrogative
+  Name: interrogative
+  Alias: []
   SubtypeOf:
     - speech acts [inf]
   ConstituentOf: []
@@ -5719,8 +5719,8 @@
 - Id: interrogative complement [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - interrogative complement
+  Name: interrogative complement
+  Alias: []
   SubtypeOf:
     - complement (dependent clause) [cxn]
   ConstituentOf: []
@@ -5731,8 +5731,8 @@
 - Id: interrogative pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - interrogative pronoun
+  Name: interrogative pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -5743,8 +5743,8 @@
 - Id: interruption [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - interruption
+  Name: interruption
+  Alias: []
   SubtypeOf:
     - discourse context (FN-Br) [inf]
   ConstituentOf: []
@@ -5756,8 +5756,8 @@
 - Id: intransitive construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - intransitive construction
+  Name: intransitive construction
+  Alias: []
   SubtypeOf:
     - argument structure construction [cxn]
   ConstituentOf: []
@@ -5768,8 +5768,8 @@
 - Id: intransitive predication [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - intransitive predication
+  Name: intransitive predication
+  Alias: []
   SubtypeOf:
     - predication [inf]
   ConstituentOf: []
@@ -5781,8 +5781,8 @@
 - Id: introverted event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - introverted event
+  Name: introverted event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -5793,8 +5793,8 @@
 - Id: introverted verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - introverted verb
+  Name: introverted verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -5805,8 +5805,8 @@
 - Id: irrealis pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - irrealis pronoun
+  Name: irrealis pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -5817,8 +5817,8 @@
 - Id: irrealis referent [inf]
   Type: inf
   InstanceOf: ""
+  Name: irrealis referent
   Alias:
-    - irrealis referent
     - irrealis
   SubtypeOf:
     - nonspecific referent [inf]
@@ -5830,8 +5830,8 @@
 - Id: juxtaposition [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - juxtaposition
+  Name: juxtaposition
+  Alias: []
   SubtypeOf:
     - simple strategy [str]
   ConstituentOf: []
@@ -5842,8 +5842,8 @@
 - Id: killing/injuring event [sem]
   Type: sem
   InstanceOf: ""
+  Name: killing/injuring event
   Alias:
-    - killing/injuring event
     - killing event
     - injuring event
   SubtypeOf:
@@ -5856,8 +5856,8 @@
 - Id: killing/injuring verb [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: killing/injuring verb
   Alias:
-    - killing/injuring verb
     - killing verb
     - injuring verb
   SubtypeOf:
@@ -5871,8 +5871,8 @@
 - Id: kinship relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: kinship relation
   Alias:
-    - kinship relation
     - kinship
   SubtypeOf:
     - possession relation [sem]
@@ -5885,8 +5885,8 @@
 - Id: knowledge event [sem]
   Type: sem
   InstanceOf: ""
+  Name: knowledge event
   Alias:
-    - knowledge event
     - knowledge
   SubtypeOf:
     - propositional attitude event [sem]
@@ -5899,8 +5899,8 @@
 - Id: knowledge predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - knowledge predicate
+  Name: knowledge predicate
+  Alias: []
   SubtypeOf:
     - propositional attitude predicate [cxn]
   ConstituentOf: []
@@ -5911,8 +5911,8 @@
 - Id: labile [str]
   Type: str
   InstanceOf: ""
+  Name: labile
   Alias:
-    - labile
     - ambitransitive
     - lexical causative
   SubtypeOf:
@@ -5925,9 +5925,9 @@
 - Id: less affected P [sem]
   Type: sem
   InstanceOf: ""
+  Name: less affected P
   Alias:
     - LAP
-    - less affected P
   SubtypeOf:
     - P role [sem]
   ConstituentOf: []
@@ -5938,9 +5938,9 @@
 - Id: less individuated P [sem]
   Type: sem
   InstanceOf: ""
+  Name: less individuated P
   Alias:
     - LIP
-    - less individuated P
   SubtypeOf:
     - P role [sem]
   ConstituentOf: []
@@ -5951,8 +5951,8 @@
 - Id: let alone construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - let alone construction
+  Name: let alone construction
+  Alias: []
   SubtypeOf:
     - adverbial clause construction [cxn]
   ConstituentOf: []
@@ -5963,8 +5963,8 @@
 - Id: lexicalize, lexicalization [def]
   Type: def
   InstanceOf: ""
+  Name: lexicalize, lexicalization
   Alias:
-    - lexicalize, lexicalization
     - lexicalize/lexicalization
     - lexicalize
     - lexicalization
@@ -5977,8 +5977,8 @@
 - Id: link [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - link
+  Name: link
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf: []
@@ -5989,8 +5989,8 @@
 - Id: linker [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - linker
+  Name: linker
+  Alias: []
   SubtypeOf:
     - relational strategy [str]
   ConstituentOf: []
@@ -6001,8 +6001,8 @@
 - Id: listing contrast [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - listing contrast
+  Name: listing contrast
+  Alias: []
   SubtypeOf:
     - parallel contrast [inf]
   ConstituentOf: []
@@ -6013,8 +6013,8 @@
 - Id: location [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - location
+  Name: location
+  Alias: []
   SubtypeOf:
     - figure--ground spatial relation [sem]
   ConstituentOf: []
@@ -6026,8 +6026,8 @@
 - Id: location clause [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: location clause
   Alias:
-    - location clause
     - locative clause
   SubtypeOf:
     - nonprototypical predication [cxn]
@@ -6039,8 +6039,8 @@
 - Id: locational possessive strategy [str]
   Type: str
   InstanceOf: ""
+  Name: locational possessive strategy
   Alias:
-    - locational possessive strategy
     - location strategy
     - goal strategy
   SubtypeOf:
@@ -6053,8 +6053,8 @@
 - Id: locational strategy [str]
   Type: str
   InstanceOf: ""
+  Name: locational strategy
   Alias:
-    - locational strategy
     - verbal copula strategy
   SubtypeOf:
     - verbal copula [str]
@@ -6068,8 +6068,8 @@
 - Id: locative phrase [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: locative phrase
   Alias:
-    - locative phrase
     - locative attributive phrase
   SubtypeOf:
     - attributive phrase [cxn]
@@ -6083,8 +6083,8 @@
 - Id: locative comparative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - locative comparative
+  Name: locative comparative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -6095,8 +6095,8 @@
 - Id: locative modification construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - locative modification construction
+  Name: locative modification construction
+  Alias: []
   SubtypeOf:
     - nominal modification [cxn]
   ConstituentOf: []
@@ -6107,8 +6107,8 @@
 - Id: locus of inflection of serial verbs [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - locus of inflection of serial verbs
+  Name: locus of inflection of serial verbs
+  Alias: []
   SubtypeOf:
     - serial verb strategy [str]
   ConstituentOf: []
@@ -6119,8 +6119,8 @@
 - Id: logophoric construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - logophoric construction
+  Name: logophoric construction
+  Alias: []
   SubtypeOf:
     - reference tracking [cxn]
     - complement clause construction [cxn]
@@ -6132,8 +6132,8 @@
 - Id: logophoric system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - logophoric system
+  Name: logophoric system
+  Alias: []
   SubtypeOf:
     - system [str]
   ConstituentOf: []
@@ -6144,8 +6144,8 @@
 - Id: long-distance reflexive [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - long-distance reflexive
+  Name: long-distance reflexive
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -6156,8 +6156,8 @@
 - Id: main clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - main clause
+  Name: main clause
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf:
@@ -6169,8 +6169,8 @@
 - Id: major propositional act [inf]
   Type: inf
   InstanceOf: ""
+  Name: major propositional act
   Alias:
-    - major propositional act
     - propositional act
   SubtypeOf:
     - information packaging [def]
@@ -6182,8 +6182,8 @@
 - Id: maleficiary [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - maleficiary
+  Name: maleficiary
+  Alias: []
   SubtypeOf:
     - semantic role [sem]
   ConstituentOf: []
@@ -6194,8 +6194,8 @@
 - Id: manipulative event [sem]
   Type: sem
   InstanceOf: ""
+  Name: manipulative event
   Alias:
-    - manipulative event
     - manipulative
   SubtypeOf:
     - event [sem]
@@ -6207,8 +6207,8 @@
 - Id: manipulative predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - manipulative predicate
+  Name: manipulative predicate
+  Alias: []
   SubtypeOf:
     - predicate [cxn]
   ConstituentOf: []
@@ -6219,8 +6219,8 @@
 - Id: manner complex predicate [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: manner complex predicate
   Alias:
-    - manner complex predicate
     - manner adverb
     - manner
   SubtypeOf:
@@ -6233,8 +6233,8 @@
 - Id: manner event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - manner event
+  Name: manner event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -6246,8 +6246,8 @@
 - Id: manner of motion event [sem]
   Type: sem
   InstanceOf: ""
+  Name: manner of motion event
   Alias:
-    - manner of motion event
     - manner of motion
   SubtypeOf:
     - motion event [sem]
@@ -6260,8 +6260,8 @@
 - Id: manner of motion verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - manner of motion verb
+  Name: manner of motion verb
+  Alias: []
   SubtypeOf:
     - manner verb [cxn]
   ConstituentOf: []
@@ -6272,8 +6272,8 @@
 - Id: manner verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - manner verb
+  Name: manner verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -6284,8 +6284,8 @@
 - Id: material term [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: material term
   Alias:
-    - material term
     - substance term
   SubtypeOf:
     - adjective [cxn]
@@ -6297,8 +6297,8 @@
 - Id: matrix clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - matrix clause
+  Name: matrix clause
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf:
@@ -6310,8 +6310,8 @@
 - Id: meaning [def]
   Type: def
   InstanceOf: ""
+  Name: meaning
   Alias:
-    - meaning
     - semantic content
     - semantic
     - information content
@@ -6325,8 +6325,8 @@
 - Id: means [sem]
   Type: sem
   InstanceOf: ""
+  Name: means
   Alias:
-    - means
     - positive circumstantial
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
@@ -6338,8 +6338,8 @@
 - Id: measure term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - measure term
+  Name: measure term
+  Alias: []
   SubtypeOf:
     - mensural term [cxn]
   ConstituentOf: []
@@ -6351,8 +6351,8 @@
 - Id: measurement [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - measurement
+  Name: measurement
+  Alias: []
   SubtypeOf:
     - admodifier [cxn]
   ConstituentOf: []
@@ -6363,8 +6363,8 @@
 - Id: mensural classifier [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - mensural classifier
+  Name: mensural classifier
+  Alias: []
   SubtypeOf:
     - classifier [str]
   ConstituentOf: []
@@ -6375,8 +6375,8 @@
 - Id: mensural construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - mensural construction
+  Name: mensural construction
+  Alias: []
   SubtypeOf:
     - typifying construction [cxn]
   ConstituentOf: []
@@ -6387,8 +6387,8 @@
 - Id: mensural term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - mensural term
+  Name: mensural term
+  Alias: []
   SubtypeOf:
     - modifier [cxn]
     - nonprototypical construction [cxn]
@@ -6400,8 +6400,8 @@
 - Id: mental space [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - mental space
+  Name: mental space
+  Alias: []
   SubtypeOf: 
     - meaning [def]
   ConstituentOf: []
@@ -6412,8 +6412,8 @@
 - Id: merged argument structure strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - merged argument structure strategy
+  Name: merged argument structure strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -6424,8 +6424,8 @@
 - Id: metalanguage [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - metalanguage
+  Name: metalanguage
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -6435,8 +6435,8 @@
 - Id: middle voice [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - middle voice
+  Name: middle voice
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -6448,8 +6448,8 @@
 - Id: mirative [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - mirative
+  Name: mirative
+  Alias: []
   SubtypeOf:
     - modality [sem]
   ConstituentOf: []
@@ -6462,8 +6462,8 @@
 - Id: modality [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - modality
+  Name: modality
+  Alias: []
   SubtypeOf:
     - TAMP [sem]
   ConstituentOf: []
@@ -6474,8 +6474,8 @@
 - Id: modification [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - modification
+  Name: modification
+  Alias: []
   SubtypeOf:
     - major propositional act [inf]
   ConstituentOf: []
@@ -6486,8 +6486,8 @@
 - Id: modification construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: modification construction
   Alias:
-    - modification construction
     - referent modification construction
   SubtypeOf:
     - phrase [cxn]
@@ -6499,8 +6499,8 @@
 - Id: modification--predication continuum [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - modification--predication continuum
+  Name: modification--predication continuum
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -6510,8 +6510,8 @@
 - Id: modification--reference continuum [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - modification--reference continuum
+  Name: modification--reference continuum
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -6521,8 +6521,8 @@
 - Id: modifier [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - modifier
+  Name: modifier
+  Alias: []
   SubtypeOf:
     - head [cxn]
   ConstituentOf: 
@@ -6535,8 +6535,8 @@
 - Id: monoclausal transitive reciprocal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - monoclausal transitive reciprocal strategy
+  Name: monoclausal transitive reciprocal strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -6547,8 +6547,8 @@
 - Id: monosyndetic [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - monosyndetic
+  Name: monosyndetic
+  Alias: []
   SubtypeOf:
     - syndetic [str]
   ConstituentOf: []
@@ -6559,8 +6559,8 @@
 - Id: monovalent event [sem]
   Type: sem
   InstanceOf: ""
+  Name: monovalent event
   Alias:
-    - monovalent event
     - monovalent
   SubtypeOf:
     - valency, valency class [sem]
@@ -6573,8 +6573,8 @@
 - Id: morphology [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - morphology
+  Name: morphology
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -6584,8 +6584,8 @@
 - Id: morphosyntax [def]
   Type: def
   InstanceOf: ""
+  Name: morphosyntax
   Alias:
-    - morphosyntax
     - morphosyntactic
   SubtypeOf: []
   ConstituentOf: []
@@ -6596,8 +6596,8 @@
 - Id: motion event [sem]
   Type: sem
   InstanceOf: ""
+  Name: motion event
   Alias:
-    - motion event
     - motion
   SubtypeOf:
     - monovalent event [sem]
@@ -6611,8 +6611,8 @@
 - Id: motion verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - motion verb
+  Name: motion verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -6623,8 +6623,8 @@
 - Id: necessary participant sharing [sem]
   Type: sem
   InstanceOf: ""
+  Name: necessary participant sharing
   Alias:
-    - necessary participant sharing
     - necessarily shared participant
   SubtypeOf:
     - meaning [def]
@@ -6636,8 +6636,8 @@
 - Id: negation construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: negation construction
   Alias:
-    - negation construction
     - negation
   SubtypeOf:
     - complex (construction) [cxn]
@@ -6649,8 +6649,8 @@
 - Id: negative (polarity) [sem]
   Type: sem
   InstanceOf: ""
+  Name: negative (polarity)
   Alias:
-    - negative (polarity)
     - negative polarity
     - negative
   SubtypeOf:
@@ -6664,8 +6664,8 @@
 - Id: negative circumstantial [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - negative circumstantial
+  Name: negative circumstantial
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -6676,8 +6676,8 @@
 - Id: negative epistemic stance [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - negative epistemic stance
+  Name: negative epistemic stance
+  Alias: []
   SubtypeOf:
     - hypothetical [sem]
   ConstituentOf: []
@@ -6688,8 +6688,8 @@
 - Id: neutral alignment system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - neutral alignment system
+  Name: neutral alignment system
+  Alias: []
   SubtypeOf:
     - alignment system [str]
   ConstituentOf: []
@@ -6700,8 +6700,8 @@
 - Id: neutral ditransitive alignment system [str]
   Type: str
   InstanceOf: ""
+  Name: neutral ditransitive alignment system
   Alias:
-    - neutral ditransitive alignment system
     - double object
   SubtypeOf:
     - alignment system [str]
@@ -6714,8 +6714,8 @@
 - Id: neutral epistemic stance [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - neutral epistemic stance
+  Name: neutral epistemic stance
+  Alias: []
   SubtypeOf:
     - hypothetical [sem]
   ConstituentOf: []
@@ -6726,8 +6726,8 @@
 - Id: nominal modification [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: nominal modification
   Alias:
-    - nominal modification
     - nominal modifier
   SubtypeOf:
     - modification construction [cxn]
@@ -6739,8 +6739,8 @@
 - Id: nominal phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - nominal phrase
+  Name: nominal phrase
+  Alias: []
   SubtypeOf:
     - referring phrase [cxn]
     - prototypical construction [cxn]
@@ -6752,8 +6752,8 @@
 - Id: nominal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - nominal strategy
+  Name: nominal strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -6765,8 +6765,8 @@
 - Id: nominalizer [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - nominalizer
+  Name: nominalizer
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -6778,8 +6778,8 @@
 - Id: nominative category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - nominative category
+  Name: nominative category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -6791,8 +6791,8 @@
 - Id: non-exhaustive list coordination [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: non-exhaustive list coordination
   Alias:
-    - non-exhaustive list coordination
     - representative conjunction
     - non-exhaustive coordination
   SubtypeOf:
@@ -6805,8 +6805,8 @@
 - Id: non-indexed [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - non-indexed
+  Name: non-indexed
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -6818,8 +6818,8 @@
 - Id: nonanaphoric (definite) article [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: nonanaphoric (definite) article
   Alias:
-    - nonanaphoric (definite) article
     - nonanaphoric definite article
     - nonanaphoric article
   SubtypeOf:
@@ -6832,8 +6832,8 @@
 - Id: nonbasic voice construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - nonbasic voice construction
+  Name: nonbasic voice construction
+  Alias: []
   SubtypeOf:
     - voice construction [cxn]
     - nonprototypical construction [cxn]
@@ -6845,8 +6845,8 @@
 - Id: noncausal event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - noncausal event
+  Name: noncausal event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -6858,8 +6858,8 @@
 - Id: nonperson indexation [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - nonperson indexation
+  Name: nonperson indexation
+  Alias: []
   SubtypeOf:
     - indexical strategy, indexation [str]
   ConstituentOf: []
@@ -6870,8 +6870,8 @@
 - Id: nonpredicational clauses [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - nonpredicational clauses
+  Name: nonpredicational clauses
+  Alias: []
   SubtypeOf:
     - nonprototypical predication [cxn]
   ConstituentOf: []
@@ -6882,8 +6882,8 @@
 - Id: nonprototypical construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - nonprototypical construction
+  Name: nonprototypical construction
+  Alias: []
   SubtypeOf:
     - construction [def]
   ConstituentOf: []
@@ -6894,8 +6894,8 @@
 - Id: nonprototypical predication [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: nonprototypical predication
   Alias:
-    - nonprototypical predication
     - nonverbal predication
   SubtypeOf:
     - nonprototypical construction [cxn]
@@ -6908,8 +6908,8 @@
 - Id: nonrelational [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - nonrelational
+  Name: nonrelational
+  Alias: []
   SubtypeOf:
     - entity [sem]
   ConstituentOf: []
@@ -6920,8 +6920,8 @@
 - Id: nonspecific article [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - nonspecific article
+  Name: nonspecific article
+  Alias: []
   SubtypeOf:
     - article [cxn]
   ConstituentOf: []
@@ -6932,8 +6932,8 @@
 - Id: nonspecific pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - nonspecific pronoun
+  Name: nonspecific pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -6944,8 +6944,8 @@
 - Id: nonspecific referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - nonspecific referent
+  Name: nonspecific referent
+  Alias: []
   SubtypeOf:
     - information status [inf]
   ConstituentOf: []
@@ -6956,8 +6956,8 @@
 - Id: nonverbal contrast [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - nonverbal contrast
+  Name: nonverbal contrast
+  Alias: []
   SubtypeOf:
     - parallel contrast [inf]
   ConstituentOf: []
@@ -6968,8 +6968,8 @@
 - Id: nonverbal copula strategy [str]
   Type: str
   InstanceOf: ""
+  Name: nonverbal copula strategy
   Alias:
-    - nonverbal copula strategy
     - nonverbal copula
   SubtypeOf:
     - copula [str]
@@ -6981,8 +6981,8 @@
 - Id: noun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - noun
+  Name: noun
+  Alias: []
   SubtypeOf:
     - prototypical construction [cxn]
     - referent expression [cxn]
@@ -6994,8 +6994,8 @@
 - Id: noun complement [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - noun complement
+  Name: noun complement
+  Alias: []
   SubtypeOf:
     - complement (dependent clause) [cxn]
   ConstituentOf:
@@ -7007,8 +7007,8 @@
 - Id: noun complement clause construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - noun complement clause construction
+  Name: noun complement clause construction
+  Alias: []
   SubtypeOf:
     - complex (construction) [cxn]
   ConstituentOf: []
@@ -7019,8 +7019,8 @@
 - Id: noun incorporation [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - noun incorporation
+  Name: noun incorporation
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -7031,8 +7031,8 @@
 - Id: noun-modifying clause strategy [str]
   Type: str
   InstanceOf: ""
+  Name: noun-modifying clause strategy
   Alias:
-    - noun-modifying clause strategy
     - noun-modifying clause
   SubtypeOf:
     - strategy [def]
@@ -7044,8 +7044,8 @@
 - Id: number [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - number
+  Name: number
+  Alias: []
   SubtypeOf:
     - property (concept) [sem]
     - ontological categories [sem]
@@ -7058,8 +7058,8 @@
 - Id: numeral [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - numeral
+  Name: numeral
+  Alias: []
   SubtypeOf:
     - relational [sem]
   ConstituentOf: []
@@ -7070,8 +7070,8 @@
 - Id: object argument [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - object argument
+  Name: object argument
+  Alias: []
   SubtypeOf:
     - core arguments [inf]
   ConstituentOf: []
@@ -7082,8 +7082,8 @@
 - Id: object concept [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - object concept
+  Name: object concept
+  Alias: []
   SubtypeOf:
     - nonrelational [sem]
     - stable [sem]
@@ -7100,8 +7100,8 @@
 - Id: object identity [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - object identity
+  Name: object identity
+  Alias: []
   SubtypeOf:
     - complex sentence [cxn]
   ConstituentOf: []
@@ -7113,8 +7113,8 @@
 - Id: object language [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - object language
+  Name: object language
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -7124,8 +7124,8 @@
 - Id: object phrase [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: object phrase
   Alias:
-    - object phrase
     - object
   SubtypeOf:
     - core argument phrase [cxn]
@@ -7137,8 +7137,8 @@
 - Id: objective [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - objective
+  Name: objective
+  Alias: []
   SubtypeOf:
     - modality [sem]
   ConstituentOf: []
@@ -7149,8 +7149,8 @@
 - Id: oblique P strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - oblique P strategy
+  Name: oblique P strategy
+  Alias: []
   SubtypeOf:
     - flag, flagging [str]
   ConstituentOf: []
@@ -7161,8 +7161,8 @@
 - Id: oblique argument [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - oblique argument
+  Name: oblique argument
+  Alias: []
   SubtypeOf:
     - argument [inf]
   ConstituentOf: []
@@ -7173,8 +7173,8 @@
 - Id: oblique phrase [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: oblique phrase
   Alias:
-    - oblique phrase
     - oblique argument phrase
   SubtypeOf:
     - argument phrase [cxn]
@@ -7187,8 +7187,8 @@
 - Id: omitted P strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - omitted P strategy
+  Name: omitted P strategy
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -7199,8 +7199,8 @@
 - Id: ontological categories [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - ontological categories
+  Name: ontological categories
+  Alias: []
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -7213,8 +7213,8 @@
 - Id: ontology [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - ontology
+  Name: ontology
+  Alias: []
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -7225,8 +7225,8 @@
 - Id: ordered strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - ordered strategy
+  Name: ordered strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -7238,8 +7238,8 @@
 - Id: ordinal numeral [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - ordinal numeral
+  Name: ordinal numeral
+  Alias: []
   SubtypeOf:
     - set-member term [cxn]
   ConstituentOf: []
@@ -7250,8 +7250,8 @@
 - Id: overt (coding) strategy [str]
   Type: str
   InstanceOf: ""
+  Name: overt (coding) strategy
   Alias:
-    - overt (coding) strategy
     - overt coding strategy
     - overt strategy
     - overt coding
@@ -7270,8 +7270,8 @@
 - Id: overtly headed strategy [str]
   Type: str
   InstanceOf: ""
+  Name: overtly headed strategy
   Alias:
-    - overtly headed strategy
     - overt head strategy
   SubtypeOf:
     - overt (coding) strategy [str]
@@ -7283,8 +7283,8 @@
 - Id: overtly verb-coded voice strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - overtly verb-coded voice strategy
+  Name: overtly verb-coded voice strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -7295,8 +7295,8 @@
 - Id: ownership [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - ownership
+  Name: ownership
+  Alias: []
   SubtypeOf:
     - possession relation [sem]
   ConstituentOf: []
@@ -7308,8 +7308,8 @@
 - Id: P role [sem]
   Type: sem
   InstanceOf: ""
+  Name: P role
   Alias:
-    - P role
     - O role
     - P
     - O
@@ -7329,8 +7329,8 @@
 - Id: parallel contrast [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - parallel contrast
+  Name: parallel contrast
+  Alias: []
   SubtypeOf:
     - contrast [inf]
   ConstituentOf: []
@@ -7341,8 +7341,8 @@
 - Id: part--whole relation [sem]
   Type: sem
   InstanceOf: ""
+  Name: part--whole relation
   Alias:
-    - part--whole relation
     - part--whole
   SubtypeOf:
     - possession relation [sem]
@@ -7355,8 +7355,8 @@
 - Id: partially merged argument structure strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - partially merged argument structure strategy
+  Name: partially merged argument structure strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -7367,8 +7367,8 @@
 - Id: participant [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - participant
+  Name: participant
+  Alias: []
   SubtypeOf:
     - entity [sem]
   ConstituentOf: []
@@ -7381,8 +7381,8 @@
 - Id: participant role [sem]
   Type: sem
   InstanceOf: ""
+  Name: participant role
   Alias:
-    - participant role
     - microrole
     - Frame Element
   SubtypeOf:
@@ -7395,8 +7395,8 @@
 - Id: participant-oriented [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - participant-oriented
+  Name: participant-oriented
+  Alias: []
   SubtypeOf:
     - state [sem]
   ConstituentOf: []
@@ -7409,8 +7409,8 @@
 - Id: participial strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - participial strategy
+  Name: participial strategy
+  Alias: []
   SubtypeOf:
     - indexed [str]
     - deranked, deranking [str]
@@ -7422,8 +7422,8 @@
 - Id: participle [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - participle
+  Name: participle
+  Alias: []
   SubtypeOf:
     - deranked, deranking [str]
   ConstituentOf: []
@@ -7436,8 +7436,8 @@
 - Id: particle comparative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - particle comparative
+  Name: particle comparative
+  Alias: []
   SubtypeOf:
     - derived-case [str]
     - independent strategy [str]
@@ -7449,8 +7449,8 @@
 - Id: particle equative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - particle equative
+  Name: particle equative
+  Alias: []
   SubtypeOf:
     - derived-case [str]
   ConstituentOf: []
@@ -7461,8 +7461,8 @@
 - Id: particularizing [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - particularizing
+  Name: particularizing
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -7472,8 +7472,8 @@
 - Id: partitive construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - partitive construction
+  Name: partitive construction
+  Alias: []
   SubtypeOf:
     - anchoring construction [cxn]
   ConstituentOf: []
@@ -7484,8 +7484,8 @@
 - Id: passing [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - passing
+  Name: passing
+  Alias: []
   SubtypeOf:
     - path (of motion) event [sem]
   ConstituentOf: []
@@ -7496,8 +7496,8 @@
 - Id: passive--inverse voice construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: passive--inverse voice construction
   Alias:
-    - passive--inverse voice construction
     - passive--inverse construction
   SubtypeOf:
     - nonbasic voice construction [cxn]
@@ -7509,8 +7509,8 @@
 - Id: path (of motion) event [sem]
   Type: sem
   InstanceOf: ""
+  Name: path (of motion) event
   Alias:
-    - path (of motion) event
     - path of motion event
     - path of motion
     - path event
@@ -7525,8 +7525,8 @@
 - Id: path (of motion) verb [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: path (of motion) verb
   Alias:
-    - path (of motion) verb
     - path of motion verb
     - path verb
   SubtypeOf:
@@ -7539,8 +7539,8 @@
 - Id: patient [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - patient
+  Name: patient
+  Alias: []
   SubtypeOf:
     - P role [sem]
   ConstituentOf: []
@@ -7551,8 +7551,8 @@
 - Id: perception complement-taking predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - perception complement-taking predicate
+  Name: perception complement-taking predicate
+  Alias: []
   SubtypeOf:
     - complement-taking predicate [cxn]
   ConstituentOf: []
@@ -7564,8 +7564,8 @@
 - Id: perception event [sem]
   Type: sem
   InstanceOf: ""
+  Name: perception event
   Alias:
-    - perception event
     - perception
   SubtypeOf:
     - experiential event [sem]
@@ -7578,8 +7578,8 @@
 - Id: perception verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - perception verb
+  Name: perception verb
+  Alias: []
   SubtypeOf:
     - complement-taking predicate [cxn]
   ConstituentOf: []
@@ -7591,8 +7591,8 @@
 - Id: perception verb strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - perception verb strategy
+  Name: perception verb strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -7603,8 +7603,8 @@
 - Id: peripheral participant [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - peripheral participant
+  Name: peripheral participant
+  Alias: []
   SubtypeOf:
     - participant [sem]
   ConstituentOf: []
@@ -7615,8 +7615,8 @@
 - Id: person [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - person
+  Name: person
+  Alias: []
   SubtypeOf:
     - ontological categories [sem]
   ConstituentOf: []
@@ -7631,8 +7631,8 @@
 - Id: person indexation [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - person indexation
+  Name: person indexation
+  Alias: []
   SubtypeOf:
     - indexical strategy, indexation [str]
   ConstituentOf: []
@@ -7643,8 +7643,8 @@
 - Id: personal pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - personal pronoun
+  Name: personal pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -7655,8 +7655,8 @@
 - Id: phasal aspect [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - phasal aspect
+  Name: phasal aspect
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf: []
@@ -7667,8 +7667,8 @@
 - Id: phenomime [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - phenomime
+  Name: phenomime
+  Alias: []
   SubtypeOf:
     - ideophones [str]
   ConstituentOf: []
@@ -7679,8 +7679,8 @@
 - Id: phonomime [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - phonomime
+  Name: phonomime
+  Alias: []
   SubtypeOf:
     - ideophones [str]
   ConstituentOf: []
@@ -7691,8 +7691,8 @@
 - Id: phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - phrase
+  Name: phrase
+  Alias: []
   SubtypeOf:
     - complex (construction) [cxn]
     - element [cxn]
@@ -7704,8 +7704,8 @@
 - Id: physical property term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - physical property term
+  Name: physical property term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -7716,8 +7716,8 @@
 - Id: piece term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - piece term
+  Name: piece term
+  Alias: []
   SubtypeOf:
     - mensural term [cxn]
   ConstituentOf: []
@@ -7728,8 +7728,8 @@
 - Id: polarity [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - polarity
+  Name: polarity
+  Alias: []
   SubtypeOf:
     - TAMP [sem]
   ConstituentOf: []
@@ -7741,8 +7741,8 @@
 - Id: polarity focus construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: polarity focus construction
   Alias:
-    - polarity focus construction
     - truth-value focus construction
   SubtypeOf:
     - identificational [cxn]
@@ -7754,8 +7754,8 @@
 - Id: polarity question [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: polarity question
   Alias:
-    - polarity question
     - yes/no question
     - Y/N question
   SubtypeOf:
@@ -7768,8 +7768,8 @@
 - Id: polarity question [inf]
   Type: inf
   InstanceOf: ""
+  Name: polarity question
   Alias:
-    - polarity question
     - polarity question function
   SubtypeOf:
     - interrogative [inf]
@@ -7781,8 +7781,8 @@
 - Id: polarity response [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: polarity response
   Alias:
-    - polarity response
     - polarity answer
   SubtypeOf:
     - response [cxn]
@@ -7794,8 +7794,8 @@
 - Id: polarity response [inf]
   Type: inf
   InstanceOf: ""
+  Name: polarity response
   Alias:
-    - polarity response
     - polarity answer
   SubtypeOf:
     - response [inf]
@@ -7808,8 +7808,8 @@
 - Id: poset [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - poset
+  Name: poset
+  Alias: []
   SubtypeOf:
     - information packaging [def]
   ConstituentOf: []
@@ -7821,8 +7821,8 @@
 - Id: positive (polarity) [sem]
   Type: sem
   InstanceOf: ""
+  Name: positive (polarity)
   Alias:
-    - positive (polarity)
     - positive polarity
     - positive
   SubtypeOf:
@@ -7835,8 +7835,8 @@
 - Id: positive epistemic stance [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - positive epistemic stance
+  Name: positive epistemic stance
+  Alias: []
   SubtypeOf:
     - epistemic stance [sem]
   ConstituentOf: []
@@ -7847,8 +7847,8 @@
 - Id: possession clause [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: possession clause
   Alias:
-    - possession clause
     - possession construction
   SubtypeOf:
     - nonprototypical predication [cxn]
@@ -7860,8 +7860,8 @@
 - Id: possession relation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - possession relation
+  Name: possession relation
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -7874,8 +7874,8 @@
 - Id: possessive (modification) construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: possessive (modification) construction
   Alias:
-    - possessive (modification) construction
     - possessive modification construction
     - possessive construction
     - attributive possession construction
@@ -7889,8 +7889,8 @@
 - Id: possessive attributive phrase [cxn]
   Type: cxn:obsolete
   InstanceOf: ""
+  Name: possessive attributive phrase
   Alias:
-    - possessive attributive phrase
     - possessive modifier phrase
     - genitive phrase
   SubtypeOf:
@@ -7905,8 +7905,8 @@
 - Id: possessive locative strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - possessive locative strategy
+  Name: possessive locative strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -7917,8 +7917,8 @@
 - Id: possessor role [sem]
   Type: sem
   InstanceOf: ""
+  Name: possessor role
   Alias:
-    - possessor role
     - possessor
   SubtypeOf:
     - participant role [sem]
@@ -7931,8 +7931,8 @@
 - Id: possessum role [sem]
   Type: sem
   InstanceOf: ""
+  Name: possessum role
   Alias:
-    - possessum role
     - possessed role
     - possessee role
     - possessum
@@ -7947,8 +7947,8 @@
 - Id: posterior [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - posterior
+  Name: posterior
+  Alias: []
   SubtypeOf:
     - consecutive [sem]
   ConstituentOf: []
@@ -7959,8 +7959,8 @@
 - Id: posterior deranking [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - posterior deranking
+  Name: posterior deranking
+  Alias: []
   SubtypeOf:
     - deranked, deranking [str]
   ConstituentOf: []
@@ -7973,8 +7973,8 @@
 - Id: postnominal strategy [str]
   Type: str
   InstanceOf: ""
+  Name: postnominal strategy
   Alias:
-    - postnominal strategy
     - postnominal
   SubtypeOf:
     - word order [str]
@@ -7987,8 +7987,8 @@
 - Id: postposition [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - postposition
+  Name: postposition
+  Alias: []
   SubtypeOf:
     - adposition [str]
   ConstituentOf: []
@@ -7999,8 +7999,8 @@
 - Id: pragmatic assertion [inf]
   Type: inf
   InstanceOf: ""
+  Name: pragmatic assertion
   Alias:
-    - pragmatic assertion
     - assertion
     - pragmatically assert
     - assert
@@ -8016,8 +8016,8 @@
 - Id: pragmatic presupposition [inf]
   Type: inf
   InstanceOf: ""
+  Name: pragmatic presupposition
   Alias:
-    - pragmatic presupposition
     - presupposition
     - presuppose
   SubtypeOf:
@@ -8031,8 +8031,8 @@
 - Id: pragmatically nonspecific (but semantically specific) (indefinite) article [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: pragmatically nonspecific (but semantically specific) (indefinite) article
   Alias:
-    - pragmatically nonspecific (but semantically specific) (indefinite) article
     - pragmatically nonspecific (but semantically specific) indefinite article
     - pragmatically nonspecific (but semantically specific) article
     - pragmatically nonspecific but semantically specific (indefinite) article
@@ -8051,8 +8051,8 @@
 - Id: pragmatically nonspecific (but semantically specific) (indefinite) referent [inf]
   Type: inf
   InstanceOf: ""
+  Name: pragmatically nonspecific (but semantically specific) (indefinite) referent
   Alias:
-    - pragmatically nonspecific (but semantically specific) (indefinite) referent
     - pragmatically nonspecific (but semantically specific) indefinite referent
     - pragmatically nonspecific (but semantically specific) referent
     - pragmatically nonspecific (but semantically specific)
@@ -8072,8 +8072,8 @@
 - Id: pragmatically specific (indefinite) article [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: pragmatically specific (indefinite) article
   Alias:
-    - pragmatically specific (indefinite) article
     - pragmatically specific indefinite article
     - pragmatically specific article
   SubtypeOf:
@@ -8086,8 +8086,8 @@
 - Id: pragmatically specific (indefinite) referent [inf]
   Type: inf
   InstanceOf: ""
+  Name: pragmatically specific (indefinite) referent
   Alias:
-    - pragmatically specific (indefinite) referent
     - pragmatically specific indefinite referent
     - pragmatically specific referent
     - pragmatically specific
@@ -8101,8 +8101,8 @@
 - Id: predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - predicate
+  Name: predicate
+  Alias: []
   SubtypeOf:
     - head [cxn]
   ConstituentOf:
@@ -8114,8 +8114,8 @@
 - Id: predicate adjectival construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: predicate adjectival construction
   Alias:
-    - predicate adjectival construction
     - predicate adjectival
     - property predication construction
     - property predication
@@ -8129,8 +8129,8 @@
 - Id: predicate identity [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - predicate identity
+  Name: predicate identity
+  Alias: []
   SubtypeOf:
     - complex sentence [cxn]
   ConstituentOf: []
@@ -8141,8 +8141,8 @@
 - Id: predicate nominal construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: predicate nominal construction
   Alias:
-    - predicate nominal construction
     - predicate nominal
     - object predication construction
     - object predication
@@ -8156,8 +8156,8 @@
 - Id: predication [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - predication
+  Name: predication
+  Alias: []
   SubtypeOf:
     - major propositional act [inf]
   ConstituentOf: []
@@ -8169,8 +8169,8 @@
 - Id: predicational [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - predicational
+  Name: predicational
+  Alias: []
   SubtypeOf:
     - topic--comment [cxn]
     - nonprototypical predication [cxn]
@@ -8183,8 +8183,8 @@
 - Id: predicational [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - predicational
+  Name: predicational
+  Alias: []
   SubtypeOf:
     - topic--comment [inf]
   ConstituentOf: []
@@ -8195,8 +8195,8 @@
 - Id: predicational location [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - predicational location
+  Name: predicational location
+  Alias: []
   SubtypeOf:
     - location clause [cxn]
     - predicational [cxn]
@@ -8208,8 +8208,8 @@
 - Id: predicational location [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - predicational location
+  Name: predicational location
+  Alias: []
   SubtypeOf:
     - predicational [inf]
   ConstituentOf: []
@@ -8220,8 +8220,8 @@
 - Id: predicational locative strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - predicational locative strategy
+  Name: predicational locative strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -8233,8 +8233,8 @@
 - Id: predicational possession [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: predicational possession
   Alias:
-    - predicational possession
     - belong possession
   SubtypeOf:
     - possession clause [cxn]
@@ -8247,8 +8247,8 @@
 - Id: predicational strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - predicational strategy
+  Name: predicational strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -8259,8 +8259,8 @@
 - Id: predicativization possessive strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - predicativization possessive strategy
+  Name: predicativization possessive strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -8271,8 +8271,8 @@
 - Id: preferred argument structure [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - preferred argument structure
+  Name: preferred argument structure
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -8282,8 +8282,8 @@
 - Id: Prenominal Integration [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - Prenominal Integration
+  Name: Prenominal Integration
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -8293,8 +8293,8 @@
 - Id: prenominal strategy [str]
   Type: str
   InstanceOf: ""
+  Name: prenominal strategy
   Alias:
-    - prenominal strategy
     - prenominal
   SubtypeOf:
     - word order [str]
@@ -8307,8 +8307,8 @@
 - Id: preposition [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - preposition
+  Name: preposition
+  Alias: []
   SubtypeOf:
     - adposition [str]
   ConstituentOf: []
@@ -8319,8 +8319,8 @@
 - Id: presentational [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - presentational
+  Name: presentational
+  Alias: []
   SubtypeOf:
     - entity-central [cxn]
     - nonpredicational clauses [cxn]
@@ -8333,8 +8333,8 @@
 - Id: presentational [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - presentational
+  Name: presentational
+  Alias: []
   SubtypeOf:
     - entity-central [inf]
   ConstituentOf: []
@@ -8345,8 +8345,8 @@
 - Id: presentational location [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: presentational location
   Alias:
-    - presentational location
     - presentational locative
   SubtypeOf:
     - presentational [cxn]
@@ -8359,8 +8359,8 @@
 - Id: presentational location [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - presentational location
+  Name: presentational location
+  Alias: []
   SubtypeOf:
     - presentational [inf]
   ConstituentOf: []
@@ -8371,8 +8371,8 @@
 - Id: presentational possession [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: presentational possession
   Alias:
-    - presentational possession
     - have possession
   SubtypeOf:
     - possession clause [cxn]
@@ -8385,9 +8385,9 @@
 - Id: presupposed open proposition [inf]
   Type: inf
   InstanceOf: ""
+  Name: presupposed open proposition
   Alias:
     - POP
-    - presupposed open proposition
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf: []
@@ -8398,9 +8398,9 @@
 - Id: pretense event [sem]
   Type: sem
   InstanceOf: ""
+  Name: pretense event
   Alias:
     - pretence event
-    - pretense event
   SubtypeOf:
     - propositional attitude event [sem]
   ConstituentOf: []
@@ -8411,8 +8411,8 @@
 - Id: pretense predicate [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: pretense predicate
   Alias:
-    - pretense predicate
     - pretence predicate
   SubtypeOf:
     - propositional attitude predicate [cxn]
@@ -8424,8 +8424,8 @@
 - Id: primary object category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - primary object category
+  Name: primary object category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -8437,8 +8437,8 @@
 - Id: prohibitive [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - prohibitive
+  Name: prohibitive
+  Alias: []
   SubtypeOf:
     - imperative--hortative [cxn]
     - negation construction [cxn]
@@ -8450,8 +8450,8 @@
 - Id: prohibitive [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - prohibitive
+  Name: prohibitive
+  Alias: []
   SubtypeOf:
     - imperative--hortative [inf]
   ConstituentOf: []
@@ -8462,8 +8462,8 @@
 - Id: pronominal argument complex predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - pronominal argument complex predicate
+  Name: pronominal argument complex predicate
+  Alias: []
   SubtypeOf:
     - argument complex predicate [cxn]
   ConstituentOf: []
@@ -8474,8 +8474,8 @@
 - Id: pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - pronoun
+  Name: pronoun
+  Alias: []
   SubtypeOf:
     - referring phrase [cxn]
   ConstituentOf: []
@@ -8486,8 +8486,8 @@
 - Id: pronoun-retention strategy [str]
   Type: str
   InstanceOf: ""
+  Name: pronoun-retention strategy
   Alias:
-    - pronoun-retention strategy
     - pronoun-retention
   SubtypeOf:
     - strategy [def]
@@ -8499,8 +8499,8 @@
 - Id: prop [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - prop
+  Name: prop
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf:
@@ -8512,8 +8512,8 @@
 - Id: proper noun [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: proper noun
   Alias:
-    - proper noun
     - proper name
   SubtypeOf:
     - noun [cxn]
@@ -8525,8 +8525,8 @@
 - Id: property (concept) [sem]
   Type: sem
   InstanceOf: ""
+  Name: property (concept)
   Alias:
-    - property (concept)
     - property concept
     - property
   SubtypeOf:
@@ -8543,8 +8543,8 @@
 - Id: property referring phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - property referring phrase
+  Name: property referring phrase
+  Alias: []
   SubtypeOf:
     - referring phrase [cxn]
     - nonprototypical construction [cxn]
@@ -8556,8 +8556,8 @@
 - Id: proportional quantifier [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - proportional quantifier
+  Name: proportional quantifier
+  Alias: []
   SubtypeOf:
     - quantifier [cxn]
   ConstituentOf: []
@@ -8568,8 +8568,8 @@
 - Id: proposition [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - proposition
+  Name: proposition
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -8581,8 +8581,8 @@
 - Id: propositional attitude event [sem]
   Type: sem
   InstanceOf: ""
+  Name: propositional attitude event
   Alias:
-    - propositional attitude event
     - propositional attitude
   SubtypeOf:
     - event [sem]
@@ -8595,8 +8595,8 @@
 - Id: propositional attitude predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - propositional attitude predicate
+  Name: propositional attitude predicate
+  Alias: []
   SubtypeOf:
     - complement-taking predicate [cxn]
   ConstituentOf: []
@@ -8607,8 +8607,8 @@
 - Id: propositional content [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - propositional content
+  Name: propositional content
+  Alias: []
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -8619,8 +8619,8 @@
 - Id: prosody [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - prosody
+  Name: prosody
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -8634,8 +8634,8 @@
 - Id: protasis [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: protasis
   Alias:
-    - protasis
     - antecedent
   SubtypeOf:
     - clause [cxn]
@@ -8652,8 +8652,8 @@
 - Id: protasis [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - protasis
+  Name: protasis
+  Alias: []
   SubtypeOf:
     - proposition [sem]
     - event [sem]
@@ -8667,8 +8667,8 @@
 - Id: prototypical construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: prototypical construction
   Alias:
-    - prototypical construction
     - prototypical
   SubtypeOf:
     - construction [def]
@@ -8680,8 +8680,8 @@
 - Id: proximal (deixis) [sem]
   Type: sem
   InstanceOf: ""
+  Name: proximal (deixis)
   Alias:
-    - proximal (deixis)
     - proximal deixis
     - proximal
   SubtypeOf:
@@ -8695,8 +8695,8 @@
 - Id: pseudo-partitive [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - pseudo-partitive
+  Name: pseudo-partitive
+  Alias: []
   SubtypeOf:
     - classifier [str]
   ConstituentOf: []
@@ -8707,8 +8707,8 @@
 - Id: psychomime [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - psychomime
+  Name: psychomime
+  Alias: []
   SubtypeOf:
     - ideophones [str]
   ConstituentOf: []
@@ -8719,8 +8719,8 @@
 - Id: punctual [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - punctual
+  Name: punctual
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf: []
@@ -8731,8 +8731,8 @@
 - Id: purpose [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - purpose
+  Name: purpose
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -8743,8 +8743,8 @@
 - Id: pursuit event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - pursuit event
+  Name: pursuit event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -8755,8 +8755,8 @@
 - Id: pursuit verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - pursuit verb
+  Name: pursuit verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -8767,8 +8767,8 @@
 - Id: quantifier [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - quantifier
+  Name: quantifier
+  Alias: []
   SubtypeOf:
     - modifier [cxn]
     - nonprototypical construction [cxn]
@@ -8780,8 +8780,8 @@
 - Id: question pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - question pronoun
+  Name: question pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -8793,8 +8793,8 @@
 - Id: question referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - question referent
+  Name: question referent
+  Alias: []
   SubtypeOf:
     - nonspecific referent [inf]
   ConstituentOf: []
@@ -8805,8 +8805,8 @@
 - Id: quotative marker [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - quotative marker
+  Name: quotative marker
+  Alias: []
   SubtypeOf:
     - complementizer [str]
   ConstituentOf: []
@@ -8817,8 +8817,8 @@
 - Id: R role [sem]
   Type: sem
   InstanceOf: ""
+  Name: R role
   Alias:
-    - R role
     - G role
     - R
     - G
@@ -8834,8 +8834,8 @@
 - Id: recipient [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - recipient
+  Name: recipient
+  Alias: []
   SubtypeOf:
     - R role [sem]
   ConstituentOf: []
@@ -8846,8 +8846,8 @@
 - Id: reciprocal construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - reciprocal construction
+  Name: reciprocal construction
+  Alias: []
   SubtypeOf:
     - reference tracking [cxn]
   ConstituentOf: []
@@ -8858,8 +8858,8 @@
 - Id: reciprocal event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - reciprocal event
+  Name: reciprocal event
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -8871,8 +8871,8 @@
 - Id: recruitment strategy [str]
   Type: str
   InstanceOf: ""
+  Name: recruitment strategy
   Alias:
-    - recruitment strategy
     - recruitment
     - recruit
     - recruiting
@@ -8886,8 +8886,8 @@
 - Id: reference point [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - reference point
+  Name: reference point
+  Alias: []
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -8900,8 +8900,8 @@
 - Id: reference tracking [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: reference tracking
   Alias:
-    - reference tracking
     - reference-tracking
   SubtypeOf:
     - complex (construction) [cxn]
@@ -8913,8 +8913,8 @@
 - Id: reference, referent [inf]
   Type: inf
   InstanceOf: ""
+  Name: reference, referent
   Alias:
-    - reference, referent
     - reference/referent
     - reference
     - referent
@@ -8928,8 +8928,8 @@
 - Id: referent expression [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - referent expression
+  Name: referent expression
+  Alias: []
   SubtypeOf:
     - head [cxn]
   ConstituentOf:
@@ -8942,8 +8942,8 @@
 - Id: referring phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - referring phrase
+  Name: referring phrase
+  Alias: []
   SubtypeOf:
     - phrase [cxn]
   ConstituentOf: []
@@ -8956,8 +8956,8 @@
 - Id: reflexive construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - reflexive construction
+  Name: reflexive construction
+  Alias: []
   SubtypeOf:
     - reference tracking [cxn]
   ConstituentOf: []
@@ -8968,8 +8968,8 @@
 - Id: reflexive event [sem]
   Type: sem
   InstanceOf: ""
+  Name: reflexive event
   Alias:
-    - reflexive event
     - reflexive
   SubtypeOf:
     - event [sem]
@@ -8981,8 +8981,8 @@
 - Id: rejecting [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - rejecting
+  Name: rejecting
+  Alias: []
   SubtypeOf:
     - counterpresuppositional contrast [inf]
   ConstituentOf: []
@@ -8993,8 +8993,8 @@
 - Id: relational [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - relational
+  Name: relational
+  Alias: []
   SubtypeOf:
     - entity [sem]
   ConstituentOf: []
@@ -9005,8 +9005,8 @@
 - Id: relational strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - relational strategy
+  Name: relational strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -9017,8 +9017,8 @@
 - Id: relative clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - relative clause
+  Name: relative clause
+  Alias: []
   SubtypeOf:
     - dependent clause [cxn]
   ConstituentOf:
@@ -9030,8 +9030,8 @@
 - Id: relative clause construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - relative clause construction
+  Name: relative clause construction
+  Alias: []
   SubtypeOf:
     - complex sentence [cxn]
   ConstituentOf: []
@@ -9042,8 +9042,8 @@
 - Id: relative clause head [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - relative clause head
+  Name: relative clause head
+  Alias: []
   SubtypeOf:
     - referring phrase [cxn]
     - head [cxn]
@@ -9056,8 +9056,8 @@
 - Id: relative equal equative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - relative equal equative
+  Name: relative equal equative
+  Alias: []
   SubtypeOf:
     - derived-case [str]
   ConstituentOf: []
@@ -9068,8 +9068,8 @@
 - Id: relative pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - relative pronoun
+  Name: relative pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -9080,8 +9080,8 @@
 - Id: relative pronoun strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - relative pronoun strategy
+  Name: relative pronoun strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9092,8 +9092,8 @@
 - Id: relative strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - relative strategy
+  Name: relative strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -9104,8 +9104,8 @@
 - Id: relative-based equative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - relative-based equative
+  Name: relative-based equative
+  Alias: []
   SubtypeOf:
     - derived-case [str]
   ConstituentOf: []
@@ -9116,8 +9116,8 @@
 - Id: relativizer [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - relativizer
+  Name: relativizer
+  Alias: []
   SubtypeOf:
     - conjunction [str]
   ConstituentOf: []
@@ -9128,8 +9128,8 @@
 - Id: removal event [sem]
   Type: sem
   InstanceOf: ""
+  Name: removal event
   Alias:
-    - removal event
     - removal
   SubtypeOf:
     - event [sem]
@@ -9141,8 +9141,8 @@
 - Id: removal verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - removal verb
+  Name: removal verb
+  Alias: []
   SubtypeOf:
     - manner verb [cxn]
     - result verb [cxn]
@@ -9154,8 +9154,8 @@
 - Id: repeater [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - repeater
+  Name: repeater
+  Alias: []
   SubtypeOf:
     - sortal classifier [str]
   ConstituentOf: []
@@ -9166,8 +9166,8 @@
 - Id: replacing [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - replacing
+  Name: replacing
+  Alias: []
   SubtypeOf:
     - counterpresuppositional contrast [inf]
   ConstituentOf: []
@@ -9178,8 +9178,8 @@
 - Id: response [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - response
+  Name: response
+  Alias: []
   SubtypeOf:
     - speech acts [cxn]
   ConstituentOf: []
@@ -9190,8 +9190,8 @@
 - Id: response [inf]
   Type: inf
   InstanceOf: ""
+  Name: response
   Alias:
-    - response
     - answer
   SubtypeOf:
     - speech acts [inf]
@@ -9204,8 +9204,8 @@
 - Id: restricting [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - restricting
+  Name: restricting
+  Alias: []
   SubtypeOf:
     - counterpresuppositional contrast [inf]
   ConstituentOf: []
@@ -9216,8 +9216,8 @@
 - Id: restrictive (focus) operator [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: restrictive (focus) operator
   Alias:
-    - restrictive (focus) operator
     - restrictive focus operator
     - restrictive operator
     - exclusive focus operator
@@ -9231,8 +9231,8 @@
 - Id: restrictive modification [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - restrictive modification
+  Name: restrictive modification
+  Alias: []
   SubtypeOf:
     - modification [inf]
   ConstituentOf: []
@@ -9244,8 +9244,8 @@
 - Id: result event [sem]
   Type: sem
   InstanceOf: ""
+  Name: result event
   Alias:
-    - result event
     - result
   SubtypeOf:
     - event [sem]
@@ -9257,8 +9257,8 @@
 - Id: result verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - result verb
+  Name: result verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -9269,8 +9269,8 @@
 - Id: resultative (complex predicate) [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: resultative (complex predicate)
   Alias:
-    - resultative (complex predicate)
     - resultative complex predicate
     - resultative
     - resultative secondary predicate
@@ -9285,8 +9285,8 @@
 - Id: role [def]
   Type: def
   InstanceOf: ""
+  Name: role
   Alias:
-    - role
     - slot
     - function
   SubtypeOf: []
@@ -9298,8 +9298,8 @@
 - Id: S role [sem]
   Type: sem
   InstanceOf: ""
+  Name: S role
   Alias:
-    - S role
     - S
   SubtypeOf:
     - semantic role [sem]
@@ -9316,8 +9316,8 @@
 - Id: salience [inf]
   Type: inf
   InstanceOf: ""
+  Name: salience
   Alias:
-    - salience
     - topicality
     - salient
   SubtypeOf:
@@ -9330,8 +9330,8 @@
 - Id: same-subject [inf]
   Type: inf
   InstanceOf: ""
+  Name: same-subject
   Alias:
-    - same-subject
     - SS
   SubtypeOf:
     - reference, referent [inf]
@@ -9343,8 +9343,8 @@
 - Id: satellite [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - satellite
+  Name: satellite
+  Alias: []
   SubtypeOf:
     - strategy element (FN-Br) [str]
   ConstituentOf:
@@ -9356,8 +9356,8 @@
 - Id: satellite-framing strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - satellite-framing strategy
+  Name: satellite-framing strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9368,8 +9368,8 @@
 - Id: scalar concessive conditional strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - scalar concessive conditional strategy
+  Name: scalar concessive conditional strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9380,8 +9380,8 @@
 - Id: scalar model [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - scalar model
+  Name: scalar model
+  Alias: []
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -9395,8 +9395,8 @@
 - Id: second person pronoun [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: second person pronoun
   Alias:
-    - second person pronoun
     - second person
   SubtypeOf:
     - personal pronoun [cxn]
@@ -9408,8 +9408,8 @@
 - Id: second position [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - second position
+  Name: second position
+  Alias: []
   SubtypeOf:
     - word order [str]
   ConstituentOf: []
@@ -9420,8 +9420,8 @@
 - Id: secondary object category [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - secondary object category
+  Name: secondary object category
+  Alias: []
   SubtypeOf:
     - alignment system category (FN-Br) [str]
   ConstituentOf:
@@ -9433,8 +9433,8 @@
 - Id: secundative (ditransitive) alignment [str]
   Type: str
   InstanceOf: ""
+  Name: secundative (ditransitive) alignment
   Alias:
-    - secundative (ditransitive) alignment
     - secundative ditransitive alignment
     - secundative alignment
     - secundative alignment system
@@ -9449,8 +9449,8 @@
 - Id: selecting [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - selecting
+  Name: selecting
+  Alias: []
   SubtypeOf:
     - modification [inf]
   ConstituentOf: []
@@ -9461,8 +9461,8 @@
 - Id: semantic classes [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - semantic classes
+  Name: semantic classes
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -9472,9 +9472,9 @@
 - Id: semantic information packaging strategy [str]
   Type: str
   InstanceOf: ""
+  Name: semantic information packaging strategy
   Alias:
     - semantic IP strategy
-    - semantic information packaging strategy
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9487,8 +9487,8 @@
 - Id: semantic map [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - semantic map
+  Name: semantic map
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -9498,8 +9498,8 @@
 - Id: semantic map model [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - semantic map model
+  Name: semantic map model
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -9509,8 +9509,8 @@
 - Id: semantic role [sem]
   Type: sem
   InstanceOf: ""
+  Name: semantic role
   Alias:
-    - semantic role
     - thematic role
   SubtypeOf:
     - participant role [sem]
@@ -9522,8 +9522,8 @@
 - Id: semi-active [inf]
   Type: inf
   InstanceOf: ""
+  Name: semi-active
   Alias:
-    - semi-active
     - accessible
     - tracking
     - recognitional
@@ -9538,8 +9538,8 @@
 - Id: sensation event [sem]
   Type: sem
   InstanceOf: ""
+  Name: sensation event
   Alias:
-    - sensation event
     - bodily sensation event
   SubtypeOf:
     - experiential event [sem]
@@ -9551,8 +9551,8 @@
 - Id: sensation verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - sensation verb
+  Name: sensation verb
+  Alias: []
   SubtypeOf:
     - experiential verb [cxn]
   ConstituentOf: []
@@ -9563,8 +9563,8 @@
 - Id: separative comparative [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - separative comparative
+  Name: separative comparative
+  Alias: []
   SubtypeOf:
     - fixed-case [str]
   ConstituentOf: []
@@ -9575,8 +9575,8 @@
 - Id: serial verb strategy [str]
   Type: str
   InstanceOf: ""
+  Name: serial verb strategy
   Alias:
-    - serial verb strategy
     - serial verb
   SubtypeOf:
     - zero coded strategy [str]
@@ -9589,8 +9589,8 @@
 - Id: set-member term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - set-member term
+  Name: set-member term
+  Alias: []
   SubtypeOf:
     - modifier [cxn]
     - nonprototypical construction [cxn]
@@ -9602,8 +9602,8 @@
 - Id: setting [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - setting
+  Name: setting
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf:
@@ -9615,8 +9615,8 @@
 - Id: shape term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - shape term
+  Name: shape term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -9627,8 +9627,8 @@
 - Id: simple contrast [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - simple contrast
+  Name: simple contrast
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -9639,8 +9639,8 @@
 - Id: simple predicate applicative strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - simple predicate applicative strategy
+  Name: simple predicate applicative strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9651,8 +9651,8 @@
 - Id: simple predicate causative strategy [str]
   Type: str
   InstanceOf: ""
+  Name: simple predicate causative strategy
   Alias:
-    - simple predicate causative strategy
     - monoclausal causative strategy
     - morphological causative
   SubtypeOf:
@@ -9665,8 +9665,8 @@
 - Id: simple strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - simple strategy
+  Name: simple strategy
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -9677,8 +9677,8 @@
 - Id: simultaneous [sem]
   Type: sem
   InstanceOf: ""
+  Name: simultaneous
   Alias:
-    - simultaneous
     - overlap
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
@@ -9690,8 +9690,8 @@
 - Id: single role strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - single role strategy
+  Name: single role strategy
+  Alias: []
   SubtypeOf:
     - recruitment strategy [str]
   ConstituentOf: []
@@ -9703,8 +9703,8 @@
 - Id: situating [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - situating
+  Name: situating
+  Alias: []
   SubtypeOf:
     - modification [inf]
   ConstituentOf: []
@@ -9716,8 +9716,8 @@
 - Id: sociative causation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - sociative causation
+  Name: sociative causation
+  Alias: []
   SubtypeOf:
     - causative event [sem]
   ConstituentOf: []
@@ -9728,8 +9728,8 @@
 - Id: sortal classifier [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - sortal classifier
+  Name: sortal classifier
+  Alias: []
   SubtypeOf:
     - classifier [str]
   ConstituentOf: []
@@ -9740,8 +9740,8 @@
 - Id: special form [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - special form
+  Name: special form
+  Alias: []
   SubtypeOf:
     - relational strategy [str]
   ConstituentOf: []
@@ -9752,8 +9752,8 @@
 - Id: special P strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - special P strategy
+  Name: special P strategy
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -9764,8 +9764,8 @@
 - Id: specialized dual role strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - specialized dual role strategy
+  Name: specialized dual role strategy
+  Alias: []
   SubtypeOf:
     - dual role strategy [str]
   ConstituentOf: []
@@ -9776,8 +9776,8 @@
 - Id: species term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - species term
+  Name: species term
+  Alias: []
   SubtypeOf:
     - mensural term [cxn]
   ConstituentOf: []
@@ -9788,8 +9788,8 @@
 - Id: specific known pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - specific known pronoun
+  Name: specific known pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -9800,8 +9800,8 @@
 - Id: specific known referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - specific known referent
+  Name: specific known referent
+  Alias: []
   SubtypeOf:
     - identifiability, identity [inf]
   ConstituentOf: []
@@ -9812,8 +9812,8 @@
 - Id: specific unknown pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - specific unknown pronoun
+  Name: specific unknown pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -9824,8 +9824,8 @@
 - Id: specific unknown referent [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - specific unknown referent
+  Name: specific unknown referent
+  Alias: []
   SubtypeOf:
     - identifiability, identity [inf]
   ConstituentOf: []
@@ -9836,8 +9836,8 @@
 - Id: speech act causal construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - speech act causal construction
+  Name: speech act causal construction
+  Alias: []
   SubtypeOf:
     - conditional construction [cxn]
     - causative construction [cxn]
@@ -9851,8 +9851,8 @@
 - Id: speech act causal relation [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - speech act causal relation
+  Name: speech act causal relation
+  Alias: []
   SubtypeOf:
     - causal [sem]
   ConstituentOf: []
@@ -9863,8 +9863,8 @@
 - Id: speech act situation [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - speech act situation
+  Name: speech act situation
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -9874,8 +9874,8 @@
 - Id: speech acts [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - speech acts
+  Name: speech acts
+  Alias: []
   SubtypeOf:
     - construction [def]
   ConstituentOf: []
@@ -9886,8 +9886,8 @@
 - Id: speech acts [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - speech acts
+  Name: speech acts
+  Alias: []
   SubtypeOf:
     - information packaging [def]
   ConstituentOf: []
@@ -9898,8 +9898,8 @@
 - Id: split argument structure strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - split argument structure strategy
+  Name: split argument structure strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9910,8 +9910,8 @@
 - Id: split structure [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - split structure
+  Name: split structure
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9922,8 +9922,8 @@
 - Id: spontaneous event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - spontaneous event
+  Name: spontaneous event
+  Alias: []
   SubtypeOf:
     - monovalent event [sem]
   ConstituentOf: []
@@ -9935,8 +9935,8 @@
 - Id: spontaneous verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - spontaneous verb
+  Name: spontaneous verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -9947,8 +9947,8 @@
 - Id: stable [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - stable
+  Name: stable
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf:
@@ -9960,8 +9960,8 @@
 - Id: STAMP strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - STAMP strategy
+  Name: STAMP strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -9972,8 +9972,8 @@
 - Id: standard [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - standard
+  Name: standard
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -9985,8 +9985,8 @@
 - Id: state [sem]
   Type: sem
   InstanceOf: ""
+  Name: state
   Alias:
-    - state
     - state concept
   SubtypeOf:
     - event [sem]
@@ -10000,8 +10000,8 @@
 - Id: stative [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - stative
+  Name: stative
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf:
@@ -10013,8 +10013,8 @@
 - Id: stative complex predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - stative complex predicate
+  Name: stative complex predicate
+  Alias: []
   SubtypeOf:
     - complex predicate [cxn]
   ConstituentOf: []
@@ -10025,8 +10025,8 @@
 - Id: stimulus [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - stimulus
+  Name: stimulus
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -10038,8 +10038,8 @@
 - Id: stimulus-oriented strategy [str]
   Type: str
   InstanceOf: ""
+  Name: stimulus-oriented strategy
   Alias:
-    - stimulus-oriented strategy
     - experiencer-object strategy
   SubtypeOf:
     - strategy [def]
@@ -10051,8 +10051,8 @@
 - Id: strategy [def]
   Type: def
   InstanceOf: ""
+  Name: strategy
   Alias:
-    - strategy
     - strategies
   SubtypeOf: []
   ConstituentOf: []
@@ -10063,8 +10063,8 @@
 - Id: structural coding [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - structural coding
+  Name: structural coding
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -10074,8 +10074,8 @@
 - Id: subcategorizing [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - subcategorizing
+  Name: subcategorizing
+  Alias: []
   SubtypeOf:
     - modification [inf]
   ConstituentOf: []
@@ -10087,8 +10087,8 @@
 - Id: subject argument [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - subject argument
+  Name: subject argument
+  Alias: []
   SubtypeOf:
     - core arguments [inf]
   ConstituentOf: []
@@ -10099,8 +10099,8 @@
 - Id: subject identity [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - subject identity
+  Name: subject identity
+  Alias: []
   SubtypeOf:
     - complex sentence [cxn]
   ConstituentOf: []
@@ -10112,8 +10112,8 @@
 - Id: subject phrase [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: subject phrase
   Alias:
-    - subject phrase
     - subject
   SubtypeOf:
     - core argument phrase [cxn]
@@ -10126,8 +10126,8 @@
 - Id: subject--oblique strategy [str]
   Type: str
   InstanceOf: ""
+  Name: subject--oblique strategy
   Alias:
-    - subject--oblique strategy
     - extended intransitive
   SubtypeOf:
     - strategy [def]
@@ -10141,8 +10141,8 @@
 - Id: subjective [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - subjective
+  Name: subjective
+  Alias: []
   SubtypeOf:
     - modality [sem]
   ConstituentOf: []
@@ -10154,8 +10154,8 @@
 - Id: subordinate clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - subordinate clause
+  Name: subordinate clause
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf:
@@ -10167,8 +10167,8 @@
 - Id: subsequent role [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - subsequent role
+  Name: subsequent role
+  Alias: []
   SubtypeOf:
     - participant role [sem]
   ConstituentOf:
@@ -10180,8 +10180,8 @@
 - Id: substitutive [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - substitutive
+  Name: substitutive
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -10192,8 +10192,8 @@
 - Id: subtractive [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - subtractive
+  Name: subtractive
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -10204,8 +10204,8 @@
 - Id: summarizer [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - summarizer
+  Name: summarizer
+  Alias: []
   SubtypeOf:
     - syndetic [str]
   ConstituentOf: []
@@ -10216,8 +10216,8 @@
 - Id: superlative form [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: superlative form
   Alias:
-    - superlative form
     - superlative
   SubtypeOf:
     - admodifier [cxn]
@@ -10230,8 +10230,8 @@
 - Id: support verb [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: support verb
   Alias:
-    - support verb
     - coverb
     - light verb
   SubtypeOf:
@@ -10245,8 +10245,8 @@
 - Id: support verb construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: support verb construction
   Alias:
-    - support verb construction
     - light verb construction
     - coverb construction
   SubtypeOf:
@@ -10259,8 +10259,8 @@
 - Id: switch-reference system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - switch-reference system
+  Name: switch-reference system
+  Alias: []
   SubtypeOf:
     - absolute deranking system [str]
   ConstituentOf: []
@@ -10271,8 +10271,8 @@
 - Id: syndetic [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - syndetic
+  Name: syndetic
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -10283,8 +10283,8 @@
 - Id: syntax [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - syntax
+  Name: syntax
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -10294,8 +10294,8 @@
 - Id: system [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - system
+  Name: system
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -10306,8 +10306,8 @@
 - Id: T role [sem]
   Type: sem
   InstanceOf: ""
+  Name: T role
   Alias:
-    - T role
     - T
   SubtypeOf:
     - semantic role [sem]
@@ -10322,8 +10322,8 @@
 - Id: tag [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - tag
+  Name: tag
+  Alias: []
   SubtypeOf:
     - overt (coding) strategy [str]
   ConstituentOf: []
@@ -10334,8 +10334,8 @@
 - Id: TAMP [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - TAMP
+  Name: TAMP
+  Alias: []
   SubtypeOf:
     - meaning [def]
   ConstituentOf: []
@@ -10347,8 +10347,8 @@
 - Id: target [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - target
+  Name: target
+  Alias: []
   SubtypeOf:
     - strategy element (FN-Br) [str]
   ConstituentOf:
@@ -10360,8 +10360,8 @@
 - Id: telic [sem]
   Type: sem
   InstanceOf: ""
+  Name: telic
   Alias:
-    - telic
     - telic event
   SubtypeOf:
     - aspect [sem]
@@ -10373,8 +10373,8 @@
 - Id: temporary predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - temporary predicate
+  Name: temporary predicate
+  Alias: []
   SubtypeOf:
     - predicate [cxn]
   ConstituentOf: []
@@ -10385,8 +10385,8 @@
 - Id: temporary state [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - temporary state
+  Name: temporary state
+  Alias: []
   SubtypeOf:
     - state [sem]
   ConstituentOf: []
@@ -10397,8 +10397,8 @@
 - Id: tense [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - tense
+  Name: tense
+  Alias: []
   SubtypeOf:
     - TAMP [sem]
   ConstituentOf: []
@@ -10410,8 +10410,8 @@
 - Id: tense iconicity [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - tense iconicity
+  Name: tense iconicity
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -10423,8 +10423,8 @@
 - Id: theater metaphor [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - theater metaphor
+  Name: theater metaphor
+  Alias: []
   SubtypeOf:
     - information packaging [def]
   ConstituentOf: []
@@ -10435,8 +10435,8 @@
 - Id: theme [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - theme
+  Name: theme
+  Alias: []
   SubtypeOf:
     - T role [sem]
   ConstituentOf: []
@@ -10447,8 +10447,8 @@
 - Id: thetic [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - thetic
+  Name: thetic
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf: []
@@ -10459,8 +10459,8 @@
 - Id: thetic [inf]
   Type: inf
   InstanceOf: ""
+  Name: thetic
   Alias:
-    - thetic
     - all new
   SubtypeOf:
     - predication [inf]
@@ -10472,8 +10472,8 @@
 - Id: third person pronoun [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: third person pronoun
   Alias:
-    - third person pronoun
     - third person
   SubtypeOf:
     - personal pronoun [cxn]
@@ -10485,8 +10485,8 @@
 - Id: time-stability [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - time-stability
+  Name: time-stability
+  Alias: []
   SubtypeOf:
     - scalar model [sem]
   ConstituentOf: []
@@ -10497,8 +10497,8 @@
 - Id: token frequency [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - token frequency
+  Name: token frequency
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -10508,8 +10508,8 @@
 - Id: token identity [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - token identity
+  Name: token identity
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -10520,8 +10520,8 @@
 - Id: topic [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - topic
+  Name: topic
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf:
@@ -10534,8 +10534,8 @@
 - Id: topic phrase [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - topic phrase
+  Name: topic phrase
+  Alias: []
   SubtypeOf:
     - referring phrase [cxn]
     - nonprototypical construction [cxn]
@@ -10548,8 +10548,8 @@
 - Id: topic possessive strategy [str]
   Type: str
   InstanceOf: ""
+  Name: topic possessive strategy
   Alias:
-    - topic possessive strategy
     - double subject possessive strategy
     - distributed subject possessive strategy
   SubtypeOf:
@@ -10562,8 +10562,8 @@
 - Id: topic--comment [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - topic--comment
+  Name: topic--comment
+  Alias: []
   SubtypeOf:
     - clause [cxn]
   ConstituentOf: []
@@ -10574,8 +10574,8 @@
 - Id: topic--comment [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - topic--comment
+  Name: topic--comment
+  Alias: []
   SubtypeOf:
     - predication [inf]
   ConstituentOf: []
@@ -10586,8 +10586,8 @@
 - Id: topic-locational hybrid possessive strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - topic-locational hybrid possessive strategy
+  Name: topic-locational hybrid possessive strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -10598,8 +10598,8 @@
 - Id: transfer event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - transfer event
+  Name: transfer event
+  Alias: []
   SubtypeOf:
     - trivalent event [sem]
   ConstituentOf: []
@@ -10610,8 +10610,8 @@
 - Id: transfer verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - transfer verb
+  Name: transfer verb
+  Alias: []
   SubtypeOf:
     - verb [cxn]
   ConstituentOf: []
@@ -10623,8 +10623,8 @@
 - Id: transitive construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: transitive construction
   Alias:
-    - transitive construction
     - monotransitive construction
   SubtypeOf:
     - argument structure construction [cxn]
@@ -10637,8 +10637,8 @@
 - Id: transitive predication [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - transitive predication
+  Name: transitive predication
+  Alias: []
   SubtypeOf:
     - predication [inf]
   ConstituentOf: []
@@ -10650,8 +10650,8 @@
 - Id: Transitivity Hierarchy [def]
   Type: def
   InstanceOf: ""
-  Alias:
-    - Transitivity Hierarchy
+  Name: Transitivity Hierarchy
+  Alias: []
   SubtypeOf: []
   ConstituentOf: []
   AssociatedTo: []
@@ -10661,8 +10661,8 @@
 - Id: transitivity-based causative strategies [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - transitivity-based causative strategies
+  Name: transitivity-based causative strategies
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -10673,8 +10673,8 @@
 - Id: transitory [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - transitory
+  Name: transitory
+  Alias: []
   SubtypeOf:
     - aspect [sem]
   ConstituentOf:
@@ -10687,8 +10687,8 @@
 - Id: translation [def]
   Type: def
   InstanceOf: ""
+  Name: translation
   Alias:
-    - translation
     - free translation
   SubtypeOf: []
   ConstituentOf: []
@@ -10699,20 +10699,20 @@
 - Id: trigger [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - trigger
+  Name: trigger
+  Alias: []
   SubtypeOf:
     - information element (FN-Br) [inf]
   ConstituentOf: []
-  AssociatedTo:
+  AssociatedTo: []
   Definition: >-
     a concept evoked or inferrable in the prior discourse that is a member of a <a>poset</a> that also includes the <a>link</a>. <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the album mentioned in the first turn is the trigger that generates a poset together with the song mentioned in the second turn; the latter serves as the link to the trigger. (Section 11.2.3)
 
 - Id: tripartite alignment [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - tripartite alignment
+  Name: tripartite alignment
+  Alias: []
   SubtypeOf:
     - alignment system [str]
   ConstituentOf: []
@@ -10723,8 +10723,8 @@
 - Id: trivalent event [sem]
   Type: sem
   InstanceOf: ""
+  Name: trivalent event
   Alias:
-    - trivalent event
     - trivalent
   SubtypeOf:
     - valency, valency class [sem]
@@ -10737,8 +10737,8 @@
 - Id: type [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - type
+  Name: type
+  Alias: []
   SubtypeOf:
     - entity [sem]
   ConstituentOf: []
@@ -10749,8 +10749,8 @@
 - Id: type identifiable [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - type identifiable
+  Name: type identifiable
+  Alias: []
   SubtypeOf:
     - identifiability, identity [inf]
   ConstituentOf: []
@@ -10761,8 +10761,8 @@
 - Id: type identity [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - type identity
+  Name: type identity
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -10773,8 +10773,8 @@
 - Id: typifying [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - typifying
+  Name: typifying
+  Alias: []
   SubtypeOf:
     - subcategorizing [inf]
   ConstituentOf: []
@@ -10786,8 +10786,8 @@
 - Id: typifying construction [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: typifying construction
   Alias:
-    - typifying construction
     - non-anchoring construction
   SubtypeOf:
     - nominal modification [cxn]
@@ -10799,8 +10799,8 @@
 - Id: typology [def]
   Type: def
   InstanceOf: ""
+  Name: typology
   Alias:
-    - typology
     - linguistic typology
   SubtypeOf: []
   ConstituentOf: []
@@ -10811,8 +10811,8 @@
 - Id: uncontrolled activity [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - uncontrolled activity
+  Name: uncontrolled activity
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -10823,8 +10823,8 @@
 - Id: uncontrolled predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - uncontrolled predicate
+  Name: uncontrolled predicate
+  Alias: []
   SubtypeOf:
     - predicate [cxn]
   ConstituentOf: []
@@ -10835,8 +10835,8 @@
 - Id: undirected change [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - undirected change
+  Name: undirected change
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -10848,8 +10848,8 @@
 - Id: unexpected co-occurrence [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - unexpected co-occurrence
+  Name: unexpected co-occurrence
+  Alias: []
   SubtypeOf:
     - semantic relation (FN-Br) [sem]
   ConstituentOf: []
@@ -10860,8 +10860,8 @@
 - Id: universal concessive conditional strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - universal concessive conditional strategy
+  Name: universal concessive conditional strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -10872,8 +10872,8 @@
 - Id: universal pronoun [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - universal pronoun
+  Name: universal pronoun
+  Alias: []
   SubtypeOf:
     - pronoun [cxn]
   ConstituentOf: []
@@ -10884,8 +10884,8 @@
 - Id: utterance event [sem]
   Type: sem
   InstanceOf: ""
+  Name: utterance event
   Alias:
-    - utterance event
     - utterance
   SubtypeOf:
     - event [sem]
@@ -10898,8 +10898,8 @@
 - Id: utterance predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - utterance predicate
+  Name: utterance predicate
+  Alias: []
   SubtypeOf:
     - complement-taking predicate [cxn]
   ConstituentOf: []
@@ -10910,8 +10910,8 @@
 - Id: vague numeral [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - vague numeral
+  Name: vague numeral
+  Alias: []
   SubtypeOf:
     - quantifier [cxn]
   ConstituentOf: []
@@ -10922,8 +10922,8 @@
 - Id: valency, valency class [sem]
   Type: sem
   InstanceOf: ""
+  Name: valency, valency class
   Alias:
-    - valency, valency class
     - valency/valency class
     - valency
     - valency class
@@ -10937,8 +10937,8 @@
 - Id: value term [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - value term
+  Name: value term
+  Alias: []
   SubtypeOf:
     - adjective [cxn]
   ConstituentOf: []
@@ -10949,8 +10949,8 @@
 - Id: verb [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - verb
+  Name: verb
+  Alias: []
   SubtypeOf:
     - prototypical construction [cxn]
     - predicate [cxn]
@@ -10963,8 +10963,8 @@
 - Id: verb-coding strategy [str]
   Type: str
   InstanceOf: ""
+  Name: verb-coding strategy
   Alias:
-    - verb-coding strategy
     - verb-coding
   SubtypeOf:
     - overt (coding) strategy [str]
@@ -10977,8 +10977,8 @@
 - Id: verb-framing strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - verb-framing strategy
+  Name: verb-framing strategy
+  Alias: []
   SubtypeOf:
     - strategy [def]
   ConstituentOf: []
@@ -10989,8 +10989,8 @@
 - Id: verbal clause [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - verbal clause
+  Name: verbal clause
+  Alias: []
   SubtypeOf:
     - prototypical construction [cxn]
     - topic--comment [cxn]
@@ -11003,8 +11003,8 @@
 - Id: verbal contrast [inf]
   Type: inf
   InstanceOf: ""
-  Alias:
-    - verbal contrast
+  Name: verbal contrast
+  Alias: []
   SubtypeOf:
     - parallel contrast [inf]
   ConstituentOf: []
@@ -11015,8 +11015,8 @@
 - Id: verbal copula [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - verbal copula
+  Name: verbal copula
+  Alias: []
   SubtypeOf:
     - copula [str]
   ConstituentOf: []
@@ -11028,8 +11028,8 @@
 - Id: verbal strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - verbal strategy
+  Name: verbal strategy
+  Alias: []
   SubtypeOf:
     - actual information packaging strategy [str]
   ConstituentOf: []
@@ -11040,8 +11040,8 @@
 - Id: verbalization (of experience) [def]
   Type: def
   InstanceOf: ""
+  Name: verbalization (of experience)
   Alias:
-    - verbalization (of experience)
     - verbalization of experience
     - verbalization
   SubtypeOf: []
@@ -11053,8 +11053,8 @@
 - Id: voice construction [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - voice construction
+  Name: voice construction
+  Alias: []
   SubtypeOf:
     - argument structure construction [cxn]
   ConstituentOf: []
@@ -11065,8 +11065,8 @@
 - Id: weather [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - weather
+  Name: weather
+  Alias: []
   SubtypeOf:
     - event [sem]
   ConstituentOf: []
@@ -11078,8 +11078,8 @@
 - Id: wishing event [sem]
   Type: sem
   InstanceOf: ""
-  Alias:
-    - wishing event
+  Name: wishing event
+  Alias: []
   SubtypeOf:
     - evaluative event [sem]
   ConstituentOf: []
@@ -11091,8 +11091,8 @@
 - Id: wishing predicate [cxn]
   Type: cxn
   InstanceOf: ""
-  Alias:
-    - wishing predicate
+  Name: wishing predicate
+  Alias: []
   SubtypeOf:
     - evaluative predicate [cxn]
   ConstituentOf: []
@@ -11103,8 +11103,8 @@
 - Id: with-possessive strategy [str]
   Type: str
   InstanceOf: ""
+  Name: with-possessive strategy
   Alias:
-    - with-possessive strategy
     - companion strategy
   SubtypeOf:
     - strategy [def]
@@ -11116,8 +11116,8 @@
 - Id: word class [def]
   Type: def
   InstanceOf: ""
+  Name: word class
   Alias:
-    - word class
     - part(s) of speech
     - syntactic category
     - behavior
@@ -11133,8 +11133,8 @@
 - Id: word order [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - word order
+  Name: word order
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
@@ -11149,8 +11149,8 @@
 - Id: yes/no alignment strategy [str]
   Type: str
   InstanceOf: ""
+  Name: yes/no alignment strategy
   Alias:
-    - yes/no alignment strategy
     - yes alignment strategy
     - no alignment strategy
   SubtypeOf:
@@ -11163,8 +11163,8 @@
 - Id: yes/no/disagree alignment strategy [str]
   Type: str
   InstanceOf: ""
+  Name: yes/no/disagree alignment strategy
   Alias:
-    - yes/no/disagree alignment strategy
     - yes alignment strategy
     - no alignment strategy
     - disagree alignment strategy
@@ -11178,8 +11178,8 @@
 - Id: zero coded strategy [str]
   Type: str
   InstanceOf: ""
+  Name: zero coded strategy
   Alias:
-    - zero coded strategy
     - zero code
     - zero coding
   SubtypeOf:
@@ -11195,8 +11195,8 @@
 - Id: zero anaphora [cxn]
   Type: cxn
   InstanceOf: ""
+  Name: zero anaphora
   Alias:
-    - zero anaphora
     - definite null instantiation
     - DNI
     - null anaphora
@@ -11210,8 +11210,8 @@
 - Id: zero strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - zero strategy
+  Name: zero strategy
+  Alias: []
   SubtypeOf:
     - nominal strategy [str]
     - verbal strategy [str]
@@ -11224,8 +11224,8 @@
 - Id: zero verb-coded voice strategy [str]
   Type: str
   InstanceOf: ""
-  Alias:
-    - zero verb-coded voice strategy
+  Name: zero verb-coded voice strategy
+  Alias: []
   SubtypeOf:
     - zero coded strategy [str]
   ConstituentOf: []
