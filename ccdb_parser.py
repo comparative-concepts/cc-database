@@ -111,13 +111,19 @@ class CCDBParser:
         expanded_definition: ParsedDefinition = []
         for part in re.split(r'(<a[^<>]*>.+?</a>)', definition):
             if (m := re.match(r'<a *([^<>]*?)>(.+?)</a>', part)):
+                link_ref = m.group(1)
                 name = m.group(2)
-                original_link = m.group(1) or name
-                link = self.clean_link(original_link)
-                if not link:
-                    self.error(f"{id}: Could not clean link '{original_link}'")
-                    link = original_link
-                linkids = self.find_closest(link)
+
+                if link_ref:
+                    link = link_ref
+                    linkids = [link]
+                else:
+                    link = self.clean_link(name)
+                    if not link:
+                        self.error(f"{id}: Could not clean link '{name}'")
+                        link = name
+                    linkids = self.find_closest(link)
+
                 if not linkids:
                     self.error(f"{id}: Could not find any matching id for link '{link}'")
                     self.notfound.add(link)
