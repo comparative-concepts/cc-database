@@ -505,6 +505,7 @@
   Name: adverbial clause construction
   Alias:
     - adverbial clause
+    - adverbial subordinate construction 
   SubtypeOf:
     - cxn:complex-sentence
   ConstituentOf: []
@@ -1890,7 +1891,7 @@
   Name: causative construction
   Alias: []
   SubtypeOf:
-    - cxn:adverbial-clause-construction
+    - cxn:nonbasic-voice-construction
   ConstituentOf: []
   AssociatedTo:
     - cxn:ditransitive-construction
@@ -3795,7 +3796,7 @@
   Name: determiner
   Alias: []
   SubtypeOf:
-    - cxn:element
+    - cxn:modifier
   ConstituentOf: []
   AssociatedTo:
     - cxn:referent-expression
