@@ -3650,7 +3650,7 @@
   Name: dependent clause
   Alias: []
   SubtypeOf:
-    - cxn:clause
+    - cxn:subordinate-clause
   ConstituentOf:
     - cxn:complex-sentence
   AssociatedTo: []
