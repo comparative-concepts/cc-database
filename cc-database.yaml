@@ -1144,7 +1144,6 @@
   Alias: []
   SubtypeOf:
     - cxn:nonbasic-voice-construction
-    - cxn:ditransitive-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -1249,7 +1248,7 @@
   SubtypeOf:
     - cxn:referring-phrase
   ConstituentOf:
-    - cxn:clause
+    - cxn:argument-structure-construction
   AssociatedTo: []
   Definition: >-
     a <a>referring phrase</a> that <a inf:reference-referent>refers</a> to an <a>argument</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
@@ -2473,6 +2472,7 @@
     - complement
   SubtypeOf:
     - cxn:dependent-clause
+    - cxn:argument-phrase
   ConstituentOf:
     - cxn:complement-clause-construction
   AssociatedTo: []
@@ -2503,6 +2503,7 @@
     - CTP
   SubtypeOf:
     - cxn:predicate
+    - cxn:matrix-clause
   ConstituentOf:
     - cxn:complement-clause-construction
   AssociatedTo: []
@@ -2578,7 +2579,6 @@
   ConstituentOf: []
   AssociatedTo:
     - cxn:coordinate-clause-construction
-    - cxn:complement-clause-construction
   Definition: >-
     a construal or <a>information packaging</a> of two <a>events</a> such that the two events are construed as parts of a complex whole. <i>Example</i>: in <i>Jim was promoted and Cindy quit</i>, the events of Jim being promoted and Cindy quitting are conceived of as parts of a complex whole (e.g. a causal sequence). A complex figure packaging construes the events as equal in status, and also requires a common denominator for the two events. This information packaging is found in <a>coordinate constructions</a>. (Section 15.1.3)
   Examples:
@@ -3651,7 +3651,6 @@
   Alias: []
   SubtypeOf:
     - cxn:clause
-    - cxn:dependent
   ConstituentOf:
     - cxn:complex-sentence
   AssociatedTo: []
@@ -4034,7 +4033,7 @@
   Alias:
     - ditransitive
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:basic-voice-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -4438,7 +4437,6 @@
   Alias: []
   SubtypeOf:
     - cxn:identificational
-    - cxn:nonpredicational-clauses
   ConstituentOf: []
   AssociatedTo:
     - cxn:predicate-nominal-construction
@@ -5684,7 +5682,7 @@
   Name: identificational
   Alias: []
   SubtypeOf:
-    - cxn:clause
+    - cxn:nonpredicational-clauses
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -6510,7 +6508,7 @@
   Name: intransitive construction
   Alias: []
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:basic-voice-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7323,7 +7321,7 @@
   Alias:
     - referent modification construction
   SubtypeOf:
-    - cxn:referring-phrase
+    - cxn:complex-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7750,7 +7748,7 @@
   Name: nonpredicational clauses
   Alias: []
   SubtypeOf:
-    - cxn:nonprototypical-predication
+    - cxn:clause
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7778,8 +7776,8 @@
   Alias:
     - nonverbal predication
   SubtypeOf:
+    - cxn:predicational
     - cxn:nonprototypical-construction
-    - cxn:clause
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -8672,7 +8670,6 @@
   Name: phrase
   Alias: []
   SubtypeOf:
-    - cxn:complex-construction
     - cxn:element
   ConstituentOf: []
   AssociatedTo: []
@@ -9132,7 +9129,7 @@
   SubtypeOf:
     - cxn:head
   ConstituentOf:
-    - cxn:clause
+    - cxn:argument-structure-construction
   AssociatedTo: []
   Definition: >-
     the <a>head</a> of a <a>clause</a>, which is not necessarily an <a>action</a>. <i>Example</i>: in <i>The dog is old, (is) old</i> is the predicate. (Section 2.2.4)
@@ -9176,7 +9173,7 @@
     - object predication construction
     - object predication
   SubtypeOf:
-    - cxn:predicational
+    - cxn:nonprototypical-predication
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -9203,8 +9200,7 @@
   Name: predicational
   Alias: []
   SubtypeOf:
-    - cxn:clause
-    - cxn:nonprototypical-predication
+    - cxn:topic-comment
   ConstituentOf: []
   AssociatedTo:
     - cxn:predicate-nominal-construction
@@ -9232,8 +9228,8 @@
   Alias:
     - locative predication
   SubtypeOf:
+    - cxn:nonprototypical-predication
     - cxn:location-clause
-    - cxn:predicational
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -9282,8 +9278,8 @@
   Alias:
     - belong possession
   SubtypeOf:
+    - cxn:nonprototypical-predication
     - cxn:possession-clause
-    - cxn:predicational
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -9389,8 +9385,8 @@
   Name: presentational
   Alias: []
   SubtypeOf:
+    - cxn:thetic
     - cxn:entity-central
-    - cxn:nonpredicational-clauses
   ConstituentOf: []
   AssociatedTo:
     - cxn:predicate-nominal-construction
@@ -10185,6 +10181,7 @@
   Alias: []
   SubtypeOf:
     - cxn:complex-sentence
+    - cxn:attributive-phrase
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -10197,6 +10194,7 @@
   Name: relative clause head
   Alias: []
   SubtypeOf:
+    - cxn:matrix-clause
     - cxn:referring-phrase
     - cxn:head
   ConstituentOf:
@@ -11808,7 +11806,7 @@
   Name: thetic
   Alias: []
   SubtypeOf:
-    - cxn:clause
+    - cxn:nonpredicational-clauses
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -12016,10 +12014,9 @@
     - transitive
     - monotransitive construction
   SubtypeOf:
-    - cxn:argument-structure-construction
-  ConstituentOf: []
-  AssociatedTo:
     - cxn:basic-voice-construction
+  ConstituentOf: []
+  AssociatedTo: []
   Definition: >-
     the <a>construction</a> used to express the <a>agent</a> (<a>A role</a>) and the <a>patient</a> (<a>P role</a>) of the <a>predicated</a> <a>bivalent</a> breaking <a>event</a> when the agent is more <a>salient</a> than the patient and the breaking event is a single, completed event. <i>Example</i>: <i>Jack broke the window</i> is an instance of the exemplar (the single <dq>most prototypical</dq> example) of the transitive construction. (Sections 6.1.2, <b>6.2.1</b>, <b>7.3.3</b>)
   Examples:
@@ -12419,9 +12416,8 @@
   Name: verbal clause
   Alias: []
   SubtypeOf:
+    - cxn:predicational
     - cxn:prototypical-construction
-    - cxn:topic-comment
-    - cxn:clause
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
