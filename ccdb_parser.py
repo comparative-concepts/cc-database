@@ -351,7 +351,11 @@ class CCDBParser:
         karp_parts: list[str] = []
         for part in definition:
             if isinstance(part, tuple):
-                part = f"<a {part[0]}>{part[1]}</a>"
+                assert "[" not in part[1] and "]" not in part[1], f"[] in link name: {part}"
+                part = f"[a {part[0]} {part[1]}]"
+            else:
+                part = re.sub(r"<(\w+)>", r"[\1 ", part)
+                part = re.sub(r"</(\w+)>", r"]", part)
             karp_parts.append(part)
         return ''.join(karp_parts)
 
