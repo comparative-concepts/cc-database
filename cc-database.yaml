@@ -203,7 +203,6 @@
     - inf:accessibility
   ConstituentOf: []
   AssociatedTo:
-    - cxn:zero-anaphora
     - cxn:anaphoric-pronoun
   Definition: >-
     a <a>referent</a> whose <u>discourse file</u> has been opened and which is at the center of the hearer's consciousness. This is the highest <a>accessibility</a> referent at the current point in the discourse. (Section 3.3.1)
@@ -421,9 +420,7 @@
   Type: cxn
   Name: admodifier
   Alias: []
-  SubtypeOf:
-    - cxn:modifier
-    - cxn:nonprototypical-construction
+  SubtypeOf: []
   ConstituentOf:
     - cxn:attributive-phrase
   AssociatedTo: []
@@ -829,7 +826,8 @@
     - anaphoric definite article
     - anaphoric article
   SubtypeOf:
-    - cxn:article
+    - cxn:definite-article
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:modification-construction
   AssociatedTo: []
@@ -862,7 +860,7 @@
   Name: anaphoric-head construction
   Alias: []
   SubtypeOf:
-    - cxn:modification-construction
+    - cxn:nominal-modification
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -922,7 +920,7 @@
   Alias:
     - anchoring construction
   SubtypeOf:
-    - cxn:nominal-modification
+    - cxn:modification-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -1260,7 +1258,7 @@
   Name: argument structure construction
   Alias: []
   SubtypeOf:
-    - cxn:clause
+    - cxn:topic-comment
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -1591,7 +1589,7 @@
   Alias:
     - binominal lexeme
   SubtypeOf:
-    - cxn:typifying-construction
+    - cxn:nominal-modification
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -1990,7 +1988,7 @@
   Name: chaining construction
   Alias: []
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:basic-voice-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -2219,7 +2217,7 @@
   Name: collective construction
   Alias: []
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:basic-voice-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -3490,7 +3488,7 @@
     - sem:property-concept
   ConstituentOf: []
   AssociatedTo:
-    - cxn:degree-marker
+    - str:degree-marker
     - sem:scalar-model
   Definition: >-
     for scalar concepts, a value on the scale that may be expressed by a distinct word. <i>Example</i>: in <i>very long</i>, the <a>admodifier</a> <i>very</i> indicates that the value on the scale of length is beyond the normal value implicit in the word <i>long</i>. (Section 2.2.2)
@@ -3505,7 +3503,7 @@
     - str:overt-coding-strategy
   ConstituentOf: []
   AssociatedTo:
-    - cxn:degree-marker
+    - cxn:admodifier
   Definition: >-
     a scalar <a>admodifier</a> expressed by an affix. <i>Example</i>: <i>-er</i> in <i>sillier</i> is a degree affix. (Section 4.1.2)
   Examples:
@@ -3530,12 +3528,12 @@
         - isaaní | they [<sc>gen</sc>]
         - akká | manner
 
-- Id: cxn:degree-marker
-  Type: cxn
+- Id: str:degree-marker
+  Type: str
   Name: degree marker
   Alias: []
   SubtypeOf:
-    - cxn:admodifier
+    - def:strategy
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -3581,6 +3579,7 @@
   Alias: []
   SubtypeOf:
     - cxn:determiner
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:modification-construction
   AssociatedTo: []
@@ -5417,6 +5416,7 @@
   Alias: []
   SubtypeOf:
     - cxn:article
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:modification-construction
   AssociatedTo: []
@@ -6909,7 +6909,6 @@
   Alias: []
   SubtypeOf:
     - cxn:reference-tracking
-    - cxn:complement-clause-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7199,6 +7198,7 @@
   Alias: []
   SubtypeOf:
     - cxn:typifying-construction
+    - cxn:modification-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7321,7 +7321,7 @@
   Alias:
     - referent modification construction
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:referring-phrase
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7359,8 +7359,7 @@
     - cxn:head
   ConstituentOf:
     - cxn:attributive-phrase
-  AssociatedTo:
-    - cxn:anaphoric-head-construction
+  AssociatedTo: []
   Definition: >-
     the <a>head</a> of an <a>attributive phrase</a>. <i>Example</i>: in <i>nearly fifty trees</i>, <i>fifty</i> is a modifier. A prototypical modifier, a <a>property concept</a>, is an <a>adjective</a>. (Section 2.2.4)
   Examples:
@@ -7690,7 +7689,8 @@
     - nonanaphoric definite article
     - nonanaphoric article
   SubtypeOf:
-    - cxn:article
+    - cxn:definite-article
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:modification-construction
   AssociatedTo: []
@@ -7748,7 +7748,7 @@
   Name: nonpredicational clauses
   Alias: []
   SubtypeOf:
-    - cxn:clause
+    - cxn:declarative
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7776,7 +7776,7 @@
   Alias:
     - nonverbal predication
   SubtypeOf:
-    - cxn:predicational
+    - cxn:topic-comment
     - cxn:nonprototypical-construction
   ConstituentOf: []
   AssociatedTo: []
@@ -8007,10 +8007,9 @@
   Name: object identity
   Alias: []
   SubtypeOf:
-    - cxn:complex-sentence
-  ConstituentOf: []
-  AssociatedTo:
     - cxn:reference-tracking
+  ConstituentOf: []
+  AssociatedTo: []
   Definition: >-
     a <a>complex sentence construction</a> in which the <a>object</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted and Norio hit the dog</i> is an instance of an object identity <a>coordinate clause construction</a> -- the object referent for both clauses is the dog. (Section 16.5)
   Examples:
@@ -9063,7 +9062,8 @@
     - pragmatically nonspecific indefinite article
     - pragmatically nonspecific article
   SubtypeOf:
-    - cxn:article
+    - cxn:indefinite-article
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:modification-construction
   AssociatedTo: []
@@ -9099,7 +9099,8 @@
     - pragmatically specific indefinite article
     - pragmatically specific article
   SubtypeOf:
-    - cxn:article
+    - cxn:indefinite-article
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:modification-construction
   AssociatedTo: []
@@ -9157,7 +9158,7 @@
   Name: predicate identity
   Alias: []
   SubtypeOf:
-    - cxn:complex-sentence
+    - cxn:reference-tracking
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -9200,7 +9201,7 @@
   Name: predicational
   Alias: []
   SubtypeOf:
-    - cxn:topic-comment
+    - cxn:declarative
   ConstituentOf: []
   AssociatedTo:
     - cxn:predicate-nominal-construction
@@ -9980,7 +9981,7 @@
   Name: reciprocal construction
   Alias: []
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:basic-voice-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -10039,7 +10040,7 @@
   Alias:
     - reference-tracking
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:complex-sentence
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -10085,7 +10086,7 @@
   SubtypeOf:
     - cxn:phrase
   ConstituentOf:
-    - cxn:clause
+    - cxn:argument-structure-construction
   AssociatedTo:
     - cxn:reference-tracking
   Definition: >-
@@ -10098,7 +10099,7 @@
   Name: reflexive construction
   Alias: []
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:basic-voice-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -11165,7 +11166,7 @@
   Alias:
     - speech act construction
   SubtypeOf:
-    - def:construction
+    - cxn:main-clause
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -11416,10 +11417,9 @@
   Name: subject identity
   Alias: []
   SubtypeOf:
-    - cxn:complex-sentence
-  ConstituentOf: []
-  AssociatedTo:
     - cxn:reference-tracking
+  ConstituentOf: []
+  AssociatedTo: []
   Definition: >-
     a <a>complex sentence construction</a> in which the <a>subject</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted the dog and hit the cat</i> is an instance of a subject identity <a>coordinate clause construction</a> -- the subject referent for both <i>patted the dog</i> and <i>hit the cat</i> is Sumie. (Section 16.5)
   Examples:
@@ -11935,7 +11935,7 @@
   Name: topic--comment
   Alias: []
   SubtypeOf:
-    - cxn:clause
+    - cxn:predicational
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -12191,7 +12191,7 @@
     - non-anchoring nominal modification construction
     - non-anchoring construction
   SubtypeOf:
-    - cxn:nominal-modification
+    - cxn:modification-construction
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -12416,7 +12416,7 @@
   Name: verbal clause
   Alias: []
   SubtypeOf:
-    - cxn:predicational
+    - cxn:topic-comment
     - cxn:prototypical-construction
   ConstituentOf: []
   AssociatedTo: []
@@ -12631,17 +12631,18 @@
     - si
     - oui
 
-- Id: cxn:zero-anaphora
-  Type: cxn
+- Id: str:zero-anaphora
+  Type: str
   Name: zero anaphora
   Alias:
     - definite null instantiation
     - DNI
     - null anaphora
   SubtypeOf:
-    - cxn:reference-tracking
+    - def:strategy
   ConstituentOf: []
-  AssociatedTo: []
+  AssociatedTo:
+    - cxn:anaphoric-pronoun
   Definition: >-
     the absence of a <a>referring phrase</a> for a <a>referent</a> in a construction. Zero anaphora is frequently used when the referent is <a>active</a>. (Section 3.3.1)
   Examples: []
