@@ -75,7 +75,7 @@
   Name: absolutive category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:ergative-alignment-system
   AssociatedTo: []
@@ -138,7 +138,7 @@
   Name: accusative category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:accusative-alignment-system
   AssociatedTo: []
@@ -229,7 +229,7 @@
     - actor category
     - agentive category
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:active-alignment-system
   AssociatedTo:
@@ -251,7 +251,7 @@
   Name: actor
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
+    - def:information-packaging
   ConstituentOf:
     - inf:theater-metaphor
   AssociatedTo: []
@@ -280,7 +280,7 @@
   Name: additive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - cxn:additive-focus-operator
@@ -305,15 +305,29 @@
   Examples:
     - John bought apples. He <e>also</e> bought PEACHES
 
+- Id: cxn:adjective-modification-construction
+  Type: cxn
+  Name: adjective modification construction
+  Alias:
+    - adjective modification
+  SubtypeOf:
+    - cxn:modification-construction
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: cxn:adjectival-phrase
   Type: cxn
   Name: adjectival phrase
-  Alias: []
+  Alias:
+    - adjective attributive phrase
   SubtypeOf:
     - cxn:attributive-phrase
     - cxn:prototypical-construction
   ConstituentOf:
-    - cxn:modification-construction
+    - cxn:adjective-modification-construction
   AssociatedTo: []
   Definition: >-
     an <a>attributive phrase</a> whose <a>head</a> denotes a <a>property concept</a>. <i>Example</i>: in <i>a very large balloon, very large</i> is an adjectival phrase; the head <i>large</i> denotes a property concept. An adjectival phrase is the prototypical attributive phrase, and its head is an <a>adjective</a>. (Section 2.2.3)
@@ -420,7 +434,8 @@
   Type: cxn
   Name: admodifier
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - def:construction
   ConstituentOf:
     - cxn:attributive-phrase
   AssociatedTo: []
@@ -525,6 +540,19 @@
     the <a>dependent clause</a> in an <a>adverbial clause construction</a>; it is construed as the ground in the <a>figure--ground</a> <a>information packaging</a> of the construction. <i>Example</i>: in <i>I left early because I was bored, I was bored</i> is the adverbial dependent clause. (Section 15.3.1)
   Examples:
     - I left early because <e>I was bored</e>
+
+- Id: cxn:adverbial-matrix-clause
+  Type: cxn
+  Name: adverbial matrix clause
+  Alias: []
+  SubtypeOf:
+    - cxn:matrix-clause
+  ConstituentOf:
+    - cxn:adverbial-clause-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: str:adverbial-strategy
   Type: str
@@ -712,6 +740,19 @@
       Example: bas-óosshee
       Translation: my food
 
+- Id: cxn:alienable-possession-attributive-phrase
+  Type: cxn
+  Name: alienable possession attributive phrase
+  Alias: []
+  SubtypeOf:
+    - cxn:possessive-attributive-phrase
+  ConstituentOf:
+    - cxn:alienable-possession
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: str:alignment-system
   Type: str
   Name: alignment system
@@ -725,17 +766,17 @@
     a <a>system</a> defined by the <a>co-expression</a> of <a>arguments</a> of <a>predicates</a> in <a cxn:intransitive-construction>intransitive</a>, <a>transitive</a>, and <a>ditransitive constructions</a>. Example: English expresses the one argument of an intransitive verb construction (<i><b>The cats</b> slept</i>) in the same way as the semantically agentive argument of a <a>transitive</a> <a>verb</a> (<i><b>The cats</b> clawed the sofa</i>): both arguments are expressed preceding the verb. (Sections 1.4, <b>6.3.1</b>)
   Examples: []
 
-- Id: str:alignment-system-category-FNBr
+- Id: str:alignment-system-category
   Type: str
-  Name: alignment system category (FN-Br)
-  Alias:
-    - alignment system category
+  Name: alignment system category
+  Alias: []
   SubtypeOf:
     - def:strategy
   ConstituentOf: []
   AssociatedTo: []
   Definition: ""
   Examples: []
+  FromGlossary: false
 
 - Id: str:allative-comparative
   Type: str
@@ -770,7 +811,7 @@
   Name: alternative proposition
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
+    - def:information-packaging
   ConstituentOf: []
   AssociatedTo:
     - inf:identificational
@@ -974,7 +1015,7 @@
   Name: announcement
   Alias: []
   SubtypeOf:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   ConstituentOf: []
   AssociatedTo:
     - inf:event-central
@@ -1199,7 +1240,7 @@
   Name: apprehensional
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -1449,7 +1490,7 @@
   Name: background description
   Alias: []
   SubtypeOf:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   ConstituentOf: []
   AssociatedTo:
     - inf:event-central
@@ -1769,7 +1810,8 @@
   SubtypeOf:
     - cxn:modifier
     - cxn:nonprototypical-construction
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:numeral-attributive-phrase
   AssociatedTo: []
   Definition: >-
     a form that expresses the number (cardinality) of a set of <a>individuals</a> of the <a>type</a>. <i>Examples</i>: in <i>one tree, two boys, three books</i>, <i>one/two/three</i> are cardinal numerals. (Section 4.1.3)
@@ -1816,7 +1858,7 @@
   Name: causal
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - sem:comparative-conditional-relation
@@ -2300,7 +2342,7 @@
   Name: comment
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
+    - inf:predication
   ConstituentOf:
     - inf:topic-comment
   AssociatedTo: []
@@ -2384,7 +2426,7 @@
   Alias:
     - comparative conditional
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -2494,6 +2536,19 @@
   Examples:
     - <e><e cxn:matric-clause>I told her</e> that <e cxn:complement-dependent-clause>I would go</e></e>
 
+- Id: cxn:complement-matrix-clause
+  Type: cxn
+  Name: complement matrix clause
+  Alias: []
+  SubtypeOf:
+    - cxn:matrix-clause
+  ConstituentOf:
+    - cxn:complement-clause-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: cxn:complement-taking-predicate
   Type: cxn
   Name: complement-taking predicate
@@ -2501,9 +2556,8 @@
     - CTP
   SubtypeOf:
     - cxn:predicate
-    - cxn:matrix-clause
   ConstituentOf:
-    - cxn:complement-clause-construction
+    - cxn:complement-matrix-clause
   AssociatedTo: []
   Definition: >-
     the <a>matrix clause</a> <a>predicate</a> in a <a>complement clause construction</a>. <i>Example</i>: in <i>I told her that I would go</i>, <i>told</i> is the complement-taking predicate. (Section 18.2.1)
@@ -2709,7 +2763,7 @@
     - conditional concessive relation
     - concessive conditional
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - sem:neutral-epistemic-stance
@@ -2740,7 +2794,7 @@
   Alias:
     - concessive
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - sem:unexpected-co-occurrence
@@ -2841,7 +2895,7 @@
   Alias:
     - conditional
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -2917,7 +2971,7 @@
   Name: consecutive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -3056,7 +3110,7 @@
   Name: contrast
   Alias: []
   SubtypeOf:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   ConstituentOf: []
   AssociatedTo:
     - cxn:identificational
@@ -3112,7 +3166,7 @@
   Name: controller
   Alias: []
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf:
     - str:indexical-strategy-indexation
   AssociatedTo: []
@@ -3128,7 +3182,7 @@
   Name: converb
   Alias: []
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf:
     - str:asyndetic
   AssociatedTo:
@@ -3663,7 +3717,7 @@
   Name: dependent time reference
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - sem:reference-point
@@ -3894,7 +3948,7 @@
   Name: direct object category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:indirective-alignment-system
   AssociatedTo: []
@@ -3932,18 +3986,17 @@
   Examples:
     - <e>The storm expanded</e>
 
-- Id: inf:discourse-context-FNBr
+- Id: inf:discourse-context
   Type: inf
-  Name: discourse context (FN-Br)
-  Alias:
-    - discourse context
+  Name: discourse context
+  Alias: []
   SubtypeOf:
     - def:information-packaging
   ConstituentOf: []
   AssociatedTo: []
-  Definition: >-
-    some part of the information packaging that is related to the current discourse of the utterance.
+  Definition: ""
   Examples: []
+  FromGlossary: false
 
 - Id: inf:discourse-deictic
   Type: inf
@@ -4059,7 +4112,7 @@
   Name: domain
   Alias: []
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf:
     - str:indexical-strategy-indexation
   AssociatedTo: []
@@ -4510,7 +4563,7 @@
   Name: ergative category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:ergative-alignment-system
   AssociatedTo: []
@@ -4724,7 +4777,7 @@
   Name: existential
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - cxn:presentational-location
@@ -4880,7 +4933,7 @@
   Name: explanation
   Alias: []
   SubtypeOf:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   ConstituentOf: []
   AssociatedTo:
     - inf:event-central
@@ -5073,7 +5126,7 @@
     - locative relation
     - spatial figure--ground relation
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - cxn:location-clause
@@ -5166,8 +5219,9 @@
   Name: focus
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
-  ConstituentOf: []
+    - def:information-packaging
+  ConstituentOf:
+    - inf:identificational
   AssociatedTo: []
   Definition: >-
     in <a>identificational information packaging</a>, the information which is identified as the <dq>filler</dq> for the open part of the <a>presupposed open proposition</a>. <i>Example</i>: in <i>It was Jack who stole my cookies!</i>, the presupposed open proposition is <q>X stole my cookies</q>, and the filler of X is Jack -- i.e. X = Jack. The focus may be any part of the information in the clause, not just an argument. The term <q>focus construction</q> is sometimes used as a synonym for <q>identificational construction</q>, but we avoid that usage here. (Section 11.4.1)
@@ -5787,7 +5841,7 @@
     - undergoer
     - stative category
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:active-alignment-system
   AssociatedTo:
@@ -5821,6 +5875,19 @@
     - Language: Crow
       Example: <e>ba-</e>apé
       Translation: my nose
+
+- Id: cxn:inalienable-possession-attributive-phrase
+  Type: cxn
+  Name: inalienable possession attributive phrase
+  Alias: []
+  SubtypeOf:
+    - cxn:possessive-attributive-phrase
+  ConstituentOf:
+    - cxn:inalienable-possession
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: sem:inanimate
   Type: sem
@@ -5958,7 +6025,7 @@
   Name: independent time reference
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -5971,7 +6038,7 @@
   Name: index
   Alias: []
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf:
     - str:indexical-strategy-indexation
   AssociatedTo: []
@@ -5990,7 +6057,7 @@
   Alias:
     - agreement feature
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf: []
   AssociatedTo:
     - str:controller
@@ -6081,7 +6148,7 @@
   Name: indirect object category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:indirective-alignment-system
   AssociatedTo: []
@@ -6183,25 +6250,12 @@
     - Sandra is
     - Sandra
 
-- Id: inf:information-element-FNBr
-  Type: inf
-  Name: information element (FN-Br)
-  Alias:
-    - information element
-  SubtypeOf:
-    - def:information-packaging
-  ConstituentOf: []
-  AssociatedTo: []
-  Definition: >-
-    used exclusively for information packaging concepts that are defined as part of another.
-  Examples: []
-
 - Id: inf:information-gap
   Type: inf
   Name: information gap
   Alias: []
   SubtypeOf:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -6494,7 +6548,7 @@
   Name: interruption
   Alias: []
   SubtypeOf:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   ConstituentOf: []
   AssociatedTo:
     - inf:event-central
@@ -6749,8 +6803,9 @@
   Name: link
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
-  ConstituentOf: []
+    - def:information-packaging
+  ConstituentOf:
+    - inf:poset
   AssociatedTo: []
   Definition: >-
     a concept expressed in a sentence that is linked to a <a>trigger</a> concept previously evoked, and forms a <a>poset</a> with the trigger (and other potentially evoked concepts). <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the song mentioned in the second turn serves as the link to the album which is the trigger mentioned in the first turn. (Section 11.2.3)
@@ -7138,7 +7193,7 @@
   Alias:
     - positive circumstantial
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7192,10 +7247,25 @@
       EquivalentPieces:
         - wún | bowl
 
+- Id: cxn:mensural-attributive-phrase
+  Type: cxn
+  Name: mensural attributive phrase
+  Alias: []
+  SubtypeOf:
+    - cxn:attributive-phrase
+  ConstituentOf:
+    - cxn:mensural-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: cxn:mensural-construction
   Type: cxn
   Name: mensural construction
-  Alias: []
+  Alias:
+    - mensural modification construction
+    - mensural modification
   SubtypeOf:
     - cxn:typifying-construction
     - cxn:modification-construction
@@ -7213,7 +7283,8 @@
   SubtypeOf:
     - cxn:modifier
     - cxn:nonprototypical-construction
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:mensural-attributive-phrase
   AssociatedTo: []
   Definition: >-
     a term that measures out a quantity or unit of a referent. Mensural terms are classified in different ways; this textbook divides measure terms into <a>measure terms</a>, <a>container terms</a>, <a>form terms</a>, <a>group terms</a>, <a>piece terms</a>, and <a>species terms</a>. (Section 4.1.3)
@@ -7517,7 +7588,7 @@
   Name: negative circumstantial
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7538,6 +7609,18 @@
     a negative commitment on the part of the speaker to the actuality of a <a>proposition</a> expressed in a <a>clause</a>. <i>Example</i>: in <i>If you had pressed this button, the door would have opened</i>, the speaker has expressed a commitment to the proposition that you didn't press the button. (Section 17.3.1)
   Examples:
     - <e>If you had pressed this button, the door would have opened</e>
+
+- Id: cxn:negative-question-polarity-response
+  Type: cxn
+  Name: negative question polarity response
+  Alias: []
+  SubtypeOf:
+    - cxn:polarity-response
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: str:neutral-alignment-system
   Type: str
@@ -7644,7 +7727,7 @@
   Name: nominative category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:accusative-alignment-system
   AssociatedTo: []
@@ -7802,7 +7885,7 @@
   Name: nonspecific article
   Alias: []
   SubtypeOf:
-    - cxn:article
+    - cxn:indefinite-article
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -7943,6 +8026,33 @@
     - Language: Japanese
       Example: "[gakusei ga hon o katta] zizitu"
       Translation: the fact that the student bought the book
+
+- Id: cxn:numeral-attributive-phrase
+  Type: cxn
+  Name: numeral attributive phrase
+  Alias: []
+  SubtypeOf:
+    - cxn:attributive-phrase
+  ConstituentOf:
+    - cxn:numeral-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:numeral-construction
+  Type: cxn
+  Name: numeral construction
+  Alias:
+    - numeral modification construction
+    - numeral modification
+  SubtypeOf:
+    - cxn:modification-construction
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: sem:number
   Type: sem
@@ -8839,6 +8949,18 @@
   Examples:
     - <e>Since you pressed the button, the door opened</e>
 
+- Id: cxn:positive-question-polarity-response
+  Type: cxn
+  Name: positive question polarity response
+  Alias: []
+  SubtypeOf:
+    - cxn:polarity-response
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: cxn:possession-clause
   Type: cxn
   Name: possession clause
@@ -8858,7 +8980,7 @@
   Alias:
     - possessive relation
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo:
     - cxn:possessive-modification-construction
@@ -8916,6 +9038,19 @@
       Example: ku na mgeni nyumba-ni
       Gloss: <sc>loc.clf</sc> with stranger home-at
       Translation: There is a stranger at home
+
+- Id: str:possessive-pronoun
+  Type: str
+  Name: possessive pronoun
+  Alias: []
+  SubtypeOf:
+    - cxn:possessive-attributive-phrase
+    - cxn:pronoun
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: sem:possessor-role
   Type: sem
@@ -9027,7 +9162,7 @@
   ConstituentOf: []
   AssociatedTo:
     - cxn:main-clause
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   Definition: >-
     the <a>information</a> added to the discourse context when a <u>sentence</u> is uttered, or, more precisely, <q>the proposition expressed by a sentence which the hearer is expected to know or take for granted as a result of hearing the sentence uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>Alarms ringing, the burglar fled</i>, the <a>clause</a> <i>the burglar fled</i> is pragmatically asserted. The criterion typically used for pragmatic assertion is that the content of a sentence can be negated or questioned, though other criteria are sometimes used, such as hedging. (Sections 13.2.1, <b>15.1.2</b>)
   Examples:
@@ -9043,7 +9178,7 @@
     - def:information-packaging
   ConstituentOf: []
   AssociatedTo:
-    - inf:discourse-context-FNBr
+    - inf:discourse-context
   Definition: >-
     the set of <a>propositions</a> evoked by the <a>constructions</a> in a sentence <q>which the speaker assumes the hearer already knows or is ready to take for granted at the time the sentence is uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>I'm grateful that you finished cleaning the house</i>, the proposition that you finished cleaning the house is presupposed, while the proposition that I am grateful about it is <a>asserted</a>. (Section 11.4.1)
   Examples:
@@ -9070,6 +9205,27 @@
   Definition: >-
     an <a>article</a> that is used for a <a>pragmatically nonspecific (but semantically specific) indefinite referent</a>. (Section 3.4.1)
   Examples: []
+
+- Id: cxn:pragmatically-nonspecific-but-semantically-specific-indefinite-pronoun
+  Type: cxn
+  Name: pragmatically nonspecific (but semantically specific) (indefinite) pronoun
+  Alias:
+    - pragmatically nonspecific (but semantically specific) indefinite pronoun
+    - pragmatically nonspecific (but semantically specific) pronoun
+    - pragmatically nonspecific but semantically specific (indefinite) pronoun
+    - pragmatically nonspecific but semantically specific indefinite pronoun
+    - pragmatically nonspecific but semantically specific pronoun
+    - pragmatically nonspecific (indefinite) pronoun
+    - pragmatically nonspecific indefinite pronoun
+    - pragmatically nonspecific pronoun
+  SubtypeOf:
+    - cxn:indefinite-pronoun
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: >-
+    an <a>pronoun</a> that is used for a <a>pragmatically nonspecific (but semantically specific) indefinite referent</a>. (Section 3.4.1)
+  Examples: []
+  FromGlossary: false
 
 - Id: inf:pragmatically-nonspecific-but-semantically-specific-indefinite-referent
   Type: inf
@@ -9107,6 +9263,21 @@
   Definition: >-
     an <a>article</a> that is used for a <a>pragmatically specific referent</a>. (Section 3.4.1)
   Examples: []
+
+- Id: cxn:pragmatically-specific-indefinite-pronoun
+  Type: cxn
+  Name: pragmatically specific (indefinite) pronoun
+  Alias:
+    - pragmatically specific indefinite pronoun
+    - pragmatically specific pronoun
+  SubtypeOf:
+    - cxn:indefinite-pronoun
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: >-
+    an <a>pronoun</a> that is used for a <a>pragmatically specific referent</a>. (Section 3.4.1)
+  Examples: []
+  FromGlossary: false
 
 - Id: inf:pragmatically-specific-indefinite-referent
   Type: inf
@@ -9463,8 +9634,9 @@
   Alias:
     - POP
   SubtypeOf:
-    - inf:information-element-FNBr
-  ConstituentOf: []
+    - def:information-packaging
+  ConstituentOf:
+    - inf:identificational
   AssociatedTo: []
   Definition: >-
     in <a>identificational information packaging</a>, the <a>proposition</a> with an unknown part (hence <dq>open</dq> proposition) which is already part of the shared knowledge of the speaker and hearer (that is, it is presupposed). <i>Example</i>: in <i>It was Jack who stole my cookies!</i>, the presupposed open proposition is <q>X stole my cookies</q>; in the appropriate discourse context, it is already known that someone stole my cookies. (Section 11.4.1)
@@ -9504,7 +9676,7 @@
   Name: primary object category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:secundative-ditransitive-alignment
   AssociatedTo: []
@@ -9597,7 +9769,7 @@
   Name: prop
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
+    - def:information-packaging
   ConstituentOf:
     - inf:theater-metaphor
   AssociatedTo: []
@@ -9850,7 +10022,7 @@
   Name: purpose
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -9891,6 +10063,33 @@
     - <e>search (for)</e>
     - <e>wait (for)</e>
 
+- Id: cxn:quantifier-attributive-phrase
+  Type: cxn
+  Name: quantifier attributive phrase
+  Alias: []
+  SubtypeOf:
+    - cxn:attributive-phrase
+  ConstituentOf:
+    - cxn:quantifier-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:quantifier-construction
+  Type: cxn
+  Name: quantifier construction
+  Alias:
+    - quantifier modification construction
+    - quantifier modification
+  SubtypeOf:
+    - cxn:modification-construction
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: cxn:quantifier
   Type: cxn
   Name: quantifier
@@ -9898,7 +10097,8 @@
   SubtypeOf:
     - cxn:modifier
     - cxn:nonprototypical-construction
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:quantifier-attributive-phrase
   AssociatedTo: []
   Definition: >-
     <a>forms</a> that describe the quantity of the <a>instances</a> of a <a>type</a>, where the precise cardinality of the set is not specified. Quantifiers include <a>vague numerals</a>, <a>amount terms</a>, <a>proportional quantifiers</a>, and <a>distributive quantifiers</a>. (Section 4.1.3)
@@ -10195,16 +10395,28 @@
   Name: relative clause head
   Alias: []
   SubtypeOf:
-    - cxn:matrix-clause
     - cxn:referring-phrase
     - cxn:head
   ConstituentOf:
-    - cxn:relative-clause
+    - cxn:relative-matrix-clause
   AssociatedTo: []
   Definition: >-
     the <a>referring phrase</a> that denotes the <a>necessarily shared participant</a> in a <a>relative clause construction</a> -- that is, the <a>participant</a> that plays a <a>semantic role</a> in both the <a>event</a> denoted by the <a>relative clause</a> and the event denoted by the <a>matrix clause</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>the cheesecake</i> is the relative clause head. The relative clause head is an <a>argument</a> of the matrix clause predicate, and is <a inf:modification>modified</a> by the relative clause. (Section 19.1)
   Examples:
     - I ate the <e>cheesecake</e> [that Carol baked]
+
+- Id: cxn:relative-matrix-clause
+  Type: cxn
+  Name: relative matrix clause
+  Alias: []
+  SubtypeOf:
+    - cxn:matrix-clause
+  ConstituentOf:
+    - cxn:relative-clause-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: str:relative-equal-equative
   Type: str
@@ -10531,7 +10743,7 @@
   Name: satellite
   Alias: []
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf:
     - str:satellite-framing-strategy
   AssociatedTo: []
@@ -10618,7 +10830,7 @@
   Name: secondary object category
   Alias: []
   SubtypeOf:
-    - str:alignment-system-category-FNBr
+    - str:alignment-system-category
   ConstituentOf:
     - str:indirective-alignment-system
   AssociatedTo: []
@@ -10719,17 +10931,17 @@
     a model for representing semantic relationships among functions that are <a>co-expressed</a> across the world's languages. The semantic relationships form a <a>conceptual space</a> that is represented in a network (in mathematical terms, a graph). The co-expression of functions by a particular language form is represented by a <a>semantic map</a> encircling the nodes of the graph/network that represent the co-expressed functions. (Section 3.5)
   Examples: []
 
-- Id: sem:semantic-relation-FNBr
+- Id: sem:semantic-relation
   Type: sem
-  Name: semantic relation (FN-Br)
-  Alias:
-    - semantic relation
+  Name: semantic relation
+  Alias: []
   SubtypeOf:
     - def:meaning
   ConstituentOf: []
   AssociatedTo: []
   Definition: ""
   Examples: []
+  FromGlossary: false
 
 - Id: sem:semantic-role
   Type: sem
@@ -10823,6 +11035,33 @@
       Gloss: Kofi hit Amba kill
       Translation: Kofi killed Amba
 
+- Id: cxn:set-member-construction
+  Type: cxn
+  Name: set-member construction
+  Alias:
+    - set-member modification construction
+    - set-member modification
+  SubtypeOf:
+    - cxn:modification-construction
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:set-member-attributive-phrase
+  Type: cxn
+  Name: set-member attributive phrase
+  Alias: []
+  SubtypeOf:
+    - cxn:attributive-phrase
+  ConstituentOf:
+    - cxn:set-member-construction
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
+
 - Id: cxn:set-member-term
   Type: cxn
   Name: set-member term
@@ -10830,7 +11069,8 @@
   SubtypeOf:
     - cxn:modifier
     - cxn:nonprototypical-construction
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:set-member-attributive-phrase
   AssociatedTo: []
   Definition: >-
     a <a>form</a> that specifies a member or members of a designated set, usually previously presented in the discourse or inferrable from it, which has some sort of ordering. <i>Example</i>: in <i>the next question</i>, <i>next</i> is a set-member term. Other set-member terms include <i>last</i>, <i>another, (the) other</i>, and the <a>ordinal numerals</a>. (Section 4.1.3)
@@ -10845,7 +11085,7 @@
   Name: setting
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
+    - def:information-packaging
   ConstituentOf:
     - inf:theater-metaphor
   AssociatedTo: []
@@ -10871,7 +11111,7 @@
   Name: simple contrast
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -10881,6 +11121,18 @@
       Example: <e>i laid ah e meir</e>
       Gloss: I fish <sc>conj</sc> he sleep
       Translation: I fished, but he slept
+
+- Id: cxn:simple-predicate
+  Type: cxn
+  Name: simple predicate
+  Alias: []
+  SubtypeOf:
+    - cxn:predicate
+  ConstituentOf: []
+  AssociatedTo: []
+  Definition: ""
+  Examples: []
+  FromGlossary: false
 
 - Id: str:simple-predicate-applicative-strategy
   Type: str
@@ -10935,7 +11187,7 @@
   Alias:
     - overlap
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -11361,18 +11613,17 @@
     a <a>construction</a> in a language (or any language) used to express a particular combination of <a>semantic content</a> and <a>information packaging</a>, which is further distinguished by certain characteristics of <a>morphosyntactic</a> <a>form</a> that can be defined in a crosslinguistically consistent fashion. <i>Example</i>: the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, uses the <a>verbal copula</a> strategy, a particular type of morphosyntactic structure, to express the <a>predicate nominal construction</a>. (Section 1.4)
   Examples: []
 
-- Id: str:strategy-element-FNBr
+- Id: str:strategy-element
   Type: str
-  Name: strategy element (FN-Br)
-  Alias:
-    - strategy element
+  Name: strategy element
+  Alias: []
   SubtypeOf:
     - def:strategy
   ConstituentOf: []
   AssociatedTo: []
-  Definition: >-
-    used exclusively for strategy concepts that are defined as part of another.
+  Definition: ""
   Examples: []
+  FromGlossary: false
 
 - Id: def:structural-coding
   Type: def
@@ -11505,7 +11756,7 @@
   Name: substitutive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -11519,7 +11770,7 @@
   Name: subtractive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -11697,7 +11948,7 @@
   Name: target
   Alias: []
   SubtypeOf:
-    - str:strategy-element-FNBr
+    - str:strategy-element
   ConstituentOf:
     - str:indexical-strategy-indexation
   AssociatedTo: []
@@ -11870,7 +12121,7 @@
   Name: token identity
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -11883,7 +12134,7 @@
   Name: topic
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
+    - inf:reference-referent
   ConstituentOf:
     - inf:topic-comment
   AssociatedTo:
@@ -12097,8 +12348,9 @@
   Name: trigger
   Alias: []
   SubtypeOf:
-    - inf:information-element-FNBr
-  ConstituentOf: []
+    - def:information-packaging
+  ConstituentOf:
+    - inf:poset
   AssociatedTo: []
   Definition: >-
     a concept evoked or inferrable in the prior discourse that is a member of a <a>poset</a> that also includes the <a>link</a>. <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the album mentioned in the first turn is the trigger that generates a poset together with the song mentioned in the second turn; the latter serves as the link to the trigger. (Section 11.2.3)
@@ -12161,7 +12413,7 @@
   Name: type identity
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -12255,7 +12507,7 @@
   Name: unexpected co-occurrence
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation-FNBr
+    - sem:semantic-relation
   ConstituentOf: []
   AssociatedTo: []
   Definition: >-
@@ -12368,7 +12620,7 @@
   Alias: []
   SubtypeOf:
     - cxn:prototypical-construction
-    - cxn:predicate
+    - cxn:simple-predicate
   ConstituentOf:
     - cxn:verbal-clause
   AssociatedTo: []

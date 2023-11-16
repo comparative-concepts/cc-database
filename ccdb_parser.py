@@ -332,6 +332,13 @@ class CCDBParser:
                       self.convert_definition_to_html(parsedDefinition) +
                       '</td></tr>')
 
+            fromGlossary = item.get('FromGlossary', True)
+            if not fromGlossary:
+                print('''<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>''')
+
             print('</table>')
             print('</div>')
         print('</div>')
