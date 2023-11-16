@@ -492,7 +492,7 @@
   Examples:
     - Language: Mordvin
       Example: <e>t'ejt'er-es mor-i mazi-ste</e>
-      Gloss: 
+      Gloss: ""
       Translation: The girls sings beautifully
       EquivalentPieces:
         - mazi | beatiful
@@ -881,7 +881,7 @@
   Examples:
     - Language: K'ichee'
       Example: utz [lē xubij lē achi]
-      Gloss: 
+      Gloss: ""
       Translation: What the man said is good
       EquivalentPieces:
         - lē xubij lē achi | the man said [it]
@@ -1024,7 +1024,7 @@
   Examples:
     - Language: Japanese
       Example: <e>ojiisanga yamade hataraite obaasanga miseno bano shita</e>
-      Gloss: 
+      Gloss: ""
       Translation: The old man worked at the mountain, and the old woman tended the store
       EquivalentPieces:
         - hataraite | worked
@@ -1321,7 +1321,7 @@
   Examples:
     - Language: Talitsk dialect of Russian
       Example: Góša pr´ijéxal´i!
-      Gloss: 
+      Gloss: ""
       Translation: Gosha and his family have arrived!
       EquivalentPieces:
         - pr´ijéxal´i | they have arrived
@@ -3830,7 +3830,7 @@
   Examples:
     - Language: Spanish
       Example: <e?El director busca a un empleado</e>
-      Gloss: 
+      Gloss: ""
       Translation: The director is looking for a [specific] clerk
       EquivalentPieces:
         - un empleado | a clerk
@@ -6430,7 +6430,7 @@
   Examples:
     - Language: Imbabura Quechua
       Example: <e>[kan kwitsaman kwintuta villashka]-ka ali kwitsami</e>
-      Gloss: 
+      Gloss: ""
       Translation: The girl to whom you told the story is a good girl
       EquivalentPieces:
         - kan kwitsaman kwintuta villashka | you told the story to the girl
@@ -9362,7 +9362,7 @@
   Examples:
     - Language: Turkish
       Example: "[Hasanın Sinana ver-diğ-i] patatesi yedim"
-      Gloss: 
+      Gloss: ""
       Translation: I ate the potato that Hasan gave to Sinan
       EquivalentPieces:
         - Hasanın Sinana ver-diğ-i | [that] Hasan gave to Sinan
@@ -12392,7 +12392,7 @@
   Examples:
     - Language: Luganda
       Example: ekiso [John kyeyattisa enkoko]
-      Gloss: 
+      Gloss: ""
       Translation: the knife with which John killed the chicken
       EquivalentPieces:
         - kyeyattisa | killed
