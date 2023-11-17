@@ -7883,7 +7883,12 @@
 - Id: cxn:nonspecific-article
   Type: cxn
   Name: nonspecific article
-  Alias: []
+  Alias:
+    - (semantically) nonspectic (indefinite) article
+    - semantically nonspectic (indefinite) article
+    - nonspectic (indefinite) article
+    - (semantically) nonspectic indefinite article
+    - (semantically) nonspectic article
   SubtypeOf:
     - cxn:indefinite-article
   ConstituentOf: []
@@ -7895,7 +7900,12 @@
 - Id: cxn:nonspecific-pronoun
   Type: cxn
   Name: nonspecific pronoun
-  Alias: []
+  Alias:
+    - (semantically) nonspectic (indefinite) pronoun
+    - semantically nonspectic (indefinite) pronoun
+    - nonspectic (indefinite) pronoun
+    - (semantically) nonspectic indefinite pronoun
+    - (semantically) nonspectic pronoun
   SubtypeOf:
     - cxn:pronoun
   ConstituentOf: []
@@ -7907,7 +7917,12 @@
 - Id: inf:nonspecific-referent
   Type: inf
   Name: nonspecific referent
-  Alias: []
+  Alias:
+    - (semantically) nonspectic (indefinite) referent
+    - semantically nonspectic (indefinite) referent
+    - nonspectic (indefinite) referent
+    - (semantically) nonspectic indefinite referent
+    - (semantically) nonspectic referent
   SubtypeOf:
     - inf:information-status
   ConstituentOf: []
