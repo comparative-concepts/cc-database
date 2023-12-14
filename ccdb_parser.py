@@ -272,6 +272,8 @@ class CCDBParser:
             print(f'<h2 class="name">{self.convert_link_to_html(id)}</h2>')
             print(f'<table>')
 
+            print(f'<tr><th>Id</th> <td class="ccinfo ccid">{id}</td></tr>')
+
             type: str = item['Type']
             if type:
                 entry = self.TYPE_TO_ENTRY.get(type)
