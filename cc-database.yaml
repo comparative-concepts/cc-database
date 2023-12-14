@@ -7884,11 +7884,11 @@
   Type: cxn
   Name: nonspecific article
   Alias:
-    - (semantically) nonspectic (indefinite) article
-    - semantically nonspectic (indefinite) article
-    - nonspectic (indefinite) article
-    - (semantically) nonspectic indefinite article
-    - (semantically) nonspectic article
+    - (semantically) nonspecific (indefinite) article
+    - semantically nonspecific (indefinite) article
+    - nonspecific (indefinite) article
+    - (semantically) nonspecific indefinite article
+    - (semantically) nonspecific article
   SubtypeOf:
     - cxn:indefinite-article
   ConstituentOf: []
@@ -7901,11 +7901,11 @@
   Type: cxn
   Name: nonspecific pronoun
   Alias:
-    - (semantically) nonspectic (indefinite) pronoun
-    - semantically nonspectic (indefinite) pronoun
-    - nonspectic (indefinite) pronoun
-    - (semantically) nonspectic indefinite pronoun
-    - (semantically) nonspectic pronoun
+    - (semantically) nonspecific (indefinite) pronoun
+    - semantically nonspecific (indefinite) pronoun
+    - nonspecific (indefinite) pronoun
+    - (semantically) nonspecific indefinite pronoun
+    - (semantically) nonspecific pronoun
   SubtypeOf:
     - cxn:pronoun
   ConstituentOf: []
@@ -7918,11 +7918,11 @@
   Type: inf
   Name: nonspecific referent
   Alias:
-    - (semantically) nonspectic (indefinite) referent
-    - semantically nonspectic (indefinite) referent
-    - nonspectic (indefinite) referent
-    - (semantically) nonspectic indefinite referent
-    - (semantically) nonspectic referent
+    - (semantically) nonspecific (indefinite) referent
+    - semantically nonspecific (indefinite) referent
+    - nonspecific (indefinite) referent
+    - (semantically) nonspecific indefinite referent
+    - (semantically) nonspecific referent
   SubtypeOf:
     - inf:information-status
   ConstituentOf: []
