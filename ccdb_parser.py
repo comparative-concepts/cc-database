@@ -19,6 +19,10 @@ class GlossItem(TypedDict):
     Alias: list[str]
     SubtypeOf: list[str]
     ConstituentOf: list[str]
+    ExpressionOf: list[str]
+    RecruitedFrom: list[str]
+    ModeledOn: list[str]
+    FunctionOf: list[str]
     AssociatedTo: list[str]
     Definition: str
     DefinitionLinks: list[str]
@@ -43,7 +47,7 @@ class CCDBParser:
                 # type check
                 for key in ('Id', 'Name', 'Type', 'Definition'):
                     assert isinstance(item[key], str), f"Type error: {key} is not str"
-                for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks'):
+                for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'DefinitionLinks'):
                     assert isinstance(item[key], list) and all(isinstance(x, str) for x in item[key]), f"Type error: {key} is not list[str]"
                 for key in ('ParsedDefinition',):
                     for x in item[key]:
@@ -59,7 +63,7 @@ class CCDBParser:
                         assert alias != item2['Name'], f"Alias {alias!r} is also the name for id {id2!r}"
                 assert len(set(item['Alias'])) == len(item['Alias']), f"Duplicate aliases"
                 # check that ids exits
-                for key in ('SubtypeOf', 'ConstituentOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
+                for key in ('SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
                     relids = item[key]
                     if isinstance(relids, str): relids = [relids]
                     for relid in relids:
@@ -300,6 +304,30 @@ class CCDBParser:
             if constituentOf:
                 print(f'<tr><th>Part of</th> <td class="ccinfo relation">' +
                       ' | '.join(map(self.convert_link_to_html, constituentOf)) +
+                      '</td></tr>')
+
+            expressionOf: list[str] = item['ExpressionOf']
+            if expressionOf:
+                print(f'<tr><th>Expresses</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, expressionOf)) +
+                      '</td></tr>')
+
+            recruitedFrom: list[str] = item['RecruitedFrom']
+            if recruitedFrom:
+                print(f'<tr><th>Recruited from</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, recruitedFrom)) +
+                      '</td></tr>')
+
+            modeledOn: list[str] = item['ModeledOn']
+            if modeledOn:
+                print(f'<tr><th>Modeled on</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, modeledOn)) +
+                      '</td></tr>')
+
+            functionOf: list[str] = item['FunctionOf']
+            if functionOf:
+                print(f'<tr><th>Function of</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, functionOf)) +
                       '</td></tr>')
 
             associatedTo: list[str] = item['AssociatedTo']
