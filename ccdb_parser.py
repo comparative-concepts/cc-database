@@ -5,29 +5,10 @@ import yaml
 import json
 import argparse
 from pathlib import Path
-from typing import TypedDict, Union, Optional
+from typing import Union, Optional
 from datetime import datetime
 
-# A parsed definition is a list of either strings or links (as pairs of strings)
-ParsedDefinition = list[Union[str, tuple[str, str]]]
-
-# The type of glossary items
-class GlossItem(TypedDict):
-    Id: str
-    Name: str
-    Type: str
-    Alias: list[str]
-    SubtypeOf: list[str]
-    ConstituentOf: list[str]
-    ExpressionOf: list[str]
-    RecruitedFrom: list[str]
-    ModeledOn: list[str]
-    FunctionOf: list[str]
-    AssociatedTo: list[str]
-    Definition: str
-    DefinitionLinks: list[str]
-    ParsedDefinition: ParsedDefinition
-
+from validation import GlossItem, ParsedDefinition, run_validators
 
 class CCDBParser:
     glosses: dict[str, GlossItem]
@@ -41,43 +22,8 @@ class CCDBParser:
 
 
     def validate_database(self) -> None:
-        for id, item in self.glosses.items():
-            try:
-                assert id == item['Id'], f"Mismatched id, != {item['Id']!r}"
-                # type check
-                for key in ('Id', 'Name', 'Type', 'Definition'):
-                    assert isinstance(item[key], str), f"Type error: {key} is not str"
-                for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'DefinitionLinks'):
-                    assert isinstance(item[key], list) and all(isinstance(x, str) for x in item[key]), f"Type error: {key} is not list[str]"
-                for key in ('ParsedDefinition',):
-                    for x in item[key]:
-                        if isinstance(x, str): continue
-                        assert isinstance(x, tuple) and len(x) == 2 and all(isinstance(y, str) for y in x), f"Type error: {key} is not of type {ParsedDefinition}"
-                # the name must be unique among names (with the same type)
-                for id2, item2 in self.glosses.items():
-                    if id != id2 and item['Type'] == item2['Type']: 
-                        assert item['Name'] != item2['Name'], f"Name also occurs in {id2!r}"
-                # an alias should not be a name
-                for alias in item['Alias']:
-                    for id2, item2 in self.glosses.items():
-                        assert alias != item2['Name'], f"Alias {alias!r} is also the name for id {id2!r}"
-                assert len(set(item['Alias'])) == len(item['Alias']), f"Duplicate aliases"
-                # check that ids exits
-                for key in ('SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
-                    relids = item[key]
-                    if isinstance(relids, str): relids = [relids]
-                    for relid in relids:
-                        if not relid: continue
-                        if key == 'ParsedDefinition':
-                            if isinstance(relid, str): continue
-                            relid = relid[0] # type: ignore
-                        assert relid in self.glosses, f"{key} id doesn't exist: {relid!r}"
-                # check the CC type
-                typ = item['Type']
-                assert typ in ('cxn', 'inf', 'sem', 'str', 'def'), f"Unknown CC type: {typ}"
-
-            except AssertionError as e:
-                self.error(f"{id}: {e}")
+        for error in run_validators(self):
+            self.error(error)
 
 
     def parse_yaml_database(self, glossfile: Union[str,Path]) -> None:

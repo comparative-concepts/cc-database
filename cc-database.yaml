@@ -94,8 +94,7 @@
   Type: str
   Name: absolutive category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:ergative-alignment-system
   ExpressionOf: []
@@ -179,8 +178,7 @@
   Type: str
   Name: accusative category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:accusative-alignment-system
   ExpressionOf: []
@@ -296,8 +294,7 @@
     - agentive
     - actor category
     - agentive category
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:active-alignment-system
   ExpressionOf: []
@@ -341,7 +338,7 @@
   Alias:
     - actual IP strategy
   SubtypeOf:
-    - def:strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -984,22 +981,6 @@
   Definition: >-
     a <a>system</a> defined by the <a>co-expression</a> of <a>arguments</a> of <a>predicates</a> in <a cxn:intransitive-construction>intransitive</a>, <a>transitive</a>, and <a>ditransitive constructions</a>. Example: English expresses the one argument of an intransitive verb construction (<i><b>The cats</b> slept</i>) in the same way as the semantically agentive argument of a <a>transitive</a> <a>verb</a> (<i><b>The cats</b> clawed the sofa</i>): both arguments are expressed preceding the verb. (Sections 1.4, <b>6.3.1</b>)
   Examples: []
-
-- Id: str:alignment-system-category
-  Type: str
-  Name: alignment system category
-  Alias: []
-  SubtypeOf:
-    - def:strategy
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
 
 - Id: str:allative-comparative
   Type: str
@@ -4069,8 +4050,7 @@
   Type: str
   Name: controller
   Alias: []
-  SubtypeOf:
-    - str:strategy-element
+  SubtypeOf: []
   ConstituentOf:
     - str:indexical-strategy-indexation
   ExpressionOf: []
@@ -5063,8 +5043,7 @@
   Type: str
   Name: direct object category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:indirective-alignment-system
   ExpressionOf: []
@@ -5276,8 +5255,7 @@
   Type: str
   Name: domain
   Alias: []
-  SubtypeOf:
-    - str:strategy-element
+  SubtypeOf: []
   ConstituentOf:
     - str:indexical-strategy-indexation
   ExpressionOf: []
@@ -5816,7 +5794,7 @@
   Name: equipollent
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:system
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -5860,8 +5838,7 @@
   Type: str
   Name: ergative category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:ergative-alignment-system
   ExpressionOf: []
@@ -6391,10 +6368,11 @@
   Name: external possessor strategy
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf: []
-  RecruitedFrom: []
+  RecruitedFrom:
+    - cxn:ditransitive-construction
   ModeledOn: []
   FunctionOf: []
   AssociatedTo:
@@ -7325,7 +7303,7 @@
   Alias:
     - hybrid IP strategy
   SubtypeOf:
-    - def:strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7432,7 +7410,7 @@
     - mimetics
     - ideophone strategy
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7513,8 +7491,7 @@
     - patientive
     - undergoer
     - stative category
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:active-alignment-system
   ExpressionOf: []
@@ -7733,7 +7710,7 @@
   Name: independent strategy
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7765,8 +7742,7 @@
   Type: str
   Name: index
   Alias: []
-  SubtypeOf:
-    - str:strategy-element
+  SubtypeOf: []
   ConstituentOf:
     - str:indexical-strategy-indexation
   ExpressionOf: []
@@ -7788,15 +7764,14 @@
   Name: indexation feature
   Alias:
     - agreement feature
-  SubtypeOf:
-    - str:strategy-element
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - str:indexical-strategy-indexation
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AssociatedTo:
-    - str:controller
+  AssociatedTo: []
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the categories of the <a>referent</a> that the <a>index</a> expresses. Typical categories are <a>person</a>, <a>gender/class</a>, and <a>number</a>. <i>Example</i>: in Spanish <i>los libros roj-os</i> <q>the red books</q>, the suffix <i>-os</i> on the modifier <i>rojos</i> <q>red</q> indexes the plural number and masculine gender of <i>libros</i> <q>books</q>. (Section 4.4)
   Examples:
@@ -7904,8 +7879,7 @@
   Type: str
   Name: indirect object category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:indirective-alignment-system
   ExpressionOf: []
@@ -8861,7 +8835,7 @@
   Alias:
     - verbal copula strategy
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:nonprototypical-predication
@@ -9917,7 +9891,7 @@
   Name: nominal strategy
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9952,8 +9926,7 @@
   Type: str
   Name: nominative category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:accusative-alignment-system
   ExpressionOf: []
@@ -10646,7 +10619,7 @@
   Name: ordered strategy
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11657,8 +11630,8 @@
       Gloss: <sc>loc.clf</sc> with stranger home-at
       Translation: There is a stranger at home
 
-- Id: str:possessive-pronoun
-  Type: str
+- Id: cxn:possessive-pronoun
+  Type: cxn
   Name: possessive pronoun
   Alias: []
   SubtypeOf:
@@ -12460,8 +12433,7 @@
   Type: str
   Name: primary object category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:secundative-ditransitive-alignment
   ExpressionOf: []
@@ -13070,14 +13042,14 @@
     - G
   SubtypeOf:
     - sem:semantic-role
-  ConstituentOf:
-    - str:indirect-object-category
-    - str:primary-object-category
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AssociatedTo: []
+  AssociatedTo:
+    - str:indirect-object-category
+    - str:primary-object-category
   Definition: >-
     the recipient <a>central participant role</a> in a <a>transfer event</a> -- that is, the <a>participant</a> that receives the theme (<a>T</a>) from the agent. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, Randy's daughter is in the R role. (Section 7.5.2)
   Examples:
@@ -13827,8 +13799,7 @@
   Type: str
   Name: satellite
   Alias: []
-  SubtypeOf:
-    - str:strategy-element
+  SubtypeOf: []
   ConstituentOf:
     - str:satellite-framing-strategy
   ExpressionOf: []
@@ -13938,8 +13909,7 @@
   Type: str
   Name: secondary object category
   Alias: []
-  SubtypeOf:
-    - str:alignment-system-category
+  SubtypeOf: []
   ConstituentOf:
     - str:indirective-alignment-system
   ExpressionOf: []
@@ -14025,7 +13995,7 @@
   Alias:
     - semantic IP strategy
   SubtypeOf:
-    - def:strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14336,7 +14306,7 @@
   Name: simple predicate applicative strategy
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14358,10 +14328,11 @@
     - monoclausal causative strategy
     - morphological causative
   SubtypeOf:
-    - def:strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf: []
-  RecruitedFrom: []
+  RecruitedFrom:
+    - cxn:ditransitive-construction
   ModeledOn: []
   FunctionOf: []
   AssociatedTo: []
@@ -14820,7 +14791,7 @@
   Name: STAMP strategy
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14955,22 +14926,6 @@
   Definition: >-
     a <a>construction</a> in a language (or any language) used to express a particular combination of <a>semantic content</a> and <a>information packaging</a>, which is further distinguished by certain characteristics of <a>morphosyntactic</a> <a>form</a> that can be defined in a crosslinguistically consistent fashion. <i>Example</i>: the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, uses the <a>verbal copula</a> strategy, a particular type of morphosyntactic structure, to express the <a>predicate nominal construction</a>. (Section 1.4)
   Examples: []
-
-- Id: str:strategy-element
-  Type: str
-  Name: strategy element
-  Alias: []
-  SubtypeOf:
-    - def:strategy
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
 
 - Id: def:structural-coding
   Type: def
@@ -15386,8 +15341,7 @@
   Type: str
   Name: target
   Alias: []
-  SubtypeOf:
-    - str:strategy-element
+  SubtypeOf: []
   ConstituentOf:
     - str:indexical-strategy-indexation
   ExpressionOf: []
@@ -15847,9 +15801,10 @@
   Name: transitivity-based causative strategies
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:simple-predicate-causative-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:causative-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
