@@ -43,6 +43,24 @@
       Gloss: S/he at home not at home
       Translation: Is s/he at home?
 
+- Id: str:a-p-disalignment-strategy
+  Type: str
+  Name: A-P disalignment-strategy
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:transitive-construction
+  FunctionOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
 - Id: inf:aboutness
   Type: inf
   Name: about(ness)
@@ -1248,7 +1266,7 @@
   Name: animacy-based split ergativity
   Alias: []
   SubtypeOf:
-    - str:flag-flagging
+    - str:a-p-disalignment-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1364,9 +1382,10 @@
   Name: anticausative
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:overtly-verb-coded-voice-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -1646,7 +1665,9 @@
 - Id: cxn:argument-structure-construction
   Type: cxn
   Name: argument structure construction
-  Alias: []
+  Alias:
+    - ASC
+    - voice construction
   SubtypeOf:
     - cxn:topic-comment
   ConstituentOf: []
@@ -1658,7 +1679,9 @@
   Definition: >-
     a <a>clause construction</a> that consists of the <a>predicate</a> and the <a>argument phrases</a> that are <a>dependent</a> on that predicate. <i>Example</i>: the clause <i>The engineers placed sandbags on the levee</i> is an instance of an English argument structure construction made up of the predicate (<i>placed</i>) and the combination of three argument phrases, the Subject (<i>the engineers</i>) plus the Object (<i>sandbags</i>) plus the Oblique (<i>on the levee</i>). The <a>function</a> of the argument structure construction is its <a>semantics</a> -- the <a>participant roles</a> that the <a>referents</a> of the argument phrases are playing in the event -- combined with its <a>information packaging</a> -- the relative <a>salience</a> implied by the Subject -- Object -- Oblique ranking of argument phrases. (Sections 2.2.4, 6.1.1)
   Examples:
-    - <e>The engineers placed sandbags on the levee</e>
+    - The engineers placed sandbags on the levee
+    - The grizzlies ate the salmon
+    - The salmon were eaten by the grizzlies
 
 - Id: sem:arrival
   Type: sem
@@ -1971,7 +1994,7 @@
     - active voice construction
     - direct voice construction
   SubtypeOf:
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
     - cxn:prototypical-construction
   ConstituentOf: []
   ExpressionOf: []
@@ -2440,9 +2463,10 @@
   Name: causative
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:overtly-verb-coded-voice-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:causative-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -2497,9 +2521,12 @@
   Alias: []
   SubtypeOf:
     - str:co-expression-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
+  ExpressionOf:
+    - cxn:applicative-construction
+  RecruitedFrom:
+    - cxn:causative-construction
   ModeledOn: []
   FunctionOf: []
   AssociatedTo: []
@@ -3391,14 +3418,15 @@
   Name: complex predicate applicative strategy
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:applicative-construction
   RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AssociatedTo:
+  ModeledOn:
     - cxn:complex-predicate
+  FunctionOf: []
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>applicative construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that there is an <a>applicative object</a>. <i>Example</i>: Yoruba <i>ó ra iṣu fún mi</i> <q>He bought a yam for me</q> is an instance of a complex predicate applicative strategy with the verbs <i>ra</i> <q>buy</q> and <i>fún</i> <q>give</q>. (Section 9.3)
   Examples:
@@ -3415,14 +3443,15 @@
   Alias:
     - periphrastic causative strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
+  ExpressionOf:
+    - cxn:causative-construction
+  RecruitedFrom:
+    - cxn:complex-predicate
   ModeledOn: []
   FunctionOf: []
-  AssociatedTo:
-    - cxn:complex-predicate
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>causative construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that this is a <a>causative event</a> with a <a>causer</a> <a>participant role</a> added to the <a>causal chain</a> of the <a>base event</a>. <i>Example</i>: the English Periphrastic Causative Construction, illustrated by <i>Sandra had Phil sweep the patio</i>, is an example of the complex predicate causative strategy; there is a second verb <i>had</i> accompanying the verb <i>sweep</i> that indicates that Sandra is the causer of the causative event. (Section 9.2)
   Examples:
@@ -3435,14 +3464,15 @@
     - complex predicate passive--inverse voice strategy
     - complex predicate passive--inverse strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
+  RecruitedFrom:
+    - cxn:complex-predicate
   ModeledOn: []
   FunctionOf: []
-  AssociatedTo:
-    - cxn:complex-predicate
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that the <a>subject</a> <a>referring phrase</a> expresses the <a>P</a> <a>participant</a>. <i>Example</i>: in Vietnamese <i>Nam bị Nga đánh</i> <q>Nam was beaten by Nga</q>, the verb <i>bi</i> <q>suffer</q> accompanying the main verb <i>đánh</i> <q>beat</q> is an instance of the complex predicate passive--inverse voice strategy. (Section 8.3)
   Examples:
@@ -3996,9 +4026,10 @@
   Name: control-based causative strategies
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:simple-predicate-causative-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:causative-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -4951,14 +4982,13 @@
   Name: differential object marking
   Alias: []
   SubtypeOf:
-    - str:flag-flagging
+    - str:a-p-disalignment-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AssociatedTo:
-    - cxn:nonbasic-voice-construction
+  AssociatedTo: []
   Definition: >-
     a strategy that is marginal for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding-strategy>overt</a> <a>flag</a> of higher <a def:animacy-hierarchy>animacy</a> / higher <a>information status</a> -- that is, higher-<a>salience</a> -- Ps. <i>Example</i>: in Spanish, <i>El director busca a un empleado</i> <q>The director is looking for a [specific] clerk</q>, the phrase <i>un empleado</i> <q>a clerk</q>, referring to the P participant, uses the overt flag <i>a</i>. Differential object marking is not usually considered a strategy of the passive--inverse construction because the <a>A</a> <a>participant</a> is not reduced in salience, although the P participant is higher in salience. (Section 8.3)
   Examples:
@@ -6669,7 +6699,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -7810,7 +7840,7 @@
     - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -8630,9 +8660,11 @@
     - ambitransitive
     - lexical causative
   SubtypeOf:
-    - str:system
+    - str:zero-verb-coded-voice-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:causative-construction
+    - cxn:passive-inverse-voice-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10001,7 +10033,7 @@
   Name: nonbasic voice construction
   Alias: []
   SubtypeOf:
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
     - cxn:nonprototypical-construction
   ConstituentOf: []
   ExpressionOf: []
@@ -10292,9 +10324,10 @@
   Alias:
     - incorporation
   SubtypeOf:
-    - str:encoding-strategy
+    - str:a-p-disalignment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:antipassive-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10530,7 +10563,7 @@
   Name: oblique P strategy
   Alias: []
   SubtypeOf:
-    - str:flag-flagging
+    - str:oblique-p-disalignment-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -10563,14 +10596,50 @@
   Examples:
     - Emily viewed the hawk <e>with binoculars</e>
 
+- Id: str:oblique-p-disalignment-strategy
+  Type: str
+  Name: oblique P disalignment strategy
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:applicative-construction
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:basic-voice-construction
+  FunctionOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:omitted-a-strategy
+  Type: str
+  Name: omitted A strategy
+  Alias: []
+  SubtypeOf:
+    - str:a-p-disalignment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
+
 - Id: str:omitted-p-strategy
   Type: str
   Name: omitted P strategy
   Alias: []
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:p-disalignment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:antipassive-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10683,7 +10752,7 @@
     - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10701,7 +10770,7 @@
     - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10758,6 +10827,23 @@
     the <a>patient</a> or patient-like <a>central participant role</a> in the prototypical <a>bivalent event</a> (that is, a breaking event). <i>Example</i>: in <i>Jack broke the window</i>, the window plays the P role in the breaking event. (Section 6.3.1)
   Examples:
     - Jack broke <e>the window</e>
+
+- Id: str:p-disalignment-strategy
+  Type: str
+  Name: P disalignment-strategy
+  Alias: []
+  SubtypeOf:
+    - str:a-p-disalignment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:antipassive-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
 
 - Id: inf:parallel-contrast
   Type: inf
@@ -13077,7 +13163,7 @@
   Name: reciprocal construction
   Alias: []
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:argument-structure-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13227,7 +13313,7 @@
   Name: reflexive construction
   Alias: []
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:argument-structure-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14308,7 +14394,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:applicative-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -14328,11 +14415,11 @@
     - monoclausal causative strategy
     - morphological causative
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom:
-    - cxn:ditransitive-construction
+  ExpressionOf:
+    - cxn:causative-construction
+  RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AssociatedTo: []
@@ -14492,7 +14579,8 @@
   SubtypeOf:
     - str:overt-coding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -15021,11 +15109,13 @@
   Alias:
     - extended intransitive
   SubtypeOf:
-    - def:strategy
+    - str:system
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:argument-structure-construction
   RecruitedFrom: []
-  ModeledOn: []
+  ModeledOn:
+    - cxn:transitive-construction
   FunctionOf: []
   AssociatedTo:
     - sem:manner-of-motion-event
@@ -15802,10 +15892,12 @@
   Alias: []
   SubtypeOf:
     - str:simple-predicate-causative-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:causative-construction
-  RecruitedFrom: []
+  RecruitedFrom:
+    - cxn:ditransitive-construction
   ModeledOn: []
   FunctionOf: []
   AssociatedTo: []
@@ -16243,7 +16335,7 @@
   AssociatedTo:
     - sem:necessary-participant-sharing
   Definition: >-
-    a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:voice-construction>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
+    a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:argument-structure-construction>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
   Examples:
     - Language: Luganda
       Example: ekiso [John kyeyattisa enkoko]
@@ -16365,24 +16457,6 @@
     a model of how experiences are expressed in language developed by Chafe (1977 and later publications) and elaborated in Croft (2007a). In this book, one part of this model, <a>particularizing</a>, is described with respect to the structure of <a>referring phrases</a>. (Section 4.1.1)
   Examples: []
 
-- Id: cxn:voice-construction
-  Type: cxn
-  Name: voice construction
-  Alias: []
-  SubtypeOf:
-    - cxn:argument-structure-construction
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AssociatedTo: []
-  Definition: >-
-    an <a>argument structure construction</a> that expresses the relationship between the <a>participant roles</a> of an <a>event</a> expressed in a clause and their relative <a>salience</a> (topicality). <i>Examples</i>: <i>The grizzlies ate the salmon</i> and <i>The salmon were eaten by the grizzlies</i> are instances of contrasting voice constructions, the <a>basic voice construction</a> and the <a>nonbasic voice construction</a> (specifically, the <a>passive--inverse construction</a>), which are appropriate in different discourse contexts, depending on whether the grizzlies or the salmon is the more salient participant at that point in the discourse. (Section 6.1.1)
-  Examples:
-    - The grizzlies ate the salmon
-    - The salmon were eaten by the grizzlies
-
 - Id: sem:weather
   Type: sem
   Name: weather
@@ -16489,7 +16563,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
     - cxn:topic-comment
     - cxn:thetic
     - cxn:identificational
@@ -16632,7 +16706,7 @@
     - str:zero-coded-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:voice-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
