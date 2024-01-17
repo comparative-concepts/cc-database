@@ -297,6 +297,24 @@
   Examples:
     - He remains under <e>investigation</e>
 
+- Id: inf:action-predication
+  Type: inf
+  Name: action predication
+  Alias: []
+  SubtypeOf:
+    - inf:comment
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
+
 - Id: inf:active
   Type: inf
   Name: active
@@ -5484,8 +5502,9 @@
   Name: different-subject
   Alias:
     - DS
+    - different subject
   SubtypeOf:
-    - inf:reference-referent
+    - inf:token-identity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8152,7 +8171,6 @@
   Alias:
     - identifiability/identity
     - identifiability
-    - identity
   SubtypeOf:
     - inf:information-status
   ConstituentOf: []
@@ -9298,6 +9316,7 @@
     - question
   SubtypeOf:
     - inf:speech-acts
+    - inf:information-gap
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9349,6 +9368,25 @@
   Examples:
     - <e>Who</e> ate my cookie?
     - <e>Which</e> book is required reading?
+
+- Id: inf:interrogative-unit
+  Type: inf
+  Name: interrogative unit
+  Alias: []
+  SubtypeOf:
+    - inf:reference-referent
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - inf:identity-unknown
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
 
 - Id: inf:interruption
   Type: inf
@@ -11663,6 +11701,24 @@
   Examples:
     - <e>Sumie patted and Norio hit the dog</e>
 
+- Id: inf:object-identity
+  Type: inf
+  Name: object identity
+  Alias: []
+  SubtypeOf:
+    - inf:token-identity
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
+
 - Id: def:object-language
   Type: def
   Name: object language
@@ -12244,7 +12300,7 @@
   ValueOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>derived-case</a> <a>comparative</a> <a>strategy</a> that consists of two <a>clauses</a> which assert that the <a>gradable predicative scale</a> applies to the <a>comparee</a> and the <a>standard</a>, but the second clause uses the <a>zero strategy</a> for <a>predicate identity</a>, and the <a>conjunction</a> is a particle with diverse etymological origins. <i>Example</i>: <i>Randy is older than Tom (is)</i> is an instance of the particle strategy: the clause <i>Randy is older</i> is followed by the particle <i>than</i> which introduces the standard phrase <i>Tom</i> without its own <a>predicate</a> (only an optional auxiliary <i>is</i>). (Section 17.2.2)
+    a <a>derived-case</a> <a>comparative</a> <a>strategy</a> that consists of two <a>clauses</a> which assert that the <a>gradable predicative scale</a> applies to the <a>comparee</a> and the <a>standard</a>, but the second clause uses the <a>zero strategy</a> for <a cxn:predicate-identity>predicate identity</a>, and the <a>conjunction</a> is a particle with diverse etymological origins. <i>Example</i>: <i>Randy is older than Tom (is)</i> is an instance of the particle strategy: the clause <i>Randy is older</i> is followed by the particle <i>than</i> which introduces the standard phrase <i>Tom</i> without its own <a>predicate</a> (only an optional auxiliary <i>is</i>). (Section 17.2.2)
   Examples:
     - <e>Randy is older than Tom (is)</e>
 
@@ -12264,7 +12320,7 @@
   ValueOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>matrix clause</a> which expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a <a>dependent clause</a> expressing that the same scale applies to the <a>standard</a>. The dependent clause is in the form of a particle acting as a <a>conjunction</a>, and the <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a>predicate identity</a>. <i>Example</i>: Chechen <i>aħa döšu as sanna</i> <q>You read like I [do]</q> is an instance of the particle equative strategy: the matrix clause <i>aħa döšu</i> <q>You read</q> predicates the scale of the comparee; the particle <i>sanna</i> <q>like</q> introduces the standand <i>as</i> <q>I</q>, which is in the same <a>case</a> as the comparee (the Ergative). (Section 17.2.4)
+    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>matrix clause</a> which expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a <a>dependent clause</a> expressing that the same scale applies to the <a>standard</a>. The dependent clause is in the form of a particle acting as a <a>conjunction</a>, and the <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a cxn:predicate-identity>predicate identity</a>. <i>Example</i>: Chechen <i>aħa döšu as sanna</i> <q>You read like I [do]</q> is an instance of the particle equative strategy: the matrix clause <i>aħa döšu</i> <q>You read</q> predicates the scale of the comparee; the particle <i>sanna</i> <q>like</q> introduces the standand <i>as</i> <q>I</q>, which is in the same <a>case</a> as the comparee (the Ergative). (Section 17.2.4)
   Examples:
     - Language: Chechen
       Example: <e>aħa döšu as sanna</e>
@@ -12945,7 +13001,7 @@
   ValueOf: []
   AssociatedTo: []
   Definition: >-
-    <a>clauses</a> in which a <a>possession relation</a> is expressed, either <a inf:predicational>predicationally</a> or <a inf:presentational>presentationally</a>. These two types of possession clauses are <a>predicational possession</a> and <a cxn:presentational-possession>presentational possession</a>, respectively. (Section 10.4.2)
+    <a>clauses</a> in which a <a>possession relation</a> is expressed, either <a inf:predicational>predicationally</a> or <a inf:presentational>presentationally</a>. These two types of possession clauses are <a cxn:predicational-possession>predicational possession</a> and <a cxn:presentational-possession>presentational possession</a>, respectively. (Section 10.4.2)
   Examples: []
 
 - Id: sem:possession-relation
@@ -13316,7 +13372,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - inf:identity-unknown
   AssociatedTo: []
   Definition: >-
     a <a>referent</a> introduced into the discourse by the speaker that is not normally referred to again in subsequent discourse. The term <q>semantically specific</q> indicates that the referent is not in a nonreal context -- that is, it is not a nonspecific referent. We will use the shorter term <q>pragmatically nonspecific</q> and assume that such referents are also semantically specific. (Section 3.4.1)
@@ -13380,7 +13437,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - inf:identity-unknown
   AssociatedTo: []
   Definition: >-
     a referent introduced into the discourse by the speaker that is normally referred to again in subsequent discourse. We will use the shorter term <q>pragmatically specific</q>. (Section 3.4.1)
@@ -13446,6 +13504,24 @@
     a <a>complex sentence construction</a> in which the <a>events</a> denoted by the <a>predicate</a> in the two <a>clauses</a> are of the same type. <i>Example</i>: <i>Sumie saw the dog and Norie the cat</i> is an instance of a predicate identity <a>coordinate clause construction</a>: the event denoted by the predicate in both clauses is seeing. (Section 16.5)
   Examples:
     - <e>Sumie saw the dog and Norie the cat</e>
+
+- Id: inf:predicate-identity
+  Type: inf
+  Name: predicate identity
+  Alias: []
+  SubtypeOf:
+    - inf:type-identity
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
 
 - Id: cxn:predicate-nominal-construction
   Type: cxn
@@ -13513,7 +13589,8 @@
 - Id: inf:predicational
   Type: inf
   Name: predicational
-  Alias: []
+  Alias:
+    - object predication
   SubtypeOf:
     - inf:comment
   ConstituentOf: []
@@ -13618,6 +13695,24 @@
   Examples:
     - <e>That laptop belongs to Kerry</e>
     - <e>That laptop is Kerry's</e>
+
+- Id: inf:predicational-possession
+  Type: inf
+  Name: predicational possession
+  Alias: []
+  SubtypeOf:
+    - inf:comment
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
 
 - Id: str:predicational-strategy
   Type: str
@@ -14125,6 +14220,24 @@
   Definition: >-
     a concept belonging to a <a>semantic class</a> of <a>relational</a>, 1-dimensional, usually scalar, and usually stable concepts. <i>Examples</i>: age, height, shape, and so on are property concepts -- they are defined on a 1-dimensional scale, and many of them are stable properties of the <a>object</a> they apply to. (Sections 2.1, and <b>4.1.1</b>, which includes an enumeration of types of property concepts)
   Examples: []
+
+- Id: inf:property-predication
+  Type: inf
+  Name: property-predication
+  Alias: []
+  SubtypeOf:
+    - inf:comment
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: False
 
 - Id: cxn:property-referring-phrase
   Type: cxn
@@ -14796,7 +14909,7 @@
   Name: referent type identity
   Alias: []
   SubtypeOf:
-    - sem:type-identity
+    - inf:type-identity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15106,7 +15219,7 @@
   ValueOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a inf:free-choice-referent>free</a> (<a cxn:indefinite-pronoun>indefinite head</a>) <a cxn:relative-clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
+    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a cxn:predicate-identity>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a inf:free-choice-referent>free</a> (<a cxn:indefinite-pronoun>indefinite head</a>) <a cxn:relative-clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
   Examples:
     - Language: Lithuanian
       Example: <e>Šiandien taip šalta kaip vakar</e>
@@ -15243,6 +15356,7 @@
     - answer
   SubtypeOf:
     - inf:speech-acts
+    - inf:information-gap
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15451,7 +15565,7 @@
   Alias:
     - SS
   SubtypeOf:
-    - inf:reference-referent
+    - inf:token-identity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16316,7 +16430,7 @@
   Name: specific known referent
   Alias: []
   SubtypeOf:
-    - inf:identifiability-identity
+    - inf:pragmatically-nonspecific-but-semantically-specific-indefinite-referent
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16354,7 +16468,7 @@
   Name: specific unknown referent
   Alias: []
   SubtypeOf:
-    - inf:identifiability-identity
+    - inf:pragmatically-nonspecific-but-semantically-specific-indefinite-referent
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -17429,12 +17543,12 @@
     the frequency of occurrence of specific <a>constructions</a> (morphemes, words, larger units) in language use, usually measured operationally as the frequency of occurrence in a particular corpus. (Section 2.5)
   Examples: []
 
-- Id: sem:token-identity
-  Type: sem
+- Id: inf:token-identity
+  Type: inf
   Name: token identity
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - inf:coreference
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -17850,12 +17964,12 @@
   Examples:
     - <e>An undergraduate student</e> may take this course
 
-- Id: sem:type-identity
-  Type: sem
+- Id: inf:type-identity
+  Type: inf
   Name: type identity
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - inf:coreference
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
