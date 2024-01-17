@@ -1361,7 +1361,7 @@
   Name: anchoring
   Alias: []
   SubtypeOf:
-    - inf:situating
+    - inf:modification
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1757,7 +1757,7 @@
   Alias:
     - nonrestrictive modification
   SubtypeOf:
-    - inf:modification
+    - inf:subcategorizing
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -3693,7 +3693,7 @@
   Alias:
     - predicative complement
   SubtypeOf:
-    - inf:modification
+    - inf:subcategorizing
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9372,7 +9372,8 @@
 - Id: inf:interrogative-unit
   Type: inf
   Name: interrogative unit
-  Alias: []
+  Alias:
+    - interrogative (information) unit
   SubtypeOf:
     - inf:reference-referent
   ConstituentOf: []
@@ -10082,7 +10083,7 @@
   Alias:
     - propositional act
   SubtypeOf:
-    - def:information-packaging
+    - inf:declarative
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12893,8 +12894,7 @@
   Type: inf
   Name: poset
   Alias: []
-  SubtypeOf:
-    - def:information-packaging
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12902,8 +12902,7 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
-  AssociatedTo:
-    - inf:listing-contrast
+  AssociatedTo: []
   Definition: >-
     a partially ordered set of discourse entities. The partial ordering is defined by some sort of semantic relation, such as part--whole or type--subtype. <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the album mentioned in the first turn and the song mentioned in the second turn are members of a poset which is defined by a <a>part--whole relation</a> (the album is the whole, and the song is a part of the album). (Section 11.2.3)
   Examples:
@@ -15417,7 +15416,7 @@
   Name: restrictive modification
   Alias: []
   SubtypeOf:
-    - inf:modification
+    - inf:subcategorizing
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15764,6 +15763,8 @@
   Alias: []
   SubtypeOf:
     - inf:modification
+    - inf:anchoring
+    - inf:typifying
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16261,6 +16262,8 @@
   Alias: []
   SubtypeOf:
     - inf:modification
+    - inf:anchoring
+    - inf:typifying
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -17988,7 +17991,7 @@
   Name: typifying
   Alias: []
   SubtypeOf:
-    - inf:subcategorizing
+    - inf:modification
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []

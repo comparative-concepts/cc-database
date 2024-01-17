@@ -246,11 +246,11 @@ class CCDBParser:
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</td></tr>')
 
-            constituentOf: list[str] = item['ConstituentOf']
-            if constituentOf:
-                print(f'<tr><th>Part of</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, constituentOf)) +
-                      '</td></tr>')
+            # constituentOf: list[str] = item['ConstituentOf']
+            # if constituentOf:
+            #     print(f'<tr><th>Part of</th> <td class="ccinfo relation">' +
+            #           ' | '.join(map(self.convert_link_to_html, constituentOf)) +
+            #           '</td></tr>')
 
             expressionOf: list[str] = item['ExpressionOf']
             if expressionOf:

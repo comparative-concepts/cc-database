@@ -84,9 +84,17 @@ def validate_link_ids(item, glosses) -> list[str]:
     return errors
 
 
-def validate_orphan(item) -> list[str]:
-    if len(item['SubtypeOf']) == 0 and len(item['ConstituentOf']) == 0 and len(item['AttributeOf']) == 0:
-        return [f"{item['Id']} is not a subtype or part of another CC (orphan)"]
+def validate_isolated(item: GlossItem, glosses: list[GlossItem]) -> list[str]:
+    out_degree = len(item['SubtypeOf']) + len(item['ConstituentOf']) + len(item['AttributeOf'])
+    in_degree = sum(
+        1
+        for gloss in glosses.values()
+        for relid in (gloss['SubtypeOf'] + gloss['ConstituentOf'] + gloss['AttributeOf'])
+        if relid == item['Id']
+    )
+
+    if out_degree == 0 and in_degree == 0:
+        return [f"{item['Id']} is isolated: it has no taxonomic, partonomic or attribute relations with other concepts."]
     else:
         return []
 
@@ -136,7 +144,7 @@ def run_validators(ccdb) -> list[str]:
 
         # Run property validators iff there are no schema errors
         if len(item_errors) == 0 and item['Type'] != 'def':
-            item_errors += validate_orphan(item)
+            item_errors += validate_isolated(item, ccdb.glosses)
             item_errors += validate_same_type_relations(item, ccdb.glosses)
             item_errors += validate_strategy_supertypes(item, ccdb.glosses)
 
