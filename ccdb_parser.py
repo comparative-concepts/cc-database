@@ -276,6 +276,18 @@ class CCDBParser:
                       ' | '.join(map(self.convert_link_to_html, functionOf)) +
                       '</td></tr>')
 
+            attributeOf: list[str] = item['AttributeOf']
+            if attributeOf:
+                print(f'<tr><th>Attribute of</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, attributeOf)) +
+                      '</td></tr>')
+
+            valueOf: list[str] = item['ValueOf']
+            if valueOf:
+                print(f'<tr><th>Value of</th> <td class="ccinfo relation">' +
+                      ' | '.join(map(self.convert_link_to_html, valueOf)) +
+                      '</td></tr>')
+
             associatedTo: list[str] = item['AssociatedTo']
             if associatedTo:
                 print(f'<tr><th>Associated</th> <td class="ccinfo relation">' +
@@ -285,7 +297,7 @@ class CCDBParser:
             supertypes = item.get('SubtypeOf', [])
             subtypes = [chid for chid, child in glossitems if id in child.get('SubtypeOf', ())]
             if supertypes or subtypes:
-                print(f'<tr><th>Hierarchy</th> <td class="ccinfo relation"> <table>')
+                print(f'<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>')
                 print(f'<table>')
                 if supertypes:
                     print('<tr><td class="flex">')
@@ -298,6 +310,26 @@ class CCDBParser:
                 if subtypes:
                     print('<tr><td class="flex">')
                     for child in subtypes:
+                        print(f'<span>{self.convert_link_to_html(child)}</span>')
+                    print('</td></tr>')
+                print('</table></td></tr>')
+
+            wholetypes = item.get('ConstituentOf', [])
+            parttypes = [chid for chid, child in glossitems if id in child.get('ConstituentOf', ())]
+            if wholetypes or parttypes:
+                print(f'<tr><th>Partonomy</th> <td class="ccinfo relation"> <table>')
+                print(f'<table>')
+                if wholetypes:
+                    print('<tr><td class="flex">')
+                    for parent in wholetypes:
+                        print(f'<span>{self.convert_link_to_html(parent)}</span>')
+                    print('</td></tr>')
+                print('<tr><td>')
+                print(self.convert_link_to_html(id, selfid=id))
+                print('</td></tr>')
+                if parttypes:
+                    print('<tr><td class="flex">')
+                    for child in parttypes:
                         print(f'<span>{self.convert_link_to_html(child)}</span>')
                     print('</td></tr>')
                 print('</table></td></tr>')

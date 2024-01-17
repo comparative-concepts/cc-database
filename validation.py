@@ -16,6 +16,8 @@ class GlossItem(TypedDict):
     RecruitedFrom: list[str]
     ModeledOn: list[str]
     FunctionOf: list[str]
+    AttributeOf: list[str]
+    ValueOf: list[str]
     AssociatedTo: list[str]
     Definition: str
     DefinitionLinks: list[str]
@@ -32,7 +34,7 @@ def type_check(item) -> list[str]:
     for key in ('Id', 'Name', 'Type', 'Definition'):
         if not isinstance(item[key], str):
             errors.append(f"Type error: {key} is not str")
-    for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'DefinitionLinks'):
+    for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AttributeOf', 'ValueOf', 'AssociatedTo', 'DefinitionLinks'):
         if not isinstance(item[key], list) or any(not isinstance(x, str) for x in item[key]):
             errors.append(f"Type error: {key} is not list[str]")
     for key in ('ParsedDefinition',):
@@ -69,7 +71,7 @@ def validate_names_and_aliases(item, glosses) -> list[str]:
 def validate_link_ids(item, glosses) -> list[str]:
     errors = []
     # check that ids exits
-    for key in ('SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'DefinitionLinks', 'ParsedDefinition'):
+    for key in ('SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'AttributeOf', 'ValueOf', 'DefinitionLinks', 'ParsedDefinition'):
         relids = item[key]
         if isinstance(relids, str): relids = [relids]
         for relid in relids:
@@ -83,7 +85,7 @@ def validate_link_ids(item, glosses) -> list[str]:
 
 
 def validate_orphan(item) -> list[str]:
-    if len(item['SubtypeOf']) == 0 and len(item['ConstituentOf']) == 0:
+    if len(item['SubtypeOf']) == 0 and len(item['ConstituentOf']) == 0 and len(item['AttributeOf']) == 0:
         return [f"{item['Id']} is not a subtype or part of another CC (orphan)"]
     else:
         return []
