@@ -182,6 +182,37 @@ class CCDBParser:
         return self.clean_definition_html(''.join(html_parts))
 
 
+    def print_relation_list(self, relations: list[str], name: str):
+        """Prints an html version of a list of related CCs, with links to these CCs."""
+        if relations:
+            print(f'<tr><th>{name}</th> <td class="ccinfo relation">' +
+                    ' | '.join(map(self.convert_link_to_html, relations)) +
+                    '</td></tr>')
+
+
+    def print_hierarchy(self, item: GlossItem, relation_type: str, name: str):
+        id = item['Id']
+        parents = item[relation_type]
+        children = [chid for chid, child in self.glosses.items() if id in child[relation_type]]
+        if parents or children:
+            print(f'<tr><th>{name}</th> <td class="ccinfo relation"> <table>')
+            print(f'<table>')
+            if parents:
+                print('<tr><td class="flex">')
+                for parent in parents:
+                    print(f'<span>{self.convert_link_to_html(parent)}</span>')
+                print('</td></tr>')
+            print('<tr><td>')
+            print(self.convert_link_to_html(id, selfid=id))
+            print('</td></tr>')
+            if children:
+                print('<tr><td class="flex">')
+                for child in children:
+                    print(f'<span>{self.convert_link_to_html(child)}</span>')
+                print('</td></tr>')
+            print('</table></td></tr>')
+
+
     @staticmethod
     def clean_definition_html(definition: str) -> str:
         """Standard HTML conversions."""
@@ -246,93 +277,18 @@ class CCDBParser:
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</td></tr>')
 
-            # constituentOf: list[str] = item['ConstituentOf']
-            # if constituentOf:
-            #     print(f'<tr><th>Part of</th> <td class="ccinfo relation">' +
-            #           ' | '.join(map(self.convert_link_to_html, constituentOf)) +
-            #           '</td></tr>')
+            self.print_relation_list(item['ExpressionOf'], "Expresses")
+            self.print_relation_list(item['RecruitedFrom'], "Recruited from")
+            self.print_relation_list(item['ModeledOn'], "Modeled on")
+            self.print_relation_list(item['FunctionOf'], "Function of")
+            self.print_relation_list(item['AttributeOf'], "Attribute of")
+            self.print_relation_list(item['ValueOf'], "Value of")
+            self.print_relation_list(item['RoleOf'], "Role of")
+            self.print_relation_list(item['FillerOf'], "Filler of")
+            self.print_relation_list(item['AssociatedTo'], "Associated")
 
-            expressionOf: list[str] = item['ExpressionOf']
-            if expressionOf:
-                print(f'<tr><th>Expresses</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, expressionOf)) +
-                      '</td></tr>')
-
-            recruitedFrom: list[str] = item['RecruitedFrom']
-            if recruitedFrom:
-                print(f'<tr><th>Recruited from</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, recruitedFrom)) +
-                      '</td></tr>')
-
-            modeledOn: list[str] = item['ModeledOn']
-            if modeledOn:
-                print(f'<tr><th>Modeled on</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, modeledOn)) +
-                      '</td></tr>')
-
-            functionOf: list[str] = item['FunctionOf']
-            if functionOf:
-                print(f'<tr><th>Function of</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, functionOf)) +
-                      '</td></tr>')
-
-            attributeOf: list[str] = item['AttributeOf']
-            if attributeOf:
-                print(f'<tr><th>Attribute of</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, attributeOf)) +
-                      '</td></tr>')
-
-            valueOf: list[str] = item['ValueOf']
-            if valueOf:
-                print(f'<tr><th>Value of</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, valueOf)) +
-                      '</td></tr>')
-
-            associatedTo: list[str] = item['AssociatedTo']
-            if associatedTo:
-                print(f'<tr><th>Associated</th> <td class="ccinfo relation">' +
-                      ' | '.join(map(self.convert_link_to_html, associatedTo)) +
-                      '</td></tr>')
-
-            supertypes = item.get('SubtypeOf', [])
-            subtypes = [chid for chid, child in glossitems if id in child.get('SubtypeOf', ())]
-            if supertypes or subtypes:
-                print(f'<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>')
-                print(f'<table>')
-                if supertypes:
-                    print('<tr><td class="flex">')
-                    for parent in supertypes:
-                        print(f'<span>{self.convert_link_to_html(parent)}</span>')
-                    print('</td></tr>')
-                print('<tr><td>')
-                print(self.convert_link_to_html(id, selfid=id))
-                print('</td></tr>')
-                if subtypes:
-                    print('<tr><td class="flex">')
-                    for child in subtypes:
-                        print(f'<span>{self.convert_link_to_html(child)}</span>')
-                    print('</td></tr>')
-                print('</table></td></tr>')
-
-            wholetypes = item.get('ConstituentOf', [])
-            parttypes = [chid for chid, child in glossitems if id in child.get('ConstituentOf', ())]
-            if wholetypes or parttypes:
-                print(f'<tr><th>Partonomy</th> <td class="ccinfo relation"> <table>')
-                print(f'<table>')
-                if wholetypes:
-                    print('<tr><td class="flex">')
-                    for parent in wholetypes:
-                        print(f'<span>{self.convert_link_to_html(parent)}</span>')
-                    print('</td></tr>')
-                print('<tr><td>')
-                print(self.convert_link_to_html(id, selfid=id))
-                print('</td></tr>')
-                if parttypes:
-                    print('<tr><td class="flex">')
-                    for child in parttypes:
-                        print(f'<span>{self.convert_link_to_html(child)}</span>')
-                    print('</td></tr>')
-                print('</table></td></tr>')
+            self.print_hierarchy(item, 'SubtypeOf', 'Taxonomy')
+            self.print_hierarchy(item, 'ConstituentOf', 'Partonomy')
 
             parsedDefinition: ParsedDefinition = item['ParsedDefinition']
             if parsedDefinition: 

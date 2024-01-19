@@ -1,4 +1,5 @@
 import sys
+import inspect
 from typing import TypedDict, Union
 
 # A parsed definition is a list of either strings or links (as pairs of strings)
@@ -18,14 +19,28 @@ class GlossItem(TypedDict):
     FunctionOf: list[str]
     AttributeOf: list[str]
     ValueOf: list[str]
+    RoleOf: list[str]
+    FillerOf: list[str]
     AssociatedTo: list[str]
     Definition: str
     DefinitionLinks: list[str]
     ParsedDefinition: ParsedDefinition
 
-
-MAIN_CC_TYPES = ('def:construction', 'def:meaning', 'def:information-packaging', 'def:strategy')
-MAIN_STRATEGY_TYPES = ('str:system', 'str:encoding-strategy', 'str:recruitment-strategy')
+# Constants
+STRATEGY_TYPES = ('str:system', 'str:encoding-strategy', 'str:recruitment-strategy')
+RELATION_CCTYPES = {
+    "SubtypeOf":     { "cxn":"cxn", "str":"str", "inf":"inf", "sem":"sem" },
+    "ConstituentOf": { "cxn":"cxn", "str":"str", "inf":"inf", "sem":"sem" },
+    "ExpressionOf":  { "str":"cxn" },
+    "RecruitedFrom": { "str":"cxn" },
+    "ModeledOn":     { "str":"cxn" },
+    "FunctionOf":    { "inf":"cxn", "sem":"cxn" },
+    "AttributeOf":   { "inf":"inf", "sem":"sem" },
+    "ValueOf":       { "inf":"inf", "sem":"sem" },
+    "RoleOf":        { "sem":"sem" },
+    "FillerOf":      { "sem":"sem" },
+}
+RELATION_KEYS = tuple(RELATION_CCTYPES.keys())
 
 
 def type_check(item) -> list[str]:
@@ -33,14 +48,13 @@ def type_check(item) -> list[str]:
     # type check
     for key in ('Id', 'Name', 'Type', 'Definition'):
         if not isinstance(item[key], str):
-            errors.append(f"Type error: {key} is not str")
-    for key in ('Alias', 'SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AttributeOf', 'ValueOf', 'AssociatedTo', 'DefinitionLinks'):
+            errors.append(f"Type error: {key} is not str.")
+    for key in RELATION_KEYS:
         if not isinstance(item[key], list) or any(not isinstance(x, str) for x in item[key]):
-            errors.append(f"Type error: {key} is not list[str]")
-    for key in ('ParsedDefinition',):
-        for x in item[key]:
-            if isinstance(x, tuple) and (len(x) != 2 or any(not isinstance(y, str) for y in x)):
-                errors.append(f"Type error: {key} is not of type {ParsedDefinition}")
+            errors.append(f"Type error: {key} is not list[str].")
+    for x in item['ParsedDefinition']:
+        if isinstance(x, tuple) and (len(x) != 2 or any(not isinstance(y, str) for y in x)):
+            errors.append(f"Type error: {key} is not of type {ParsedDefinition}.")
     return errors
 
 
@@ -57,7 +71,7 @@ def validate_names_and_aliases(item, glosses) -> list[str]:
     # the name must be unique among names (with the same type)
     for id2, item2 in glosses.items():
         if item['Id'] != id2 and item['Type'] == item2['Type'] and item['Name'] == item2['Name']: 
-            errors.append(f"{Item['Id']}: Name also occurs in {id2!r}")
+            errors.append(f"{item['Id']}: Name also occurs in {id2!r}")
     # an alias should not be a name
     for alias in item['Alias']:
         for id2, item2 in glosses.items():
@@ -71,7 +85,7 @@ def validate_names_and_aliases(item, glosses) -> list[str]:
 def validate_link_ids(item, glosses) -> list[str]:
     errors = []
     # check that ids exits
-    for key in ('SubtypeOf', 'ConstituentOf', 'ExpressionOf', 'RecruitedFrom', 'ModeledOn', 'FunctionOf', 'AssociatedTo', 'AttributeOf', 'ValueOf', 'DefinitionLinks', 'ParsedDefinition'):
+    for key in RELATION_KEYS + ('ParsedDefinition', ):
         relids = item[key]
         if isinstance(relids, str): relids = [relids]
         for relid in relids:
@@ -99,31 +113,31 @@ def validate_isolated(item: GlossItem, glosses: list[GlossItem]) -> list[str]:
         return []
 
 
-def validate_same_type_relations(item, glosses) -> list[str]:
+def validate_relations_by_cctype(item: GlossItem, glosses: list[GlossItem]) -> list[str]:
     errors = []
-    for key in item['SubtypeOf']:
-        if key in MAIN_CC_TYPES: continue
-        super = glosses[key]
-        if item['Type'] != super['Type']:
-            errors.append(f"{item['Id']} subtype of CC with another type: {super['Id']}")
-    for key in item['ConstituentOf']:
-        if key in MAIN_CC_TYPES: continue
-        whole = glosses[key]
-        if item['Type'] != whole['Type']:
-            errors.append(f"{item['Id']} partonomic relation with CC of another type: {whole['Id']}")
+    for relation, cctypes in RELATION_CCTYPES.items():
+        if len(item[relation]) > 0 and item["Type"] not in cctypes.keys():
+            errors.append(f"{item['Id']} is of type {item['Type']} but has a 'ExpressionOf' relation.")
+            continue
+
+        for key in item[relation]:
+            other = glosses[key]
+            if other['Type'] not in cctypes[item['Type']]:
+                errors.append(f"{item['Id']} has '{relation}' relation with CC of invalid type: {other['Id']}")
+
     return errors
 
 
-def validate_strategy_supertypes(item, glosses) -> list[str]:
-    if item['Type'] != 'str' or item['Id'] in MAIN_STRATEGY_TYPES:
+def validate_strategy_supertypes(item: GlossItem, glosses: list[GlossItem]) -> list[str]:
+    if item['Type'] != 'str' or item['Id'] in STRATEGY_TYPES:
         return []
 
     errors = [] 
     for super in item['SubtypeOf']+item['ConstituentOf']:
-        if super in MAIN_STRATEGY_TYPES:
+        if super in STRATEGY_TYPES:
             return []
         elif super == 'def:strategy':
-            return [f"{item['Id']} is not in the taxonomy of: {MAIN_STRATEGY_TYPES}"]
+            return [f"{item['Id']} is not in the taxonomy of: {STRATEGY_TYPES}"]
         else:
             errors += validate_strategy_supertypes(glosses[super], glosses)
     
@@ -145,8 +159,8 @@ def run_validators(ccdb) -> list[str]:
         # Run property validators iff there are no schema errors
         if len(item_errors) == 0 and item['Type'] != 'def':
             item_errors += validate_isolated(item, ccdb.glosses)
-            item_errors += validate_same_type_relations(item, ccdb.glosses)
+            item_errors += validate_relations_by_cctype(item, ccdb.glosses)
             item_errors += validate_strategy_supertypes(item, ccdb.glosses)
 
         errors.extend(item_errors)
-    return list(set(errors))
+    return sorted(set(errors))
