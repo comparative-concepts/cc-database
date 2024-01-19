@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Union, Optional
 from datetime import datetime
 
-from validation import GlossItem, ParsedDefinition, run_validators
+from validation import GlossItem, ParsedDefinition, RELATION_KEYS, run_validators
 
 class CCDBParser:
     glosses: dict[str, GlossItem]
@@ -245,7 +245,8 @@ class CCDBParser:
         glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1]['Name']))
 
         nlinks = sum(len(item['DefinitionLinks']) for _, item in glossitems)
-        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, and {nlinks} links within CC definitions</p>')
+        ntypedlinks = sum(len(item[rel]) for _, item in glossitems for rel in RELATION_KEYS)
+        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, with {ntypedlinks} typed relations and {nlinks} links within CC definitions</p>')
 
         print('<div id="glosses">')
         for id, item in glossitems:
