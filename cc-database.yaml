@@ -3,16 +3,15 @@
   Name: A role
   Alias:
     - A
-  SubtypeOf:
-    - sem:semantic-role
-  ConstituentOf:
-    - sem:bivalent-event
+  SubtypeOf: []
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:agentive-change-of-state-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -187,7 +186,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an implicational hierarchy that governs universals of the distribution of <a>relative clause constructions</a> and particular <a>strategies</a> of relative clause constructions, depending on the <a>semantic role</a> that the <a>relative clause head</a> plays in the <a>event</a> denoted by the <a>relative clause</a>. The Accessibility Hierarchy is usually formulated as: <a>subject</a> (<a>A</a>/<a>S</a>) < <a>object</a> (<a>P</a>/<a>T</a>) < <a str:indirect-object-category>indirect object</a> (<a>G</a>), <a cxn:oblique-phrase>oblique</a> < (<a cxn:attributive-phrase>attributive</a>) <a>possessor</a>. All languages have a relative clause construction that can relativize the <a>subject</a>; a specific construction is used for a continuous segment of the hierarchy; <a>deranked</a> relative clauses are used for the top part of the hierarchy downwards; less explicit relative clause strategies are used for the top part of the hierarchy downwards; and more <a>explicit</a> relative clause strategies are used for the bottom part of the hierarchy upwards. (Section 19.3)
+    an implicational hierarchy that governs universals of the distribution of <a>relative clause constructions</a> and particular <a>strategies</a> of relative clause constructions, depending on the <a>semantic role</a> that the <a>relative clause head</a> plays in the <a>event</a> denoted by the <a>relative clause</a>. The Accessibility Hierarchy is usually formulated as: <a>subject</a> (<a>A</a>/<a>S</a>) < <a inf:object-argument>object</a> (<a>P</a>/<a>T</a>) < <a str:indirect-object-category>indirect object</a> (<a>G</a>), <a cxn:oblique-phrase>oblique</a> < (<a cxn:attributive-phrase>attributive</a>) <a>possessor</a>. All languages have a relative clause construction that can relativize the <a>subject</a>; a specific construction is used for a continuous segment of the hierarchy; <a>deranked</a> relative clauses are used for the top part of the hierarchy downwards; less explicit relative clause strategies are used for the top part of the hierarchy downwards; and more <a>explicit</a> relative clause strategies are used for the bottom part of the hierarchy upwards. (Section 19.3)
   Examples: []
 
 - Id: def:accessibility-scale
@@ -281,8 +280,6 @@
     - action concept
     - action
   SubtypeOf:
-    - sem:dynamic
-    - sem:transitory
     - sem:event
   ConstituentOf: []
   ExpressionOf: []
@@ -290,7 +287,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:dynamic
+    - sem:transitory
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -463,7 +462,7 @@
     - cxn:topic-comment
     - cxn:hanging-topic-phrase
   Definition: >-
-    a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The actual IP strategy is to recruit the strategy used for the prototypical <a>semantic content</a> function of the <a>information packaging</a> function of the nonprototypical construction. <i>Example</i>: in the English Nominalization Construction exemplified by <i>the corporation's neglect of worker's rights</i>, the <a>action concept</a> <i>neglect</i> that is being <a inf:reference-referent>referred</a> to recruits the construction used for <a>object</a> <a>reference</a>, the prototypical <a>referring phrase</a> -- it is preceded by the Possessive Phrase <i>the corporation's</i> and followed by the Genitive Oblique <i>of worker's rights</i>; contrast the different strategy found with the prototypical <a>action</a> <a>predication</a> construction <i>The corporation neglected worker's rights</i>. The actual IP strategy contrasts with the <a>semantic IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
+    a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The actual IP strategy is to recruit the strategy used for the prototypical <a>semantic content</a> function of the <a>information packaging</a> function of the nonprototypical construction. <i>Example</i>: in the English Nominalization Construction exemplified by <i>the corporation's neglect of worker's rights</i>, the <a>action concept</a> <i>neglect</i> that is being <a inf:reference-referent>referred</a> to recruits the construction used for <a sem:object-concept>object</a> <a>reference</a>, the prototypical <a>referring phrase</a> -- it is preceded by the Possessive Phrase <i>the corporation's</i> and followed by the Genitive Oblique <i>of worker's rights</i>; contrast the different strategy found with the prototypical <a>action</a> <a>predication</a> construction <i>The corporation neglected worker's rights</i>. The actual IP strategy contrasts with the <a>semantic IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
   Examples:
     - <e>the corporation's neglect of worker's rights</e>
 
@@ -472,7 +471,7 @@
   Name: additive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -599,7 +598,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that does not <a>index</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Manchu <i>sargan jui hocikon ucule-he</i> <q>The girl sang beautifully</q>, <i>hocikon</i> <q>beautifully</q> does not index <i>sargan jui</i> <q>girl</q>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that does not <a>index</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Manchu <i>sargan jui hocikon ucule-he</i> <q>The girl sang beautifully</q>, <i>hocikon</i> <q>beautifully</q> does not index <i>sargan jui</i> <q>girl</q>. (Section 14.2)
   Examples:
     - Language: Manchu
       Example: <e>sargan jui hocikon ucule-he</e>
@@ -626,7 +625,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that <a>indexes</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Latin <i>mendicus a me tristis stipem petivit</i> <q>The beggar asked me sadly for a gift</q>, the form <i>tristis</i> <q>sadly</q> indexes the subject <i>mendicus</i> <q>beggar</q> in <a>case</a>, <a>number</a> and <a>gender/class</a>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that <a>indexes</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Latin <i>mendicus a me tristis stipem petivit</i> <q>The beggar asked me sadly for a gift</q>, the form <i>tristis</i> <q>sadly</q> indexes the subject <i>mendicus</i> <q>beggar</q> in <a>case</a>, <a>number</a> and <a>gender/class</a>. (Section 14.2)
   Examples:
     - Language: Latin
       Example: <e>mendicus a me tristis stipem petivit</e>
@@ -817,7 +816,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed with a <a>case marker</a> just like an <a>argument phrase</a>, either in the basic lexical form or in a nominalized form of the stative concept word. <i>Example</i>: in Mordvin <i>t'ejt'er-es mor-i mazi-ste</i> <q>The girls sings beautifully</q>, <i>mazi</i> <q>beautiful</q> takes the Elative <a cxn:oblique-phrase>oblique</a> flag <i>-ste</i>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed with a <a>case marker</a> just like an <a>argument phrase</a>, either in the basic lexical form or in a nominalized form of the stative concept word. <i>Example</i>: in Mordvin <i>t'ejt'er-es mor-i mazi-ste</i> <q>The girls sings beautifully</q>, <i>mazi</i> <q>beautiful</q> takes the Elative <a cxn:oblique-phrase>oblique</a> flag <i>-ste</i>. (Section 14.2)
   Examples:
     - Language: Mordvin
       Example: <e>t'ejt'er-es mor-i mazi-ste</e>
@@ -910,7 +909,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed using a distinct and unique <a>morphosyntactic</a> form. <i>Example</i>: in English <i>The girl sang beautiful-ly</i>, <i>beautiful</i> uses the unique suffix <i>-ly</i> to combine with the <a>event</a> <a>predicate</a> <i>sang</i>. The adverbial strategy is probably a more <a>grammaticalized</a> version of other strategies for stative complex predicates. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed using a distinct and unique <a>morphosyntactic</a> form. <i>Example</i>: in English <i>The girl sang beautiful-ly</i>, <i>beautiful</i> uses the unique suffix <i>-ly</i> to combine with the <a>event</a> <a>predicate</a> <i>sang</i>. The adverbial strategy is probably a more <a>grammaticalized</a> version of other strategies for stative complex predicates. (Section 14.2)
   Examples:
     - The girl sang beautiful<e>-ly</e>
 
@@ -960,8 +959,7 @@
 - Id: sem:affecting-event
   Type: sem
   Name: affecting event
-  Alias:
-    - affecting
+  Alias: []
   SubtypeOf:
     - sem:experiential-event
   ConstituentOf: []
@@ -970,7 +968,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:affecting
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -1053,7 +1052,7 @@
   Name: agent
   Alias: []
   SubtypeOf:
-    - sem:a-role
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1062,7 +1061,10 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> that includes <a>participant roles</a> for a <a>participant</a> that volitionally initiates an event. <i>Example</i>: in <i>Jack broke the window</i>, Jack volitionally initiates the breaking event. (Section 6.1.2)
@@ -1074,18 +1076,18 @@
   Name: agentive change of state event
   Alias: []
   SubtypeOf:
-    - sem:change-of-state-event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:bivalent-event
+  AssociatedTo: []
   Definition: >-
     a <a>change of state event</a> in which an external volitional <a>agent</a> brings about a change in a <a>patient</a> such that the patient enters a resulting <a>state</a>. <i>Example</i>: the event of a person drying dishes is an agentive change of state event. (Section 6.2.1)
   Examples: []
@@ -1480,7 +1482,7 @@
   AssociatedTo:
     - sem:human
   Definition: >-
-    an <a>object</a> that, if its identity is known to speaker and hearer, allows for the identity of a related object to be known to the speaker and hearer. <i>Example</i>: <q>knowing who Peter is we can identify Peter's bag, arm, brother</q> (Koptjevskaja-Tamm 2002:147) -- i.e. Peter serves as the anchor for identifying the bag, arm, or brother. The anchoring function requires that the <a inf:modification>modifying</a> <a>object</a> concept denote an <a>individual</a> and not a <a>type</a>, and preferably a highly <a>accessible</a> individual. Another term used for <q>anchor</q> is <q>reference point</q>, but the latter term has another use in this book. (Section 5.2.1)
+    an <a sem:object-concept>object</a> that, if its identity is known to speaker and hearer, allows for the identity of a related object to be known to the speaker and hearer. <i>Example</i>: <q>knowing who Peter is we can identify Peter's bag, arm, brother</q> (Koptjevskaja-Tamm 2002:147) -- i.e. Peter serves as the anchor for identifying the bag, arm, or brother. The anchoring function requires that the <a inf:modification>modifying</a> <a sem:object-concept>object</a> concept denote an <a>individual</a> and not a <a>type</a>, and preferably a highly <a>accessible</a> individual. Another term used for <q>anchor</q> is <q>reference point</q>, but the latter term has another use in this book. (Section 5.2.1)
   Examples:
     - <e>Peter</e>'s bag, arm, brother
 
@@ -1502,7 +1504,7 @@
   AssociatedTo:
     - cxn:anchoring-construction
   Definition: >-
-    a type of <a>situating</a> in which the <a>referent</a> of the <a>object</a> <a>modifier</a> serves to identify the referent of the <a>head</a> of the <a>modification construction</a>. (Sections 4.1.1, <b>4.1.4</b>)
+    a type of <a>situating</a> in which the <a>referent</a> of the <a sem:object-concept>object</a> <a>modifier</a> serves to identify the referent of the <a>head</a> of the <a>modification construction</a>. (Sections 4.1.1, <b>4.1.4</b>)
   Examples: []
 
 - Id: cxn:anchoring-construction
@@ -1523,7 +1525,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>nominal modifier construction</a> whose <a>object</a> <a>modifier</a> functions as an <a>anchor</a>. <i>Example</i>: <i>Peter's bag</i> is an anchoring construction, since the identity of Peter allows the interlocutors to identify the referent of <i>bag</i>. (Section 5.2.1)
+    a <a>nominal modifier construction</a> whose <a sem:object-concept>object</a> <a>modifier</a> functions as an <a>anchor</a>. <i>Example</i>: <i>Peter's bag</i> is an anchoring construction, since the identity of Peter allows the interlocutors to identify the referent of <i>bag</i>. (Section 5.2.1)
   Examples:
     - <e>Peter's bag</e>
 
@@ -1573,10 +1575,10 @@
 - Id: sem:animate
   Type: sem
   Name: animate
-  Alias: []
+  Alias:
+    - (nonhuman) animate
   SubtypeOf:
-    - sem:object-concept
-    - sem:ontological-categories
+    - sem:animacy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1588,7 +1590,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a semantic <u>category</u> of <a>objects</a> that denotes animate beings. <i>Example</i>: <i>cat</i> denotes an animate entity. The term <q>animate</q> is often used to contrast with <a>human</a>, and therefore often is used to refer only to nonhuman animates. (Section 3.1.2)
+    a semantic <u>category</u> of <a sem:object-concept>objects</a> that denotes animate beings. <i>Example</i>: <i>cat</i> denotes an animate entity. The term <q>animate</q> is often used to contrast with <a>human</a>, and therefore often is used to refer only to nonhuman animates. (Section 3.1.2)
   Examples:
     - <e>cat</e>
 
@@ -1618,7 +1620,7 @@
   Name: antecedent role
   Alias: []
   SubtypeOf:
-    - sem:participant-role
+    - sem:participant
   ConstituentOf:
     - sem:causal-chain
   ExpressionOf: []
@@ -1631,7 +1633,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>participant role</a> that is antecedent to the participant role expressed as <a>object</a> in the <a>causal chain</a> / <a>causal structure</a> of an <a>event</a>. <i>Example</i>: in <i>Jack broke the window with a hammer</i>, the hammer is antecedent to the window in the breaking causal chain (Jack --> hammer --> window), and the window is expressed as object. (Section 6.1.2)
+    a <a>participant role</a> that is antecedent to the participant role expressed as <a inf:object-argument>object</a> in the <a>causal chain</a> / <a>causal structure</a> of an <a>event</a>. <i>Example</i>: in <i>Jack broke the window with a hammer</i>, the hammer is antecedent to the window in the breaking causal chain (Jack --> hammer --> window), and the window is expressed as object. (Section 6.1.2)
   Examples:
     - Jack broke the window with a <e>hammer</e>
 
@@ -1640,7 +1642,7 @@
   Name: anterior
   Alias: []
   SubtypeOf:
-    - sem:consecutive
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1786,10 +1788,9 @@
   Name: apodosis
   Alias:
     - consequent
-  SubtypeOf:
-    - sem:event
-    - sem:proposition
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:conditional-relation
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -1798,8 +1799,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:conditional-relation
+  AssociatedTo: []
   Definition: >-
     the proposition or event denoted by an <a>apodosis clause</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a cxn:protasis>protasis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>apodosis</q> can be distinguished as <q>apodosis proposition</q> or <q>apodosis event</q>. (Section 17.3.1)
   Examples:
@@ -1812,19 +1812,21 @@
     - application
     - putting event
   SubtypeOf:
-    - sem:trivalent-event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
+    - sem:trivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing placing or applying one <a>object</a> onto (2-dimensional) or into (3-dimensional) another object. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
+    an <a>event</a> describing placing or applying one <a sem:object-concept>object</a> onto (2-dimensional) or into (3-dimensional) another object. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
   Examples: []
 
 - Id: cxn:application-verb
@@ -1866,7 +1868,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>construction</a> describing an <a>event</a> in which a <a>participant</a> other than the <a>P</a> participant is coded as <a>object</a> -- that is, a non-P participant is <a>salient</a> enough to be expressed as a <a>core argument phrase</a>, specifically object. <i>Example</i>: <i>Fred baked me a shepherd's pie</i>, in which Fred baking the pie is the base event, encodes a non-participant, namely the recipient of the shepherd's pie, as object. (Sections 9.1, 9.3)
+    a <a>construction</a> describing an <a>event</a> in which a <a>participant</a> other than the <a>P</a> participant is coded as <a inf:object-argument>object</a> -- that is, a non-P participant is <a>salient</a> enough to be expressed as a <a>core argument phrase</a>, specifically object. <i>Example</i>: <i>Fred baked me a shepherd's pie</i>, in which Fred baking the pie is the base event, encodes a non-participant, namely the recipient of the shepherd's pie, as object. (Sections 9.1, 9.3)
   Examples:
     - <e>Fred baked me a shepherd's pie</e>
 
@@ -1888,7 +1890,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>participant role</a> which is expressed as the <a>object</a> in an <a>applicative construction</a>. <i>Example</i>: in Nomatsiguenga <i>na-manantë-ne-ro kayeta</i> <q>I bought crackers for her</q>, the <a>beneficiary</a> referred to by <q>her</q> is expressed as the object, with the <sc>3sg</sc> Object suffix <i>-ro</i>. (Section 9.3)
+    the <a>participant role</a> which is expressed as the <a inf:object-argument>object</a> in an <a>applicative construction</a>. <i>Example</i>: in Nomatsiguenga <i>na-manantë-ne-ro kayeta</i> <q>I bought crackers for her</q>, the <a>beneficiary</a> referred to by <q>her</q> is expressed as the object, with the <sc>3sg</sc> Object suffix <i>-ro</i>. (Section 9.3)
   Examples:
     - Language: Nomatsiguenga
       Example: na-manantë-ne-ro kayeta
@@ -1913,7 +1915,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> for <a>object</a> <a>reference</a> in which two or more separate <a>referring phrases</a> juxtaposed to each other refer to the same <a>referent</a>. <i>Example</i>: in <i>my brother, the geophysicist</i>, two separate referring phrases, <i>my brother</i> and <i>the geophysicist</i>, are juxtaposed and refer to the same individual. (Section 5.4)
+    a <a>strategy</a> for <a sem:object-concept>object</a> <a>reference</a> in which two or more separate <a>referring phrases</a> juxtaposed to each other refer to the same <a>referent</a>. <i>Example</i>: in <i>my brother, the geophysicist</i>, two separate referring phrases, <i>my brother</i> and <i>the geophysicist</i>, are juxtaposed and refer to the same individual. (Section 5.4)
   Examples:
     - <e>my brother, the geophysicist</e>
 
@@ -1943,8 +1945,7 @@
   Type: sem
   Name: apprehensional
   Alias: []
-  SubtypeOf:
-    - sem:semantic-relation
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1981,7 +1982,7 @@
     - cxn:argument-phrase
     - inf:reference-referent
   Definition: >-
-    a <a>referent</a> of which something is being <a>predicated</a>. <i>Example</i>: in <i>Masha is nice</i>, being nice is being predicated of the referent Masha, and hence the referent Masha is an argument. Most referents are also arguments, but it is possible for a referent to <dq>stand alone</dq> in discourse, particularly in spoken discourse, independent of any predication. Arguments are divided into <a>core arguments</a> (<a>subject</a> and <a>object</a>) and <a sem:peripheral-participant>peripheral arguments</a>. (Sections 2.1, 6.1.1)
+    a <a>referent</a> of which something is being <a>predicated</a>. <i>Example</i>: in <i>Masha is nice</i>, being nice is being predicated of the referent Masha, and hence the referent Masha is an argument. Most referents are also arguments, but it is possible for a referent to <dq>stand alone</dq> in discourse, particularly in spoken discourse, independent of any predication. Arguments are divided into <a>core arguments</a> (<a>subject</a> and <a inf:object-argument>object</a>) and <a sem:peripheral-participant>peripheral arguments</a>. (Sections 2.1, 6.1.1)
   Examples:
     - <e>Masha</e> is nice
 
@@ -2002,7 +2003,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>complex predicate</a> in which one <a>element</a> denotes an <a>event</a> and is expressed as a <a>verb</a>, but the other element denotes an <a>object</a> and is expressed in an <a>argument phrase</a>, yet the verb--argument combination has <a>lexicalized</a> to have a unitary <a>meaning</a>. <i>Example</i>: in Spanish <i>Pero está haciendo bastante sol</i> <q>But it's really sunny</q> [lit. <q>But it is making a lot of sun</q>], <i>haciendo...sol</i> <q>making sun</q> is an instance of an argument complex predicate. (Section 13.6)
+    a <a>complex predicate</a> in which one <a>element</a> denotes an <a>event</a> and is expressed as a <a>verb</a>, but the other element denotes an <a sem:object-concept>object</a> and is expressed in an <a>argument phrase</a>, yet the verb--argument combination has <a>lexicalized</a> to have a unitary <a>meaning</a>. <i>Example</i>: in Spanish <i>Pero está haciendo bastante sol</i> <q>But it's really sunny</q> [lit. <q>But it is making a lot of sun</q>], <i>haciendo...sol</i> <q>making sun</q> is an instance of an argument complex predicate. (Section 13.6)
   Examples:
     - Language: Spanish
       Example: Pero está <e>haciendo</e> bastante <e>sol</e>
@@ -2060,9 +2061,9 @@
   Type: sem
   Name: arrival
   Alias: []
-  SubtypeOf:
-    - sem:path-of-motion-event
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:motion-event
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -2107,7 +2108,8 @@
     - aspectual structure
   SubtypeOf:
     - sem:tamp
-  ConstituentOf: []
+  ConstituentOf:
+    - sem:entity
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -2116,8 +2118,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:event
+  AssociatedTo: []
   Definition: >-
     how an event unfolds over time. The semantics of aspectual structure is not discussed in detail in this textbook. However, certain basic aspectual distinctions are discussed in Section 6.2.2: <a>dynamic</a> and <a>stative</a>, <a>punctual</a> and <a>durative</a>, and <a>telic</a> and <a>atelic</a>. (Sections 6.1.1, 6.2.2)
   Examples: []
@@ -2206,7 +2207,7 @@
   Name: atelic
   Alias: []
   SubtypeOf:
-    - sem:aspect
+    - sem:telicity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2225,8 +2226,7 @@
 - Id: sem:attending-event
   Type: sem
   Name: attending event
-  Alias:
-    - attending
+  Alias: []
   SubtypeOf:
     - sem:experiential-event
   ConstituentOf: []
@@ -2235,7 +2235,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:attending
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -2398,7 +2399,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> for the <a>imperative--hortative construction</a>, particularly the <a>second person</a> variant, in which the <a>verb</a> stem without any inflection is used. <i>Example</i>: English <i>Dance!</i> is an instance of the bare verb stem strategy for the second person imperative--hortative. (Section 12.4.1)
+    a <a>strategy</a> for the <a>imperative--hortative construction</a>, particularly the <a sem:second-person>second person</a> variant, in which the <a>verb</a> stem without any inflection is used. <i>Example</i>: English <i>Dance!</i> is an instance of the bare verb stem strategy for the second person imperative--hortative. (Section 12.4.1)
   Examples:
     - <e>Dance</e>!
 
@@ -2464,7 +2465,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> for expressing the categories of <a>subject</a> (S), <a>verb</a> (V), and <a>object</a> (O) in a <a>transitive construction</a>, and <a>subject</a> in an <a>intransitive construction</a>. Some linguists use <a>A</a> and <a>P</a> instead of S and O, respectively, in describing the basic word order of transitive constructions. Basic word order is distinguished from nonbasic word orders in terms of <a>information packaging</a> (basic word order represents <a inf:topic-comment>topic--comment</a> information packaging); less <a>structural coding</a>; and higher <a>token frequency</a>. <i>Example</i>: the basic word order of English is SVO, as in <i>Jerry saw the bluebird on Sunday</i>. Some linguists analyze basic word order in terms of the pair of binary orders subject--verb and object--verb. Sometimes the order of oblique phrases is included; if so, the oblique phrase is abbreviated X; English is SVOX. (Section 6.2.2)
+    a <a>strategy</a> for expressing the categories of <a>subject</a> (S), <a>verb</a> (V), and <a inf:object-argument>object</a> (O) in a <a>transitive construction</a>, and <a>subject</a> in an <a>intransitive construction</a>. Some linguists use <a>A</a> and <a>P</a> instead of S and O, respectively, in describing the basic word order of transitive constructions. Basic word order is distinguished from nonbasic word orders in terms of <a>information packaging</a> (basic word order represents <a inf:topic-comment>topic--comment</a> information packaging); less <a>structural coding</a>; and higher <a>token frequency</a>. <i>Example</i>: the basic word order of English is SVO, as in <i>Jerry saw the bluebird on Sunday</i>. Some linguists analyze basic word order in terms of the pair of binary orders subject--verb and object--verb. Sometimes the order of oblique phrases is included; if so, the oblique phrase is abbreviated X; English is SVOX. (Section 6.2.2)
   Examples:
     - Jerry saw the bluebird on Sunday
 
@@ -2501,7 +2502,11 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
+    - sem:experiential-event
   AssociatedTo:
     - cxn:applicative-object
   Definition: >-
@@ -2629,7 +2634,7 @@
   Name: bodily action
   Alias: []
   SubtypeOf:
-    - sem:experiential-event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2649,14 +2654,15 @@
   Name: bodily motion event
   Alias: []
   SubtypeOf:
-    - sem:monovalent-event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -2715,14 +2721,15 @@
     - body care
     - grooming event
   SubtypeOf:
-    - sem:monovalent-event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -2761,7 +2768,7 @@
   Alias:
     - body part
   SubtypeOf:
-    - sem:part-whole-relation
+    - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2788,14 +2795,15 @@
     - locative stative event
     - locative stative
   SubtypeOf:
-    - sem:event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -2860,8 +2868,7 @@
   Type: sem
   Name: case
   Alias: []
-  SubtypeOf:
-    - sem:ontological-categories
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2873,7 +2880,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a semantic category expressed by <a>case affixes</a> which encodes the types of relations that occur between <a>predicate</a> and <a>arguments</a>, or the relation between an <a>object</a> <a>modifier</a> and its <a>head</a> in <a>nominal modification constructions</a>. <i>Example</i>: in Finnish <i>kukassa</i> <q>in a/the flower</q>, the Inessive Case Suffix <i>-ssa</i> expresses the <q>in</q> locative relation. (Section 4.4.2)
+    a semantic category expressed by <a>case affixes</a> which encodes the types of relations that occur between <a>predicate</a> and <a>arguments</a>, or the relation between an <a sem:object-concept>object</a> <a>modifier</a> and its <a>head</a> in <a>nominal modification constructions</a>. <i>Example</i>: in Finnish <i>kukassa</i> <q>in a/the flower</q>, the Inessive Case Suffix <i>-ssa</i> expresses the <q>in</q> locative relation. (Section 4.4.2)
   Examples:
     - Language: Finnish
       Example: kukassa
@@ -2911,7 +2918,7 @@
   Name: causal
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2921,8 +2928,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:comparative-conditional-relation
+  AssociatedTo: []
   Definition: >-
     the semantic relation between two <a>events</a> where one event causes the other. <i>Example</i>: <i>I left the party because I was tired</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>I was tired and (so) I left the party</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the causing event (the <a sem:protasis>protasis</a>; Section 17.3.2) is construed as the ground, and expressed in the <a>adverbial dependent clause</a>. Causal relations also occur in <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, and <a>comparative conditional constructions</a>. Causal relations are divided into <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, and <a sem:speech-act-causal-relation>speech act relations</a>. (Sections 15.3.1, 17.2.1, 17.3.2)
   Examples:
@@ -2955,8 +2961,7 @@
   Type: sem
   Name: causal event
   Alias: []
-  SubtypeOf:
-    - sem:event
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2976,9 +2981,9 @@
   Name: causal structure
   Alias:
     - force dynamics
-  SubtypeOf:
-    - def:meaning
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:event
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -2987,8 +2992,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:causal-event
+  AssociatedTo: []
   Definition: >-
     the interactions among participants in an event, specifically causal interactions (although there are other types of interactions among participants in an event which are subsumed under the term). <i>Example</i>: in <i>The cats scratched the furniture</i>, the cats act on the furniture, and the furniture undergoes a change of state. The causal structure of events that is expressed by a single <a>argument structure construction</a> in a single <a>clause</a> is generally in the form of a <a>causal chain</a>. (Sections 6.1.1, <b>6.1.2</b>)
   Examples:
@@ -3046,7 +3050,7 @@
   Name: causative event
   Alias: []
   SubtypeOf:
-    - sem:causal-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -3128,7 +3132,11 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
+    - sem:experiential-event
   AssociatedTo: []
   Definition: >-
     in a <a>causative event</a>, the <a>participant role</a> that is the initiator of the <a>causal chain</a> of the <a>base event</a>. <i>Example</i>: in <i>Sandra had Phil sweep the patio</i>, Phil fills the participant role of causee because Phil is the initiator of the sweeping event. The term <q>causee</q> is used only when there is a <a>causer</a> in the event as well. (Section 9.2)
@@ -3150,9 +3158,11 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
-  AssociatedTo:
-    - sem:causative-event
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
+  AssociatedTo: []
   Definition: >-
     a <a>participant role</a> which names an external cause that brings about an event, and is conceptualized as a <a>central participant</a> in the <a>event</a>. <i>Example</i>: in <i>Harry made the antelope jump</i>, Harry is in the causer role. (Sections 7.4, 9.2)
   Examples:
@@ -3202,8 +3212,7 @@
 - Id: sem:chaining-event
   Type: sem
   Name: chaining event
-  Alias:
-    - chaining
+  Alias: []
   SubtypeOf:
     - sem:event
   ConstituentOf: []
@@ -3212,7 +3221,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:chaining
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -3230,14 +3240,15 @@
     - assume position event
     - change in posture event
   SubtypeOf:
-    - sem:monovalent-event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -3282,18 +3293,18 @@
     - COS event
     - COS
   SubtypeOf:
-    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:monovalent-event
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> in which a <a>participant</a>, the <a>patient</a>, undergoes a change such that the patient enters a resulting <a>state</a>, usually a change of physical state. <i>Example</i>: the event of dishes becoming dry is a change of state event. (Sections 6.1.2, <b>6.2.1</b>)
   Examples: []
@@ -3455,7 +3466,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>system</a> of two (or more) functionally related <a>constructions</a> that uses the same <a>form</a> to express a <a>role</a> in one construction and a role in the other construction. <i>Example</i>: Mandarin uses the same particle <i>de</i> for the <a>object</a> <a>modification</a> (<a cxn:possessive-attributive-phrase>genitive</a>) <a>construction</a> and for the <a>action</a> <a>modification</a> (<a>relative clause</a>) <a>construction</a>. (Section 1.4)
+    a <a>system</a> of two (or more) functionally related <a>constructions</a> that uses the same <a>form</a> to express a <a>role</a> in one construction and a role in the other construction. <i>Example</i>: Mandarin uses the same particle <i>de</i> for the <a sem:object-concept>object</a> <a>modification</a> (<a cxn:possessive-attributive-phrase>genitive</a>) <a>construction</a> and for the <a>action</a> <a>modification</a> (<a>relative clause</a>) <a>construction</a>. (Section 1.4)
   Examples:
     - Language: Mandarin
       Example: de
@@ -3502,7 +3513,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -3556,8 +3569,7 @@
 - Id: sem:collective-event
   Type: sem
   Name: collective event
-  Alias:
-    - collective
+  Alias: []
   SubtypeOf:
     - sem:event
   ConstituentOf: []
@@ -3566,7 +3578,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:collective
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -3606,19 +3619,21 @@
   Alias:
     - combining
   SubtypeOf:
-    - sem:event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
+    - sem:trivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing the combining of two <a>objects</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
+    an <a>event</a> describing the combining of two <a sem:object-concept>objects</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
   Examples: []
 
 - Id: cxn:combining-verb
@@ -3656,7 +3671,10 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that accompanies another participant, usually the <a>agent</a>. <i>Example</i>: in <i>I went to the concert with Carol</i>, Carol is in the comitative role. (Section 6.1.2)
@@ -3700,8 +3718,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:factive-event
+  AssociatedTo: []
   Definition: >-
     an <a>evaluative event</a> in which an evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>positive epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
   Examples:
@@ -3799,7 +3816,7 @@
   Alias:
     - comparative conditional
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -3818,8 +3835,7 @@
 - Id: cxn:comparative-construction
   Type: cxn
   Name: comparative construction
-  Alias:
-    - comparative
+  Alias: []
   SubtypeOf:
     - cxn:complex-sentence
   ConstituentOf: []
@@ -3908,9 +3924,8 @@
   Name: comparee
   Alias: []
   SubtypeOf:
-    - sem:participant-role
-  ConstituentOf:
-    - sem:gradable-predicative-scale
+    - sem:semantic-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -3918,7 +3933,9 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:comparative
+    - sem:equative
   AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or <a>equative construction</a>, the <a>referent</a> whose position on the <a>gradable predicative scale</a> is specified relative to the position of the <a>standard</a> on the predicative scale. <i>Example</i>: in the comparative construction <i>Your cat is bigger than my dog</i>, the cat is the comparee -- it is asserted to exceed the dog on the scale of size. (Sections 17.2.1, 17.2.4)
@@ -4324,8 +4341,7 @@
   Alias:
     - conditional concessive relation
     - concessive conditional
-  SubtypeOf:
-    - sem:semantic-relation
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4335,10 +4351,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:neutral-epistemic-stance
-    - sem:concessive-relation
-    - sem:conditional-relation
+  AssociatedTo: []
   Definition: >-
     a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
   Examples:
@@ -4372,7 +4385,7 @@
   Alias:
     - concessive
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4382,8 +4395,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:unexpected-co-occurrence
+  AssociatedTo: []
   Definition: >-
     a relation between two <a>events</a> such that there is an expected <a>causal relation</a> between the two events, but the opposite of the second event, expressed in the <a cxn:apodosis>apodosis</a>, unexpectedly occurs. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
   Examples:
@@ -4406,7 +4418,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a subset of <a>antecedent roles</a> that includes <a>participant roles</a> in between the participant role expressed as <a>subject</a> and the participant role expressed as <a>object</a>. <i>Example</i>: in <i>Jack broke the window with a hammer</i>, the hammer is antecedent to the window in the breaking causal chain (Jack --> hammer --> window), and the window is expressed as object; and it is also <a sem:subsequent-role>subsequent</a> to Jack in the breaking <a>causal chain</a>, and Jack is expressed as subject. (Section 6.1.2)
+    a subset of <a>antecedent roles</a> that includes <a>participant roles</a> in between the participant role expressed as <a>subject</a> and the participant role expressed as <a inf:object-argument>object</a>. <i>Example</i>: in <i>Jack broke the window with a hammer</i>, the hammer is antecedent to the window in the breaking causal chain (Jack --> hammer --> window), and the window is expressed as object; and it is also <a sem:subsequent-role>subsequent</a> to Jack in the breaking <a>causal chain</a>, and Jack is expressed as subject. (Section 6.1.2)
   Examples:
     - Jack broke the window with a hammer
 
@@ -4533,7 +4545,7 @@
   Alias:
     - conditional
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4652,7 +4664,7 @@
   Name: consecutive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4669,7 +4681,7 @@
     - <e>He washed the car and drove to the party</e>
 
 - Id: def:construction
-  Type: def
+  Type: cxn
   Name: construction
   Alias:
     - criteria (for word classes and other grammatical categories)
@@ -4715,14 +4727,15 @@
   Alias:
     - contact by impact
   SubtypeOf:
-    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -4820,7 +4833,8 @@
 - Id: sem:contextual
   Type: sem
   Name: contextual
-  Alias: []
+  Alias:
+    - deictic
   SubtypeOf:
     - sem:entity
   ConstituentOf: []
@@ -4926,7 +4940,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:controlled
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -5020,7 +5035,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>deranked</a> <a>complex sentence</a> <a>strategy</a>. However, the stative predicate does not index (any of) its argument(s). <i>Example</i>: in Turkana <i>è-pès-e-tè nɪ-a-ron-o-nì̥</i> <q>They kick him badly</q> [lit. <q>They kick him, it being bad</q>] the form of <i>nɪ-a-ron-o-nì̥</i> <q>be bad</q> is a Neuter deranked form, not indexing the third person plural subject of <q>kick</q>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>deranked</a> <a>complex sentence</a> <a>strategy</a>. However, the stative predicate does not index (any of) its argument(s). <i>Example</i>: in Turkana <i>è-pès-e-tè nɪ-a-ron-o-nì̥</i> <q>They kick him badly</q> [lit. <q>They kick him, it being bad</q>] the form of <i>nɪ-a-ron-o-nì̥</i> <q>be bad</q> is a Neuter deranked form, not indexing the third person plural subject of <q>kick</q>. (Section 14.2)
   Examples:
     - Language: Turkana
       Example: <e>è-pès-e-tè nɪ-a-ron-o-nì̥</e>
@@ -5117,7 +5132,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>balanced</a> <a>complex sentence</a> <a>strategy</a>. However, the stative predicate does not index (any of) its argument(s). <i>Example</i>: in Koasati <i>wayóhka-k ho-palkálki-palámni-n</i> <q>They fly all very fast</q> [lit. <q>They fly (and) it is fast</q>], the second clause <i>ho-palkálki-palámni-n</i> recruits the form of a main clause predicate, but does not index the fliers. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>balanced</a> <a>complex sentence</a> <a>strategy</a>. However, the stative predicate does not index (any of) its argument(s). <i>Example</i>: in Koasati <i>wayóhka-k ho-palkálki-palámni-n</i> <q>They fly all very fast</q> [lit. <q>They fly (and) it is fast</q>], the second clause <i>ho-palkálki-palámni-n</i> recruits the form of a main clause predicate, but does not index the fliers. (Section 14.2)
   Examples:
     - Language: Koasati
       Example: <e>wayóhka-k ho-palkálki-palámni-n</e>
@@ -5142,7 +5157,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>balanced</a> <a>complex sentence</a> <a>strategy</a>. In addition, the stative predicate <a>indexes</a> (one of) its argument(s). <i>Example</i>: in Muna <i>ne-rimba no-tende</i> <q>he runs fast</q> [lit. <q>He is fast (and) he runs</q>], <i>ne-rimba</i> [<sc>3sg.rl</sc>-be_fast] recruits the form of a simple predicate and indexes its subject argument. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>balanced</a> <a>complex sentence</a> <a>strategy</a>. In addition, the stative predicate <a>indexes</a> (one of) its argument(s). <i>Example</i>: in Muna <i>ne-rimba no-tende</i> <q>he runs fast</q> [lit. <q>He is fast (and) he runs</q>], <i>ne-rimba</i> [<sc>3sg.rl</sc>-be_fast] recruits the form of a simple predicate and indexes its subject argument. (Section 14.2)
   Examples:
     - Language: Muna
       Example: <e>ne-rimba no-tende</e>
@@ -5212,7 +5227,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> recruits a <a>nonprototypical predication</a> construction that employs a <a>copula</a>, and in addition the copula is in a <a>deranked</a> form. <i>Example</i>: in Malayalam <i>aval bhamgiy-aayi prasamgiccu</i> <q>She spoke beautifully</q>, <i>bhamgiy</i> <q>beauty</q> is suffixed with a deranked form of the copula <i>-aayi</i>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> recruits a <a>nonprototypical predication</a> construction that employs a <a>copula</a>, and in addition the copula is in a <a>deranked</a> form. <i>Example</i>: in Malayalam <i>aval bhamgiy-aayi prasamgiccu</i> <q>She spoke beautifully</q>, <i>bhamgiy</i> <q>beauty</q> is suffixed with a deranked form of the copula <i>-aayi</i>. (Section 14.2)
   Examples:
     - Language: Malayalam
       Example: aval bhamgiy-aayi prasamgiccu
@@ -5260,7 +5275,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the most <a>salient</a> <a>arguments</a> associated with a <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, Sally and the letter are construed as the most salient arguments; in <i>The letter was thrown into the wastebasket</i>, only the letter is construed as a salient argument. When there are two core arguments, the more salient argument is the <a>subject</a> and the less salient argument is the <a>object</a>. Core arguments are expressed by <a>core argument phrases</a>. (Section 6.1.1)
+    the most <a>salient</a> <a>arguments</a> associated with a <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, Sally and the letter are construed as the most salient arguments; in <i>The letter was thrown into the wastebasket</i>, only the letter is construed as a salient argument. When there are two core arguments, the more salient argument is the <a>subject</a> and the less salient argument is the <a inf:object-argument>object</a>. Core arguments are expressed by <a>core argument phrases</a>. (Section 6.1.1)
   Examples:
     - <e>Sally</e> threw <e>the letter</e> into the wastebasket
     - <e>The letter</e> was thrown into the wastebasket
@@ -5383,19 +5398,20 @@
   Name: damage event
   Alias: []
   SubtypeOf:
-    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing material damage to an <a>object</a>. <i>Example</i>: scratching something is a damage event. (Section 7.3.2)
+    an <a>event</a> describing material damage to an <a sem:object-concept>object</a>. <i>Example</i>: scratching something is a damage event. (Section 7.3.2)
   Examples: []
 
 - Id: cxn:damage-verb
@@ -5532,20 +5548,19 @@
   Type: sem
   Name: degree
   Alias: []
-  SubtypeOf:
-    - sem:property-concept
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:property-concept
   ValueOf: []
   FillerOf: []
   RoleOf: []
   AssociatedTo:
     - str:degree-marker
-    - sem:scalar-model
   Definition: >-
     for scalar concepts, a value on the scale that may be expressed by a distinct word. <i>Example</i>: in <i>very long</i>, the <a>admodifier</a> <i>very</i> indicates that the value on the scale of length is beyond the normal value implicit in the word <i>long</i>. (Section 2.2.2)
   Examples:
@@ -5646,12 +5661,11 @@
   Examples:
     - <e>very</e> happy
 
-- Id: sem:deixis-deictic
+- Id: sem:spatial-deixis
   Type: sem
   Name: deixis/deictic
   Alias:
     - deixis
-    - deictic
     - situational
   SubtypeOf:
     - sem:contextual
@@ -5734,7 +5748,6 @@
   AssociatedTo:
     - cxn:imperative-hortative
     - cxn:predicational
-    - sem:future-oriented
   Definition: >-
     a type of <a>modality</a> which expresses the attitude of a speaker or other conceiver toward performing an <a>action</a> (i.e. making the action come true). <i>Example</i>: <i>Jerry must get his hair cut</i> is an instance of deontic modality: the speaker expresses her attitude that the situation necessarily will come about. Deontic modality is construed broadly in this textbook, to include wishes as well as intentions and commands, attitude toward oneself performing the action as well as toward others performing the action, and to include <a>objective</a> as well as <a>subjective</a> characterization of the attitude. (Sections 12.1, 12.4)
   Examples:
@@ -5744,9 +5757,9 @@
   Type: sem
   Name: departure
   Alias: []
-  SubtypeOf:
-    - sem:path-of-motion-event
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:motion-event
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -5808,19 +5821,23 @@
   Type: sem
   Name: dependent time reference
   Alias: []
-  SubtypeOf:
-    - sem:semantic-relation
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:reference-point
+  AssociatedTo: []
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the time reference of the <a>complement</a> <a>event</a> is determined by the time reference of the <a>matrix clause</a> <a>event</a>. <i>Example</i>: in <i>Sally persuaded John to make the cake</i>, the time reference of John's making the cake is dependent on the time reference of Sally's persuading him -- it must follow the persuading event. (Section 18.2.2)
   Examples:
@@ -5945,8 +5962,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:dependent-time-reference
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> that expresses a desire toward the realization of a future event that is expressed by the complement. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
   Examples:
@@ -6093,19 +6109,20 @@
     - <e>small</e>
     - <e>thin</e>
 
-- Id: sem:direct-causation
+- Id: sem:direct-causation-event
   Type: sem
-  Name: direct causation
+  Name: direct causation event
   Alias: []
   SubtypeOf:
-    - sem:causative-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:direct
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -6204,7 +6221,7 @@
   Name: directed change
   Alias: []
   SubtypeOf:
-    - sem:event
+    - sem:change-type
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6214,8 +6231,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:aspect
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> in which the change that a <a>participant</a> undergoes in the course of an event is in one <dq>direction</dq>. <i>Example</i>: in <i>The storm expanded</i>, there is a gradual unidirectional increase in size, and so the event is a directed change. (Section 6.2.1)
   Examples:
@@ -6339,8 +6355,7 @@
     - distal deixis
     - distal
   SubtypeOf:
-    - sem:deixis-deictic
-    - sem:ontological-categories
+    - sem:spatial-deixis
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6514,7 +6529,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used for <a>experiential constructions</a> in which both <a>experiencer</a> and <a>stimulus</a> are expressed with the same <a>core argument phrase</a> (either <a>subject</a> or <a>object</a>). <i>Example</i>: in the Japanese sentence <i>Dare ga eiga ga suki desu ka</i> <q>Who likes movies?</q>, both the experiencer <i>dare</i> <q>who</q> and the stimulus <i>eiga</i> <q>movie</q> are expressed with the Subject <a>flag</a> <i>ga</i>. (Section 7.4)
+    a <a>strategy</a> used for <a>experiential constructions</a> in which both <a>experiencer</a> and <a>stimulus</a> are expressed with the same <a>core argument phrase</a> (either <a>subject</a> or <a inf:object-argument>object</a>). <i>Example</i>: in the Japanese sentence <i>Dare ga eiga ga suki desu ka</i> <q>Who likes movies?</q>, both the experiencer <i>dare</i> <q>who</q> and the stimulus <i>eiga</i> <q>movie</q> are expressed with the Subject <a>flag</a> <i>ga</i>. (Section 7.4)
   Examples:
     - Language: Japanese
       Example: <e>Dare ga eiga ga suki desu ka</e>
@@ -6626,7 +6641,7 @@
   Name: durative
   Alias: []
   SubtypeOf:
-    - sem:aspect
+    - sem:durativity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6647,9 +6662,8 @@
   Name: dynamic
   Alias: []
   SubtypeOf:
-    - sem:aspect
-  ConstituentOf:
-    - sem:time-stability
+    - sem:stativity
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -6755,7 +6769,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -6810,7 +6826,7 @@
   Name: endpoint
   Alias: []
   SubtypeOf:
-    - sem:participant-role
+    - sem:participant
   ConstituentOf:
     - sem:causal-chain
   ExpressionOf: []
@@ -6886,7 +6902,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a type of <a inf:thetic>thetic</a> in which the most important new information being presented is the identity of the <a>object</a> (entity). <i>Example</i>: <i>There's a snake in the kitchen sink</i> is an instance of an entity-central thetic construction, where the primary new information being presented is the snake. (Sections 10.1.2, <b>11.3.1</b>)
+    a type of <a inf:thetic>thetic</a> in which the most important new information being presented is the identity of the <a sem:object-concept>object</a> (entity). <i>Example</i>: <i>There's a snake in the kitchen sink</i> is an instance of an entity-central thetic construction, where the primary new information being presented is the snake. (Sections 10.1.2, <b>11.3.1</b>)
   Examples:
     - <e>There's a snake in the kitchen sink</e>
 
@@ -6964,14 +6980,17 @@
   Name: epistemic stance
   Alias:
     - hypotheticality
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal
+    - sem:conditional-relation
+    - sem:concessive-relation
+    - sem:concessive-conditional-relation
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -7160,8 +7179,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:independent-time-reference
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> in which an evaluative judgment is made about the truth of the <a>proposition</a> expressed in its <a>complement</a>. Evaluative events may assume different <a>epistemic stances</a> toward the proposition expressed in their complement. <a>Commentative events</a> assume a positive epistemic stance; <a>hoping</a> and <a>fearing events</a> assume a <a>neutral epistemic stance</a>; and <a>wishing events</a> assume a <a>negative epistemic stance</a>. (Section 18.2.2)
   Examples: []
@@ -7196,14 +7214,16 @@
     - SOA
     - event concept
   SubtypeOf:
-    - sem:relational
-  ConstituentOf: []
+    - sem:entity
+  ConstituentOf:
+    - sem:proposition
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:relational
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -7257,14 +7277,14 @@
   Type: sem
   Name: event-oriented
   Alias: []
-  SubtypeOf:
-    - sem:state
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:event-relation
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -7390,8 +7410,7 @@
 - Id: cxn:exclusive-disjunctive-coordination
   Type: cxn
   Name: exclusive disjunctive coordination
-  Alias:
-    - exclusive disjunction
+  Alias: []
   SubtypeOf:
     - cxn:disjunctive-coordination
     - cxn:exhaustive-list-coordination
@@ -7462,14 +7481,15 @@
   Name: existential
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:avalent
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -7537,7 +7557,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:experience
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -7574,8 +7595,7 @@
   Alias: []
   SubtypeOf:
     - sem:semantic-role
-  ConstituentOf:
-    - sem:experiential-event
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -7583,7 +7603,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:experiential-event
   AssociatedTo: []
   Definition: >-
     the person who experiences the internal mental phenomenon or bodily sensation in an <a>experiential event</a>. <i>Example</i>: in <i>Freddy saw the bear</i>, Freddy is the experiencer. The experiencer is almost always human. (Sections 6.1.2, <b>7.4</b>)
@@ -7631,7 +7652,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>argument structure construction</a> used to <a>predicate</a> an <a>experiential event</a>. <i>Example</i>: <i>Shelley tasted the soup</i> is an instance of an experiential construction, with the <a>experiencer</a> expressed as <a>subject</a> and the <a>stimulus</a> expressed as <a>object</a>. (Section 7.4)
+    an <a>argument structure construction</a> used to <a>predicate</a> an <a>experiential event</a>. <i>Example</i>: <i>Shelley tasted the soup</i> is an instance of an experiential construction, with the <a>experiencer</a> expressed as <a>subject</a> and the <a>stimulus</a> expressed as <a inf:object-argument>object</a>. (Section 7.4)
   Examples:
     - <e>Shelley tasted the soup</e>
 
@@ -7681,8 +7702,7 @@
   Name: expertum
   Alias: []
   SubtypeOf:
-    - sem:experiential-event
-    - sem:participant
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7691,7 +7711,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:experiential-event
   AssociatedTo: []
   Definition: >-
     the experiential event conceptualized as a participant. <i>Example</i>: in Yórùbá <i>ẹ̀rù´ bà mí</i> <q>I felt afraid</q> [lit. <q>fear fell on me</q>] <i>ẹ̀rù´</i> <q>fear</q> is the expertum. (Section 7.4)
@@ -7785,7 +7806,7 @@
   AssociatedTo:
     - cxn:argument-phrase
   Definition: >-
-    a <a>strategy</a> in which a <a>referent</a> in a <a>possessive relation</a> to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed as an <a>argument</a> of the <a>predicate</a> instead of in a <a>possessive modification construction</a>. <i>Example</i>: in Maasai <i>áa-bʊak-ıtá ɔldía</i> <q>My dog is barking</q>, the portmanteau index <i>áa-</i> <a>indexes</a> the owner of the dog as the <a>object</a> argument of the predicate. (Section 7.5.3)
+    a <a>strategy</a> in which a <a>referent</a> in a <a>possessive relation</a> to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed as an <a>argument</a> of the <a>predicate</a> instead of in a <a>possessive modification construction</a>. <i>Example</i>: in Maasai <i>áa-bʊak-ıtá ɔldía</i> <q>My dog is barking</q>, the portmanteau index <i>áa-</i> <a>indexes</a> the owner of the dog as the <a>object argument</a> of the predicate. (Section 7.5.3)
   Examples:
     - Language: Maasai
       Example: <e>áa-bʊak-ıtá ɔldía</e>
@@ -7848,7 +7869,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:extroverted
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -7884,9 +7906,14 @@
   Type: sem
   Name: factive event
   Alias: []
-  SubtypeOf:
-    - sem:event
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -7967,8 +7994,9 @@
   Name: figure
   Alias: []
   SubtypeOf:
+    - sem:semantic-role
+  ConstituentOf:
     - sem:figure-ground-spatial-relation
-  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -7976,7 +8004,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:spatial-event
   AssociatedTo: []
   Definition: >-
     the object in a spatial scene whose location or path of motion is being described relative to a <a>ground</a>. <i>Example</i>: in <i>Meagan ran into the cave</i>, Meagan is the figure, and her path of motion is described relative to the location of the cave. (Sections 7.3.1, 14.5)
@@ -8013,7 +8042,7 @@
     - locative relation
     - spatial figure--ground relation
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8026,7 +8055,7 @@
   AssociatedTo:
     - cxn:location-clause
   Definition: >-
-    a spatial relation that holds between two <a>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
+    a spatial relation that holds between two <a sem:object-concept>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
   Examples:
     - <e>the bicycle in the garage</e>
 
@@ -8077,8 +8106,7 @@
 - Id: cxn:first-person-pronoun
   Type: cxn
   Name: first person pronoun
-  Alias:
-    - first person
+  Alias: []
   SubtypeOf:
     - cxn:personal-pronoun
   ConstituentOf: []
@@ -8146,7 +8174,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts, where the dependent concept (<a>modifier</a> in a <a>modification construction</a>, <a>argument</a> in a <a>clause</a>) is an <a>object</a> concept. Flags subsume <a>adpositions</a> and <a>case affixes</a>. <i>Examples</i>: in <i>the plate on the table, on</i> is a flag, and in <i>I dug the hole with a shovel, with</i> is a flag; both are adpositions. (Sections 4.3, 6.2.2)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts, where the dependent concept (<a>modifier</a> in a <a>modification construction</a>, <a>argument</a> in a <a>clause</a>) is an <a>object concept</a>. Flags subsume <a>adpositions</a> and <a>case affixes</a>. <i>Examples</i>: in <i>the plate on the table, on</i> is a flag, and in <i>I dug the hole with a shovel, with</i> is a flag; both are adpositions. (Sections 4.3, 6.2.2)
   Examples:
     - the plate <e>on</e> the table
     - I dug the hole <e>with</e> a shovel
@@ -8233,7 +8261,10 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that initiates an event but is not volitional (usually because it is not human), i.e. is not an <a>agent</a>. <i>Example</i>: in <i>Lightning shattered the old tree</i>, the lightning initiates the shattering event but is not an agent. (Section 6.1.2)
@@ -8418,8 +8449,7 @@
   Type: sem
   Name: future-oriented
   Alias: []
-  SubtypeOf:
-    - sem:tense
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8429,8 +8459,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:reference-point
+  AssociatedTo: []
   Definition: >-
     the event in question is a future event from the reference time of the <a sem:deontic-modality>deontic modal</a> situation. <i>Examples</i>: in English <i>You may leave now</i>, a <a>subjective</a> deontic modal construction, the event is in the future from the speech act time (that is, simple future). In English <i>Carol intended to close the door</i>, an <a>objective</a> deontic modal construction, the event is in the future from the reported deontic modal event time: that is, closing the door is projected to a future from the past event of Carol's having the intention. (Section 12.4)
   Examples:
@@ -8490,7 +8519,6 @@
     - class
   SubtypeOf:
     - sem:property-concept
-    - sem:ontological-categories
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8502,7 +8530,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>semantic</a> category that is expressed as an <a>indexation feature</a>, and covers both distinctions based primarily on sex and animacy (<q>gender</q>) and distinctions based on animacy, sex, and various semantic properties of inanimate -- or at least nonhuman -- <a>objects</a>. (Section 4.4.2)
+    a <a>semantic</a> category that is expressed as an <a>indexation feature</a>, and covers both distinctions based primarily on sex and animacy (<q>gender</q>) and distinctions based on animacy, sex, and various semantic properties of inanimate -- or at least nonhuman -- <a sem:object-concept>objects</a>. (Section 4.4.2)
   Examples: []
 
 - Id: str:general-extender
@@ -8642,9 +8670,10 @@
   Name: gradable predicative scale
   Alias:
     - predicative scale
-  SubtypeOf:
-    - sem:state
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:comparative
+    - sem:equative
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8676,7 +8705,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the process by which new grammatical <a>constructions</a> emerge from novel and specialized uses of other grammatical constructions; once a grammatical construction acquires a novel, specialized <a>function</a>, it eventually undergoes changes in <a>morphosyntactic</a> structure and scope, and often also phonetic form. <i>Example</i>: <i>a kind of</i> originally expressed a type of <a>object</a>, then shifted <a>meaning</a> to become a hedging phrase for a less-central member of a category, was extended to describe hedging of a <a>property</a> word (<i>kind of cute</i>), and was phonetically reduced to <i>kinda</i>. (Sections 1.1, <b>2.3</b>)
+    the process by which new grammatical <a>constructions</a> emerge from novel and specialized uses of other grammatical constructions; once a grammatical construction acquires a novel, specialized <a>function</a>, it eventually undergoes changes in <a>morphosyntactic</a> structure and scope, and often also phonetic form. <i>Example</i>: <i>a kind of</i> originally expressed a type of <a sem:object-concept>object</a>, then shifted <a>meaning</a> to become a hedging phrase for a less-central member of a category, was extended to describe hedging of a <a>property</a> word (<i>kind of cute</i>), and was phonetically reduced to <i>kinda</i>. (Sections 1.1, <b>2.3</b>)
   Examples: []
 
 - Id: sem:ground
@@ -8684,8 +8713,9 @@
   Name: ground
   Alias: []
   SubtypeOf:
+    - sem:semantic-role
+  ConstituentOf:
     - sem:figure-ground-spatial-relation
-  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8693,7 +8723,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:spatial-event
   AssociatedTo:
     - cxn:locative-phrase
   Definition: >-
@@ -8862,8 +8893,7 @@
   Name: human
   Alias: []
   SubtypeOf:
-    - sem:object-concept
-    - sem:ontological-categories
+    - sem:animacy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8875,7 +8905,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a semantic <u>category</u> of <a>objects</a> that denote persons. <i>Example</i>: <i>woman</i> denotes a human. (Section 3.1.2)
+    a semantic <u>category</u> of <a sem:object-concept>objects</a> that denote persons. <i>Example</i>: <i>woman</i> denotes a human. (Section 3.1.2)
   Examples:
     - <e>woman</e>
 
@@ -8922,7 +8952,7 @@
   AssociatedTo:
     - cxn:nonbasic-voice-construction
   Definition: >-
-    a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The hybrid IP strategy uses a mixture of the <a>semantic IP strategy</a> and the <a>actual IP strategy</a>. <i>Example</i>: in <i>Her drinking coffee (surprises me)</i>, the English Gerund Construction combines the Possessive Pronoun <i>her</i>, characteristic of the prototypical <a>object</a> <a>reference</a> construction and hence an instance of the actual information packaging of her drinking coffee (reference), with the Object form <i>coffee</i>, characteristic of the prototypical <a>action</a> <a>predication</a> construction and hence an instance of the prototypical information packaging function of the semantics of the action being referred to, namely predication. (Section 2.4)
+    a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The hybrid IP strategy uses a mixture of the <a>semantic IP strategy</a> and the <a>actual IP strategy</a>. <i>Example</i>: in <i>Her drinking coffee (surprises me)</i>, the English Gerund Construction combines the Possessive Pronoun <i>her</i>, characteristic of the prototypical <a sem:object-concept>object</a> <a>reference</a> construction and hence an instance of the actual information packaging of her drinking coffee (reference), with the Object form <i>coffee</i>, characteristic of the prototypical <a>action</a> <a>predication</a> construction and hence an instance of the prototypical information packaging function of the semantics of the action being referred to, namely predication. (Section 2.4)
   Examples:
     - <e>Her drinking coffee (surprises me)</e>
 
@@ -9254,8 +9284,7 @@
   Name: inanimate
   Alias: []
   SubtypeOf:
-    - sem:object-concept
-    - sem:ontological-categories
+    - sem:animacy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9267,15 +9296,14 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a semantic <u>category</u> of <a>objects</a> that denotes inanimate entities. <i>Example</i>: <i>rock</i> denotes an inanimate entity. (Section 3.1.2)
+    a semantic <u>category</u> of <a sem:object-concept>objects</a> that denotes inanimate entities. <i>Example</i>: <i>rock</i> denotes an inanimate entity. (Section 3.1.2)
   Examples:
     - <e>rock</e>
 
 - Id: cxn:inclusive-disjunctive-coordination
   Type: cxn
   Name: inclusive disjunctive coordination
-  Alias:
-    - inclusive disjunction
+  Alias: []
   SubtypeOf:
     - cxn:disjunctive-coordination
     - cxn:non-exhaustive-list-coordination
@@ -9459,14 +9487,19 @@
   Type: sem
   Name: independent time reference
   Alias: []
-  SubtypeOf:
-    - sem:semantic-relation
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -9577,19 +9610,20 @@
       Example: las chicas cantab<e>-an</e>
       Translation: the girls were singing
 
-- Id: sem:indirect-causation
+- Id: sem:indirect-causation-event
   Type: sem
-  Name: indirect causation
+  Name: indirect causation-event
   Alias: []
   SubtypeOf:
-    - sem:causative-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:indirect
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -9713,7 +9747,7 @@
     - instance
     - token
   SubtypeOf:
-    - sem:entity
+    - sem:identity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9826,7 +9860,7 @@
     - So I learned to sew books. They're really good books. It's just the covers that are rotten
 
 - Id: def:information-packaging
-  Type: def
+  Type: inf
   Name: information packaging
   Alias:
     - IP
@@ -9844,7 +9878,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the way that the <a>meaning</a> or semantic content is <dq>packaged</dq> for communication in discourse. <i>Example</i>: the <a>property</a> concept <i>huge</i> can be presented or packaged as a <a>predication</a> asserted of an <a>object</a> (<i>That tree is huge!</i>), or it can be used to <a inf:modification>modify</a> or add information about an object (<i>that huge tree over there</i>). (Sections 1.1, <b>1.3</b>)
+    the way that the <a>meaning</a> or semantic content is <dq>packaged</dq> for communication in discourse. <i>Example</i>: the <a>property</a> concept <i>huge</i> can be presented or packaged as a <a>predication</a> asserted of an <a sem:object-concept>object</a> (<i>That tree is huge!</i>), or it can be used to <a inf:modification>modify</a> or add information about an object (<i>that huge tree over there</i>). (Sections 1.1, <b>1.3</b>)
   Examples: []
 
 - Id: cxn:information-question
@@ -9914,14 +9948,16 @@
   Name: ingestion event
   Alias: []
   SubtypeOf:
-    - sem:controlled-activity
+    - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -9956,7 +9992,7 @@
   Name: initiator
   Alias: []
   SubtypeOf:
-    - sem:participant-role
+    - sem:participant
   ConstituentOf:
     - sem:causal-chain
   ExpressionOf: []
@@ -9987,7 +10023,10 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is manipulated by the agent to bring about an <a>event</a>. <i>Example</i>: in <i>Jack broke the window with a rock</i>, the agent (Jack) manipulates the rock to bring about the breaking of the window. (Sections 6.1.2, <b>6.2.1</b>)
@@ -10051,7 +10090,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -10117,7 +10158,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> in which an <a>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
+    a <a>strategy</a> in which an <a sem:object-concept>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
   Examples:
     - Language: Mokilese
       Example: <e>ngoah insigeh-di kijinlikkoan-oaw nih-mw</e>
@@ -10366,7 +10407,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:introverted
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -10469,14 +10511,15 @@
     - killing event
     - injuring event
   SubtypeOf:
-    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -10514,7 +10557,7 @@
   Alias:
     - kinship
   SubtypeOf:
-    - sem:possession-relation
+    - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -10760,9 +10803,9 @@
   Type: sem
   Name: location
   Alias: []
-  SubtypeOf:
+  SubtypeOf: []
+  ConstituentOf:
     - sem:figure-ground-spatial-relation
-  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -10898,7 +10941,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>referring phrase</a> that expresses a <a>figure--ground spatial relation</a> between the ground <a>object</a> functioning as the <a>modifier</a> and the figure functioning as the modified <a>referent</a>. <i>Example</i>: <i>the bicycle in the garage</i> is a locative modification construction. (Section 4.1.4)
+    a <a>referring phrase</a> that expresses a <a>figure--ground spatial relation</a> between the ground <a sem:object-concept>object</a> functioning as the <a>modifier</a> and the figure functioning as the modified <a>referent</a>. <i>Example</i>: <i>the bicycle in the garage</i> is a locative modification construction. (Section 4.1.4)
   Examples:
     - <e>the bicycle in the garage</e>
 
@@ -11079,7 +11122,11 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
+    - sem:experiential-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is negatively affected by the outcome of the <a>event</a>. <i>Example</i>: in <i>My car broke down on me</i>, I am a maleficiary: I am negatively affected by the outcome of the event. (Section 6.1.2)
@@ -11181,7 +11228,6 @@
     - manner of motion
   SubtypeOf:
     - sem:motion-event
-    - sem:manner-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11285,7 +11331,7 @@
     - <e>She watered the plants</e> before she ate lunch
 
 - Id: def:meaning
-  Type: def
+  Type: sem
   Name: meaning
   Alias:
     - semantic content
@@ -11313,7 +11359,7 @@
   Alias:
     - positive circumstantial
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11441,7 +11487,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>non-anchoring construction</a> that has a <a>mensural term</a> as the <a>object</a> <a>modifier</a> and a (semantic) <a>head</a> <a>referent</a> that is only <a>type identifiable</a>. <i>Example</i>: <i>a piece of cake</i> is a mensural construction in that the object modifier denotes only the type <q>cake</q>. Two strategies for mensural constructions are <a>mensural classifiers</a> and the <a>pseudo-partitive</a>. (Section 5.2.2)
+    a <a>non-anchoring construction</a> that has a <a>mensural term</a> as the <a sem:object-concept>object</a> <a>modifier</a> and a (semantic) <a>head</a> <a>referent</a> that is only <a>type identifiable</a>. <i>Example</i>: <i>a piece of cake</i> is a mensural construction in that the object modifier denotes only the type <q>cake</q>. Two strategies for mensural constructions are <a>mensural classifiers</a> and the <a>pseudo-partitive</a>. (Section 5.2.2)
   Examples:
     - <e>a piece of cake</e>
 
@@ -11471,9 +11517,9 @@
   Type: sem
   Name: mental space
   Alias: []
-  SubtypeOf:
-    - def:meaning
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:proposition
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -11561,7 +11607,7 @@
   Name: mirative
   Alias: []
   SubtypeOf:
-    - sem:modality
+    - sem:mental-space
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11586,6 +11632,7 @@
   Name: modality
   Alias: []
   SubtypeOf:
+    - sem:mental-space
     - sem:tamp
   ConstituentOf: []
   ExpressionOf: []
@@ -11826,19 +11873,20 @@
   Alias:
     - motion
   SubtypeOf:
-    - sem:monovalent-event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
     - str:middle-voice
-    - sem:ground
   Definition: >-
     a <a>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
   Examples:
@@ -11872,14 +11920,19 @@
   Name: necessary participant sharing
   Alias:
     - necessarily shared participant
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -11940,7 +11993,7 @@
   Name: negative circumstantial
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12294,8 +12347,7 @@
   Type: sem
   Name: noncausal event
   Alias: []
-  SubtypeOf:
-    - sem:event
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12305,8 +12357,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:causative-event
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> that has a participant that undergoes some sort of change, possibly brought about by an external cause <a>participant</a>; but the external cause participant is not conceptualized as a <a>central participant</a> in the event. <i>Example</i>: a window breaking is an example of a noncausal event. Noncausal events are contrasted with <a>causal events</a>. (Section 6.3.4)
   Examples: []
@@ -12377,7 +12428,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>construction</a> that expresses less common or <dq>disfavored</dq> (see Section 2.4) combinations of <a>information packaging</a> and <a>semantic content</a>. <i>Example</i>: <i>(Sam) is a barber</i> is an instance of a nonprototypical <a>predication</a> construction: it expresses predication of an <a>object</a> category. This is not the most common or <dq>favored</dq> type of predication; <a>action</a> predication is the <a>prototypical</a> predication construction. (Section 2.2.5)
+    a <a>construction</a> that expresses less common or <dq>disfavored</dq> (see Section 2.4) combinations of <a>information packaging</a> and <a>semantic content</a>. <i>Example</i>: <i>(Sam) is a barber</i> is an instance of a nonprototypical <a>predication</a> construction: it expresses predication of an <a sem:object-concept>object</a> category. This is not the most common or <dq>favored</dq> type of predication; <a>action</a> predication is the <a>prototypical</a> predication construction. (Section 2.2.5)
   Examples:
     - <e>Sam is a barber</e>
 
@@ -12400,7 +12451,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>predication</a> of concepts other than <a>action</a> concepts. The types of nonprototypical predication most commonly described include predication of <a>object</a> concepts, <a>property</a> concepts, <a>location</a>, and <a sem:possession-relation>possession</a>. <i>Example</i>: <i>Frieda is an engineer</i>, an instance of object predication, is an example of nonprototypical predication. (Section 10.1.1)
+    the <a>predication</a> of concepts other than <a>action</a> concepts. The types of nonprototypical predication most commonly described include predication of <a sem:object-concept>object</a> concepts, <a>property</a> concepts, <a>location</a>, and <a sem:possession-relation>possession</a>. <i>Example</i>: <i>Frieda is an engineer</i>, an instance of object predication, is an example of nonprototypical predication. (Section 10.1.1)
   Examples:
     - <e>Frieda is an engineer</e>
 
@@ -12409,7 +12460,7 @@
   Name: nonrelational
   Alias: []
   SubtypeOf:
-    - sem:entity
+    - sem:relationality
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12566,7 +12617,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>head</a> of a nominal phrase -- that is, <a>referring phrase</a> -- that denotes an <a>object</a>. <i>Example</i>: the word <i>violin</i> in the referring phrase <i>an old violin</i> is a noun -- it is an object concept that is the head of the referring phrase. (Sections 2.2.3, 3.1)
+    the <a>head</a> of a nominal phrase -- that is, <a>referring phrase</a> -- that denotes an <a sem:object-concept>object</a>. <i>Example</i>: the word <i>violin</i> in the referring phrase <i>an old violin</i> is a noun -- it is an object concept that is the head of the referring phrase. (Sections 2.2.3, 3.1)
   Examples:
     - an old <e>violin</e>
 
@@ -12719,9 +12770,7 @@
   Type: sem
   Name: number
   Alias: []
-  SubtypeOf:
-    - sem:property-concept
-    - sem:ontological-categories
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12742,7 +12791,7 @@
   Name: numeral
   Alias: []
   SubtypeOf:
-    - sem:relational
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12754,7 +12803,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a word that specifies the precise cardinality of a set of referents. Numerals most typically are packaged as modifiers. Two common types of numerals are <a>cardinal numerals</a> and <a>ordinal numerals</a> (there are other types not discussed here); see also <a>vague numerals</a>. <i>Example</i>: in <i>three women, three</i> is a cardinal numeral functioning as a modifier of <i>women</i>. (Section 4.1.3)
+    a word that specifies the precise cardinality of a set of referents. Numerals most typically are packaged as modifiers. Two common types of numerals are <a sem:cardinal-numeral>cardinal numerals</a> and <a sem:ordinal-numeral>ordinal numerals</a> (there are other types not discussed here); see also <a sem:vague-numeral>vague numerals</a>. <i>Example</i>: in <i>three women, three</i> is a cardinal numeral functioning as a modifier of <i>women</i>. (Section 4.1.3)
   Examples:
     - <e>three</e> women
 
@@ -12785,17 +12834,19 @@
   Name: object concept
   Alias: []
   SubtypeOf:
-    - sem:nonrelational
-    - sem:stable
-    - sem:stative
+    - sem:entity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
-  FillerOf: []
+  ValueOf:
+    - sem:nonrelational
+    - sem:stative
+    - sem:stable
+  FillerOf:
+    - sem:participant-role
   RoleOf: []
   AssociatedTo:
     - cxn:noun
@@ -12823,7 +12874,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>complex sentence construction</a> in which the <a>object</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted and Norio hit the dog</i> is an instance of an object identity <a>coordinate clause construction</a> -- the object referent for both clauses is the dog. (Section 16.5)
+    a <a>complex sentence construction</a> in which the <a sem:object-concept>object</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted and Norio hit the dog</i> is an instance of an object identity <a>coordinate clause construction</a> -- the object referent for both clauses is the dog. (Section 16.5)
   Examples:
     - <e>Sumie patted and Norio hit the dog</e>
 
@@ -12870,7 +12921,6 @@
   Type: cxn
   Name: object argument phrase
   Alias:
-    - object
     - object phrase
   SubtypeOf:
     - cxn:core-argument-phrase
@@ -13048,8 +13098,7 @@
   Type: sem
   Name: ontological categories
   Alias: []
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13070,8 +13119,7 @@
   Type: sem
   Name: ontology
   Alias: []
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13210,9 +13258,10 @@
 - Id: sem:ownership
   Type: sem
   Name: ownership
-  Alias: []
+  Alias:
+    - ownership relation
   SubtypeOf:
-    - sem:possession-relation
+    - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13236,16 +13285,15 @@
     - O role
     - P
     - O
-  SubtypeOf:
-    - sem:semantic-role
-  ConstituentOf:
-    - sem:bivalent-event
+  SubtypeOf: []
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:agentive-change-of-state-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -13306,7 +13354,7 @@
   Alias:
     - part--whole
   SubtypeOf:
-    - sem:possession-relation
+    - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13319,7 +13367,7 @@
   AssociatedTo:
     - cxn:inalienable-possession
   Definition: >-
-    a relation between an <a>object</a>, particularly an <a>inanimate</a> object, and a part of that object. <i>Example</i>: <i>a drawer of the desk</i> is a <a>possession construction</a> expressing a part--whole relation. The part--whole relation is a generalization of the <a>body part relation</a>. (Section 4.1.4)
+    a relation between an <a sem:object-concept>object</a>, particularly an <a>inanimate</a> object, and a part of that object. <i>Example</i>: <i>a drawer of the desk</i> is a <a>possession construction</a> expressing a part--whole relation. The part--whole relation is a generalization of the <a>body part relation</a>. (Section 4.1.4)
   Examples:
     - <e>a drawer of the desk</e>
 
@@ -13349,8 +13397,7 @@
   Type: sem
   Name: participant
   Alias: []
-  SubtypeOf:
-    - sem:entity
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13358,7 +13405,8 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
-  FillerOf: []
+  FillerOf:
+    - sem:participant-role
   RoleOf: []
   AssociatedTo:
     - inf:argument
@@ -13374,8 +13422,7 @@
   Alias:
     - microrole
     - Frame Element
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13384,7 +13431,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:event
   AssociatedTo: []
   Definition: >-
     the role that a particular <a>participant</a> performs in an <a>event</a> -- specifically, what the participant does, or has done to them, in the course of the event. <i>Example</i>: in the eating event, there is an <q>eater</q> participant role and a <q>food</q> participant role, and different things happen with the <q>eater</q> and the <q>food</q> in the eating event. (Sections 6.1.1, 6.1.2)
@@ -13401,7 +13449,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:event-relation
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -13431,7 +13480,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>deranked</a> <a>complex sentence</a> <a>strategy</a>. In addition, the stative predicate is predicated of, and ideally <a>indexes</a>, (one of) its argument(s). <i>Example</i>: in Sanuma <i>opi-i a kali-palo-ma</i> <q>He worked slowly</q> [lit. <q>being slow, he worked</q>] <i>opi-i</i> <q>be slow</q> is in a deranked form with suffix <i>-i</i>; the suffix, however, indicates that <i>opi</i> <q>slow</q> has the same subject as <i>kali-palo-ma</i> <q>worked</q> -- namely, <q>he</q>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is packaged as a separate primary <a>predication</a> <a cxn:coordinate-construction>coordinated</a> with the <a>event</a> predication using a <a>deranked</a> <a>complex sentence</a> <a>strategy</a>. In addition, the stative predicate is predicated of, and ideally <a>indexes</a>, (one of) its argument(s). <i>Example</i>: in Sanuma <i>opi-i a kali-palo-ma</i> <q>He worked slowly</q> [lit. <q>being slow, he worked</q>] <i>opi-i</i> <q>be slow</q> is in a deranked form with suffix <i>-i</i>; the suffix, however, indicates that <i>opi</i> <q>slow</q> has the same subject as <i>kali-palo-ma</i> <q>worked</q> -- namely, <q>he</q>. (Section 14.2)
   Examples:
     - Language: Sanuma
       Example: opi-i a kali-palo-ma
@@ -13552,16 +13601,16 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>anchoring construction</a> that has a <a cxn:piece-term>piece</a> <a>noun</a> as the <a>head</a> <a>referent</a> and an <a>anchor</a> as the <a>modifier</a>. Example: <i>a piece of the cake</i> is a partitive construction in that the <a>object</a> modifier <i>of the cake</i> is a particular <a>individual</a> and hence functions as an anchor. (Section 5.2.2)
+    an <a>anchoring construction</a> that has a <a cxn:piece-term>piece</a> <a>noun</a> as the <a>head</a> <a>referent</a> and an <a>anchor</a> as the <a>modifier</a>. Example: <i>a piece of the cake</i> is a partitive construction in that the <a sem:object-concept>object</a> modifier <i>of the cake</i> is a particular <a>individual</a> and hence functions as an anchor. (Section 5.2.2)
   Examples: []
 
 - Id: sem:passing
   Type: sem
   Name: passing
   Alias: []
-  SubtypeOf:
-    - sem:path-of-motion-event
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:motion-event
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -13655,7 +13704,7 @@
   Name: patient
   Alias: []
   SubtypeOf:
-    - sem:p-role
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13664,7 +13713,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that undergoes a significant change as a result of the event occurring. <i>Example</i>: in <i>Jack broke the window</i>, the window is broken as a result of the breaking event. (Section 6.1.2)
@@ -13706,13 +13756,14 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:dependent-time-reference
+  AssociatedTo: []
   Definition: >-
-    an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
+    an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a sem:object-concept>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
     - Tim <e>heard</e> the macaw
 
@@ -13784,12 +13835,12 @@
     certain <a>participants</a> are considered to be less central to the <a>event</a>, in particular those that do not initiate the event and those that are not strongly affected by the action. <i>Example</i>: in an eating event, the utensils used by the eater and the plate on which the food was located are peripheral participants in the event. Peripheral participants are quite diverse. (Section 6.1.1)
   Examples: []
 
-- Id: sem:person
+- Id: sem:person-deixis
   Type: sem
-  Name: person
+  Name: person deixis
   Alias: []
   SubtypeOf:
-    - sem:ontological-categories
+    - sem:contextual
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13802,7 +13853,6 @@
   AssociatedTo:
     - str:indexation-feature
     - str:person-indexation
-    - sem:participant
     - cxn:personal-pronoun
   Definition: >-
     a semantic category found in personal pronouns and indexation, specifying the referent with respect to their role in the <a>speech act situation</a>. The basic values are <a>first person</a>, <a>second person</a>, and <a>third person</a>. (Section 3.1.1)
@@ -13993,6 +14043,7 @@
   Name: polarity
   Alias: []
   SubtypeOf:
+    - sem:mental-space
     - sem:tamp
   ConstituentOf: []
   ExpressionOf: []
@@ -14260,7 +14311,7 @@
   Alias:
     - possessive relation
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14380,9 +14431,8 @@
   Alias:
     - possessor
   SubtypeOf:
-    - sem:participant-role
-  ConstituentOf:
-    - sem:possession-relation
+    - sem:semantic-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -14390,7 +14440,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:object-relation
   AssociatedTo: []
   Definition: >-
     the person who has control over the <a>possessum</a> in a <a>possession relation</a>. <i>Example</i>: in <i>I have a car</i>, I am the possessor. The possessor may also serve as the <a>modifier</a> in a <a>possessive modification construction</a>. (Sections 4.1.4, 10.4.2)
@@ -14405,9 +14456,8 @@
     - possessee role
     - possessum
   SubtypeOf:
-    - sem:participant-role
-  ConstituentOf:
-    - sem:possession-relation
+    - sem:semantic-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -14415,7 +14465,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:object-relation
   AssociatedTo: []
   Definition: >-
     the object that is controlled by the <a>possessor</a> in a <a>possession relation</a>. <i>Example</i>: in <i>I have a car</i>, the car is the possessum. The possessum may also serve as the head in a <a>possessive modification construction</a>. (Sections 4.1.4, 10.4.2)
@@ -14427,7 +14478,7 @@
   Name: posterior
   Alias: []
   SubtypeOf:
-    - sem:consecutive
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14906,7 +14957,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the subtype of <a inf:topic-comment>topic--comment</a> or <a>predication information packaging</a> in which membership in an <a>object</a> category is what is being predicated. <i>Example</i>: in <i>Bill is a teacher</i>, what is being predicated of Bill is that he is a member of the object category of teacher. In other words, <q>predicational</q> is synonymous with <a>object</a> <a>predication</a>. (Section 10.1.2)
+    the subtype of <a inf:topic-comment>topic--comment</a> or <a>predication information packaging</a> in which membership in an <a sem:object-concept>object</a> category is what is being predicated. <i>Example</i>: in <i>Bill is a teacher</i>, what is being predicated of Bill is that he is a member of the object category of teacher. In other words, <q>predicational</q> is synonymous with <a sem:object-concept>object</a> <a>predication</a>. (Section 10.1.2)
   Examples:
     - <e>Bill is a teacher</e>
 
@@ -15046,7 +15097,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a>manner</a> or other <a sem:stative>stative component</a> is <a def:information-packaging>packaged</a> as the sole <a>predication</a>, and the <a>event</a> is packaged as the <a>subject argument</a> of the manner predication. <i>Example</i>: in Mokilese <i>ah kijou dahr</i> <q>He runs fast</q> [lit. <q>his running is fast</q>], the speed is predicated of the event. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> or other <a sem:stative>stative component</a> is <a def:information-packaging>packaged</a> as the sole <a>predication</a>, and the <a>event</a> is packaged as the <a>subject argument</a> of the manner predication. <i>Example</i>: in Mokilese <i>ah kijou dahr</i> <q>He runs fast</q> [lit. <q>his running is fast</q>], the speed is predicated of the event. (Section 14.2)
   Examples:
     - Language: Mokilese
       Example: <e>ah kijou dahr</e>
@@ -15140,7 +15191,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>word order</a> strategy for <a>externally headed</a> <a>relative clause constructions</a> in which the <a>relative clause</a> precedes the <a>relative clause head</a>. <i>Example</i>: in Turkish [<i>Hasanın Sinana ver-diğ-i</i>] <i>patatesi yedim</i> <q>I ate the potato that Hasan gave to Sinan</q>, the <i>Hasanın Sinana ver-diğ-i</i> <q>[that] Hasan gave to Sinan</q> is prenominal because it precedes the relative clause head <i>patatesi</i> <q>potato</q>. The prenominal strategy is much less common than the <a>postnominal</a> strategy, and is strongly correlated with <a>object</a>--<a>verb</a> word order. (Section 19.2.2)
+    a <a>word order</a> strategy for <a>externally headed</a> <a>relative clause constructions</a> in which the <a>relative clause</a> precedes the <a>relative clause head</a>. <i>Example</i>: in Turkish [<i>Hasanın Sinana ver-diğ-i</i>] <i>patatesi yedim</i> <q>I ate the potato that Hasan gave to Sinan</q>, the <i>Hasanın Sinana ver-diğ-i</i> <q>[that] Hasan gave to Sinan</q> is prenominal because it precedes the relative clause head <i>patatesi</i> <q>potato</q>. The prenominal strategy is much less common than the <a>postnominal</a> strategy, and is strongly correlated with <a inf:object-argument>object</a>--<a>verb</a> word order. (Section 19.2.2)
   Examples:
     - Language: Turkish
       Example: '[Hasanın Sinana ver-diğ-i] patatesi yedim'
@@ -15258,7 +15309,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>presentational information packaging</a> of the spatial location relation in which the <a>figure</a> in the locative relation is introduced in the discourse, <a>anchored</a> by the <a>ground</a> <a>object</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
+    a <a>presentational information packaging</a> of the spatial location relation in which the <a>figure</a> in the locative relation is introduced in the discourse, <a>anchored</a> by the <a>ground</a> <a sem:object-concept>object</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
   Examples:
     - <e>In the room was a request for breakfast</e>
 
@@ -15563,16 +15614,19 @@
   Alias:
     - property concept
     - property
+    - quality
   SubtypeOf:
-    - sem:relational
-    - sem:stative
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
+  AttributeOf:
+    - sem:object-concept
+  ValueOf:
+    - sem:stative
+    - sem:stable
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -15580,7 +15634,7 @@
     - cxn:adjectival-phrase
     - cxn:predicate-adjectival-construction
   Definition: >-
-    a concept belonging to a <a>semantic class</a> of <a>relational</a>, 1-dimensional, usually scalar, and usually stable concepts. <i>Examples</i>: age, height, shape, and so on are property concepts -- they are defined on a 1-dimensional scale, and many of them are stable properties of the <a>object</a> they apply to. (Sections 2.1, and <b>4.1.1</b>, which includes an enumeration of types of property concepts)
+    a concept belonging to a <a>semantic class</a> of <a>relational</a>, 1-dimensional, usually scalar, and usually stable concepts. <i>Examples</i>: age, height, shape, and so on are property concepts -- they are defined on a 1-dimensional scale, and many of them are stable properties of the <a sem:object-concept>object</a> they apply to. (Sections 2.1, and <b>4.1.1</b>, which includes an enumeration of types of property concepts)
   Examples: []
 
 - Id: inf:property-predication
@@ -15654,8 +15708,7 @@
   Type: sem
   Name: proposition
   Alias: []
-  SubtypeOf:
-    - sem:event
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15665,8 +15718,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:tamp
+  AssociatedTo: []
   Definition: >-
     a concept that denotes an <a>event</a> (with its attendant <a>participants</a>, <a>tense</a>, <a>aspect</a>, <a>modality</a>, and <a>polarity</a>) that has a truth value in a particular context -- that is, it may be true or false in that context. <i>Example</i>: in <i>John believes that Mary took the car to the repair shop</i>, <i>Mary took the car to the repair shop</i> is a proposition; it has a truth value in the context of John's beliefs. A <a>pragmatic assertion</a> expresses a proposition that is taken to be true in the speaker's beliefs. (Sections 11.1, 18.2.2)
   Examples:
@@ -15688,8 +15740,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:independent-time-reference
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> of thinking, believing, and so on that expresses an attitude of the <a>experiencer</a> toward the truth of the <a>proposition</a> expressed by the <a>complement</a>. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. Special cases of propositional attitude events are <a>knowledge events</a> and <a>pretense events</a>. (Section 18.2.2)
   Examples:
@@ -15720,8 +15771,7 @@
   Type: sem
   Name: propositional content
   Alias: []
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15794,10 +15844,9 @@
   Type: sem
   Name: protasis
   Alias: []
-  SubtypeOf:
-    - sem:proposition
-    - sem:event
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:conditional-relation
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -15806,9 +15855,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:epistemic-stance
-    - sem:conditional-relation
+  AssociatedTo: []
   Definition: >-
     the proposition or <a>event</a> denoted by a <a cxn:protasis>protasis</a> clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a cxn:apodosis>apodosis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>protasis</q> can be distinguished as <q>protasis proposition</q> or <q>protasis event</q>. (Section 17.3.1)
   Examples:
@@ -15832,7 +15879,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>construction</a> that expresses the most common or <dq>favored</dq> (see Section 2.4) combinations of <a>information packaging</a> and <a>semantic content</a>. <i>Example</i>: <i>an old violin</i> is an instance of a prototypical <a inf:reference-referent>referring</a> construction: it expresses <a>reference</a> to an <a>object</a>, the most common or <dq>favored</dq> type of referent. (Section 2.2.3)
+    a <a>construction</a> that expresses the most common or <dq>favored</dq> (see Section 2.4) combinations of <a>information packaging</a> and <a>semantic content</a>. <i>Example</i>: <i>an old violin</i> is an instance of a prototypical <a inf:reference-referent>referring</a> construction: it expresses <a>reference</a> to an <a sem:object-concept>object</a>, the most common or <dq>favored</dq> type of referent. (Section 2.2.3)
   Examples:
     - <e>an old violin</e>
 
@@ -15843,8 +15890,7 @@
     - proximal deixis
     - proximal
   SubtypeOf:
-    - sem:deixis-deictic
-    - sem:ontological-categories
+    - sem:spatial-deixis
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15909,7 +15955,7 @@
   Name: punctual
   Alias: []
   SubtypeOf:
-    - sem:aspect
+    - sem:durativity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15930,7 +15976,7 @@
   Name: purpose
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15959,7 +16005,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -16057,7 +16105,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    <a>forms</a> that describe the quantity of the <a>instances</a> of a <a>type</a>, where the precise cardinality of the set is not specified. Quantifiers include <a>vague numerals</a>, <a>amount terms</a>, <a>proportional quantifiers</a>, and <a>distributive quantifiers</a>. (Section 4.1.3)
+    <a>forms</a> that describe the quantity of the <a>instances</a> of a <a>type</a>, where the precise cardinality of the set is not specified. Quantifiers include <a cxn:vague-numeral>vague numerals</a>, <a>amount terms</a>, <a cxn:proportional-quantifier>proportional quantifiers</a>, and <a cxn:distributive-quantifier>distributive quantifiers</a>. (Section 4.1.3)
   Examples: []
 
 - Id: cxn:question-pronoun
@@ -16132,8 +16180,7 @@
     - G role
     - R
     - G
-  SubtypeOf:
-    - sem:semantic-role
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16142,7 +16189,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:transfer-event
   AssociatedTo:
     - str:indirect-object-category
     - str:primary-object-category
@@ -16156,7 +16204,7 @@
   Name: recipient
   Alias: []
   SubtypeOf:
-    - sem:r-role
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16165,7 +16213,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that receives an <a>entity</a> from another participant. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the accountant is the recipient of the forms sent. (Section 6.1.2)
@@ -16205,7 +16254,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:reciprocal
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -16244,9 +16294,9 @@
   Type: sem
   Name: reference point
   Alias: []
-  SubtypeOf:
-    - def:meaning
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:property-concept
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -16257,7 +16307,6 @@
   RoleOf: []
   AssociatedTo:
     - cxn:antonyms
-    - sem:scalar-model
   Definition: >-
     a point on the scale for a property that indicates a <dq>normal</dq> value for the property concept word. Example: in regard to height of a person, <i>tall/short</i> means <q>taller/shorter than a <dq>normal</dq> height</q>. The reference point is relative: tall for a person is short for a tree. The reference point can be expressed overtly, as in <i>She's kind of short <b>for a basketball player</b></i>. The term <q>reference point</q> is also used as a synonym for <q>anchor</q>; we will avoid that use in this book. (Section 4.1.2)
   Examples: []
@@ -16328,7 +16377,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>head</a> of a <a>referring phrase</a>, which is not necessarily an <a>object</a>. <i>Example</i>: in <i>Hiking in the desert is wonderful</i>, <i>hiking</i> is a referent expression. (Section 2.2.4)
+    the <a>head</a> of a <a>referring phrase</a>, which is not necessarily an <a sem:object-concept>object</a>. <i>Example</i>: in <i>Hiking in the desert is wonderful</i>, <i>hiking</i> is a referent expression. (Section 2.2.4)
   Examples:
     - <e>Hiking</e> in the desert is wonderful
 
@@ -16400,8 +16449,7 @@
 - Id: sem:reflexive-event
   Type: sem
   Name: reflexive event
-  Alias:
-    - reflexive
+  Alias: []
   SubtypeOf:
     - sem:event
   ConstituentOf: []
@@ -16410,7 +16458,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:reflexive
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -16446,7 +16495,7 @@
   Name: relational
   Alias: []
   SubtypeOf:
-    - sem:entity
+    - sem:relationality
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16718,19 +16767,21 @@
   Alias:
     - removal
   SubtypeOf:
-    - sem:event
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
+    - sem:trivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    an <a>event</a> describing removal of an <a>object</a> from another object. <i>Example</i>: scrubbing is a removal event. (Section 7.3.2)
+    an <a>event</a> describing removal of an <a sem:object-concept>object</a> from another object. <i>Example</i>: scrubbing is a removal event. (Section 7.3.2)
   Examples: []
 
 - Id: cxn:removal-verb
@@ -16915,8 +16966,7 @@
 - Id: sem:result-event
   Type: sem
   Name: result event
-  Alias:
-    - result
+  Alias: []
   SubtypeOf:
     - sem:event
   ConstituentOf: []
@@ -16925,7 +16975,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:result
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -16997,7 +17048,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>construction</a> consists of <a>elements</a>, each of which describes a role that expresses a particular <a>function</a> in a construction. <i>Example</i>: in the English Predicate Adjective Construction [<sc>Sbj</sc> <i>be</i> <sc>PredAdj</sc>], illustrated by <i>She is intelligent</i>, the label <sc>Sbj</sc> describes a role <a inf:reference-referent>referring</a> to an <a>object</a>, and <sc>PredAdj</sc> describes a role occurring after <i>be</i> that <a>predicates</a> a <a>property</a> of the object referred to in the Subject role. (Section 1.1)
+    a <a>construction</a> consists of <a>elements</a>, each of which describes a role that expresses a particular <a>function</a> in a construction. <i>Example</i>: in the English Predicate Adjective Construction [<sc>Sbj</sc> <i>be</i> <sc>PredAdj</sc>], illustrated by <i>She is intelligent</i>, the label <sc>Sbj</sc> describes a role <a inf:reference-referent>referring</a> to an <a sem:object-concept>object</a>, and <sc>PredAdj</sc> describes a role occurring after <i>be</i> that <a>predicates</a> a <a>property</a> of the object referred to in the Subject role. (Section 1.1)
   Examples: []
 
 - Id: sem:s-role
@@ -17047,7 +17098,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the degree of attention directed to a <a>referent</a> by the interlocutors at a given point in the discourse. <i>Example</i>: it is generally the case that, in a sentence like <i>He ate the cookies</i>, the <a>subject</a> referent is more salient than the <a>object</a> referent in discourse. Salience is also considered to vary across different <a>object concepts</a>, other things being equal: people are more interested in other people, somewhat less so in <a>animate</a> objects, and less still in <a>inanimate</a> objects. Salience is the motivation for the <a>Animacy Hierarchy</a> and the <a>Extended Animacy Hierarchy</a>. (Section 6.1.1)
+    the degree of attention directed to a <a>referent</a> by the interlocutors at a given point in the discourse. <i>Example</i>: it is generally the case that, in a sentence like <i>He ate the cookies</i>, the <a>subject</a> referent is more salient than the <a inf:object-argument>object</a> referent in discourse. Salience is also considered to vary across different <a>object concepts</a>, other things being equal: people are more interested in other people, somewhat less so in <a>animate</a> objects, and less still in <a>inanimate</a> objects. Salience is the motivation for the <a>Animacy Hierarchy</a> and the <a>Extended Animacy Hierarchy</a>. (Section 6.1.1)
   Examples:
     - He ate the cookies
 
@@ -17141,14 +17192,19 @@
   Type: sem
   Name: scalar model
   Alias: []
-  SubtypeOf:
-    - def:meaning
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal
+    - sem:conditional-relation
+    - sem:concessive-relation
+    - sem:concessive-conditional-relation
+    - sem:comparative-conditional-relation
+    - sem:let-alone-relation
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -17164,8 +17220,7 @@
 - Id: cxn:second-person-pronoun
   Type: cxn
   Name: second person pronoun
-  Alias:
-    - second person
+  Alias: []
   SubtypeOf:
     - cxn:personal-pronoun
   ConstituentOf: []
@@ -17371,33 +17426,12 @@
     a model for representing semantic relationships among functions that are <a>co-expressed</a> across the world's languages. The semantic relationships form a <a>conceptual space</a> that is represented in a network (in mathematical terms, a graph). The co-expression of functions by a particular language form is represented by a <a>semantic map</a> encircling the nodes of the graph/network that represent the co-expressed functions. (Section 3.5)
   Examples: []
 
-- Id: sem:semantic-relation
-  Type: sem
-  Name: semantic relation
-  Alias: []
-  SubtypeOf:
-    - def:meaning
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  FillerOf: []
-  RoleOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
 - Id: sem:semantic-role
   Type: sem
   Name: semantic role
   Alias:
     - thematic role
-  SubtypeOf:
-    - sem:participant-role
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -17406,7 +17440,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:event
   AssociatedTo: []
   Definition: >-
     a generalization across <a>participant roles</a> that are semantically similar from one <a>event</a> class to another. <i>Example</i>: many events involve a person who volitionally initiates the event, and this more general role is typically called the <q>agent</q> role. (Section 6.1.1)
@@ -17450,7 +17485,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -17597,7 +17634,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>form</a> that specifies a member or members of a designated set, usually previously presented in the discourse or inferrable from it, which has some sort of ordering. <i>Example</i>: in <i>the next question</i>, <i>next</i> is a set-member term. Other set-member terms include <i>last</i>, <i>another, (the) other</i>, and the <a>ordinal numerals</a>. (Section 4.1.3)
+    a <a>form</a> that specifies a member or members of a designated set, usually previously presented in the discourse or inferrable from it, which has some sort of ordering. <i>Example</i>: in <i>the next question</i>, <i>next</i> is a set-member term. Other set-member terms include <i>last</i>, <i>another, (the) other</i>, and the <a cxn:ordinal-numeral>ordinal numerals</a>. (Section 4.1.3)
   Examples:
     - the <e>next</e> question
     - <e>last</e>
@@ -17650,7 +17687,7 @@
   Name: simple contrast
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -17767,7 +17804,7 @@
   Alias:
     - overlap
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -17838,19 +17875,20 @@
     a subtype of <a>modification</a> that picks out a particular referent by situating it in physical space (<a>deixis</a>) or in the (knowledge/belief) <a>mental space</a> of the interlocutors (<a>information status</a>). (Section 4.1.1)
   Examples: []
 
-- Id: sem:sociative-causation
+- Id: sem:sociative-causation-event
   Type: sem
-  Name: sociative causation
+  Name: sociative causation-event
   Alias: []
   SubtypeOf:
-    - sem:causative-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:sociative-causation
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -18224,14 +18262,16 @@
   Name: spontaneous event
   Alias: []
   SubtypeOf:
-    - sem:monovalent-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:spontaneous-event
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -18267,9 +18307,8 @@
   Name: stable
   Alias: []
   SubtypeOf:
-    - sem:aspect
-  ConstituentOf:
-    - sem:time-stability
+    - sem:transitoriness
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -18309,9 +18348,8 @@
   Name: standard
   Alias: []
   SubtypeOf:
-    - sem:participant-role
-  ConstituentOf:
-    - sem:gradable-predicative-scale
+    - sem:semantic-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -18319,7 +18357,9 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:comparative
+    - sem:equative
   AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or <a>equative construction</a>, the <a>referent</a> whose position on the <a>gradable predicative scale</a> serves as the reference point for the position of the <a>comparee</a> on the predicative scale. <i>Example</i>: in <i>Your cat is bigger than my dog</i>, the dog serves as the standard for the position of the cat on the scale of size -- it is asserted that the cat exceeds the dog on that scale. (Section 17.2.1)
@@ -18331,10 +18371,7 @@
   Name: state
   Alias:
     - state concept
-  SubtypeOf:
-    - sem:event
-    - sem:stative
-    - sem:transitory
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18354,9 +18391,8 @@
   Name: stative
   Alias: []
   SubtypeOf:
-    - sem:aspect
-  ConstituentOf:
-    - sem:time-stability
+    - sem:stativity
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -18396,8 +18432,7 @@
   Alias: []
   SubtypeOf:
     - sem:participant-role
-  ConstituentOf:
-    - sem:experiential-event
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -18405,7 +18440,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:experiential-event
   AssociatedTo: []
   Definition: >-
     the <a>participant</a> in an <a>experiential event</a> which stimulates the internal mental or bodily experience in the <a>experiencer</a>. <i>Example</i>: in <i>Freddy saw the bear</i>, the bear is the stimulus. (Sections 6.1.2, <b>7.4</b>)
@@ -18437,7 +18473,7 @@
     - <e>Dogs</e> frighten me
 
 - Id: def:strategy
-  Type: def
+  Type: str
   Name: strategy
   Alias:
     - strategies
@@ -18587,7 +18623,7 @@
     - sem:manner-of-motion-event
     - sem:contact-by-impact-event
   Definition: >-
-    an <a cxn:argument-structure-construction>argument structure</a> <a>strategy</a> that <a>co-expresses</a> the first <a>participant role</a> of the <a>event</a> with the <a>subject</a> of the <a>transitive construction</a>, but does not co-express the second participant role with the <a>object</a> of the transitive construction; that is, the second participant role is expressed by an <a>oblique phrase</a>. <i>Example</i>: <i>She walked toward the tree</i> is an instance of the the subject--oblique strategy for the <a>motion event</a> expressed by <i>walked</i> -- the <a>figure</a> participant <i>She</i> is expressed as a <a>subject phrase</a>, and the <a>ground</a> participant <i>the tree</i> is expressed as an oblique phrase. (Section 7.3.1)
+    an <a cxn:argument-structure-construction>argument structure</a> <a>strategy</a> that <a>co-expresses</a> the first <a>participant role</a> of the <a>event</a> with the <a>subject</a> of the <a>transitive construction</a>, but does not co-express the second participant role with the <a inf:object-argument>object</a> of the transitive construction; that is, the second participant role is expressed by an <a>oblique phrase</a>. <i>Example</i>: <i>She walked toward the tree</i> is an instance of the the subject--oblique strategy for the <a>motion event</a> expressed by <i>walked</i> -- the <a>figure</a> participant <i>She</i> is expressed as a <a>subject phrase</a>, and the <a>ground</a> participant <i>the tree</i> is expressed as an oblique phrase. (Section 7.3.1)
   Examples:
     - <e>She walked toward the tree</e>
 
@@ -18640,7 +18676,7 @@
   Name: subsequent role
   Alias: []
   SubtypeOf:
-    - sem:participant-role
+    - sem:participant
   ConstituentOf:
     - sem:causal-chain
   ExpressionOf: []
@@ -18653,7 +18689,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>participant role</a> that is subsequent to the participant role expressed as <a>object</a> in the <a>causal chain</a> / <a>causal structure</a> of an <a>event</a>. <i>Example</i>: in <i>Terry made lunch for Sandy</i>, Sandy is subsequent to the lunch in the foodmaking causal chain (Terry --> lunch --> Sandy), and the lunch is expressed as object. (Section 6.1.2)
+    a <a>participant role</a> that is subsequent to the participant role expressed as <a inf:object-argument>object</a> in the <a>causal chain</a> / <a>causal structure</a> of an <a>event</a>. <i>Example</i>: in <i>Terry made lunch for Sandy</i>, Sandy is subsequent to the lunch in the foodmaking causal chain (Terry --> lunch --> Sandy), and the lunch is expressed as object. (Section 6.1.2)
   Examples:
     - Terry made lunch for Sandy
 
@@ -18662,7 +18698,7 @@
   Name: substitutive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18684,7 +18720,7 @@
   Name: subtractive
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18890,16 +18926,15 @@
   Name: T role
   Alias:
     - T
-  SubtypeOf:
-    - sem:semantic-role
-  ConstituentOf:
-    - sem:transfer-event
+  SubtypeOf: []
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:transfer-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -18988,7 +19023,7 @@
   Alias:
     - telic event
   SubtypeOf:
-    - sem:aspect
+    - sem:telicity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19050,6 +19085,7 @@
   Name: tense
   Alias: []
   SubtypeOf:
+    - sem:mental-space
     - sem:tamp
   ConstituentOf: []
   ExpressionOf: []
@@ -19060,8 +19096,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:event
+  AssociatedTo: []
   Definition: >-
     a grammatical category, typically an inflectional category, that expresses the location of an event in time, usually with respect to the time of the speech act situation. In this textbook, tense is discussed primarily with respect to the expression of <a>TAMP</a> categories. (Sections 6.2.1, 13.4)
   Examples: []
@@ -19113,7 +19148,7 @@
   Name: theme
   Alias: []
   SubtypeOf:
-    - sem:t-role
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19122,7 +19157,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is the transferred <a>entity</a> in a <a>transfer event</a>. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the entity transferred is the forms. The term <q>theme</q> is also used for the participant functioning as the <a>figure</a> in <a>motion</a>, <a>application</a>, <a>removal</a>, and other events involving the movement of the participant. (Section 6.1.2)
@@ -19175,8 +19211,7 @@
 - Id: cxn:third-person-pronoun
   Type: cxn
   Name: third person pronoun
-  Alias:
-    - third person
+  Alias: []
   SubtypeOf:
     - cxn:personal-pronoun
   ConstituentOf: []
@@ -19198,8 +19233,7 @@
   Type: sem
   Name: time-stability
   Alias: []
-  SubtypeOf:
-    - sem:scalar-model
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19407,14 +19441,15 @@
   Name: transfer event
   Alias: []
   SubtypeOf:
-    - sem:trivalent-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:trivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -19550,9 +19585,8 @@
   Name: transitory
   Alias: []
   SubtypeOf:
-    - sem:aspect
-  ConstituentOf:
-    - sem:time-stability
+    - sem:transitoriness
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -19656,9 +19690,10 @@
 - Id: sem:type
   Type: sem
   Name: type
-  Alias: []
+  Alias:
+    - category
   SubtypeOf:
-    - sem:entity
+    - sem:identity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19733,7 +19768,7 @@
   AssociatedTo:
     - cxn:typifying-construction
   Definition: >-
-    the <a>information packaging</a> <a>function</a> whereby an <a>object</a> <a>modifier</a> subclassifies the <a>object concept</a> of the <a>head</a> <a>noun</a> that it <a inf:modification>modifies</a>. <i>Example</i>: in <i>women's magazine</i>, the object modifier expressed by <i>women's</i> subclassifies the type of magazine that the <a>referring phrase</a> as a whole refers to. Typifying is the object modifying variant of the <a>subcategorizing</a> function.
+    the <a>information packaging</a> <a>function</a> whereby an <a sem:object-concept>object</a> <a>modifier</a> subclassifies the <a>object concept</a> of the <a>head</a> <a>noun</a> that it <a inf:modification>modifies</a>. <i>Example</i>: in <i>women's magazine</i>, the object modifier expressed by <i>women's</i> subclassifies the type of magazine that the <a>referring phrase</a> as a whole refers to. Typifying is the object modifying variant of the <a>subcategorizing</a> function.
   Examples:
     - <e>women's</e> magazine
 
@@ -19757,7 +19792,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>nominal modification construction</a> that is not an <a>anchoring construction</a>, in that the <a>object</a> <a>modifier</a> is only <a>type identifiable</a>, the modifier--head combination refers to a subclass of a broader class, and the head cannot be identified via its relation to the modifier. <i>Example</i>: <i>women's magazine</i> is an instance of a typifying construction: <i>women</i> does not refer to a specific set of women; the phrase as a whole denotes a particular subclass of magazines; and the referent of <i>magazine</i> cannot be identified by the modifier <i>women's</i>. (Section 5.2.1)
+    a <a>nominal modification construction</a> that is not an <a>anchoring construction</a>, in that the <a sem:object-concept>object</a> <a>modifier</a> is only <a>type identifiable</a>, the modifier--head combination refers to a subclass of a broader class, and the head cannot be identified via its relation to the modifier. <i>Example</i>: <i>women's magazine</i> is an instance of a typifying construction: <i>women</i> does not refer to a specific set of women; the phrase as a whole denotes a particular subclass of magazines; and the referent of <i>magazine</i> cannot be identified by the modifier <i>women's</i>. (Section 5.2.1)
   Examples:
     - <e>women's magazine</e>
 
@@ -19793,7 +19828,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:uncontrolled
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -19827,7 +19863,7 @@
   Name: undirected change
   Alias: []
   SubtypeOf:
-    - sem:event
+    - sem:change-type
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19837,8 +19873,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:aspect
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> in which the change that a <a>participant</a> undergoes in the course of an event is not in any particular <dq>direction</dq>. <i>Example</i>: in <i>The ball was bouncing in the playpen</i>, the ball does not undergo an incremental or <dq>directed</dq> change in either vertical or horizontal direction: the vertical motion is up and down, and the horizontal motion goes in any direction. (Section 6.2.1)
   Examples:
@@ -19849,7 +19884,7 @@
   Name: unexpected co-occurrence
   Alias: []
   SubtypeOf:
-    - sem:semantic-relation
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19927,8 +19962,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - sem:independent-time-reference
+  AssociatedTo: []
   Definition: >-
     an <a>event</a> of saying in which one <a>participant</a> is the <u>speaker</u> of the utterance and another participant is the utterance itself. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. (Section 18.2.2)
   Examples:
@@ -19983,14 +20017,14 @@
     - valency/valency class
     - valency
     - valency class
-  SubtypeOf:
-    - sem:event
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:event
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -20157,7 +20191,7 @@
   AssociatedTo:
     - cxn:support-verb
   Definition: >-
-    a <a>strategy</a> used for <a>nonprototypical predication</a>, which uses a morpheme different from the <a>object</a> concept word, the <a>copula</a>, which is inflected for at least some of the categories that prototypical <a>predication</a> <a>constructions</a> in the language -- that is, predication constructions headed by a <a>verb</a> -- also inflect for. Example: in the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, <i>is</i> is a copula that inflects for <a>person</a>, <a>number</a>, and <a>tense</a> like English Verbs do. (Sections 1.4, <b>10.2</b>)
+    a <a>strategy</a> used for <a>nonprototypical predication</a>, which uses a morpheme different from the <a sem:object-concept>object</a> concept word, the <a>copula</a>, which is inflected for at least some of the categories that prototypical <a>predication</a> <a>constructions</a> in the language -- that is, predication constructions headed by a <a>verb</a> -- also inflect for. Example: in the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, <i>is</i> is a copula that inflects for <a>person</a>, <a>number</a>, and <a>tense</a> like English Verbs do. (Sections 1.4, <b>10.2</b>)
   Examples: []
 
 - Id: str:verbal-strategy
@@ -20178,7 +20212,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>strategy</a> of <a>recruiting</a> what was originally the <a>action</a> <a>predication</a> <a>construction</a> for <a>nonprototypical predication</a>. It is presumed that an originally action predication construction lacks an <a>auxiliary</a>, and it expresses certain grammatical categories, in particular <a>person indexation</a> and <a>negation</a>. <i>Example</i>: Nahuatl <i>ni-ti:citl</i> [<sc>1sg</sc>-doctor] <q>I am a doctor</q> recruits the action predication construction for <a>object</a> <a>predication</a>; cf. <i>ni-cho:ca</i> [<sc>1sg</sc>-cry] <q>I am crying</q>. (Section 10.2)
+    the <a>strategy</a> of <a>recruiting</a> what was originally the <a>action</a> <a>predication</a> <a>construction</a> for <a>nonprototypical predication</a>. It is presumed that an originally action predication construction lacks an <a>auxiliary</a>, and it expresses certain grammatical categories, in particular <a>person indexation</a> and <a>negation</a>. <i>Example</i>: Nahuatl <i>ni-ti:citl</i> [<sc>1sg</sc>-doctor] <q>I am a doctor</q> recruits the action predication construction for <a sem:object-concept>object</a> <a>predication</a>; cf. <i>ni-cho:ca</i> [<sc>1sg</sc>-cry] <q>I am crying</q>. (Section 10.2)
   Examples:
     - Language: Nahuatl
       Example: <e>ni-ti:citl</e>
@@ -20222,7 +20256,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:avalent
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -20527,7 +20562,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:entity
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -20539,8 +20575,10 @@
 - Id: sem:first-person
   Type: sem
   Name: first person
-  Alias: []
-  SubtypeOf: []
+  Alias:
+    - 1st person
+  SubtypeOf:
+    - sem:person-deixis
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20558,8 +20596,10 @@
 - Id: sem:second-person
   Type: sem
   Name: second person
-  Alias: []
-  SubtypeOf: []
+  Alias:
+    - 2nd person
+  SubtypeOf:
+    - sem:person-deixis
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20577,8 +20617,10 @@
 - Id: sem:third-person
   Type: sem
   Name: third person
-  Alias: []
-  SubtypeOf: []
+  Alias:
+    - 3rd person
+  SubtypeOf:
+    - sem:person-deixis
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20604,7 +20646,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:first-person
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
@@ -20623,7 +20666,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:second-person
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
@@ -20642,7 +20686,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:third-person
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
@@ -20660,7 +20705,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:entity
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -20673,7 +20719,8 @@
   Type: sem
   Name: quantity
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:entity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20692,7 +20739,8 @@
   Type: sem
   Name: manner
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:entity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20711,7 +20759,8 @@
   Type: sem
   Name: time
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:entity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20736,7 +20785,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -20755,7 +20805,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -20768,7 +20819,8 @@
   Type: sem
   Name: event relation
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:entity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20793,7 +20845,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:object-concept
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -20802,18 +20855,43 @@
   Examples: []
   FromGlossary: false
 
-- Id: sem:thing
+- Id: sem:person
   Type: sem
-  Name: thing
+  Name: person
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:object-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:human
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+
+- Id: sem:thing
+  Type: sem
+  Name: thing
+  Alias: []
+  SubtypeOf:
+    - sem:object-concept
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:animate
+    - sem:inanimate
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
@@ -20825,14 +20903,16 @@
   Type: sem
   Name: place
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:object-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:inanimate
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
@@ -20844,7 +20924,8 @@
   Type: sem
   Name: material
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20863,7 +20944,8 @@
   Type: sem
   Name: color
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20882,7 +20964,8 @@
   Type: sem
   Name: shape
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20901,7 +20984,8 @@
   Type: sem
   Name: age
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20920,7 +21004,8 @@
   Type: sem
   Name: value
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20939,7 +21024,8 @@
   Type: sem
   Name: dimension
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20958,7 +21044,8 @@
   Type: sem
   Name: physical property
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20977,7 +21064,8 @@
   Type: sem
   Name: human propensity
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:property-concept
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20996,7 +21084,8 @@
   Type: sem
   Name: cardinal numeral
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:numeral
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21015,7 +21104,8 @@
   Type: sem
   Name: vague numeral
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:entity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21034,7 +21124,8 @@
   Type: sem
   Name: amount
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21053,7 +21144,8 @@
   Type: sem
   Name: proportional quantifier
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21072,7 +21164,8 @@
   Type: sem
   Name: distributive quantifier
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21091,7 +21184,8 @@
   Type: sem
   Name: ordinal numeral
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:numeral
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21110,7 +21204,8 @@
   Type: sem
   Name: measure
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21129,7 +21224,8 @@
   Type: sem
   Name: container
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21148,7 +21244,8 @@
   Type: sem
   Name: group
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21167,7 +21264,8 @@
   Type: sem
   Name: piece
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21186,7 +21284,8 @@
   Type: sem
   Name: spieces
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21230,7 +21329,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal-structure
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21249,7 +21349,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal-structure
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21268,7 +21369,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal-structure
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21287,7 +21389,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal-structure
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21306,7 +21409,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:causal-structure
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21325,7 +21429,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21344,7 +21449,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21363,7 +21469,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -21376,7 +21483,8 @@
   Type: sem
   Name: qualitative event
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21395,7 +21503,8 @@
   Type: sem
   Name: spatial event
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21414,7 +21523,8 @@
   Type: sem
   Name: external cause
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21422,7 +21532,10 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
   FillerOf: []
   AssociatedTo: []
   Definition: ''
@@ -21433,7 +21546,8 @@
   Type: sem
   Name: affectee
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21441,7 +21555,11 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
+    - sem:experiential-event
   FillerOf: []
   AssociatedTo: []
   Definition: ''
@@ -21452,26 +21570,8 @@
   Type: sem
   Name: avalent
   Alias: []
-  SubtypeOf: []
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  RoleOf: []
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:creation
-  Type: sem
-  Name: creation
-  Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:valency-valency-class
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21490,33 +21590,17 @@
   Type: sem
   Name: caused motion
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
-  RoleOf: []
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:coordination
-  Type: sem
-  Name: coordination
-  Alias: []
-  SubtypeOf: []
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:bivalent-event
+    - sem:trivalent-event
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
@@ -21528,7 +21612,8 @@
   Type: sem
   Name: inclusive disjunction
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21547,13 +21632,609 @@
   Type: sem
   Name: exclusive disjunction
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:inactive-s-role
+  Type: sem
+  Name: inactive S role
+  Alias: []
+  SubtypeOf:
+    - sem:s-role
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf:
+    - sem:change-of-state-event
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:active-s-role
+  Type: sem
+  Name: active S role
+  Alias: []
+  SubtypeOf:
+    - sem:s-role
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf:
+    - sem:motion-event
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:transitory-state
+  Type: sem
+  Name: transitory state
+  Alias: []
+  SubtypeOf:
+    - sem:qualitative-event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:monovalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:location-event
+  Type: sem
+  Name: location event
+  Alias: []
+  SubtypeOf:
+    - sem:spatial-event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:monovalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:possession-event
+  Type: sem
+  Name: possession event
+  Alias: []
+  SubtypeOf:
+    - sem:event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:contact-event
+  Type: sem
+  Name: contact event
+  Alias: []
+  SubtypeOf:
+    - sem:qualitative-event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:bivalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:creation-event
+  Type: sem
+  Name: creation event
+  Alias: []
+  SubtypeOf:
+    - sem:qualitative-event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:bivalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:agentive-experience-event
+  Type: sem
+  Name: agentive experience
+  Alias: []
+  SubtypeOf:
+    - sem:experiential-event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:trivalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:agentive-ingestion-event
+  Type: sem
+  Name: agentive ingestion
+  Alias: []
+  SubtypeOf:
+    - sem:experiential-event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf:
+    - sem:trivalent-event
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:controlled
+  Type: sem
+  Name: controlled
+  Alias: []
+  SubtypeOf:
+    - sem:spontaneous
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:uncontrolled
+  Type: sem
+  Name: uncontrolled
+  Alias: []
+  SubtypeOf:
+    - sem:spontaneous
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:spontaneous
+  Type: sem
+  Name: spontaneous
+  Alias: []
+  SubtypeOf:
+    - sem:spontaneous
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:direct
+  Type: sem
+  Name: direct
+  Alias: []
+  SubtypeOf:
+    - sem:causal-directness
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:indirect
+  Type: sem
+  Name: indirect
+  Alias: []
+  SubtypeOf:
+    - sem:causal-directness
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:sociative-causation
+  Type: sem
+  Name: sociative causation
+  Alias: []
+  SubtypeOf:
+    - sem:causal-directness
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:reflexive
+  Type: sem
+  Name: reflexive
+  Alias: []
+  SubtypeOf:
+    - sem:causal-cyclicality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:reciprocal
+  Type: sem
+  Name: reciprocal
+  Alias: []
+  SubtypeOf:
+    - sem:causal-cyclicality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:chaining
+  Type: sem
+  Name: chaining
+  Alias: []
+  SubtypeOf:
+    - sem:causal-cyclicality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:collective
+  Type: sem
+  Name: collective
+  Alias: []
+  SubtypeOf:
+    - sem:causal-cyclicality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:introverted
+  Type: sem
+  Name: introverted
+  Alias: []
+  SubtypeOf:
+    - sem:causal-cyclicality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:extroverted
+  Type: sem
+  Name: extroverted
+  Alias: []
+  SubtypeOf:
+    - sem:causal-cyclicality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:attending
+  Type: sem
+  Name: attending
+  Alias: []
+  SubtypeOf:
+    - sem:causal-directionality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:affecting
+  Type: sem
+  Name: affecting
+  Alias: []
+  SubtypeOf:
+    - sem:causal-directionality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:experience
+  Type: sem
+  Name: experience
+  Alias: []
+  SubtypeOf:
+    - sem:causal-directionality
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:result
+  Type: sem
+  Name: result
+  Alias: []
+  SubtypeOf:
+    - sem:causal-chain-profile
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:comparative
+  Type: sem
+  Name: comparative
+  Alias: []
+  SubtypeOf:
+    - sem:event-relation
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:equative
+  Type: sem
+  Name: equative
+  Alias: []
+  SubtypeOf:
+    - sem:event-relation
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:let-alone-relation
+  Type: sem
+  Name: let alone relation
+  Alias: []
+  SubtypeOf:
+    - sem:event-relation
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:non-factive-event
+  Type: sem
+  Name: non-factive event
+  Alias: []
+  SubtypeOf: []
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf:
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
   ValueOf: []
   RoleOf: []
   FillerOf: []

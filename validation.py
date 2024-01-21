@@ -41,6 +41,11 @@ RELATION_CCTYPES = {
     "FillerOf":      { "sem":"sem" },
 }
 RELATION_KEYS = tuple(RELATION_CCTYPES.keys())
+STRUCTURAL_RELATIONS = tuple(
+    rel # only relations betwenn CCs of the same type
+    for rel, maps in RELATION_CCTYPES.items()
+    if all(k == v for k, v in maps.items())
+)
 
 
 def type_check(item) -> list[str]:
@@ -99,16 +104,17 @@ def validate_link_ids(item, glosses) -> list[str]:
 
 
 def validate_isolated(item: GlossItem, glosses: list[GlossItem]) -> list[str]:
-    out_degree = len(item['SubtypeOf']) + len(item['ConstituentOf']) + len(item['AttributeOf'])
+    out_degree = sum([len(item[relation]) for relation in STRUCTURAL_RELATIONS ])
     in_degree = sum(
         1
         for gloss in glosses.values()
-        for relid in (gloss['SubtypeOf'] + gloss['ConstituentOf'] + gloss['AttributeOf'])
-        if relid == item['Id']
+        for relation in STRUCTURAL_RELATIONS
+        for otherid in gloss[relation]
+        if otherid == item['Id']
     )
 
     if out_degree == 0 and in_degree == 0:
-        return [f"{item['Id']} is isolated: it has no taxonomic, partonomic or attribute relations with other concepts."]
+        return [f"{item['Id']} is isolated: it has structural relations with other concepts."]
     else:
         return []
 
