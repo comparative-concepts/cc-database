@@ -114,7 +114,7 @@ def validate_isolated(item: GlossItem, glosses: list[GlossItem]) -> list[str]:
     )
 
     if out_degree == 0 and in_degree == 0:
-        return [f"{item['Id']} is isolated: it has structural relations with other concepts."]
+        return [f"{item['Id']} is isolated: it has no structural relations with other concepts."]
     else:
         return []
 

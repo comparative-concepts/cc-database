@@ -3,17 +3,18 @@
   Name: A role
   Alias:
     - A
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:valency-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf:
-    - sem:agentive-change-of-state-event
+  ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:agentive-change-of-state-event
   AssociatedTo:
     - str:active-category
     - str:ergative-category
@@ -256,14 +257,14 @@
   Type: sem
   Name: achievement
   Alias: []
-  SubtypeOf:
-    - sem:aspect
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -961,7 +962,7 @@
   Name: affecting event
   Alias: []
   SubtypeOf:
-    - sem:experiential-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1076,6 +1077,7 @@
   Name: agentive change of state event
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
@@ -1812,6 +1814,7 @@
     - application
     - putting event
   SubtypeOf:
+    - sem:event
     - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
@@ -1945,7 +1948,8 @@
   Type: sem
   Name: apprehensional
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2228,7 +2232,7 @@
   Name: attending event
   Alias: []
   SubtypeOf:
-    - sem:experiential-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2634,6 +2638,7 @@
   Name: bodily action
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
@@ -2641,7 +2646,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -2654,7 +2660,8 @@
   Name: bodily motion event
   Alias: []
   SubtypeOf:
-    - sem:spatial-event
+    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2721,6 +2728,7 @@
     - body care
     - grooming event
   SubtypeOf:
+    - sem:event
     - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
@@ -2768,7 +2776,7 @@
   Alias:
     - body part
   SubtypeOf:
-    - sem:object-relation
+    - sem:possession-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2795,7 +2803,8 @@
     - locative stative event
     - locative stative
   SubtypeOf:
-    - sem:spatial-event
+    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -3049,9 +3058,9 @@
   Type: sem
   Name: causative event
   Alias: []
-  SubtypeOf:
-    - sem:event
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - sem:causal-structure
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -3110,7 +3119,10 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:qualitative-event
+    - sem:spatial-event
+    - sem:transfer-event
   AssociatedTo: []
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a>, usually an event, that causes the <a>event</a> expressed by the <a>predicate</a>. <i>Example</i>: in <i>The house collapsed from neglect</i>, the neglect is the cause of the house collapsing. (Section 6.1.2)
@@ -3122,9 +3134,8 @@
   Name: causee
   Alias: []
   SubtypeOf:
-    - sem:participant-role
-  ConstituentOf:
-    - sem:causative-event
+    - sem:semantic-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -3148,9 +3159,8 @@
   Name: causer
   Alias: []
   SubtypeOf:
-    - sem:participant-role
-  ConstituentOf:
-    - sem:causative-event
+    - sem:semantic-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -3240,6 +3250,7 @@
     - assume position event
     - change in posture event
   SubtypeOf:
+    - sem:event
     - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
@@ -3293,6 +3304,7 @@
     - COS event
     - COS
   SubtypeOf:
+    - sem:event
     - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
@@ -3506,6 +3518,7 @@
   Alias:
     - cognition
   SubtypeOf:
+    - sem:event
     - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
@@ -3619,6 +3632,7 @@
   Alias:
     - combining
   SubtypeOf:
+    - sem:event
     - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
@@ -3934,8 +3948,8 @@
   ValueOf: []
   FillerOf: []
   RoleOf:
-    - sem:comparative
-    - sem:equative
+    - sem:comparative-relation
+    - sem:equative-relation
   AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or <a>equative construction</a>, the <a>referent</a> whose position on the <a>gradable predicative scale</a> is specified relative to the position of the <a>standard</a> on the predicative scale. <i>Example</i>: in the comparative construction <i>Your cat is bigger than my dog</i>, the cat is the comparee -- it is asserted to exceed the dog on the scale of size. (Sections 17.2.1, 17.2.4)
@@ -4727,7 +4741,7 @@
   Alias:
     - contact by impact
   SubtypeOf:
-    - sem:qualitative-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4814,7 +4828,7 @@
   Name: content causal relation
   Alias: []
   SubtypeOf:
-    - sem:causal
+    - sem:causal-link
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4835,14 +4849,14 @@
   Name: contextual
   Alias:
     - deictic
-  SubtypeOf:
-    - sem:entity
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:entity
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -5398,7 +5412,7 @@
   Name: damage event
   Alias: []
   SubtypeOf:
-    - sem:qualitative-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6762,6 +6776,7 @@
   Name: emotion event
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
@@ -6935,7 +6950,7 @@
   Name: epistemic causal relation
   Alias: []
   SubtypeOf:
-    - sem:causal
+    - sem:causal-link
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7216,7 +7231,7 @@
   SubtypeOf:
     - sem:entity
   ConstituentOf:
-    - sem:proposition
+    - sem:propositional-content
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -7550,7 +7565,7 @@
   Name: experience event
   Alias: []
   SubtypeOf:
-    - sem:experiential-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7919,7 +7934,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:positive-epistemic-stance
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -7995,8 +8011,7 @@
   Alias: []
   SubtypeOf:
     - sem:semantic-role
-  ConstituentOf:
-    - sem:figure-ground-spatial-relation
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8006,6 +8021,7 @@
   FillerOf: []
   RoleOf:
     - sem:spatial-event
+    - sem:figure-ground-spatial-relation
   AssociatedTo: []
   Definition: >-
     the object in a spatial scene whose location or path of motion is being described relative to a <a>ground</a>. <i>Example</i>: in <i>Meagan ran into the cave</i>, Meagan is the figure, and her path of motion is described relative to the location of the cave. (Sections 7.3.1, 14.5)
@@ -8039,17 +8055,20 @@
   Type: sem
   Name: figure--ground spatial relation
   Alias:
-    - locative relation
+    - location relation
     - spatial figure--ground relation
   SubtypeOf:
+    - sem:event
     - sem:object-relation
+    - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -8455,7 +8474,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:deontic-modality
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -8672,8 +8692,8 @@
     - predicative scale
   SubtypeOf: []
   ConstituentOf:
-    - sem:comparative
-    - sem:equative
+    - sem:comparative-relation
+    - sem:equative-relation
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8714,8 +8734,7 @@
   Alias: []
   SubtypeOf:
     - sem:semantic-role
-  ConstituentOf:
-    - sem:figure-ground-spatial-relation
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8725,6 +8744,7 @@
   FillerOf: []
   RoleOf:
     - sem:spatial-event
+    - sem:figure-ground-spatial-relation
   AssociatedTo:
     - cxn:locative-phrase
   Definition: >-
@@ -9948,7 +9968,7 @@
   Name: ingestion event
   Alias: []
   SubtypeOf:
-    - sem:experiential-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -10511,7 +10531,7 @@
     - killing event
     - injuring event
   SubtypeOf:
-    - sem:qualitative-event
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -10557,7 +10577,7 @@
   Alias:
     - kinship
   SubtypeOf:
-    - sem:object-relation
+    - sem:possession-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -10804,8 +10824,7 @@
   Name: location
   Alias: []
   SubtypeOf: []
-  ConstituentOf:
-    - sem:figure-ground-spatial-relation
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -10814,8 +10833,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:location-clause
+  AssociatedTo: []
   Definition: >-
     the combination of the <a>path</a> and the <a>ground</a> in a <a sem:figure-ground-spatial-relation>spatial figure--ground (locative) relation</a>. <i>Example</i>: in <i>The book is on the table</i>, the location is on the table -- that is, the spatial location of the figure (the book) as defined by the path relating the location of the figure to the location of the ground. (Section 10.4.1)
   Examples:
@@ -11181,7 +11199,6 @@
   Name: manner complex predicate
   Alias:
     - manner adverb
-    - manner
   SubtypeOf:
     - cxn:stative-complex-predicate
   ConstituentOf: []
@@ -11211,7 +11228,8 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:manner-profile
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -11873,6 +11891,7 @@
   Alias:
     - motion
   SubtypeOf:
+    - sem:event
     - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
@@ -12776,7 +12795,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:entity
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -13095,7 +13115,7 @@
     - <e>She ate</e>
 
 - Id: sem:ontological-categories
-  Type: sem
+  Type: def
   Name: ontological categories
   Alias: []
   SubtypeOf: []
@@ -13108,15 +13128,13 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:determiner
-    - cxn:pronoun
+  AssociatedTo: []
   Definition: >-
     very broad semantic categories that play a role in distinguishing different types of pronouns and determiners. <i>Examples</i>: the ontological categories include: person, thing, place, time, quantity, and manner (this is not an exhaustive list). (Section 3.1.3)
   Examples: []
 
 - Id: sem:ontology
-  Type: sem
+  Type: def
   Name: ontology
   Alias: []
   SubtypeOf: []
@@ -13152,7 +13170,7 @@
   AssociatedTo:
     - str:deranked-deranking
   Definition: >-
-    the <a>strategy</a> for <a>comparative</a> (and possibly <a cxn:equative-construction>equative</a>) <a>constructions</a> which metaphorically expresses the comparison of the <a>comparee</a> and the <a>standard</a> on the <a>gradable predicative scale</a> as a spatial <a>path</a> between the comparee (as spatial <a>figure</a>) and the standard (as the <a>ground</a>). In comparative constructions, the ordered strategy <a>recruits</a> a <a>different-subject</a>, <a str:absolute-deranking-system>absolutely deranked</a>, <a>simultaneous</a>, or <a>consecutive</a> <u>temporal</u> <a>complex sentence construction</a> to express comparison. The <a str:separative-comparative>separative</a>, <a str:allative-comparative>allative</a>, and <a>locative comparatives</a> are examples of the ordered strategy. (Section 17.2.3)
+    the <a>strategy</a> for <a cxn:comparative-construction>comparative</a> (and possibly <a cxn:equative-construction>equative</a>) <a>constructions</a> which metaphorically expresses the comparison of the <a>comparee</a> and the <a>standard</a> on the <a>gradable predicative scale</a> as a spatial <a>path</a> between the comparee (as spatial <a>figure</a>) and the standard (as the <a>ground</a>). In comparative constructions, the ordered strategy <a>recruits</a> a <a>different-subject</a>, <a str:absolute-deranking-system>absolutely deranked</a>, <a>simultaneous</a>, or <a>consecutive</a> <u>temporal</u> <a>complex sentence construction</a> to express comparison. The <a str:separative-comparative>separative</a>, <a str:allative-comparative>allative</a>, and <a>locative comparatives</a> are examples of the ordered strategy. (Section 17.2.3)
   Examples: []
 
 - Id: cxn:ordinal-numeral
@@ -13261,7 +13279,7 @@
   Alias:
     - ownership relation
   SubtypeOf:
-    - sem:object-relation
+    - sem:possession-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13285,17 +13303,18 @@
     - O role
     - P
     - O
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:valency-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf:
-    - sem:agentive-change-of-state-event
+  ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:agentive-change-of-state-event
   AssociatedTo:
     - str:absolutive-category
     - str:accusative-category
@@ -13354,7 +13373,7 @@
   Alias:
     - part--whole
   SubtypeOf:
-    - sem:object-relation
+    - sem:possession-relation
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13398,7 +13417,8 @@
   Name: participant
   Alias: []
   SubtypeOf: []
-  ConstituentOf: []
+  ConstituentOf:
+    - sem:propositional-content
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -13410,7 +13430,6 @@
   RoleOf: []
   AssociatedTo:
     - inf:argument
-    - sem:participant-role
   Definition: >-
     <a>entities</a> that play a role in an <a>event</a>. <i>Example</i>: in <i>Janet set the books on the floor</i>, Janet, the books, and the floor are participants in the setting event. (Section 6.1.1)
   Examples:
@@ -13420,6 +13439,7 @@
   Type: sem
   Name: participant role
   Alias:
+    - case
     - microrole
     - Frame Element
   SubtypeOf: []
@@ -13442,8 +13462,7 @@
   Type: sem
   Name: participant-oriented
   Alias: []
-  SubtypeOf:
-    - sem:state
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13749,6 +13768,7 @@
   Alias:
     - perception
   SubtypeOf:
+    - sem:event
     - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
@@ -13909,14 +13929,14 @@
   Type: sem
   Name: phasal aspect
   Alias: []
-  SubtypeOf:
-    - sem:aspect
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:aspect
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -14311,6 +14331,7 @@
   Alias:
     - possessive relation
   SubtypeOf:
+    - sem:event
     - sem:object-relation
   ConstituentOf: []
   ExpressionOf: []
@@ -14318,7 +14339,9 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:monovalent-event
+    - sem:bivalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -14441,7 +14464,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf:
-    - sem:object-relation
+    - sem:possession-relation
   AssociatedTo: []
   Definition: >-
     the person who has control over the <a>possessum</a> in a <a>possession relation</a>. <i>Example</i>: in <i>I have a car</i>, I am the possessor. The possessor may also serve as the <a>modifier</a> in a <a>possessive modification construction</a>. (Sections 4.1.4, 10.4.2)
@@ -14466,7 +14489,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf:
-    - sem:object-relation
+    - sem:possession-relation
   AssociatedTo: []
   Definition: >-
     the object that is controlled by the <a>possessor</a> in a <a>possession relation</a>. <i>Example</i>: in <i>I have a car</i>, the car is the possessum. The possessum may also serve as the head in a <a>possessive modification construction</a>. (Sections 4.1.4, 10.4.2)
@@ -15617,6 +15640,7 @@
     - quality
   SubtypeOf:
     - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15627,6 +15651,7 @@
   ValueOf:
     - sem:stative
     - sem:stable
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -15772,7 +15797,8 @@
   Name: propositional content
   Alias: []
   SubtypeOf: []
-  ConstituentOf: []
+  ConstituentOf:
+    - sem:proposition
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -16180,7 +16206,8 @@
     - G role
     - R
     - G
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:valency-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16767,6 +16794,7 @@
   Alias:
     - removal
   SubtypeOf:
+    - sem:event
     - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
@@ -16976,7 +17004,7 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf:
-    - sem:result
+    - sem:result-profile
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -17057,9 +17085,8 @@
   Alias:
     - S
   SubtypeOf:
-    - sem:semantic-role
-  ConstituentOf:
-    - sem:monovalent-event
+    - sem:valency-role
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -17067,7 +17094,8 @@
   AttributeOf: []
   ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:change-of-state-event
   AssociatedTo:
     - str:active-category
     - str:absolutive-category
@@ -17162,7 +17190,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    a <a>strategy</a> for expressing <a>events</a> such that the manner of how the event comes about is expressed by a <a>manner verb</a>, and the <a>result</a> <a>state</a> (including also paths of motion) is expressed in a <a>satellite</a>. <i>Example</i>: <i>Sam strode into the room</i> uses the satellite-framing strategy -- <i>stride</i> is a manner of motion verb, and the path of motion is expressed by the oblique phrase <i>into the room</i>. (Section 7.3.1)
+    a <a>strategy</a> for expressing <a>events</a> such that the manner of how the event comes about is expressed by a <a>manner verb</a>, and the <a sem:result-event>result state</a> (including also paths of motion) is expressed in a <a>satellite</a>. <i>Example</i>: <i>Sam strode into the room</i> uses the satellite-framing strategy -- <i>stride</i> is a manner of motion verb, and the path of motion is expressed by the oblique phrase <i>into the room</i>. (Section 7.3.1)
   Examples:
     - <e>Sam strode into the room</e>
 
@@ -17199,10 +17227,7 @@
   ModeledOn: []
   FunctionOf: []
   AttributeOf:
-    - sem:causal
     - sem:conditional-relation
-    - sem:concessive-relation
-    - sem:concessive-conditional-relation
     - sem:comparative-conditional-relation
     - sem:let-alone-relation
   ValueOf: []
@@ -17478,6 +17503,7 @@
   Alias:
     - bodily sensation event
   SubtypeOf:
+    - sem:event
     - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
@@ -18133,7 +18159,7 @@
   Name: speech act causal relation
   Alias: []
   SubtypeOf:
-    - sem:causal
+    - sem:causal-link
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18270,8 +18296,7 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf:
-    - sem:spontaneous-event
-    - sem:monovalent-event
+    - sem:spontaneous
   FillerOf: []
   RoleOf: []
   AssociatedTo:
@@ -18358,8 +18383,8 @@
   ValueOf: []
   FillerOf: []
   RoleOf:
-    - sem:comparative
-    - sem:equative
+    - sem:comparative-relation
+    - sem:equative-relation
   AssociatedTo: []
   Definition: >-
     in a <a>comparative construction</a> or <a>equative construction</a>, the <a>referent</a> whose position on the <a>gradable predicative scale</a> serves as the reference point for the position of the <a>comparee</a> on the predicative scale. <i>Example</i>: in <i>Your cat is bigger than my dog</i>, the dog serves as the standard for the position of the cat on the scale of size -- it is asserted that the cat exceeds the dog on that scale. (Section 17.2.1)
@@ -18370,15 +18395,22 @@
   Type: sem
   Name: state
   Alias:
+    - transitory state
     - state concept
-  SubtypeOf: []
+    - temporary state
+  SubtypeOf:
+    - sem:event
+    - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf: []
+  ValueOf:
+    - sem:stative
+    - sem:transitory
+    - sem:monovalent-event
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -18431,7 +18463,7 @@
   Name: stimulus
   Alias: []
   SubtypeOf:
-    - sem:participant-role
+    - sem:semantic-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18926,17 +18958,18 @@
   Name: T role
   Alias:
     - T
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:valency-role
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf:
-    - sem:transfer-event
+  ValueOf: []
   FillerOf: []
-  RoleOf: []
+  RoleOf:
+    - sem:transfer-event
   AssociatedTo:
     - str:direct-object-category
     - str:secondary-object-category
@@ -19064,8 +19097,7 @@
   Type: sem
   Name: temporary state
   Alias: []
-  SubtypeOf:
-    - sem:state
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20746,7 +20778,8 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf: []
+  AttributeOf:
+    - sem:event
   ValueOf: []
   RoleOf: []
   FillerOf: []
@@ -20779,7 +20812,8 @@
   Type: sem
   Name: stativity
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:time-stability
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -20799,7 +20833,8 @@
   Type: sem
   Name: transitoriness
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:time-stability
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21085,6 +21120,7 @@
   Name: cardinal numeral
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:numeral
   ConstituentOf: []
   ExpressionOf: []
@@ -21185,6 +21221,7 @@
   Name: ordinal numeral
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:numeral
   ConstituentOf: []
   ExpressionOf: []
@@ -21304,7 +21341,8 @@
   Type: sem
   Name: object relation
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21591,6 +21629,7 @@
   Name: caused motion
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:spatial-event
   ConstituentOf: []
   ExpressionOf: []
@@ -21648,117 +21687,12 @@
   Examples: []
   FromGlossary: false
 
-- Id: sem:inactive-s-role
-  Type: sem
-  Name: inactive S role
-  Alias: []
-  SubtypeOf:
-    - sem:s-role
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  RoleOf:
-    - sem:change-of-state-event
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:active-s-role
-  Type: sem
-  Name: active S role
-  Alias: []
-  SubtypeOf:
-    - sem:s-role
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  RoleOf:
-    - sem:motion-event
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:transitory-state
-  Type: sem
-  Name: transitory state
-  Alias: []
-  SubtypeOf:
-    - sem:qualitative-event
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf:
-    - sem:monovalent-event
-  RoleOf: []
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:location-event
-  Type: sem
-  Name: location event
-  Alias: []
-  SubtypeOf:
-    - sem:spatial-event
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf:
-    - sem:monovalent-event
-  RoleOf: []
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:possession-event
-  Type: sem
-  Name: possession event
-  Alias: []
-  SubtypeOf:
-    - sem:event
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
-  RoleOf: []
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
 - Id: sem:contact-event
   Type: sem
   Name: contact event
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
@@ -21780,6 +21714,7 @@
   Name: creation event
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:qualitative-event
   ConstituentOf: []
   ExpressionOf: []
@@ -21801,6 +21736,7 @@
   Name: agentive experience
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
@@ -21822,6 +21758,7 @@
   Name: agentive ingestion
   Alias: []
   SubtypeOf:
+    - sem:event
     - sem:experiential-event
   ConstituentOf: []
   ExpressionOf: []
@@ -21843,7 +21780,7 @@
   Name: controlled
   Alias: []
   SubtypeOf:
-    - sem:spontaneous
+    - sem:causal-control
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21863,7 +21800,7 @@
   Name: uncontrolled
   Alias: []
   SubtypeOf:
-    - sem:spontaneous
+    - sem:causal-control
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -21883,7 +21820,7 @@
   Name: spontaneous
   Alias: []
   SubtypeOf:
-    - sem:spontaneous
+    - sem:causal-control
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -22138,9 +22075,9 @@
   Examples: []
   FromGlossary: false
 
-- Id: sem:result
+- Id: sem:manner-profile
   Type: sem
-  Name: result
+  Name: manner profile
   Alias: []
   SubtypeOf:
     - sem:causal-chain-profile
@@ -22158,10 +22095,31 @@
   Examples: []
   FromGlossary: false
 
-- Id: sem:comparative
+- Id: sem:result-profile
   Type: sem
-  Name: comparative
+  Name: result profile
   Alias: []
+  SubtypeOf:
+    - sem:causal-chain-profile
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:comparative-relation
+  Type: sem
+  Name: comparative relation
+  Alias:
+    - comparative
   SubtypeOf:
     - sem:event-relation
   ConstituentOf: []
@@ -22178,9 +22136,9 @@
   Examples: []
   FromGlossary: false
 
-- Id: sem:equative
+- Id: sem:equative-relation
   Type: sem
-  Name: equative
+  Name: equative relation
   Alias: []
   SubtypeOf:
     - sem:event-relation
@@ -22235,6 +22193,130 @@
     - sem:perception-event
     - sem:desiderative-event
     - sem:manipulative-event
+  ValueOf:
+    - sem:hypothetical
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:arrangement
+  Type: sem
+  Name: arrangement
+  Alias: []
+  SubtypeOf:
+    - sem:event
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:valency-role
+  Type: sem
+  Name: valency role
+  Alias: []
+  SubtypeOf: []
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf:
+    - sem:event
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:addition
+  Type: sem
+  Name: addition
+  Alias: []
+  SubtypeOf:
+    - sem:event-relation
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:substitution
+  Type: sem
+  Name: substitution
+  Alias: []
+  SubtypeOf:
+    - sem:event-relation
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:subtraction
+  Type: sem
+  Name: subtraction
+  Alias: []
+  SubtypeOf:
+    - sem:event-relation
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:causal-link
+  Type: sem
+  Name: causal link
+  Alias: []
+  SubtypeOf: []
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf:
+    - sem:causal
+    - sem:conditional-relation
+    - sem:concessive-relation
+    - sem:concessive-conditional-relation
   ValueOf: []
   RoleOf: []
   FillerOf: []
