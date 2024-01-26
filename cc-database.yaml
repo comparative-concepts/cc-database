@@ -7006,6 +7006,16 @@
     - sem:conditional-relation
     - sem:concessive-relation
     - sem:concessive-conditional-relation
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
+    - sem:purpose
+    - sem:apprehensional
+    - sem:means
+    - sem:negative-circumstantial
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -7922,20 +7932,13 @@
   Name: factive event
   Alias: []
   SubtypeOf: []
-  ConstituentOf:
-    - sem:utterance-event
-    - sem:propositional-attitude-event
-    - sem:evaluative-event
-    - sem:perception-event
-    - sem:desiderative-event
-    - sem:manipulative-event
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
-  ValueOf:
-    - sem:positive-epistemic-stance
+  ValueOf: []
   FillerOf: []
   RoleOf: []
   AssociatedTo: []
@@ -12964,7 +12967,7 @@
   Name: objective
   Alias: []
   SubtypeOf:
-    - sem:modality
+    - sem:epistemic-modality
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14246,7 +14249,8 @@
 - Id: sem:positive-epistemic-stance
   Type: sem
   Name: positive epistemic stance
-  Alias: []
+  Alias:
+    - factive
   SubtypeOf:
     - sem:epistemic-stance
   ConstituentOf: []
@@ -18664,7 +18668,7 @@
   Name: subjective
   Alias: []
   SubtypeOf:
-    - sem:modality
+    - sem:epistemic-modality
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -22169,32 +22173,6 @@
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
-  RoleOf: []
-  FillerOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
-- Id: sem:non-factive-event
-  Type: sem
-  Name: non-factive event
-  Alias: []
-  SubtypeOf: []
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf:
-    - sem:utterance-event
-    - sem:propositional-attitude-event
-    - sem:evaluative-event
-    - sem:perception-event
-    - sem:desiderative-event
-    - sem:manipulative-event
-  ValueOf:
-    - sem:hypothetical
   RoleOf: []
   FillerOf: []
   AssociatedTo: []
