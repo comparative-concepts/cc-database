@@ -30,13 +30,12 @@
   Name: A--not-A
   Alias: []
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:polarity-question
   ModeledOn: []
-  RecruitedFrom:
-    - cxn:alternative-question
+  RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -214,13 +213,12 @@
   Name: accusative alignment system
   Alias: []
   SubtypeOf:
-    - str:alignment-system
+    - str:transitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:transitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:intransitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -374,7 +372,7 @@
   Alias:
     - active alignment
   SubtypeOf:
-    - str:alignment-system
+    - str:system
   ConstituentOf: []
   ExpressionOf:
     - cxn:intransitive-construction
@@ -449,9 +447,10 @@
   Alias:
     - actual IP strategy
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:information-packaging-disalignment
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:nonprototypical-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -459,9 +458,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:topic-comment
-    - cxn:hanging-topic-phrase
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The actual IP strategy is to recruit the strategy used for the prototypical <a>semantic content</a> function of the <a>information packaging</a> function of the nonprototypical construction. <i>Example</i>: in the English Nominalization Construction exemplified by <i>the corporation's neglect of worker's rights</i>, the <a>action concept</a> <i>neglect</i> that is being <a inf:reference-referent>referred</a> to recruits the construction used for <a sem:object-concept>object</a> <a>reference</a>, the prototypical <a>referring phrase</a> -- it is preceded by the Possessive Phrase <i>the corporation's</i> and followed by the Genitive Oblique <i>of worker's rights</i>; contrast the different strategy found with the prototypical <a>action</a> <a>predication</a> construction <i>The corporation neglected worker's rights</i>. The actual IP strategy contrasts with the <a>semantic IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
   Examples:
@@ -706,8 +703,7 @@
   Type: cxn
   Name: admodifier
   Alias: []
-  SubtypeOf:
-    - def:construction
+  SubtypeOf: []
   ConstituentOf:
     - cxn:attributive-phrase
   ExpressionOf: []
@@ -730,13 +726,12 @@
   Alias:
     - genitive strategy
   SubtypeOf:
-    - str:internal-possessor-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:presentational-possession
   ModeledOn: []
-  RecruitedFrom:
-    - cxn:possessive-modification-construction
+  RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -758,8 +753,7 @@
   SubtypeOf:
     - str:flag-flagging
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:modification-construction
+  ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -1011,6 +1005,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -1118,11 +1113,9 @@
 - Id: str:agree-disagree-alignment-strategy
   Type: str
   Name: agree/disagree alignment strategy
-  Alias:
-    - agree alignment strategy
-    - disagree alignment strategy
+  Alias: []
   SubtypeOf:
-    - str:system
+    - str:polarity-response-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:negative-question-polarity-response
@@ -1217,8 +1210,7 @@
   Name: alignment system
   Alias:
     - alignment strategy
-  SubtypeOf:
-    - str:system
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1373,10 +1365,9 @@
     - anaphoric definite article
     - anaphoric article
   SubtypeOf:
-    - cxn:definite-article
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:modification-construction
+    - cxn:definite-article
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -1401,6 +1392,7 @@
   Alias: []
   SubtypeOf:
     - cxn:pronoun
+    - cxn:definite-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1423,7 +1415,7 @@
   Name: anaphoric-head construction
   Alias: []
   SubtypeOf:
-    - cxn:nominal-modification
+    - cxn:modification-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1444,7 +1436,7 @@
   Name: anaphoric-head relative clause construction
   Alias: []
   SubtypeOf:
-    - cxn:relative-clause-construction
+    - cxn:anaphoric-head-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1557,7 +1549,8 @@
   SubtypeOf:
     - str:a-p-disalignment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -1693,8 +1686,7 @@
   Type: str
   Name: anticausative
   Alias: []
-  SubtypeOf:
-    - str:overtly-verb-coded-voice-strategy
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf:
     - cxn:passive-inverse-voice-construction
@@ -1906,9 +1898,11 @@
   Name: apposition
   Alias: []
   SubtypeOf:
-    - str:juxtaposition
+    - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -2088,8 +2082,7 @@
   Alias: []
   SubtypeOf:
     - cxn:determiner
-  ConstituentOf:
-    - cxn:modification-construction
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -2132,7 +2125,7 @@
   Name: associative construction
   Alias: []
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:nominal-phrase
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -2298,8 +2291,7 @@
   Type: cxn
   Name: auxiliary
   Alias: []
-  SubtypeOf:
-    - cxn:element
+  SubtypeOf: []
   ConstituentOf:
     - cxn:auxiliary-construction
   ExpressionOf: []
@@ -2459,7 +2451,8 @@
   SubtypeOf:
     - str:word-order
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -2854,7 +2847,6 @@
   Alias: []
   SubtypeOf:
     - cxn:modifier
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:numeral-attributive-phrase
   ExpressionOf: []
@@ -2906,6 +2898,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -3011,8 +3004,7 @@
   Type: str
   Name: causative
   Alias: []
-  SubtypeOf:
-    - str:overtly-verb-coded-voice-strategy
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf:
     - cxn:causative-construction
@@ -3082,12 +3074,11 @@
   Alias: []
   SubtypeOf:
     - str:co-expression-strategy
-    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:applicative-construction
-  RecruitedFrom:
     - cxn:causative-construction
+    - cxn:applicative-construction
+  RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
@@ -3373,6 +3364,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -3399,6 +3391,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -3421,7 +3414,6 @@
   Alias: []
   SubtypeOf:
     - cxn:complex-construction
-    - cxn:element
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -3873,8 +3865,7 @@
   Alias: []
   SubtypeOf:
     - cxn:admodifier
-  ConstituentOf:
-    - cxn:attributive-phrase
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -3895,7 +3886,7 @@
   Name: comparative pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4167,7 +4158,6 @@
   Alias: []
   SubtypeOf:
     - cxn:predicate
-    - cxn:complex-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4187,14 +4177,11 @@
   Type: str
   Name: complex predicate applicative strategy
   Alias: []
-  SubtypeOf:
-    - str:recruitment-strategy
+  SubtypeOf: []
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:applicative-construction
+  ExpressionOf: []
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:complex-predicate
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -4216,13 +4203,10 @@
   Name: complex predicate causative strategy
   Alias:
     - periphrastic causative strategy
-  SubtypeOf:
-    - str:recruitment-strategy
+  SubtypeOf: []
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:causative-construction
-  RecruitedFrom:
-    - cxn:complex-predicate
+  ExpressionOf: []
+  RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
@@ -4241,13 +4225,10 @@
   Alias:
     - complex predicate passive--inverse voice strategy
     - complex predicate passive--inverse strategy
-  SubtypeOf:
-    - str:recruitment-strategy
+  SubtypeOf: []
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:passive-inverse-voice-construction
-  RecruitedFrom:
-    - cxn:complex-predicate
+  ExpressionOf: []
+  RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
@@ -4295,6 +4276,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -4516,7 +4498,7 @@
   Name: conditional pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -4878,6 +4860,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:eventive-complex-predicate
+    - cxn:auxiliary-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -4920,7 +4903,7 @@
   Name: control-based causative strategies
   Alias: []
   SubtypeOf:
-    - str:simple-predicate-causative-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:causative-construction
@@ -5063,8 +5046,7 @@
   Name: coordinand
   Alias:
     - conjunct
-  SubtypeOf:
-    - cxn:element
+  SubtypeOf: []
   ConstituentOf:
     - cxn:coordinate-construction
   ExpressionOf: []
@@ -5208,7 +5190,6 @@
   Alias: []
   SubtypeOf:
     - str:overt-coding-strategy
-    - str:nominal-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -5585,9 +5566,10 @@
   Name: degree affix
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:affixation
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:admodifier
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -5595,8 +5577,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:admodifier
+  AssociatedTo: []
   Definition: >-
     a scalar <a>admodifier</a> expressed by an affix. <i>Example</i>: <i>-er</i> in <i>sillier</i> is a degree affix. (Section 4.1.2)
   Examples:
@@ -5635,9 +5616,10 @@
   Name: degree marker
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:affixation
   ConstituentOf: []
   ExpressionOf:
+    - cxn:admodifier
     - cxn:comparative-construction
   ModeledOn: []
   RecruitedFrom: []
@@ -5704,10 +5686,9 @@
   Name: demonstrative attributive
   Alias: []
   SubtypeOf:
-    - cxn:determiner
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:modification-construction
+    - cxn:determiner
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -6035,7 +6016,7 @@
   Name: determiner
   Alias: []
   SubtypeOf:
-    - cxn:modifier
+    - cxn:attributive-phrase
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6045,8 +6026,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:referent-expression
+  AssociatedTo: []
   Definition: >-
     a superordinate category of <a>contextually</a> defined forms that combine with <a>common nouns</a>; determiners include both <a>demonstrative attributives</a> and <a>articles</a>. (Section 3.2)
   Examples: []
@@ -6081,7 +6061,8 @@
   SubtypeOf:
     - str:a-p-disalignment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:passive-inverse-voice-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -6150,7 +6131,7 @@
   Name: direct negation pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6277,9 +6258,9 @@
   Type: cxn
   Name: discourse markers
   Alias: []
-  SubtypeOf:
-    - def:construction
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - cxn:complex-sentence
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -6483,7 +6464,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:motion-argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -6491,8 +6473,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:complex-predicate
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the expression of <a>motion events</a> in which the <a>path of motion</a> is expressed as (at least) part of the <a>predicate</a> and also as a <a>satellite</a>. <i>Example</i>: in Russian <i>Ja vy-bežal iz doma</i> <q>I ran out of the house</q>, the path of going out of the house is expressed both as part of the <a>verb</a> (the prefix <i>vy-</i> in <i>vy-bežal</i>) and as the <a>flag</a> <i>iz</i>. (Section 14.5)
   Examples:
@@ -6505,7 +6486,7 @@
   Name: double negation strategy
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:declarative-negation-construction
@@ -6529,13 +6510,12 @@
   Name: double-coding strategy
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:experiential-dis-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:experiential-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -6557,13 +6537,12 @@
   Name: double-oblique strategy
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:experiential-dis-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:experiential-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -6585,9 +6564,10 @@
   Name: doubling
   Alias: []
   SubtypeOf:
-    - def:strategy
+    - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -6607,8 +6587,7 @@
   Alias: []
   SubtypeOf:
     - cxn:admodifier
-  ConstituentOf:
-    - cxn:attributive-phrase
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -6631,6 +6610,7 @@
     - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf:
+    - cxn:chaining-construction
     - cxn:reflexive-construction
     - cxn:reciprocal-construction
   RecruitedFrom:
@@ -6699,7 +6679,7 @@
     - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:negative-question-polarity-response
+    - cxn:polarity-response
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -6726,10 +6706,9 @@
   Type: cxn
   Name: element
   Alias: []
-  SubtypeOf:
-    - def:construction
+  SubtypeOf: []
   ConstituentOf:
-    - cxn:complex-construction
+    - def:construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -7147,13 +7126,12 @@
   Alias:
     - ergative alignment
   SubtypeOf:
-    - str:alignment-system
+    - str:transitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:transitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:intransitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -7642,13 +7620,12 @@
   Alias:
     - experiencer-subject strategy
   SubtypeOf:
-    - str:system
+    - str:experiential-dis-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:experiential-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -7665,7 +7642,7 @@
   Name: experiential construction
   Alias: []
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:basic-voice-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7819,7 +7796,8 @@
   SubtypeOf:
     - str:recruitment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:possessed-argument-asc
   RecruitedFrom:
     - cxn:ditransitive-construction
   ModeledOn: []
@@ -7828,8 +7806,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:argument-phrase
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which a <a>referent</a> in a <a>possessive relation</a> to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed as an <a>argument</a> of the <a>predicate</a> instead of in a <a>possessive modification construction</a>. <i>Example</i>: in Maasai <i>áa-bʊak-ıtá ɔldía</i> <q>My dog is barking</q>, the portmanteau index <i>áa-</i> <a>indexes</a> the owner of the dog as the <a>object argument</a> of the predicate. (Section 7.5.3)
   Examples:
@@ -8088,7 +8065,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:motion-argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -8252,8 +8230,7 @@
   Type: cxn
   Name: focus operator
   Alias: []
-  SubtypeOf:
-    - cxn:element
+  SubtypeOf: []
   ConstituentOf:
     - cxn:identificational
   ExpressionOf: []
@@ -8339,7 +8316,7 @@
   Name: free choice pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8450,6 +8427,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
     - cxn:existential-negation-construction
     - cxn:prohibitive
   ModeledOn: []
@@ -8606,10 +8584,9 @@
   Name: generic article
   Alias: []
   SubtypeOf:
-    - cxn:article
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:modification-construction
+    - cxn:article
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8806,13 +8783,12 @@
   Alias:
     - action strategy
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:presentational-possession
   ModeledOn: []
-  RecruitedFrom:
-    - cxn:transitive-construction
+  RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -8830,7 +8806,8 @@
   Alias: []
   SubtypeOf:
     - cxn:element
-  ConstituentOf: []
+  ConstituentOf:
+    - def:construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8962,9 +8939,10 @@
   Alias:
     - hybrid IP strategy
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:information-packaging-disalignment
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:nonprototypical-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -8972,8 +8950,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:nonbasic-voice-construction
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The hybrid IP strategy uses a mixture of the <a>semantic IP strategy</a> and the <a>actual IP strategy</a>. <i>Example</i>: in <i>Her drinking coffee (surprises me)</i>, the English Gerund Construction combines the Possessive Pronoun <i>her</i>, characteristic of the prototypical <a sem:object-concept>object</a> <a>reference</a> construction and hence an instance of the actual information packaging of her drinking coffee (reference), with the Object form <i>coffee</i>, characteristic of the prototypical <a>action</a> <a>predication</a> construction and hence an instance of the prototypical information packaging function of the semantics of the action being referred to, namely predication. (Section 2.4)
   Examples:
@@ -9372,7 +9349,7 @@
   Name: inclusory construction
   Alias: []
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:personal-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9403,6 +9380,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:eventive-complex-predicate
+    - cxn:auxiliary-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -9613,9 +9591,10 @@
     - indexation
     - agreement
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
+    - cxn:modification-construction
     - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
@@ -9660,7 +9639,7 @@
   Name: indirect negation pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -9744,13 +9723,12 @@
   Name: indirective alignment system
   Alias: []
   SubtypeOf:
-    - str:alignment-system
+    - str:ditransitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:ditransitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -10085,8 +10063,7 @@
   Alias: []
   SubtypeOf:
     - cxn:admodifier
-  ConstituentOf:
-    - cxn:attributive-phrase
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -10171,7 +10148,8 @@
   SubtypeOf:
     - str:recruitment-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:possessed-argument-asc
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10197,7 +10175,8 @@
   SubtypeOf:
     - str:internal-possessor-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:ditransitive-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10467,7 +10446,7 @@
   Name: irrealis pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -10514,6 +10493,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10647,8 +10627,7 @@
   Alias:
     - ambitransitive
     - lexical causative
-  SubtypeOf:
-    - str:zero-verb-coded-voice-strategy
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf:
     - cxn:causative-construction
@@ -10788,6 +10767,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -10901,7 +10881,6 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:nonprototypical-predication
-    - cxn:presentational
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -10973,7 +10952,6 @@
     - locative attributive phrase
   SubtypeOf:
     - cxn:attributive-phrase
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:locative-modification-construction
   ExpressionOf: []
@@ -10999,6 +10977,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:eventive-complex-predicate
+    - cxn:auxiliary-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -11425,8 +11404,7 @@
   Alias: []
   SubtypeOf:
     - cxn:admodifier
-  ConstituentOf:
-    - cxn:attributive-phrase
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -11446,7 +11424,7 @@
   Name: mensural classifier
   Alias: []
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:mensural-construction
@@ -11495,8 +11473,8 @@
     - mensural modification construction
     - mensural modification
   SubtypeOf:
-    - cxn:typifying-construction
     - cxn:modification-construction
+    - cxn:typifying-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11518,7 +11496,6 @@
   Alias: []
   SubtypeOf:
     - cxn:modifier
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:mensural-attributive-phrase
   ExpressionOf: []
@@ -11603,12 +11580,13 @@
   Name: middle voice
   Alias: []
   SubtypeOf:
-    - str:encoding-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:reflexive-construction
+    - cxn:intransitive-construction
+  RecruitedFrom:
     - cxn:reciprocal-construction
-  RecruitedFrom: []
+    - cxn:reflexive-construction
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
@@ -12099,13 +12077,12 @@
   Alias:
     - neutral (transitive) alignment system
   SubtypeOf:
-    - str:alignment-system
+    - str:transitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:transitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:intransitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -12124,13 +12101,12 @@
   Alias:
     - double object alignment system
   SubtypeOf:
-    - str:alignment-system
+    - str:ditransitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:ditransitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -12193,8 +12169,7 @@
   SubtypeOf:
     - cxn:referring-phrase
     - cxn:prototypical-construction
-  ConstituentOf:
-    - cxn:clause
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -12213,8 +12188,7 @@
   Type: str
   Name: nominal strategy
   Alias: []
-  SubtypeOf:
-    - str:encoding-strategy
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12224,8 +12198,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:clause
+  AssociatedTo: []
   Definition: >-
     either the <a>nonverbal copula strategy</a> or the <a>zero strategy</a> for <a>predication</a> <a>constructions</a>. These two strategies are grouped together because both strategies appear to originate in <a>equational constructions</a>, are first recruited by object predication constructions, and then are recruited by other predication constructions. (Section 10.2)
   Examples: []
@@ -12237,7 +12210,8 @@
   SubtypeOf:
     - str:overt-coding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:referring-phrase
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -12326,10 +12300,9 @@
     - nonanaphoric definite article
     - nonanaphoric article
   SubtypeOf:
-    - cxn:definite-article
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:modification-construction
+    - cxn:definite-article
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -12393,6 +12366,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -12507,6 +12481,7 @@
     - (semantically) nonspecific indefinite article
     - (semantically) nonspecific article
   SubtypeOf:
+    - cxn:attributive-phrase
     - cxn:indefinite-article
   ConstituentOf: []
   ExpressionOf: []
@@ -12533,6 +12508,7 @@
     - (semantically) nonspecific pronoun
   SubtypeOf:
     - cxn:pronoun
+    - cxn:indefinite-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12625,10 +12601,11 @@
   Name: noun
   Alias: []
   SubtypeOf:
-    - cxn:prototypical-construction
     - cxn:referent-expression
+    - cxn:prototypical-construction
   ConstituentOf:
     - cxn:nominal-phrase
+    - cxn:modification-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -12699,8 +12676,10 @@
     - incorporation
   SubtypeOf:
     - str:a-p-disalignment-strategy
+    - str:subject-predicate-disalignment
   ConstituentOf: []
   ExpressionOf:
+    - cxn:thetic
     - cxn:antipassive-construction
   RecruitedFrom: []
   ModeledOn: []
@@ -13011,11 +12990,13 @@
   Name: oblique P strategy
   Alias: []
   SubtypeOf:
-    - str:oblique-p-disalignment-strategy
+    - str:system
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:antipassive-construction
   RecruitedFrom: []
-  ModeledOn: []
+  ModeledOn:
+    - cxn:transitive-construction
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -13100,7 +13081,7 @@
   Name: omitted P strategy
   Alias: []
   SubtypeOf:
-    - str:p-disalignment-strategy
+    - str:oblique-p-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:antipassive-construction
@@ -13207,7 +13188,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - def:construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -13215,12 +13197,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:hanging-topic-phrase
-    - cxn:negation-construction
-    - cxn:interrogative
-    - cxn:prohibitive
-    - cxn:exclamative
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which the <a>function</a> of the <a>construction</a> is expressed by an overt form in the construction. <i>Example</i>: in the English Predicate Nominal Construction illustrated by <i>She is a professor</i>, <i>be</i> overtly codes the <a>predication</a> function for the <a>object concept</a> denoted by <i>professor</i>. (Section 2.4)
   Examples:
@@ -13236,7 +13213,7 @@
     - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:anaphoric-head-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -13328,27 +13305,6 @@
     the <a>patient</a> or patient-like <a>central participant role</a> in the prototypical <a>bivalent event</a> (that is, a breaking event). <i>Example</i>: in <i>Jack broke the window</i>, the window plays the P role in the breaking event. (Section 6.3.1)
   Examples:
     - Jack broke <e>the window</e>
-
-- Id: str:p-disalignment-strategy
-  Type: str
-  Name: P disalignment-strategy
-  Alias: []
-  SubtypeOf:
-    - str:a-p-disalignment-strategy
-  ConstituentOf: []
-  ExpressionOf:
-    - cxn:antipassive-construction
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  FillerOf: []
-  RoleOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
 
 - Id: inf:parallel-contrast
   Type: inf
@@ -13823,7 +13779,7 @@
     - cxn:presentational
   ModeledOn: []
   RecruitedFrom:
-    - cxn:perception-verb
+    - cxn:perception-argument-structure-construction
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -13888,7 +13844,9 @@
   SubtypeOf:
     - str:indexical-strategy-indexation
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -13913,6 +13871,7 @@
   Alias: []
   SubtypeOf:
     - cxn:pronoun
+    - cxn:definite-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14001,8 +13960,7 @@
   Type: cxn
   Name: phrase
   Alias: []
-  SubtypeOf:
-    - cxn:element
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14388,7 +14346,6 @@
     - genitive phrase
   SubtypeOf:
     - cxn:attributive-phrase
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:possessive-modification-construction
   ExpressionOf: []
@@ -14410,13 +14367,12 @@
   Name: possessive locative strategy
   Alias: []
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:presentational
+  ExpressionOf: []
   ModeledOn: []
   RecruitedFrom:
-    - cxn:presentational-possession
+    - cxn:presentational-location
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -14436,8 +14392,8 @@
   Name: possessive pronoun
   Alias: []
   SubtypeOf:
-    - cxn:possessive-attributive-phrase
     - cxn:pronoun
+    - cxn:possessive-attributive-phrase
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -14583,6 +14539,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -14663,10 +14620,9 @@
     - pragmatically nonspecific indefinite article
     - pragmatically nonspecific article
   SubtypeOf:
-    - cxn:indefinite-article
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:modification-construction
+    - cxn:indefinite-article
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -14693,6 +14649,7 @@
     - pragmatically nonspecific indefinite pronoun
     - pragmatically nonspecific pronoun
   SubtypeOf:
+    - cxn:pronoun
     - cxn:indefinite-pronoun
   ConstituentOf: []
   ExpressionOf: []
@@ -14746,10 +14703,9 @@
     - pragmatically specific indefinite article
     - pragmatically specific article
   SubtypeOf:
-    - cxn:indefinite-article
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:modification-construction
+    - cxn:indefinite-article
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -14770,6 +14726,7 @@
     - pragmatically specific indefinite pronoun
     - pragmatically specific pronoun
   SubtypeOf:
+    - cxn:pronoun
     - cxn:indefinite-pronoun
   ConstituentOf: []
   ExpressionOf: []
@@ -15036,13 +14993,13 @@
   Type: str
   Name: predicational locative strategy
   Alias: []
-  SubtypeOf:
-    - def:strategy
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf:
     - cxn:presentational-location
   ModeledOn: []
-  RecruitedFrom: []
+  RecruitedFrom:
+    - cxn:predicational-location
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -15147,8 +15104,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - str:with-possessive-strategy
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessum</a> is <u>incorporated</u> as part of the possessive <a>predicate</a>. <i>Examples</i>: Tundra Yukaghir <i>mārqa-n lāme-n'-ŋi</i> [one dog-with-<sc>3pl.intr</sc>] <q>They had one dog</q> is an instance of the flexional (inflected) subtype of the predicativization possessive strategy, and Pitjantjatjara <i>ngankulukula-tjara</i> [I spear-<sc>proprietive</sc>] <q>I have a spear</q> [lit. <q>I am spear-having</q>] is an instance of the copular/zero (uninflected) subtype of the strategy. (Section 10.4.2)
   Examples:
@@ -15237,6 +15193,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -15692,9 +15649,7 @@
   Alias: []
   SubtypeOf:
     - cxn:referring-phrase
-    - cxn:nonprototypical-construction
-  ConstituentOf:
-    - cxn:clause
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -15827,9 +15782,7 @@
     - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:thetic
-    - cxn:identificational
-    - cxn:speech-acts
+    - def:construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -15940,11 +15893,12 @@
   Name: pseudo-partitive
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:recruitment-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:mensural-construction
-  RecruitedFrom: []
+  RecruitedFrom:
+    - cxn:partitive-construction
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
@@ -16122,7 +16076,6 @@
   Alias: []
   SubtypeOf:
     - cxn:modifier
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:quantifier-attributive-phrase
   ExpressionOf: []
@@ -16143,7 +16096,7 @@
   Name: question pronoun
   Alias: []
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:nonspecific-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16257,7 +16210,7 @@
   Name: reciprocal construction
   Alias: []
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:basic-voice-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16397,7 +16350,6 @@
     - cxn:head
   ConstituentOf:
     - cxn:referring-phrase
-    - cxn:modification-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -16460,7 +16412,7 @@
   Name: reflexive construction
   Alias: []
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:basic-voice-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16847,6 +16799,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17184,7 +17137,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:motion-argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17272,9 +17226,10 @@
   Name: second position
   Alias: []
   SubtypeOf:
-    - str:word-order
+    - str:serial-verb-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:auxiliary-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17297,7 +17252,7 @@
   Alias: []
   SubtypeOf: []
   ConstituentOf:
-    - str:indirective-alignment-system
+    - str:secundative-ditransitive-alignment
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -17308,7 +17263,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>morphosyntactic</a> category in the <a>indirective alignment system</a> that exclusively expresses the <a>T role</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, <i>uuki</i> <q>man</q> is exclusively expressed by the absence of <a>indexation</a> on the <a>verb</a> form <i>ne-wa-puuzeiyastɨa</i> <q>I showed them</q>. (Section 7.5.2)
+    the <a>morphosyntactic</a> category in the <a>secundative alignment system</a> that exclusively expresses the <a>T role</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, <i>uuki</i> <q>man</q> is exclusively expressed by the absence of <a>indexation</a> on the <a>verb</a> form <i>ne-wa-puuzeiyastɨa</i> <q>I showed them</q>. (Section 7.5.2)
   Examples:
     - Language: Huichol
       Example: nee uuki uukari ne-wa-puuzeiyastɨa
@@ -17325,13 +17280,12 @@
     - secundative alignment
     - secundative alignment system
   SubtypeOf:
-    - str:alignment-system
+    - str:ditransitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:ditransitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -17399,9 +17353,10 @@
   Alias:
     - semantic IP strategy
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:information-packaging-disalignment
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:nonprototypical-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17409,9 +17364,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:topic-comment
-    - cxn:hanging-topic-phrase
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>predicate nominal constructions</a> which express <a>predication</a> of an <a>object concept</a>. The semantic IP strategy is to <a>recruit</a> the strategy used for the prototypical <a>information packaging</a> function of the (actual) information packaging in the nonprototypical construction. <i>Example</i>: in the English Predicate Nominal Construction exemplified by <i>Rich is an excellent violinist</i>, the semantic <a>object concept</a> <i>violinist</i> that is being predicated recruits the construction used for object <a>reference</a>, the prototypical object construction: it is preceded by the article <i>an</i> and the adjective <i>excellent</i>. The semantic IP strategy contrasts with the <a>actual IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
   Examples:
@@ -17581,19 +17534,18 @@
   Alias:
     - serial verb
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom:
-    - cxn:eventive-complex-predicate
+  ExpressionOf:
+    - cxn:motion-argument-structure-construction
+  RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:complex-predicate
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> for expressing an <a>eventive complex predicate</a> with two (or more) <a>elements</a>, each expressing an <a>event</a>, without <a>overt coding</a> of the relation between the two elements via a third linking morpheme. The serial verb strategy -- that is, expression of an eventive complex predicate without an overt linking morpheme -- combines with strategies for expressing the two event elements involving <a str:contiguity-of-serial-verbs>contiguity</a>, <a str:incorporation-of-serial-verbs>incorporation</a>, and <a str:locus-of-inflection-of-serial-verbs>locus of inflection</a>. <i>Example</i>: Sranan <i>Kofi naki Amba kiri</i> <q>Kofi killed [lit. <q>hit kill</q>] Amba</q> contains two event elements, <i>naki</i> <q>hit</q> and <i>kiri</i> <q>kill</q>, without any linking morpheme. (Section 13.2.2)
   Examples:
@@ -17651,7 +17603,6 @@
   Alias: []
   SubtypeOf:
     - cxn:modifier
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:set-member-attributive-phrase
   ExpressionOf: []
@@ -17760,11 +17711,9 @@
   Type: str
   Name: simple predicate applicative strategy
   Alias: []
-  SubtypeOf:
-    - str:encoding-strategy
+  SubtypeOf: []
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:applicative-construction
+  ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17787,11 +17736,9 @@
   Alias:
     - monoclausal causative strategy
     - morphological causative
-  SubtypeOf:
-    - str:encoding-strategy
+  SubtypeOf: []
   ConstituentOf: []
-  ExpressionOf:
-    - cxn:causative-construction
+  ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17935,7 +17882,7 @@
     - str:classifier
   ConstituentOf: []
   ExpressionOf:
-    - cxn:numeral-attributive-phrase
+    - cxn:numeral-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17963,6 +17910,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:modification-construction
+    - cxn:argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -17985,7 +17933,7 @@
   Name: special P strategy
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:passive-inverse-voice-construction
@@ -18009,13 +17957,14 @@
   Name: specialized dual role strategy
   Alias: []
   SubtypeOf:
+    - str:overt-coding-strategy
     - str:dual-role-strategy
   ConstituentOf: []
   ExpressionOf:
+    - cxn:chaining-construction
     - cxn:reflexive-construction
     - cxn:reciprocal-construction
-  RecruitedFrom:
-    - cxn:transitive-construction
+  RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
   AttributeOf: []
@@ -18056,6 +18005,7 @@
   Alias: []
   SubtypeOf:
     - cxn:pronoun
+    - cxn:indefinite-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18098,6 +18048,7 @@
   Alias: []
   SubtypeOf:
     - cxn:pronoun
+    - cxn:indefinite-pronoun
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -18267,7 +18218,7 @@
   Name: split structure
   Alias: []
   SubtypeOf:
-    - str:encoding-strategy
+    - str:subject-predicate-disalignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:thetic
@@ -18356,9 +18307,10 @@
   Name: STAMP strategy
   Alias: []
   SubtypeOf:
-    - str:encoding-strategy
+    - str:serial-verb-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:auxiliary-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -18490,13 +18442,12 @@
   Alias:
     - experiencer-object strategy
   SubtypeOf:
-    - str:system
+    - str:experiential-dis-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:experiential-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:transitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -18646,7 +18597,10 @@
     - str:system
   ConstituentOf: []
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:experiential-construction
+    - cxn:possessed-argument-asc
+    - cxn:motion-argument-structure-construction
+    - cxn:perception-argument-structure-construction
   RecruitedFrom: []
   ModeledOn:
     - cxn:transitive-construction
@@ -18805,8 +18759,7 @@
     - superlative
   SubtypeOf:
     - cxn:admodifier
-  ConstituentOf:
-    - cxn:attributive-phrase
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -18987,7 +18940,7 @@
   Name: tag
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:interrogative
@@ -19141,8 +19094,7 @@
   Type: str
   Name: tense iconicity
   Alias: []
-  SubtypeOf:
-    - def:strategy
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -19352,7 +19304,6 @@
   Alias: []
   SubtypeOf:
     - cxn:referring-phrase
-    - cxn:nonprototypical-construction
   ConstituentOf:
     - cxn:topic-comment
   ExpressionOf: []
@@ -19380,13 +19331,12 @@
     - double subject possessive strategy
     - distributed subject possessive strategy
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:presentational-possession
   ModeledOn: []
-  RecruitedFrom:
-    - cxn:hanging-topic-phrase
+  RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -19448,14 +19398,12 @@
   Name: topic-locational hybrid possessive strategy
   Alias: []
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:presentational-possession
   ModeledOn: []
-  RecruitedFrom:
-    - cxn:hanging-topic-phrase
-    - cxn:location-clause
+  RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -19591,14 +19539,13 @@
   Name: transitivity-based causative strategies
   Alias: []
   SubtypeOf:
-    - str:simple-predicate-causative-strategy
-    - str:recruitment-strategy
+    - str:system
   ConstituentOf: []
   ExpressionOf:
     - cxn:causative-construction
-  RecruitedFrom:
-    - cxn:ditransitive-construction
-  ModeledOn: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:basic-voice-construction
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -19684,13 +19631,12 @@
   Name: tripartite alignment
   Alias: []
   SubtypeOf:
-    - str:alignment-system
+    - str:transitive-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:transitive-construction
   RecruitedFrom: []
-  ModeledOn:
-    - cxn:intransitive-construction
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -20096,8 +20042,8 @@
   Name: verb
   Alias: []
   SubtypeOf:
-    - cxn:prototypical-construction
     - cxn:simple-predicate
+    - cxn:prototypical-construction
   ConstituentOf:
     - cxn:verbal-clause
   ExpressionOf: []
@@ -20151,7 +20097,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:motion-argument-structure-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -20235,7 +20182,7 @@
   Name: verbal strategy
   Alias: []
   SubtypeOf:
-    - str:encoding-strategy
+    - str:zero-coded-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:nonprototypical-predication
@@ -20353,7 +20300,7 @@
   Alias:
     - companion strategy
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:presentational-possession
@@ -20406,13 +20353,7 @@
     - str:zero-coded-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:argument-structure-construction
-    - cxn:topic-comment
-    - cxn:thetic
-    - cxn:identificational
-    - cxn:speech-acts
-    - cxn:interrogative-complement
+    - def:construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -20434,11 +20375,9 @@
 - Id: str:yes-no-alignment-strategy
   Type: str
   Name: yes/no alignment strategy
-  Alias:
-    - yes alignment strategy
-    - no alignment strategy
+  Alias: []
   SubtypeOf:
-    - str:system
+    - str:polarity-response-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:negative-question-polarity-response
@@ -20460,12 +20399,9 @@
 - Id: str:yes-no-disagree-alignment-strategy
   Type: str
   Name: yes/no/disagree alignment strategy
-  Alias:
-    - yes alignment strategy
-    - no alignment strategy
-    - disagree alignment strategy
+  Alias: []
   SubtypeOf:
-    - str:system
+    - str:polarity-response-alignment
   ConstituentOf: []
   ExpressionOf:
     - cxn:negative-question-polarity-response
@@ -20494,9 +20430,10 @@
     - DNI
     - null anaphora
   SubtypeOf:
-    - def:strategy
+    - str:zero-coded-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:anaphoric-pronoun
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -20504,8 +20441,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:anaphoric-pronoun
+  AssociatedTo: []
   Definition: >-
     the absence of a <a>referring phrase</a> for a <a>referent</a> in a construction. Zero anaphora is frequently used when the referent is <a>active</a>. (Section 3.3.1)
   Examples: []
@@ -20519,7 +20455,8 @@
   SubtypeOf:
     - str:encoding-strategy
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - def:construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -20528,7 +20465,6 @@
   FillerOf: []
   RoleOf: []
   AssociatedTo:
-    - str:alignment-system
     - str:case-affix
     - cxn:hanging-topic-phrase
   Definition: >-
@@ -20541,15 +20477,10 @@
   Name: zero strategy
   Alias: []
   SubtypeOf:
-    - str:nominal-strategy
-    - str:verbal-strategy
     - str:zero-coded-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:nonprototypical-predication
-    - cxn:subject-identity
-    - cxn:object-identity
-    - cxn:predicate-identity
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -22295,6 +22226,1063 @@
     - sem:conditional-relation
     - sem:concessive-relation
     - sem:concessive-conditional-relation
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:information-packaging-disalignment
+  Type: str
+  Name: information packaging disalignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:prototypical-construction
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:zero-article
+  Type: str
+  Name: zero article
+  Alias: []
+  SubtypeOf:
+    - str:zero-coded-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:article
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:overt-pronoun
+  Type: str
+  Name: overt pronoun
+  Alias:
+    - nonnull pronoun
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:anaphoric-pronoun
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:overt-article
+  Type: str
+  Name: overt article
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:article
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:inclusory-strategy
+  Type: str
+  Name: inclusory strategy
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:inclusory-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:associative-strategy
+  Type: str
+  Name: associative strategy
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:associative-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:demonstrative-strategy
+  Type: str
+  Name: demonstrative strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:anaphoric-pronoun
+  RecruitedFrom:
+    - cxn:demonstrative-pronoun
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:interrogative-pronoun-strategy
+  Type: str
+  Name: interrogative pronoun strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:pragmatically-specific-indefinite-pronoun
+  RecruitedFrom:
+    - cxn:interrogative-pronoun
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:universal-pronoun-strategy
+  Type: str
+  Name: universal pronoun strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:nonspecific-pronoun
+  RecruitedFrom:
+    - cxn:universal-pronoun
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:nonspecific-pronoun-strategy
+  Type: str
+  Name: nonspecific pronoun strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:generic-pronoun
+  RecruitedFrom:
+    - cxn:nonspecific-pronoun
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:first-person-plural-strategy
+  Type: str
+  Name: first person plural strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:generic-pronoun
+  RecruitedFrom:
+    - cxn:first-person-pronoun
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:human-noun-strategy
+  Type: str
+  Name: human noun strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:generic-pronoun
+  RecruitedFrom:
+    - cxn:human-noun
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:numeral-strategy
+  Type: str
+  Name: numeral strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:pragmatically-specific-indefinite-pronoun
+  RecruitedFrom:
+    - cxn:cardinal-numeral
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:definite-article-strategy
+  Type: str
+  Name: definite article strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:generic-article
+  RecruitedFrom:
+    - cxn:definite-article
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:nonspecific-article-strategy
+  Type: str
+  Name: nonspecific article strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:generic-article
+  RecruitedFrom:
+    - cxn:nonspecific-article
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:human-proper-noun
+  Type: cxn
+  Name: human proper noun
+  Alias: []
+  SubtypeOf:
+    - cxn:proper-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:place-proper-noun
+  Type: cxn
+  Name: place proper noun
+  Alias: []
+  SubtypeOf:
+    - cxn:proper-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:human-noun
+  Type: cxn
+  Name: human noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:kinship-noun
+  Type: cxn
+  Name: kinship noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:social-noun
+  Type: cxn
+  Name: social noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:animal-noun
+  Type: cxn
+  Name: animal noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:plant-noun
+  Type: cxn
+  Name: plant noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:animal/plant-product-noun
+  Type: cxn
+  Name: animal/plant product noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:body-part-noun
+  Type: cxn
+  Name: body part noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:natural-object-noun
+  Type: cxn
+  Name: natural object noun
+  Alias:
+    - substance noun
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:place-noun
+  Type: cxn
+  Name: place noun
+  Alias: []
+  SubtypeOf:
+    - cxn:common-noun
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:anchoring-nominal-strategy
+  Type: str
+  Name: anchoring nominal strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:typifying-construction
+  RecruitedFrom:
+    - cxn:anchoring-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:transitive-alignment
+  Type: str
+  Name: transitive alignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:intransitive-construction
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:ditransitive-alignment
+  Type: str
+  Name: ditransitive alignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:transitive-construction
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:complex-predicate-asc-strategy
+  Type: str
+  Name: complex predicate ASC strategy
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:argument-structure-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:possessed-argument-asc
+  Type: cxn
+  Name: possessed argument ASC
+  Alias: []
+  SubtypeOf:
+    - cxn:basic-voice-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:spurious-complex-predicate
+  Type: cxn
+  Name: spurious complex predicate
+  Alias: []
+  SubtypeOf:
+    - cxn:stative-complex-predicate
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:experiential-dis-alignment
+  Type: str
+  Name: experiential (dis)alignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:transitive-construction
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:reciprocal-strategy
+  Type: str
+  Name: reciprocal strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:collective-construction
+    - cxn:chaining-construction
+    - cxn:reflexive-construction
+  RecruitedFrom:
+    - cxn:reciprocal-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:reflexive-strategy
+  Type: str
+  Name: reflexive strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:collective-construction
+    - cxn:chaining-construction
+    - cxn:reciprocal-construction
+  RecruitedFrom:
+    - cxn:reflexive-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:overtly-coded-single-role-strategy
+  Type: str
+  Name: overtly coded single role strategy
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+    - str:single-role-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:reciprocal-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:motion-argument-structure-construction
+  Type: cxn
+  Name: motion argument structure construction
+  Alias: []
+  SubtypeOf:
+    - cxn:argument-structure-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:perception-argument-structure-construction
+  Type: cxn
+  Name: perception argument structure construction
+  Alias: []
+  SubtypeOf:
+    - cxn:argument-structure-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:subject-predicate-disalignment
+  Type: str
+  Name: subject-predicate disalignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:basic-voice-construction
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:topic-marker
+  Type: str
+  Name: topic marker
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:topic-comment
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:thetic-marker
+  Type: str
+  Name: thetic marker
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:thetic
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:non-nominative-flag/index
+  Type: str
+  Name: non-nominative flag/index
+  Alias: []
+  SubtypeOf:
+    - str:subject-predicate-disalignment
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:thetic
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:declarative-marker
+  Type: str
+  Name: declarative marker
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:declarative
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:question-marker
+  Type: str
+  Name: question marker
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:interrogative
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:affixal-negation
+  Type: str
+  Name: affixal negation
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:declarative-negation-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:negative-particle
+  Type: str
+  Name: negative particle
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:declarative-negation-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:polarity-response-alignment
+  Type: str
+  Name: polarity response alignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:identificational-strategy
+  Type: str
+  Name: identificational strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:interrogative
+    - cxn:declarative-negation-construction
+  RecruitedFrom:
+    - cxn:identificational
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:existential-negative-strategy
+  Type: str
+  Name: existential negative strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:declarative-negation-construction
+  RecruitedFrom:
+    - cxn:existential-negation-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:negative-auxiliary-strategy
+  Type: str
+  Name: negative auxiliary strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:declarative-negation-construction
+  RecruitedFrom:
+    - cxn:auxiliary-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
   ValueOf: []
   RoleOf: []
   FillerOf: []
