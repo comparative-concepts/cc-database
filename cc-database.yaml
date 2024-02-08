@@ -100,12 +100,11 @@
   Name: absolute deranking system
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:reference-tracking-system
   ConstituentOf: []
   ExpressionOf:
     - cxn:reference-tracking
-  ModeledOn:
-    - cxn:main-clause
+  ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
@@ -305,11 +304,12 @@
   Name: action nominal
   Alias:
     - nominalization
-  SubtypeOf:
+  SubtypeOf: []
+  ConstituentOf:
     - str:deranked-deranking
-  ConstituentOf: []
   ExpressionOf:
     - cxn:adverbial-dependent-clause
+    - cxn:complement-dependent-clause
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -771,7 +771,7 @@
   Name: adpositional personal strategy
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:stative-complex-predicate
@@ -798,7 +798,7 @@
   Name: adpositional strategy
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:stative-complex-predicate
@@ -891,7 +891,7 @@
   Name: adverbial strategy
   Alias: []
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:stative-complex-predicate
@@ -1662,7 +1662,6 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:coordinate-clause-construction
-    - cxn:adverbial-clause-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -1670,8 +1669,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - str:absolute-deranking-system
+  AssociatedTo: []
   Definition: >-
     the variant of a <a>deranking strategy</a> in which the deranked <a>clauses</a> precede the clause that is expressed like a simple <a>main clause</a>. <i>Example</i>: Japanese <i>ojiisanga yamade hataraite obaasanga miseno bano shita</i> <q>The old man worked at the mountain, and the old woman tended the store</q> is an instance of anterior deranking -- the suffix <i>-te</i> on <i>hataraite</i> <q>worked</q> indicates that the anterior predicate is deranked. (Section 15.2.3)
   Examples:
@@ -2358,14 +2356,12 @@
     - balanced
     - balancing
   SubtypeOf:
-    - str:recruitment-strategy
-  ConstituentOf:
-    - str:conditional-deranking-system
+    - str:clause-disalignment
+  ConstituentOf: []
   ExpressionOf:
     - cxn:complex-sentence
   ModeledOn: []
-  RecruitedFrom:
-    - cxn:declarative
+  RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
@@ -4445,12 +4441,11 @@
   Alias:
     - conditionally deranked
   SubtypeOf:
-    - str:system
+    - str:reference-tracking-system
   ConstituentOf: []
   ExpressionOf:
     - cxn:reference-tracking
-  ModeledOn:
-    - cxn:main-clause
+  ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
@@ -4474,12 +4469,11 @@
   Name: conditional discourse reference system
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:reference-tracking-system
   ConstituentOf: []
   ExpressionOf:
     - cxn:reference-tracking
-  ModeledOn:
-    - cxn:main-clause
+  ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
@@ -4616,9 +4610,9 @@
   Type: str
   Name: conjunction
   Alias: []
-  SubtypeOf:
-    - str:overt-coding-strategy
-  ConstituentOf: []
+  SubtypeOf: []
+  ConstituentOf:
+    - str:syndetic
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -4628,7 +4622,6 @@
   FillerOf: []
   RoleOf: []
   AssociatedTo:
-    - str:syndetic
     - cxn:discourse-markers
   Definition: >-
     a free morpheme or clitic that encodes the relation between the <a>events</a> denoted by the two <a>clauses</a> in a <a>complex sentence construction</a>. A conjunction in a <a>coordinate clause construction</a> is a <a>coordinator</a>; in an <a>adverbial clause construction</a>, it is an <a>adverbializer</a>; in a <a>complement clause construction</a>, it is a <a>complementizer</a>; and in a <a>relative clause construction</a>, it is a <a>relativizer</a>. (Section 15.2.2)
@@ -4994,10 +4987,9 @@
   Type: str
   Name: converb
   Alias: []
-  SubtypeOf:
-    - str:deranked-deranking
+  SubtypeOf: []
   ConstituentOf:
-    - str:asyndetic
+    - str:deranked-deranking
   ExpressionOf:
     - cxn:adverbial-dependent-clause
   ModeledOn: []
@@ -5007,8 +4999,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - str:converb-strategy
+  AssociatedTo: []
   Definition: >-
     a <a>deranked</a> predicate form in an <a>asyndetic</a> <a>deranked</a> <a>adverbial clause construction</a> that lacks <a>subject</a> <a>person indexation</a>. <i>Example</i>: in <i>Sitting in front of his desk, he noticed a bright light out the window, sitting</i> is a converb. Haspelmath (1995:5) excludes from the converb category forms that are deranked with subject person indexation that is different from that found with <a inf:declarative>declarative</a> <a>main clause</a> <a>predication</a>.
   Examples:
@@ -5876,9 +5867,8 @@
     - verbal noun
     - nominalization
   SubtypeOf:
-    - str:overt-coding-strategy
-  ConstituentOf:
-    - str:conditional-deranking-system
+    - str:clause-disalignment
+  ConstituentOf: []
   ExpressionOf:
     - cxn:complex-sentence
   ModeledOn: []
@@ -6280,12 +6270,11 @@
   Name: discourse reference system
   Alias: []
   SubtypeOf:
-    - str:system
+    - str:reference-tracking-system
   ConstituentOf: []
   ExpressionOf:
     - cxn:reference-tracking
-  ModeledOn:
-    - cxn:main-clause
+  ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
   AttributeOf: []
@@ -12675,6 +12664,7 @@
   Alias:
     - incorporation
   SubtypeOf:
+    - str:compounding
     - str:a-p-disalignment-strategy
     - str:subject-predicate-disalignment
   ConstituentOf: []
@@ -13190,6 +13180,9 @@
   ConstituentOf: []
   ExpressionOf:
     - def:construction
+    - cxn:subject-identity
+    - cxn:object-identity
+    - cxn:predicate-identity
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -14486,7 +14479,6 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:coordinate-clause-construction
-    - cxn:adverbial-clause-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -14494,9 +14486,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - str:conditional-deranking-system
-    - str:absolute-deranking-system
+  AssociatedTo: []
   Definition: >-
     the variant of a <a>deranking strategy</a> in which the deranked <a>clauses</a> follow the clause that is expressed like a simple <a>main clause</a>. <i>Example</i>: Big <i>Nambas a-əln talei ka-vruh ka-vmi'i arna pitha</i> <q>So they left their knives and ran away and climbed over the hill...</q> is an instance of posterior deranking: the prefix <i>ka-</i> on <i>ka-vruh</i> <q>run away</q> and <i>ka-vmi'i</i> <q>go over</q> indicates that the posterior predicates are deranked. (Section 15.2.3)
   Examples:
@@ -19094,9 +19084,11 @@
   Type: str
   Name: tense iconicity
   Alias: []
-  SubtypeOf: []
+  SubtypeOf:
+    - str:encoding
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:coordinate-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -19104,8 +19096,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:coordinate-clause-construction
+  AssociatedTo: []
   Definition: >-
     a <a>strategy</a> in which the temporal sequence of the <a>clauses</a> in a <u>sentence</u> necessarily mirrors the <a>consecutive</a> temporal relation of the <a>events</a> denoted by the clauses. <i>Example</i>: in <i>He washed the car and drove to the party</i>, the temporal order of the clauses <i>He washed the car</i> and <i>drove to the party</i> mirrors the consecutive temporal relation of the events. (Section 15.1.3)
   Examples:
@@ -23281,6 +23272,136 @@
   RecruitedFrom:
     - cxn:auxiliary-construction
   ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:causative-coordinate-strategy
+  Type: str
+  Name: causative coordinate strategy
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - str:stative-complex-predicate
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:causative-predicational-strategy
+  Type: str
+  Name: causative predicational strategy
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - str:stative-complex-predicate
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:clause-disalignment
+  Type: str
+  Name: clause disalignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:declarative
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:anterior-zero
+  Type: str
+  Name: anterior zero
+  Alias: []
+  SubtypeOf:
+    - str:zero-coded-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:subject-identity
+    - cxn:object-identity
+    - cxn:predicate-identity
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:posterior-zero
+  Type: str
+  Name: posterior zero
+  Alias: []
+  SubtypeOf:
+    - str:zero-coded-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:subject-identity
+    - cxn:object-identity
+    - cxn:predicate-identity
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:reference-tracking-system
+  Type: str
+  Name: reference tracking system
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:main-clause
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
