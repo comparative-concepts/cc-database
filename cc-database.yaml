@@ -494,8 +494,7 @@
     - inclusive focus operator
   SubtypeOf:
     - cxn:focus-operator
-  ConstituentOf:
-    - cxn:identificational
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -638,7 +637,7 @@
   Alias:
     - adjoined
   SubtypeOf:
-    - str:juxtaposition
+    - str:non-externally-headed
   ConstituentOf: []
   ExpressionOf:
     - cxn:relative-clause-construction
@@ -935,7 +934,7 @@
   Name: adversative coordination
   Alias: []
   SubtypeOf:
-    - cxn:coordinate-construction
+    - cxn:coordinate-clause-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1437,6 +1436,7 @@
   Alias: []
   SubtypeOf:
     - cxn:anaphoric-head-construction
+    - cxn:indefinite-head-relative-clause
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -1756,11 +1756,7 @@
   SubtypeOf:
     - cxn:clause
   ConstituentOf:
-    - cxn:causative-construction
     - cxn:conditional-construction
-    - cxn:concessive-construction
-    - cxn:concessive-conditional-construction
-    - cxn:comparative-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -2150,6 +2146,7 @@
   Alias: []
   SubtypeOf:
     - str:fixed-case
+    - str:ordered-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:equative-construction
@@ -4085,7 +4082,7 @@
   Name: complementizer
   Alias: []
   SubtypeOf:
-    - str:conjunction
+    - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:complement-clause-construction
@@ -4585,7 +4582,7 @@
   Alias:
     - conjoined exceed
   SubtypeOf:
-    - str:fixed-case
+    - str:derived-case
     - str:relative-strategy
   ConstituentOf: []
   ExpressionOf:
@@ -4632,7 +4629,7 @@
   Name: conjunctive coordination
   Alias: []
   SubtypeOf:
-    - cxn:coordinate-construction
+    - cxn:coordinate-clause-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -5295,7 +5292,7 @@
   Alias:
     - correlative
   SubtypeOf:
-    - str:juxtaposition
+    - str:non-externally-headed
   ConstituentOf: []
   ExpressionOf:
     - cxn:relative-clause-construction
@@ -5580,6 +5577,7 @@
   Alias: []
   SubtypeOf:
     - str:fixed-case
+    - str:relative-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:equative-construction
@@ -5786,7 +5784,7 @@
   Name: dependent clause
   Alias: []
   SubtypeOf:
-    - cxn:subordinate-clause
+    - cxn:clause
   ConstituentOf:
     - cxn:complex-sentence
   ExpressionOf: []
@@ -6185,7 +6183,7 @@
   Name: direct report
   Alias: []
   SubtypeOf:
-    - str:recruitment-strategy
+    - str:utterance-clause-disalignment
   ConstituentOf: []
   ExpressionOf: []
   ModeledOn: []
@@ -6314,7 +6312,7 @@
   Name: disjunctive coordination
   Alias: []
   SubtypeOf:
-    - cxn:coordinate-construction
+    - cxn:coordinate-clause-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -6998,6 +6996,7 @@
   Alias: []
   SubtypeOf:
     - str:fixed-case
+    - str:relative-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:equative-construction
@@ -7450,7 +7449,7 @@
     - summary conjunction
     - exhaustive coordination
   SubtypeOf:
-    - cxn:coordinate-construction
+    - cxn:coordinate-clause-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -7498,6 +7497,7 @@
   Alias:
     - existential negation
   SubtypeOf:
+    - cxn:declarative-negation-construction
     - cxn:negation-construction
   ConstituentOf: []
   ExpressionOf: []
@@ -7831,10 +7831,11 @@
   Alias:
     - extraposed
   SubtypeOf:
-    - str:word-order
     - str:externally-headed
+    - str:word-order
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:relative-clause-construction
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -8119,7 +8120,7 @@
   Name: fixed-case
   Alias: []
   SubtypeOf:
-    - str:flag-flagging
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8347,7 +8348,7 @@
   Name: free relative clause
   Alias: []
   SubtypeOf:
-    - cxn:relative-clause-construction
+    - cxn:indefinite-head-relative-clause
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -8821,6 +8822,7 @@
   ConstituentOf: []
   ExpressionOf:
     - cxn:anaphoric-head-construction
+    - cxn:anaphoric-head-relative-clause-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -9691,7 +9693,7 @@
   Name: indirect report
   Alias: []
   SubtypeOf:
-    - str:encoding-strategy
+    - str:utterance-clause-disalignment
   ConstituentOf: []
   ExpressionOf: []
   ModeledOn: []
@@ -10190,7 +10192,7 @@
   Alias:
     - internally headed
   SubtypeOf:
-    - str:encoding-strategy
+    - str:non-externally-headed
   ConstituentOf: []
   ExpressionOf:
     - cxn:relative-clause-construction
@@ -10984,7 +10986,7 @@
   Name: logophoric construction
   Alias: []
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:subject-identity
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11038,7 +11040,8 @@
     - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - cxn:logophoric-construction
+    - cxn:adverbial-clause-construction
+    - cxn:complement-clause-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -11937,7 +11940,7 @@
   Alias:
     - negation
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:speech-acts
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12245,7 +12248,7 @@
     - representative conjunction
     - non-exhaustive coordination
   SubtypeOf:
-    - cxn:coordinate-construction
+    - cxn:coordinate-clause-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -12613,8 +12616,7 @@
   Type: cxn
   Name: noun complement
   Alias: []
-  SubtypeOf:
-    - cxn:complement-dependent-clause
+  SubtypeOf: []
   ConstituentOf:
     - cxn:noun-complement-clause-construction
   ExpressionOf: []
@@ -12636,7 +12638,7 @@
   Name: noun complement clause construction
   Alias: []
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:complex-sentence
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -13141,8 +13143,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - str:deranked-deranking
+  AssociatedTo: []
   Definition: >-
     the <a>strategy</a> for <a cxn:comparative-construction>comparative</a> (and possibly <a cxn:equative-construction>equative</a>) <a>constructions</a> which metaphorically expresses the comparison of the <a>comparee</a> and the <a>standard</a> on the <a>gradable predicative scale</a> as a spatial <a>path</a> between the comparee (as spatial <a>figure</a>) and the standard (as the <a>ground</a>). In comparative constructions, the ordered strategy <a>recruits</a> a <a>different-subject</a>, <a str:absolute-deranking-system>absolutely deranked</a>, <a>simultaneous</a>, or <a>consecutive</a> <u>temporal</u> <a>complex sentence construction</a> to express comparison. The <a str:separative-comparative>separative</a>, <a str:allative-comparative>allative</a>, and <a>locative comparatives</a> are examples of the ordered strategy. (Section 17.2.3)
   Examples: []
@@ -13466,10 +13467,11 @@
   Type: str
   Name: participle
   Alias: []
-  SubtypeOf:
+  SubtypeOf: []
+  ConstituentOf:
     - str:deranked-deranking
-  ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:relative-clause
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -13477,9 +13479,7 @@
   ValueOf: []
   FillerOf: []
   RoleOf: []
-  AssociatedTo:
-    - cxn:relative-clause-construction
-    - str:overt-coding-strategy
+  AssociatedTo: []
   Definition: >-
     a <a>deranked</a> <a>relative clause</a> <a>predicate</a>. <i>Example</i>: in <i>The car almost hit the roadrunner</i> [<i>eat<b>ing</b> a grasshopper</i>], <i>eating</i> is a participle in the relative clause <i>eating a grasshopper</i>. (Section 19.2.1)
   Examples:
@@ -13514,6 +13514,7 @@
   Alias: []
   SubtypeOf:
     - str:derived-case
+    - str:independent-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:equative-construction
@@ -15202,7 +15203,6 @@
   Name: presentational
   Alias: []
   SubtypeOf:
-    - cxn:thetic
     - cxn:entity-central
   ConstituentOf: []
   ExpressionOf: []
@@ -15293,8 +15293,8 @@
   Alias:
     - have possession
   SubtypeOf:
-    - cxn:possession-clause
     - cxn:presentational
+    - cxn:possession-clause
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15794,11 +15794,7 @@
   SubtypeOf:
     - cxn:clause
   ConstituentOf:
-    - cxn:causative-construction
     - cxn:conditional-construction
-    - cxn:concessive-construction
-    - cxn:concessive-conditional-construction
-    - cxn:comparative-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -16128,7 +16124,7 @@
   Name: quotative marker
   Alias: []
   SubtypeOf:
-    - str:complementizer
+    - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf: []
   ModeledOn: []
@@ -16510,7 +16506,9 @@
   Name: relative clause
   Alias: []
   SubtypeOf:
+    - cxn:modifier
     - cxn:dependent-clause
+    - cxn:attributive-phrase
   ConstituentOf:
     - cxn:relative-clause-construction
   ExpressionOf: []
@@ -16533,7 +16531,6 @@
   Alias: []
   SubtypeOf:
     - cxn:complex-sentence
-    - cxn:attributive-phrase
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -16599,6 +16596,7 @@
   Alias: []
   SubtypeOf:
     - str:derived-case
+    - str:relative-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:equative-construction
@@ -16689,6 +16687,7 @@
   Alias: []
   SubtypeOf:
     - str:derived-case
+    - str:independent-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:equative-construction
@@ -16717,7 +16716,7 @@
   Name: relativizer
   Alias: []
   SubtypeOf:
-    - str:conjunction
+    - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:relative-clause-construction
@@ -16900,8 +16899,7 @@
     - exclusive focus operator
   SubtypeOf:
     - cxn:focus-operator
-  ConstituentOf:
-    - cxn:identificational
+  ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -19036,7 +19034,7 @@
   RoleOf: []
   AssociatedTo: []
   Definition: >-
-    the <a>predicates</a> that express the class of <a>temporary state</a> events. <i>Example</i>: being sick is a temporary state, and <i>(be) sick</i> is a temporary state predicate. (Section 6.3.3)
+    the <a>predicates</a> that express the class of <a sem:state>temporary state</a> events. <i>Example</i>: being sick is a temporary state, and <i>(be) sick</i> is a temporary state predicate. (Section 6.3.3)
   Examples:
     - <e>(be) sick</e>
 
@@ -19085,7 +19083,7 @@
   Name: tense iconicity
   Alias: []
   SubtypeOf:
-    - str:encoding
+    - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:coordinate-construction
@@ -20057,7 +20055,7 @@
   Alias:
     - verb-coding
   SubtypeOf:
-    - str:externally-headed
+    - str:overt-coding-strategy
   ConstituentOf: []
   ExpressionOf:
     - cxn:relative-clause-construction
@@ -23290,7 +23288,7 @@
     - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - str:stative-complex-predicate
+    - cxn:stative-complex-predicate
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -23311,7 +23309,7 @@
     - str:encoding-strategy
   ConstituentOf: []
   ExpressionOf:
-    - str:stative-complex-predicate
+    - cxn:stative-complex-predicate
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
@@ -23402,6 +23400,220 @@
   RecruitedFrom: []
   ModeledOn:
     - cxn:main-clause
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:object-equative
+  Type: str
+  Name: object equative
+  Alias: []
+  SubtypeOf:
+    - str:fixed-case
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:equative-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:unique-equative
+  Type: str
+  Name: unique equative
+  Alias: []
+  SubtypeOf:
+    - str:fixed-case
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:equative-construction
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:adverbial-clause-strategy
+  Type: str
+  Name: adverbial clause strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:concessive-conditional-construction
+    - cxn:concessive-construction
+    - cxn:conditional-construction
+  RecruitedFrom:
+    - cxn:adverbial-clause-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:coordinate-clause-strategy
+  Type: str
+  Name: coordinate clause strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:concessive-conditional-construction
+    - cxn:concessive-construction
+    - cxn:conditional-construction
+  RecruitedFrom:
+    - cxn:coordinate-clause-construction
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:utterance-clause-disalignment
+  Type: str
+  Name: utterance clause disalignment
+  Alias: []
+  SubtypeOf:
+    - str:system
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn:
+    - cxn:speech-acts
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:non-externally-headed
+  Type: str
+  Name: non-externally headed
+  Alias: []
+  SubtypeOf:
+    - str:encoding-strategy
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:indefinite-head-relative-clause
+  Type: cxn
+  Name: indefinite-head relative clause
+  Alias: []
+  SubtypeOf:
+    - cxn:relative-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:nonclausal-coordination
+  Type: cxn
+  Name: nonclausal coordination
+  Alias: []
+  SubtypeOf:
+    - cxn:coordinate-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:interrogative-complementizer
+  Type: str
+  Name: interrogative complementizer
+  Alias: []
+  SubtypeOf:
+    - str:overt-coding-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:interrogative-complement
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: str:direct-question-strategy
+  Type: str
+  Name: direct question strategy
+  Alias: []
+  SubtypeOf:
+    - str:recruitment-strategy
+  ConstituentOf: []
+  ExpressionOf:
+    - cxn:interrogative-complement
+  RecruitedFrom:
+    - cxn:interrogative
+  ModeledOn: []
   FunctionOf: []
   AttributeOf: []
   ValueOf: []
