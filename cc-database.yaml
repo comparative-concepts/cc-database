@@ -3727,7 +3727,8 @@
   Alias: []
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:commentative-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -5948,8 +5949,9 @@
   Name: desiderative predicate
   Alias: []
   SubtypeOf:
-    - cxn:predicate
-  ConstituentOf: []
+    - cxn:complement-taking-predicate
+  ConstituentOf:
+    - cxn:desiderative-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -6177,7 +6179,8 @@
   SubtypeOf:
     - str:utterance-clause-disalignment
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:utterance-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -7169,7 +7172,8 @@
   Alias: []
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:evaluative-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -7948,7 +7952,8 @@
   Alias: []
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:fearing-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -8853,7 +8858,8 @@
   Alias: []
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:hoping-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -9684,7 +9690,8 @@
   SubtypeOf:
     - str:utterance-clause-disalignment
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:utterance-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -10586,7 +10593,8 @@
   Alias: []
   SubtypeOf:
     - cxn:propositional-attitude-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:knowledge-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -11138,8 +11146,9 @@
   Name: manipulative predicate
   Alias: []
   SubtypeOf:
-    - cxn:predicate
-  ConstituentOf: []
+    - cxn:complement-taking-predicate
+  ConstituentOf:
+    - cxn:manipulative-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -13685,7 +13694,8 @@
   Alias: []
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:perception-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -13732,7 +13742,8 @@
   Alias: []
   SubtypeOf:
     - cxn:verb
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:perception-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -15368,7 +15379,8 @@
     - pretence predicate
   SubtypeOf:
     - cxn:propositional-attitude-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:pretense-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -15710,7 +15722,8 @@
   Alias: []
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:propositional-attitude-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -16109,7 +16122,8 @@
   SubtypeOf:
     - str:complementizer
   ConstituentOf: []
-  ExpressionOf: []
+  ExpressionOf:
+    - cxn:utterance-construction
   ModeledOn: []
   RecruitedFrom: []
   FunctionOf: []
@@ -19923,7 +19937,8 @@
   Alias: []
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:utterance-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -20246,7 +20261,8 @@
   Alias: []
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:wishing-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -23768,6 +23784,246 @@
   Alias: []
   SubtypeOf:
     - cxn:complex-sentence
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:utterance-construction
+  Type: cxn
+  Name: utterance construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:propositional-attitude-construction
+  Type: cxn
+  Name: propositional attitude construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:knowledge-construction
+  Type: cxn
+  Name: knowledge construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:pretense-predicate
+  Type: cxn
+  Name: pretense predicate
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:evaluative-construction
+  Type: cxn
+  Name: evaluative construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:commentative-construction
+  Type: cxn
+  Name: commentative construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:fearing-construction
+  Type: cxn
+  Name: fearing construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:hoping-construction
+  Type: cxn
+  Name: hoping construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:wishing-construction
+  Type: cxn
+  Name: wishing construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:perception-construction
+  Type: cxn
+  Name: perception construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:desiderative-construction
+  Type: cxn
+  Name: desiderative construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: cxn:manipulative-construction
+  Type: cxn
+  Name: manipulative construction
+  Alias: []
+  SubtypeOf:
+    - cxn:complement-clause-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
