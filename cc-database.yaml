@@ -323,26 +323,6 @@
   Examples:
     - He remains under <e>investigation</e>
 
-- Id: inf:action-predication
-  Type: inf
-  Name: action predication
-  Alias: []
-  SubtypeOf:
-    - inf:comment
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  FillerOf: []
-  RoleOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
-
 - Id: inf:active
   Type: inf
   Name: active
@@ -12657,8 +12637,7 @@
 - Id: str:noun-incorporation
   Type: str
   Name: noun incorporation
-  Alias:
-    - incorporation
+  Alias: []
   SubtypeOf:
     - str:compounding
     - str:a-p-disalignment-strategy
@@ -14914,8 +14893,7 @@
   Name: predicational
   Alias:
     - object predication
-  SubtypeOf:
-    - inf:comment
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15028,26 +15006,6 @@
   Examples:
     - <e>That laptop belongs to Kerry</e>
     - <e>That laptop is Kerry's</e>
-
-- Id: inf:predicational-possession
-  Type: inf
-  Name: predicational possession
-  Alias: []
-  SubtypeOf:
-    - inf:comment
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  FillerOf: []
-  RoleOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
 
 - Id: str:predicational-strategy
   Type: str
@@ -15265,8 +15223,7 @@
   Type: inf
   Name: presentational location
   Alias: []
-  SubtypeOf:
-    - inf:presentational
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -15307,26 +15264,6 @@
     - Language: Spanish
       Example: <e>Había muchas chicas de mi edad y más jóvenes</e>
       Translation: There were many girls of my age and younger
-
-- Id: inf:presentational-possession
-  Type: inf
-  Name: presentational possession
-  Alias: []
-  SubtypeOf:
-    - inf:presentational
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  FillerOf: []
-  RoleOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
 
 - Id: inf:presupposed-open-proposition
   Type: inf
@@ -15608,26 +15545,6 @@
   Definition: >-
     a concept belonging to a <a>semantic class</a> of <a>relational</a>, 1-dimensional, usually scalar, and usually stable concepts. <i>Examples</i>: age, height, shape, and so on are property concepts -- they are defined on a 1-dimensional scale, and many of them are stable properties of the <a sem:object-concept>object</a> they apply to. (Sections 2.1, and <b>4.1.1</b>, which includes an enumeration of types of property concepts)
   Examples: []
-
-- Id: inf:property-predication
-  Type: inf
-  Name: property-predication
-  Alias: []
-  SubtypeOf:
-    - inf:comment
-  ConstituentOf: []
-  ExpressionOf: []
-  RecruitedFrom: []
-  ModeledOn: []
-  FunctionOf: []
-  AttributeOf: []
-  ValueOf: []
-  FillerOf: []
-  RoleOf: []
-  AssociatedTo: []
-  Definition: ''
-  Examples: []
-  FromGlossary: false
 
 - Id: cxn:property-referring-phrase
   Type: cxn
