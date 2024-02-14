@@ -11625,8 +11625,7 @@
   RecruitedFrom: []
   ModeledOn: []
   FunctionOf: []
-  AttributeOf:
-    - inf:modification
+  AttributeOf: []
   ValueOf: []
   FillerOf: []
   RoleOf: []
@@ -23775,9 +23774,9 @@
   Examples: []
   FromGlossary: false
 
-- Id: cxn:pretense-predicate
+- Id: cxn:pretense-construction
   Type: cxn
-  Name: pretense predicate
+  Name: pretense construction
   Alias: []
   SubtypeOf:
     - cxn:complement-clause-construction
