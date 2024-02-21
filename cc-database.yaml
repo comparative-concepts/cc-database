@@ -23759,7 +23759,7 @@
   Name: knowledge construction
   Alias: []
   SubtypeOf:
-    - cxn:complement-clause-construction
+    - cxn:propositional-attitude-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -23779,7 +23779,7 @@
   Name: pretense construction
   Alias: []
   SubtypeOf:
-    - cxn:complement-clause-construction
+    - cxn:propositional-attitude-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -23819,7 +23819,7 @@
   Name: commentative construction
   Alias: []
   SubtypeOf:
-    - cxn:complement-clause-construction
+    - cxn:evaluative-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -23839,7 +23839,7 @@
   Name: fearing construction
   Alias: []
   SubtypeOf:
-    - cxn:complement-clause-construction
+    - cxn:evaluative-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -23859,7 +23859,7 @@
   Name: hoping construction
   Alias: []
   SubtypeOf:
-    - cxn:complement-clause-construction
+    - cxn:evaluative-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -23879,7 +23879,7 @@
   Name: wishing construction
   Alias: []
   SubtypeOf:
-    - cxn:complement-clause-construction
+    - cxn:evaluative-construction
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
