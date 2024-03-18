@@ -1,64 +1,64 @@
 
 import sys
 import re
-import yaml
 import json
 import argparse
 from pathlib import Path
-from typing import Union, Optional
 from datetime import datetime
 
-from validation import GlossItem, ParsedDefinition, RELATION_KEYS, run_validators
+from validation import CCType, Relation, Glosses, GlossItem, GENERIC_TYPES, parse_yaml_database, validate_database
+from validation import error, reset_errors_and_warnings, report_errors_and_warnings, set_error_verbosity
 
-class CCDBParser:
-    glosses: dict[str, GlossItem]
+
+# A parsed definition is a list of either strings or links (as pairs of strings)
+ParsedDefinition = list[str | tuple[str, str]]
+
+# The different formats that we can export the database to
+OutputFormats = ['html', 'karp', 'fnbr']
+
+
+class CCDB:
+    glosses: Glosses
     allnames: dict[str, tuple[str,...]]
-    notfound: set[str]
-    errors: int
+    definitions: dict[str, ParsedDefinition]
+    links: dict[str, list[str]]
 
-    def __init__(self) -> None:
-        self.errors = 0
-        self.notfound = set()
-
-
-    def validate_database(self) -> None:
-        for error in run_validators(self):
-            self.error(error)
-
-
-    def parse_yaml_database(self, glossfile: Union[str,Path]) -> None:
-        """Parse a YAML database."""
-        with open(glossfile) as F:
-            self.glosses = {
-                item['Id']: item 
-                for item in yaml.load(F, Loader=yaml.CLoader)
-            }
+    def __init__(self, glosses: Glosses):
+        self.glosses = glosses
 
         # All possible names (ids and aliases)
         allnames: dict[str, set[str]] = {}
         for id, item in self.glosses.items():
-            for name in [id, item['Name']] + item['Alias']:
+            for name in [id, item.Name] + item.Alias:
                 allnames.setdefault(name.casefold(), set()).add(id)
         self.allnames = {name: tuple(ids) for name, ids in allnames.items()}
 
-        # Sanity check: No alias should be an existing id
-        allids = set(id.casefold() for id in self.glosses)
-        for item in self.glosses.values():
-            for alias in [item['Name']] + item['Alias']: 
-                assert alias.casefold() not in allids, (alias, item)
-
         # Expand all definitions by converting abbreviated links 
         # "<a>name</a>" and "<a alias>name</a>" into the form "<a id>name</a>"
+        self.definitions = {}
+        self.links = {}
         for id, item in self.glosses.items():
-            definition, links = self.parse_definition(id, item['Definition'])
-            item['ParsedDefinition'] = definition
-            item['DefinitionLinks'] = links
+            defn, links = self.parse_definition(id, item.Definition)
+            if defn: self.definitions[id] = defn
+            if links: self.links[id] = links
 
+
+    def export(self, format: str):
+        if format == "html":
+            self.print_html()
+        elif format == "karp":
+            self.export_to_karp()
+        elif format == "fnbr":
+            self.export_to_fnbr()
+
+
+    ###########################################################################
+    ## Parsing definitions
 
     def parse_definition(self, id: str, definition: str) -> tuple[ParsedDefinition, list[str]]:
         """Parse a definition and return the expanded definition and the list of links."""
+        expanded: ParsedDefinition = []
         links: list[str] = []
-        expanded_definition: ParsedDefinition = []
         for part in re.split(r'(<a[^<>]*>.+?</a>)', definition):
             if (m := re.match(r'<a *([^<>]*?)>(.+?)</a>', part)):
                 link_ref = m.group(1)
@@ -70,26 +70,25 @@ class CCDBParser:
                 else:
                     link = self.clean_link(name)
                     if not link:
-                        self.error(f"{id}: Could not clean link '{name}'")
+                        error(f"{id}: Could not clean link '{name}'")
                         link = name
                     linkids = self.find_closest(link)
 
                 if not linkids:
-                    self.error(f"{id}: Could not find any matching id for link '{link}'")
-                    self.notfound.add(link)
+                    error(f"{id}: Could not find any matching id for link '{link}'")
                     linkid = link
                 else:
                     if len(linkids) > 1:
-                        self.error(f"{id}: Ambiguous link '{link}', maps to any of {linkids}")
+                        error(f"{id}: Ambiguous link '{link}', maps to any of {linkids}")
                     linkid = linkids[0]
                 links.append(linkid)
                 part = (linkid, name)
             if part:
-                expanded_definition.append(part)
-        return expanded_definition, links
+                expanded.append(part)
+        return expanded, links
 
 
-    def clean_link(self, link: str) -> Optional[str]:
+    def clean_link(self, link: str) -> str | None:
         """Clean a link by trying some very common English inflection patterns."""
         link = link.casefold()
         link = re.sub(r"[^'a-z/()-]+", ' ', link).strip()
@@ -138,15 +137,16 @@ class CCDBParser:
         'def': [],
     }
 
+    ###########################################################################
+    ## HTML export
 
-    def expand_link(self, id: str, name: Optional[str] = None) -> str:
+    def expand_link(self, id: str, name: str|None = None) -> str:
         """Expand an abbreviated link "<a>name</a>" into the form "<a id>name</a>"."""
         if name is None: 
             name = id
         if id in self.glosses:
             return f'<a {id}>{name}</a>'
         else:
-            self.notfound.add(id)
             return f'<notfound><a {id}>{name}</a></notfound>'
 
 
@@ -160,11 +160,11 @@ class CCDBParser:
         )
 
 
-    def convert_link_to_html(self, id: str, name: Optional[str] = None, selfid: Optional[str] = None) -> str:
+    def convert_link_to_html(self, id: str, name: str|None = None, selfid: str|None = None) -> str:
         """Convert a CC link into HTML, with an actual link to the CC in the database."""
         if name is None: 
             item = self.glosses[id]
-            name = f"{item['Name']} [{item['Type']}]"
+            name = f"{item.Name} [{item.Type.value}]"
         html_name = self.html_friendly_name(name)
         if id == selfid:
             return f'<strong>{html_name}</strong>'
@@ -182,7 +182,7 @@ class CCDBParser:
         return self.clean_definition_html(''.join(html_parts))
 
 
-    def print_relation_list(self, relations: list[str], name: str):
+    def print_relation_list(self, relations: list[str]|None, name: str):
         """Prints an html version of a list of related CCs, with links to these CCs."""
         if relations:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation">' +
@@ -190,10 +190,11 @@ class CCDBParser:
                     '</td></tr>')
 
 
-    def print_hierarchy(self, item: GlossItem, relation_type: str, name: str):
-        id = item['Id']
-        parents = item[relation_type]
-        children = [chid for chid, child in self.glosses.items() if id in child[relation_type]]
+    def print_hierarchy(self, item: GlossItem, relation_type: Relation, name: str):
+        id = item.Id
+        parents = item.Relations.get(relation_type)
+        children = [chid for chid, child in self.glosses.items() 
+                    if id in child.Relations.get(relation_type, ())]
         if parents or children:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation"> <table>')
             print(f'<table>')
@@ -239,14 +240,15 @@ class CCDBParser:
         print('</head><body>')
         print('<div id="search"></div>')
         print(f'<h1><a href="#">Database of Comparative Concepts</a></h1>')
-        print(f"<p>Extracted from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
+        print(f"<p>Extracted and expanded from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
 
-        glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1]['Name']))
+        glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1].Name))
 
-        nlinks = sum(len(item['DefinitionLinks']) for _, item in glossitems)
-        ntypedlinks = sum(len(item[rel]) for _, item in glossitems for rel in RELATION_KEYS)
-        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, with {ntypedlinks} typed relations and {nlinks} links within CC definitions</p>')
+        nlinks = sum(len(links) for links in self.links.values())
+        ntypedlinks = sum(len(relids) for _, item in glossitems for relids in item.Relations.values())
+        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, ' 
+              f'with {ntypedlinks} typed relations and {nlinks} links within CC definitions</p>')
 
         print('<div id="glosses">')
         for id, item in glossitems:
@@ -256,49 +258,46 @@ class CCDBParser:
 
             print(f'<tr><th>Id</th> <td class="ccinfo ccid">{id}</td></tr>')
 
-            type: str = item['Type']
-            if type:
-                entry = self.TYPE_TO_ENTRY.get(type)
+            if item.Type:
+                entry = GENERIC_TYPES.get(item.Type)
                 if entry:
                     _, _, entryname = entry.partition(":")
                     entryname = entryname.replace("-", " ")
                     type = self.convert_link_to_html(entry, entryname)
-                elif type == 'def':
+                elif item.Type == CCType.def_:
                     # Just a better alias for the HTML
                     type = 'definition'
                 else:
-                    self.error(f"{id}: Type not found: {type}")
-                    self.notfound.add(type)
-                    type = f'<span class="notfound">{type}</span>'
+                    error(f"{id}: Type not found: {item.Type}")
+                    type = f'<span class="notfound">{item.Type}</span>'
                 print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
 
-            aliases: list[str] = [item['Name']] + item.get('Alias', [])
+            aliases: list[str] = [item.Name] + item.Alias
             if aliases:
                 print('<th>Alias(es)</th> <td class="ccinfo name">' +
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</td></tr>')
 
-            self.print_relation_list(item['ExpressionOf'], "Expresses")
-            self.print_relation_list(item['RecruitedFrom'], "Recruited from")
-            self.print_relation_list(item['ModeledOn'], "Modeled on")
-            self.print_relation_list(item['FunctionOf'], "Function of")
-            self.print_relation_list(item['AttributeOf'], "Attribute of")
-            self.print_relation_list(item['ValueOf'], "Value of")
-            self.print_relation_list(item['RoleOf'], "Role of")
-            self.print_relation_list(item['FillerOf'], "Filler of")
-            self.print_relation_list(item['AssociatedTo'], "Associated")
+            relations = item.Relations
+            self.print_relation_list(relations.get(Relation.ExpressionOf), "Expresses")
+            self.print_relation_list(relations.get(Relation.RecruitedFrom), "Recruited from")
+            self.print_relation_list(relations.get(Relation.ModeledOn), "Modeled on")
+            self.print_relation_list(relations.get(Relation.FunctionOf), "Function of")
+            self.print_relation_list(relations.get(Relation.AttributeOf), "Attribute of")
+            self.print_relation_list(relations.get(Relation.ValueOf), "Value of")
+            self.print_relation_list(relations.get(Relation.RoleOf), "Role of")
+            self.print_relation_list(relations.get(Relation.FillerOf), "Filler of")
+            self.print_relation_list(relations.get(Relation.AssociatedTo), "Associated")
 
-            self.print_hierarchy(item, 'SubtypeOf', 'Taxonomy')
-            self.print_hierarchy(item, 'ConstituentOf', 'Partonomy')
+            self.print_hierarchy(item, Relation.SubtypeOf, 'Taxonomy')
+            self.print_hierarchy(item, Relation.ConstituentOf, 'Partonomy')
 
-            parsedDefinition: ParsedDefinition = item['ParsedDefinition']
-            if parsedDefinition: 
+            if id in self.definitions:
                 print(f'<tr><th>Definition</th> <td class="ccinfo definition">' +
-                      self.convert_definition_to_html(parsedDefinition) +
+                      self.convert_definition_to_html(self.definitions[id]) +
                       '</td></tr>')
 
-            fromGlossary = item.get('FromGlossary', True)
-            if not fromGlossary:
+            if not item.FromGlossary:
                 print('''<tr><th></th><td>
                       <span class="notfound">
                         Not from the original glossary of <em>Morphosyntax</em>.
@@ -309,14 +308,9 @@ class CCDBParser:
         print('</div>')
         print('</body></html>')
 
-    # What general definitions do different types correspond to?
-    TYPE_TO_ENTRY = {
-        'cxn': 'def:construction',
-        'str': 'def:strategy',
-        'inf': 'def:information-packaging',
-        'sem': 'def:meaning',
-    }
 
+    ###########################################################################
+    ## Export to Språkbanken Karp JSON-lines format
 
     def convert_definition_to_karp(self, definition: ParsedDefinition) -> str:
         """Convert a CC definition into a Karp-formatted string."""
@@ -334,74 +328,47 @@ class CCDBParser:
 
 
     def export_to_karp(self):
-        """Export the whole database as a single JSON-lines file for use in Karp (to stdout)."""
+        """Export the whole database as a single JSON-lines file for use in Karp."""
         for id in sorted(self.glosses, key=str.casefold):
             item: GlossItem = self.glosses[id]
-            out = {}
-            for key, outkey in self.KARP_KEYS:
-                if key in item:
-                    if key == 'ParsedDefinition':
-                        value = self.convert_definition_to_karp(item[key])
-                    else:
-                        value = item[key]
-                    out[outkey] = value
+            out = {
+                'Id': item.Id,
+                'Type': item.Type.value,
+                'Name': item.Name,
+                'Alias': item.Alias,
+                'SubtypeOf': item.Relations.get(Relation.SubtypeOf, []),
+            }
+            if id in self.definitions: 
+                out['Definition'] = self.convert_definition_to_karp(self.definitions[id])
             print(json.dumps(out))
 
-    # Input/output keys to include in the Karp JSON output
-    KARP_KEYS = [
-        ('Id', 'Id'),
-        ('Type', 'Type'),
-        ('Name', 'Name'),
-        ('Alias', 'Alias'),
-        ('SubtypeOf', 'SubtypeOf'),
-        ('AssociatedTo', 'AssociatedTo'),
-        ('ParsedDefinition', 'Definition'),
-    ]
 
+    ###########################################################################
+    ## Export to FrameNet Brazil JSON format
 
     def export_to_fnbr(self):
         """Export the database to the same JSON format as FrameNet Brazil."""
         # Special cases (e.g., "strategy [def]" is "strategy [str]" in FNBr)
         SPECIAL_FNBR_CCs = {
-            id: id.replace('[def]', '['+typ+']')
-            for typ, id in self.TYPE_TO_ENTRY.items()
+            id: id.replace('def:', typ.value + ':')
+            for typ, id in GENERIC_TYPES.items()
         }
-        out_ccs: list[dict[str, Union[str, list[str]]]] = []
+        out_ccs: list[dict[str, str|list[str]]] = []
         for id in sorted(self.glosses, key=str.casefold):
             item = self.glosses[id]
-            if not (item['Type'] in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
+            if not (item.Type in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
                 continue
-            out: dict[str, Union[str, list[str]]] = {}
-            for key, outkey in self.FNBR_KEYS:
-                value: Optional[Union[str, list[str]]] = item.get(key)
-                if value:
-                    if isinstance(value, str):
-                        if outkey != 'definition':
-                            # we use "--" in ids, where FNBr uses "-"
-                            value = value.replace('--', '-')
-                        if outkey == 'id':
-                            # Special cases (e.g., "strategy [def]" --> "strategy [str]")
-                            value = SPECIAL_FNBR_CCs.get(id, value)
-                        elif outkey == 'type':
-                            # Special cases (e.g., "strategy" has FNBr type "strategy")
-                            if id in SPECIAL_FNBR_CCs:
-                                value = re.sub(r" *\[[\w/]+\]( +/)?", "", id)
-                            # Convert type names (e.g., "cxn" --> "construction")
-                            value = self.FNBR_TYPES.get(value, value)
-
-                    elif isinstance(value, list):  # type: ignore
-                        # we use "--" in ids, where FNBr uses "-"
-                        value = [v.replace('--', '-') for v in value]
-                        if outkey == 'subTypeOf':
-                            value = [SPECIAL_FNBR_CCs.get(parent, parent) for parent in value]
-
-                    else:
-                        self.error(f"{id}: Unknown type for key {key}: {type(value)}")
-
-                    out[outkey] = value
-
-                elif outkey == 'definition':
-                    out[outkey] = ""
+            out = {
+                'id': SPECIAL_FNBR_CCs.get(item.Id, item.Id),
+                'name': item.Name,
+                'type': self.FNBR_TYPES.get(item.Type, item.Type),
+                'definition': item.Definition,
+                'subTypeOf': [SPECIAL_FNBR_CCs.get(relid, relid) 
+                              for relid in item.Relations.get(Relation.SubtypeOf, [])],
+            }
+            if Relation.AssociatedTo in item.Relations:
+                out['associatedTo'] = [SPECIAL_FNBR_CCs.get(relid, relid) 
+                                       for relid in item.Relations[Relation.AssociatedTo]]
             out_ccs.append(out)
         final_output = {
             'db-version': "export from cc-database",
@@ -410,64 +377,34 @@ class CCDBParser:
         jout = json.dumps(final_output, indent=2)
         print(jout)
 
-    # Keys to include in the FrameNet Brazil output
-    FNBR_KEYS = [
-        ('Name', 'name'),
-        ('Definition', 'definition'),
-        ('Type', 'type'),
-        ('Id', 'id'),
-        ('AssociatedTo', 'associatedTo'),
-        ('SubtypeOf', 'subTypeOf'),
-        # ('Alias', 'alias'), # FNBR doesn't use this
-    ]
 
     # What type names does FNBR use?
     FNBR_TYPES = {
-        'cxn': 'construction',
-        'str': 'strategy',
-        'inf': 'information packaging',
-        'sem': 'meaning',
+        CCType.cxn: 'construction',
+        CCType.str: 'strategy',
+        CCType.inf: 'information packaging',
+        CCType.sem: 'meaning',
     }
 
 
-    def error(self, err:str):
-        """Report an error."""
-        print(f"**ERROR** {err}", file=sys.stderr)
-        # from inspect import currentframe
-        # lineno = currentframe().f_back.f_lineno  # type: ignore
-        # print(f"[line {lineno}] **ERROR** {err}", file=sys.stderr)
-        self.errors += 1
-
-
-    def error_report(self):
-        """Print a final error report."""
-        print(f"\n{self.errors} error(s) encountered", file=sys.stderr)
-        if self.notfound:
-            print(
-                f"{len(self.notfound)} CC id(s) not found:\n -",
-                "\n - ".join(sorted(self.notfound)), 
-                file=sys.stderr
-            )
-
-
-OutputFormats = ['html', 'karp', 'fnbr']
+###############################################################################
+## Command-line parsing
 
 parser = argparse.ArgumentParser(description='Parse the comparative concepts database and export it in different formats.')
+parser.add_argument('--quiet', '-q', action='store_true', help=f'suppress warnings')
 parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
 parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
 if __name__ == '__main__':
     args = parser.parse_args()
+    set_error_verbosity(not args.quiet)
     if not args.format:
         print("No output format selected, I will only validate the database.", file=sys.stderr)
-    ccdb = CCDBParser()
-    ccdb.parse_yaml_database(args.cc_database)
-    ccdb.validate_database()
-    if args.format == 'html':
-        ccdb.print_html()
-    elif args.format == 'karp':
-        ccdb.export_to_karp()
-    elif args.format == 'fnbr':
-        ccdb.export_to_fnbr()
-    ccdb.error_report()
+    glosses: Glosses = parse_yaml_database(args.cc_database)
+    validate_database(glosses)
+    reset_errors_and_warnings()
+    ccdb = CCDB(glosses)
+    if args.format:
+        ccdb.export(args.format)
+    report_errors_and_warnings(f"exporting to {args.format} format")
 
