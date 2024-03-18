@@ -7230,7 +7230,6 @@
   Type: sem
   Name: participant role
   Alias:
-    - case
     - microrole
     - Frame Element
   RoleOf:
