@@ -5056,8 +5056,7 @@
   Name: coordinate construction
   Alias:
     - coordination
-  SubtypeOf:
-    - cxn:complex-construction
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -11702,6 +11701,7 @@
     - cxn:head
   ConstituentOf:
     - cxn:attributive-phrase
+    - cxn:anaphoric-head-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -13722,6 +13722,7 @@
     - cxn:verb
   ConstituentOf:
     - cxn:perception-construction
+    - cxn:perception-argument-structure-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -13973,7 +13974,8 @@
   Alias: []
   SubtypeOf:
     - cxn:mensural-term
-  ConstituentOf: []
+  ConstituentOf:
+    - cxn:partitive-construction
   ExpressionOf: []
   RecruitedFrom: []
   ModeledOn: []
@@ -14935,8 +14937,7 @@
   Type: inf
   Name: predicational location
   Alias: []
-  SubtypeOf:
-    - inf:predicational
+  SubtypeOf: []
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
@@ -23940,6 +23941,26 @@
   Alias: []
   SubtypeOf:
     - cxn:complement-clause-construction
+  ConstituentOf: []
+  ExpressionOf: []
+  RecruitedFrom: []
+  ModeledOn: []
+  FunctionOf: []
+  AttributeOf: []
+  ValueOf: []
+  RoleOf: []
+  FillerOf: []
+  AssociatedTo: []
+  Definition: ''
+  Examples: []
+  FromGlossary: false
+
+- Id: sem:species
+  Type: sem
+  Name: species
+  Alias: []
+  SubtypeOf:
+    - sem:event
   ConstituentOf: []
   ExpressionOf: []
   RecruitedFrom: []
