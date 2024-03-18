@@ -19,7 +19,7 @@ options:
                         export format
 ```
 
-There's a Makefile that reads the database and creates the file `docs/index.html` which is then automatically published here: <https://spraakbanken.github.io/ComparativeConcepts>
+There's a Makefile that reads the database and creates the file `docs/index.html` which is then automatically published here: <https://comparative-concepts.github.io/cc-database/>
 
 ## Organisation of the YAML database
 
