@@ -2,7 +2,7 @@
   Type: sem
   Name: A role
   Alias:
-    - A
+    - A (role)
   SubtypeOf:
     - sem:valency-role
   RoleOf:
@@ -34,7 +34,7 @@
 
 - Id: str:a-p-disalignment-strategy
   Type: str
-  Name: A-P disalignment-strategy
+  Name: A--P disalignment-strategy
   SubtypeOf:
     - str:system
   ExpressionOf:
@@ -46,10 +46,7 @@
 
 - Id: inf:aboutness
   Type: inf
-  Name: about(ness)
-  Alias:
-    - aboutness
-    - about
+  Name: about, aboutness
   ConstituentOf:
     - inf:topic-comment
   Definition: >-
@@ -144,10 +141,9 @@
 
 - Id: sem:action-concept
   Type: sem
-  Name: action (concept)
+  Name: action
   Alias:
-    - action concept
-    - action
+    - action (concept)
   SubtypeOf:
     - sem:event
   ValueOf:
@@ -192,9 +188,9 @@
 
 - Id: str:active-alignment-system
   Type: str
-  Name: active alignment system
+  Name: active alignment
   Alias:
-    - active alignment
+    - active alignment (system)
   SubtypeOf:
     - str:system
   ExpressionOf:
@@ -208,9 +204,8 @@
   Type: str
   Name: active category
   Alias:
-    - agentive
     - actor category
-    - agentive category
+    - agentive (category)
   ConstituentOf:
     - str:active-alignment-system
   AssociatedTo:
@@ -239,6 +234,7 @@
   Type: str
   Name: actual information packaging strategy
   Alias:
+    - actual information packaging (strategy)
     - actual IP strategy
   SubtypeOf:
     - str:information-packaging-disalignment
@@ -261,10 +257,9 @@
 
 - Id: cxn:additive-focus-operator
   Type: cxn
-  Name: additive (focus) operator
+  Name: additive focus operator
   Alias:
-    - additive focus operator
-    - additive operator
+    - additive (focus) operator
     - inclusive focus operator
   SubtypeOf:
     - cxn:focus-operator
@@ -277,7 +272,7 @@
   Type: cxn
   Name: adjective modification construction
   Alias:
-    - adjective modification
+    - adjective modification (construction)
   SubtypeOf:
     - cxn:modification-construction
   Definition: ''
@@ -349,7 +344,7 @@
   Type: str
   Name: adjoined strategy
   Alias:
-    - adjoined
+    - adjoined (strategy)
   SubtypeOf:
     - str:non-externally-headed
   ExpressionOf:
@@ -393,6 +388,7 @@
   Type: str
   Name: adnominal possessive strategy
   Alias:
+    - adnominal possessive (strategy)
     - genitive strategy
   SubtypeOf:
     - str:encoding-strategy
@@ -452,7 +448,7 @@
   Type: cxn
   Name: adverbial clause construction
   Alias:
-    - adverbial clause
+    - adverbial clause (construction)
     - adverbial subordinate construction
   SubtypeOf:
     - cxn:complex-sentence
@@ -606,7 +602,9 @@
 
 - Id: str:agree-disagree-alignment-strategy
   Type: str
-  Name: agree/disagree alignment strategy
+  Name: agree/disagree alignment
+  Alias:
+    - agree/disagree alignment (strategy)
   SubtypeOf:
     - str:polarity-response-alignment
   ExpressionOf:
@@ -636,7 +634,7 @@
   Type: cxn
   Name: alienable possession modification construction
   Alias:
-    - alienable possession
+    - alienable possession (modification construction)
   SubtypeOf:
     - cxn:possessive-modification-construction
   Definition: >-
@@ -717,7 +715,7 @@
   Type: inf
   Name: alternative question
   Alias:
-    - alternative question function
+    - alternative question (function)
   SubtypeOf:
     - inf:interrogative
   Definition: >-
@@ -737,10 +735,9 @@
 
 - Id: cxn:anaphoric-definite-article
   Type: cxn
-  Name: anaphoric (definite) article
+  Name: anaphoric article
   Alias:
-    - anaphoric definite article
-    - anaphoric article
+    - anaphoric (definite) article
   SubtypeOf:
     - cxn:attributive-phrase
     - cxn:definite-article
@@ -818,9 +815,9 @@
 
 - Id: cxn:anchoring-construction
   Type: cxn
-  Name: anchoring nominal modification construction
+  Name: anchoring construction
   Alias:
-    - anchoring construction
+    - anchoring (nominal modification) construction
   SubtypeOf:
     - cxn:modification-construction
   Definition: >-
@@ -947,9 +944,9 @@
 
 - Id: cxn:apodosis
   Type: cxn
-  Name: apodosis
+  Name: apodosis clause
   Alias:
-    - apodosis clause
+    - apodosis (clause)
   ConstituentOf:
     - cxn:conditional-construction
   Definition: >-
@@ -973,7 +970,7 @@
   Type: sem
   Name: application event
   Alias:
-    - application
+    - application (event)
     - putting event
   SubtypeOf:
     - sem:event
@@ -1273,10 +1270,6 @@
 - Id: str:balanced-balancing
   Type: str
   Name: balanced, balancing
-  Alias:
-    - balanced/balancing
-    - balanced
-    - balancing
   SubtypeOf:
     - str:clause-disalignment
   ExpressionOf:
@@ -1310,8 +1303,9 @@
 
 - Id: cxn:basic-voice-construction
   Type: cxn
-  Name: basic voice construction
+  Name: basic voice
   Alias:
+    - basic voice (construction)
     - active voice construction
     - direct voice construction
   SubtypeOf:
@@ -1384,9 +1378,9 @@
 
 - Id: cxn:binominal-lexeme-construction
   Type: cxn
-  Name: binominal lexeme construction
+  Name: binominal lexeme
   Alias:
-    - binominal lexeme
+    - binominal lexeme (construction)
   SubtypeOf:
     - cxn:nominal-modification
   Definition: >-
@@ -1413,7 +1407,7 @@
   Type: sem
   Name: bivalent event
   Alias:
-    - bivalent
+    - bivalent (event)
   SubtypeOf:
     - sem:valency-valency-class
   AssociatedTo:
@@ -1471,7 +1465,7 @@
   Type: sem
   Name: body care event
   Alias:
-    - body care
+    - body care (event)
     - grooming event
   SubtypeOf:
     - sem:event
@@ -1501,7 +1495,7 @@
   Type: sem
   Name: body part relation
   Alias:
-    - body part
+    - body part (relation)
   SubtypeOf:
     - sem:possession-relation
   Definition: >-
@@ -1511,13 +1505,10 @@
   Type: sem
   Name: body position event
   Alias:
-    - body position
-    - posture event
-    - posture
-    - maintain position event
-    - maintain position
-    - locative stative event
-    - locative stative
+    - body position (event)
+    - posture (event)
+    - maintain position (event)
+    - locative stative (event)
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
@@ -1530,13 +1521,10 @@
   Type: cxn
   Name: body position predicate
   Alias:
-    - body position
-    - posture predicate
-    - posture
-    - maintain position predicate
-    - maintain position
-    - locative stative predicate
-    - locative stative
+    - body position (predicate)
+    - posture (predicate)
+    - maintain position (predicate)
+    - locative stative (predicate)
   SubtypeOf:
     - cxn:predicate
   Definition: >-
@@ -1757,10 +1745,9 @@
 
 - Id: sem:change-in-body-position-event
   Type: sem
-  Name: change in (body) position event
+  Name: change in position event
   Alias:
-    - change in body position event
-    - change in position event
+    - change in (body) position event
     - assume position event
     - change in posture event
   SubtypeOf:
@@ -1778,10 +1765,9 @@
 
 - Id: cxn:change-in-body-position-verb
   Type: cxn
-  Name: change in (body) position verb
+  Name: change in position verb
   Alias:
-    - change in body position verb
-    - change in position verb
+    - change in (body) position verb
     - assume position verb
     - change in posture verb
   SubtypeOf:
@@ -1796,9 +1782,8 @@
   Type: sem
   Name: change of state event
   Alias:
-    - change of state
-    - COS event
-    - COS
+    - change of state (event)
+    - COS (event)
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
@@ -1850,7 +1835,7 @@
   Type: str
   Name: classifier
   SubtypeOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   ExpressionOf:
     - cxn:modification-construction
     - cxn:argument-structure-construction
@@ -1884,10 +1869,10 @@
 
 - Id: str:co-expression-strategy
   Type: str
-  Name: co-expression strategy
+  Name: co-expression
   Alias:
     - co-express
-    - co-expression
+    - co-expression (strategy)
   SubtypeOf:
     - str:system
   Definition: >-
@@ -1900,8 +1885,7 @@
   Type: str
   Name: cognate head--dependent strategy
   Alias:
-    - cognate object strategy
-    - cognate object
+    - cognate object (strategy)
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -1920,7 +1904,7 @@
   Type: sem
   Name: cognition event
   Alias:
-    - cognition
+    - cognition (event)
   SubtypeOf:
     - sem:event
     - sem:experiential-event
@@ -1983,7 +1967,7 @@
   Type: sem
   Name: combining event
   Alias:
-    - combining
+    - combining (event)
   SubtypeOf:
     - sem:event
     - sem:spatial-event
@@ -2030,7 +2014,7 @@
   Type: sem
   Name: commentative event
   Alias:
-    - commentative
+    - commentative (event)
   SubtypeOf:
     - sem:evaluative-event
   Definition: >-
@@ -2086,7 +2070,7 @@
   Type: sem
   Name: comparative conditional relation
   Alias:
-    - comparative conditional
+    - comparative conditional (relation)
   SubtypeOf:
     - sem:event-relation
   Definition: >-
@@ -2153,10 +2137,9 @@
 
 - Id: cxn:complement-dependent-clause
   Type: cxn
-  Name: complement (dependent clause)
+  Name: complement
   Alias:
-    - complement dependent clause
-    - complement
+    - complement (dependent clause)
   SubtypeOf:
     - cxn:dependent-clause
     - cxn:argument-phrase
@@ -2171,8 +2154,6 @@
 - Id: cxn:complement-clause-construction
   Type: cxn
   Name: complement clause construction
-  Alias:
-    - complement clause
   SubtypeOf:
     - cxn:complex-sentence
   Definition: >-
@@ -2243,10 +2224,7 @@
 
 - Id: cxn:complex-construction
   Type: cxn
-  Name: complex (construction)
-  Alias:
-    - complex construction
-    - complex
+  Name: complex construction
   SubtypeOf:
     - def:construction
   Definition: >-
@@ -2303,10 +2281,9 @@
 
 - Id: str:complex-predicate-passive-inverse-voice-strategy
   Type: str
-  Name: complex predicate passive--inverse (voice) strategy
+  Name: complex predicate passive--inverse strategy
   Alias:
-    - complex predicate passive--inverse voice strategy
-    - complex predicate passive--inverse strategy
+    - complex predicate passive--inverse (voice) strategy
   Definition: >-
     a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a second <a>verb</a> accompanying the main verb that encodes the fact that the <a>subject</a> <a>referring phrase</a> expresses the <a>P</a> <a>participant</a>. <i>Example</i>: in Vietnamese <i>Nam bị Nga đánh</i> <q>Nam was beaten by Nga</q>, the verb <i>bi</i> <q>suffer</q> accompanying the main verb <i>đánh</i> <q>beat</q> is an instance of the complex predicate passive--inverse voice strategy. (Section 8.3)
   Examples:
@@ -2348,8 +2325,9 @@
 
 - Id: cxn:concessive-conditional-construction
   Type: cxn
-  Name: concessive conditional construction
+  Name: concessive conditional
   Alias:
+    - concessive conditional (construction)
     - conditional concessive construction
   SubtypeOf:
     - cxn:complex-sentence
@@ -2363,7 +2341,6 @@
   Name: concessive conditional relation
   Alias:
     - conditional concessive relation
-    - concessive conditional
   Definition: >-
     a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
   Examples:
@@ -2385,7 +2362,7 @@
   Type: sem
   Name: concessive relation
   Alias:
-    - concessive
+    - concessive (relation)
   SubtypeOf:
     - sem:event-relation
   Definition: >-
@@ -2415,8 +2392,9 @@
 
 - Id: str:conditional-deranking-system
   Type: str
-  Name: conditional deranking system
+  Name: conditional deranking
   Alias:
+    - conditional deranking (system)
     - conditionally deranked
   SubtypeOf:
     - str:reference-tracking-system
@@ -2470,7 +2448,7 @@
   Type: sem
   Name: conditional relation
   Alias:
-    - conditional
+    - conditional (relation)
   SubtypeOf:
     - sem:event-relation
   Definition: >-
@@ -2500,7 +2478,7 @@
   Type: str
   Name: conjoined exceed comparative
   Alias:
-    - conjoined exceed
+    - conjoined exceed (comparative)
   SubtypeOf:
     - str:derived-case
     - str:relative-strategy
@@ -2547,10 +2525,6 @@
 - Id: def:construction
   Type: cxn
   Name: construction
-  Alias:
-    - criteria (for word classes and other grammatical categories)
-    - evidence (for word classes and other grammatical categories)
-    - tests (for word classes and other grammatical categories)
   Definition: >-
     the basic unit of <a def:morphosyntax>morphosyntactic</a> analysis; a construction is a conventional pairing of form and function -- its form is morphosyntactic structure, and its function is a combination of <a>meaning</a> (<a>semantic content</a>) and <a>information packaging</a> (Section 1.1). When combined with a modifier describing a specific construction, <q>[Modifier] construction</q> refers to any pairing of form and function in a language (or any language) used to express a particular combination of semantic content and information packaging denoted by the modifier of <q>construction</q> (Section 1.4). <i>Example</i>: the <a>numeral</a> <a>modification</a> construction exemplified by <i>three tree-s</i> consists of a form which: (i) can be described schematically as [<sc>Num Noun-number</sc>]; (ii) performs the function of referring to a group of objects of the type denoted by the noun (<i>tree</i>), and modifying that information with the additional information that the cardinality of the group is the amount denoted by the number (<i>three</i>). Specific constructions (<i>a.k.a.</i> criteria, tests, evidence) are used to define <a>word classes</a>. (Section 1.2.3)
 
@@ -2564,7 +2538,7 @@
   Type: sem
   Name: contact by impact event
   Alias:
-    - contact by impact
+    - contact by impact (event)
   SubtypeOf:
     - sem:event
   ValueOf:
@@ -2692,7 +2666,7 @@
   Type: str
   Name: controller
   ConstituentOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the <a>referring phrase</a> that denotes the same <a>referent</a> that is denoted by the <a>index</a>. <i>Example</i>: in Spanish <i>los libros rojos</i> <q>the red books</q>, <i>libros</i> is the controller; it denotes the same referent that the masculine singular nonperson index <i>-os</i> in <i>rojos</i> does. The controller is almost always a referring phrase. (Section 4.4)
   Examples:
@@ -2745,6 +2719,7 @@
   Type: cxn
   Name: coordinate clause construction
   Alias:
+    - coordinate clause (construction)
     - clause chaining
     - cosubordination
     - medial verb construction
@@ -2876,7 +2851,7 @@
   Type: str
   Name: correlative strategy
   Alias:
-    - correlative
+    - correlative (strategy)
   SubtypeOf:
     - str:non-externally-headed
   ExpressionOf:
@@ -2963,7 +2938,7 @@
   Type: cxn
   Name: declarative negation construction
   Alias:
-    - declarative negation
+    - declarative negation (construction)
   SubtypeOf:
     - cxn:declarative
     - cxn:negation-construction
@@ -3065,9 +3040,9 @@
 
 - Id: sem:spatial-deixis
   Type: sem
-  Name: deixis/deictic
+  Name: spatial deixis
   Alias:
-    - deixis
+    - (spatial) deixis
     - situational
   SubtypeOf:
     - sem:contextual
@@ -3137,7 +3112,7 @@
   ConstituentOf:
     - cxn:complex-sentence
   Definition: >-
-    a <a>clause</a> that is a <a>dependent</a> of a <a>matrix clause</a> in a <a>complex sentence construction</a>. <a>Adverbial clauses</a>, <a>complement clauses</a>, and <a>relative clauses</a> are all examples of dependent clauses. <i>Example</i>: in <i>She watered the plants before she ate lunch, before she ate lunch</i> is an instance of an (adverbial) dependent clause. Dependent clauses are often, but not always, <a>subordinate clauses</a>. (Section 15.1.2)
+    a <a>clause</a> that is a <a>dependent</a> of a <a>matrix clause</a> in a <a>complex sentence construction</a>. <a>Adverbial clauses</a>, <a complement clause construction>complement clauses</a>, and <a>relative clauses</a> are all examples of dependent clauses. <i>Example</i>: in <i>She watered the plants before she ate lunch, before she ate lunch</i> is an instance of an (adverbial) dependent clause. Dependent clauses are often, but not always, <a>subordinate clauses</a>. (Section 15.1.2)
   Examples:
     - She watered the plants <e>before she ate lunch</e>
 
@@ -3158,12 +3133,10 @@
 
 - Id: cxn:depictive-complex-predicate
   Type: cxn
-  Name: depictive (complex predicate)
+  Name: depictive
   Alias:
-    - depictive complex predicate
-    - depictive
-    - depictive secondary predicate
-    - secondary predicate
+    - depictive (complex predicate)
+    - (depictive) secondary predicate
   SubtypeOf:
     - cxn:stative-complex-predicate
   Definition: >-
@@ -3175,9 +3148,6 @@
   Type: str
   Name: deranked, deranking
   Alias:
-    - deranked/deranking
-    - deranked
-    - deranking
     - gerund
     - infinitive
     - masdars
@@ -3221,7 +3191,7 @@
   Type: sem
   Name: desiderative event
   Alias:
-    - desiderative
+    - desiderative (event)
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -3243,10 +3213,9 @@
 
 - Id: str:detached-topic-phrase
   Type: str
-  Name: detached (topic phrase)
+  Name: detached topic phrase
   Alias:
-    - detached topic phrase
-    - detached
+    - detached (topic phrase)
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -3434,10 +3403,9 @@
 
 - Id: sem:distal-deixis
   Type: sem
-  Name: distal (deixis)
+  Name: distal
   Alias:
-    - distal deixis
-    - distal
+    - distal (deixis)
   SubtypeOf:
     - sem:spatial-deixis
   Definition: >-
@@ -3455,7 +3423,7 @@
   Type: cxn
   Name: ditransitive construction
   Alias:
-    - ditransitive
+    - ditransitive (construction)
   SubtypeOf:
     - cxn:basic-voice-construction
   Definition: >-
@@ -3479,7 +3447,7 @@
   Type: str
   Name: domain
   ConstituentOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the construction as a whole that the <a>controller</a>, <a>target</a>, and <a>index</a> occur in. <i>Example</i>: in Spanish <i>los libros rojos</i> <q>the red books</q>, the domain is the <a>modification construction</a> including the <a>modifier</a> <i>rojos</i> <q>red</q> (the target), the modifier suffix <i>-os</i> <q>[Masculine Plural]</q>, and the <a>head</a> <a>noun</a> <i>libros</i> <q>books</q> (the controller). (Section 4.4)
   Examples:
@@ -3758,7 +3726,7 @@
   Type: sem
   Name: epistemic modality
   Alias:
-    - epistemic modal
+    - epistemic modal(ity)
   SubtypeOf:
     - sem:modality
   AssociatedTo:
@@ -3859,9 +3827,9 @@
 
 - Id: str:ergative-alignment-system
   Type: str
-  Name: ergative alignment system
+  Name: ergative alignment
   Alias:
-    - ergative alignment
+    - ergative alignment (system)
   SubtypeOf:
     - str:transitive-alignment
   ExpressionOf:
@@ -3887,7 +3855,7 @@
   Type: sem
   Name: evaluative event
   Alias:
-    - evaluative
+    - evaluative (event)
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -3907,11 +3875,11 @@
   Type: sem
   Name: event
   Alias:
+    - event (concept)
     - eventuality
     - situation
     - state of affairs
     - SOA
-    - event concept
   SubtypeOf:
     - sem:entity
   ConstituentOf:
@@ -4037,8 +4005,8 @@
   Type: cxn
   Name: exhaustive list coordination
   Alias:
+    - exhaustive (list) coordination
     - summary conjunction
-    - exhaustive coordination
   SubtypeOf:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -4067,7 +4035,7 @@
   Type: cxn
   Name: existential negation construction
   Alias:
-    - existential negation
+    - existential negation (construction)
   SubtypeOf:
     - cxn:declarative-negation-construction
     - cxn:negation-construction
@@ -4084,7 +4052,7 @@
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
-    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by adding something else to the rejected component, rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES</i>, the speaker rejects that what John bought was just apples, and adds peaches to what John bought. <i>Also</i> is an <a>additive (focus) operator</a>. (Section 11.4.1)
+    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by adding something else to the rejected component, rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES</i>, the speaker rejects that what John bought was just apples, and adds peaches to what John bought. <i>Also</i> is an <a>additive focus operator</a>. (Section 11.4.1)
   Examples:
     - John bought apples. <e>He also bought PEACHES</e>
 
@@ -4198,8 +4166,8 @@
   Type: def
   Name: explicitness
   Alias:
+    - explicit(ness)
     - recoverability
-    - explicit
   Definition: >-
     the property of <a>relative clause construction</a> <a>strategies</a> that refers to how explicitly the strategy encodes the <a>semantic role</a> of the <u>shared participant</u> in the <a>event</a> denoted by the <a>relative clause</a>. For example, the <a>pronoun-retention strategy</a> is more explicit than the <a>gap strategy</a> because the former strategy overtly encodes the semantic role of the participant in the relative clause event via the retained <a>pronoun</a>, whereas the latter strategy does not encode the semantic role at all. Explicitness plays a role in determining the distribution of relative clause strategies with respect to the <a>Accessibility Hierarchy</a>. (Section 19.3)
 
@@ -4243,7 +4211,7 @@
   Type: str
   Name: extraposed strategy
   Alias:
-    - extraposed
+    - extraposed (strategy)
   SubtypeOf:
     - str:externally-headed
     - str:word-order
@@ -4412,9 +4380,6 @@
   Type: str
   Name: flag, flagging
   Alias:
-    - flag/flagging
-    - flag
-    - flagging
     - case marker
   SubtypeOf:
     - str:relational-strategy
@@ -4575,7 +4540,7 @@
   Type: str
   Name: gap strategy
   Alias:
-    - gap
+    - gap (strategy)
   SubtypeOf:
     - str:externally-headed
   ExpressionOf:
@@ -4657,7 +4622,7 @@
   Type: sem
   Name: generic conditional relation
   Alias:
-    - generic conditional
+    - generic conditional (relation)
   SubtypeOf:
     - sem:conditional-relation
   Definition: >-
@@ -4679,7 +4644,7 @@
   Type: sem
   Name: gradable predicative scale
   Alias:
-    - predicative scale
+    - (gradable) predicative scale
   ConstituentOf:
     - sem:comparative-relation
     - sem:equative-relation
@@ -4779,7 +4744,7 @@
   Type: sem
   Name: hoping event
   Alias:
-    - hoping
+    - hoping (event)
   SubtypeOf:
     - sem:evaluative-event
   Definition: >-
@@ -4850,12 +4815,9 @@
     - <e>If she comes, I will come too</e>
     - <e>If she had come, I would have come too</e>
 
-- Id: inf:identifiability-identity
+- Id: inf:identifiability
   Type: inf
-  Name: identifiability, identity
-  Alias:
-    - identifiability/identity
-    - identifiability
+  Name: identifiability
   SubtypeOf:
     - inf:information-status
   Definition: >-
@@ -4885,7 +4847,7 @@
   Type: inf
   Name: identity known
   SubtypeOf:
-    - inf:identifiability-identity
+    - inf:identifiability
   Definition: ''
   FromGlossary: false
 
@@ -4899,7 +4861,7 @@
   Type: inf
   Name: identity unknown
   SubtypeOf:
-    - inf:identifiability-identity
+    - inf:identifiability
   Definition: ''
   FromGlossary: false
 
@@ -4922,10 +4884,10 @@
 
 - Id: cxn:imperative-hortative
   Type: cxn
-  Name: imperative--hortative
+  Name: imperative--hortative construction
   Alias:
-    - imperative
-    - hortative
+    - imperative construction
+    - hortative construction
   SubtypeOf:
     - cxn:speech-acts
   Definition: >-
@@ -5084,7 +5046,7 @@
   SubtypeOf:
     - cxn:article
   Definition: >-
-    an <a>article</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: <i>a bowl</i> is an example of an indefinite article <i>a</i> combined with a <a>common noun</a> bowl, used in a context where the individual bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
+    an <a>article</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the referent is not known to speaker or hearer (or both). This includes <a>pragmatically specific referent</a>, <a>pragmatically nonspecific referent</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: <i>a bowl</i> is an example of an indefinite article <i>a</i> combined with a <a>common noun</a> bowl, used in a context where the individual bowl in question is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
   Examples:
     - <e>a</e> bowl
 
@@ -5094,7 +5056,7 @@
   SubtypeOf:
     - cxn:pronoun
   Definition: >-
-    a <a>pronoun</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is not known to speaker or hearer (or both). This includes <a>pragmatically specific</a>, <a>pragmatically nonspecific (but semantically specific)</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4–3.5). <i>Example</i>: in <i>Something is under the bed</i>, <i>something</i> is an example of an indefinite pronoun, used in a context where the referent is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
+    a <a>pronoun</a> that is associated with the bottom end of the <a>information status</a> continuum, where the identity of the <a>referent</a> is not known to speaker or hearer (or both). This includes <a>pragmatically specific referent</a>, <a>pragmatically nonspecific referent</a>, and various categories of <a>nonspecific referents</a> (see Table 3.4 and Sections 3.4--3.5). <i>Example</i>: in <i>Something is under the bed</i>, <i>something</i> is an example of an indefinite pronoun, used in a context where the referent is not identifiable by the hearer. (Table 3.4, Section 3.3.1)
   Examples:
     - <e>Something</e> is under the bed
 
@@ -5139,7 +5101,7 @@
   Type: str
   Name: index
   ConstituentOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   Definition: >-
     the morpheme in an <a>indexical strategy</a> which <a inf:reference-referent>refers</a> to (indexes) the referent. <i>Example</i>: in Spanish <i>las chicas cantaban</i> <q>the girls were singing</q>, the 3rd person plural suffix <i>-an</i> on the imperfective form of <q>sing</q> is the index, referring to the same referent as <i>las chicas</i> <q>the girls</q>. (Section 4.4)
   Examples:
@@ -5155,7 +5117,7 @@
   Alias:
     - agreement feature
   ConstituentOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the categories of the <a>referent</a> that the <a>index</a> expresses. Typical categories are <a>person</a>, <a>gender/class</a>, and <a>number</a>. <i>Example</i>: in Spanish <i>los libros roj-os</i> <q>the red books</q>, the suffix <i>-os</i> on the modifier <i>rojos</i> <q>red</q> indexes the plural number and masculine gender of <i>libros</i> <q>books</q>. (Section 4.4)
   Examples:
@@ -5175,11 +5137,10 @@
   Definition: >-
     a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> <a>indexes</a> an <a>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
 
-- Id: str:indexical-strategy-indexation
+- Id: str:indexation
   Type: str
-  Name: indexical strategy, indexation
+  Name: indexation
   Alias:
-    - indexical strategy/indexation
     - indexical strategy
     - indexation
     - agreement
@@ -5281,7 +5242,7 @@
   Type: inf
   Name: inferrable
   Alias:
-    - containing inferrable
+    - (containing) inferrable
   SubtypeOf:
     - inf:reference-referent
   ValueOf:
@@ -5293,10 +5254,9 @@
 
 - Id: cxn:information-question-response
   Type: cxn
-  Name: information (question) response
+  Name: information question response construction
   Alias:
-    - information question response
-    - information response
+    - information (question) response construction
   SubtypeOf:
     - cxn:response
   Definition: >-
@@ -5309,10 +5269,9 @@
 
 - Id: inf:information-question-response
   Type: inf
-  Name: information (question) response
+  Name: information question response
   Alias:
-    - information question response
-    - information response
+    - information (question) response
   SubtypeOf:
     - inf:response
   Definition: >-
@@ -5510,7 +5469,7 @@
   Type: str
   Name: internally headed strategy
   Alias:
-    - internally headed
+    - internally headed (strategy)
   SubtypeOf:
     - str:non-externally-headed
   ExpressionOf:
@@ -5648,7 +5607,7 @@
   Type: inf
   Name: irrealis referent
   Alias:
-    - irrealis
+    - irrealis (referent)
   SubtypeOf:
     - inf:nonspecific-referent
   Definition: >-
@@ -5700,7 +5659,7 @@
   Type: sem
   Name: kinship relation
   Alias:
-    - kinship
+    - kinship (relation)
   SubtypeOf:
     - sem:possession-relation
   AssociatedTo:
@@ -5714,7 +5673,7 @@
   Type: sem
   Name: knowledge event
   Alias:
-    - knowledge
+    - knowledge (event)
   SubtypeOf:
     - sem:propositional-attitude-event
   AssociatedTo:
@@ -5791,10 +5750,6 @@
 - Id: def:lexicalize-lexicalization
   Type: def
   Name: lexicalize, lexicalization
-  Alias:
-    - lexicalize/lexicalization
-    - lexicalize
-    - lexicalization
   Definition: >-
     the diachronic process by which a complex <a>morphosyntactic</a> structure develops an idiosyncratic <a>meaning</a>, and so comes to form one unit, in the sense of a pairing of a <a>form</a> and a unitary, unanalyzable meaning. <i>Example</i>: the English <a>phrase</a> <i>jack-in-the-pulpit</i> has lexicalized to denote a particular species of plant. There is usually an earlier stage where the <a>elements</a> of the <a>complex predicate</a> have an identifiable meaning, even if the meaning of the whole is idiosyncratic. For example <i>red-winged blackbird</i> describes a specific species of bird, but the phrase is partially analyzable in that the bird is mostly black but has a patch of red on its wings. A lexicalized structure may come to be fixed in the order of its elements, and altered or reduced in form, for example the farewell <i>goodbye</i> which originated in the phrase <i>God be with ye</i> (and has now been further reduced to <i>bye</i>). (Sections 13.1.2, 13.4)
 
@@ -5855,6 +5810,7 @@
   Type: str
   Name: locational possessive strategy
   Alias:
+    - locational possessive (strategy)
     - location strategy
     - goal strategy
   SubtypeOf:
@@ -5875,6 +5831,7 @@
   Type: str
   Name: locational strategy
   Alias:
+    - locational (strategy)
     - verbal copula strategy
   SubtypeOf:
     - str:encoding-strategy
@@ -5917,7 +5874,7 @@
   Type: cxn
   Name: locative phrase
   Alias:
-    - locative attributive phrase
+    - locative (attributive) phrase
   SubtypeOf:
     - cxn:attributive-phrase
   ConstituentOf:
@@ -5998,7 +5955,7 @@
   Type: inf
   Name: major propositional act
   Alias:
-    - propositional act
+    - (major) propositional act
   SubtypeOf:
     - inf:declarative
   Definition: >-
@@ -6023,7 +5980,7 @@
   Type: sem
   Name: manipulative event
   Alias:
-    - manipulative
+    - manipulative (event)
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -6073,7 +6030,7 @@
   Type: sem
   Name: manner of motion event
   Alias:
-    - manner of motion
+    - manner of motion (event)
   SubtypeOf:
     - sem:motion-event
   Definition: >-
@@ -6128,10 +6085,8 @@
   Type: sem
   Name: meaning
   Alias:
-    - semantic content
-    - semantic
-    - information content
-    - information
+    - information (content)
+    - semantic (content)
   Definition: >-
     the information content that is conventionally conveyed by a <a>construction</a>. <i>Example</i>: a word such as <i>square</i> has the meaning of a particular shape. (Section 1.1)
 
@@ -6198,10 +6153,10 @@
 
 - Id: cxn:mensural-construction
   Type: cxn
-  Name: mensural construction
+  Name: mensural modification construction
   Alias:
-    - mensural modification construction
-    - mensural modification
+    - mensural construction
+    - mensural modification (construction)
   SubtypeOf:
     - cxn:modification-construction
     - cxn:typifying-construction
@@ -6305,7 +6260,7 @@
   Type: cxn
   Name: modification construction
   Alias:
-    - referent modification construction
+    - (referent) modification construction
   SubtypeOf:
     - cxn:referring-phrase
   Definition: >-
@@ -6377,7 +6332,7 @@
   Type: sem
   Name: monovalent event
   Alias:
-    - monovalent
+    - monovalent (event)
   SubtypeOf:
     - sem:valency-valency-class
   AssociatedTo:
@@ -6393,9 +6348,7 @@
 
 - Id: def:morphosyntax
   Type: def
-  Name: morphosyntax
-  Alias:
-    - morphosyntactic
+  Name: morphosyntax, morphosyntactic
   Definition: >-
     the analysis of the internal structure of utterances, both above the word level and below it. <i>Example</i>: <i>three tree-s</i> is analyzed as the numeral modifier <i>three</i> combined with the head <i>tree-s</i>, which is made of the root <i>tree</i> and the plural suffix <i>-s</i>. (Section 1.1)
 
@@ -6403,7 +6356,7 @@
   Type: sem
   Name: motion event
   Alias:
-    - motion
+    - motion (event)
   SubtypeOf:
     - sem:event
     - sem:spatial-event
@@ -6450,7 +6403,7 @@
   Type: cxn
   Name: negation construction
   Alias:
-    - negation
+    - negation (construction)
   SubtypeOf:
     - cxn:speech-acts
   Definition: >-
@@ -6458,10 +6411,9 @@
 
 - Id: sem:negative-polarity
   Type: sem
-  Name: negative (polarity)
+  Name: negative
   Alias:
-    - negative polarity
-    - negative
+    - negative (polarity)
   SubtypeOf:
     - sem:polarity
   AssociatedTo:
@@ -6606,10 +6558,10 @@
 
 - Id: cxn:non-exhaustive-list-coordination
   Type: cxn
-  Name: non-exhaustive list coordination
+  Name: non-exhaustive coordination
   Alias:
+    - non-exhaustive (list) coordination
     - representative conjunction
-    - non-exhaustive coordination
   SubtypeOf:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -6629,10 +6581,9 @@
 
 - Id: cxn:nonanaphoric-definite-article
   Type: cxn
-  Name: nonanaphoric (definite) article
+  Name: nonanaphoric article
   Alias:
-    - nonanaphoric definite article
-    - nonanaphoric article
+    - nonanaphoric (definite) article
   SubtypeOf:
     - cxn:attributive-phrase
     - cxn:definite-article
@@ -6660,7 +6611,7 @@
   Type: str
   Name: nonperson indexation
   SubtypeOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   ExpressionOf:
     - cxn:modification-construction
     - cxn:argument-structure-construction
@@ -6718,13 +6669,9 @@
 
 - Id: cxn:nonspecific-article
   Type: cxn
-  Name: nonspecific article
+  Name: semantically nonspecific article
   Alias:
     - (semantically) nonspecific (indefinite) article
-    - semantically nonspecific (indefinite) article
-    - nonspecific (indefinite) article
-    - (semantically) nonspecific indefinite article
-    - (semantically) nonspecific article
   SubtypeOf:
     - cxn:attributive-phrase
     - cxn:indefinite-article
@@ -6733,13 +6680,9 @@
 
 - Id: cxn:nonspecific-pronoun
   Type: cxn
-  Name: nonspecific pronoun
+  Name: semantically nonspecific pronoun
   Alias:
     - (semantically) nonspecific (indefinite) pronoun
-    - semantically nonspecific (indefinite) pronoun
-    - nonspecific (indefinite) pronoun
-    - (semantically) nonspecific indefinite pronoun
-    - (semantically) nonspecific pronoun
   SubtypeOf:
     - cxn:pronoun
     - cxn:indefinite-pronoun
@@ -6748,13 +6691,9 @@
 
 - Id: inf:nonspecific-referent
   Type: inf
-  Name: nonspecific referent
+  Name: semantically nonspecific referent
   Alias:
     - (semantically) nonspecific (indefinite) referent
-    - semantically nonspecific (indefinite) referent
-    - nonspecific (indefinite) referent
-    - (semantically) nonspecific indefinite referent
-    - (semantically) nonspecific referent
   SubtypeOf:
     - inf:reference-referent
   ValueOf:
@@ -6778,7 +6717,7 @@
   Type: str
   Name: nonverbal copula strategy
   Alias:
-    - nonverbal copula
+    - nonverbal copula (strategy)
   SubtypeOf:
     - str:copula
   ExpressionOf:
@@ -6849,7 +6788,7 @@
   Type: str
   Name: noun-modifying clause strategy
   Alias:
-    - noun-modifying clause
+    - noun-modifying clause (strategy)
   SubtypeOf:
     - str:recruitment-strategy
   ExpressionOf:
@@ -6878,10 +6817,10 @@
 
 - Id: cxn:numeral-construction
   Type: cxn
-  Name: numeral construction
+  Name: numeral modification construction
   Alias:
-    - numeral modification construction
-    - numeral modification
+    - numeral construction
+    - numeral modification (construction)
   SubtypeOf:
     - cxn:modification-construction
   Definition: ''
@@ -6964,9 +6903,9 @@
 
 - Id: cxn:object-phrase
   Type: cxn
-  Name: object argument phrase
+  Name: object phrase
   Alias:
-    - object phrase
+    - object (argument) phrase
   SubtypeOf:
     - cxn:core-argument-phrase
   Definition: >-
@@ -7015,9 +6954,9 @@
 
 - Id: cxn:oblique-phrase
   Type: cxn
-  Name: oblique argument phrase
+  Name: oblique phrase
   Alias:
-    - oblique phrase
+    - oblique (argument) phrase
   SubtypeOf:
     - cxn:argument-phrase
   ConstituentOf:
@@ -7093,11 +7032,10 @@
 
 - Id: str:overt-coding-strategy
   Type: str
-  Name: overt (coding) strategy
+  Name: overt coding
   Alias:
-    - overt coding strategy
+    - overt coding (strategy)
     - overt strategy
-    - overt coding
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -7114,8 +7052,8 @@
   Type: str
   Name: overtly headed strategy
   Alias:
-    - overt anaphoric head strategy
-    - overt head strategy
+    - overtly headed (strategy)
+    - overt (anaphoric) head strategy
   SubtypeOf:
     - str:overt-coding-strategy
   ExpressionOf:
@@ -7146,7 +7084,7 @@
   Type: sem
   Name: ownership
   Alias:
-    - ownership relation
+    - ownership (relation)
   SubtypeOf:
     - sem:possession-relation
   AssociatedTo:
@@ -7160,9 +7098,8 @@
   Type: sem
   Name: P role
   Alias:
-    - O role
-    - P
-    - O
+    - P (role)
+    - O (role)
   SubtypeOf:
     - sem:valency-role
   RoleOf:
@@ -7190,7 +7127,7 @@
   Type: sem
   Name: part--whole relation
   Alias:
-    - part--whole
+    - part--whole (relation)
   SubtypeOf:
     - sem:possession-relation
   AssociatedTo:
@@ -7343,9 +7280,10 @@
 
 - Id: cxn:passive-inverse-voice-construction
   Type: cxn
-  Name: passive--inverse voice construction
+  Name: passive--inverse voice
   Alias:
     - passive--inverse construction
+    - passive--inverse voice (construction)
   SubtypeOf:
     - cxn:nonbasic-voice-construction
   Definition: >-
@@ -7355,12 +7293,9 @@
 
 - Id: sem:path-of-motion-event
   Type: sem
-  Name: path (of motion) event
+  Name: path event
   Alias:
-    - path of motion event
-    - path of motion
-    - path event
-    - path
+    - path (of motion) (event)
   SubtypeOf:
     - sem:motion-event
   Definition: >-
@@ -7370,10 +7305,9 @@
 
 - Id: cxn:path-of-motion-verb
   Type: cxn
-  Name: path (of motion) verb
+  Name: path verb
   Alias:
-    - path of motion verb
-    - path verb
+    - path (of motion) verb
   SubtypeOf:
     - cxn:verb
   Definition: >-
@@ -7411,7 +7345,7 @@
   Type: sem
   Name: perception event
   Alias:
-    - perception
+    - perception (event)
   SubtypeOf:
     - sem:event
     - sem:experiential-event
@@ -7479,7 +7413,7 @@
   Type: str
   Name: person indexation
   SubtypeOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   ExpressionOf:
     - cxn:modification-construction
     - cxn:argument-structure-construction
@@ -7599,8 +7533,9 @@
 
 - Id: cxn:polarity-question
   Type: cxn
-  Name: polarity question
+  Name: polarity question construction
   Alias:
+    - polarity question (construction)
     - yes/no question
     - Y/N question
   SubtypeOf:
@@ -7614,7 +7549,7 @@
   Type: inf
   Name: polarity question
   Alias:
-    - polarity question function
+    - polarity question (function)
   SubtypeOf:
     - inf:interrogative
   Definition: >-
@@ -7622,8 +7557,9 @@
 
 - Id: cxn:polarity-response
   Type: cxn
-  Name: polarity response
+  Name: polarity response construction
   Alias:
+    - polarity response (construction)
     - polarity answer
   SubtypeOf:
     - cxn:response
@@ -7664,10 +7600,9 @@
 
 - Id: sem:positive-polarity
   Type: sem
-  Name: positive (polarity)
+  Name: positive
   Alias:
-    - positive polarity
-    - positive
+    - positive (polarity)
   SubtypeOf:
     - sem:polarity
   Definition: >-
@@ -7734,10 +7669,9 @@
 
 - Id: cxn:possessive-modification-construction
   Type: cxn
-  Name: possessive (modification) construction
+  Name: possessive construction
   Alias:
-    - possessive modification construction
-    - possessive construction
+    - possessive (modification) construction
     - attributive possession construction
   SubtypeOf:
     - cxn:nominal-modification
@@ -7789,7 +7723,7 @@
   Type: sem
   Name: possessor role
   Alias:
-    - possessor
+    - possessor (role)
   SubtypeOf:
     - sem:semantic-role
   RoleOf:
@@ -7803,9 +7737,9 @@
   Type: sem
   Name: possessum role
   Alias:
+    - possessum (role)
     - possessed role
     - possessee role
-    - possessum
   SubtypeOf:
     - sem:semantic-role
   RoleOf:
@@ -7846,7 +7780,7 @@
   Type: str
   Name: postnominal strategy
   Alias:
-    - postnominal
+    - postnominal (strategy)
   SubtypeOf:
     - str:externally-headed
   ExpressionOf:
@@ -7878,9 +7812,8 @@
   Type: inf
   Name: pragmatic assertion
   Alias:
-    - assertion
-    - pragmatically assert
-    - assert
+    - (pragmatic) assertion
+    - (pragmatically) assert
   ConstituentOf:
     - inf:complex-figure
     - inf:figure-ground
@@ -7906,54 +7839,32 @@
 
 - Id: cxn:pragmatically-nonspecific-but-semantically-specific-indefinite-article
   Type: cxn
-  Name: pragmatically nonspecific (but semantically specific) (indefinite) article
+  Name: pragmatically nonspecific article
   Alias:
-    - pragmatically nonspecific (but semantically specific) indefinite article
-    - pragmatically nonspecific (but semantically specific) article
-    - pragmatically nonspecific but semantically specific (indefinite) article
-    - pragmatically nonspecific but semantically specific indefinite article
-    - pragmatically nonspecific but semantically specific article
-    - pragmatically nonspecific (indefinite) article
-    - pragmatically nonspecific indefinite article
-    - pragmatically nonspecific article
+    - pragmatically nonspecific (but semantically specific) (indefinite) article
   SubtypeOf:
     - cxn:attributive-phrase
     - cxn:indefinite-article
   Definition: >-
-    an <a>article</a> that is used for a <a>pragmatically nonspecific (but semantically specific) indefinite referent</a>. (Section 3.4.1)
+    an <a>article</a> that is used for a <a>pragmatically nonspecific indefinite referent</a>. (Section 3.4.1)
 
 - Id: cxn:pragmatically-nonspecific-but-semantically-specific-indefinite-pronoun
   Type: cxn
-  Name: pragmatically nonspecific (but semantically specific) (indefinite) pronoun
+  Name: pragmatically nonspecific pronoun
   Alias:
-    - pragmatically nonspecific (but semantically specific) indefinite pronoun
-    - pragmatically nonspecific (but semantically specific) pronoun
-    - pragmatically nonspecific but semantically specific (indefinite) pronoun
-    - pragmatically nonspecific but semantically specific indefinite pronoun
-    - pragmatically nonspecific but semantically specific pronoun
-    - pragmatically nonspecific (indefinite) pronoun
-    - pragmatically nonspecific indefinite pronoun
-    - pragmatically nonspecific pronoun
+    - pragmatically nonspecific (but semantically specific) (indefinite) pronoun
   SubtypeOf:
     - cxn:pronoun
     - cxn:indefinite-pronoun
   Definition: >-
-    an <a>pronoun</a> that is used for a <a>pragmatically nonspecific (but semantically specific) indefinite referent</a>. (Section 3.4.1)
+    an <a>pronoun</a> that is used for a <a>pragmatically nonspecific indefinite referent</a>. (Section 3.4.1)
   FromGlossary: false
 
 - Id: inf:pragmatically-nonspecific-but-semantically-specific-indefinite-referent
   Type: inf
-  Name: pragmatically nonspecific (but semantically specific) (indefinite) referent
+  Name: pragmatically nonspecific referent
   Alias:
-    - pragmatically nonspecific (but semantically specific) indefinite referent
-    - pragmatically nonspecific (but semantically specific) referent
-    - pragmatically nonspecific (but semantically specific)
-    - pragmatically nonspecific but semantically specific (indefinite) referent
-    - pragmatically nonspecific but semantically specific indefinite referent
-    - pragmatically nonspecific but semantically specific referent
-    - pragmatically nonspecific (indefinite) referent
-    - pragmatically nonspecific indefinite referent
-    - pragmatically nonspecific referent
+    - pragmatically nonspecific (but semantically specific) (indefinite) referent
   SubtypeOf:
     - inf:reference-referent
   ValueOf:
@@ -7963,10 +7874,9 @@
 
 - Id: cxn:pragmatically-specific-indefinite-article
   Type: cxn
-  Name: pragmatically specific (indefinite) article
+  Name: pragmatically specific article
   Alias:
-    - pragmatically specific indefinite article
-    - pragmatically specific article
+    - pragmatically specific (indefinite) article
   SubtypeOf:
     - cxn:attributive-phrase
     - cxn:indefinite-article
@@ -7975,10 +7885,9 @@
 
 - Id: cxn:pragmatically-specific-indefinite-pronoun
   Type: cxn
-  Name: pragmatically specific (indefinite) pronoun
+  Name: pragmatically specific pronoun
   Alias:
-    - pragmatically specific indefinite pronoun
-    - pragmatically specific pronoun
+    - pragmatically specific (indefinite) pronoun
   SubtypeOf:
     - cxn:pronoun
     - cxn:indefinite-pronoun
@@ -7988,11 +7897,9 @@
 
 - Id: inf:pragmatically-specific-indefinite-referent
   Type: inf
-  Name: pragmatically specific (indefinite) referent
+  Name: pragmatically specific referent
   Alias:
-    - pragmatically specific indefinite referent
-    - pragmatically specific referent
-    - pragmatically specific
+    - pragmatically specific (indefinite) referent
   SubtypeOf:
     - inf:reference-referent
   ValueOf:
@@ -8016,9 +7923,8 @@
   Type: cxn
   Name: predicate adjectival construction
   Alias:
-    - predicate adjectival
-    - property predication construction
-    - property predication
+    - predicate adjectival (construction)
+    - property predication (construction)
   SubtypeOf:
     - cxn:nonprototypical-predication
   Definition: >-
@@ -8048,9 +7954,8 @@
   Type: cxn
   Name: predicate nominal construction
   Alias:
-    - predicate nominal
-    - object predication construction
-    - object predication
+    - predicate nominal (construction)
+    - object predication (construction)
     - predicational
   SubtypeOf:
     - cxn:nonprototypical-predication
@@ -8193,7 +8098,7 @@
   Type: str
   Name: prenominal strategy
   Alias:
-    - prenominal
+    - prenominal (strategy)
   SubtypeOf:
     - str:externally-headed
   ExpressionOf:
@@ -8382,7 +8287,7 @@
   Type: str
   Name: pronoun-retention strategy
   Alias:
-    - pronoun-retention
+    - pronoun-retention (strategy)
   SubtypeOf:
     - str:externally-headed
   ExpressionOf:
@@ -8420,10 +8325,9 @@
 
 - Id: sem:property-concept
   Type: sem
-  Name: property (concept)
+  Name: property
   Alias:
-    - property concept
-    - property
+    - property (concept)
     - quality
   SubtypeOf:
     - sem:event
@@ -8476,7 +8380,7 @@
   Type: sem
   Name: propositional attitude event
   Alias:
-    - propositional attitude
+    - propositional attitude (event)
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -8522,8 +8426,9 @@
 
 - Id: cxn:protasis
   Type: cxn
-  Name: protasis
+  Name: protasis clause
   Alias:
+    - protasis (clause)
     - antecedent
   ConstituentOf:
     - cxn:conditional-construction
@@ -8546,7 +8451,7 @@
   Type: cxn
   Name: prototypical construction
   Alias:
-    - prototypical
+    - prototypical (construction)
   SubtypeOf:
     - def:construction
   Definition: >-
@@ -8556,10 +8461,9 @@
 
 - Id: sem:proximal-deixis
   Type: sem
-  Name: proximal (deixis)
+  Name: proximal
   Alias:
-    - proximal deixis
-    - proximal
+    - proximal (deixis)
   SubtypeOf:
     - sem:spatial-deixis
   Definition: >-
@@ -8653,10 +8557,10 @@
 
 - Id: cxn:quantifier-construction
   Type: cxn
-  Name: quantifier construction
+  Name: quantifier modification construction
   Alias:
-    - quantifier modification construction
-    - quantifier modification
+    - quantifier construction
+    - quantifier modification (construction)
   SubtypeOf:
     - cxn:modification-construction
   Definition: ''
@@ -8710,9 +8614,8 @@
   Type: sem
   Name: R role
   Alias:
-    - G role
-    - R
-    - G
+    - R (role)
+    - G (role)
   SubtypeOf:
     - sem:valency-role
   RoleOf:
@@ -8765,9 +8668,8 @@
   Type: str
   Name: recruitment strategy
   Alias:
-    - recruitment
-    - recruit
-    - recruiting
+    - recruitment (strategy)
+    - recruit(ing)
   SubtypeOf:
     - def:strategy
   Definition: >-
@@ -8801,10 +8703,6 @@
 - Id: inf:reference-referent
   Type: inf
   Name: reference, referent
-  Alias:
-    - reference/referent
-    - reference
-    - referent
   SubtypeOf:
     - inf:major-propositional-act
   ConstituentOf:
@@ -9033,7 +8931,7 @@
   Type: sem
   Name: removal event
   Alias:
-    - removal
+    - removal (event)
   SubtypeOf:
     - sem:event
     - sem:spatial-event
@@ -9107,16 +9005,15 @@
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
-    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by excluding part of the rejected component rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples and peaches. No, he only bought PEACHES</i>, the speaker rejects that what John bought was both apples and peaches, and restricts what John bought to just peaches. <i>Only</i> is a <a>restrictive (focus) operator</a>. (Section 11.4.1)
+    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by excluding part of the rejected component rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples and peaches. No, he only bought PEACHES</i>, the speaker rejects that what John bought was both apples and peaches, and restricts what John bought to just peaches. <i>Only</i> is a <a>restrictive focus operator</a>. (Section 11.4.1)
   Examples:
     - John bought apples and peaches. <e>No, he only bought PEACHES</e>
 
 - Id: cxn:restrictive-focus-operator
   Type: cxn
-  Name: restrictive (focus) operator
+  Name: restrictive focus operator
   Alias:
-    - restrictive focus operator
-    - restrictive operator
+    - restrictive (focus) operator
     - exclusive focus operator
   SubtypeOf:
     - cxn:focus-operator
@@ -9161,12 +9058,10 @@
 
 - Id: cxn:resultative-complex-predicate
   Type: cxn
-  Name: resultative (complex predicate)
+  Name: resultative
   Alias:
-    - resultative complex predicate
-    - resultative
-    - resultative secondary predicate
-    - secondary predicate
+    - resultative (complex predicate)
+    - (resultative) secondary predicate
   SubtypeOf:
     - cxn:stative-complex-predicate
   Definition: >-
@@ -9186,7 +9081,7 @@
   Type: sem
   Name: S role
   Alias:
-    - S
+    - S (role)
   SubtypeOf:
     - sem:valency-role
   RoleOf:
@@ -9204,10 +9099,9 @@
 
 - Id: inf:salience
   Type: inf
-  Name: salience
+  Name: salience, salient
   Alias:
     - topicality
-    - salient
   AttributeOf:
     - inf:argument
   Definition: >-
@@ -9319,11 +9213,9 @@
 
 - Id: str:secundative-ditransitive-alignment
   Type: str
-  Name: secundative (ditransitive) alignment
+  Name: secundative alignment
   Alias:
-    - secundative ditransitive alignment
-    - secundative alignment
-    - secundative alignment system
+    - secundative (ditransitive) alignment (system)
   SubtypeOf:
     - str:ditransitive-alignment
   ExpressionOf:
@@ -9414,7 +9306,7 @@
   Type: sem
   Name: sensation event
   Alias:
-    - bodily sensation event
+    - (bodily) sensation event
   SubtypeOf:
     - sem:event
     - sem:experiential-event
@@ -9456,9 +9348,9 @@
 
 - Id: str:serial-verb-strategy
   Type: str
-  Name: serial verb strategy
+  Name: serial verb
   Alias:
-    - serial verb
+    - serial verb (strategy)
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -9473,10 +9365,9 @@
 
 - Id: cxn:set-member-construction
   Type: cxn
-  Name: set-member construction
+  Name: set-member modification construction
   Alias:
-    - set-member modification construction
-    - set-member modification
+    - set-member (modification) (construction)
   SubtypeOf:
     - cxn:modification-construction
   Definition: ''
@@ -9780,9 +9671,9 @@
 
 - Id: cxn:speech-acts
   Type: cxn
-  Name: speech acts
+  Name: speech act construction
   Alias:
-    - speech act construction
+    - speech act (construction)
   SubtypeOf:
     - cxn:main-clause
   Definition: >-
@@ -9884,8 +9775,8 @@
   Type: sem
   Name: state
   Alias:
+    - state (concept)
     - transitory state
-    - state concept
     - temporary state
   SubtypeOf:
     - sem:event
@@ -9988,10 +9879,10 @@
 
 - Id: cxn:subject-phrase
   Type: cxn
-  Name: subject argument phrase
+  Name: subject phrase
   Alias:
+    - subject (argument) phrase
     - subject
-    - subject phrase
   SubtypeOf:
     - cxn:core-argument-phrase
   AssociatedTo:
@@ -10097,9 +9988,9 @@
 
 - Id: cxn:superlative-form
   Type: cxn
-  Name: superlative form
+  Name: superlative
   Alias:
-    - superlative
+    - superlative (form)
   SubtypeOf:
     - cxn:admodifier
   AssociatedTo:
@@ -10184,7 +10075,7 @@
   Type: sem
   Name: T role
   Alias:
-    - T
+    - T (role)
   SubtypeOf:
     - sem:valency-role
   RoleOf:
@@ -10227,7 +10118,7 @@
   Type: str
   Name: target
   ConstituentOf:
-    - str:indexical-strategy-indexation
+    - str:indexation
   Definition: >-
     in a <a>construction</a> using the <a>indexation strategy</a>, the <a>element</a> of the construction with which the <a>index</a> is combined, usually as an affix. <i>Example</i>: in Spanish <i>los libros rojos</i> <q>the red books</q>, the target is the modifier <i>rojos</i> <q>red</q>, which has the Masculine Plural index <i>-os</i> suffixed to it. (Section 4.4)
   Examples:
@@ -10241,7 +10132,7 @@
   Type: sem
   Name: telic
   Alias:
-    - telic event
+    - telic (event)
   SubtypeOf:
     - sem:telicity
   Definition: >-
@@ -10477,8 +10368,7 @@
   Type: cxn
   Name: transitive construction
   Alias:
-    - transitive
-    - monotransitive construction
+    - (mono)transitive (construction)
   SubtypeOf:
     - cxn:basic-voice-construction
   Definition: >-
@@ -10538,7 +10428,7 @@
   Type: def
   Name: translation
   Alias:
-    - free translation
+    - (free) translation
   Definition: >-
     in an example presented with an <a>interlinear morpheme translation</a>, the <a>meaning</a> of an example from the language being analyzed, expressed in the <a>metalanguage</a> being used in the text. (Section 1.6)
 
@@ -10568,7 +10458,7 @@
   Type: sem
   Name: trivalent event
   Alias:
-    - trivalent
+    - trivalent (event)
   SubtypeOf:
     - sem:valency-valency-class
   AssociatedTo:
@@ -10590,7 +10480,7 @@
   Type: inf
   Name: type identifiable
   SubtypeOf:
-    - inf:identifiability-identity
+    - inf:identifiability
   Definition: >-
     a <a>referent</a> in a nonreal <dq>world</dq> or <a>mental space</a> (desire, hypothetical, negative, etc.) whose individual identity is unknown to speaker and hearer; all that is known about the nonreal referent is its <a>type</a>, as provided by the <a>common noun</a> and any <a>modifiers</a> in the <a>referring phrase</a>. <i>Example</i>: in <i>An undergraduate student may take this course</i>, all that is known about the possible referent is that he or she belongs to the type <q>undergraduate student</q>. (Section 3.5)
   Examples:
@@ -10620,11 +10510,10 @@
 
 - Id: cxn:typifying-construction
   Type: cxn
-  Name: typifying nominal modification construction
+  Name: typifying construction
   Alias:
-    - typifying construction
-    - non-anchoring nominal modification construction
-    - non-anchoring construction
+    - typifying (nominal modification) construction
+    - non-anchoring (nominal modification) construction
   SubtypeOf:
     - cxn:modification-construction
   Definition: >-
@@ -10636,7 +10525,7 @@
   Type: def
   Name: typology
   Alias:
-    - linguistic typology
+    - (linguistic) typology
   Definition: >-
     an approach to the study of language that starts from the diversity of grammatical structures across the languages of the world, and derives general patterns found in that diversity. (Section 1.1)
 
@@ -10709,7 +10598,7 @@
   Type: sem
   Name: utterance event
   Alias:
-    - utterance
+    - utterance (event)
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -10741,10 +10630,6 @@
 - Id: sem:valency-valency-class
   Type: sem
   Name: valency, valency class
-  Alias:
-    - valency/valency class
-    - valency
-    - valency class
   AttributeOf:
     - sem:event
   Definition: >-
@@ -10862,10 +10747,9 @@
 
 - Id: def:verbalization-of-experience
   Type: def
-  Name: verbalization (of experience)
+  Name: verbalization
   Alias:
-    - verbalization of experience
-    - verbalization
+    - verbalization (of experience)
   Definition: >-
     a model of how experiences are expressed in language developed by Chafe (1977 and later publications) and elaborated in Croft (2007a). In this book, one part of this model, <a>particularizing</a>, is described with respect to the structure of <a>referring phrases</a>. (Section 4.1.1)
 
@@ -10933,7 +10817,6 @@
     - syntactic category
     - behavior
     - distribution
-    - part of speech
     - properties
   Definition: >-
     the set of words defined by their occurrence in a particular <a>role</a> in a <a>construction</a>. <i>Example</i>: in the English Predicate Adjective Construction [<sc>Sbj</sc> <i>be</i> <sc>PredAdj</sc>], illustrated by <i>She is intelligent</i>, the PredAdj role defines a word class consisting of all the words that can occur in that role in that construction (<i>happy</i>, <i>tall</i>, <i>asleep</i>, etc.). Word classes are defined by a set of constructions that the words occur in (<i>a.k.a.</i> distribution, behavior, properties). (Section 1.2.1)
@@ -10957,7 +10840,9 @@
 
 - Id: str:yes-no-alignment-strategy
   Type: str
-  Name: yes/no alignment strategy
+  Name: yes/no alignment
+  Alias: 
+    - yes/no alignment (strategy)
   SubtypeOf:
     - str:polarity-response-alignment
   ExpressionOf:
@@ -11002,8 +10887,9 @@
 
 - Id: str:zero-coded-strategy
   Type: str
-  Name: zero coded strategy
+  Name: zero coded
   Alias:
+    - zero coded (strategy)
     - zero code
     - zero coding
   SubtypeOf:
@@ -11696,7 +11582,7 @@
   Type: sem
   Name: comparative relation
   Alias:
-    - comparative
+    - comparative (relation)
   SubtypeOf:
     - sem:event-relation
   Definition: ''
@@ -12089,7 +11975,9 @@
 
 - Id: str:experiential-dis-alignment
   Type: str
-  Name: experiential (dis)alignment
+  Name: experiential disalignment
+  Alias: 
+    - experiential (dis)alignment
   SubtypeOf:
     - str:system
   ModeledOn:
@@ -12182,7 +12070,7 @@
   Definition: ''
   FromGlossary: false
 
-- Id: str:non-nominative-flag/index
+- Id: str:non-nominative-flag-index
   Type: str
   Name: non-nominative flag/index
   SubtypeOf:
