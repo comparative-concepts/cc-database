@@ -6,8 +6,8 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-from validation import CCType, Relation, Glosses, GlossItem, GENERIC_TYPES, parse_yaml_database, validate_database
-from validation import error, reset_errors_and_warnings, report_errors_and_warnings, set_error_verbosity
+import validation
+from validation import CCType, Relation, Glosses, GlossItem, error
 
 
 # A parsed definition is a list of either strings or links (as pairs of strings)
@@ -30,7 +30,8 @@ class CCDB:
         allnames: dict[str, set[str]] = {}
         for id, item in self.glosses.items():
             for name in [id, item.Name] + item.Alias:
-                allnames.setdefault(name.casefold(), set()).add(id)
+                for expname in self.expand_alias(name):
+                    allnames.setdefault(expname.casefold(), set()).add(id)
         self.allnames = {name: tuple(ids) for name, ids in allnames.items()}
 
         # Expand all definitions by converting abbreviated links 
@@ -50,6 +51,35 @@ class CCDB:
             self.export_to_karp()
         elif format == "fnbr":
             self.export_to_fnbr()
+
+
+    ###########################################################################
+    ## Expanding aliases
+
+    @staticmethod
+    def expand_alias(alias: str) -> list[str]:
+        """
+        Expand an alias of the form "a (b) c (d)" into all possible alternatives:
+        - "a c", "a b c", "a c d", "a b c d", plus itself "a (b) c (d)"
+        Outer commas are also expanded, "a, b (c)" becomes:
+        - "a", "b", "b c", as well as "b (c)" and "a, b (c)"
+        """
+        def expand_parentheses(s: str) -> list[str]:
+            m = re.search(r"\(([^()]+)\)", s)
+            if not m: 
+                return [s]
+            prefix = s[:m.start()]
+            alternatives = ["", m.group(1)]
+            suffixes = expand_parentheses(s[m.end():])
+            return [prefix + alt + suf for alt in alternatives for suf in suffixes]
+
+        result = set([alias])
+        for part in re.split(r", *", alias):
+            result.add(part)
+            for s in expand_parentheses(part):
+                s = " ".join(s.split())
+                result.add(s)
+        return sorted(result)
 
 
     ###########################################################################
@@ -259,7 +289,7 @@ class CCDB:
             print(f'<tr><th>Id</th> <td class="ccinfo ccid">{id}</td></tr>')
 
             if item.Type:
-                entry = GENERIC_TYPES.get(item.Type)
+                entry = validation.GENERIC_TYPES.get(item.Type)
                 if entry:
                     _, _, entryname = entry.partition(":")
                     entryname = entryname.replace("-", " ")
@@ -312,7 +342,8 @@ class CCDB:
     ###########################################################################
     ## Export to Språkbanken Karp JSON-lines format
 
-    def convert_definition_to_karp(self, definition: ParsedDefinition) -> str:
+    @staticmethod
+    def convert_definition_to_karp(definition: ParsedDefinition) -> str:
         """Convert a CC definition into a Karp-formatted string."""
         karp_parts: list[str] = []
         for part in definition:
@@ -351,7 +382,7 @@ class CCDB:
         # Special cases (e.g., "strategy [def]" is "strategy [str]" in FNBr)
         SPECIAL_FNBR_CCs = {
             id: id.replace('def:', typ.value + ':')
-            for typ, id in GENERIC_TYPES.items()
+            for typ, id in validation.GENERIC_TYPES.items()
         }
         out_ccs: list[dict[str, str|list[str]]] = []
         for id in sorted(self.glosses, key=str.casefold):
@@ -395,16 +426,23 @@ parser.add_argument('--quiet', '-q', action='store_true', help=f'suppress warnin
 parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
 parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
-if __name__ == '__main__':
-    args = parser.parse_args()
-    set_error_verbosity(not args.quiet)
+
+def main(args: argparse.Namespace):
+    validation.set_error_verbosity(not args.quiet)
     if not args.format:
         print("No output format selected, I will only validate the database.", file=sys.stderr)
-    glosses: Glosses = parse_yaml_database(args.cc_database)
-    validate_database(glosses)
-    reset_errors_and_warnings()
+    glosses: Glosses = validation.parse_yaml_database(args.cc_database)
+    validation.validate_database(glosses)
+    validation.reset_errors_and_warnings()
     ccdb = CCDB(glosses)
     if args.format:
         ccdb.export(args.format)
-    report_errors_and_warnings(f"exporting to {args.format} format")
+    validation.report_errors_and_warnings(f"exporting to {args.format} format")
+
+
+if __name__ == '__main__':
+    try:
+        main(parser.parse_args())
+    except ValueError as err:
+        sys.exit(str(err))
 

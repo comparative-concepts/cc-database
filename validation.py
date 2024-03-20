@@ -159,7 +159,7 @@ def validate_link_ids(item: GlossItem, glosses: Glosses):
     for rel, relids in item.Relations.items():
         for relid in relids:
             if relid and relid not in glosses:
-                error(f"{id!r}: {rel!r} id doesn't exist: {relid!r}")
+                error(f"{item.Id!r}: {rel.value!r} id doesn't exist: {relid!r}")
 
 
 def validate_isolated(item: GlossItem, glosses: Glosses):
@@ -205,16 +205,13 @@ def validate_strategy_supertypes(item: GlossItem, glosses: Glosses):
 ## Error handling
 
 ERROR_SETTINGS: dict[str, list[str]] = {
-    "show-warnings": True, # type: ignore
+    "show-warnings": True,  # type: ignore
     "warnings": [],
     "errors": [],
 }
-# SHOW_WARNINGS = True
-# WARNINGS: list[str] = []
-# ERRORS: list[str] = []
 
 def set_error_verbosity(show: bool):
-    ERROR_SETTINGS["show-warnings"] = show # type: ignore
+    ERROR_SETTINGS["show-warnings"] = show  # type: ignore
 
 def reset_errors_and_warnings():
     ERROR_SETTINGS["warnings"].clear()
