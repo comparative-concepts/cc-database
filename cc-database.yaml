@@ -18468,6 +18468,7 @@
     - subject
     - subject phrase
   SubtypeOf:
+    - cxn:topic-phrase
     - cxn:core-argument-phrase
   ConstituentOf: []
   ExpressionOf: []
