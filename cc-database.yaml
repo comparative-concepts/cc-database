@@ -4337,7 +4337,7 @@
   ValueOf:
     - sem:monovalent-event
   AssociatedTo:
-    - cxn:location-clause
+    - cxn:locational-construction
   Definition: >-
     a spatial relation that holds between two <a sem:object-concept>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
   Examples:
@@ -5817,10 +5817,12 @@
   Examples:
     - The book is <e>on the table</e>
 
-- Id: cxn:location-clause
+- Id: cxn:locational-construction
   Type: cxn
-  Name: location clause
+  Name: locational construction
   Alias:
+    - location(al) construction
+    - location(al) clause
     - locative clause
   SubtypeOf:
     - cxn:nonprototypical-predication
@@ -7660,11 +7662,11 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:possession-clause
+- Id: cxn:possession-construction
   Type: cxn
-  Name: possession clause
+  Name: possession construction
   Alias:
-    - possession construction
+    - possession clause
   SubtypeOf:
     - cxn:nonprototypical-predication
   Definition: >-
@@ -7684,7 +7686,7 @@
     - sem:bivalent-event
   AssociatedTo:
     - cxn:possessive-modification-construction
-    - cxn:possession-clause
+    - cxn:possession-construction
   Definition: >-
     a semantic relation between two objects, prototypically <a>ownership</a>, but also including weaker relations such as temporary ownership and physical contiguity. <i>Example</i>: in <i>I have a pen</i>, there is a possession relation between myself and the pen -- I am the <a>possessor</a> and the pen is the <a>possessum</a>. This possession relation could be full ownership, temporary ownership (someone lent it to me), or physical contiguity (I have a pen at hand). Other object--object relations such as <a>body parts</a>, <a>part--whole</a>, and <a>kinship</a> are generally also included under possession relations. (Section 10.4.2)
   Examples:
@@ -8026,7 +8028,7 @@
     - locative predication
   SubtypeOf:
     - cxn:nonprototypical-predication
-    - cxn:location-clause
+    - cxn:locational-construction
   Definition: >-
     the <a>construction</a> expressing a <a inf:predicational-location>predicational location</a> <a>function</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
   Examples:
@@ -8068,7 +8070,7 @@
     - belong possession
   SubtypeOf:
     - cxn:nonprototypical-predication
-    - cxn:possession-clause
+    - cxn:possession-construction
   Definition: >-
     a <a>possession clause</a> in which <a>ownership</a> of the <a>possessum</a> by the <a>possessor</a> is <a>predicated</a> of the possessum. <i>Example</i>: in <i>That laptop belongs to Kerry</i>, ownership of the laptop by Kerry is predicated of the laptop. <i>That laptop is Kerry's</i> is also treated as an instance of a predicational possession construction, <a>recruiting</a> the <a>strategy</a> of a <a>nonprototypical predication construction</a>; but it might be better analyzed as having <a>equational information packaging</a>. (Section 10.4.2)
   Examples:
@@ -8185,7 +8187,7 @@
     - presentational locative
   SubtypeOf:
     - cxn:presentational-construction
-    - cxn:location-clause
+    - cxn:locational-construction
   Definition: >-
     the <a>construction</a> expressing a <a>presentational</a> information packaging of <a>location</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
   Examples:
@@ -8207,7 +8209,7 @@
     - have possession
   SubtypeOf:
     - cxn:presentational-construction
-    - cxn:possession-clause
+    - cxn:possession-construction
   Definition: >-
     a <a>presentational information packaging</a> of the <a>possession relation</a> in which a <a>possessum</a> is introduced into the discourse, <a>anchored</a> by the <a>possessor</a>; and the <a>construction</a> expressing this <a>function</a>. <i>Example</i>: in <i>Kerry has a laptop</i>, the laptop is introduced into the discourse, but anchored to Kerry by the <a>possession relation</a> that holds between Kerry and the laptop. More <a>grammaticalized</a> versions of this strategy include Spanish <i><b>Había</b> muchas chicas de mi edad y más jóvenes</i> <q>There were many girls of my age and younger</q>. (Section 10.4.2)
   Examples:
