@@ -30,8 +30,7 @@ class CCDB:
         allnames: dict[str, set[str]] = {}
         for id, item in self.glosses.items():
             for name in [id, item.Name] + item.Alias:
-                for expname in self.expand_alias(name):
-                    allnames.setdefault(expname.casefold(), set()).add(id)
+                allnames.setdefault(name.casefold(), set()).add(id)
         self.allnames = {name: tuple(ids) for name, ids in allnames.items()}
 
         # Expand all definitions by converting abbreviated links 
@@ -54,35 +53,6 @@ class CCDB:
 
 
     ###########################################################################
-    ## Expanding aliases
-
-    @staticmethod
-    def expand_alias(alias: str) -> list[str]:
-        """
-        Expand an alias of the form "a (b) c (d)" into all possible alternatives:
-        - "a c", "a b c", "a c d", "a b c d", plus itself "a (b) c (d)"
-        Outer commas are also expanded, "a, b (c)" becomes:
-        - "a", "b", "b c", as well as "b (c)" and "a, b (c)"
-        """
-        def expand_parentheses(s: str) -> list[str]:
-            m = re.search(r"\(([^()]+)\)", s)
-            if not m: 
-                return [s]
-            prefix = s[:m.start()]
-            alternatives = ["", m.group(1)]
-            suffixes = expand_parentheses(s[m.end():])
-            return [prefix + alt + suf for alt in alternatives for suf in suffixes]
-
-        result = set([alias])
-        for part in re.split(r", *", alias):
-            result.add(part)
-            for s in expand_parentheses(part):
-                s = " ".join(s.split())
-                result.add(s)
-        return sorted(result)
-
-
-    ###########################################################################
     ## Parsing definitions
 
     def parse_definition(self, id: str, definition: str) -> tuple[ParsedDefinition, list[str]]:
@@ -100,16 +70,16 @@ class CCDB:
                 else:
                     link = self.clean_link(name)
                     if not link:
-                        error(f"{id}: Could not clean link '{name}'")
+                        error(id, f"Could not clean link '{name}'")
                         link = name
                     linkids = self.find_closest(link)
 
                 if not linkids:
-                    error(f"{id}: Could not find any matching id for link '{link}'")
+                    error(id, f"Could not find any matching id for link '{link}'")
                     linkid = link
                 else:
                     if len(linkids) > 1:
-                        error(f"{id}: Ambiguous link '{link}', maps to any of {linkids}")
+                        error(id, f"Ambiguous link '{link}', maps to any of {linkids}")
                     linkid = linkids[0]
                 links.append(linkid)
                 part = (linkid, name)
@@ -298,7 +268,7 @@ class CCDB:
                     # Just a better alias for the HTML
                     type = 'definition'
                 else:
-                    error(f"{id}: Type not found: {item.Type}")
+                    error(id, f"Type not found: {item.Type}")
                     type = f'<span class="notfound">{item.Type}</span>'
                 print(f'<tr><th>Type</th> <td class="ccinfo type">{type}</td></tr>')
 
@@ -424,6 +394,7 @@ class CCDB:
 parser = argparse.ArgumentParser(description='Parse the comparative concepts database and export it in different formats.')
 parser.add_argument('--quiet', '-q', action='store_true', help=f'suppress warnings')
 parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
+parser.add_argument('--keep-deleted', '-d', action='store_true', help=f'keep deleted terms')
 parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
 
@@ -431,7 +402,7 @@ def main(args: argparse.Namespace):
     validation.set_error_verbosity(not args.quiet)
     if not args.format:
         print("No output format selected, I will only validate the database.", file=sys.stderr)
-    glosses: Glosses = validation.parse_yaml_database(args.cc_database)
+    glosses: Glosses = validation.parse_yaml_database(args.cc_database, args.keep_deleted)
     validation.validate_database(glosses)
     validation.reset_errors_and_warnings()
     ccdb = CCDB(glosses)

@@ -1,5 +1,6 @@
 
 import sys
+import re
 import yaml
 from enum import Enum
 from pathlib import Path
@@ -86,19 +87,33 @@ STRUCTURAL_RELATIONS = tuple(
     if all(k == v for k, v in maps.items())
 )
 
+CODEWORDS = {
+    CCType.cxn: ("clause construction expression form phrase predicate pronoun "
+                 "sentence term verb attributive complement matrix").split(),
+    CCType.str: ("affix alignment category classifier co-expression copula incorporation "
+                 "indexation marker order position strategy system deranking headed zero").split(),
+    CCType.sem: "concept event participant relation role epistemic person".split(),
+    CCType.inf: "contrast predication referent".split(),
+    CCType.def_: "Hierarchy".split(),
+}
+
 
 ###############################################################################
 ## Main parsing and validation functions
 
-def parse_yaml_database(glossfile: str | Path) -> Glosses:
+def parse_yaml_database(glossfile: str | Path, keep_deleted: bool = False) -> Glosses:
     reset_errors_and_warnings()
     glosses: Glosses = {}
     with open(glossfile) as F:
         for item in yaml.load(F, Loader=yaml.CLoader):
+            if not keep_deleted and item.get('Status') == "deleted": 
+                continue
             try:
-                glosses[item['Id']] = convert_glossitem(item)
+                gitem = convert_glossitem(item)
+                gitem.Alias = expand_aliases(gitem)
+                glosses[gitem.Id] = gitem
             except ValidationError as e:
-                error(f"while parsing {item['Id']!r}: {e}\n")
+                error(f"while parsing {item.get('Id')!r}", str(e))
     report_errors_and_warnings("parsing the YAML database")
     return glosses
 
@@ -115,17 +130,58 @@ def validate_database(glosses: Glosses) -> None:
     report_errors_and_warnings("validating the database")
 
 
+###########################################################################
+## Expanding aliases
+
+def expand_aliases(item: GlossItem) -> list[str]:
+    """
+    Expand all aliases in a gloss item - don't include the name itself
+    """
+    aliases: set[str] = set()
+    for alias in [item.Name] + item.Alias:
+        aliases.update(expand_alias(alias))
+    aliases.discard(item.Name)
+    return sorted(aliases)
+
+
+def expand_alias(alias: str) -> list[str]:
+    """
+    Expand an alias of the form "a (b) c (d)" into all possible alternatives:
+    - "a c", "a b c", "a c d", "a b c d", plus itself "a (b) c (d)"
+    Outer commas are also expanded, "a, b (c)" becomes:
+    - "a", "b", "b c", as well as "b (c)" and "a, b (c)"
+    """
+    def expand_parentheses(s: str) -> list[str]:
+        m = re.search(r"\(([^()]+)\)", s)
+        if not m: 
+            return [s]
+        prefix = s[:m.start()]
+        alternatives = ["", m.group(1)]
+        suffixes = expand_parentheses(s[m.end():])
+        return [prefix + alt + suf for alt in alternatives for suf in suffixes]
+
+    result = set([alias])
+    for part in re.split(r", *", alias):
+        result.add(part)
+        for s in expand_parentheses(part):
+            s = " ".join(s.split())
+            result.add(s)
+    return sorted(result)
+
+
 ###############################################################################
 ## Specific validators
 
 def run_validators(glosses: Glosses):
     for id, item in glosses.items():
         if id != item.Id:
-            error(f"Mismatched id, != {item.Id!r}")
+            error("mismatched id", f"{id} != {item.Id!r}")
 
         current_errors = len(ERROR_SETTINGS['errors'])
         validate_names_and_aliases(item, glosses)
         validate_link_ids(item, glosses)
+        validate_consistent_name_and_id(item)
+        validate_codewords(item)
 
         # Run property validators iff there are no schema errors
         if len(ERROR_SETTINGS['errors']) == current_errors and item.Type != CCType.def_:
@@ -138,20 +194,53 @@ def validate_names_and_aliases(item: GlossItem, glosses: Glosses):
     # the name must be unique among names (with the same type)
     id = item.Id
     for id2, item2 in glosses.items():
-        if id == id2: 
-            continue
-        if item.Type == item2.Type and item.Name == item2.Name: 
-            error(f"{id!r}: Name also occurs in {id2!r}")
-        elif item.Name == item2.Name: 
-            warning(f"{id!r} and {id2!r} has the same name: {item.Name!r}")
-    # # an alias should not be a name
-    # for alias in item.Alias:
-    #     for id2, item2 in glosses.items():
-    #         if id == id2: continue
-    #         if alias == item2.Name:
-    #             error(f"{id}: Alias {alias!r} is also the name for id {id2!r}")
-    if len(set(item.Alias)) != len(item.Alias):
-        error(f"{id!r}: Duplicate aliases: {item.Alias!r}")
+        if id < id2: 
+            if item.Type == item2.Type and item.Name == item2.Name: 
+                error("duplicate name", f"{item.Name!r} is the name of {id!r} and {id2!r}, both of type {item.Type}")
+            elif item.Name == item2.Name: 
+                warning("duplicate name", f"{item.Name!r} is the name of {id!r} and {id2!r}")
+    # a name should not be an alias
+    for id2, item2 in glosses.items():
+        if id != id2:
+            if item.Name in item2.Alias:
+                warning("name is alias", f"{item.Name!r} is the name of {id!r} but also an alias for {id2!r}")
+    # an alias should not be an alias for another CC
+    for alias in item.Alias:
+        for id2, item2 in glosses.items():
+            if id < id2 and "(" not in alias:
+                if alias in item2.Alias:
+                    warning("duplicate alias", f"{alias!r} is alias for {id!r} and {id2!r}")
+
+
+def validate_codewords(item: GlossItem):
+    for type, codewords in CODEWORDS.items():
+        if type != item.Type:
+            for cword in codewords:
+                # if cword in item.Name.split():
+                #     warning(f"codeword of wrong type: {item.Id!r} contains codeword {cword!r} for type {type.value!r}")
+                if cword == item.Name.split()[-1]:
+                    warning("codeword of wrong type", f"{item.Id!r} / {item.Name!r} ends with codeword {cword!r} for type {type.value!r}")
+
+
+def validate_consistent_name_and_id(item: GlossItem):
+    id = item.Id
+    name = item.Name.lower()
+    id_type, _, id_name = id.partition(":")
+    if not re.match(r"^[a-z-]+$", id_name):
+        error("id unknown chars", f"{id!r} contains non-permitted chars")
+    if id_type != item.Type.value:
+        warning("id type error", f"{id!r} has the wrong type - it should be {item.Type.value}")
+    id_parts = id_name.split("-")
+    name_commaparts = re.split(", *", name) + [name]
+    mismatches = 0
+    for name0 in name_commaparts:
+        name_parts = re.split(r"[^a-z]+", name0)
+        if not name_parts[0]: name_parts.pop(0)
+        if not name_parts[-1]: name_parts.pop()
+        if id_parts != name_parts:
+            mismatches += 1
+    if mismatches == len(name_commaparts):
+        warning("name-id mismatch", f"{id!r} != {name!r}")
 
 
 def validate_link_ids(item: GlossItem, glosses: Glosses):
@@ -159,7 +248,7 @@ def validate_link_ids(item: GlossItem, glosses: Glosses):
     for rel, relids in item.Relations.items():
         for relid in relids:
             if relid and relid not in glosses:
-                error(f"{item.Id!r}: {rel.value!r} id doesn't exist: {relid!r}")
+                error("missing id", f"id {relid!r} doesn't exist, refered to from {item.Id!r} relation {rel.value!r}")
 
 
 def validate_isolated(item: GlossItem, glosses: Glosses):
@@ -172,7 +261,7 @@ def validate_isolated(item: GlossItem, glosses: Glosses):
         for otherid in relids
     )
     if out_degree == 0 and in_degree == 0:
-        warning(f"{item.Id!r} is isolated: it has no structural relations with other concepts.")
+        warning("isolated CC", f"{item.Id!r} has no structural relations with other concepts")
 
 
 def validate_relations_by_cctype(item: GlossItem, glosses: Glosses):
@@ -180,12 +269,12 @@ def validate_relations_by_cctype(item: GlossItem, glosses: Glosses):
         cctypes = RELATION_CCTYPES.get(rel)
         if cctypes:
             if item.Type not in cctypes:
-                error(f"{item.Id!r} is of type {item.Type!r} but has a {rel!r} relation.")
+                error("wrong relation", f"{item.Id!r} is of type {item.Type!r} but has a {rel!r} relation")
                 continue
             for relid in item.Relations[rel]:
                 other = glosses[relid]
                 if other.Type != cctypes[item.Type]:
-                    error(f"{item.Id!r} has '{rel!r}' relation with CC of invalid type: {other.Id!r}")
+                    error("invalid type", f"{item.Id!r} has {rel!r} relation with CC of invalid type {other.Id!r}")
 
 
 def validate_strategy_supertypes(item: GlossItem, glosses: Glosses):
@@ -195,7 +284,7 @@ def validate_strategy_supertypes(item: GlossItem, glosses: Glosses):
         if super in STRATEGY_TYPES:
             return
         elif super.startswith('def:'):
-            error(f"{item.Id!r} is not in the taxonomy of: {', '.join(STRATEGY_TYPES)}")
+            error("not in taxonomy", f"{item.Id!r} is not in the taxonomy of {', '.join(STRATEGY_TYPES)}")
             return
         else:
             validate_strategy_supertypes(glosses[super], glosses)
@@ -204,7 +293,7 @@ def validate_strategy_supertypes(item: GlossItem, glosses: Glosses):
 ###############################################################################
 ## Error handling
 
-ERROR_SETTINGS: dict[str, list[str]] = {
+ERROR_SETTINGS: dict[str, list[tuple[str, str]]] = {
     "show-warnings": True,  # type: ignore
     "warnings": [],
     "errors": [],
@@ -219,18 +308,18 @@ def reset_errors_and_warnings():
 
 def report_errors_and_warnings(when: str):
     if ERROR_SETTINGS["show-warnings"] and ERROR_SETTINGS["warnings"]:
-        for warn in ERROR_SETTINGS["warnings"]:
-            print(f"WARNING {warn}", file=sys.stderr)
+        for cat, warn in sorted(ERROR_SETTINGS["warnings"]):
+            print(f"WARNING {cat}: {warn}", file=sys.stderr)
         print(f"\n{len(ERROR_SETTINGS['warnings'])} warnings found when {when}\n", file=sys.stderr)
     if ERROR_SETTINGS["errors"]:
-        for err in ERROR_SETTINGS["errors"]:
-            print(f"*ERROR* {err}", file=sys.stderr)
+        for cat, err in sorted(ERROR_SETTINGS["errors"]):
+            print(f"*ERROR* {cat}: {err}", file=sys.stderr)
         print(file=sys.stderr)
         raise ValueError(f"{len(ERROR_SETTINGS['errors'])} errors found when {when}")
 
-def warning(warn: str):
-    ERROR_SETTINGS["warnings"].append(warn)
+def warning(cat: str, warn: str):
+    ERROR_SETTINGS["warnings"].append((cat, warn))
 
-def error(err: str):
-    ERROR_SETTINGS["errors"].append(err)
+def error(cat:str, err: str):
+    ERROR_SETTINGS["errors"].append((cat, err))
 
