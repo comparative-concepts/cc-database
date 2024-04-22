@@ -23,9 +23,9 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:polarity-question
+    - cxn:polarity-question-construction
   Definition: >-
-    a strategy for <a cxn:polarity-question>polarity question constructions</a> in which both the <a>positive</a> and <a>negative</a> form of the proposition are expressed. <i>Example</i>: Mandarin <i>tā zài jiā bu zài jiā</i> [lit. <q>S/he at home not at home</q>] <q>Is s/he at home?</q> is an instance of the A--not-A strategy for polarity questions. The A--not-A strategy is essentially the recruitment of the <a cxn:alternative-question>alternative question</a> construction for the polarity question function.
+    a strategy for <a cxn:polarity-question-construction>polarity question constructions</a> in which both the <a>positive</a> and <a>negative</a> form of the proposition are expressed. <i>Example</i>: Mandarin <i>tā zài jiā bu zài jiā</i> [lit. <q>S/he at home not at home</q>] <q>Is s/he at home?</q> is an instance of the A--not-A strategy for polarity questions. The A--not-A strategy is essentially the recruitment of the <a cxn:alternative-question>alternative question</a> construction for the polarity question function.
   Examples:
     - Language: Mandarin
       Example: <e>tā zài jiā bu zài jiā</e>
@@ -40,7 +40,7 @@
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   ModeledOn:
     - cxn:transitive-construction
   Definition: ''
@@ -145,7 +145,7 @@
 
 - Id: sem:action-concept
   Type: sem
-  Name: action
+  Name: action concept
   Alias:
     - action (concept)
   SubtypeOf:
@@ -154,7 +154,7 @@
     - sem:dynamic
     - sem:transitory
   AssociatedTo:
-    - cxn:complement-dependent-clause
+    - cxn:complement
     - cxn:relative-clause
     - cxn:verbal-clause
     - cxn:verb
@@ -167,10 +167,10 @@
   Alias:
     - nominalization
   ConstituentOf:
-    - str:deranked-deranking
+    - str:deranking
   ExpressionOf:
     - cxn:adverbial-dependent-clause
-    - cxn:complement-dependent-clause
+    - cxn:complement
   Definition: >-
     a <a>deranked</a> <a>predicate</a> form that is capable of inflecting for <a>case</a> or of taking <a>adpositions</a> in the same way as <a>nouns</a> do, and with reasonable productivity. <i>Example</i>: in <i>He remains under investigation</i>, <i>investigation</i> is an action nominal. Action nominals overwhelmingly lack predicate-like tense--aspect--mood and argument indexation inflections. (Section 15.3.2)
   Examples:
@@ -182,7 +182,7 @@
   Alias:
     - in focus
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:accessibility
   AssociatedTo:
@@ -245,7 +245,7 @@
   ExpressionOf:
     - cxn:nonprototypical-construction
   Definition: >-
-    a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The actual IP strategy is to recruit the strategy used for the prototypical <a>semantic content</a> function of the <a>information packaging</a> function of the nonprototypical construction. <i>Example</i>: in the English Nominalization Construction exemplified by <i>the corporation's neglect of worker's rights</i>, the <a>action concept</a> <i>neglect</i> that is being <a inf:reference-referent>referred</a> to recruits the construction used for <a sem:object-concept>object</a> <a>reference</a>, the prototypical <a>referring phrase</a> -- it is preceded by the Possessive Phrase <i>the corporation's</i> and followed by the Genitive Oblique <i>of worker's rights</i>; contrast the different strategy found with the prototypical <a>action</a> <a>predication</a> construction <i>The corporation neglected worker's rights</i>. The actual IP strategy contrasts with the <a>semantic IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
+    a <a>strategy</a> found with <a>nonprototypical construction</a> types, such as <a>complement constructions</a> which express <a>reference</a> to <a>actions</a>. The actual IP strategy is to recruit the strategy used for the prototypical <a>semantic content</a> function of the <a>information packaging</a> function of the nonprototypical construction. <i>Example</i>: in the English Nominalization Construction exemplified by <i>the corporation's neglect of worker's rights</i>, the <a>action concept</a> <i>neglect</i> that is being <a inf:reference>referred</a> to recruits the construction used for <a sem:object-concept>object</a> <a>reference</a>, the prototypical <a>referring phrase</a> -- it is preceded by the Possessive Phrase <i>the corporation's</i> and followed by the Genitive Oblique <i>of worker's rights</i>; contrast the different strategy found with the prototypical <a>action</a> <a>predication</a> construction <i>The corporation neglected worker's rights</i>. The actual IP strategy contrasts with the <a>semantic IP strategy</a> and the <a>hybrid IP strategy</a>. (Section 2.4)
   Examples:
     - <e>the corporation's neglect of worker's rights</e>
 
@@ -410,7 +410,7 @@
   Type: str
   Name: adposition
   SubtypeOf:
-    - str:flag-flagging
+    - str:flagging
   Definition: >-
     a <a>flag</a> which occurs as an independent word, in contrast to a <a>case affix</a>. Adpositions are distinguished by position: <a>preposition</a>, <a>postposition</a>, and <a>circumposition</a>. (Section 4.3)
 
@@ -632,9 +632,9 @@
   Type: def
   Name: Agreement Hierarchy
   Definition: >-
-    a typological universal that constrains the <dq>mismatches</dq> that occur in the grammatical categories (typically, <a>number</a> and <a>gender--class</a>) of a <a>pronoun</a> or <a>index</a> and the grammatical categories of a prior <a>referring phrase</a> that <a inf:reference-referent>refers</a> to the same <a>referent</a> as the pronoun or index. The Agreement Hierarchy ranks the constructions as follows: <a>modifier</a> index < <a>predicate</a> index < <a>relative pronoun</a> < <a>personal pronoun</a>. <i>Example</i>: in British English, in <i>this committee</i>, the modifier <i>this</i> must index the committee as a singular, but a following personal pronoun may index the committee as a singular <i>...It...</i> or as a plural <i>...They...</i>, indicating that the committee is a group. The personal pronoun is lower on the Agreement Hierarchy, and therefore is more likely to index a <dq>semantic</dq> value (plural) that is not overtly encoded on the noun. (Section 4.4.4)
+    a typological universal that constrains the <dq>mismatches</dq> that occur in the grammatical categories (typically, <a>number</a> and <a>gender--class</a>) of a <a>pronoun</a> or <a>index</a> and the grammatical categories of a prior <a>referring phrase</a> that <a inf:reference>refers</a> to the same <a>referent</a> as the pronoun or index. The Agreement Hierarchy ranks the constructions as follows: <a>modifier</a> index < <a>predicate</a> index < <a>relative pronoun</a> < <a>personal pronoun</a>. <i>Example</i>: in British English, in <i>this committee</i>, the modifier <i>this</i> must index the committee as a singular, but a following personal pronoun may index the committee as a singular <i>...It...</i> or as a plural <i>...They...</i>, indicating that the committee is a group. The personal pronoun is lower on the Agreement Hierarchy, and therefore is more likely to index a <dq>semantic</dq> value (plural) that is not overtly encoded on the noun. (Section 4.4.4)
 
-- Id: cxn:alienable-possession
+- Id: cxn:alienable-possession-modification-construction
   Type: cxn
   Name: alienable possession modification construction
   Alias:
@@ -654,7 +654,7 @@
   SubtypeOf:
     - cxn:possessive-attributive-phrase
   ConstituentOf:
-    - cxn:alienable-possession
+    - cxn:alienable-possession-modification-construction
   Definition: ''
   FromGlossary: false
 
@@ -691,7 +691,7 @@
   ExpressionOf:
     - cxn:concessive-conditional-construction
   Definition: >-
-    a strategy for expressing a <a>concessive conditional construction</a> where the <a cxn:protasis>protasis</a>, which specifies the set of conditions for the concessive conditional, invokes the two polar alternatives possible in the <a>scalar model</a>; the <a cxn:apodosis>apodosis</a> expresses the unexpected opposite of the expected causal relation between either alternative and the outcome, and so implies the same outcome no matter what. <i>Example</i>: <i>Whether he is right or not, we must support him</i> uses the alternative concessive conditional strategy -- either he is right or he is wrong, and under either of those conditions that make up the scalar model, we must support him. (Section 17.3.3)
+    a strategy for expressing a <a>concessive conditional construction</a> where the <a cxn:protasis-clause>protasis</a>, which specifies the set of conditions for the concessive conditional, invokes the two polar alternatives possible in the <a>scalar model</a>; the <a cxn:apodosis-clause>apodosis</a> expresses the unexpected opposite of the expected causal relation between either alternative and the outcome, and so implies the same outcome no matter what. <i>Example</i>: <i>Whether he is right or not, we must support him</i> uses the alternative concessive conditional strategy -- either he is right or he is wrong, and under either of those conditions that make up the scalar model, we must support him. (Section 17.3.3)
   Examples:
     - <e>Whether he is right or not, we must support him</e>
 
@@ -739,7 +739,7 @@
   Examples:
     - <e>some</e> wine
 
-- Id: cxn:anaphoric-definite-article
+- Id: cxn:anaphoric-article
   Type: cxn
   Name: anaphoric article
   Alias:
@@ -775,7 +775,7 @@
   SubtypeOf:
     - cxn:modification-construction
   Definition: >-
-    an anaphoric-head construction contains a <a>modifier</a> that modifies a (semantic) <a>head</a> that <a inf:reference-referent>refers</a> to an <a>individual</a> of the same <a>type</a> as one previously referred to. <i>Example</i>: in <i>I took a red candy and Greg took a green one, a green one</i> is an anaphoric-head construction, referring to a green candy. An <a>anaphoric-head relative clause construction</a> is a special case of the anaphoric-head construction. (Sections 5.4, 19.4)
+    an anaphoric-head construction contains a <a>modifier</a> that modifies a (semantic) <a>head</a> that <a inf:reference>refers</a> to an <a>individual</a> of the same <a>type</a> as one previously referred to. <i>Example</i>: in <i>I took a red candy and Greg took a green one, a green one</i> is an anaphoric-head construction, referring to a green candy. An <a>anaphoric-head relative clause construction</a> is a special case of the anaphoric-head construction. (Sections 5.4, 19.4)
   Examples:
     - I took a red candy and Greg took <e>a green one</e>
 
@@ -799,7 +799,7 @@
   Type: inf
   Name: anchor
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ConstituentOf:
     - inf:anchoring
   AssociatedTo:
@@ -843,9 +843,9 @@
   SubtypeOf:
     - str:a-p-alignment
   ExpressionOf:
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   Definition: >-
-    a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding-strategy>overt</a> <a>flag</a> of higher-<a>salience</a> <a>P</a> <a>participants</a> and also for lower-salience <a>A</a> <a>participants</a>. <i>Example</i>: in Dyirbal, the Accusative Case suffix <i>-na</i> is used for <a cxn:first-person-pronoun>first</a> and <a cxn:second-person-pronoun>second pronominal</a> P participants, and the Ergative Case suffix <i>-ŋu</i> is used for <a cxn:third-person-pronoun>third person</a> pronominal and <a>common noun</a> A participants. (Section 8.3)
+    a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding>overt</a> <a>flag</a> of higher-<a>salience</a> <a>P</a> <a>participants</a> and also for lower-salience <a>A</a> <a>participants</a>. <i>Example</i>: in Dyirbal, the Accusative Case suffix <i>-na</i> is used for <a cxn:first-person-pronoun>first</a> and <a cxn:second-person-pronoun>second pronominal</a> P participants, and the Ergative Case suffix <i>-ŋu</i> is used for <a cxn:third-person-pronoun>third person</a> pronominal and <a>common noun</a> A participants. (Section 8.3)
   Examples:
     - Language: Dyirbal
       Example: -na
@@ -900,7 +900,7 @@
   Type: str
   Name: anterior deranking
   SubtypeOf:
-    - str:deranked-deranking
+    - str:deranking
   ExpressionOf:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -918,7 +918,7 @@
   Name: anticausative
   Status: deleted
   ExpressionOf:
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   Definition: >-
     a <a>system</a> in which a <a>noncausal event</a> and its counterpart <a>causal event</a> are expressed such that the noncausal event <a>predicate</a> adds <a>overt coding</a> to the causal event predicate. <i>Example</i>: in Yagua, the noncausal event <i>supatá-y</i> <q>come out</q> is formed by the causal event predicate <i>supatá</i> <q>pull out</q> plus the overt anticausative suffix <i>-y</i>. (Section 6.3.4)
   Examples:
@@ -932,7 +932,7 @@
   SubtypeOf:
     - cxn:nonbasic-voice-construction
   Definition: >-
-    any <a>construction</a> that is used for a <a>P</a> <a>participant</a> that is less <a>salient</a> than it usually is in the <a>basic voice construction</a>. <i>Example</i>: West Greenlandic <i>inun-nik tuqut-si-vuq</i> <q>He killed people</q>, with an <a cxn:oblique-phrase>oblique</a> <a>flag</a> <i>-nik</i> for the <a>argument phrase</a> expressing P and an <a str:overt-coding-strategy>overtly coded</a> <a>verb</a> form with the suffix <i>-si</i>, is an instance of the antipassive construction. (Section 8.4)
+    any <a>construction</a> that is used for a <a>P</a> <a>participant</a> that is less <a>salient</a> than it usually is in the <a>basic voice construction</a>. <i>Example</i>: West Greenlandic <i>inun-nik tuqut-si-vuq</i> <q>He killed people</q>, with an <a cxn:oblique-phrase>oblique</a> <a>flag</a> <i>-nik</i> for the <a>argument phrase</a> expressing P and an <a str:overt-coding>overtly coded</a> <a>verb</a> form with the suffix <i>-si</i>, is an instance of the antipassive construction. (Section 8.4)
   Examples:
     - Language: West Greenlandic
       Example: <e>inun-nik tuqut-si-vuq</e>
@@ -949,15 +949,15 @@
     - tall
     - short
 
-- Id: cxn:apodosis
+- Id: cxn:apodosis-clause
   Type: cxn
   Name: apodosis clause
   ConstituentOf:
     - cxn:conditional-construction
   Definition: >-
-    the <a>clause</a> expressing the causally consequent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a cxn:protasis>protasis</a>. (Section 17.3.1)
+    the <a>clause</a> expressing the causally consequent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a cxn:protasis-clause>protasis</a>. (Section 17.3.1)
   Examples:
-    - <e cxn:protasis>If you press this button</e>, <e>the door will open</e>
+    - <e cxn:protasis-clause>If you press this button</e>, <e>the door will open</e>
 
 - Id: sem:apodosis
   Type: sem
@@ -967,7 +967,7 @@
   ConstituentOf:
     - sem:conditional-relation
   Definition: >-
-    the proposition or event denoted by an <a>apodosis clause</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a cxn:protasis>protasis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>apodosis</q> can be distinguished as <q>apodosis proposition</q> or <q>apodosis event</q>. (Section 17.3.1)
+    the proposition or event denoted by an <a>apodosis clause</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a cxn:protasis-clause>protasis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>apodosis</q> can be distinguished as <q>apodosis proposition</q> or <q>apodosis event</q>. (Section 17.3.1)
   Examples:
     - <e sem:protasis>If you press this button</e>, <e>the door will open</e>
 
@@ -1067,7 +1067,7 @@
     - inf:major-propositional-act
   AssociatedTo:
     - cxn:argument-phrase
-    - inf:reference-referent
+    - inf:reference
   Definition: >-
     a <a>referent</a> of which something is being <a>predicated</a>. <i>Example</i>: in <i>Masha is nice</i>, being nice is being predicated of the referent Masha, and hence the referent Masha is an argument. Most referents are also arguments, but it is possible for a referent to <dq>stand alone</dq> in discourse, particularly in spoken discourse, independent of any predication. Arguments are divided into <a>core arguments</a> (<a>subject</a> and <a inf:object-argument>object</a>) and <a sem:peripheral-participant>peripheral arguments</a>. (Sections 2.1, 6.1.1)
   Examples:
@@ -1094,7 +1094,7 @@
   ConstituentOf:
     - cxn:argument-structure-construction
   Definition: >-
-    a <a>referring phrase</a> that <a inf:reference-referent>refers</a> to an <a>argument</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
+    a <a>referring phrase</a> that <a inf:reference>refers</a> to an <a>argument</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
   Examples:
     - <e>The tree</e> fell
 
@@ -1184,7 +1184,7 @@
   Type: str
   Name: asyndetic
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:complex-sentence
   Definition: >-
@@ -1272,7 +1272,7 @@
   Examples:
     - <e>DOGS were running in the yard</e>
 
-- Id: str:balanced-balancing
+- Id: str:balancing
   Type: str
   Name: balanced, balancing
   SubtypeOf:
@@ -1290,7 +1290,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:imperative-hortative
+    - cxn:imperative-hortative-construction
   Definition: >-
     a <a>strategy</a> for the <a>imperative--hortative construction</a>, particularly the <a sem:second-person>second person</a> variant, in which the <a>verb</a> stem without any inflection is used. <i>Example</i>: English <i>Dance!</i> is an instance of the bare verb stem strategy for the second person imperative--hortative. (Section 12.4.1)
   Examples:
@@ -1306,7 +1306,7 @@
   Examples:
     - <e>Fred baked</e> me <e>a shepherd's pie</e>
 
-- Id: cxn:basic-voice-construction
+- Id: cxn:basic-voice
   Type: cxn
   Name: basic voice
   Alias:
@@ -1381,7 +1381,7 @@
   Definition: >-
     an implicational hierarchy of <a>events</a> that have other events as <a>participants</a> (the <a>complement</a> events), which appears to govern a wide range of strategies for <a>complement clause constructions</a>, including <a>balancing</a> vs. <a>deranking</a> (Section 18.3.1), the <a>grammaticalization</a> of <a>purpose</a> <a>adverbial clauses</a> into deranked <a>complements</a> (Section 18.3.2), the expression of the participants of the <a>complement-taking predicate</a> and complement events (Section 18.4.1), and the use of <a>logophoric constructions</a> (Section 18.4.2). The Binding Hierarchy is described in detail in Givón (1980) and Cristofaro (2003); the latter calls it the Complement Deranking -- Argument Hierarchy. The version used here is a slightly revised version of Cristofaro's hierarchy: <a>utterance</a>, <a>propositional attitude</a>, <a>knowledge</a> < <a>evaluative</a>, <a>perception</a> < <a>desiderative</a>, <a>manipulative</a> < <a sem:modality>modal</a>, <a sem:phasal-aspect>phasal</a>. (Section 18.3.1)
 
-- Id: cxn:binominal-lexeme-construction
+- Id: cxn:binominal-lexeme
   Type: cxn
   Name: binominal lexeme
   Alias:
@@ -1414,7 +1414,7 @@
   Alias:
     - bivalent (event)
   SubtypeOf:
-    - sem:valency-valency-class
+    - sem:valency
   AssociatedTo:
     - cxn:transitive-construction
   Definition: >-
@@ -1567,7 +1567,7 @@
   Type: str
   Name: case affix
   SubtypeOf:
-    - str:flag-flagging
+    - str:flagging
   ExpressionOf:
     - cxn:modification-construction
     - cxn:argument-structure-construction
@@ -1663,7 +1663,7 @@
   Type: str
   Name: causative--applicative co-expression
   SubtypeOf:
-    - str:co-expression-strategy
+    - str:co-expression
   ExpressionOf:
     - cxn:causative-construction
     - cxn:applicative-construction
@@ -1732,7 +1732,7 @@
   Type: cxn
   Name: chaining construction
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a> expressing such a <a>chaining event</a>. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
   Examples:
@@ -1874,7 +1874,7 @@
   Examples:
     - <e><e inf:presupposed-open-proposition>What she hopes to do<e> <e str:copula>is</e> <e inf:focus>be a star on the horse-show circuit</e></e>
 
-- Id: str:co-expression-strategy
+- Id: str:co-expression
   Type: str
   Name: co-expression
   Alias:
@@ -1937,7 +1937,7 @@
   Type: cxn
   Name: collective construction
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a> expressing a <a>collective event</a>. <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
   Examples:
@@ -2049,7 +2049,7 @@
   AssociatedTo:
     - cxn:determiner
   Definition: >-
-    a linguistic <a>form</a> that usually <a inf:reference-referent>refers</a> to <a>individuals</a>, via the <u>category</u> that the individual belongs to. Often referred to as just <a>noun</a>. <i>Example</i>: <i>cat</i> is usually used to refer to a particular cat via the category of felines. Note that being a common noun is a function of a form; one can use the form <i>city</i> to refer to an individual city -- for example in the San Francisco Bay Area, <i>the City</i> refers to the city of San Francisco. (Section 3.1.1)
+    a linguistic <a>form</a> that usually <a inf:reference>refers</a> to <a>individuals</a>, via the <u>category</u> that the individual belongs to. Often referred to as just <a>noun</a>. <i>Example</i>: <i>cat</i> is usually used to refer to a particular cat via the category of felines. Note that being a common noun is a function of a form; one can use the form <i>city</i> to refer to an individual city -- for example in the San Francisco Bay Area, <i>the City</i> refers to the city of San Francisco. (Section 3.1.1)
   Examples:
     - <e>cat</e>
     - <e>city</e>
@@ -2121,7 +2121,7 @@
   Type: inf
   Name: comparative referent
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   AssociatedTo:
     - cxn:comparative-pronoun
   Definition: >-
@@ -2142,7 +2142,7 @@
   Examples:
     - <e>Your cat</e> is bigger than my dog
 
-- Id: cxn:complement-dependent-clause
+- Id: cxn:complement
   Type: cxn
   Name: complement
   Alias:
@@ -2153,7 +2153,7 @@
   ConstituentOf:
     - cxn:complement-clause-construction
   Definition: >-
-    a <a>construction</a> defined by the function of <a inf:reference-referent>referring</a> to an <a>action concept</a>. <i>Example</i>: a variety of strategies are used for complements, including the English Gerund, as in <i>Hiking in Canyonlands</i> (<i>is fun</i>), and the English Finite Complement, as in (<i>Frieda thinks</i>) <i>that Janet won't come to the party</i>. (Sections 2.2.5, 18.2.1)
+    a <a>construction</a> defined by the function of <a inf:reference>referring</a> to an <a>action concept</a>. <i>Example</i>: a variety of strategies are used for complements, including the English Gerund, as in <i>Hiking in Canyonlands</i> (<i>is fun</i>), and the English Finite Complement, as in (<i>Frieda thinks</i>) <i>that Janet won't come to the party</i>. (Sections 2.2.5, 18.2.1)
   Examples:
     - <e>Hiking in Canyonlands</e> is fun
     - Frieda thinks that <e>Janet won't come to the party</e>
@@ -2166,7 +2166,7 @@
   Definition: >-
     a <a>construction</a> consisting of a <a>matrix clause</a> and a <a>complement</a>. <i>Example</i>: <i>I told her that I would go</i> is an instance of a complement clause construction; the matrix clause is <i>I told her</i> and the complement is <i>I would go</i>. (Section 18.2.1)
   Examples:
-    - <e><e cxn:matric-clause>I told her</e> that <e cxn:complement-dependent-clause>I would go</e></e>
+    - <e><e cxn:matric-clause>I told her</e> that <e cxn:complement>I would go</e></e>
 
 - Id: cxn:complement-matrix-clause
   Type: cxn
@@ -2221,7 +2221,7 @@
   Type: str
   Name: complementizer
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:complement-clause-construction
   Definition: >-
@@ -2331,18 +2331,18 @@
   Type: def
   Name: conceptual space
   Definition: >-
-    an underlying network of semantic relationships among functions that are <a str:co-expression-strategy>co-expressed</a> across the world's languages. The conceptual space represents a universal pattern in the <a>semantic map model</a>. (Section 3.5)
+    an underlying network of semantic relationships among functions that are <a str:co-expression>co-expressed</a> across the world's languages. The conceptual space represents a universal pattern in the <a>semantic map model</a>. (Section 3.5)
 
 - Id: cxn:concessive-conditional-construction
   Type: cxn
-  Name: concessive conditional
+  Name: concessive conditional construction
   Alias:
     - concessive conditional (construction)
     - conditional concessive construction
   SubtypeOf:
     - cxn:complex-sentence
   Definition: >-
-    the construction that expresses a <a>concessive conditional relation</a>. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
+    the construction that expresses a <a>concessive conditional relation</a>. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis-clause>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis-clause>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
   Examples:
     - <e>However much advice you give him, he does exactly what he wants to do</e>
 
@@ -2352,7 +2352,7 @@
   Alias:
     - conditional concessive relation
   Definition: >-
-    a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
+    a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis-clause>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis-clause>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
   Examples:
     - <e>However much advice you give him, he does exactly what he wants to do</e>
 
@@ -2376,7 +2376,7 @@
   SubtypeOf:
     - sem:event-relation
   Definition: >-
-    a relation between two <a>events</a> such that there is an expected <a>causal relation</a> between the two events, but the opposite of the second event, expressed in the <a cxn:apodosis>apodosis</a>, unexpectedly occurs. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
+    a relation between two <a>events</a> such that there is an expected <a>causal relation</a> between the two events, but the opposite of the second event, expressed in the <a cxn:apodosis-clause>apodosis</a>, unexpectedly occurs. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
   Examples:
     - <e>Although it was raining, I went out</e>
 
@@ -2400,7 +2400,7 @@
   Examples:
     - <e>If you press this button, the door will open</e>
 
-- Id: str:conditional-deranking-system
+- Id: str:conditional-deranking
   Type: str
   Name: conditional deranking
   Alias:
@@ -2428,7 +2428,7 @@
   ExpressionOf:
     - cxn:reference-tracking
   AssociatedTo:
-    - str:balanced-balancing
+    - str:balancing
   Definition: >-
     a <a>system</a> where a <a>same-subject</a> <a>reference tracking construction</a> uses a different <a>strategy</a> from the standard discourse reference strategies found in connected discourse. This is essentially the use of <a>zero anaphora</a> in the same-subject reference tracking construction that is conditional on the construction rather than on the discourse context. <i>Example</i>: the coordination clause construction illustrated in <i>Bilbo<sub>i</sub> found a ring and Ø<sub>i</sub> put it in his pocket</i> uses zero anaphora in the second clause; zero anaphora is not generally allowed in discourse reference (*<i>Put it in his pocket</i>). (Section 16.2)
   Examples:
@@ -2448,9 +2448,9 @@
   Type: inf
   Name: conditional referent
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   Definition: >-
-    an unspecified <a>referent</a> in the <a cxn:protasis>protasis</a> in a <a>conditional construction</a>. <i>Example</i>: in <i>If you hear <b>anything</b>, tell me</i>, <i>anything</i> is a conditional pronoun expressing a referent that is found only in the hypothetical world introduced by the protasis of the conditional construction. (Section 3.5)
+    an unspecified <a>referent</a> in the <a cxn:protasis-clause>protasis</a> in a <a>conditional construction</a>. <i>Example</i>: in <i>If you hear <b>anything</b>, tell me</i>, <i>anything</i> is a conditional pronoun expressing a referent that is found only in the hypothetical world introduced by the protasis of the conditional construction. (Section 3.5)
   Examples:
     - If you hear <e>anything</e>, tell me
 
@@ -2689,7 +2689,7 @@
   Type: str
   Name: converb
   ConstituentOf:
-    - str:deranked-deranking
+    - str:deranking
   ExpressionOf:
     - cxn:adverbial-dependent-clause
   Definition: >-
@@ -2800,7 +2800,7 @@
   Type: str
   Name: copula
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   Definition: >-
     a <a>strategy</a> in which an additional morpheme is used in nonprototypical predication. Copulas can be divided into <a>verbal copulas</a> and <a>nonverbal copulas</a>. (Sections 1.4, <b>10.2</b>)
 
@@ -2828,7 +2828,7 @@
   ConstituentOf:
     - cxn:argument-structure-construction
   Definition: >-
-    the <a>subject</a> and <a>object phrases</a> in a clause, generally considered to <a inf:reference-referent>refer</a> to the more <a>central participants</a> in an <a>event</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, <i>Sally</i> and <i>the letter</i> are the core argument phrases; in <i>The letter was thrown into the wastebasket</i>, only <i>the letter</i> is a core argument phrase. (Section 6.1.1)
+    the <a>subject</a> and <a>object phrases</a> in a clause, generally considered to <a inf:reference>refer</a> to the more <a>central participants</a> in an <a>event</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, <i>Sally</i> and <i>the letter</i> are the core argument phrases; in <i>The letter was thrown into the wastebasket</i>, only <i>the letter</i> is a core argument phrase. (Section 6.1.1)
   Examples:
     - <e>Sally</e> threw <e>the letter</e> into the wastebasket
     - <e>The letter</e> was thrown into the wastebasket
@@ -2854,7 +2854,7 @@
   AssociatedTo:
     - cxn:reference-tracking
   Definition: >-
-    the act of <a inf:reference-referent>referring</a> to a <a>referent</a> that recurs in different occasions in a stretch of discourse. The stretch of discourse may constitute a single <a>construction</a>, such as a <a>complex sentence construction</a>. This is the primary context in which coreference is discussed in this book. <i>Example</i>: in <i>Jared<sub>i</sub> praised his<sub>i</sub> father, but his<sub>i</sub> father ignored him<sub>i</sub></i>, the referent Jared recurs four times in the sentence, and so represents an example of coreference. In linguistic analysis, coreference is often notated by subscript indexes such as <i>i</i> in the example. (Section 16.1)
+    the act of <a inf:reference>referring</a> to a <a>referent</a> that recurs in different occasions in a stretch of discourse. The stretch of discourse may constitute a single <a>construction</a>, such as a <a>complex sentence construction</a>. This is the primary context in which coreference is discussed in this book. <i>Example</i>: in <i>Jared<sub>i</sub> praised his<sub>i</sub> father, but his<sub>i</sub> father ignored him<sub>i</sub></i>, the referent Jared recurs four times in the sentence, and so represents an example of coreference. In linguistic analysis, coreference is often notated by subscript indexes such as <i>i</i> in the example. (Section 16.1)
   Examples:
     - Jared<sub>i</sub> praised his<sub>i</sub> father, but his<sub>i</sub> father ignored him<sub>i</sub>
 
@@ -2927,7 +2927,7 @@
   Type: cxn
   Name: declarative construction
   SubtypeOf:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:declarative>declarative</a> speech act. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. The declarative is the most common speech act construction, and is considered the default speech act construction. (Section 12.1)
   Examples:
@@ -3144,7 +3144,7 @@
 
 - Id: cxn:depictive-complex-predicate
   Type: cxn
-  Name: depictive
+  Name: depictive complex predicate
   Alias:
     - depictive (complex predicate)
     - (depictive) secondary predicate
@@ -3155,7 +3155,7 @@
   Examples:
     - I <e>ate</e> the carrots <e>raw</e>
 
-- Id: str:deranked-deranking
+- Id: str:deranking
   Type: str
   Name: deranked, deranking
   Alias:
@@ -3177,7 +3177,7 @@
   Type: str
   Name: derived intransitive
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> the <a>intransitive construction</a> for use in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with <a>overt coding</a> of the predicate indicating the <a>reflexive event</a> or <a>reciprocal event</a> type. <i>Examples</i>: Abkhaz <i>l-çə-l-k°abe-yt'</i> <q>she washed herself</q> is an Intransitive Verb form with the Reflexive prefix <i>çə-</i>, and Swahili <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
   Examples:
@@ -3267,9 +3267,9 @@
   SubtypeOf:
     - str:a-p-alignment
   ExpressionOf:
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   Definition: >-
-    a strategy that is marginal for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding-strategy>overt</a> <a>flag</a> of higher <a def:animacy-hierarchy>animacy</a> / higher <a>information status</a> -- that is, higher-<a>salience</a> -- Ps. <i>Example</i>: in Spanish, <i>El director busca a un empleado</i> <q>The director is looking for a [specific] clerk</q>, the phrase <i>un empleado</i> <q>a clerk</q>, referring to the P participant, uses the overt flag <i>a</i>. Differential object marking is not usually considered a strategy of the passive--inverse construction because the <a>A</a> <a>participant</a> is not reduced in salience, although the P participant is higher in salience. (Section 8.3)
+    a strategy that is marginal for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding>overt</a> <a>flag</a> of higher <a def:animacy-hierarchy>animacy</a> / higher <a>information status</a> -- that is, higher-<a>salience</a> -- Ps. <i>Example</i>: in Spanish, <i>El director busca a un empleado</i> <q>The director is looking for a [specific] clerk</q>, the phrase <i>un empleado</i> <q>a clerk</q>, referring to the P participant, uses the overt flag <i>a</i>. Differential object marking is not usually considered a strategy of the passive--inverse construction because the <a>A</a> <a>participant</a> is not reduced in salience, although the P participant is higher in salience. (Section 8.3)
   Examples:
     - Language: Spanish
       Example: <e?El director busca a un empleado</e>
@@ -3316,7 +3316,7 @@
   Type: inf
   Name: direct negation referent
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> which is in the scope of <a>negation</a> in the same <a>clause</a>. <i>Example</i>: in <i>I noticed nothing</i>, <i>nothing</i> is a direct negation pronoun expressing a referent found only in the negative alternative world to the real world. (Section 3.5)
   Examples:
@@ -3361,7 +3361,7 @@
   Alias:
     - discourse deixis
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:accessibility
   Definition: >-
@@ -3412,7 +3412,7 @@
     - <e>an apple or an orange</e>
     - <e>I'll have an apple or an orange</e>
 
-- Id: sem:distal-deixis
+- Id: sem:distal
   Type: sem
   Name: distal
   Alias:
@@ -3436,7 +3436,7 @@
   Alias:
     - ditransitive (construction)
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a> used to express the <a>agent</a> of the <a>trivalent</a> giving event (the <a>A role</a>), the <a>theme</a> of the giving event (the <a>T role</a>), and the <a>recipient</a> of the giving event (the <a>R role</a>) when the agent is more salient than the theme or recipient. <i>Example</i>: <i>Randy gave the car to his daughter</i> is an instance of the exemplar (the single <dq>most prototypical</dq> example) of the ditransitive construction. (Sections 6.1.2, <b>7.5.1</b>)
   Examples:
@@ -3601,7 +3601,7 @@
   ExpressionOf:
     - cxn:polarity-response-construction
   Definition: >-
-    a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a cxn:polarity-question>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
+    a <a>strategy</a> for the <a>polarity response construction</a> in which the answer to a <a cxn:polarity-question-construction>polarity question</a> repeats part of the question. <i>Example</i>: in Welsh, the answers to the polarity question <i>A welwch chwi hwy?</i> [<sc>q</sc> see you them] <q>Do you see them?</q> are either <i>Gwelaf</i> <q>I see (them)</q> or <i>Na gwelaf</i> <q>I don't see (them)</q>. (Section 12.3.3)
   Examples:
     - Language: Welsh
       Example: A welwch chwi hwy?
@@ -3632,7 +3632,7 @@
   ExpressionOf:
     - cxn:thetic-construction
     - cxn:identificational-construction
-    - cxn:information-question-response
+    - cxn:information-question-response-construction
   Definition: >-
     a <a>strategy</a> for <a>identificational constructions</a> in which the <a>presupposed open proposition</a> is deleted, or sometimes expressed only by a <q>pro-verb</q>. <i>Example</i>: in English, elliptical responses to the question <i>Who took the cookies?</i> are <i>It was JIM, JIM</i>, or <i>JIM did</i> (with the pro-verb form <i>did</i>), in contrast to the full <a str:prosody>prosodic strategy</a> <i>JIM took the cookies</i> or the <a inf:equational>equational</a> <a>strategy</a> <i>It was JIM who took the cookies</i>. (Section 11.4.2)
   Examples:
@@ -3976,7 +3976,7 @@
   Type: cxn
   Name: exclamative construction
   SubtypeOf:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: >-
     a <a>construction</a> that expresses an <a inf:exclamative>exclamative</a> speech act. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
   Examples:
@@ -4123,7 +4123,7 @@
   Type: cxn
   Name: experiential construction
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     an <a>argument structure construction</a> used to <a>predicate</a> an <a>experiential event</a>. <i>Example</i>: <i>Shelley tasted the soup</i> is an instance of an experiential construction, with the <a>experiencer</a> expressed as <a>subject</a> and the <a>stimulus</a> expressed as <a inf:object-argument>object</a>. (Section 7.4)
   Examples:
@@ -4391,7 +4391,7 @@
         - sadom-ete | horse-from
         - -ete | from
 
-- Id: str:flag-flagging
+- Id: str:flagging
   Type: str
   Name: flag, flagging
   Alias:
@@ -4421,7 +4421,7 @@
   Type: str
   Name: focus marker
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:identificational-construction
   Definition: >-
@@ -4487,7 +4487,7 @@
   Type: inf
   Name: free choice referent
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> in certain contexts, whose identity can be freely chosen without affecting the truth value of the utterance. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
   Examples:
@@ -4746,12 +4746,12 @@
   Alias:
     - null anaphoric head
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:anaphoric-head-construction
     - cxn:free-modification-construction
   Definition: >-
-    a <a>strategy</a> for the <a>anaphoric-head construction</a> in which there is no <a str:overt-coding-strategy>overt</a> morpheme that functions as the <a>head</a>. <i>Example</i>: in <i>My bicycle is older than Greg's</i>, the anaphoric-head construction <i>Greg's</i> has no overt morpheme functioning as the head. (Section 5.4)
+    a <a>strategy</a> for the <a>anaphoric-head construction</a> in which there is no <a str:overt-coding>overt</a> morpheme that functions as the <a>head</a>. <i>Example</i>: in <i>My bicycle is older than Greg's</i>, the anaphoric-head construction <i>Greg's</i> has no overt morpheme functioning as the head. (Section 5.4)
   Examples:
     - My bicycle is older than <e>Greg's</e>
 
@@ -4897,14 +4897,14 @@
       EquivalentPieces:
         - dúdúdú | energetically
 
-- Id: cxn:imperative-hortative
+- Id: cxn:imperative-hortative-construction
   Type: cxn
   Name: imperative--hortative construction
   Alias:
     - imperative construction
     - hortative construction
   SubtypeOf:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:imperative-hortative>imperative--hortative</a> speech act. <i>Example</i>: <i>Dance!</i> is an example of the English imperative--hortative construction for the <a cxn:second-person-pronoun>second person</a>, and <i>Let's dance!</i> is an example of the same for the <a cxn:first-person-pronoun>first person</a> <a sem:number>plural</a>. The term <q>hortative</q> is sometimes used for a first person imperative--hortative, and <q>jussive</q> for a third person imperative--hortative. A negative imperative--hortative is a <a cxn:prohibitive-construction>prohibitive</a>. (Sections 12.1, 12.4)
   Examples:
@@ -4931,7 +4931,7 @@
   Alias:
     - noncontaining inferrable
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:accessibility
   AssociatedTo:
@@ -4964,9 +4964,9 @@
       EquivalentPieces:
         - ma- | I/me
 
-- Id: cxn:inalienable-possession
+- Id: cxn:inalienable-possession-modification-construction
   Type: cxn
-  Name: inaliaenable possession modification construction
+  Name: inalienable possession modification construction
   Alias:
     - inalienable possession
   SubtypeOf:
@@ -4984,7 +4984,7 @@
   SubtypeOf:
     - cxn:possessive-attributive-phrase
   ConstituentOf:
-    - cxn:inalienable-possession
+    - cxn:inalienable-possession-modification-construction
   Definition: ''
   FromGlossary: false
 
@@ -5118,7 +5118,7 @@
   ConstituentOf:
     - str:indexation
   Definition: >-
-    the morpheme in an <a>indexical strategy</a> which <a inf:reference-referent>refers</a> to (indexes) the referent. <i>Example</i>: in Spanish <i>las chicas cantaban</i> <q>the girls were singing</q>, the 3rd person plural suffix <i>-an</i> on the imperfective form of <q>sing</q> is the index, referring to the same referent as <i>las chicas</i> <q>the girls</q>. (Section 4.4)
+    the morpheme in an <a>indexical strategy</a> which <a inf:reference>refers</a> to (indexes) the referent. <i>Example</i>: in Spanish <i>las chicas cantaban</i> <q>the girls were singing</q>, the 3rd person plural suffix <i>-an</i> on the imperfective form of <q>sing</q> is the index, referring to the same referent as <i>las chicas</i> <q>the girls</q>. (Section 4.4)
   Examples:
     - Language: Spanish
       Example: las chicas cantab<e>-an</e>
@@ -5146,7 +5146,7 @@
   Type: str
   Name: indexed
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   AssociatedTo:
     - sem:participant-oriented
   Definition: >-
@@ -5199,7 +5199,7 @@
   Type: inf
   Name: indirect negation referent
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> which is in a <a>clause</a> embedded in a <b>negated</b> clause. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
   Examples:
@@ -5261,7 +5261,7 @@
   Alias:
     - (containing) inferrable
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:accessibility
   AssociatedTo:
@@ -5269,7 +5269,7 @@
   Definition: >-
     a <a>referent</a> whose identity can be inferred via the <a>type</a> described by the <a>referring phrase</a>. Example: in <i>the bowl of noodles on the kitchen counter</i>, the identity of the referent can be inferred from the type description (is a bowl, contains noodles, is on the kitchen counter) even if the referent has not previously been mentioned. Inferrable referents are very similar to <a>inactive</a> referents (which are sometimes called noncontaining inferrables) and may not be clearly distinguishable from them. (Section 3.3.1)
 
-- Id: cxn:information-question-response
+- Id: cxn:information-question-response-construction
   Type: cxn
   Name: information question response construction
   Alias:
@@ -5325,7 +5325,7 @@
   SubtypeOf:
     - cxn:interrogative-construction
   Definition: >-
-    the <a>construction</a> expressing an <a inf:information-question>information question</a> <a>function</a>. <i>Example</i>: <i>Who is coming?</i> is an instance of the English information question construction, expecting an answer identifying the person(s) who is/are coming. Information questions, unlike <a cxn:polarity-question>polarity questions</a>, contain an <a>interrogative pronoun</a>. (Section 12.3.1)
+    the <a>construction</a> expressing an <a inf:information-question>information question</a> <a>function</a>. <i>Example</i>: <i>Who is coming?</i> is an instance of the English information question construction, expecting an answer identifying the person(s) who is/are coming. Information questions, unlike <a cxn:polarity-question-construction>polarity questions</a>, contain an <a>interrogative pronoun</a>. (Section 12.3.1)
   Examples:
     - <e>Who is coming?</e>
 
@@ -5343,7 +5343,7 @@
   Type: inf
   Name: information status
   AttributeOf:
-    - inf:reference-referent
+    - inf:reference
   Definition: >-
     the information status of a <a>referent</a> in discourse is a characterization of how the interlocutors identify an <a>individual</a> as the intended referent of a <a>referring phrase</a>. Information status represents a subdivision of the <a>information packaging</a> <a>function</a> of <a>reference</a>: a more fine-grained means to pick out the referent. <i>Examples</i>: some examples of information status categories are <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and other categories listed in the third column of Table 3.4. (Section 3.2)
 
@@ -5402,11 +5402,11 @@
   SubtypeOf:
     - str:recruitment-strategy
   ExpressionOf:
-    - cxn:imperative-hortative
+    - cxn:imperative-hortative-construction
   RecruitedFrom:
     - cxn:subordinate-clause
   Definition: >-
-    the <a>recruitment</a> of <a>deranked</a> <a>clause constructions</a> to express a <b>nondeclarative main clause function</b>. <i>Example</i>: <i>No smoking</i> recruits the English Gerund Verb form ending in <i>-ing</i> in order to express an <a cxn:imperative-hortative>imperative</a>. (Section 15.2.3)
+    the <a>recruitment</a> of <a>deranked</a> <a>clause constructions</a> to express a <b>nondeclarative main clause function</b>. <i>Example</i>: <i>No smoking</i> recruits the English Gerund Verb form ending in <i>-ing</i> in order to express an <a cxn:imperative-hortative-construction>imperative</a>. (Section 15.2.3)
   Examples:
     - No smok<e>-ing</e>
 
@@ -5507,9 +5507,9 @@
   Type: cxn
   Name: interrogative construction
   SubtypeOf:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: >-
-    the <a>construction</a> that expresses a <a inf:interrogative>interrogative</a> speech act. Interrogatives are divided into <a cxn:polarity-question>polarity questions</a>, <a cxn:information-question-construction>information questions</a>, and <a cxn:alternative-question>alternative questions</a>. (Sections 12.1, 12.3)
+    the <a>construction</a> that expresses a <a inf:interrogative>interrogative</a> speech act. Interrogatives are divided into <a cxn:polarity-question-construction>polarity questions</a>, <a cxn:information-question-construction>information questions</a>, and <a cxn:alternative-question>alternative questions</a>. (Sections 12.1, 12.3)
 
 - Id: inf:interrogative
   Type: inf
@@ -5526,7 +5526,7 @@
   Type: cxn
   Name: interrogative complement
   SubtypeOf:
-    - cxn:complement-dependent-clause
+    - cxn:complement
   Definition: >-
     a <a>complement</a> that expresses a <a>proposition</a> which contains information that is unknown. Interrogative complements commonly occur in certain types of <a>propositional attitude</a> <a>complement clause constructions</a>. <i>Examples</i>: in <i>I wonder who is going to the party</i> or <i>John wondered whether he would go to the party</i>, <i>who is going to the party</i> and <i>whether he would go to the party</i> are interrogative complements. Interrogative complements are often found in the <a>objective</a> construal of <a>epistemic modality</a>. (Sections 12.3.4, 18.3.1)
   Examples:
@@ -5550,7 +5550,7 @@
   Alias:
     - interrogative (information) unit
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:identity-unknown
   Definition: ''
@@ -5570,7 +5570,7 @@
   Type: cxn
   Name: intransitive construction
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a>, or possibly set of constructions, used to express <a>monovalent events</a> with their single <a>salient</a> <a>argument</a>, in the <a>S role</a>. <i>Example</i>: <i>The boys walked</i> is an example of an English intransitive construction. Unlike the <a>transitive construction</a> and the <a>ditransitive construction</a>, there is no clear exemplar event for defining intransitive constructions, thanks to the existence of <a>active alignment</a>. (Sections 6.1.2, <b>6.3.3</b>)
   Examples:
@@ -5626,7 +5626,7 @@
   Alias:
     - irrealis (referent)
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   Definition: >-
     a <a>referent</a> which is in the <dq>world</dq> or <a>mental space</a> representing a person's desire, wish, command, etc. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
   Examples:
@@ -5680,7 +5680,7 @@
   SubtypeOf:
     - sem:possession
   AssociatedTo:
-    - cxn:inalienable-possession
+    - cxn:inalienable-possession-modification-construction
   Definition: >-
     a relation that holds between a person and certain other persons by biological relations, or social relations such as marriage, and other socially defined kin relations. <i>Example</i>: <i>my mother</i> is an instance of a <a>possession construction</a> expressing a kinship relation. (Section 4.1.4)
   Examples:
@@ -5721,7 +5721,7 @@
     - lexical causative
   ExpressionOf:
     - cxn:causative-construction
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   Definition: >-
     a <a>strategy</a> in which the <a>verb</a> expressing a <a>noncausal event</a> and the verb expressing its counterpart <a>causal event</a> are identical. <i>Example</i>: in English, the same verb <i>break</i> is used for the causal event <i>I broke the vase</i> and the noncausal event <i>The vase broke</i>. (Section 6.3.4)
   Examples:
@@ -5765,7 +5765,7 @@
   Examples:
     - <e>I barely got up in time to eat lunch, let alone cook breakfast</e>
 
-- Id: def:lexicalize-lexicalization
+- Id: def:lexicalization
   Type: def
   Name: lexicalize, lexicalization
   Definition: >-
@@ -5787,7 +5787,7 @@
   Type: str
   Name: linker
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:modification-construction
     - cxn:argument-structure-construction
@@ -6154,7 +6154,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:mensural-construction
+    - cxn:mensural-modification-construction
   Definition: >-
     a <a>strategy</a> used for the <a>mensural construction</a> that is morphosyntactically similar to the <a str:sortal-classifier>(sortal) classifier strategy</a> used in the language. <i>Example</i>: in Cantonese <i>léuhng wún faahn</i> <q>two bowls of rice</q>, <i>wún</i> <q>bowl</q> is a mensural classifier that recruits the same construction as is used for sortal classifiers in the language. (Section 5.2.2)
   Examples:
@@ -6170,11 +6170,11 @@
   SubtypeOf:
     - cxn:attributive-phrase
   ConstituentOf:
-    - cxn:mensural-construction
+    - cxn:mensural-modification-construction
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:mensural-construction
+- Id: cxn:mensural-modification-construction
   Type: cxn
   Name: mensural modification construction
   Alias:
@@ -6275,7 +6275,7 @@
   SubtypeOf:
     - inf:major-propositional-act
   ConstituentOf:
-    - inf:reference-referent
+    - inf:reference
   Definition: >-
     provides additional information about the <a>referent</a> and enriches the specification of the referent for the hearer. Example: in <i>a furry cat</i>, the speaker enriches the specification of the referent in the cat category by the <a>property</a> of being furry. In the <a>file metaphor</a> for describing <a>propositional acts</a>, modification enriches the discourse file; the information it adds to the discourse file is secondary in comparison to <a>predication</a>. (Sections 1.3, <b>2.1</b>)
 
@@ -6301,7 +6301,7 @@
   Type: def
   Name: modification--reference continuum
   Definition: >-
-    a continuum of <a>modification</a> from <a>anchoring</a> <a>nominal modifier constructions</a>, to <a cxn:typifying-construction>non-anchoring</a> <a>nominal modifier constructions</a>, to <a>property</a> <a>modification</a> and <a>selecting</a> <a>modification</a>, to a unitary <a>referent expression</a> (such as a <a>binominal lexeme</a>) formed etymologically from distinct <a inf:modification>modifying</a> and <a inf:reference-referent>referring</a> concepts. (Section 5.2.4)
+    a continuum of <a>modification</a> from <a>anchoring</a> <a>nominal modifier constructions</a>, to <a cxn:typifying-construction>non-anchoring</a> <a>nominal modifier constructions</a>, to <a>property</a> <a>modification</a> and <a>selecting</a> <a>modification</a>, to a unitary <a>referent expression</a> (such as a <a>binominal lexeme</a>) formed etymologically from distinct <a inf:modification>modifying</a> and <a inf:reference>referring</a> concepts. (Section 5.2.4)
 
 - Id: cxn:modifier
   Type: cxn
@@ -6326,7 +6326,7 @@
   RecruitedFrom:
     - cxn:transitive-construction
   Definition: >-
-    the <a>strategy</a> of <a>recruiting</a> the <a>transitive construction</a> to use as a <a>reciprocal construction</a> but with only one <q>direction</q> of the reciprocal <a>event</a> directly expressed. <i>Example</i>: the Tonga sentence <i>Joni ba-la-yand-ana amukaintu wakwe</i> <q>John and his wife love each other</q> is literally <q>John mutually-loves his wife</q>, with <i>amukaintu wakwe</i> <q>his wife</q> as Direct Object and also an <a str:overt-coding-strategy>overt</a> Reciprocal suffix <i>-ana</i> on the <a>verb</a>. (Section 7.2)
+    the <a>strategy</a> of <a>recruiting</a> the <a>transitive construction</a> to use as a <a>reciprocal construction</a> but with only one <q>direction</q> of the reciprocal <a>event</a> directly expressed. <i>Example</i>: the Tonga sentence <i>Joni ba-la-yand-ana amukaintu wakwe</i> <q>John and his wife love each other</q> is literally <q>John mutually-loves his wife</q>, with <i>amukaintu wakwe</i> <q>his wife</q> as Direct Object and also an <a str:overt-coding>overt</a> Reciprocal suffix <i>-ana</i> on the <a>verb</a>. (Section 7.2)
   Examples:
     - Language: Tonga
       Example: <e>Joni ba-la-yand-ana amukaintu wakwe</e>
@@ -6357,7 +6357,7 @@
   Alias:
     - monovalent (event)
   SubtypeOf:
-    - sem:valency-valency-class
+    - sem:valency
   AssociatedTo:
     - cxn:intransitive-construction
   Definition: >-
@@ -6428,13 +6428,13 @@
   Alias:
     - negation (construction)
   SubtypeOf:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: >-
     a <a>construction</a> that expresses <a>negative polarity</a>. Negation constructions include <a>declarative negation</a>, <a>existential negation</a>, and the <a cxn:prohibitive-construction>prohibitive</a>. (Sections 12.2, 12.4.1)
 
 - Id: sem:negative-polarity
   Type: sem
-  Name: negative
+  Name: negative polarity
   Alias:
     - negative (polarity)
   SubtypeOf:
@@ -6559,13 +6559,13 @@
   Type: str
   Name: nominalizer
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:referring-phrase
   AssociatedTo:
     - cxn:referent-expression
   Definition: >-
-    a form that signals that a word is being used to <a inf:reference-referent>refer</a>, typically pertaining to a referent from a nonprototypical <a>semantic class</a> for <a>reference</a>. <i>Example</i>: the suffix <i>-ness</i> in <i>oddness</i> and the suffix <i>-ment</i> in <i>movement</i> are used when a <a>property</a> concept like <q>odd</q> or an <a>action</a> concept like <q>move</q> are being referred to. (Section 3.4.2)
+    a form that signals that a word is being used to <a inf:reference>refer</a>, typically pertaining to a referent from a nonprototypical <a>semantic class</a> for <a>reference</a>. <i>Example</i>: the suffix <i>-ness</i> in <i>oddness</i> and the suffix <i>-ment</i> in <i>movement</i> are used when a <a>property</a> concept like <q>odd</q> or an <a>action</a> concept like <q>move</q> are being referred to. (Section 3.4.2)
   Examples:
     - odd<e>-ness</e>
     - move<e>-ment</e>
@@ -6598,7 +6598,7 @@
   Type: str
   Name: non-indexed
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   AssociatedTo:
     - sem:event-oriented
   Definition: >-
@@ -6606,7 +6606,7 @@
 
 - Id: cxn:nonanaphoric-definite-article
   Type: cxn
-  Name: nonanaphoric article
+  Name: nonanaphoric definite article
   Alias:
     - nonanaphoric (definite) article
   SubtypeOf:
@@ -6715,13 +6715,13 @@
   Definition: >-
     a <a>pronoun</a> that expresses a <a>nonspecific referent</a>. (Section 3.5)
 
-- Id: inf:nonspecific-referent
+- Id: inf:semantically-nonspecific-referent
   Type: inf
   Name: semantically nonspecific referent
   Alias:
     - (semantically) nonspecific (indefinite) referent
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:type-identifiable
   Definition: >-
@@ -7002,7 +7002,7 @@
   ExpressionOf:
     - cxn:applicative-construction
   ModeledOn:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: ''
   FromGlossary: false
 
@@ -7012,7 +7012,7 @@
   SubtypeOf:
     - str:a-p-alignment
   ExpressionOf:
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   Definition: ''
   FromGlossary: false
 
@@ -7058,12 +7058,14 @@
   Examples:
     - the <e>second</e> tree
 
-- Id: str:overt-coding-strategy
+- Id: str:overt-coding
   Type: str
-  Name: overt coding
+  Name: overt coding, overtly coded
   Alias:
     - overt coding (strategy)
+    - overtly coded (strategy)
     - overt strategy
+    - overt code
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -7083,12 +7085,12 @@
     - overtly headed (strategy)
     - overt (anaphoric) head strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:anaphoric-head-construction
     - cxn:free-modification-construction
   Definition: >-
-    a <a>strategy</a> for the <a>anaphoric-head construction</a> in which there is an <a str:overt-coding-strategy>overt</a> morpheme that functions as the <a>head</a>. <i>Example</i>: in <i>I took a red candy and Greg took a green one, a green one</i> is an example of the overtly headed strategy for the anaphoric-head construction, because <i>one</i> serves as an anaphoric head (with respect to <a>type identity</a>) in the construction. (Section 5.4)
+    a <a>strategy</a> for the <a>anaphoric-head construction</a> in which there is an <a str:overt-coding>overt</a> morpheme that functions as the <a>head</a>. <i>Example</i>: in <i>I took a red candy and Greg took a green one, a green one</i> is an example of the overtly headed strategy for the anaphoric-head construction, because <i>one</i> serves as an anaphoric head (with respect to <a>type identity</a>) in the construction. (Section 5.4)
   Examples:
     - I took a red candy and Greg took <e>a green one</e>
 
@@ -7096,7 +7098,7 @@
   Type: str
   Name: overtly verb-coded voice strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:argument-structure-construction
   Definition: >-
@@ -7116,7 +7118,7 @@
   SubtypeOf:
     - sem:possession
   AssociatedTo:
-    - cxn:alienable-possession
+    - cxn:alienable-possession-modification-construction
   Definition: >-
     a culturally sanctioned relation of control between a person and a physical object, such as an artifact, foodstuff, or shelter, or a more abstract object of value such as shares in a company. <i>Example</i>: in a common interpretation of <i>Sally's truck</i>, Sally owns the truck. (Section 4.1.4)
   Examples:
@@ -7159,7 +7161,7 @@
   SubtypeOf:
     - sem:possession
   AssociatedTo:
-    - cxn:inalienable-possession
+    - cxn:inalienable-possession-modification-construction
   Definition: >-
     a relation between an <a sem:object-concept>object</a>, particularly an <a>inanimate</a> object, and a part of that object. <i>Example</i>: <i>a drawer of the desk</i> is a <a>possession construction</a> expressing a part--whole relation. The part--whole relation is a generalization of the <a>body part relation</a>. (Section 4.1.4)
   Examples:
@@ -7238,7 +7240,7 @@
   Type: str
   Name: participle
   ConstituentOf:
-    - str:deranked-deranking
+    - str:deranking
   ExpressionOf:
     - cxn:relative-clause
   Definition: >-
@@ -7306,7 +7308,7 @@
       EquivalentPieces:
         - taam<sup>3</sup> | follow
 
-- Id: cxn:passive-inverse-voice-construction
+- Id: cxn:passive-inverse-voice
   Type: cxn
   Name: passive--inverse voice
   Alias:
@@ -7319,7 +7321,7 @@
   Examples:
     - <e>The boys were followed by a mountain lion</e>
 
-- Id: sem:path-of-motion-event
+- Id: sem:path-event
   Type: sem
   Name: path event
   Alias:
@@ -7331,7 +7333,7 @@
   Examples:
     - The guests <e>entered</e> the reception hall
 
-- Id: cxn:path-of-motion-verb
+- Id: cxn:path-verb
   Type: cxn
   Name: path verb
   Alias:
@@ -7559,7 +7561,7 @@
     - I <e>DID</e> finish my assignment!
     - I finished my assignment
 
-- Id: cxn:polarity-question
+- Id: cxn:polarity-question-construction
   Type: cxn
   Name: polarity question construction
   Alias:
@@ -7624,7 +7626,7 @@
 
 - Id: sem:positive-polarity
   Type: sem
-  Name: positive
+  Name: positive polarity
   Alias:
     - positive (polarity)
   SubtypeOf:
@@ -7694,7 +7696,7 @@
 
 - Id: cxn:possessive-modification-construction
   Type: cxn
-  Name: possessive construction
+  Name: possessive modification construction
   Alias:
     - possessive (modification) construction
     - attributive possession construction
@@ -7788,7 +7790,7 @@
   Type: str
   Name: posterior deranking
   SubtypeOf:
-    - str:deranked-deranking
+    - str:deranking
   ExpressionOf:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -7891,7 +7893,7 @@
   Alias:
     - pragmatically nonspecific (but semantically specific) (indefinite) referent
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:identity-unknown
   Definition: >-
@@ -7926,7 +7928,7 @@
   Alias:
     - pragmatically specific (indefinite) referent
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:identity-unknown
   Definition: >-
@@ -8260,7 +8262,7 @@
   Type: str
   Name: primary object category
   ConstituentOf:
-    - str:secundative-ditransitive-alignment
+    - str:secundative-alignment
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>secundative alignment system</a> that <a>co-expresses</a> both <a>R</a> and <a>P roles</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, the <a>index</a> <i>wa-</i> <q><sc>3pl</q></sc> is the same used to index <i>tɨɨri</i> <q>children</q> in <i>uukaraawiciizɨ tɨɨri me-wa-zeiya</i> <q>The women see the children</q>, and hence represents the primary object category. (Section 7.5.2)
   Examples:
@@ -8276,7 +8278,7 @@
   Type: cxn
   Name: prohibitive construction
   SubtypeOf:
-    - cxn:imperative-hortative
+    - cxn:imperative-hortative-construction
     - cxn:negation-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:prohibitive>prohibitive</a> speech act. <i>Example</i>: English <i>Don't be a fool!</i> is an instance of a prohibitive; the construction uses a special prohibitive morpheme <i>Don't</i> to express prohibitive function. (Section 12.4.1)
@@ -8309,7 +8311,7 @@
   SubtypeOf:
     - cxn:noun
   Definition: >-
-    a linguistic <a>form</a> that <a inf:reference-referent>refers</a> to an individual via some <a>contextual</a> factor in the <a>speech act situation</a>. <i>Example</i>: <i>I</i> is a pronoun because it refers to a person via the role she is playing in the speech event (namely, speaker). (Section 3.1.1)
+    a linguistic <a>form</a> that <a inf:reference>refers</a> to an individual via some <a>contextual</a> factor in the <a>speech act situation</a>. <i>Example</i>: <i>I</i> is a pronoun because it refers to a person via the role she is playing in the speech event (namely, speaker). (Section 3.1.1)
   Examples:
     - <e>I</e>
 
@@ -8349,13 +8351,13 @@
   SubtypeOf:
     - cxn:noun
   Definition: >-
-    a linguistic <a>form</a> that <a inf:reference-referent>refers</a> to an <a>individual</a> directly -- that is, it names an individual rather than a <u>category</u>. The term <q>proper name</q> is also used; we will consider these two terms to be synonymous. <i>Example</i>: <i>Bill Croft</i> refers to a particular individual. Note that being a proper noun is a function of a form; one can use the form <i>Bill Croft</i> as a common noun -- for example, to refer to a category of all persons named <q>Bill Croft</q>. (Section 3.1.1)
+    a linguistic <a>form</a> that <a inf:reference>refers</a> to an <a>individual</a> directly -- that is, it names an individual rather than a <u>category</u>. The term <q>proper name</q> is also used; we will consider these two terms to be synonymous. <i>Example</i>: <i>Bill Croft</i> refers to a particular individual. Note that being a proper noun is a function of a form; one can use the form <i>Bill Croft</i> as a common noun -- for example, to refer to a category of all persons named <q>Bill Croft</q>. (Section 3.1.1)
   Examples:
     - <e>Bill Croft</e>
 
 - Id: sem:property-concept
   Type: sem
-  Name: property
+  Name: property concept
   Alias:
     - property (concept)
     - quality
@@ -8450,11 +8452,11 @@
   ExpressionOf:
     - cxn:construction
   Definition: >-
-    a phonological <a>strategy</a> typically used for expressing certain <a cxn:nonpredicational-clauses>nonpredicational clause constructions</a> and <a cxn:speech-acts>speech act</a> constructions. <i>Example</i>: prosody can be used in English to express a <a cxn:thetic-construction>thetic</a> construction: <i>(What's the matter?) My NECK hurts</i>. (Section 11.3.2)
+    a phonological <a>strategy</a> typically used for expressing certain <a cxn:nonpredicational-clauses>nonpredicational clause constructions</a> and <a cxn:speech-act-construction>speech act</a> constructions. <i>Example</i>: prosody can be used in English to express a <a cxn:thetic-construction>thetic</a> construction: <i>(What's the matter?) My NECK hurts</i>. (Section 11.3.2)
   Examples:
     - (What's the matter?) My NECK hurts
 
-- Id: cxn:protasis
+- Id: cxn:protasis-clause
   Type: cxn
   Name: protasis clause
   Alias:
@@ -8462,7 +8464,7 @@
   ConstituentOf:
     - cxn:conditional-construction
   Definition: >-
-    the <a>clause</a> expressing the causally antecedent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a cxn:apodosis>apodosis</a>. (Section 17.3.1)
+    the <a>clause</a> expressing the causally antecedent <a>proposition</a> in a <a>causal</a>, <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, or <a>comparative conditional construction</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a cxn:apodosis-clause>apodosis</a>. (Section 17.3.1)
   Examples:
     - <e>If you press this button, the door will open</e>
 
@@ -8472,7 +8474,7 @@
   ConstituentOf:
     - sem:conditional-relation
   Definition: >-
-    the proposition or <a>event</a> denoted by a <a cxn:protasis>protasis</a> clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a cxn:apodosis>apodosis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>protasis</q> can be distinguished as <q>protasis proposition</q> or <q>protasis event</q>. (Section 17.3.1)
+    the proposition or <a>event</a> denoted by a <a cxn:protasis-clause>protasis</a> clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a cxn:apodosis-clause>apodosis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>protasis</q> can be distinguished as <q>protasis proposition</q> or <q>protasis event</q>. (Section 17.3.1)
   Examples:
     - <e>If you press this button, the door will open</e>
 
@@ -8484,11 +8486,11 @@
   SubtypeOf:
     - cxn:construction
   Definition: >-
-    a <a>construction</a> that expresses the most common or <dq>favored</dq> (see Section 2.4) combinations of <a>information packaging</a> and <a>semantic content</a>. <i>Example</i>: <i>an old violin</i> is an instance of a prototypical <a inf:reference-referent>referring</a> construction: it expresses <a>reference</a> to an <a sem:object-concept>object</a>, the most common or <dq>favored</dq> type of referent. (Section 2.2.3)
+    a <a>construction</a> that expresses the most common or <dq>favored</dq> (see Section 2.4) combinations of <a>information packaging</a> and <a>semantic content</a>. <i>Example</i>: <i>an old violin</i> is an instance of a prototypical <a inf:reference>referring</a> construction: it expresses <a>reference</a> to an <a sem:object-concept>object</a>, the most common or <dq>favored</dq> type of referent. (Section 2.2.3)
   Examples:
     - <e>an old violin</e>
 
-- Id: sem:proximal-deixis
+- Id: sem:proximal
   Type: sem
   Name: proximal
   Alias:
@@ -8504,7 +8506,7 @@
   SubtypeOf:
     - str:recruitment-strategy
   ExpressionOf:
-    - cxn:mensural-construction
+    - cxn:mensural-modification-construction
   RecruitedFrom:
     - cxn:partitive-construction
   Definition: >-
@@ -8580,11 +8582,11 @@
   SubtypeOf:
     - cxn:attributive-phrase
   ConstituentOf:
-    - cxn:quantifier-construction
+    - cxn:quantifier-modification-construction
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:quantifier-construction
+- Id: cxn:quantifier-modification-construction
   Type: cxn
   Name: quantifier modification construction
   Alias:
@@ -8619,7 +8621,7 @@
   Type: inf
   Name: question referent
   SubtypeOf:
-    - inf:nonspecific-referent
+    - inf:semantically-nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> in the scope of <a inf:interrogative>interrogation</a>, especially <a inf:polarity-question>polar</a> <a cxn:interrogative-construction>interrogatives</a>. <i>Example</i>: in <i>Can you hear <b>anything</b>?</i>, <i>anything</i> is a question pronoun expressing a referent that only <dq>exists</dq> in a hypothetical world, the possibility of whose existence is being entertained by the questioner. (Section 3.5)
   Examples:
@@ -8673,7 +8675,7 @@
   Type: cxn
   Name: reciprocal construction
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a> expressing such a <a>reciprocal event</a>. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
   Examples:
@@ -8729,7 +8731,7 @@
   Examples:
     - and there's a man at the top of the ladder, you can't see <e>him</e> yet...
 
-- Id: inf:reference-referent
+- Id: inf:reference
   Type: inf
   Name: reference, referent
   SubtypeOf:
@@ -8779,7 +8781,7 @@
   Type: cxn
   Name: reflexive construction
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a> expressing a <a>reflexive event</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
   Examples:
@@ -8824,7 +8826,7 @@
   Type: str
   Name: relational strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts. Examples of relational strategies include <a>adpositions</a> and <a>case affixes</a>. (Section 4.3)
 
@@ -8920,7 +8922,7 @@
   Type: str
   Name: relative strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   Definition: >-
     the <a>strategy</a> for <a>comparative</a> (and possibly <a cxn:equative-construction>equative</a>) <a>constructions</a> which directly expresses two of the <a>propositions</a> that form the <a>meaning</a> of the comparative -- that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and that the comparee exceeds the <a>standard</a> on the scale. That is to say, the relative strategy <a>recruits</a> a <a>same-subject</a>, <a>conditionally deranked</a>, usually <a>simultaneous</a> <u>temporal</u> <a>complex sentence construction</a> to express comparison. The <a>exceed comparative</a> is an example of the relative strategy; the <a>conjoined exceed strategy</a> appears to be a related type. (Section 17.2.3)
 
@@ -8948,7 +8950,7 @@
   Type: str
   Name: relativizer
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
@@ -9011,9 +9013,9 @@
   Type: cxn
   Name: response construction
   SubtypeOf:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: >-
-    the <a>construction</a> expressing an <a>answer</a> <a>function</a>. Like interrogatives, responses are divided into <a cxn:polarity-response-construction>polarity responses</a> and <a cxn:information-question-response>information (question) responses</a>.
+    the <a>construction</a> expressing an <a>answer</a> <a>function</a>. Like interrogatives, responses are divided into <a cxn:polarity-response-construction>polarity responses</a> and <a cxn:information-question-response-construction>information (question) responses</a>.
 
 - Id: inf:response
   Type: inf
@@ -9087,7 +9089,7 @@
 
 - Id: cxn:resultative-complex-predicate
   Type: cxn
-  Name: resultative
+  Name: resultative complex predicate
   Alias:
     - resultative (complex predicate)
     - (resultative) secondary predicate
@@ -9104,7 +9106,7 @@
   Alias:
     - slot
   Definition: >-
-    a <a>construction</a> consists of <a>elements</a>, each of which describes a role that expresses a particular <a>function</a> in a construction. <i>Example</i>: in the English Predicate Adjective Construction [<sc>Sbj</sc> <i>be</i> <sc>PredAdj</sc>], illustrated by <i>She is intelligent</i>, the label <sc>Sbj</sc> describes a role <a inf:reference-referent>referring</a> to an <a sem:object-concept>object</a>, and <sc>PredAdj</sc> describes a role occurring after <i>be</i> that <a>predicates</a> a <a>property</a> of the object referred to in the Subject role. (Section 1.1)
+    a <a>construction</a> consists of <a>elements</a>, each of which describes a role that expresses a particular <a>function</a> in a construction. <i>Example</i>: in the English Predicate Adjective Construction [<sc>Sbj</sc> <i>be</i> <sc>PredAdj</sc>], illustrated by <i>She is intelligent</i>, the label <sc>Sbj</sc> describes a role <a inf:reference>referring</a> to an <a sem:object-concept>object</a>, and <sc>PredAdj</sc> describes a role occurring after <i>be</i> that <a>predicates</a> a <a>property</a> of the object referred to in the Subject role. (Section 1.1)
 
 - Id: sem:s-role
   Type: sem
@@ -9181,7 +9183,7 @@
   ExpressionOf:
     - cxn:concessive-conditional-construction
   Definition: >-
-    a strategy for expressing a <a>concessive conditional construction</a> where the <a cxn:protasis>protasis</a>, which specifies the set of conditions for the concessive conditional, invokes the most informative or <dq>strongest</dq> condition in the <a>scalar model</a>; the <a cxn:apodosis>apodosis</a> expresses the unexpected opposite of the expected causal relation between the most extreme condition and the outcome, and so implies the same outcome under the less extreme conditions. <i>Example</i>: <i>Even if you drink (only) a little, your boss will fire you</i> uses the scalar concessive conditional strategy: drinking only a little is the least likely condition (in the scalar model of drinking to various degrees) to lead to your boss firing you, and yet it will lead to your boss firing you. (Section 17.3.3)
+    a strategy for expressing a <a>concessive conditional construction</a> where the <a cxn:protasis-clause>protasis</a>, which specifies the set of conditions for the concessive conditional, invokes the most informative or <dq>strongest</dq> condition in the <a>scalar model</a>; the <a cxn:apodosis-clause>apodosis</a> expresses the unexpected opposite of the expected causal relation between the most extreme condition and the outcome, and so implies the same outcome under the less extreme conditions. <i>Example</i>: <i>Even if you drink (only) a little, your boss will fire you</i> uses the scalar concessive conditional strategy: drinking only a little is the least likely condition (in the scalar model of drinking to various degrees) to lead to your boss firing you, and yet it will lead to your boss firing you. (Section 17.3.3)
   Examples:
     - <e>Even if you drink (only) a little, your boss will fire you</e>
 
@@ -9230,7 +9232,7 @@
   Type: str
   Name: secondary object category
   ConstituentOf:
-    - str:secundative-ditransitive-alignment
+    - str:secundative-alignment
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>secundative alignment system</a> that exclusively expresses the <a>T role</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, <i>uuki</i> <q>man</q> is exclusively expressed by the absence of <a>indexation</a> on the <a>verb</a> form <i>ne-wa-puuzeiyastɨa</i> <q>I showed them</q>. (Section 7.5.2)
   Examples:
@@ -9241,7 +9243,7 @@
         - uuki | man
         - ne-wa-puuzeiyastɨa | I showed them
 
-- Id: str:secundative-ditransitive-alignment
+- Id: str:secundative-alignment
   Type: str
   Name: secundative alignment
   Alias:
@@ -9272,7 +9274,7 @@
     - inf:anchoring
     - inf:typifying
   Definition: >-
-    a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference-referent>refer</a> to. Usually performed by <a>numerals</a> and <a>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
+    a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference>refer</a> to. Usually performed by <a>numerals</a> and <a>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
 
 - Id: def:semantic-classes
   Type: def
@@ -9324,11 +9326,11 @@
     - tracking
     - recognitional
   SubtypeOf:
-    - inf:reference-referent
+    - inf:reference
   ValueOf:
     - inf:accessibility
   AssociatedTo:
-    - cxn:anaphoric-definite-article
+    - cxn:anaphoric-article
   Definition: >-
     a <a>referent</a> whose <u>discourse file</u> has been activated (i.e. it is in short-term memory), but is not at the center of the hearer's consciousness at the current point in the discourse. The term <q>recognitional</q> is used for a referent so peripheral to the hearer's consciousness that the speaker is unsure whether the hearer remembers it. (Section 3.3.1)
 
@@ -9378,7 +9380,7 @@
 
 - Id: str:serial-verb-strategy
   Type: str
-  Name: serial verb
+  Name: serial verb strategy
   Alias:
     - serial verb (strategy)
   SubtypeOf:
@@ -9393,7 +9395,7 @@
       Gloss: Kofi hit Amba kill
       Translation: Kofi killed Amba
 
-- Id: cxn:set-member-construction
+- Id: cxn:set-member-modification-construction
   Type: cxn
   Name: set-member modification construction
   Alias:
@@ -9409,7 +9411,7 @@
   SubtypeOf:
     - cxn:attributive-phrase
   ConstituentOf:
-    - cxn:set-member-construction
+    - cxn:set-member-modification-construction
   Definition: ''
   FromGlossary: false
 
@@ -9498,7 +9500,7 @@
   Type: str
   Name: simple strategy
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   Definition: >-
     a <a>strategy</a> for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), that does not involve the presence of a third morpheme. Simple strategies include <a>juxtaposition</a>, <a>compounding</a>, and <a>affixation</a>. (Section 4.2)
 
@@ -9601,7 +9603,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:passive-inverse-voice-construction
+    - cxn:passive-inverse-voice
   Definition: >-
     a <a>strategy</a> of the <a>passive--inverse voice construction</a> in which the <a>P</a> <a>participant</a> is encoded by a form that is not found for either the <a>A</a> <a>participant</a> or the P participant in the <a>basic voice construction</a>. <i>Example</i>: in Upriver Halkomelem <i>tə́s-l-əm θúƛ'à tə swíyəqə</i> <q>She was bumped into by the man</q>, the P participant (the woman referred to by <q>she</q>) is <a>indexed</a> by the suffix <i>-əm</i>, which is distinct from the expression of A or P participants in the basic voice construction. (Section 8.3)
   Examples:
@@ -9613,7 +9615,7 @@
   Type: str
   Name: specialized dual role strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
     - str:dual-role-strategy
   ExpressionOf:
     - cxn:chaining-construction
@@ -9702,7 +9704,7 @@
   Definition: >-
     the context in which speaking occurs. The speech act situation includes the roles of speaker and hearer; their spatial location; the time of the speech event; the shared knowledge of the speaker and hearer; and the social roles of the speaker and hearer and their social relation to each other. Many linguistic constructions have their <a>meanings</a> defined in whole or part by <a>elements</a> of the speech act situation -- in particular, <a>contextual</a> <a cxn:referent-expression>referring expressions</a>. (Section 3.1.1)
 
-- Id: cxn:speech-acts
+- Id: cxn:speech-act-construction
   Type: cxn
   Name: speech act construction
   Alias:
@@ -10030,7 +10032,7 @@
 
 - Id: cxn:superlative-form
   Type: cxn
-  Name: superlative
+  Name: superlative form
   Alias:
     - superlative (form)
   SubtypeOf:
@@ -10091,7 +10093,7 @@
   Type: str
   Name: syndetic
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:complex-sentence
   Definition: >-
@@ -10138,7 +10140,7 @@
   ExpressionOf:
     - cxn:interrogative-construction
   Definition: >-
-    a strategy for <a cxn:polarity-question>polarity question constructions</a> which consists of a word or phrase added to the <a>clause</a>, functioning to signal that the clause expresses a polarity question. <i>Example</i>: in the Russian polarity question <i>Ty ego slyšal, pravda?</i> [lit. <q>You heard him, true?</q>], <i>pravda</i> <q>true?</q> is the tag. Tags typically make the polarity question into a biased question, unlike a simple interrogative marker. (Section 12.3.2)
+    a strategy for <a cxn:polarity-question-construction>polarity question constructions</a> which consists of a word or phrase added to the <a>clause</a>, functioning to signal that the clause expresses a polarity question. <i>Example</i>: in the Russian polarity question <i>Ty ego slyšal, pravda?</i> [lit. <q>You heard him, true?</q>], <i>pravda</i> <q>true?</q> is the tag. Tags typically make the polarity question into a biased question, unlike a simple interrogative marker. (Section 12.3.2)
   Examples:
     - Language: Russian
       Example: Ty ego slyšal, <e>pravda</e>?
@@ -10224,7 +10226,7 @@
   Type: inf
   Name: theater metaphor
   AttributeOf:
-    - inf:reference-referent
+    - inf:reference
   Definition: >-
     a metaphor used to describe the <a>information status</a> of <a>referents</a> in discourse, especially narrative discourse. The theater metaphor divides referents into three categories: <a>actors</a>, <a>props</a>, and <a>settings</a>. (Section 3.4.1)
 
@@ -10356,7 +10358,7 @@
   SubtypeOf:
     - inf:declarative
   Definition: >-
-    the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a inf:predication>predicated about</a> another concept which is <a inf:reference-referent>referred</a> to (the <a>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
+    the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a inf:predication>predicated about</a> another concept which is <a inf:reference>referred</a> to (the <a>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
   Examples:
     - The bus <e>stopped</e>
 
@@ -10413,7 +10415,7 @@
   Alias:
     - (mono)transitive (construction)
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     the <a>construction</a> used to express the <a>agent</a> (<a>A role</a>) and the <a>patient</a> (<a>P role</a>) of the <a>predicated</a> <a>bivalent</a> breaking <a>event</a> when the agent is more <a>salient</a> than the patient and the breaking event is a single, completed event. <i>Example</i>: <i>Jack broke the window</i> is an instance of the exemplar (the single <dq>most prototypical</dq> example) of the transitive construction. (Sections 6.1.2, <b>6.2.1</b>, <b>7.3.3</b>)
   Examples:
@@ -10445,7 +10447,7 @@
   ExpressionOf:
     - cxn:causative-construction
   ModeledOn:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: >-
     <u>monoclausal</u> <a>strategies</a> for the <a>causative construction</a> in which the <a>causee</a> in the <a>causative event</a> is coded differently depending on the <a>valency</a> of the corresponding <a>base event</a>. <i>Example</i>: in Turkish, the causee in a causative event is encoded in the Accusative Case if the base event is <a>monovalent</a> (<i>Ali Hasan<b>-t</b> öl-dür-dü</i> <q>Ali killed Hasan [<sc>acc</sc>]</q>), and in the Dative Case if the base event is <a>bivalent</a> (<i>Dişçi mektub-u müdür<b>-e</b> imzala-t-tí</i> <q>The dentist got the director [<sc>dat</sc>] to sign the letter</q>). (Section 9.2)
   Examples:
@@ -10503,7 +10505,7 @@
   Alias:
     - trivalent (event)
   SubtypeOf:
-    - sem:valency-valency-class
+    - sem:valency
   AssociatedTo:
     - cxn:ditransitive-construction
   Definition: >-
@@ -10623,7 +10625,7 @@
   ExpressionOf:
     - cxn:concessive-conditional-construction
   Definition: >-
-    a strategy for expressing a <a>concessive conditional construction</a> where the <a cxn:protasis>protasis</a>, which specifies the set of conditions for the concessive conditional, quantifies over all the alternatives possible in the <a>scalar model</a>; the <a cxn:apodosis>apodosis</a> expresses that the outcome is the same under all conditions. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> uses the universal concessive conditional strategy: the protasis quantifies over all amounts of advice that you could give him, and the apodosis asserts that he does exactly what he wants to do under any of those conditions. (Section 17.3.3)
+    a strategy for expressing a <a>concessive conditional construction</a> where the <a cxn:protasis-clause>protasis</a>, which specifies the set of conditions for the concessive conditional, quantifies over all the alternatives possible in the <a>scalar model</a>; the <a cxn:apodosis-clause>apodosis</a> expresses that the outcome is the same under all conditions. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> uses the universal concessive conditional strategy: the protasis quantifies over all amounts of advice that you could give him, and the apodosis asserts that he does exactly what he wants to do under any of those conditions. (Section 17.3.3)
   Examples:
     - <e>However much advice you give him, he does exactly what he wants to do</e>
 
@@ -10670,7 +10672,7 @@
   Definition: >-
     a <a>form</a> used to select a set of countable entities, but not by their precise cardinality. Example: in <i>several ravens, several</i> is a vague numeral. (Section 4.1.3)
 
-- Id: sem:valency-valency-class
+- Id: sem:valency
   Type: sem
   Name: valency, valency class
   AttributeOf:
@@ -10708,7 +10710,7 @@
   Alias:
     - verb-coding
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:relative-clause-construction
   AssociatedTo:
@@ -10773,7 +10775,7 @@
   Type: str
   Name: verbal strategy
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:nonprototypical-predication
   Definition: >-
@@ -10788,7 +10790,7 @@
       Gloss: <sc>1sg</sc>-cry
       Translation: I am crying
 
-- Id: def:verbalization-of-experience
+- Id: def:verbalization
   Type: def
   Name: verbalization
   Alias:
@@ -10868,7 +10870,7 @@
   Type: str
   Name: word order
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:construction
   Definition: >-
@@ -10893,7 +10895,7 @@
   ModeledOn:
     - cxn:positive-question-polarity-response-construction
   Definition: >-
-    an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a cxn:polarity-question>polarity question</a> aligns the polarity of the answer, not the polarity of the speaker's question. <i>Example</i>: in English, the answer to the negative polarity question <i>Do you not have any money?</i> where the addressee does not have any money is <i>No</i>; the polarity of the response matches the polarity of the answer (that the addressee does not have any money). (Section 12.3.3)
+    an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a cxn:polarity-question-construction>polarity question</a> aligns the polarity of the answer, not the polarity of the speaker's question. <i>Example</i>: in English, the answer to the negative polarity question <i>Do you not have any money?</i> where the addressee does not have any money is <i>No</i>; the polarity of the response matches the polarity of the answer (that the addressee does not have any money). (Section 12.3.3)
   Examples:
     - Do you not have any money? - No
 
@@ -10909,7 +10911,7 @@
   ModeledOn:
     - cxn:positive-question-polarity-response-construction
   Definition: >-
-    an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a cxn:polarity-question>polarity question</a> aligns the polarity of the answer when the answer is negative, but uses a special disagreeing form when the answer is positive. <i>Example</i>: in French, when the question is <q>Do you not have any money?</q>, the answer <i>non</i> <q>no</q> indicates that the respondent has no money, but the answer <i>si</i> (different from the positive answer <i>oui</i> <q>yes</q>) indicates that the respondent disagrees with the speaker and indeed does have money. (Section 12.3.3)
+    an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a cxn:polarity-question-construction>polarity question</a> aligns the polarity of the answer when the answer is negative, but uses a special disagreeing form when the answer is positive. <i>Example</i>: in French, when the question is <q>Do you not have any money?</q>, the answer <i>non</i> <q>no</q> indicates that the respondent has no money, but the answer <i>si</i> (different from the positive answer <i>oui</i> <q>yes</q>) indicates that the respondent disagrees with the speaker and indeed does have money. (Section 12.3.3)
   Examples:
     - Do you not have any money?
     - non
@@ -10924,19 +10926,19 @@
     - DNI
     - null anaphora
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:anaphoric-pronoun
   Definition: >-
     the absence of a <a>referring phrase</a> for a <a>referent</a> in a construction. Zero anaphora is frequently used when the referent is <a>active</a>. (Section 3.3.1)
 
-- Id: str:zero-coded-strategy
+- Id: str:zero-coding
   Type: str
-  Name: zero coded
+  Name: zero coding, zero coded
   Alias:
+    - zero coding (strategy)
     - zero coded (strategy)
     - zero code
-    - zero coding
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -10953,7 +10955,7 @@
   Type: str
   Name: zero strategy
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:nonprototypical-predication
   Definition: >-
@@ -10968,7 +10970,7 @@
   Type: str
   Name: zero verb-coded voice strategy
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:argument-structure-construction
   Definition: >-
@@ -11411,7 +11413,7 @@
   Type: sem
   Name: avalent
   SubtypeOf:
-    - sem:valency-valency-class
+    - sem:valency
   Definition: ''
   FromGlossary: false
 
@@ -11467,7 +11469,9 @@
 
 - Id: sem:agentive-experience-event
   Type: sem
-  Name: agentive experience
+  Name: agentive experience event
+  Alias:
+    - agentive experience (event)
   SubtypeOf:
     - sem:event
     - sem:experiential-event
@@ -11478,7 +11482,9 @@
 
 - Id: sem:agentive-ingestion-event
   Type: sem
-  Name: agentive ingestion
+  Name: agentive ingestion event
+  Alias:
+    - agentive ingestion (event)
   SubtypeOf:
     - sem:event
     - sem:experiential-event
@@ -11716,7 +11722,7 @@
   Type: str
   Name: zero article
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:article
   Definition: ''
@@ -11728,7 +11734,7 @@
   Alias:
     - nonnull pronoun
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:anaphoric-pronoun
   Definition: ''
@@ -11738,7 +11744,7 @@
   Type: str
   Name: overt article
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:article
   Definition: ''
@@ -11998,7 +12004,7 @@
   Type: str
   Name: complex predicate ASC strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:argument-structure-construction
   Definition: ''
@@ -12008,7 +12014,7 @@
   Type: cxn
   Name: possessed argument ASC
   SubtypeOf:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: ''
   FromGlossary: false
 
@@ -12064,7 +12070,7 @@
   Type: str
   Name: overtly coded single role strategy
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
     - str:single-role-strategy
   ExpressionOf:
     - cxn:reciprocal-construction
@@ -12095,7 +12101,7 @@
   SubtypeOf:
     - str:alignment-system
   ModeledOn:
-    - cxn:basic-voice-construction
+    - cxn:basic-voice
   Definition: ''
   FromGlossary: false
 
@@ -12103,7 +12109,7 @@
   Type: str
   Name: topic marker
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:topic-comment-construction
   Definition: ''
@@ -12113,7 +12119,7 @@
   Type: str
   Name: thetic marker
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:thetic-construction
   Definition: ''
@@ -12133,7 +12139,7 @@
   Type: str
   Name: declarative marker
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:declarative-construction
   Definition: ''
@@ -12143,7 +12149,7 @@
   Type: str
   Name: question marker
   SubtypeOf:
-    - str:overt-coding-strategy
+    - str:overt-coding
   ExpressionOf:
     - cxn:interrogative-construction
   Definition: ''
@@ -12250,7 +12256,7 @@
   Type: str
   Name: anterior zero
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:subject-identity-construction
     - cxn:object-identity-construction
@@ -12262,7 +12268,7 @@
   Type: str
   Name: posterior zero
   SubtypeOf:
-    - str:zero-coded-strategy
+    - str:zero-coding
   ExpressionOf:
     - cxn:subject-identity-construction
     - cxn:object-identity-construction
@@ -12336,7 +12342,7 @@
   SubtypeOf:
     - str:alignment-system
   ModeledOn:
-    - cxn:speech-acts
+    - cxn:speech-act-construction
   Definition: ''
   FromGlossary: false
 
