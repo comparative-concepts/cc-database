@@ -35,7 +35,7 @@
 - Id: str:a-p-alignment
   Type: str
   Name: A/P alignment
-  Alias: 
+  Alias:
     - A/P (dis)alignment (strategy)
   SubtypeOf:
     - str:alignment-system
@@ -303,7 +303,7 @@
   SubtypeOf:
     - cxn:prototypical-construction
     - cxn:modifier
-  ConstituentOf:
+  HeadOf:
     - cxn:adjectival-phrase
   Definition: >-
     the <a>head</a> of an <a>attributive phrase</a> that denotes a <a>property</a>. <i>Example</i>: the word <i>new</i> in <i>a very new book</i> is an adjective -- it is a property concept that is the head of the attributive phrase <i>very new</i> and <a inf:modification>modifies</a> <i>book</i>. (Sections 2.2.3, 4.1.1)
@@ -1092,6 +1092,8 @@
   SubtypeOf:
     - cxn:referring-phrase
   ConstituentOf:
+    - cxn:clause
+    - cxn:argument-complex-predicate
     - cxn:argument-structure-construction
   Definition: >-
     a <a>referring phrase</a> that <a inf:reference>refers</a> to an <a>argument</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
@@ -1857,6 +1859,8 @@
 - Id: cxn:clause
   Type: cxn
   Name: clause
+  ConstituentOf:
+    - cxn:reference-tracking
   Definition: >-
     a construction that performs the function of <a>predication</a>, including the <a>predicate</a> (which may be a <a>complex predicate</a>) and the <a>referring phrases</a> and other roles dependent on the predication. Example: <i>The birds were singing</i> is an instance of a clausal construction. This is the prototypical function of clauses; there are also <a>nonpredicational clauses</a> that perform different information packaging functions. The prototypical predicational clause is a <a>verbal clause</a>. (Sections 1.3, 2.2.2, 6.1.1)
 
@@ -2173,7 +2177,7 @@
   Name: complement matrix clause
   SubtypeOf:
     - cxn:matrix-clause
-  ConstituentOf:
+  HeadOf:
     - cxn:complement-clause-construction
   Definition: ''
   FromGlossary: false
@@ -2185,7 +2189,7 @@
     - CTP
   SubtypeOf:
     - cxn:predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:complement-matrix-clause
   Definition: >-
     the <a>matrix clause</a> <a>predicate</a> in a <a>complement clause construction</a>. <i>Example</i>: in <i>I told her that I would go</i>, <i>told</i> is the complement-taking predicate. (Section 18.2.1)
@@ -2721,6 +2725,7 @@
     - conjunct
   ConstituentOf:
     - cxn:coordinate-construction
+    - cxn:coordinate-clause-construction
   Definition: >-
     a component of a <a>coordinate construction</a>. <i>Example</i>: in <i>Jerry played the guitar and Billy was on drums, Jerry played the guitar</i> is one of the coordinands and <i>Billy was on drums</i> is the other coordinand. Since coordination constructions link entities other than <a>events</a> and the clause constructions that express them, coordinands may also be other constructions than clauses -- in particular, coordinands are often <a>referring phrases</a>. (Section 15.2.1)
   Examples:
@@ -3112,6 +3117,8 @@
   Name: dependent
   SubtypeOf:
     - cxn:element
+  ConstituentOf:
+    - cxn:complex-construction  
   Definition: >-
     any <a>element</a> of a <a>construction</a> that is not the <a>head</a>. <i>Example</i>: in the phrase <i>an ancient watch</i>, <i>ancient</i> and <i>an</i> are dependents. (Section 2.2.1)
   Examples:
@@ -3618,7 +3625,7 @@
   Type: cxn
   Name: element
   ConstituentOf:
-    - cxn:construction
+    - cxn:complex-construction
   Definition: >-
     a word or <a>construction</a> that is part of -- that is, functions in a <a>role</a> in -- a <a>construction</a>. <i>Example</i>: in <i>an ancient watch</i>, the elements are <i>an</i>, <i>ancient</i>, and <i>watch</i>. (Section 2.2.1)
   Examples:
@@ -4437,6 +4444,7 @@
   Type: cxn
   Name: focus operator
   ConstituentOf:
+    - cxn:focus-element-phrase
     - cxn:identificational-construction
   Definition: >-
     a <a>construction</a> that indicates the range of the <a>focus</a> of an <a>identificational construction</a>. Focus operators may be <a>additive</a> or <a cxn:restrictive-focus-operator>restrictive</a>. (Section 11.4.1)
@@ -4734,7 +4742,7 @@
   SubtypeOf:
     - cxn:element
   ConstituentOf:
-    - cxn:construction
+    - cxn:complex-construction
   Definition: >-
     the most contentful word that most closely denotes the same function as the phrase (or clause) as a whole. <i>Example</i>: the head of the phrase <i>an ancient watch</i> is <i>watch</i>. (Section 2.2.1)
   Examples:
@@ -6306,10 +6314,9 @@
 - Id: cxn:modifier
   Type: cxn
   Name: modifier
-  SubtypeOf:
-    - cxn:head
-  ConstituentOf:
+  HeadOf:
     - cxn:attributive-phrase
+  ConstituentOf:
     - cxn:anaphoric-head-construction
   Definition: >-
     the <a>head</a> of an <a>attributive phrase</a>. <i>Example</i>: in <i>nearly fifty trees</i>, <i>fifty</i> is a modifier. A prototypical modifier, a <a>property concept</a>, is an <a>adjective</a>. (Section 2.2.4)
@@ -6761,9 +6768,8 @@
   SubtypeOf:
     - cxn:referent-expression
     - cxn:prototypical-construction
-  ConstituentOf:
+  HeadOf:
     - cxn:nominal-phrase
-    - cxn:modification-construction
   Definition: >-
     the <a>head</a> of a nominal phrase -- that is, <a>referring phrase</a> -- that denotes an <a sem:object-concept>object</a>. <i>Example</i>: the word <i>violin</i> in the referring phrase <i>an old violin</i> is a noun -- it is an object concept that is the head of the referring phrase. (Sections 2.2.3, 3.1)
   Examples:
@@ -6773,6 +6779,7 @@
   Type: cxn
   Name: noun complement
   ConstituentOf:
+    - cxn:noun-complement-phrase
     - cxn:noun-complement-clause-construction
   Definition: >-
     the <a inf:modification>modifying</a> <a>clause</a> in a <a>noun complement clause construction</a>. <i>Example</i>: in <i>the fact that the student bought the book, that the student bought the book</i> is the noun complement. (Section 19.2.4)
@@ -6877,6 +6884,7 @@
   Name: object argument
   SubtypeOf:
     - inf:core-arguments
+    - inf:nonsubject-argument
   ValueOf:
     - inf:salience
   Definition: >-
@@ -6954,7 +6962,7 @@
   Type: inf
   Name: oblique argument
   SubtypeOf:
-    - inf:argument
+    - inf:nonsubject-argument
   ValueOf:
     - inf:salience
   Definition: >-
@@ -6995,7 +7003,7 @@
 - Id: str:oblique-p-alignment
   Type: str
   Name: oblique P alignment
-  Alias: 
+  Alias:
     - oblique P (dis)alignment (strategy)
   SubtypeOf:
     - str:alignment-system
@@ -7937,9 +7945,13 @@
 - Id: cxn:predicate
   Type: cxn
   Name: predicate
-  SubtypeOf:
-    - cxn:head
+  HeadOf:
+    - cxn:clause
+    - cxn:auxiliary-construction
+    - cxn:support-verb-construction
+    - cxn:topic-comment-construction
   ConstituentOf:
+    - cxn:argument-complex-predicate
     - cxn:argument-structure-construction
   Definition: >-
     the <a>head</a> of a <a>clause</a>, which is not necessarily an <a>action</a>. <i>Example</i>: in <i>The dog is old, (is) old</i> is the predicate. (Section 2.2.4)
@@ -8746,10 +8758,13 @@
 - Id: cxn:referent-expression
   Type: cxn
   Name: referent expression
-  SubtypeOf:
-    - cxn:head
-  ConstituentOf:
+  HeadOf:
     - cxn:referring-phrase
+    - cxn:argument-phrase
+    - cxn:modification-construction
+  ConstituentOf:
+    - cxn:relative-clause-head
+    - cxn:topic-phrase
   Definition: >-
     the <a>head</a> of a <a>referring phrase</a>, which is not necessarily an <a sem:object-concept>object</a>. <i>Example</i>: in <i>Hiking in the desert is wonderful</i>, <i>hiking</i> is a referent expression. (Section 2.2.4)
   Examples:
@@ -8839,6 +8854,7 @@
     - cxn:attributive-phrase
   ConstituentOf:
     - cxn:relative-clause-construction
+    - cxn:relativized-referring-phrase
   Definition: >-
     the <a>dependent clause</a> in a <a>relative clause construction</a>. The relative clause denotes the <a>event</a> that is used to <a inf:modification>modify</a> the <a>relative clause head</a> <a>referent</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is the relative clause. (Section 19.1)
   Examples:
@@ -8859,7 +8875,8 @@
   Name: relative clause head
   SubtypeOf:
     - cxn:referring-phrase
-    - cxn:head
+  HeadOf:
+    - cxn:relativized-referring-phrase
   ConstituentOf:
     - cxn:relative-matrix-clause
   Definition: >-
@@ -8872,7 +8889,7 @@
   Name: relative matrix clause
   SubtypeOf:
     - cxn:matrix-clause
-  ConstituentOf:
+  HeadOf:
     - cxn:relative-clause-construction
   Definition: ''
   FromGlossary: false
@@ -10052,6 +10069,7 @@
     - light verb
   SubtypeOf:
     - cxn:verb
+    - cxn:dynamic-predicate-part
   ConstituentOf:
     - cxn:support-verb-construction
   Definition: >-
@@ -10697,7 +10715,7 @@
   SubtypeOf:
     - cxn:simple-predicate
     - cxn:prototypical-construction
-  ConstituentOf:
+  HeadOf:
     - cxn:verbal-clause
   Definition: >-
     the <a>head</a> of a <a>verbal clause</a> -- that is, a <a>clause</a> that denotes an <a>action</a>. <i>Example</i>: the word <i>jumped</i> in the clause <i>She jumped</i>, is a verb -- it is an action word that is the head of the clause and is predicated of <i>She</i>. (Sections 2.2.3, 6.1.1)
@@ -10886,7 +10904,7 @@
 - Id: str:yes-no-alignment
   Type: str
   Name: yes/no alignment
-  Alias: 
+  Alias:
     - yes/no alignment (strategy)
   SubtypeOf:
     - str:polarity-response-alignment
@@ -12029,7 +12047,7 @@
 - Id: str:experiential-alignment
   Type: str
   Name: experiential alignment
-  Alias: 
+  Alias:
     - experiential (dis)alignment
   SubtypeOf:
     - str:alignment-system
@@ -12096,7 +12114,7 @@
 - Id: str:subject-predicate-alignment
   Type: str
   Name: subject-predicate alignment
-  Alias: 
+  Alias:
     - subject-predicate (dis)alignment
   SubtypeOf:
     - str:alignment-system
@@ -12243,7 +12261,7 @@
 - Id: str:clause-alignment
   Type: str
   Name: clause alignment
-  Alias: 
+  Alias:
     - clause (dis)alignment
   SubtypeOf:
     - str:alignment-system
@@ -12337,7 +12355,7 @@
 - Id: str:utterance-clause-alignment
   Type: str
   Name: utterance clause alignment
-  Alias: 
+  Alias:
     - utterance clause (dis)alignment
   SubtypeOf:
     - str:alignment-system
@@ -12565,5 +12583,290 @@
   Name: species
   SubtypeOf:
     - sem:event
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:complex-predicate-part
+  Type: cxn
+  Name: complex predicate part
+  ConstituentOf:
+    - cxn:complex-predicate
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:dynamic-predicate-part
+  Type: cxn
+  Name: dynamic predicate part
+  SubtypeOf:
+    - cxn:complex-predicate-part
+  ConstituentOf:
+    - cxn:eventive-complex-predicate
+    - cxn:stative-complex-predicate
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:stative-predicate-part
+  Type: cxn
+  Name: stative predicate part
+  SubtypeOf:
+    - cxn:complex-predicate-part
+  ConstituentOf:
+    - cxn:stative-complex-predicate
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:focus-element
+  Type: cxn
+  Name: focus element
+  HeadOf:
+    - cxn:focus-element-phrase
+  ConstituentOf:
+    - cxn:identificational-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:focus-element-phrase
+  Type: cxn
+  Name: focus element phrase
+  Subtype:
+    - cxn:referring-phrase
+  ConstituentOf:
+    - cxn:focus-element-phrase
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:noun-complement-phrase
+  Type: cxn
+  Name: noun complement phrase
+  SubtypeOf:
+    - cxn:referring-phrase
+  ConstituentOf:
+    - cxn:noun-complement-matrix-clause
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:noun-complement-phrase-head
+  Type: cxn
+  Name: noun complement phrase head
+  SubtypeOf:
+    - cxn:referent-expression
+  HeadOf:
+    - cxn:noun-complement-phrase
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:noun-complement-matrix-clause
+  Type: cxn
+  Name: noun complement matrix clause
+  SubtypeOf:
+    - cxn:matrix-clause
+  HeadOf:
+    - cxn:noun-complement-clause-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:presupposed-open-clause
+  Type: cxn
+  Name: presupposed open clause
+  ConstituentOf:
+    - cxn:identificational-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:relativized-referring-phrase
+  Type: cxn
+  Name: relativized referring phrase
+  SubtypeOf:
+    - cxn:referring-phrase
+  ConstituentOf:
+    - cxn:relative-matrix-clause
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:s-phrase
+  Type: cxn
+  Name: S phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:intransitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:transitive-a-phrase
+  Type: cxn
+  Name: transitive A-phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:transitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:p-phrase
+  Type: cxn
+  Name: P-phrase
+  SubtypeOf:
+    - cxn:object-phrase
+  ConstituentOf:
+    - cxn:transitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:ditransitive-a-phrase
+  Type: cxn
+  Name: ditransitive A-phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:ditransitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:t-phrase
+  Type: cxn
+  Name: T-phrase
+  SubtypeOf:
+    - cxn:object-phrase
+  ConstituentOf:
+    - cxn:ditransitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:r-phrase
+  Type: cxn
+  Name: R-phrase
+  SubtypeOf:
+    - cxn:object-phrase
+  ConstituentOf:
+    - cxn:ditransitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:experiencer-phrase
+  Type: cxn
+  Name: experiencer-phrase
+  SubtypeOf:
+    - cxn:core-argument-phrase
+  ConstituentOf:
+    - cxn:experiential-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:stimulus-phrase
+  Type: cxn
+  Name: stimulus-phrase
+  SubtypeOf:
+    - cxn:core-argument-phrase
+  ConstituentOf:
+    - cxn:experiential-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:figure-phrase
+  Type: cxn
+  Name: figure phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:motion-argument-structure-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:ground-phrase
+  Type: cxn
+  Name: ground phrase
+  Definition: ''
+  SubtypeOf:
+    - cxn:argument-phrase
+  ConstituentOf:
+    - cxn:motion-argument-structure-construction
+  FromGlossary: false
+
+- Id: cxn:passive-inverse-a-phrase
+  Type: cxn
+  Name: passive-inverse A phrase
+  SubtypeOf:
+    - cxn:argument-phrase
+  ConstituentOf:
+    - cxn:passive-inverse-voice
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:passive-inverse-p-phrase
+  Type: cxn
+  Name: passive-inverse P phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:passive-inverse-voice
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:antipassive-a-phrase
+  Type: cxn
+  Name: antipassive A phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:antipassive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:antipassive-p-phrase
+  Type: cxn
+  Name: antipassive P phrase
+  SubtypeOf:
+    - cxn:oblique-phrase
+  ConstituentOf:
+    - cxn:antipassive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:causer-phrase
+  Type: cxn
+  Name: causer phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:causative-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:causee-phrase
+  Type: cxn
+  Name: causee phrase
+  SubtypeOf:
+    - cxn:argument-phrase
+  ConstituentOf:
+    - cxn:causative-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:applicative-subject-phrase
+  Type: cxn
+  Name: applicative subject phrase
+  SubtypeOf:
+    - cxn:subject-phrase
+  ConstituentOf:
+    - cxn:applicative-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:applicative-object-phrase
+  Type: cxn
+  Name: applicative object phrase
+  SubtypeOf:
+    - cxn:object-phrase
+  ConstituentOf:
+    - cxn:applicative-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:nonsubject-argument
+  Type: inf
+  Name: nonsubject argument
+  SubtypeOf:
+    - inf:argument
   Definition: ''
   FromGlossary: false

@@ -190,26 +190,32 @@ class CCDB:
                     '</td></tr>')
 
 
-    def print_hierarchy(self, item: GlossItem, relation_type: Relation, name: str):
+    def print_hierarchy(self, item: GlossItem, relation_types: list[Relation], name: str):
         id = item.Id
-        parents = item.Relations.get(relation_type)
-        children = [chid for chid, child in self.glosses.items() 
-                    if id in child.Relations.get(relation_type, ())]
+        parents = [(parent, rel) for rel in relation_types for parent in item.Relations.get(rel, ())]
+        children = [
+            (chid, rel)
+            for rel in relation_types
+            for chid, child in self.glosses.items()
+            if id in child.Relations.get(rel, ())
+        ]
         if parents or children:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation"> <table>')
             print(f'<table>')
             if parents:
                 print('<tr><td class="flex">')
-                for parent in parents:
-                    print(f'<span>{self.convert_link_to_html(parent)}</span>')
+                for parent, rel in parents:
+                    pre_text = '<i>(head)</i>' if rel == Relation.HeadOf else ''
+                    print(f'<span>{pre_text} {self.convert_link_to_html(parent)}</span>')
                 print('</td></tr>')
             print('<tr><td>')
             print(self.convert_link_to_html(id, selfid=id))
             print('</td></tr>')
             if children:
                 print('<tr><td class="flex">')
-                for child in children:
-                    print(f'<span>{self.convert_link_to_html(child)}</span>')
+                for child, rel in children:
+                    pre_text = '<i>(head)</i>' if rel == Relation.HeadOf else ''
+                    print(f'<span>{pre_text} {self.convert_link_to_html(child)}</span>')
                 print('</td></tr>')
             print('</table></td></tr>')
 
@@ -289,8 +295,8 @@ class CCDB:
             self.print_relation_list(relations.get(Relation.FillerOf), "Filler of")
             self.print_relation_list(relations.get(Relation.AssociatedTo), "Associated")
 
-            self.print_hierarchy(item, Relation.SubtypeOf, 'Taxonomy')
-            self.print_hierarchy(item, Relation.ConstituentOf, 'Partonomy')
+            self.print_hierarchy(item, [Relation.SubtypeOf], 'Taxonomy')
+            self.print_hierarchy(item, [Relation.HeadOf, Relation.ConstituentOf], 'Partonomy')
 
             if id in self.definitions:
                 print(f'<tr><th>Definition</th> <td class="ccinfo definition">' +

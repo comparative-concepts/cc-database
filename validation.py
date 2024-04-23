@@ -29,6 +29,7 @@ class Relation(str, Enum):
     ValueOf = 'ValueOf'
     RoleOf = 'RoleOf'
     FillerOf = 'FillerOf'
+    HeadOf = 'HeadOf'
     AssociatedTo = 'AssociatedTo'
 
 
@@ -77,6 +78,7 @@ RELATION_CCTYPES = {
     Relation.ValueOf:       {CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.RoleOf:        {CCType.sem:CCType.sem},
     Relation.FillerOf:      {CCType.sem:CCType.sem},
+    Relation.HeadOf:        {CCType.cxn:CCType.cxn}
 }
 
 RELATION_KEYS = tuple(RELATION_CCTYPES.keys())
