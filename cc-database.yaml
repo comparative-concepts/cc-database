@@ -83,7 +83,7 @@
   ConstituentOf:
     - str:ergative-alignment
   Definition: >-
-    the category in the <a>ergative alignment strategy</a> that <a>co-expresses</a> both <a>S</a> and <a>P roles</a>. <i>Example</i>: Yuwaalaraay <a>argument phrases</a> use the same <a str:zero-strategy>zero</a> <a>flag</a> to express the S and P roles, and hence this is an absolutive flag. (Section 6.3.1)
+    the category in the <a>ergative alignment strategy</a> that <a>co-expresses</a> both <a>S</a> and <a>P roles</a>. <i>Example</i>: Yuwaalaraay <a>argument phrases</a> use the same <a str:zero-coding>zero</a> <a>flag</a> to express the S and P roles, and hence this is an absolutive flag. (Section 6.3.1)
 
 - Id: inf:accessibility
   Type: inf
@@ -301,8 +301,8 @@
   Type: cxn
   Name: adjective
   SubtypeOf:
-    - cxn:prototypical-construction
     - cxn:modifier
+    - cxn:prototypical-construction
   HeadOf:
     - cxn:adjectival-phrase
   Definition: >-
@@ -550,7 +550,7 @@
     - str:simple-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which one <a>element</a> is an affix on the other. <i>Example</i>: in Somali <i>səʔli-hom</i> [photograph-his], <i>-hom</i> is typically analyzed as an affix expressing the <a>possessor</a>. (Section 4.2)
   Examples:
@@ -938,13 +938,13 @@
       Example: <e>inun-nik tuqut-si-vuq</e>
       Translation: He killed people
 
-- Id: cxn:antonyms
-  Type: cxn
-  Name: antonyms
+- Id: sem:antonym
+  Type: sem
+  Name: antonym
   SubtypeOf:
-    - cxn:adjective
+    - sem:property-concept
   Definition: >-
-    forms that indicate opposing values on a gradient scale. <i>Example</i>: <i>tall</i> and <i>short</i> are antonyms on the gradient scale of height. (Section 4.1.2)
+    opposing values on a gradient scale. <i>Example</i>: <i>tall</i> and <i>short</i> are antonyms on the gradient scale of height. (Section 4.1.2)
   Examples:
     - tall
     - short
@@ -1030,7 +1030,7 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a <a>strategy</a> for <a sem:object-concept>object</a> <a>reference</a> in which two or more separate <a>referring phrases</a> juxtaposed to each other refer to the same <a>referent</a>. <i>Example</i>: in <i>my brother, the geophysicist</i>, two separate referring phrases, <i>my brother</i> and <i>the geophysicist</i>, are juxtaposed and refer to the same individual. (Section 5.4)
   Examples:
@@ -1066,10 +1066,9 @@
     - inf:topic-comment
     - inf:major-propositional-act
   AssociatedTo:
-    - cxn:argument-phrase
     - inf:reference
   Definition: >-
-    a <a>referent</a> of which something is being <a>predicated</a>. <i>Example</i>: in <i>Masha is nice</i>, being nice is being predicated of the referent Masha, and hence the referent Masha is an argument. Most referents are also arguments, but it is possible for a referent to <dq>stand alone</dq> in discourse, particularly in spoken discourse, independent of any predication. Arguments are divided into <a>core arguments</a> (<a>subject</a> and <a inf:object-argument>object</a>) and <a sem:peripheral-participant>peripheral arguments</a>. (Sections 2.1, 6.1.1)
+    a <a>referent</a> of which something is being <a>predicated</a>. <i>Example</i>: in <i>Masha is nice</i>, being nice is being predicated of the referent Masha, and hence the referent Masha is an argument. Most referents are also arguments, but it is possible for a referent to <dq>stand alone</dq> in discourse, particularly in spoken discourse, independent of any predication. Arguments are divided into <a>core arguments</a> (<a>subject</a> and <a inf:object-argument>object</a>) and <a inf:oblique-argument>oblique arguments</a>. (Sections 2.1, 6.1.1)
   Examples:
     - <e>Masha</e> is nice
 
@@ -1093,27 +1092,10 @@
     - cxn:referring-phrase
   ConstituentOf:
     - cxn:clause
-    - cxn:argument-complex-predicate
-    - cxn:argument-structure-construction
   Definition: >-
     a <a>referring phrase</a> that <a inf:reference>refers</a> to an <a>argument</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
   Examples:
     - <e>The tree</e> fell
-
-- Id: cxn:argument-structure-construction
-  Type: cxn
-  Name: argument structure construction
-  Alias:
-    - ASC
-    - voice construction
-  SubtypeOf:
-    - cxn:topic-comment-construction
-  Definition: >-
-    a <a>clause construction</a> that consists of the <a>predicate</a> and the <a>argument phrases</a> that are <a>dependent</a> on that predicate. <i>Example</i>: the clause <i>The engineers placed sandbags on the levee</i> is an instance of an English argument structure construction made up of the predicate (<i>placed</i>) and the combination of three argument phrases, the Subject (<i>the engineers</i>) plus the Object (<i>sandbags</i>) plus the Oblique (<i>on the levee</i>). The <a>function</a> of the argument structure construction is its <a>semantics</a> -- the <a>participant roles</a> that the <a>referents</a> of the argument phrases are playing in the event -- combined with its <a>information packaging</a> -- the relative <a>salience</a> implied by the Subject -- Object -- Oblique ranking of argument phrases. (Sections 2.2.4, 6.1.1)
-  Examples:
-    - The engineers placed sandbags on the levee
-    - The grizzlies ate the salmon
-    - The salmon were eaten by the grizzlies
 
 - Id: sem:arrival
   Type: sem
@@ -1247,6 +1229,8 @@
 - Id: cxn:auxiliary
   Type: cxn
   Name: auxiliary
+  SubtypeOf:
+    - cxn:complex-predicate-part
   ConstituentOf:
     - cxn:auxiliary-construction
   Definition: >-
@@ -1316,7 +1300,7 @@
     - active voice construction
     - direct voice construction
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
     - cxn:prototypical-construction
   Definition: >-
     an <a>argument structure construction</a> that conforms to the prototypical parallel ranking of <a>participant role</a> and <a>argument</a> <a>salience</a>. <i>Example</i>: <i>I ate the smoked salmon</i> is an instance of a basic voice construction -- semantically, I act upon the salmon, and I am more <a>salient</a> than the salmon in the discourse. Basic voice constructions are also called <q>active</q> or <q>direct</q> constructions. (Sections 6.1.1, <b>8.1</b>)
@@ -1329,7 +1313,7 @@
   SubtypeOf:
     - str:word-order
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a <a>strategy</a> for expressing the categories of <a>subject</a> (S), <a>verb</a> (V), and <a inf:object-argument>object</a> (O) in a <a>transitive construction</a>, and <a>subject</a> in an <a>intransitive construction</a>. Some linguists use <a>A</a> and <a>P</a> instead of S and O, respectively, in describing the basic word order of transitive constructions. Basic word order is distinguished from nonbasic word orders in terms of <a>information packaging</a> (basic word order represents <a inf:topic-comment>topic--comment</a> information packaging); less <a>structural coding</a>; and higher <a>token frequency</a>. <i>Example</i>: the basic word order of English is SVO, as in <i>Jerry saw the bluebird on Sunday</i>. Some linguists analyze basic word order in terms of the pair of binary orders subject--verb and object--verb. Sometimes the order of oblique phrases is included; if so, the oblique phrase is abbreviated X; English is SVOX. (Section 6.2.2)
   Examples:
@@ -1542,7 +1526,7 @@
   Name: cardinal numeral term
   SubtypeOf:
     - cxn:modifier
-  ConstituentOf:
+  HeadOf:
     - cxn:numeral-attributive-phrase
   Definition: >-
     a form that expresses the number (cardinality) of a set of <a>individuals</a> of the <a>type</a>. <i>Examples</i>: in <i>one tree, two boys, three books</i>, <i>one/two/three</i> are cardinal numerals. (Section 4.1.3)
@@ -1572,7 +1556,7 @@
     - str:flagging
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a <a>flag</a> which occurs as an affix. <i>Example</i>: in Russian <i>kniga Ivan-a</i> <q>John's book</q>, <i>-a</i> is a Genitive case marking suffixed to <i>Ivan</i> <q>John</q>. (Section 4.3)
   Examples:
@@ -1830,7 +1814,7 @@
     - str:adposition
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     an <a>adposition</a> which occurs as two morphemes, one before and one after the <a>modifier</a> or <a>argument</a> <a>head</a>. <i>Example</i>: in Pashto <i>ter maktaba poori</i> <q>as far as the school</q>, the <a>meaning</a> <q>as far as</q> is expressed by the combination of <i>ter</i> preceding <i>maktaba</i> <q>school</q> and <i>poori</i> following it. (Section 4.3)
   Examples:
@@ -1847,7 +1831,7 @@
     - str:indexation
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     an <a>indexical strategy</a> in which a <a>modifier</a>, or sometimes a <a>predicate</a>, is combined with a morpheme that indicates a set of contrasting <a>semantic classes</a> that denote a <a>referent</a> which may also be denoted by an accompanying <a>referring phrase</a>. <i>Example</i>: in Chrau <i>du tong aq</i> <q>one crossbow</q>, <i>tong</i> is a classifier for long objects that refers to the crossbow (<i>aq</i>) and combined with the modifier <i>du</i> <q>one</q>. (Section 4.4.3)
   Examples:
@@ -1859,10 +1843,20 @@
 - Id: cxn:clause
   Type: cxn
   Name: clause
-  ConstituentOf:
-    - cxn:reference-tracking
+  Alias:
+    - ASC
+    - argument structure construction
+    - voice construction
+  SubtypeOf:
+    - cxn:topic-comment-construction
   Definition: >-
     a construction that performs the function of <a>predication</a>, including the <a>predicate</a> (which may be a <a>complex predicate</a>) and the <a>referring phrases</a> and other roles dependent on the predication. Example: <i>The birds were singing</i> is an instance of a clausal construction. This is the prototypical function of clauses; there are also <a>nonpredicational clauses</a> that perform different information packaging functions. The prototypical predicational clause is a <a>verbal clause</a>. (Sections 1.3, 2.2.2, 6.1.1)
+    <br />
+    a <a>clause construction</a> that consists of the <a>predicate</a> and the <a>argument phrases</a> that are <a>dependent</a> on that predicate. <i>Example</i>: the clause <i>The engineers placed sandbags on the levee</i> is an instance of an English argument structure construction made up of the predicate (<i>placed</i>) and the combination of three argument phrases, the Subject (<i>the engineers</i>) plus the Object (<i>sandbags</i>) plus the Oblique (<i>on the levee</i>). The <a>function</a> of the argument structure construction is its <a>semantics</a> -- the <a>participant roles</a> that the <a>referents</a> of the argument phrases are playing in the event -- combined with its <a>information packaging</a> -- the relative <a>salience</a> implied by the Subject -- Object -- Oblique ranking of argument phrases. (Sections 2.2.4, 6.1.1)
+  Examples:
+    - The engineers placed sandbags on the levee
+    - The grizzlies ate the salmon
+    - The salmon were eaten by the grizzlies
 
 - Id: str:cleft-strategy
   Type: str
@@ -2099,15 +2093,13 @@
   Examples:
     - <e><e sem:comparee>The tree</e> is taller than <e sem:standard>the house</e></e>
 
-- Id: cxn:comparative-form
-  Type: cxn
-  Name: comparative form
+- Id: sem:comparative-degree
+  Type: sem
+  Name: comparative degree
   SubtypeOf:
-    - cxn:admodifier
-  AssociatedTo:
-    - cxn:comparative-construction
+    - sem:degree
   Definition: >-
-    indicates a higher value on a <a>property</a> scale than the comparable value for another object. <i>Example</i>: in <i>more intelligent</i>, <i>more</i> indicates a value higher on the intelligence scale than the comparable value for the person to whom the current referent is being compared. (Section 4.1.2)
+    a higher value on a <a>property</a> scale than the comparable value for another object. <i>Example</i>: in <i>more intelligent</i>, <i>more</i> indicates a value higher on the intelligence scale than the comparable value for the person to whom the current referent is being compared. (Section 4.1.2)
   Examples:
     - <e>more</e> intelligent
 
@@ -2196,13 +2188,13 @@
   Examples:
     - I <e>told</e> her that I would go
 
-- Id: cxn:complementary
-  Type: cxn
+- Id: sem:complementary
+  Type: sem
   Name: complementary
   SubtypeOf:
-    - cxn:adjective
+    - sem:property-concept
   Definition: >-
-    forms that indicate opposing values on a scale where there is no gradience, only categorical values (either the object has the value or it doesn't). <i>Example</i>: <i>alive/dead</i> are complementaries in that one is either alive or not. (Section 4.1.2)
+    opposing values on a scale where there is no gradience, only categorical values (either the object has the value or it doesn't). <i>Example</i>: <i>alive/dead</i> are complementaries in that one is either alive or not. (Section 4.1.2)
   Examples:
     - alive
     - dead
@@ -2325,7 +2317,7 @@
     - str:simple-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which the two <a>elements</a> are combined in a single word. <i>Example</i>: in <i>doorknob</i>, <i>door</i> and <i>knob</i> form an instance of compounding. The term <q>compounding</q> or <q>compound</q> is also used for the <a>typifying construction</a> and the <a>binominal lexeme construction</a>. (Section 4.2)
   Examples:
@@ -2830,8 +2822,6 @@
   Name: core argument phrase
   SubtypeOf:
     - cxn:argument-phrase
-  ConstituentOf:
-    - cxn:argument-structure-construction
   Definition: >-
     the <a>subject</a> and <a>object phrases</a> in a clause, generally considered to <a inf:reference>refer</a> to the more <a>central participants</a> in an <a>event</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, <i>Sally</i> and <i>the letter</i> are the core argument phrases; in <i>The letter was thrown into the wastebasket</i>, only <i>the letter</i> is a core argument phrase. (Section 6.1.1)
   Examples:
@@ -2933,6 +2923,7 @@
   Name: declarative construction
   SubtypeOf:
     - cxn:speech-act-construction
+    - cxn:prototypical-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:declarative>declarative</a> speech act. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. The declarative is the most common speech act construction, and is considered the default speech act construction. (Section 12.1)
   Examples:
@@ -2988,8 +2979,6 @@
   Name: degree
   AttributeOf:
     - sem:property-concept
-  AssociatedTo:
-    - str:degree-marker
   Definition: >-
     for scalar concepts, a value on the scale that may be expressed by a distinct word. <i>Example</i>: in <i>very long</i>, the <a>admodifier</a> <i>very</i> indicates that the value on the scale of length is beyond the normal value implicit in the word <i>long</i>. (Section 2.2.2)
   Examples:
@@ -3035,7 +3024,7 @@
     - cxn:admodifier
     - cxn:comparative-construction
   Definition: >-
-    a free morpheme or affix that expresses the relative degree of the gradable predicative scale applied to the comparee, in comparative and equative constructions. <i>Example</i>: in <i>taller</i>, the suffix <i>-er</i> is a degree marker. In addition to comparative and equative degree markers, some languages have a distinct <a>superlative</a> degree marker, such as <i>-est</i> in English <i>tallest</i>. (Section 17.2.2)
+    a free morpheme or affix that expresses the relative degree of the gradable predicative scale applied to the comparee, in comparative and equative constructions. <i>Example</i>: in <i>taller</i>, the suffix <i>-er</i> is a degree marker. In addition to comparative and equative degree markers, some languages have a distinct <a sem:superlative-degree>superlative</a> degree marker, such as <i>-est</i> in English <i>tallest</i>. (Section 17.2.2)
   Examples:
     - tall<e>-er</e>
     - tall<e>-est</e>
@@ -3547,19 +3536,19 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   AssociatedTo:
     - cxn:pronoun
   Definition: >-
     expression of a <a>referent</a> twice in a <a>clause</a>, by a <a>referring phrase</a> and simultaneously by an <a>index</a>. (Section 3.3.3)
 
-- Id: cxn:downtoner
-  Type: cxn
+- Id: sem:downtoner
+  Type: sem
   Name: downtoner
   SubtypeOf:
-    - cxn:admodifier
+    - sem:degree
   Definition: >-
-    indicates a lower than normal value on a <a>property</a> scale. <i>Example</i>: in <i>somewhat long, somewhat</i> indicates a value shorter than is normal for length. (Section 4.1.2)
+    a lower than normal value on a <a>property</a> scale. <i>Example</i>: in <i>somewhat long, somewhat</i> indicates a value shorter than is normal for length. (Section 4.1.2)
   Examples:
     - <e>somewhat</e> long
 
@@ -3624,8 +3613,6 @@
 - Id: cxn:element
   Type: cxn
   Name: element
-  ConstituentOf:
-    - cxn:complex-construction
   Definition: >-
     a word or <a>construction</a> that is part of -- that is, functions in a <a>role</a> in -- a <a>construction</a>. <i>Example</i>: in <i>an ancient watch</i>, the elements are <i>an</i>, <i>ancient</i>, and <i>watch</i>. (Section 2.2.1)
   Examples:
@@ -4407,7 +4394,7 @@
     - str:relational-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts, where the dependent concept (<a>modifier</a> in a <a>modification construction</a>, <a>argument</a> in a <a>clause</a>) is an <a>object concept</a>. Flags subsume <a>adpositions</a> and <a>case affixes</a>. <i>Examples</i>: in <i>the plate on the table, on</i> is a flag, and in <i>I dug the hole with a shovel, with</i> is a flag; both are adpositions. (Sections 4.3, 6.2.2)
   Examples:
@@ -4444,8 +4431,7 @@
   Type: cxn
   Name: focus operator
   ConstituentOf:
-    - cxn:focus-element-phrase
-    - cxn:identificational-construction
+    - cxn:focus-element
   Definition: >-
     a <a>construction</a> that indicates the range of the <a>focus</a> of an <a>identificational construction</a>. Focus operators may be <a>additive</a> or <a cxn:restrictive-focus-operator>restrictive</a>. (Section 11.4.1)
 
@@ -4538,7 +4524,7 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
     - cxn:existential-negation-construction
     - cxn:prohibitive-construction
   Definition: >-
@@ -4714,6 +4700,8 @@
   Name: hanging topic phrase
   SubtypeOf:
     - cxn:topic-phrase
+  ConstituentOf:
+    - cxn:hanging-topic-construction
   Definition: >-
     a phrase that expresses a <a>topic</a> that is not a <a>participant</a> in the <a>predicated</a> <a>event</a>. <i>Example</i>: in Mandarin Chinese <i>xiàng bizi cháng</i> [elephant nose long] <q>Elephant's noses are long / Elephants have long noses</q>, <i>xiàng</i> <q>elephant</q> is a topic but not a participant in the predicated event <i>cháng</i> <q>be long</q>. Hanging topics may use a <a>detached topic phrase</a> strategy. (Section 11.2.3)
   Examples:
@@ -4741,7 +4729,7 @@
   Name: head
   SubtypeOf:
     - cxn:element
-  ConstituentOf:
+  HeadOf:
     - cxn:complex-construction
   Definition: >-
     the most contentful word that most closely denotes the same function as the phrase (or clause) as a whole. <i>Example</i>: the head of the phrase <i>an ancient watch</i> is <i>watch</i>. (Section 2.2.1)
@@ -5171,7 +5159,7 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   AssociatedTo:
     - str:discourse-reference-system
   Definition: >-
@@ -5418,13 +5406,13 @@
   Examples:
     - No smok<e>-ing</e>
 
-- Id: cxn:intensifier
-  Type: cxn
+- Id: sem:intensifier
+  Type: sem
   Name: intensifier
   SubtypeOf:
-    - cxn:admodifier
+    - sem:degree
   Definition: >-
-    a construction that indicates a higher than normal value on a <a>property</a> scale. <i>Example</i>: in <i>very long, very</i> indicates a value longer than normal. (Section 4.1.2)
+    a higher than normal value on a <a>property</a> scale. <i>Example</i>: in <i>very long, very</i> indicates a value longer than normal. (Section 4.1.2)
   Examples:
     - <e>very</e> long
 
@@ -5647,7 +5635,7 @@
     - str:simple-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which the two <a>elements</a> are simply syntactically juxtaposed without any additional morpheme expressing the propositional act relation. <i>Example</i>: in <i>red ball</i>, the adjective <i>red</i> is simply juxtaposed to the noun <i>ball</i> to indicate that the referent of <i>ball</i> is modified by the property denoted by <i>red</i>. (Section 4.2)
   Examples:
@@ -5798,7 +5786,7 @@
     - str:overt-coding
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a more highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is an invariant third morpheme that signals the relationship between two <a>elements</a>. <i>Example</i>: in English <i>Jerry's bicycle</i>, the invariant genitive form <i>-'s</i> is a linker. (Section 4.5)
   Examples:
@@ -6139,20 +6127,18 @@
   Name: measure term
   SubtypeOf:
     - cxn:mensural-term
-  AssociatedTo:
-    - cxn:measurement
   Definition: >-
     a <a>mensural term</a> that selects a measured amount of an uncountable <a>referent</a>. <i>Example</i>: in <i>six gallons of wine, gallon(s)</i> is a measure term. (Section 4.1.3)
   Examples:
     - six <e>gallons</e> of wine
 
-- Id: cxn:measurement
-  Type: cxn
+- Id: sem:measurement
+  Type: sem
   Name: measurement
   SubtypeOf:
-    - cxn:admodifier
+    - sem:degree
   Definition: >-
-    indicates a calibratable value on a <a>property</a> scale. <i>Example</i>: in <i>three feet long, three feet</i> measures the value of length for the object in question. (Section 4.1.2)
+    a calibratable value on a <a>property</a> scale. <i>Example</i>: in <i>three feet long, three feet</i> measures the value of length for the object in question. (Section 4.1.2)
   Examples:
     - <e>three feet</e> long
 
@@ -6201,7 +6187,7 @@
   Name: mensural term
   SubtypeOf:
     - cxn:modifier
-  ConstituentOf:
+  HeadOf:
     - cxn:mensural-attributive-phrase
   Definition: >-
     a term that measures out a quantity or unit of a referent. Mensural terms are classified in different ways; this textbook divides measure terms into <a>measure terms</a>, <a>container terms</a>, <a>form terms</a>, <a>group terms</a>, <a>piece terms</a>, and <a>species terms</a>. (Section 4.1.3)
@@ -6626,7 +6612,7 @@
   Type: cxn
   Name: nonbasic voice construction
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
     - cxn:nonprototypical-construction
   Definition: >-
     an <a>argument structure construction</a> that does not conform to the prototypical parallel ranking of <a>participant role</a> and <a>argument</a> <a>salience</a>. <i>Example</i>: <i>The salmon were eaten by grizzlies</i> is an instance of a nonbasic voice construction. Nonbasic voice constructions include the <a>passive--inverse voice construction</a>, the <a>antipassive construction</a>, the <a>causative construction</a>, and the <a>applicative construction</a>. (Section 8.1)
@@ -6647,7 +6633,7 @@
     - str:indexation
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     an <a>indexical strategy</a> in which certain categories, typically <a>number</a> and <a>gender--class</a>, but not the category of <a>person</a>, are encoded in the <a>index</a>. <i>Example</i>: in Russian <i>molod-aja sosna</i> <q>young pine</q>, the suffix <i>-aja</i> on <i>molod-</i> <q>young</q> indexes its <a>referent</a>, also referred to by <i>sosna</i> <q>pine</q>, by <a>number</a> and <a>gender--class</a> (Feminine Singular), and <a>case</a> (Nominative). (Section 4.4.2)
   Examples:
@@ -6685,7 +6671,7 @@
   Alias:
     - nonverbal predication
   SubtypeOf:
-    - cxn:topic-comment-construction
+    - cxn:clause
     - cxn:nonprototypical-construction
   Definition: >-
     the <a>predication</a> of concepts other than <a>action</a> concepts. The types of nonprototypical predication most commonly described include predication of <a>object concepts</a>, <a>property concepts</a>, <a>location</a>, and <a>possession</a>. <i>Example</i>: <i>Frieda is an engineer</i>, an instance of object predication, is an example of nonprototypical predication. (Section 10.1.1)
@@ -6942,6 +6928,7 @@
     - object (argument) phrase
   SubtypeOf:
     - cxn:core-argument-phrase
+    - cxn:nonsubject-argument-phrase
   Definition: >-
     the <a>argument phrase</a> expressing the second most <a>salient</a> <a>core argument</a> in a <a>transitive construction</a>. <i>Example</i>: in <i>Emily read the paper, the paper</i> is the object. (Sections 6.1.1, <b>6.3.2</b>)
   Examples:
@@ -6993,8 +6980,7 @@
     - oblique (argument) phrase
   SubtypeOf:
     - cxn:argument-phrase
-  ConstituentOf:
-    - cxn:argument-structure-construction
+    - cxn:nonsubject-argument-phrase
   Definition: >-
     the <a>argument phrase</a> expressing the (less salient) arguments expressing <a>peripheral participants</a> in an <a>argument structure construction</a>. <i>Example</i>: in <i>Emily viewed the hawk with binoculars, with binoculars</i> is an oblique argument phrase. (Sections 6.1.1, 6.3.2)
   Examples:
@@ -7108,7 +7094,7 @@
   SubtypeOf:
     - str:overt-coding
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a <a>strategy</a> with any of the different kinds of <a>voice constructions</a> in which there is <a>overt coding</a> of the <a>function</a> of the voice construction on the <a>verb</a>. <i>Example</i>: Hungarian <i>János <b>be</b>-ültette a kerte-t fák-kal</i> <q>John planted the garden with trees</q> is an applicative construction with the overt applicative prefix <i>be-</i> on the verb <i>ültette</i> <q>planted</q>. (Section 9.4)
   Examples:
@@ -7265,7 +7251,7 @@
   ExpressionOf:
     - cxn:comparative-construction
   Definition: >-
-    a <a>derived-case</a> <a>comparative</a> <a>strategy</a> that consists of two <a>clauses</a> which assert that the <a>gradable predicative scale</a> applies to the <a>comparee</a> and the <a>standard</a>, but the second clause uses the <a>zero strategy</a> for <a cxn:predicate-identity-construction>predicate identity</a>, and the <a>conjunction</a> is a particle with diverse etymological origins. <i>Example</i>: <i>Randy is older than Tom (is)</i> is an instance of the particle strategy: the clause <i>Randy is older</i> is followed by the particle <i>than</i> which introduces the standard phrase <i>Tom</i> without its own <a>predicate</a> (only an optional auxiliary <i>is</i>). (Section 17.2.2)
+    a <a>derived-case</a> <a>comparative</a> <a>strategy</a> that consists of two <a>clauses</a> which assert that the <a>gradable predicative scale</a> applies to the <a>comparee</a> and the <a>standard</a>, but the second clause uses the <a str:zero-copula>zero copula strategy</a> for <a cxn:predicate-identity-construction>predicate identity</a>, and the <a>conjunction</a> is a particle with diverse etymological origins. <i>Example</i>: <i>Randy is older than Tom (is)</i> is an instance of the particle strategy: the clause <i>Randy is older</i> is followed by the particle <i>than</i> which introduces the standard phrase <i>Tom</i> without its own <a>predicate</a> (only an optional auxiliary <i>is</i>). (Section 17.2.2)
   Examples:
     - <e>Randy is older than Tom (is)</e>
 
@@ -7278,7 +7264,7 @@
   ExpressionOf:
     - cxn:equative-construction
   Definition: >-
-    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>matrix clause</a> which expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a <a>dependent clause</a> expressing that the same scale applies to the <a>standard</a>. The dependent clause is in the form of a particle acting as a <a>conjunction</a>, and the <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a cxn:predicate-identity-construction>predicate identity</a>. <i>Example</i>: Chechen <i>aħa döšu as sanna</i> <q>You read like I [do]</q> is an instance of the particle equative strategy: the matrix clause <i>aħa döšu</i> <q>You read</q> predicates the scale of the comparee; the particle <i>sanna</i> <q>like</q> introduces the standand <i>as</i> <q>I</q>, which is in the same <a>case</a> as the comparee (the Ergative). (Section 17.2.4)
+    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>matrix clause</a> which expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a <a>dependent clause</a> expressing that the same scale applies to the <a>standard</a>. The dependent clause is in the form of a particle acting as a <a>conjunction</a>, and the <a>argument phrase</a> expressing the standard; the <a str:zero-copula>zero copula strategy</a> is used for <a cxn:predicate-identity-construction>predicate identity</a>. <i>Example</i>: Chechen <i>aħa döšu as sanna</i> <q>You read like I [do]</q> is an instance of the particle equative strategy: the matrix clause <i>aħa döšu</i> <q>You read</q> predicates the scale of the comparee; the particle <i>sanna</i> <q>like</q> introduces the standand <i>as</i> <q>I</q>, which is in the same <a>case</a> as the comparee (the Ergative). (Section 17.2.4)
   Examples:
     - Language: Chechen
       Example: <e>aħa döšu as sanna</e>
@@ -7454,7 +7440,7 @@
     - str:indexation
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     an <a>indexical strategy</a> in which the category of <a>person</a> is encoded in the <a>index</a>. Other categories, typically <a>number</a> and <a>gender--class</a>, may also be encoded in the index. <i>Example</i>: in Mam <i>t-kamb' meeb'a</i> <q>the orphan's prize</q>, the third person prefix <i>t-</i> on <i>kamb'</i> <q>prize</q> indexes the possessor, who is also referred to by <i>meeb'a</i> <q>orphan</q>. (Section 4.4.1)
   Examples:
@@ -7832,7 +7818,7 @@
     - str:adposition
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     an <a>adposition</a> which occurs after the <a>head</a> of the <a>referring phrase</a>. <i>Example</i>: in Urarina <i>nii banaao asae</i> <q>under that leaf shelter</q>, <i>asae</i> <q>under</q> follows <i>nii banaao</i> <q>that leaf shelter</q>. (Section 4.3)
   Examples:
@@ -7947,12 +7933,6 @@
   Name: predicate
   HeadOf:
     - cxn:clause
-    - cxn:auxiliary-construction
-    - cxn:support-verb-construction
-    - cxn:topic-comment-construction
-  ConstituentOf:
-    - cxn:argument-complex-predicate
-    - cxn:argument-structure-construction
   Definition: >-
     the <a>head</a> of a <a>clause</a>, which is not necessarily an <a>action</a>. <i>Example</i>: in <i>The dog is old, (is) old</i> is the predicate. (Section 2.2.4)
   Examples:
@@ -8164,7 +8144,7 @@
     - str:adposition
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     an <a>adposition</a> which occurs before the <a>head</a> of the <a>referring phrase</a>. <i>Example</i>: in <i>on the table, on</i> is an adposition that precedes <i>the table</i>. (Section 4.3)
   Examples:
@@ -8614,7 +8594,7 @@
   Name: quantifier
   SubtypeOf:
     - cxn:modifier
-  ConstituentOf:
+  HeadOf:
     - cxn:quantifier-attributive-phrase
   Definition: >-
     <a>forms</a> that describe the quantity of the <a>instances</a> of a <a>type</a>, where the precise cardinality of the set is not specified. Quantifiers include <a cxn:vague-numeral>vague numerals</a>, <a>amount terms</a>, <a cxn:proportional-quantifier>proportional quantifiers</a>, and <a cxn:distributive-quantifier-term>distributive quantifiers</a>. (Section 4.1.3)
@@ -8726,8 +8706,6 @@
   Name: reference point
   ConstituentOf:
     - sem:property-concept
-  AssociatedTo:
-    - cxn:antonyms
   Definition: >-
     a point on the scale for a property that indicates a <dq>normal</dq> value for the property concept word. Example: in regard to height of a person, <i>tall/short</i> means <q>taller/shorter than a <dq>normal</dq> height</q>. The reference point is relative: tall for a person is short for a tree. The reference point can be expressed overtly, as in <i>She's kind of short <b>for a basketball player</b></i>. The term <q>reference point</q> is also used as a synonym for <q>anchor</q>; we will avoid that use in this book. (Section 4.1.2)
 
@@ -8783,8 +8761,6 @@
   Name: referring phrase
   SubtypeOf:
     - cxn:phrase
-  ConstituentOf:
-    - cxn:argument-structure-construction
   AssociatedTo:
     - cxn:reference-tracking
   Definition: >-
@@ -8915,7 +8891,7 @@
   Type: cxn
   Name: relative pronoun
   SubtypeOf:
-    - cxn:pronoun
+    - cxn:anaphoric-pronoun
   ConstituentOf:
     - cxn:relative-clause-construction
   Definition: >-
@@ -8952,7 +8928,7 @@
   ExpressionOf:
     - cxn:equative-construction
   Definition: >-
-    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a>zero strategy</a> is used for <a cxn:predicate-identity-construction>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a inf:free-choice-referent>free</a> (<a cxn:indefinite-pronoun>indefinite head</a>) <a cxn:relative-clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
+    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a str:zero-copula>zero copula strategy</a> is used for <a cxn:predicate-identity-construction>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a inf:free-choice-referent>free</a> (<a cxn:indefinite-pronoun>indefinite head</a>) <a cxn:relative-clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
   Examples:
     - Language: Lithuanian
       Example: <e>Šiandien taip šalta kaip vakar</e>
@@ -9007,7 +8983,7 @@
     - str:classifier
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a <a>sortal classifier</a> that is identical in <a>form</a> to the <a>noun</a> it <a inf:modification>modifies</a>. <i>Example</i>: in Lao <i>hang2 sip2 hang2</i> [nest two <sc>clf</sc>] <q>two nests</q>, the sortal classifier <i>hang2</i> is identical to the noun <i>hang2</i> <q>nest</q>. (Section 4.4.3)
   Examples:
@@ -9150,6 +9126,7 @@
   Name: salience, salient
   Alias:
     - topicality
+    - topical
   AttributeOf:
     - inf:argument
   Definition: >-
@@ -9211,10 +9188,6 @@
     - sem:conditional-relation
     - sem:comparative-conditional-relation
     - sem:let-alone-relation
-  AssociatedTo:
-    - cxn:antonyms
-    - cxn:complementary
-    - cxn:let-alone-construction
   Definition: >-
     a range of situations that can be ranked from <dq>weakest</dq> to <dq>strongest</dq> -- that is, least informative to most informative, on some relevant scale for the <a>meaning</a> of a sentence. <i>Example</i>: <i>He won't eat shrimp, let alone squid</i> makes sense by invoking a scalar model of <dq>things that you would not expect someone to be willing to eat</dq>, such that being unwilling to eat shrimp is at the <dq>strong</dq>, more informative, end of the scalar model, and being unwilling to eat squid is at the <dq>weak</dq>, less informative end of the scalar model (in a culture where eating squid is considered more repulsive than eating shrimp). (Section 17.3.3)
   Examples:
@@ -9437,7 +9410,7 @@
   Name: set-member term
   SubtypeOf:
     - cxn:modifier
-  ConstituentOf:
+  HeadOf:
     - cxn:set-member-attributive-phrase
   Definition: >-
     a <a>form</a> that specifies a member or members of a designated set, usually previously presented in the discourse or inferrable from it, which has some sort of ordering. <i>Example</i>: in <i>the next question</i>, <i>next</i> is a set-member term. Other set-member terms include <i>last</i>, <i>another, (the) other</i>, and the <a cxn:ordinal-numeral>ordinal numerals</a>. (Section 4.1.3)
@@ -9604,7 +9577,7 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a highly grammaticalized strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which one of the two <a>elements</a> is in a morphologically distinct form. <i>Example</i>: in Syrian Arabic <i>ʔəṣṣeṭ haz-zalame</i> <q>that fellow's story</q>, the Construct Form <i>ʔəṣṣeṭ</i> <q>story</q> is an example of a special form used in this <a>nominal modifier construction</a>. (Section 4.5)
   Examples:
@@ -9944,10 +9917,7 @@
     - subject (argument) phrase
     - subject
   SubtypeOf:
-    - cxn:topic-phrase
     - cxn:core-argument-phrase
-  AssociatedTo:
-    - cxn:transitive-construction
   Definition: >-
     the <a>argument phrase</a> expressing the most <a>salient</a> <a>core argument</a> in an <a>argument structure construction</a>. <i>Example</i>: in <i>Emily slept</i> and <i>Emily read the paper</i>, <i>Emily</i> is the subject. (Sections 6.1.1, <b>6.3.2</b>)
   Examples:
@@ -9972,7 +9942,7 @@
     - sem:manner-of-motion-event
     - sem:contact-by-impact-event
   Definition: >-
-    an <a cxn:argument-structure-construction>argument structure</a> <a>strategy</a> that <a>co-expresses</a> the first <a>participant role</a> of the <a>event</a> with the <a>subject</a> of the <a>transitive construction</a>, but does not co-express the second participant role with the <a inf:object-argument>object</a> of the transitive construction; that is, the second participant role is expressed by an <a>oblique phrase</a>. <i>Example</i>: <i>She walked toward the tree</i> is an instance of the the subject--oblique strategy for the <a>motion event</a> expressed by <i>walked</i> -- the <a>figure</a> participant <i>She</i> is expressed as a <a>subject phrase</a>, and the <a>ground</a> participant <i>the tree</i> is expressed as an oblique phrase. (Section 7.3.1)
+    an <a cxn:clause>argument structure</a> <a>strategy</a> that <a>co-expresses</a> the first <a>participant role</a> of the <a>event</a> with the <a>subject</a> of the <a>transitive construction</a>, but does not co-express the second participant role with the <a inf:object-argument>object</a> of the transitive construction; that is, the second participant role is expressed by an <a>oblique phrase</a>. <i>Example</i>: <i>She walked toward the tree</i> is an instance of the the subject--oblique strategy for the <a>motion event</a> expressed by <i>walked</i> -- the <a>figure</a> participant <i>She</i> is expressed as a <a>subject phrase</a>, and the <a>ground</a> participant <i>the tree</i> is expressed as an oblique phrase. (Section 7.3.1)
   Examples:
     - <e>She walked toward the tree</e>
 
@@ -10047,17 +10017,13 @@
       Gloss: body speech mind three
       Translation: body, speech and mind
 
-- Id: cxn:superlative-form
-  Type: cxn
-  Name: superlative form
-  Alias:
-    - superlative (form)
+- Id: sem:superlative-degree
+  Type: sem
+  Name: superlative degree
   SubtypeOf:
-    - cxn:admodifier
-  AssociatedTo:
-    - cxn:equative-construction
+    - sem:degree
   Definition: >-
-    indicates the most extreme value on a <a>property</a> scale for the relevant referents. <i>Example</i>: in <i>most expensive</i>, <i>most</i> indicates the highest value on the expensiveness scale for the relevant set of objects. (Section 4.1.2)
+    the most extreme value on a <a>property</a> scale for the relevant referents. <i>Example</i>: in <i>most expensive</i>, <i>most</i> indicates the highest value on the expensiveness scale for the relevant set of objects. (Section 4.1.2)
   Examples:
     - <e>most</e> expensive
 
@@ -10068,8 +10034,7 @@
     - coverb
     - light verb
   SubtypeOf:
-    - cxn:verb
-    - cxn:dynamic-predicate-part
+    - cxn:complex-predicate-part
   ConstituentOf:
     - cxn:support-verb-construction
   Definition: >-
@@ -10322,7 +10287,7 @@
   AssociatedTo:
     - cxn:topic-phrase
   Definition: >-
-    in a <a>topic--comment information packaging</a>, the topic is the <a>referent</a> that the <a>comment</a> is <a inf:predication>predicated about</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is predicated about the referent Bill. A topic is a referent; arguably, all referents are topics, although some referents are more topical and others are less topical. (Section 10.1.2)
+    in a <a>topic--comment information packaging</a>, the topic is the most <a inf:salience>salient</a> <a>referent</a> that the <a>comment</a> is <a inf:predication>predicated about</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is predicated about the referent Bill. A topic is a referent; arguably, all referents are topics, although some referents are more topical and others are less topical. (Section 10.1.2)
   Examples:
     - <e>Bill</e> is a teacher
 
@@ -10365,6 +10330,7 @@
   Name: topic--comment construction
   SubtypeOf:
     - cxn:declarative-construction
+    - cxn:prototypical-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:topic-comment>topic--comment</a> information packaging. <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
   Examples:
@@ -10734,7 +10700,7 @@
   AssociatedTo:
     - sem:necessary-participant-sharing
   Definition: >-
-    a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:argument-structure-construction>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
+    a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:clause>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
   Examples:
     - Language: Luganda
       Example: ekiso [John kyeyattisa enkoko]
@@ -10760,7 +10726,7 @@
   Type: cxn
   Name: verbal clause
   SubtypeOf:
-    - cxn:topic-comment-construction
+    - cxn:clause
     - cxn:prototypical-construction
   Definition: >-
     a <a>clause</a> whose <a>head</a> denotes an <a>action concept</a>. <i>Example</i>: <i>She popped the balloon</i> is a verbal clause; the head <i>popped</i> denotes an action concept. A verbal clause is the prototypical clause, and its head is a <a>verb</a>. (Section 2.2.3)
@@ -10969,9 +10935,9 @@
   Examples:
     - <e>tall trees</e>
 
-- Id: str:zero-strategy
+- Id: str:zero-copula
   Type: str
-  Name: zero strategy
+  Name: zero copula
   SubtypeOf:
     - str:zero-coding
   ExpressionOf:
@@ -10990,7 +10956,7 @@
   SubtypeOf:
     - str:zero-coding
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: >-
     a <a>strategy</a> with any of the different kinds of <a>voice constructions</a> in which there is <a>zero coding</a> of the <a>function</a> of the voice construction on the <a>verb</a>. <i>Example</i>: <i>John planted the garden with trees</i> is an applicative construction without any overt coding of the applicative function on the verb <i>planted</i>. (Section 9.4)
   Examples:
@@ -12024,7 +11990,7 @@
   SubtypeOf:
     - str:overt-coding
   ExpressionOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: ''
   FromGlossary: false
 
@@ -12099,7 +12065,7 @@
   Type: cxn
   Name: motion argument structure construction
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: ''
   FromGlossary: false
 
@@ -12107,7 +12073,7 @@
   Type: cxn
   Name: perception argument structure construction
   SubtypeOf:
-    - cxn:argument-structure-construction
+    - cxn:clause
   Definition: ''
   FromGlossary: false
 
@@ -12594,11 +12560,34 @@
   Definition: ''
   FromGlossary: false
 
+- Id: cxn:argument-predicate-part
+  Type: cxn
+  Name: argument predicate part
+  SubtypeOf:
+    - cxn:complex-predicate-part
+  ConstituentOf:
+    - cxn:argument-complex-predicate
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:eventive-predicate-part
+  Type: cxn
+  Name: eventive predicate part
+  SubtypeOf:
+    - cxn:complex-predicate-part
+  HeadOf:
+    - cxn:support-verb-construction
+    - cxn:auxiliary-construction
+  ConstituentOf:
+    - cxn:argument-complex-predicate
+  Definition: ''
+  FromGlossary: false
+
 - Id: cxn:dynamic-predicate-part
   Type: cxn
   Name: dynamic predicate part
   SubtypeOf:
-    - cxn:complex-predicate-part
+    - cxn:eventive-predicate-part
   ConstituentOf:
     - cxn:eventive-complex-predicate
     - cxn:stative-complex-predicate
@@ -12609,7 +12598,7 @@
   Type: cxn
   Name: stative predicate part
   SubtypeOf:
-    - cxn:complex-predicate-part
+    - cxn:eventive-predicate-part
   ConstituentOf:
     - cxn:stative-complex-predicate
   Definition: ''
@@ -12618,20 +12607,8 @@
 - Id: cxn:focus-element
   Type: cxn
   Name: focus element
-  HeadOf:
-    - cxn:focus-element-phrase
   ConstituentOf:
     - cxn:identificational-construction
-  Definition: ''
-  FromGlossary: false
-
-- Id: cxn:focus-element-phrase
-  Type: cxn
-  Name: focus element phrase
-  Subtype:
-    - cxn:referring-phrase
-  ConstituentOf:
-    - cxn:focus-element-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12680,6 +12657,14 @@
     - cxn:referring-phrase
   ConstituentOf:
     - cxn:relative-matrix-clause
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:nonsubject-argument-phrase
+  Type: cxn
+  Name: nonsubject argument phrase
+  SubtypeOf:
+    - cxn:argument-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12778,7 +12763,7 @@
   Name: ground phrase
   Definition: ''
   SubtypeOf:
-    - cxn:argument-phrase
+    - cxn:nonsubject-argument-phrase
   ConstituentOf:
     - cxn:motion-argument-structure-construction
   FromGlossary: false
@@ -12803,19 +12788,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:antipassive-a-phrase
+- Id: cxn:antipassive-oblique-phrase
   Type: cxn
-  Name: antipassive A phrase
-  SubtypeOf:
-    - cxn:subject-phrase
-  ConstituentOf:
-    - cxn:antipassive-construction
-  Definition: ''
-  FromGlossary: false
-
-- Id: cxn:antipassive-p-phrase
-  Type: cxn
-  Name: antipassive P phrase
+  Name: antipassive oblique phrase
   SubtypeOf:
     - cxn:oblique-phrase
   ConstituentOf:
@@ -12837,19 +12812,9 @@
   Type: cxn
   Name: causee phrase
   SubtypeOf:
-    - cxn:argument-phrase
+    - cxn:nonsubject-argument-phrase
   ConstituentOf:
     - cxn:causative-construction
-  Definition: ''
-  FromGlossary: false
-
-- Id: cxn:applicative-subject-phrase
-  Type: cxn
-  Name: applicative subject phrase
-  SubtypeOf:
-    - cxn:subject-phrase
-  ConstituentOf:
-    - cxn:applicative-construction
   Definition: ''
   FromGlossary: false
 
@@ -12868,5 +12833,13 @@
   Name: nonsubject argument
   SubtypeOf:
     - inf:argument
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:hanging-topic-construction
+  Type: cxn
+  Name: hanging topic construction
+  SubtypeOf:
+    - cxn:topic-comment-construction
   Definition: ''
   FromGlossary: false
