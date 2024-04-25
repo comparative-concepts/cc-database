@@ -12073,7 +12073,7 @@
   Type: cxn
   Name: perception argument structure construction
   SubtypeOf:
-    - cxn:clause
+    - cxn:experiential-construction
   Definition: ''
   FromGlossary: false
 
