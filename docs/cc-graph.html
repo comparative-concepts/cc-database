@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script type="text/javascript" src="cc-graph-data.js"></script>
+<script type="text/javascript" src="cc-graph.js"></script>
+<title>CC network</title>
+<style>
+  body {
+    background-color: lightgrey;
+    margin: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  h3 {
+    margin: 10px 0;
+  }
+  select:hover, input:hover, label:hover {
+    cursor: pointer;
+  }
+  #ccNetwork {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    background-color: white;
+  }
+  #ccUnrelated {
+    padding-left: 20px;
+  }
+  #wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+
+<body onload="init()">
+  <div id="wrapper">
+    <div>
+      <h3>CC visualization</h3>
+      <p><select id="ccGraphType" onchange="selectGraph()">
+          <option value="" selected disabled>Select a graph</option>
+        </select> &nbsp;
+        <span id="statistics"></span> &nbsp;
+        Show:
+        <label><input type="radio" name="ccShow" id="ccShowName" checked onchange="selectGraph()"/> names</label>
+        <label><input type="radio" name="ccShow" id="ccShowId" onchange="selectGraph()"/> IDs</label>
+      </p>
+      <div id="ccNetwork"></div>
+      <p>
+        Graph layout by <a href="https://visjs.github.io/vis-network/docs/network/">Vis-Network</a>.
+        You can zoom in/out (with the scroll wheel), and move nodes (by dragging).
+      </p>
+    </div>
+    <div id="ccUnrelated"><h3>CCs without a relation</h3></div>
+  </div>
+</body>
+</html>
