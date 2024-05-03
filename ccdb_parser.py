@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import datetime
 
 import validation
-from validation import CCType, Relation, RELATION_CCTYPES, Glosses, GlossItem, error
+from validation import CCType, Relation, Glosses, GlossItem, error
 
 
 # A parsed definition is a list of either strings or links (as pairs of strings)
@@ -18,7 +18,7 @@ ParsedDefinition = list[str | tuple[str, str]]
 OutputFormats = ['html', 'karp', 'fnbr', 'graph']
 
 # Graph nodes and edges
-GraphNode = TypedDict("GraphNode", {"id": str, "label": str, "group": str})
+GraphNode = TypedDict("GraphNode", {"id": str, "label": str, "type": str})
 GraphEdge = TypedDict("GraphEdge", {"from": str, "to": str, "rel": str})
 
 
@@ -326,22 +326,13 @@ class CCDB:
     ## Export to a graph as Javascript objects
 
     def export_to_graph(self):
-        reltypes: dict[str, list[list[str]]] = {}
-        for rel, maps in RELATION_CCTYPES.items():
-            reltypes[rel] = []
-            for from_type, to_type in maps.items():
-                if from_type == to_type:
-                    reltypes[rel].append([from_type])
-                else:
-                    reltypes[rel].append([from_type, to_type])
-
         nodes: list[GraphNode] = []
         edges: list[GraphEdge] = []
         for item in self.glosses.values():
             nodes.append({
                 "id": item.Id,
-                "label": item.Name.replace(" ", "\n"),
-                "group": item.Type,
+                "label": item.Name,
+                "type": item.Type,
             })
             for rel in item.Relations:
                 for target in item.Relations.get(rel, []):
@@ -350,12 +341,8 @@ class CCDB:
                         "to": target,
                         "rel": rel,
                     })
-
-        print("\n".join([
-            f"var ccRelations = {json.dumps(reltypes)};",
-            f"var ccNodes = {json.dumps(nodes)};",
-            f"var ccEdges = {json.dumps(edges)};",
-        ]))
+        print(f"var ccNodes = {json.dumps(nodes)};")
+        print(f"var ccEdges = {json.dumps(edges)};")
 
     ###########################################################################
     ## Export to Språkbanken Karp JSON-lines format

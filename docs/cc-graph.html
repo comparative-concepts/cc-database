@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script type="text/javascript" src="vis-network.min.js"></script>
 <script type="text/javascript" src="cc-graph-data.js"></script>
 <script type="text/javascript" src="cc-graph.js"></script>
 <title>CC network</title>
@@ -37,13 +37,20 @@
   <div id="wrapper">
     <div>
       <h3>CC visualization</h3>
-      <p><select id="ccGraphType" onchange="selectGraph()">
+      <p>Graph: <select id="ccGraphType" onchange="selectGraph()">
           <option value="" selected disabled>Select a graph</option>
         </select> &nbsp;
-        <span id="statistics"></span> &nbsp;
-        Show:
-        <label><input type="radio" name="ccShow" id="ccShowName" checked onchange="selectGraph()"/> names</label>
-        <label><input type="radio" name="ccShow" id="ccShowId" onchange="selectGraph()"/> IDs</label>
+        <span id="statistics"></span>
+      </p>
+      <p>
+        <label>Show:
+          <select id="ccShow" onchange="selectGraph()">
+            <option value="name" selected>Names</option>
+            <option value="id">IDs</option>
+          </select>
+        </label>
+        &nbsp;
+        Search: <input type="search" id="ccSearch" size="30" placeholder="Type at least 3 characters" oninput="searchCC()"/>
       </p>
       <div id="ccNetwork"></div>
       <p>
