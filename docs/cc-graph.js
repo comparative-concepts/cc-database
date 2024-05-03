@@ -12,7 +12,6 @@ var options = {
     },
     physics: {
         solver: "forceAtlas2Based", // alternatives: "barnesHut", "repulsion"
-        forceAtlas2Based: {avoidOverlap: 0.2},
         stabilization: {iterations: 500},
     }
 };
@@ -20,11 +19,9 @@ var options = {
 var graphtypes = [
     ["cxn", "SubtypeOf", "ConstituentOf+HeadOf", "SubtypeOf+ConstituentOf+HeadOf"],
     ["str", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf"],
-    ["sem", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf"],
-    ["inf", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf"],
     ["str+cxn", "ExpressionOf+ModeledOn+RecruitedFrom"],
-    ["sem", "AttributeOf+ValueOf+RoleOf+FillerOf"],
-    ["inf", "AttributeOf+ValueOf"],
+    ["sem", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf", "AttributeOf+ValueOf+RoleOf+FillerOf"],
+    ["inf", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf", "AttributeOf+ValueOf"],
 ];
 
 var colors = {
@@ -128,7 +125,7 @@ function selectGraph() {
         let ulist = "";
         for (let n of unusedNodes) {
             if (n.type === cctype) {
-                ulist += `<li>${n.label}</li>`;
+                ulist += `<li>${n.label.replaceAll("-\n", "-")}</li>`;
             }
         }
         unrelated.innerHTML += `<strong>${cctype.toUpperCase()}</strong><ul>${ulist}</ul>`;
