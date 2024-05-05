@@ -12,29 +12,36 @@ var options = {
     },
     physics: {
         solver: "forceAtlas2Based", // alternatives: "barnesHut", "repulsion"
-        stabilization: {iterations: 500},
+        stabilization: {iterations: 100},
     }
 };
 
-var graphtypes = [
-    ["cxn", "SubtypeOf", "ConstituentOf+HeadOf", "SubtypeOf+ConstituentOf+HeadOf"],
-    ["str", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf"],
-    ["str+cxn", "ExpressionOf+ModeledOn+RecruitedFrom"],
-    ["sem", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf", "AttributeOf+ValueOf+RoleOf+FillerOf"],
-    ["inf", "SubtypeOf", "ConstituentOf", "SubtypeOf+ConstituentOf", "AttributeOf+ValueOf"],
-];
+var graphNames = {
+    cxn: "Constructions",
+    str: "Strategies",
+    "str+cxn": "Cxn -> Str",
+    sem: "Semantic CCs",
+    inf: "Information packaging",
+};
+
+var graphRelations = {
+    cxn: ["SubtypeOf", "ConstituentOf", "HeadOf"],
+    str: ["SubtypeOf", "ConstituentOf"],
+    "str+cxn": ["ExpressionOf", "ModeledOn", "RecruitedFrom"],
+    sem: ["SubtypeOf", "ConstituentOf", "AttributeOf", "RoleOf", "FillerOf", "ValueOf"],
+    inf: ["SubtypeOf", "ConstituentOf", "AttributeOf", "ValueOf"],
+};
 
 var colors = {
-    cxn: "gold",
-    str: "lightgreen",
-    sem: "violet",
-    inf: "lightsalmon",
-    def: "lightgrey",
+    0: "lightgreen",
+    1: "gold",
 
-    // 0: use default = from node
-    1: "blue",
-    2: "red",
-    3: "lime",
+    SubtypeOf: "limegreen", ExpressionOf: "limegreen",
+    ConstituentOf: "orangered", ModeledOn: "orangered",
+    HeadOf: "royalblue", RecruitedFrom: "royalblue", AttributeOf: "royalblue",
+    RoleOf: "darkturquoise",
+    FillerOf: "darkorange",
+    ValueOf: "grey",
 };
 
 var ccNodes, ccEdges;
@@ -42,13 +49,19 @@ var network, gNodes, gEdges;
 
 function init() {
     let select = document.getElementById("ccGraphType");
-    for (let gtypes of graphtypes) {
-        select.innerHTML += `<hr/>`;
-        let cctypes = gtypes.shift();
-        for (let rels of gtypes) {
-            let val = rels + "-" + cctypes;
-            let lbl = cctypes.toUpperCase().replaceAll("+", " &rarr; ") + ": " + rels.replaceAll("+", " + ");
-            select.innerHTML += `<option value="${val}">${lbl}</option>`;
+    let checkboxes = document.getElementById("ccRelations");
+    for (let ccTypes in graphNames) {
+        let ccName = graphNames[ccTypes];
+        select.innerHTML += `<option value="${ccTypes}">${ccName}</option>`;
+        let checked = true;
+        for (let relId of graphRelations[ccTypes]) {
+            if (!document.getElementById(relId)) {
+                checkboxes.innerHTML += 
+                    `<label style="color:${colors[relId]}; display:none">
+                    <input type="checkbox" id="${relId}" onchange="selectGraph()" ${checked?"checked":""}/>
+                    ${relId} &nbsp; </label>`;
+            }
+            checked = false;
         }
     }
     document.getElementById("statistics").innerHTML = `${ccNodes.length} CCs, ${ccEdges.length} edges.`;
@@ -90,23 +103,32 @@ function searchCC() {
 function selectGraph() {
     let select = document.getElementById("ccGraphType");
     if (!select.value) return;
-    let [rel, cct] = select.value.split("-");
-    let relations = rel.split("+");
-    let cctypes = cct.split("+");
+    let ccTypes = select.value.split("+");
+    let relations = graphRelations[select.value];
+
+    for (let lbl of document.getElementById("ccRelations").querySelectorAll("label")) {
+        let show = relations.includes(lbl.querySelector("input").id);
+        lbl.style.display = show ? "" : "none";
+    }
+    relations = relations.filter((rel) => document.getElementById(rel).checked);
+    if (relations.length === 0) {
+        let rel = graphRelations[select.value][0];
+        document.getElementById(rel).checked = true;
+        relations = [rel];
+    }
 
     let showID = document.getElementById("ccShow").value === "id";
-    gNodes = ccNodes.filter((n) => cctypes.includes(n.type));
+    gNodes = ccNodes.filter((n) => ccTypes.includes(n.type));
     gNodes = gNodes.map((n) => {
         let lbl = showID ? n.id.replaceAll("-", "-\n") : n.label.replaceAll(" ", "\n");
-        let color = colors[n.type];
+        let color = colors[ccTypes.indexOf(n.type)];
         return {id: n.id, name: n.label, label: lbl, type: n.type, color: {background: color, border: color}};
     });
     let nodeIds = gNodes.map((n) => n.id);
     gEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds.includes(e.from) && nodeIds.includes(e.to));
     gEdges = gEdges.map((e) => {
         let e2 = {from: e.from, to: e.to};
-        let color = colors[relations.indexOf(e.rel)];
-        if (color) {e2.color = color; e2.dashes = true}
+        e2.color = colors[e.rel];
         return e2;
     });
     let usedIds = {};
@@ -121,14 +143,14 @@ function selectGraph() {
     unusedNodes.sort((a,b) => a.label.localeCompare(b.label));
     let unrelated = document.getElementById("ccUnrelated");
     unrelated.innerHTML = `<h3>${unusedNodes.length} unrelated CCs</h3>`;
-    for (let cctype of cctypes) {
+    for (let cct of ccTypes) {
         let ulist = "";
         for (let n of unusedNodes) {
-            if (n.type === cctype) {
+            if (n.type === cct) {
                 ulist += `<li>${n.label.replaceAll("-\n", "-")}</li>`;
             }
         }
-        unrelated.innerHTML += `<strong>${cctype.toUpperCase()}</strong><ul>${ulist}</ul>`;
+        unrelated.innerHTML += `<strong>${graphNames[cct]}</strong><ul>${ulist}</ul>`;
     }
 }
 
