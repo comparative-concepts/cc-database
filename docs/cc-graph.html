@@ -56,6 +56,14 @@
           </select>
         </label>
         &nbsp;
+        <label>Stabilization:
+          <select id="ccSolver" onchange="selectGraph()">
+            <option value="forceAtlas2Based" selected>Atlas2</option>
+            <option value="barnesHut">Barnes-Hut</option>
+            <option value="repulsion">Repulsion</option>
+          </select>
+        </label>
+        &nbsp;
         Search: <input type="search" id="ccSearch" size="30" placeholder="Type at least 3 characters" oninput="searchCC()"/>
       </p>
       <div id="ccNetwork"></div>
