@@ -11497,7 +11497,7 @@
   SubtypeOf:
     - sem:causal-cyclicality
   AttributeOf:
-    - sem:introverted
+    - sem:introverted-event
   Definition: ''
   FromGlossary: false
 
@@ -11517,7 +11517,7 @@
   SubtypeOf:
     - sem:causal-directionality
   AttributeOf:
-    - sem:attending
+    - sem:attending-event
   Definition: ''
   FromGlossary: false
 
