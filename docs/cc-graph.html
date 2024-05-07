@@ -25,7 +25,7 @@
   }
   #ccNetwork {
     width: 90vw;
-    height: 65vh;
+    height: 60vh;
     border: 1px solid black;
     border-radius: 10px;
     background-color: white;
@@ -68,10 +68,11 @@
   </p>
   <p>
     <button id="ccUnconnected" onclick="selectUnconnected()">Select unconnected</button>
-    <button id="ccExpand" onclick="expandSelection()">Expand selection</button>
+    <button id="ccExpandUpwards" onclick="expandSelection('from')">Expand upwards</button>
+    <button id="ccExpandDownwards" onclick="expandSelection('to')">Expand downwards</button>
     &nbsp;&nbsp;
-    <button id="ccFilter" onclick="filterSelected()">Filter selection</button>
-    <button id="ccRemove" onclick="removeSelected()">Remove selection</button>
+    <button id="ccRemoveUnselected" onclick="keepSelected()">Keep selected</button>
+    <button id="ccRemoveSelected" onclick="removeSelected()">Remove selected</button>
     &nbsp;&nbsp;
     <button id="ccClear" onclick="clearFilter()">Clear filter</button>
   </p>
@@ -85,5 +86,6 @@
     Click-and-hold to (de)select nodes, click-and-drag to move nodes.
     Hover over a node to see its definition.
   </p>
+  <div id="extraInfo"></div>
 </body>
 </html>

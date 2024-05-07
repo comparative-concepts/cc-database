@@ -127,6 +127,11 @@ function getUnconnectedNodes() {
     return getFilteredNodes().filter(isUnconnectedNode);
 }
 
+function getSelectedNodes() {
+    let selectedNodeIds = network.getSelectedNodes();
+    return getGraphNodes().filter((n) => selectedNodeIds.includes(n.id));
+}
+
 function getGraphRelations() {
     let select = document.getElementById("ccGraphType");
     let relations = ccRelations[select.value];
@@ -205,9 +210,10 @@ function selectionChanged() {
     document.getElementById("ccSolver").disabled = !willStabilize;
     document.getElementById("ccSearch").disabled = !getGraphTypes();
     document.getElementById("ccUnconnected").disabled = !hasUnconnected;
-    document.getElementById("ccExpand").disabled = !hasSelection;
-    document.getElementById("ccFilter").disabled = !hasSelection;
-    document.getElementById("ccRemove").disabled = !hasSelection;
+    document.getElementById("ccExpandUpwards").disabled = !hasSelection;
+    document.getElementById("ccExpandDownwards").disabled = !hasSelection;
+    document.getElementById("ccRemoveUnselected").disabled = !hasSelection;
+    document.getElementById("ccRemoveSelected").disabled = !hasSelection;
     document.getElementById("ccClear").disabled = !isFiltered;
     showStatistics();
 }
@@ -226,6 +232,17 @@ function showStatistics() {
     if (selected > 0) stat.innerText += `, ${selected} selected`;
     stat.innerText += `; ${getFilteredEdges().length} edges`;
     if (isFiltered) stat.innerText += ` (of ${getGraphEdges().length})`;
+
+    let extraInfo = document.getElementById("extraInfo");
+    extraInfo.innerHTML = "";
+    if (selected > 0) {
+        let info = getSelectedNodes().map((n) => n.label).join(", ").replaceAll("-\n", "-").replaceAll("\n", " ");
+        extraInfo.innerHTML += `<p><b>Selected:</b> ${info}</p>`;
+    }
+    if (unconnected > 0) {
+        let info = getUnconnectedNodes().map((n) => n.label).join(", ").replaceAll("-\n", "-").replaceAll("\n", " ");
+        extraInfo.innerHTML += `<p><b>Unconnected:</b> ${info}</p>`;
+    }
 }
 
 function updateNodes() {
@@ -275,10 +292,10 @@ function selectUnconnected() {
     selectionChanged();
 }
 
-function expandSelection() {
+function expandSelection(direction) {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
-    let newnodes = selected.flatMap((n) => network.getConnectedNodes(n));
+    let newnodes = selected.flatMap((n) => network.getConnectedNodes(n, direction));
     network.selectNodes(selected.concat(newnodes));
     selectionChanged();
 }
@@ -301,30 +318,20 @@ function clearFilter() {
     selectionChanged();
 }
 
-function filterSelected() {
+function keepSelected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
     let relations = getGraphRelations();
     let nodeIds = {};
-    let radius = 2;
-    let agenda = selected;
-    for (let i = 0; i < radius; i++) {
-        let newAgenda = [];
-        for (let n of agenda) {
-            if (!nodeIds[n]) {
-                nodeIds[n] = true;
-                for (let e of ccEdges) {
-                    if (relations.includes(e.rel)) {
-                        if (n === e.from) newAgenda.push(e.to);
-                        else if (n === e.to) newAgenda.push(e.from);
-                    }
-                }
+    for (let n of selected) {
+        nodeIds[n] = true;
+        for (let e of ccEdges) {
+            if (relations.includes(e.rel)) {
+                if (n === e.from) nodeIds[e.to] = true;
+                else if (n === e.to) nodeIds[e.from] = true;
             }
         }
-        agenda = newAgenda;
     }
-    for (let n of agenda) nodeIds[n] = true;
-
     let filteredNodes = ccNodes.filter((n) => nodeIds[n.id]);
     let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
     network.setData({nodes: filteredNodes, edges: filteredEdges});
