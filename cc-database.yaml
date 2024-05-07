@@ -12,7 +12,7 @@
     - str:ergative-category
     - str:nominative-category
   Definition: >-
-    the <a>agent</a> or agent-like <a>central participant role</a> in the prototypical <a>bivalent event</a> (that is, a breaking event) or the prototypical <a>trivalent event</a> (that is, a giving event). <i>Examples</i>: in <i>Jack broke the window</i>, Jack plays the A role in the breaking event; and in <i>Jill gave Joe the keys</i>, Jill plays the A role in the giving event. (Section 6.3.1)
+    the <a>agent</a> or agent-like <a>central participant role</a> in the prototypical <a sem:bivalent>bivalent event</a> (that is, a breaking event) or the prototypical <a sem:trivalent>trivalent event</a> (that is, a giving event). <i>Examples</i>: in <i>Jack broke the window</i>, Jack plays the A role in the breaking event; and in <i>Jill gave Joe the keys</i>, Jill plays the A role in the giving event. (Section 6.3.1)
   Examples:
     - <e>Jack</e> broke the window
     - <e>Jill</e> gave Joe the keys
@@ -93,8 +93,6 @@
     - topic continuity
   SubtypeOf:
     - inf:information-status
-  AttributeOf:
-    - inf:identity-known
   Definition: >-
     the <a>information status</a> of a <a>referent</a> with respect to the hearer's knowledge -- that is, for which the hearer already has a <u>discourse file</u>. Accessibility refers to how easily the referent can be accessed by the hearer, in the speaker's estimation. The accessibility categories described in this book are <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a>. The adjective <q>accessible</q> is also used for the <a>semi-active</a> accessibility status. (Sections 3.1.3, <b>3.3.1</b>)
 
@@ -150,9 +148,6 @@
     - action (concept)
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:dynamic
-    - sem:transitory
   AssociatedTo:
     - cxn:complement
     - cxn:relative-clause
@@ -176,15 +171,14 @@
   Examples:
     - He remains under <e>investigation</e>
 
-- Id: inf:active
+- Id: inf:active-referent
   Type: inf
-  Name: active
+  Name: active referent
   Alias:
+    - active
     - in focus
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:accessibility
   AssociatedTo:
     - cxn:anaphoric-pronoun
   Definition: >-
@@ -213,7 +207,7 @@
   ConstituentOf:
     - str:active-alignment
   AssociatedTo:
-    - inf:active
+    - inf:active-referent
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>active alignment system</a> that <a>co-expresses</a> some <a>S roles</a> -- in particular, the S role of <q>walk</q> -- and the <a>A role</a>. <i>Example</i>: in Lakhota, the index <i>ya-</i> <q>you (sg.)</q> in <i>ó-ma-ya-kiye</i> <q>you help/helped me</q> and <i>ya-ʔu</i> <q>you (sg.) are coming</q> expresses the active category. (Section 6.3.3)
   Examples:
@@ -268,7 +262,7 @@
   SubtypeOf:
     - cxn:focus-operator
   Definition: >-
-    a <a>focus operator</a> that indicates that the <a>focus</a> is the added information in an <a>expanding</a> <a>counterpresuppositional contrast</a> <a>construction</a>. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES, also</i> is an additive operator. (Section 11.4.1)
+    a <a>focus operator</a> that indicates that the <a>focus</a> is the added information in an <a inf:expanding-contrast>expanding counterpresuppositional contrast</a> <a>construction</a>. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES, also</i> is an additive operator. (Section 11.4.1)
   Examples:
     - John bought apples. He <e>also</e> bought PEACHES
 
@@ -318,7 +312,7 @@
   ExpressionOf:
     - cxn:stative-complex-predicate
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that does not <a>index</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Manchu <i>sargan jui hocikon ucule-he</i> <q>The girl sang beautifully</q>, <i>hocikon</i> <q>beautifully</q> does not index <i>sargan jui</i> <q>girl</q>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that does not <a>index</a> an <a inf:participant>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Manchu <i>sargan jui hocikon ucule-he</i> <q>The girl sang beautifully</q>, <i>hocikon</i> <q>beautifully</q> does not index <i>sargan jui</i> <q>girl</q>. (Section 14.2)
   Examples:
     - Language: Manchu
       Example: <e>sargan jui hocikon ucule-he</e>
@@ -335,7 +329,7 @@
   ExpressionOf:
     - cxn:stative-complex-predicate
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that <a>indexes</a> an <a>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Latin <i>mendicus a me tristis stipem petivit</i> <q>The beggar asked me sadly for a gift</q>, the form <i>tristis</i> <q>sadly</q> indexes the subject <i>mendicus</i> <q>beggar</q> in <a>case</a>, <a>number</a> and <a>gender--class</a>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> is expressed like an <a>adjective</a> (<a>property</a> <a>modifier</a>) in an <a>argument phrase</a> that <a>indexes</a> an <a sem:participant>argument</a> of the <a>event</a> <a>predicate</a> in the complex predicate construction. <i>Example</i>: in Latin <i>mendicus a me tristis stipem petivit</i> <q>The beggar asked me sadly for a gift</q>, the form <i>tristis</i> <q>sadly</q> indexes the subject <i>mendicus</i> <q>beggar</q> in <a>case</a>, <a>number</a> and <a>gender--class</a>. (Section 14.2)
   Examples:
     - Language: Latin
       Example: <e>mendicus a me tristis stipem petivit</e>
@@ -522,8 +516,6 @@
   Name: affecting event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:affecting
   AssociatedTo:
     - str:stimulus-oriented-strategy
   Definition: >-
@@ -552,7 +544,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which one <a>element</a> is an affix on the other. <i>Example</i>: in Somali <i>səʔli-hom</i> [photograph-his], <i>-hom</i> is typically analyzed as an affix expressing the <a>possessor</a>. (Section 4.2)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which one <a>element</a> is an affix on the other. <i>Example</i>: in Somali <i>səʔli-hom</i> [photograph-his], <i>-hom</i> is typically analyzed as an affix expressing the <a>possessor</a>. (Section 4.2)
   Examples:
     - Language: Somali
       Example: <e>səʔli-hom</e>
@@ -589,8 +581,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:bivalent-event
   Definition: >-
     a <a>change of state event</a> in which an external volitional <a>agent</a> brings about a change in a <a>patient</a> such that the patient enters a resulting <a>state</a>. <i>Example</i>: the event of a person drying dishes is an agentive change of state event. (Section 6.2.1)
 
@@ -666,7 +656,7 @@
   SubtypeOf:
     - str:system
   Definition: >-
-    a <a>system</a> defined by the <a>co-expression</a> of <a>arguments</a> of <a>predicates</a> in <a cxn:intransitive-construction>intransitive</a>, <a>transitive</a>, and <a>ditransitive constructions</a>. Example: English expresses the one argument of an intransitive verb construction (<i><b>The cats</b> slept</i>) in the same way as the semantically agentive argument of a <a>transitive</a> <a>verb</a> (<i><b>The cats</b> clawed the sofa</i>): both arguments are expressed preceding the verb. (Sections 1.4, <b>6.3.1</b>)
+    a <a>system</a> defined by the <a>co-expression</a> of <a inf:reference>arguments</a> of <a>predicates</a> in <a cxn:intransitive-construction>intransitive</a>, <a>transitive</a>, and <a>ditransitive constructions</a>. Example: English expresses the one argument of an intransitive verb construction (<i><b>The cats</b> slept</i>) in the same way as the semantically agentive argument of a <a>transitive</a> <a>verb</a> (<i><b>The cats</b> clawed the sofa</i>): both arguments are expressed preceding the verb. (Sections 1.4, <b>6.3.1</b>)
 
 - Id: str:allative-comparative
   Type: str
@@ -700,8 +690,6 @@
   Name: alternative proposition
   ConstituentOf:
     - inf:counterpresuppositional-contrast
-  AssociatedTo:
-    - inf:identificational
   Definition: >-
     when a <a>contrast</a> situation is construed as an <a>identificational construction</a>, the <a>propositional content</a> is asserted against a background of an alternative <a>proposition</a> (or propositions) expressed or evoked in the discourse context. <i>Example</i>: in the exchange <i>John bought apples. No, he bought PEACHES</i>, the proposition that John bought peaches is asserted against the background of the alternative proposition that John bought apples. The shared part of the proposition and its alternative, that John bought something, is presupposed -- that is, <q>John bought X</q> is a <a>presupposed open proposition</a>. (Section 11.4.1)
   Examples:
@@ -859,6 +847,8 @@
     - (nonhuman) animate
   SubtypeOf:
     - sem:animacy
+  AttributeOf:
+    - sem:thing
   Definition: >-
     a semantic <u>category</u> of <a sem:object-concept>objects</a> that denotes animate beings. <i>Example</i>: <i>cat</i> denotes an animate entity. The term <q>animate</q> is often used to contrast with <a>human</a>, and therefore often is used to refer only to nonhuman animates. (Section 3.1.2)
   Examples:
@@ -980,9 +970,6 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
-  ValueOf:
-    - sem:bivalent-event
-    - sem:trivalent-event
   Definition: >-
     an <a>event</a> describing placing or applying one <a sem:object-concept>object</a> onto (2-dimensional) or into (3-dimensional) another object. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
 
@@ -1062,11 +1049,7 @@
 - Id: inf:argument
   Type: inf
   Name: argument
-  ConstituentOf:
-    - inf:topic-comment
-    - inf:major-propositional-act
-  AssociatedTo:
-    - inf:reference
+  Status: deleted
   Definition: >-
     a <a>referent</a> of which something is being <a>predicated</a>. <i>Example</i>: in <i>Masha is nice</i>, being nice is being predicated of the referent Masha, and hence the referent Masha is an argument. Most referents are also arguments, but it is possible for a referent to <dq>stand alone</dq> in discourse, particularly in spoken discourse, independent of any predication. Arguments are divided into <a>core arguments</a> (<a>subject</a> and <a inf:object-argument>object</a>) and <a inf:oblique-argument>oblique arguments</a>. (Sections 2.1, 6.1.1)
   Examples:
@@ -1093,7 +1076,7 @@
   ConstituentOf:
     - cxn:clause
   Definition: >-
-    a <a>referring phrase</a> that <a inf:reference>refers</a> to an <a>argument</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
+    a <a>referring phrase</a> that <a inf:reference>refers</a> to a <a sem:participant>participant</a>. <i>Example</i>: in <i>The tree fell</i>, <i>the tree</i> is an argument phrase because it is a referring phrase that refers to the argument of the predicate -- namely, the tree that fell. Argument phrases are divided into <a>core argument phrases</a> (<a>subject phrase</a>, <a>object phrase</a>) and <a>oblique argument phrases</a>. (Sections 2.2.2, 6.6.1)
   Examples:
     - <e>The tree</e> fell
 
@@ -1194,8 +1177,6 @@
   Name: attending event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:attending
   AssociatedTo:
     - cxn:experiential-verb
     - str:experiencer-oriented-strategy
@@ -1303,7 +1284,7 @@
     - cxn:clause
     - cxn:prototypical-construction
   Definition: >-
-    an <a>argument structure construction</a> that conforms to the prototypical parallel ranking of <a>participant role</a> and <a>argument</a> <a>salience</a>. <i>Example</i>: <i>I ate the smoked salmon</i> is an instance of a basic voice construction -- semantically, I act upon the salmon, and I am more <a>salient</a> than the salmon in the discourse. Basic voice constructions are also called <q>active</q> or <q>direct</q> constructions. (Sections 6.1.1, <b>8.1</b>)
+    an <a>argument structure construction</a> that conforms to the prototypical parallel ranking of <a>participant role</a> and <a inf:topicality>argument salience</a>. <i>Example</i>: <i>I ate the smoked salmon</i> is an instance of a basic voice construction -- semantically, I act upon the salmon, and I am more <a>salient</a> than the salmon in the discourse. Basic voice constructions are also called <q>active</q> or <q>direct</q> constructions. (Sections 6.1.1, <b>8.1</b>)
   Examples:
     - <e>I ate the smoked salmon</e>
 
@@ -1394,13 +1375,31 @@
       Translation: moose and caribou
     - Either you leave or I leave
 
-- Id: sem:bivalent-event
+- Id: sem:bivalent
   Type: sem
-  Name: bivalent event
-  Alias:
-    - bivalent (event)
+  Name: bivalent
   SubtypeOf:
     - sem:valency
+  AttributeOf:
+    - sem:agentive-change-of-state-event
+    - sem:application-event
+    - sem:cognition-event
+    - sem:combining-event
+    - sem:contact-by-impact-event
+    - sem:damage-event
+    - sem:emotion-event
+    - sem:ingestion-event
+    - sem:interaction-event
+    - sem:killing-injuring-event
+    - sem:motion-event
+    - sem:perception-event
+    - sem:possession
+    - sem:pursuit-event
+    - sem:removal-event
+    - sem:sensation-event
+    - sem:caused-motion
+    - sem:contact-event
+    - sem:creation-event
   AssociatedTo:
     - cxn:transitive-construction
   Definition: >-
@@ -1412,8 +1411,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:monovalent-event
   Definition: >-
     the <a>event</a> class of normally uncontrolled actions involving one's body. <i>Example</i>: coughing is a bodily action. (Section 6.3.3)
 
@@ -1423,12 +1420,10 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:monovalent-event
   AssociatedTo:
     - str:middle-voice
   Definition: >-
-    a <a>monovalent event</a> involving an internal bodily motion. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
+    a <a sem:monovalent>monovalent event</a> involving an internal bodily motion. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
   Examples:
     - <e>stretch out (oneself)</e>
 
@@ -1461,12 +1456,10 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:monovalent-event
   AssociatedTo:
     - str:middle-voice
   Definition: >-
-    a <a>monovalent event</a> involving a person acting on that person's own body, generally for grooming or hygiene. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
+    a <a sem:monovalent>monovalent event</a> involving a person acting on that person's own body, generally for grooming or hygiene. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
   Examples:
     - <e>shave</e>
     - <e>wash (oneself)</e>
@@ -1502,8 +1495,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:monovalent-event
   Definition: >-
     the event class of maintaining a particular body posture or position. <i>Example</i>: standing is a body position event. (Section 6.3.3)
 
@@ -1538,10 +1529,9 @@
 - Id: sem:case
   Type: sem
   Name: case
-  AssociatedTo:
-    - sem:participant-role
+  Status: deleted
   Definition: >-
-    a semantic category expressed by <a>case affixes</a> which encodes the types of relations that occur between <a>predicate</a> and <a>arguments</a>, or the relation between an <a sem:object-concept>object</a> <a>modifier</a> and its <a>head</a> in <a>nominal modification constructions</a>. <i>Example</i>: in Finnish <i>kukassa</i> <q>in a/the flower</q>, the Inessive Case Suffix <i>-ssa</i> expresses the <q>in</q> locative relation. (Section 4.4.2)
+    a semantic category expressed by <a>case affixes</a> which encodes the types of relations that occur between <a>predicate</a> and <a sem:participants>arguments</a>, or the relation between an <a sem:object-concept>object</a> <a>modifier</a> and its <a>head</a> in <a>nominal modification constructions</a>. <i>Example</i>: in Finnish <i>kukassa</i> <q>in a/the flower</q>, the Inessive Case Suffix <i>-ssa</i> expresses the <q>in</q> locative relation. (Section 4.4.2)
   Examples:
     - Language: Finnish
       Example: kukassa
@@ -1729,8 +1719,6 @@
   Name: chaining event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:chaining
   Definition: >-
     an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on a third participant in the same way, and so on. That is, each participant in the chain is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action -- except the first in the chain, who is only an initiator, and the last, who is only an endpoint. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
   Examples:
@@ -1746,12 +1734,10 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
-  ValueOf:
-    - sem:monovalent-event
   AssociatedTo:
     - str:middle-voice
   Definition: >-
-    a <a>monovalent event</a> involving a person changing their bodily position. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
+    a <a sem:monovalent>monovalent event</a> involving a person changing their bodily position. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
   Examples:
     - <e>sit</e>
     - <e>lean</e>
@@ -1780,8 +1766,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:monovalent-event
   Definition: >-
     an <a>event</a> in which a <a>participant</a>, the <a>patient</a>, undergoes a change such that the patient enters a resulting <a>state</a>, usually a change of physical state. <i>Example</i>: the event of dishes becoming dry is a change of state event. (Sections 6.1.2, <b>6.2.1</b>)
 
@@ -1797,9 +1781,9 @@
   Examples:
     - <e>dry</e>
 
-- Id: inf:choosing
+- Id: inf:choosing-contrast
   Type: inf
-  Name: choosing
+  Name: choosing contrast
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
@@ -1816,7 +1800,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    an <a>adposition</a> which occurs as two morphemes, one before and one after the <a>modifier</a> or <a>argument</a> <a>head</a>. <i>Example</i>: in Pashto <i>ter maktaba poori</i> <q>as far as the school</q>, the <a>meaning</a> <q>as far as</q> is expressed by the combination of <i>ter</i> preceding <i>maktaba</i> <q>school</q> and <i>poori</i> following it. (Section 4.3)
+    an <a>adposition</a> which occurs as two morphemes, one before and one after the <a>modifier</a> or <a inf:reference>argument</a> <a>head</a>. <i>Example</i>: in Pashto <i>ter maktaba poori</i> <q>as far as the school</q>, the <a>meaning</a> <q>as far as</q> is expressed by the combination of <i>ter</i> preceding <i>maktaba</i> <q>school</q> and <i>poori</i> following it. (Section 4.3)
   Examples:
     - Language: Pashto
       Example: <e>ter maktaba poori</e>
@@ -1913,9 +1897,6 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     an <a>experiential event</a> involving an <a>experiencer</a>'s cognition directed toward a <a>stimulus</a>. <i>Example</i>: <i>Tim thought about the war</i> is an example of a cognition event. (Section 7.4)
   Examples:
@@ -1946,8 +1927,6 @@
   Name: collective event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:collective
   AssociatedTo:
     - cxn:reciprocal-construction
     - cxn:reflexive-construction
@@ -1976,9 +1955,6 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
-  ValueOf:
-    - sem:bivalent-event
-    - sem:trivalent-event
   Definition: >-
     an <a>event</a> describing the combining of two <a sem:object-concept>objects</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
 
@@ -2008,6 +1984,7 @@
 - Id: inf:comment
   Type: inf
   Name: comment
+  Status: deleted
   ConstituentOf:
     - inf:topic-comment
   Definition: >-
@@ -2117,7 +2094,7 @@
   Type: inf
   Name: comparative referent
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   AssociatedTo:
     - cxn:comparative-pronoun
   Definition: >-
@@ -2217,7 +2194,7 @@
   Type: str
   Name: complementizer
   SubtypeOf:
-    - str:overt-coding
+    - str:conjunction
   ExpressionOf:
     - cxn:complement-clause-construction
   Definition: >-
@@ -2319,7 +2296,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which the two <a>elements</a> are combined in a single word. <i>Example</i>: in <i>doorknob</i>, <i>door</i> and <i>knob</i> form an instance of compounding. The term <q>compounding</q> or <q>compound</q> is also used for the <a>typifying construction</a> and the <a>binominal lexeme construction</a>. (Section 4.2)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are combined in a single word. <i>Example</i>: in <i>doorknob</i>, <i>door</i> and <i>knob</i> form an instance of compounding. The term <q>compounding</q> or <q>compound</q> is also used for the <a>typifying construction</a> and the <a>binominal lexeme construction</a>. (Section 4.2)
   Examples:
     - <e>doorknob</e>
 
@@ -2444,7 +2421,7 @@
   Type: inf
   Name: conditional referent
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> in the <a cxn:protasis-clause>protasis</a> in a <a>conditional construction</a>. <i>Example</i>: in <i>If you hear <b>anything</b>, tell me</i>, <i>anything</i> is a conditional pronoun expressing a referent that is found only in the hypothetical world introduced by the protasis of the conditional construction. (Section 3.5)
   Examples:
@@ -2501,6 +2478,8 @@
 - Id: str:conjunction
   Type: str
   Name: conjunction
+  SubtypeOf:
+    - str:overt-coding
   ConstituentOf:
     - str:syndetic
   AssociatedTo:
@@ -2547,8 +2526,6 @@
     - contact by impact (event)
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:bivalent-event
   Definition: >-
     an <a>event</a> describing contact by impact. <i>Example</i>: hitting is a contact by impact event. (Section 7.3.2)
 
@@ -2649,13 +2626,13 @@
       Example: Köhögtettem a gyerek-<b>kel</b>
       Translation: I had the boy [<sc>inst</sc>] cough
 
-- Id: sem:controlled-activity
+- Id: sem:controlled-event
   Type: sem
-  Name: controlled activity
+  Name: controlled event
+  Alias:
+    - controlled activity
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:controlled
   Definition: >-
     the <a>event</a> class of agentive processes. <i>Example</i>: running is a controlled activity event. (Section 6.3.3)
 
@@ -2831,8 +2808,7 @@
 - Id: inf:core-arguments
   Type: inf
   Name: core arguments
-  SubtypeOf:
-    - inf:argument
+  Status: deleted
   Definition: >-
     the most <a>salient</a> <a>arguments</a> associated with a <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, Sally and the letter are construed as the most salient arguments; in <i>The letter was thrown into the wastebasket</i>, only the letter is construed as a salient argument. When there are two core arguments, the more salient argument is the <a>subject</a> and the less salient argument is the <a inf:object-argument>object</a>. Core arguments are expressed by <a>core argument phrases</a>. (Section 6.1.1)
   Examples:
@@ -2902,8 +2878,6 @@
   Name: damage event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:bivalent-event
   Definition: >-
     an <a>event</a> describing material damage to an <a sem:object-concept>object</a>. <i>Example</i>: scratching something is a damage event. (Section 7.3.2)
 
@@ -3126,13 +3100,8 @@
 - Id: sem:dependent-time-reference
   Type: sem
   Name: dependent time reference
-  AttributeOf:
-    - sem:utterance-event
-    - sem:propositional-attitude-event
-    - sem:evaluative-event
-    - sem:perception-event
-    - sem:desiderative-event
-    - sem:manipulative-event
+  SubtypeOf:
+    - sem:time-reference
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the time reference of the <a>complement</a> <a>event</a> is determined by the time reference of the <a>matrix clause</a> <a>event</a>. <i>Example</i>: in <i>Sally persuaded John to make the cake</i>, the time reference of John's making the cake is dependent on the time reference of Sally's persuading him -- it must follow the persuading event. (Section 18.2.2)
   Examples:
@@ -3291,8 +3260,6 @@
   Name: direct causation event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:direct
   Definition: >-
     a <a>causative event</a> in which the <a>causee</a> has no control over the action. <i>Example</i>: <i>I laid the child in the crib</i> is an instance of direct causation. (Section 9.2)
   Examples:
@@ -3312,7 +3279,7 @@
   Type: inf
   Name: direct negation referent
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> which is in the scope of <a>negation</a> in the same <a>clause</a>. <i>Example</i>: in <i>I noticed nothing</i>, <i>nothing</i> is a direct negation pronoun expressing a referent found only in the negative alternative world to the real world. (Section 3.5)
   Examples:
@@ -3351,15 +3318,11 @@
   Examples:
     - <e>The storm expanded</e>
 
-- Id: inf:discourse-deictic
+- Id: inf:discourse-deixis
   Type: inf
-  Name: discourse deictic
-  Alias:
-    - discourse deixis
+  Name: discourse deixis
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:accessibility
   Definition: >-
     <a>reference</a> to <a>events</a> or <a>propositions</a> already described in the discourse, in contrast to reference to objects. (Section 3.3.3)
 
@@ -3446,7 +3409,7 @@
   AssociatedTo:
     - cxn:ditransitive-construction
   Definition: >-
-    a <a>predication</a> predicated of three <a>salient</a> <a>arguments</a>. <i>Example</i>: in <i>Sarah sent Jerry a letter</i>, sending is a ditransitive predication because it is predicated of three arguments, Sarah, Jerry, and the letter. (Section 6.1.2)
+    a <a>predication</a> predicated of three <a>salient</a> <a inf:reference>arguments</a>. <i>Example</i>: in <i>Sarah sent Jerry a letter</i>, sending is a ditransitive predication because it is predicated of three arguments, Sarah, Jerry, and the letter. (Section 6.1.2)
   Examples:
     - <e>Sarah sent Jerry a letter</e>
 
@@ -3586,6 +3549,8 @@
   Name: dynamic
   SubtypeOf:
     - sem:stativity
+  AttributeOf:
+    - sem:action-concept
   Definition: >-
     a concept construed as involving change over the time course of the <a>event</a>. <i>Example</i>: walking involves change over the time course of the walking event. (Sections 2.1, 6.2.1)
 
@@ -3641,9 +3606,6 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     an <a>experiential event</a> involving an <a>experiencer</a>'s emotions directed toward a <a>stimulus</a>. <i>Example</i>: <i>He fears dogs</i> is an example of an emotion event. (Section 7.4)
   Examples:
@@ -3798,7 +3760,7 @@
   Type: inf
   Name: equational
   SubtypeOf:
-    - inf:identificational
+    - inf:information-gap
   Definition: >-
     a type of <a>identificational information packaging</a> in which two <a>referents</a> that the hearer assumed were different individuals are asserted to be, in fact, one and the same individual. <i>Example</i>: in <i>The Morning Star is the Evening Star</i>, it is asserted that two celestial objects that were once thought to be distinct objects (and given distinct names) are one and the same, namely the planet Venus. (Section 10.1.2)
   Examples:
@@ -3891,8 +3853,6 @@
     - sem:entity
   ConstituentOf:
     - sem:propositional-content
-  ValueOf:
-    - sem:relational
   Definition: >-
     a superordinate category including both <a>action concepts</a> and <a>state concepts</a>. The term <q>event</q> has other <a>meanings</a>, including what we call a <a>telic event</a>. Other terms listed above are also used for <q>event</q> as it is defined here. (Sections <b>2.1</b>, <b>6.1.1</b>)
 
@@ -3919,8 +3879,8 @@
 - Id: sem:event-oriented
   Type: sem
   Name: event-oriented
-  AttributeOf:
-    - sem:event-relation
+  SubtypeOf:
+    - sem:orientation
   AssociatedTo:
     - cxn:manner-complex-predicate
   Definition: >-
@@ -4023,13 +3983,13 @@
       Example: <e>dgaimo-gi kgaimo-g</e>
       Translation: you and I
 
-- Id: sem:existential
+- Id: sem:existence-event
   Type: sem
-  Name: existential
+  Name: existence event
+  Alias:
+    - existential event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:avalent
   AssociatedTo:
     - cxn:presentational-location-construction
     - cxn:existential-negation-construction
@@ -4047,15 +4007,15 @@
     - cxn:declarative-negation-construction
     - cxn:negation-construction
   Definition: >-
-    a construction that expresses negative polarity with respect to an <a>existential</a> situation type. <i>Example</i>: Malay <i><b>tanana</b> seraya</i> <q>There was no substitute</q> is an example of a negative existential construction using a special negative existential form <i>tanana</i>. (Section 12.2)
+    a construction that expresses negative polarity with respect to an <a sem:existence-event>existential</a> situation type. <i>Example</i>: Malay <i><b>tanana</b> seraya</i> <q>There was no substitute</q> is an example of a negative existential construction using a special negative existential form <i>tanana</i>. (Section 12.2)
   Examples:
     - Language: Malay
       Example: <e>tanana seraya</e>
       Translation: There was no substitute
 
-- Id: inf:expanding
+- Id: inf:expanding-contrast
   Type: inf
-  Name: expanding
+  Name: expanding contrast
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
@@ -4068,8 +4028,6 @@
   Name: experience event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:experience
   AssociatedTo:
     - cxn:experiential-verb
   Definition: >-
@@ -4196,7 +4154,7 @@
   RecruitedFrom:
     - cxn:ditransitive-construction
   Definition: >-
-    a <a>strategy</a> in which a <a>referent</a> in a <a>possessive relation</a> to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed as an <a>argument</a> of the <a>predicate</a> instead of in a <a>possessive modification construction</a>. <i>Example</i>: in Maasai <i>áa-bʊak-ıtá ɔldía</i> <q>My dog is barking</q>, the portmanteau index <i>áa-</i> <a>indexes</a> the owner of the dog as the <a>object argument</a> of the predicate. (Section 7.5.3)
+    a <a>strategy</a> in which a <a>referent</a> in a <a>possessive relation</a> to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed as an <a inf:reference>argument</a> of the <a>predicate</a> instead of in a <a>possessive modification construction</a>. <i>Example</i>: in Maasai <i>áa-bʊak-ıtá ɔldía</i> <q>My dog is barking</q>, the portmanteau index <i>áa-</i> <a>indexes</a> the owner of the dog as the <a inf:mid-topicality>object</> <a inf:reference>argument</a> of the predicate. (Section 7.5.3)
   Examples:
     - Language: Maasai
       Example: <e>áa-bʊak-ıtá ɔldía</e>
@@ -4210,7 +4168,7 @@
   AssociatedTo:
     - sem:necessary-participant-sharing
   Definition: >-
-    a <a>relative clause construction</a> in which the <a>relative clause head</a> is expressed as an <a>argument</a> of the <a>matrix clause</a> <a>predicate</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is an externally headed relative clause; the relative clause head is <i>the cheesecake</i>, which is the Direct Object of the matrix predicate <i>ate</i>. The externally headed strategy is by far the most common strategy for relative clause constructions. Externally headed relative clauses may be <a>prenominal</a>, <a>postnominal</a>, or <a>extraposed</a>. Externally headed relative clauses may use a <a>gap</a>, <a>pronoun-retention</a>, or <a>relative pronoun strategy</a>. (Section 19.2.2)
+    a <a>relative clause construction</a> in which the <a>relative clause head</a> is expressed as an <a inf:reference>argument</a> of the <a>matrix clause</a> <a>predicate</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is an externally headed relative clause; the relative clause head is <i>the cheesecake</i>, which is the Direct Object of the matrix predicate <i>ate</i>. The externally headed strategy is by far the most common strategy for relative clause constructions. Externally headed relative clauses may be <a>prenominal</a>, <a>postnominal</a>, or <a>extraposed</a>. Externally headed relative clauses may use a <a>gap</a>, <a>pronoun-retention</a>, or <a>relative pronoun strategy</a>. (Section 19.2.2)
   Examples:
     - I ate the cheesecake [<e>that Carol baked</e>]
 
@@ -4234,8 +4192,6 @@
   Name: extroverted event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:extroverted
   Definition: >-
     an event not normally performed on oneself or on each other. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
   Examples:
@@ -4296,8 +4252,8 @@
   SubtypeOf:
     - sem:semantic-role
   RoleOf:
+    - sem:figure-ground-spatial-relation
     - sem:spatial-event
-    - sem:location
   Definition: >-
     the object in a spatial scene whose location or path of motion is being described relative to a <a>ground</a>. <i>Example</i>: in <i>Meagan ran into the cave</i>, Meagan is the figure, and her path of motion is described relative to the location of the cave. (Sections 7.3.1, 14.5)
   Examples:
@@ -4317,9 +4273,9 @@
   Examples:
     - <e>Cindy quit after Jim was promoted</e>
 
-- Id: sem:location
+- Id: sem:figure-ground-spatial-relation
   Type: sem
-  Name: location
+  Name: figure-ground spatial relation
   Alias:
     - location (relation)
     - figure--ground spatial relation
@@ -4328,8 +4284,6 @@
     - sem:event
     - sem:object-relation
     - sem:spatial-event
-  ValueOf:
-    - sem:monovalent-event
   AssociatedTo:
     - cxn:locational-construction
   Definition: >-
@@ -4396,7 +4350,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts, where the dependent concept (<a>modifier</a> in a <a>modification construction</a>, <a>argument</a> in a <a>clause</a>) is an <a>object concept</a>. Flags subsume <a>adpositions</a> and <a>case affixes</a>. <i>Examples</i>: in <i>the plate on the table, on</i> is a flag, and in <i>I dug the hole with a shovel, with</i> is a flag; both are adpositions. (Sections 4.3, 6.2.2)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts, where the dependent concept (<a>modifier</a> in a <a>modification construction</a>, <a inf:reference>argument</a> in a <a>clause</a>) is an <a>object concept</a>. Flags subsume <a>adpositions</a> and <a>case affixes</a>. <i>Examples</i>: in <i>the plate on the table, on</i> is a flag, and in <i>I dug the hole with a shovel, with</i> is a flag; both are adpositions. (Sections 4.3, 6.2.2)
   Examples:
     - the plate <e>on</e> the table
     - I dug the hole <e>with</e> a shovel
@@ -4481,7 +4435,7 @@
   Type: inf
   Name: free choice referent
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> in certain contexts, whose identity can be freely chosen without affecting the truth value of the utterance. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
   Examples:
@@ -4528,7 +4482,7 @@
     - cxn:existential-negation-construction
     - cxn:prohibitive-construction
   Definition: >-
-    a highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which the two <a>elements</a> are fused in a single morpheme. <i>Example</i>: Lakhota <i>ina</i> <q>my mother</q> fuses <q>my</q> and <q>mother</q>. (Section 4.5)
+    a highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are fused in a single morpheme. <i>Example</i>: Lakhota <i>ina</i> <q>my mother</q> fuses <q>my</q> and <q>mother</q>. (Section 4.5)
   Examples:
     - Language: Lakhota
       Example: ina
@@ -4593,14 +4547,11 @@
   Examples:
     - She sold baskets, pots, <e>and stuff / and everything</e>
 
-- Id: inf:generic
+- Id: inf:generic-referent
   Type: inf
-  Name: generic
+  Name: generic referent
   SubtypeOf:
     - inf:information-status
-  AssociatedTo:
-    - cxn:generic-pronoun
-    - cxn:generic-article
   Definition: >-
     <a>reference</a> to the <a>type</a> itself, and not to a particular <a>referent</a>/<a>token</a> of the type. <i>Example</i>: in the generic use of <i>You can't come to the party without an invitation, you</i> is referring to the general category of people. (Sections 3.1.1, <b>3.6</b>)
   Examples:
@@ -4613,7 +4564,7 @@
     - cxn:attributive-phrase
     - cxn:article
   Definition: >-
-    an <a>article</a> used in combination with a <a>common noun</a> (and its <a>modifiers</a>, if any) for <a>generic</a> <a>reference</a>. <i>Example</i>: in <i>A bat is a flying mammal</i>, <i>a</i> is functioning as a generic article. (Section 3.6)
+    an <a>article</a> used in combination with a <a>common noun</a> (and its <a>modifiers</a>, if any) for <a inf:generic-referent>generic reference</a>. <i>Example</i>: in <i>A bat is a flying mammal</i>, <i>a</i> is functioning as a generic article. (Section 3.6)
   Examples:
     - <e>A</e> bat is a flying mammal
 
@@ -4645,7 +4596,7 @@
   SubtypeOf:
     - cxn:pronoun
   Definition: >-
-    a <a>pronoun</a> used for <a>generic</a> <a>reference</a>. <i>Example</i>: in <i>One always works too much</i>, <i>one</i> is functioning as a generic pronoun. (Section 3.6)
+    a <a>pronoun</a> used for <a inf:generic-referent>generic reference</a>. <i>Example</i>: in <i>One always works too much</i>, <i>one</i> is functioning as a generic pronoun. (Section 3.6)
   Examples:
     - <e>One</e> always works too much
 
@@ -4676,8 +4627,8 @@
   SubtypeOf:
     - sem:semantic-role
   RoleOf:
+    - sem:figure-ground-spatial-relation
     - sem:spatial-event
-    - sem:location
   AssociatedTo:
     - cxn:locative-phrase
   Definition: >-
@@ -4780,6 +4731,8 @@
   Name: human
   SubtypeOf:
     - sem:animacy
+  AttributeOf:
+    - sem:person
   Definition: >-
     a semantic <u>category</u> of <a sem:object-concept>objects</a> that denote persons. <i>Example</i>: <i>woman</i> denotes a human. (Section 3.1.2)
   Examples:
@@ -4859,6 +4812,12 @@
   Name: identity known
   SubtypeOf:
     - inf:identifiability
+  AttributeOf:
+    - inf:active-referent
+    - inf:semi-active-referent
+    - inf:inactive-referent
+    - inf:inferrable-referent
+    - inf:discourse-deixis
   Definition: ''
   FromGlossary: false
 
@@ -4873,6 +4832,10 @@
   Name: identity unknown
   SubtypeOf:
     - inf:identifiability
+  AttributeOf:
+    - inf:pragmatically-specific-referent
+    - inf:semantically-specific-referent
+    - inf:interrogative-unit
   Definition: ''
   FromGlossary: false
 
@@ -4921,15 +4884,14 @@
     - <e>Dance!</e>
     - <e>Let's dance!</e>
 
-- Id: inf:inactive
+- Id: inf:inactive-referent
   Type: inf
-  Name: inactive
+  Name: inactive referent
   Alias:
+    - inactive
     - noncontaining inferrable
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:accessibility
   AssociatedTo:
     - cxn:nonanaphoric-definite-article
   Definition: >-
@@ -4945,7 +4907,7 @@
   ConstituentOf:
     - str:active-alignment
   AssociatedTo:
-    - inf:inactive
+    - inf:inactive-referent
   Definition: >-
     the category in the <a>active alignment system</a> that <a>co-expresses</a> some <a>S roles</a> -- in particular, the S role of <q>die</q> -- and the <a>P role</a>. <i>Example</i>: in Lakhota, the index <i>ma-</i> <q>I/me</q> in <i>ó-ma-ya-kiye</i> <q>you help / helped me</q> and <i>ma-khuže</i> <q>I am sick</q> expresses the inactive category. (Section 6.3.3)
   Examples:
@@ -4989,6 +4951,9 @@
   Name: inanimate
   SubtypeOf:
     - sem:animacy
+  AttributeOf:
+    - sem:thing
+    - sem:place
   Definition: >-
     a semantic <u>category</u> of <a sem:object-concept>objects</a> that denotes inanimate entities. <i>Example</i>: <i>rock</i> denotes an inanimate entity. (Section 3.1.2)
   Examples:
@@ -5096,13 +5061,8 @@
 - Id: sem:independent-time-reference
   Type: sem
   Name: independent time reference
-  AttributeOf:
-    - sem:utterance-event
-    - sem:propositional-attitude-event
-    - sem:evaluative-event
-    - sem:perception-event
-    - sem:desiderative-event
-    - sem:manipulative-event
+  SubtypeOf:
+    - sem:time-reference
   Definition: >-
     in a <a>complement clause construction</a>, this is the <a>semantic</a> property that the time reference of the <a>complement</a> <a>event</a> is not determined by the time reference of the <a>matrix clause</a> <a>event</a>. <i>Example</i>: in <i>Sally thinks John made / is making / will make the cake</i>, the time reference of John's making the cake is independent of the time reference of Sally's thought. (Section 18.2.2)
   Examples:
@@ -5146,7 +5106,7 @@
   AssociatedTo:
     - sem:participant-oriented
   Definition: >-
-    a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> <a>indexes</a> an <a>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
+    a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> <a>indexes</a> an <a inf:reference>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
 
 - Id: str:indexation
   Type: str
@@ -5163,7 +5123,7 @@
   AssociatedTo:
     - str:discourse-reference-system
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that refers to the referent. The third morpheme is called an <a>index</a>. <i>Example</i>: Spanish <i>las chicas cantaban</i> <q>the girls were singing</q> uses indexation to express the relation between the singing and the singers (the girls), with the 3rd person plural suffix <i>-an</i>. Indexation usually expresses the categories of <a>person</a>, <a>number</a>, and/or <a>gender--class</a>. Since <a>personal pronouns</a> usually express only those categories, personal pronouns are arguably also indexes. Often the referent/argument is left unexpressed when the indexical strategy is employed -- hence, the referent/argument is expressed only by the index. Indexical strategies include <a>person indexation</a>, <a>nonperson indexation</a>, and <a>classifiers</a>. (Sections 3.3.2, 4.4, 6.2.2)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that refers to the referent. The third morpheme is called an <a>index</a>. <i>Example</i>: Spanish <i>las chicas cantaban</i> <q>the girls were singing</q> uses indexation to express the relation between the singing and the singers (the girls), with the 3rd person plural suffix <i>-an</i>. Indexation usually expresses the categories of <a>person</a>, <a>number</a>, and/or <a>gender--class</a>. Since <a>personal pronouns</a> usually express only those categories, personal pronouns are arguably also indexes. Often the referent/argument is left unexpressed when the indexical strategy is employed -- hence, the referent/argument is expressed only by the index. Indexical strategies include <a>person indexation</a>, <a>nonperson indexation</a>, and <a>classifiers</a>. (Sections 3.3.2, 4.4, 6.2.2)
   Examples:
     - Language: Spanish
       Example: las chicas cantab<e>-an</e>
@@ -5174,8 +5134,6 @@
   Name: indirect causation-event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:indirect
   Definition: >-
     a <a>causative event</a> in which one <a>agent</a> (the <a>causer</a>) gets the other agent (the <a>causee</a>) to do something but doesn't participate in the carrying out of the action. <i>Example</i>: <i>I had the students fill out the questionnaire</i> is an instance of indirect causation. (Section 9.2)
   Examples:
@@ -5195,7 +5153,7 @@
   Type: inf
   Name: indirect negation referent
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> which is in a <a>clause</a> embedded in a <b>negated</b> clause. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
   Examples:
@@ -5238,12 +5196,12 @@
     - Randy gave the car to his daughter
     - Randy started the car
 
-- Id: sem:individual
+- Id: sem:token
   Type: sem
-  Name: individual
+  Name: token
   Alias:
+    - individual
     - instance
-    - token
   SubtypeOf:
     - sem:identity
   AssociatedTo:
@@ -5251,15 +5209,13 @@
   Definition: >-
     a particular entity with its own identity. <i>Examples</i>: a particular person such as Charlie Chaplin, or a specific table, are individuals. (Section 3.1.1)
 
-- Id: inf:inferrable
+- Id: inf:inferrable-referent
   Type: inf
-  Name: inferrable
+  Name: inferrable referent
   Alias:
     - (containing) inferrable
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:accessibility
   AssociatedTo:
     - cxn:nonanaphoric-definite-article
   Definition: >-
@@ -5348,9 +5304,6 @@
   Name: ingestion event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     an <a>event</a> which describes the ingestion of food or drink by a person or animal, causing the food to disappear but also causing a change in the physiological state of the person/animal. <i>Example</i>: <i>Elena ate a lot of veggie chips</i> is an instance of an ingestion event. (Section 7.4)
   Examples:
@@ -5421,9 +5374,6 @@
   Name: interaction event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     an <a>event</a> in which one <a>participant</a> acts on a second participant, but the change that occurs to the second participant is at least partly independent of the <a>force</a> <u>transmitted</u> by the first participant. <i>Examples</i>: interaction events include <a>pursuit events</a>, events involving two agents such as ordering someone (to do something) or supervising someone, and events involving an agent and an event, state, social institution, and so on, such as managing a budget, avoiding situations, or conforming to institutional standards. (Section 7.3)
 
@@ -5488,7 +5438,7 @@
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
-    a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause construction</a>, in which the <a>relative clause head</a> denoting the shared participant is expressed only inside the <a>relative clause</a>. <i>Example</i>: in Imbabura Quechua [<i>kan kwitsaman kwintuta villashka</i>]<i>-ka ali kwitsami</i> <q>The girl to whom you told the story is a good girl</q>, the relative clause <i>kan kwitsaman kwintuta villashka</i> <q>you told the story to the girl</q> contains the relative clause head <i>kwitsaman</i> <q>(to) the girl</q>, and the girl is not expressed in the <a>matrix clause</a> ... <i>ali kwitsami</i> <q>... is a good girl</q>. The internally headed relative clause as a whole functions as an <a>argument</a> of the matrix clause <a>predicate</a> and may be recruited from the <a>complement clause construction</a>. The internally headed strategy is rare but fairly widely dispersed among the languages of the world. (Section 19.2.3)
+    a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause construction</a>, in which the <a>relative clause head</a> denoting the shared participant is expressed only inside the <a>relative clause</a>. <i>Example</i>: in Imbabura Quechua [<i>kan kwitsaman kwintuta villashka</i>]<i>-ka ali kwitsami</i> <q>The girl to whom you told the story is a good girl</q>, the relative clause <i>kan kwitsaman kwintuta villashka</i> <q>you told the story to the girl</q> contains the relative clause head <i>kwitsaman</i> <q>(to) the girl</q>, and the girl is not expressed in the <a>matrix clause</a> ... <i>ali kwitsami</i> <q>... is a good girl</q>. The internally headed relative clause as a whole functions as an <a inf:reference>argument</a> of the matrix clause <a>predicate</a> and may be recruited from the <a>complement clause construction</a>. The internally headed strategy is rare but fairly widely dispersed among the languages of the world. (Section 19.2.3)
   Examples:
     - Language: Imbabura Quechua
       Example: <e>[kan kwitsaman kwintuta villashka]-ka ali kwitsami</e>
@@ -5547,8 +5497,6 @@
     - interrogative (information) unit
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:identity-unknown
   Definition: ''
   FromGlossary: false
 
@@ -5568,7 +5516,7 @@
   SubtypeOf:
     - cxn:basic-voice
   Definition: >-
-    the <a>construction</a>, or possibly set of constructions, used to express <a>monovalent events</a> with their single <a>salient</a> <a>argument</a>, in the <a>S role</a>. <i>Example</i>: <i>The boys walked</i> is an example of an English intransitive construction. Unlike the <a>transitive construction</a> and the <a>ditransitive construction</a>, there is no clear exemplar event for defining intransitive constructions, thanks to the existence of <a>active alignment</a>. (Sections 6.1.2, <b>6.3.3</b>)
+    the <a>construction</a>, or possibly set of constructions, used to express <a sem:monovalent>monovalent events</a> with their single <a>salient</a> <a inf:reference>argument</a>, in the <a>S role</a>. <i>Example</i>: <i>The boys walked</i> is an example of an English intransitive construction. Unlike the <a>transitive construction</a> and the <a>ditransitive construction</a>, there is no clear exemplar event for defining intransitive constructions, thanks to the existence of <a>active alignment</a>. (Sections 6.1.2, <b>6.3.3</b>)
   Examples:
     - <e>The boys walked</e>
 
@@ -5580,7 +5528,7 @@
   AssociatedTo:
     - cxn:intransitive-construction
   Definition: >-
-    a <a>predication</a> predicated of one <a>salient</a> <a>argument</a>. <i>Example</i>: in <i>Sarah is swimming</i>, swimming is an intransitive predication because it is predicated of one argument, Sarah. (Section 6.1.2)
+    a <a>predication</a> predicated of one <a>salient</a> <a inf:reference>argument</a>. <i>Example</i>: in <i>Sarah is swimming</i>, swimming is an intransitive predication because it is predicated of one argument, Sarah. (Section 6.1.2)
   Examples:
     - <e>Sarah is swimming</e>
 
@@ -5589,8 +5537,6 @@
   Name: introverted event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:introverted
   Definition: >-
     an <a>event</a> typically performed on oneself or by oneself, but that could be performed on someone else. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events. (Section 7.2)
 
@@ -5622,7 +5568,7 @@
   Alias:
     - irrealis (referent)
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   Definition: >-
     a <a>referent</a> which is in the <dq>world</dq> or <a>mental space</a> representing a person's desire, wish, command, etc. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
   Examples:
@@ -5637,7 +5583,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which the two <a>elements</a> are simply syntactically juxtaposed without any additional morpheme expressing the propositional act relation. <i>Example</i>: in <i>red ball</i>, the adjective <i>red</i> is simply juxtaposed to the noun <i>ball</i> to indicate that the referent of <i>ball</i> is modified by the property denoted by <i>red</i>. (Section 4.2)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are simply syntactically juxtaposed without any additional morpheme expressing the propositional act relation. <i>Example</i>: in <i>red ball</i>, the adjective <i>red</i> is simply juxtaposed to the noun <i>ball</i> to indicate that the referent of <i>ball</i> is modified by the property denoted by <i>red</i>. (Section 4.2)
   Examples:
     - <e>red ball</e>
 
@@ -5649,8 +5595,6 @@
     - injuring event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:bivalent-event
   Definition: >-
     an <a>event</a> describing the injuring of an individual, including to the point that the individual dies. <i>Example</i>: stabbing is a killing/injuring event. (Section 7.3.2)
 
@@ -5771,7 +5715,7 @@
   Type: inf
   Name: link
   SubtypeOf:
-    - inf:topic
+    - inf:reference
   ConstituentOf:
     - inf:poset
   Definition: >-
@@ -5788,7 +5732,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    a more highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is an invariant third morpheme that signals the relationship between two <a>elements</a>. <i>Example</i>: in English <i>Jerry's bicycle</i>, the invariant genitive form <i>-'s</i> is a linker. (Section 4.5)
+    a more highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is an invariant third morpheme that signals the relationship between two <a>elements</a>. <i>Example</i>: in English <i>Jerry's bicycle</i>, the invariant genitive form <i>-'s</i> is a linker. (Section 4.5)
   Examples:
     - Jerry<e>-'s</e> bicycle
 
@@ -6036,8 +5980,6 @@
   Name: manner event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:manner-profile
   AssociatedTo:
     - cxn:manner-complex-predicate
   Definition: >-
@@ -6233,7 +6175,7 @@
     - cxn:reciprocal-construction
     - cxn:reflexive-construction
   Definition: >-
-    a <a>strategy</a> for the <a>intransitive construction</a> that <a>recruits</a> a <a>reflexive</a> or <a>reciprocal construction</a>, for the expression of a subset of <a>monovalent events</a>. <i>Example</i>: Ancient Greek <i>pete-sthai</i> <q>fly</q> is an example of a middle voice form, using the suffix <i>-sthai</i>. The middle voice construction may be a more <a>grammaticalized</a> form of the original construction. (Section 7.2)
+    a <a>strategy</a> for the <a>intransitive construction</a> that <a>recruits</a> a <a>reflexive</a> or <a>reciprocal construction</a>, for the expression of a subset of <a sem:monovalent>monovalent events</a>. <i>Example</i>: Ancient Greek <i>pete-sthai</i> <q>fly</q> is an example of a middle voice form, using the suffix <i>-sthai</i>. The middle voice construction may be a more <a>grammaticalized</a> form of the original construction. (Section 7.2)
   Examples:
     - Language: Ancient Greek
       Example: pete-sthai
@@ -6344,13 +6286,28 @@
       Example: <e>Kwermuhl nee Tlawi nee Dongobesh nee Haydom nee Daudi</e>
       Translation: Kwermuhl, Tlawi, Dongobesh, Haydom, and Daudi
 
-- Id: sem:monovalent-event
+- Id: sem:monovalent
   Type: sem
-  Name: monovalent event
-  Alias:
-    - monovalent (event)
+  Name: monovalent
   SubtypeOf:
     - sem:valency
+  AttributeOf:
+    - sem:bodily-action
+    - sem:bodily-motion-event
+    - sem:body-care-event
+    - sem:body-position-event
+    - sem:change-in-position-event
+    - sem:change-of-state-event
+    - sem:cognition-event
+    - sem:emotion-event
+    - sem:figure-ground-spatial-relation
+    - sem:ingestion-event
+    - sem:interaction-event
+    - sem:motion-event
+    - sem:perception-event
+    - sem:possession
+    - sem:pursuit-event
+    - sem:sensation-event
   AssociatedTo:
     - cxn:intransitive-construction
   Definition: >-
@@ -6376,13 +6333,10 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   AssociatedTo:
     - str:middle-voice
   Definition: >-
-    a <a>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
+    a <a sem:monovalent>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
   Examples:
     - <e>fly</e>
     - <e>go</e>
@@ -6595,7 +6549,7 @@
   AssociatedTo:
     - sem:event-oriented
   Definition: >-
-    a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> does not <a>index</a> an <a>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
+    a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> does not <a>index</a> an <a inf:reference>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
 
 - Id: cxn:nonanaphoric-definite-article
   Type: cxn
@@ -6615,7 +6569,7 @@
     - cxn:clause
     - cxn:nonprototypical-construction
   Definition: >-
-    an <a>argument structure construction</a> that does not conform to the prototypical parallel ranking of <a>participant role</a> and <a>argument</a> <a>salience</a>. <i>Example</i>: <i>The salmon were eaten by grizzlies</i> is an instance of a nonbasic voice construction. Nonbasic voice constructions include the <a>passive--inverse voice construction</a>, the <a>antipassive construction</a>, the <a>causative construction</a>, and the <a>applicative construction</a>. (Section 8.1)
+    an <a>argument structure construction</a> that does not conform to the prototypical parallel ranking of <a>participant role</a> and <a inf:topicality>argument salience</a>. <i>Example</i>: <i>The salmon were eaten by grizzlies</i> is an instance of a nonbasic voice construction. Nonbasic voice constructions include the <a>passive--inverse voice construction</a>, the <a>antipassive construction</a>, the <a>causative construction</a>, and the <a>applicative construction</a>. (Section 8.1)
   Examples:
     - <e>The salmon were eaten by grizzlies</e>
 
@@ -6683,6 +6637,8 @@
   Name: nonrelational
   SubtypeOf:
     - sem:relationality
+  AttributeOf:
+    - sem:object-concept
   Definition: >-
     a concept that does not inherently make reference to another entity: a property is a property of something, an action is performed by someone or something, but most members of the object class just <dq>are</dq> without making reference to another entity. <i>Example</i>: a brick is a nonrelational entity: its existence is not dependent on another entity in the way that the color of the brick is dependent on the existence of the brick. (Section 2.1)
 
@@ -6708,15 +6664,13 @@
   Definition: >-
     a <a>pronoun</a> that expresses a <a>nonspecific referent</a>. (Section 3.5)
 
-- Id: inf:semantically-nonspecific-referent
+- Id: inf:nonspecific-referent
   Type: inf
-  Name: semantically nonspecific referent
+  Name: nonspecific referent
   Alias:
     - (semantically) nonspecific (indefinite) referent
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:type-identifiable
   Definition: >-
     the information status of a referent whose identity cannot be known to the speaker and the hearer because the referent is only <a>type identifiable</a>. <i>Example</i>: in <i>A student came to my office</i>, the hearer does not know the identity of the student, and hence that referent is nonspecific. (Section 3.5)
   Examples:
@@ -6868,11 +6822,7 @@
 - Id: inf:object-argument
   Type: inf
   Name: object argument
-  SubtypeOf:
-    - inf:core-arguments
-    - inf:nonsubject-argument
-  ValueOf:
-    - inf:salience
+  Status: deleted
   Definition: >-
     a <a>core argument</a> that is less salient that the <a>subject argument</a> of the same <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, the letter is a core argument but it is less salient than Sally. (Sections 6.1.1, <b>6.3.2</b>)
   Examples:
@@ -6883,10 +6833,6 @@
   Name: object concept
   SubtypeOf:
     - sem:entity
-  ValueOf:
-    - sem:nonrelational
-    - sem:stative
-    - sem:stable
   FillerOf:
     - sem:participant-role
   AssociatedTo:
@@ -6930,7 +6876,7 @@
     - cxn:core-argument-phrase
     - cxn:nonsubject-argument-phrase
   Definition: >-
-    the <a>argument phrase</a> expressing the second most <a>salient</a> <a>core argument</a> in a <a>transitive construction</a>. <i>Example</i>: in <i>Emily read the paper, the paper</i> is the object. (Sections 6.1.1, <b>6.3.2</b>)
+    the <a>argument phrase</a> expressing the <a inf:mid-topicality>second most salient</a> <a inf:reference>referent</a> in a <a>transitive construction</a>. <i>Example</i>: in <i>Emily read the paper, the paper</i> is the object. (Sections 6.1.1, <b>6.3.2</b>)
   Examples:
     - Emily read <e>the paper</e>
 
@@ -6948,10 +6894,7 @@
 - Id: inf:oblique-argument
   Type: inf
   Name: oblique argument
-  SubtypeOf:
-    - inf:nonsubject-argument
-  ValueOf:
-    - inf:salience
+  Status: deleted
   Definition: >-
     an <a>argument</a> that is less salient than the <a>core arguments</a> of the same <a>predication</a>. <i>Example</i>: in <i>Sally threw the letter into the wastebasket</i>, <i>the wastebasket</i> is an oblique argument; it is less salient than Sally or the letter. (Sections 6.1.1, <b>6.2.1</b>)
   Examples:
@@ -7135,7 +7078,7 @@
     - str:inactive-category
     - str:primary-object-category
   Definition: >-
-    the <a>patient</a> or patient-like <a>central participant role</a> in the prototypical <a>bivalent event</a> (that is, a breaking event). <i>Example</i>: in <i>Jack broke the window</i>, the window plays the P role in the breaking event. (Section 6.3.1)
+    the <a>patient</a> or patient-like <a>central participant role</a> in the prototypical <a sem:bivalent>bivalent event</a> (that is, a breaking event). <i>Example</i>: in <i>Jack broke the window</i>, the window plays the P role in the breaking event. (Section 6.3.1)
   Examples:
     - Jack broke <e>the window</e>
 
@@ -7180,8 +7123,6 @@
     - sem:propositional-content
   FillerOf:
     - sem:participant-role
-  AssociatedTo:
-    - inf:argument
   Definition: >-
     <a>entities</a> that play a role in an <a>event</a>. <i>Example</i>: in <i>Janet set the books on the floor</i>, Janet, the books, and the floor are participants in the setting event. (Section 6.1.1)
   Examples:
@@ -7193,6 +7134,8 @@
   Alias:
     - microrole
     - Frame Element
+  SubtypeOf:
+    - sem:semantic-role
   RoleOf:
     - sem:event
   Definition: >-
@@ -7201,8 +7144,8 @@
 - Id: sem:participant-oriented
   Type: sem
   Name: participant-oriented
-  AttributeOf:
-    - sem:event-relation
+  SubtypeOf:
+    - sem:orientation
   AssociatedTo:
     - cxn:resultative-complex-predicate
     - cxn:depictive-complex-predicate
@@ -7373,9 +7316,6 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a sem:object-concept>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
@@ -7677,9 +7617,6 @@
   SubtypeOf:
     - sem:event
     - sem:object-relation
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   AssociatedTo:
     - cxn:possessive-modification-construction
     - cxn:possession-construction
@@ -7881,15 +7818,13 @@
     an <a>pronoun</a> that is used for a <a>pragmatically nonspecific indefinite referent</a>. (Section 3.4.1)
   FromGlossary: false
 
-- Id: inf:pragmatically-nonspecific-referent
+- Id: inf:semantically-specific-referent
   Type: inf
-  Name: pragmatically nonspecific referent
+  Name: semantically specific referent
   Alias:
     - pragmatically nonspecific (but semantically specific) (indefinite) referent
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:identity-unknown
   Definition: >-
     a <a>referent</a> introduced into the discourse by the speaker that is not normally referred to again in subsequent discourse. The term <q>semantically specific</q> indicates that the referent is not in a nonreal context -- that is, it is not a nonspecific referent. We will use the shorter term <q>pragmatically nonspecific</q> and assume that such referents are also semantically specific. (Section 3.4.1)
 
@@ -7923,8 +7858,6 @@
     - pragmatically specific (indefinite) referent
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:identity-unknown
   Definition: >-
     a referent introduced into the discourse by the speaker that is normally referred to again in subsequent discourse. We will use the shorter term <q>pragmatically specific</q>. (Section 3.4.1)
 
@@ -7986,10 +7919,12 @@
   Type: inf
   Name: predication, predicational
   Alias:
+    - comment
     - (object) predication
+  SubtypeOf:
+    - inf:major-propositional-act
   ConstituentOf:
     - inf:topic-comment
-    - inf:major-propositional-act
   Definition: >-
     what the speaker is asserting about the referents in a particular utterance. <i>Example</i>: in <i>Masha is nice</i>, the speaker is predicating the <a>property</a> of being nice to the referent Masha. In the <a>file metaphor</a> for describing <a>propositional acts</a>, predication adds information to a referent's discourse file. The predication is the <a>comment</a> in <a>topic--comment information packaging</a>. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -8040,6 +7975,8 @@
 - Id: str:predicational-locative-strategy
   Type: str
   Name: predicational locative strategy
+  SubtypeOf:
+    - str:recruitment-strategy
   ExpressionOf:
     - cxn:presentational-location-construction
   RecruitedFrom:
@@ -8079,7 +8016,7 @@
   ExpressionOf:
     - cxn:stative-complex-predicate
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> or other <a sem:stative>stative component</a> is <a inf:information-packaging>packaged</a> as the sole <a>predication</a>, and the <a>event</a> is packaged as the <a>subject argument</a> of the manner predication. <i>Example</i>: in Mokilese <i>ah kijou dahr</i> <q>He runs fast</q> [lit. <q>his running is fast</q>], the speed is predicated of the event. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> or other <a sem:stative>stative component</a> is <a inf:information-packaging>packaged</a> as the sole <a>predication</a>, and the <a>event</a> is packaged as the <a inf:high-topicality>subject</a> <a inf:reference>argument</a> of the manner predication. <i>Example</i>: in Mokilese <i>ah kijou dahr</i> <q>He runs fast</q> [lit. <q>his running is fast</q>], the speed is predicated of the event. (Section 14.2)
   Examples:
     - Language: Mokilese
       Example: <e>ah kijou dahr</e>
@@ -8109,7 +8046,7 @@
   Type: def
   Name: preferred argument structure
   Definition: >-
-    the universal that the <a>participant</a> in the <a>A role</a> is, on average, higher on the <a>Accessibility Hierarchy</a> than the participant in the <a>P role</a> in a <a>bivalent event</a>, and, in fact, the participant in the A role is usually <a>active</a>. (Section 8.1)
+    the universal that the <a>participant</a> in the <a>A role</a> is, on average, higher on the <a>Accessibility Hierarchy</a> than the participant in the <a>P role</a> in a <a sem:bivalent>bivalent event</a>, and, in fact, the participant in the A role is usually <a>active</a>. (Section 8.1)
 
 - Id: def:prenominal-integration
   Type: def
@@ -8293,7 +8230,7 @@
   SubtypeOf:
     - cxn:argument-complex-predicate
   Definition: >-
-    an <a>argument complex predicate</a> in which the <a>argument</a> is a <a>pronoun</a> rather than a <a>common noun</a>. <i>Example</i>: in English <i>I'm losing it</i> (meaning <q>lose one's mind</q>), <i>losing it</i> is a pronominal argument complex predicate, containing the pronoun <i>it</i>. (Section 13.6)
+    an <a>argument complex predicate</a> in which the <a inf:reference>argument</a> is a <a>pronoun</a> rather than a <a>common noun</a>. <i>Example</i>: in English <i>I'm losing it</i> (meaning <q>lose one's mind</q>), <i>losing it</i> is a pronominal argument complex predicate, containing the pronoun <i>it</i>. (Section 13.6)
   Examples:
     - <e>I'm losing it</e>
 
@@ -8355,13 +8292,8 @@
     - quality
   SubtypeOf:
     - sem:event
-    - sem:qualitative-event
   AttributeOf:
     - sem:object-concept
-  ValueOf:
-    - sem:stative
-    - sem:stable
-    - sem:monovalent-event
   AssociatedTo:
     - cxn:adjective
     - cxn:adjectival-phrase
@@ -8544,9 +8476,6 @@
   Name: pursuit event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     <a>events</a> in which one <a>participant's</a> motion or location is directed toward another participant. <i>Examples</i>: pursuit events include following, chasing, searching for something, and waiting for someone/something; and <i>follow</i>, <i>chase</i>, <i>search (for)</i>, and <i>wait (for)</i> are pursuit verbs. (Section 7.3.3)
   Examples:
@@ -8613,7 +8542,7 @@
   Type: inf
   Name: question referent
   SubtypeOf:
-    - inf:semantically-nonspecific-referent
+    - inf:nonspecific-referent
   Definition: >-
     an unspecified <a>referent</a> in the scope of <a inf:interrogative>interrogation</a>, especially <a inf:polarity-question>polar</a> <a cxn:interrogative-construction>interrogatives</a>. <i>Example</i>: in <i>Can you hear <b>anything</b>?</i>, <i>anything</i> is a question pronoun expressing a referent that only <dq>exists</dq> in a hypothetical world, the possibility of whose existence is being entertained by the questioner. (Section 3.5)
   Examples:
@@ -8678,8 +8607,6 @@
   Name: reciprocal event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:reciprocal
   AssociatedTo:
     - str:monoclausal-transitive-reciprocal-strategy
   Definition: >-
@@ -8724,10 +8651,12 @@
 - Id: inf:reference
   Type: inf
   Name: reference, referent
+  Alias:
+    - topic
   SubtypeOf:
     - inf:major-propositional-act
   ConstituentOf:
-    - inf:predication
+    - inf:topic-comment
   Definition: >-
     what the speaker is talking about. <i>Example</i>: in <i>Masha is nice</i>, the speaker is referring to a person named Masha, and Masha is the referent. In the <a>file metaphor</a> for describing <a>propositional acts</a>, reference opens or accesses a discourse file for the referent. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -8784,17 +8713,15 @@
   Name: reflexive event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:reflexive
   Definition: >-
     an <a>event</a> type in which a <a>participant</a> acts upon themself -- that is, the participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
   Examples:
     - <e>I saw myself</e>
     - <e>Sally baked a cake for herself</e>
 
-- Id: inf:rejecting
+- Id: inf:rejecting-contrast
   Type: inf
-  Name: rejecting
+  Name: rejecting contrast
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
@@ -8807,6 +8734,10 @@
   Name: relational
   SubtypeOf:
     - sem:relationality
+  AttributeOf:
+    - sem:action-concept
+    - sem:state
+    - sem:property-concept
   Definition: >-
     a concept that inherently makes reference to another entity. <i>Example</i>: a property such as <q>smooth</q> is a property of something, an action such as <q>run</q> is performed by someone or something. (Section 2.1)
   Examples:
@@ -8819,7 +8750,7 @@
   SubtypeOf:
     - str:overt-coding
   Definition: >-
-    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts. Examples of relational strategies include <a>adpositions</a> and <a>case affixes</a>. (Section 4.3)
+    a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts. Examples of relational strategies include <a>adpositions</a> and <a>case affixes</a>. (Section 4.3)
 
 - Id: cxn:relative-clause
   Type: cxn
@@ -8856,7 +8787,7 @@
   ConstituentOf:
     - cxn:relative-matrix-clause
   Definition: >-
-    the <a>referring phrase</a> that denotes the <a>necessarily shared participant</a> in a <a>relative clause construction</a> -- that is, the <a>participant</a> that plays a <a>semantic role</a> in both the <a>event</a> denoted by the <a>relative clause</a> and the event denoted by the <a>matrix clause</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>the cheesecake</i> is the relative clause head. The relative clause head is an <a>argument</a> of the matrix clause predicate, and is <a inf:modification>modified</a> by the relative clause. (Section 19.1)
+    the <a>referring phrase</a> that denotes the <a>necessarily shared participant</a> in a <a>relative clause construction</a> -- that is, the <a>participant</a> that plays a <a>semantic role</a> in both the <a>event</a> denoted by the <a>relative clause</a> and the event denoted by the <a>matrix clause</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>the cheesecake</i> is the relative clause head. The relative clause head is an <a inf:reference>argument</a> of the matrix clause predicate, and is <a inf:modification>modified</a> by the relative clause. (Section 19.1)
   Examples:
     - I ate the <e>cheesecake</e> [that Carol baked]
 
@@ -8943,7 +8874,7 @@
   Type: str
   Name: relativizer
   SubtypeOf:
-    - str:overt-coding
+    - str:conjunction
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
@@ -8959,9 +8890,6 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
-  ValueOf:
-    - sem:bivalent-event
-    - sem:trivalent-event
   Definition: >-
     an <a>event</a> describing removal of an <a sem:object-concept>object</a> from another object. <i>Example</i>: scrubbing is a removal event. (Section 7.3.2)
 
@@ -8992,9 +8920,9 @@
       Gloss: nest two <sc>clf</sc>
       Translation: two nests
 
-- Id: inf:replacing
+- Id: inf:replacing-contrast
   Type: inf
-  Name: replacing
+  Name: replacing contrast
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
@@ -9023,9 +8951,9 @@
   Definition: >-
     the answer to an <a inf:interrogative>interrogative</a> (question) <a inf:speech-acts>speech act</a>. Like interrogatives, responses are divided into <a inf:polarity-response>polarity responses</a> and <a inf:information-question-response>information (question) responses</a>.
 
-- Id: inf:restricting
+- Id: inf:restricting-contrast
   Type: inf
-  Name: restricting
+  Name: restricting contrast
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
@@ -9042,7 +8970,7 @@
   SubtypeOf:
     - cxn:focus-operator
   Definition: >-
-    a <a>focus operator</a> that indicates that the <a>focus</a> is the restricted information in a <a>restricting</a> <a>counterpresuppositional contrast</a>. <i>Example</i>: in the exchange <i>John bought apples and peaches. No, he only bought PEACHES</i>, <i>only</i> is a restrictive operator. (Section 11.4.1)
+    a <a>focus operator</a> that indicates that the <a>focus</a> is the restricted information in a <a inf:restricting-contrast>restricting counterpresuppositional contrast</a>. <i>Example</i>: in the exchange <i>John bought apples and peaches. No, he only bought PEACHES</i>, <i>only</i> is a restrictive operator. (Section 11.4.1)
   Examples:
     - John bought apples and peaches. No, he <e>only</e> bought PEACHES
 
@@ -9063,8 +8991,6 @@
   Name: result event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:result-profile
   Definition: >-
     an <a>event</a> that is described in terms of reaching a result state, often by means of a scalar change (<a>directed change</a>). <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
   Examples:
@@ -9116,19 +9042,19 @@
     - str:inactive-category
     - str:nominative-category
   Definition: >-
-    the one <a>central participant role</a> in a <a>monovalent event</a>. <i>Example</i>: in <i>Jack ran</i> or <i>Jack died</i>, Jack plays the S role in the running and dying events, respectively. It is not entirely clear what event best serves as the exemplar monovalent event for defining the S role (Sections 6.3.1, 6.3.3)
+    the one <a>central participant role</a> in a <a sem:monovalent>monovalent event</a>. <i>Example</i>: in <i>Jack ran</i> or <i>Jack died</i>, Jack plays the S role in the running and dying events, respectively. It is not entirely clear what event best serves as the exemplar monovalent event for defining the S role (Sections 6.3.1, 6.3.3)
   Examples:
     - <e>Jack</e> ran
     - <e>Jack</e> died
 
-- Id: inf:salience
+- Id: inf:topicality
   Type: inf
-  Name: salience, salient
+  Name: topicality, topical
   Alias:
-    - topicality
-    - topical
+    - salience
+    - salient
   AttributeOf:
-    - inf:argument
+    - inf:reference
   Definition: >-
     the degree of attention directed to a <a>referent</a> by the interlocutors at a given point in the discourse. <i>Example</i>: it is generally the case that, in a sentence like <i>He ate the cookies</i>, the <a>subject</a> referent is more salient than the <a inf:object-argument>object</a> referent in discourse. Salience is also considered to vary across different <a>object concepts</a>, other things being equal: people are more interested in other people, somewhat less so in <a>animate</a> objects, and less still in <a>inanimate</a> objects. Salience is the motivation for the <a>Animacy Hierarchy</a> and the <a>Extended Animacy Hierarchy</a>. (Section 6.1.1)
   Examples:
@@ -9264,7 +9190,7 @@
     - inf:anchoring
     - inf:typifying
   Definition: >-
-    a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference>refer</a> to. Usually performed by <a>numerals</a> and <a>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
+    a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference>refer</a> to. Usually performed by <a>numerals</a> and <a>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a inf:choosing-contrast>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
 
 - Id: def:semantic-classes
   Type: def
@@ -9302,23 +9228,23 @@
   Type: sem
   Name: semantic role
   Alias:
+    - case
     - thematic role
   RoleOf:
     - sem:event
   Definition: >-
     a generalization across <a>participant roles</a> that are semantically similar from one <a>event</a> class to another. <i>Example</i>: many events involve a person who volitionally initiates the event, and this more general role is typically called the <q>agent</q> role. (Section 6.1.1)
 
-- Id: inf:semi-active
+- Id: inf:semi-active-referent
   Type: inf
-  Name: semi-active
+  Name: semi-active referent
   Alias:
+    - semi-active
     - accessible
     - tracking
     - recognitional
   SubtypeOf:
     - inf:reference
-  ValueOf:
-    - inf:accessibility
   AssociatedTo:
     - cxn:anaphoric-article
   Definition: >-
@@ -9332,9 +9258,6 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
-  ValueOf:
-    - sem:monovalent-event
-    - sem:bivalent-event
   Definition: >-
     an <a>experiential event</a> involving an internal bodily or physiological sensation. <i>Example</i>: <i>My head aches</i> is an example of a sensation event. (Section 7.4)
   Examples:
@@ -9492,7 +9415,7 @@
   SubtypeOf:
     - str:zero-coding
   Definition: >-
-    a <a>strategy</a> for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), that does not involve the presence of a third morpheme. Simple strategies include <a>juxtaposition</a>, <a>compounding</a>, and <a>affixation</a>. (Section 4.2)
+    a <a>strategy</a> for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), that does not involve the presence of a third morpheme. Simple strategies include <a>juxtaposition</a>, <a>compounding</a>, and <a>affixation</a>. (Section 4.2)
 
 - Id: sem:simultaneous
   Type: sem
@@ -9546,8 +9469,6 @@
   Name: sociative causation-event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:sociative-causation
   Definition: >-
     a <a>causative event</a> in which the relationship between the <a>causer</a> and the <a>causee</a> is more symmetrical, so that the two <a>agents</a> are performing the action more jointly. <i>Example</i>: <i>I helped the students fill out the questionnaire</i> is an instance of sociative causation. (Section 9.2)
   Examples:
@@ -9579,7 +9500,7 @@
     - cxn:modification-construction
     - cxn:clause
   Definition: >-
-    a highly grammaticalized strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a>argument</a>), in which one of the two <a>elements</a> is in a morphologically distinct form. <i>Example</i>: in Syrian Arabic <i>ʔəṣṣeṭ haz-zalame</i> <q>that fellow's story</q>, the Construct Form <i>ʔəṣṣeṭ</i> <q>story</q> is an example of a special form used in this <a>nominal modifier construction</a>. (Section 4.5)
+    a highly grammaticalized strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which one of the two <a>elements</a> is in a morphologically distinct form. <i>Example</i>: in Syrian Arabic <i>ʔəṣṣeṭ haz-zalame</i> <q>that fellow's story</q>, the Construct Form <i>ʔəṣṣeṭ</i> <q>story</q> is an example of a special form used in this <a>nominal modifier construction</a>. (Section 4.5)
   Examples:
     - Language: Syrian Arabic
       Example: ʔəṣṣeṭ haz-zalame
@@ -9642,7 +9563,7 @@
   Type: inf
   Name: specific known referent
   SubtypeOf:
-    - inf:pragmatically-nonspecific-referent
+    - inf:semantically-specific-referent
   Definition: >-
     a real-world <a>referent</a> whose identity is known to the speaker but not the hearer. <i>Example</i>: if <i>Masha met with someone near the university</i> is used in a context where the speaker knows the identity of the person Masha met, then <i>someone</i> is a specific known pronoun expressing a specific known referent. (Section 3.5)
   Examples:
@@ -9663,7 +9584,7 @@
   Type: inf
   Name: specific unknown referent
   SubtypeOf:
-    - inf:pragmatically-nonspecific-referent
+    - inf:semantically-specific-referent
   Definition: >-
     a real-world <a>referent</a> whose identity is known neither to the speaker nor to the hearer. <i>Example</i>: if <i>Masha met with somebody near the university</i> is used in a context where the speaker does not know the identity of the person Masha met, then <i>somebody</i> is a specific unknown pronoun expressing a specific unknown referent. (Section 3.5)
   Examples:
@@ -9745,12 +9666,10 @@
   Name: spontaneous event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:spontaneous
   AssociatedTo:
     - str:middle-voice
   Definition: >-
-    a <a>monovalent event</a> involving a <a>participant</a> that undergoes a change without an external cause. <i>Examples</i>: dying and melting are spontaneous events. (Sections 6.3.4, 7.2)
+    a <a sem:monovalent>monovalent event</a> involving a <a>participant</a> that undergoes a change without an external cause. <i>Examples</i>: dying and melting are spontaneous events. (Sections 6.3.4, 7.2)
 
 - Id: cxn:spontaneous-verb
   Type: cxn
@@ -9763,11 +9682,16 @@
     - <e>die</e>
     - <e>melt</e>
 
-- Id: sem:stable
+- Id: sem:persistent
   Type: sem
-  Name: stable
+  Name: persistent
+  Alias:
+    - stable
   SubtypeOf:
     - sem:transitoriness
+  AttributeOf:
+    - sem:property-concept
+    - sem:object-concept
   Definition: >-
     a concept that describes something that persists over time, and is construed to be a relatively inherent characteristic of the object over its lifetime. <i>Example</i>: being smart or being heavy (of a stone slab) are stable states. The stability of states is a matter of construal; a state construed as stable may change -- for example, a tall tree whose top is broken off. (Section 2.1)
 
@@ -9806,10 +9730,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:stative
-    - sem:transitory
-    - sem:monovalent-event
   Definition: >-
     a concept which is <a>relational</a> and stative but transitory. <i>Example</i>: being sick or being happy are examples of states -- they are stative, but the states of the object they apply to come and go. (Section 2.1)
 
@@ -9818,6 +9738,10 @@
   Name: stative
   SubtypeOf:
     - sem:stativity
+  AttributeOf:
+    - sem:state
+    - sem:property-concept
+    - sem:object-concept
   Definition: >-
     a concept construed as not involving change over the time course of the <a>event</a>. <i>Example</i>: being tall does not involve any change over the time course being described. (Sections 2.1, 6.2.1)
 
@@ -9882,10 +9806,7 @@
 - Id: inf:subject-argument
   Type: inf
   Name: subject argument
-  SubtypeOf:
-    - inf:core-arguments
-  ValueOf:
-    - inf:salience
+  Status: deleted
   Definition: >-
     the most salient <a>argument</a> (and hence <a>core argument</a>) of a <a>predication</a>. <i>Example</i>: in <i>Emily slept</i> and <i>Emily read the paper</i>, Emily is the subject (core) argument. (Sections 6.1.1, <b>6.3.2</b>)
   Examples:
@@ -9919,7 +9840,7 @@
   SubtypeOf:
     - cxn:core-argument-phrase
   Definition: >-
-    the <a>argument phrase</a> expressing the most <a>salient</a> <a>core argument</a> in an <a>argument structure construction</a>. <i>Example</i>: in <i>Emily slept</i> and <i>Emily read the paper</i>, <i>Emily</i> is the subject. (Sections 6.1.1, <b>6.3.2</b>)
+    the <a>argument phrase</a> expressing the <a inf:high-topicality>most salient</a> <a inf:reference>referent</a> in an <a>argument structure construction</a>. <i>Example</i>: in <i>Emily slept</i> and <i>Emily read the paper</i>, <i>Emily</i> is the subject. (Sections 6.1.1, <b>6.3.2</b>)
   Examples:
     - <e>Emily</e> slept
     - <e>Emily</e> read the paper
@@ -10282,12 +10203,11 @@
 - Id: inf:topic
   Type: inf
   Name: topic
+  Status: deleted
   ConstituentOf:
     - inf:topic-comment
-  AssociatedTo:
-    - cxn:topic-phrase
   Definition: >-
-    in a <a>topic--comment information packaging</a>, the topic is the most <a inf:salience>salient</a> <a>referent</a> that the <a>comment</a> is <a inf:predication>predicated about</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is predicated about the referent Bill. A topic is a referent; arguably, all referents are topics, although some referents are more topical and others are less topical. (Section 10.1.2)
+    in a <a>topic--comment information packaging</a>, the topic is the most <a inf:topicality>salient</a> <a>referent</a> that the <a>comment</a> is <a inf:predication>predicated about</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is predicated about the referent Bill. A topic is a referent; arguably, all referents are topics, although some referents are more topical and others are less topical. (Section 10.1.2)
   Examples:
     - <e>Bill</e> is a teacher
 
@@ -10368,10 +10288,8 @@
   Name: transfer event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:trivalent-event
   Definition: >-
-    a <a>trivalent event</a> involving physical transfer, usually also extended to <dq>mental transfer</dq>, that is used in defining the <a>ditransitive construction</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
+    a <a sem:trivalent>trivalent event</a> involving physical transfer, usually also extended to <dq>mental transfer</dq>, that is used in defining the <a>ditransitive construction</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
   Examples:
     - <e>give</e>
     - <e>send</e>
@@ -10413,7 +10331,7 @@
   AssociatedTo:
     - cxn:transitive-construction
   Definition: >-
-    a <a>predication</a> predicated of two <a>salient</a> <a>arguments</a>. <i>Example</i>: in <i>Sarah wrote the letter</i>, writing is a transitive predication because it is predicated of two arguments, Sarah and the letter. (Section 6.1.2)
+    a <a>predication</a> predicated of two <a>salient</a> <a inf:reference>arguments</a>. <i>Example</i>: in <i>Sarah wrote the letter</i>, writing is a transitive predication because it is predicated of two arguments, Sarah and the letter. (Section 6.1.2)
   Examples:
     - <e>Sarah wrote the letter</e>
 
@@ -10448,8 +10366,10 @@
   Name: transitory
   SubtypeOf:
     - sem:transitoriness
+  AttributeOf:
+    - sem:action-concept
   AssociatedTo:
-    - sem:monovalent-event
+    - sem:monovalent
   Definition: >-
     a concept that describes something that <dq>comes and goes</dq> over time. <i>Example</i>: being cold is a state that may be true of a person at some point in time, but not true at another point in time. (Section 2.1)
 
@@ -10465,7 +10385,7 @@
   Type: inf
   Name: trigger
   SubtypeOf:
-    - inf:topic
+    - inf:reference
   ConstituentOf:
     - inf:poset
   Definition: >-
@@ -10483,13 +10403,19 @@
   Definition: >-
     a <a>co-expression strategy</a> in which all three of the <a>A</a>, <a>P</a>, and <a>S roles</a> are expressed with different <a>forms</a>. Tripartite alignment is extremely rare. (Section 6.3.1)
 
-- Id: sem:trivalent-event
+- Id: sem:trivalent
   Type: sem
-  Name: trivalent event
-  Alias:
-    - trivalent (event)
+  Name: trivalent
   SubtypeOf:
     - sem:valency
+  AttributeOf:
+    - sem:transfer-event
+    - sem:application-event
+    - sem:combining-event
+    - sem:removal-event
+    - sem:caused-motion
+    - sem:agentive-experience-event
+    - sem:agentive-ingestion-event
   AssociatedTo:
     - cxn:ditransitive-construction
   Definition: >-
@@ -10510,6 +10436,8 @@
   Name: type identifiable
   SubtypeOf:
     - inf:identifiability
+  AttributeOf:
+    - inf:nonspecific-referent
   Definition: >-
     a <a>referent</a> in a nonreal <dq>world</dq> or <a>mental space</a> (desire, hypothetical, negative, etc.) whose individual identity is unknown to speaker and hearer; all that is known about the nonreal referent is its <a>type</a>, as provided by the <a>common noun</a> and any <a>modifiers</a> in the <a>referring phrase</a>. <i>Example</i>: in <i>An undergraduate student may take this course</i>, all that is known about the possible referent is that he or she belongs to the type <q>undergraduate student</q>. (Section 3.5)
   Examples:
@@ -10558,13 +10486,13 @@
   Definition: >-
     an approach to the study of language that starts from the diversity of grammatical structures across the languages of the world, and derives general patterns found in that diversity. (Section 1.1)
 
-- Id: sem:uncontrolled-activity
+- Id: sem:uncontrolled-event
   Type: sem
-  Name: uncontrolled activity
+  Name: uncontrolled event
+  Alias:
+    - uncontrolled activity
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:uncontrolled
   Definition: >-
     the <a>event</a> class of activities not under the control of an <a>agent</a> (apart from uncontrolled <a>bodily actions</a> and <a>change of state</a>). <i>Example</i>: dying is an uncontrolled activity. (Section 6.3.3)
 
@@ -10643,7 +10571,7 @@
   ConstituentOf:
     - cxn:utterance-construction
   Definition: >-
-    the <a>predicate</a> expressing an <a>utterance event</a>. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
+    the <a>predicate</a> expressing an <a>utterance event</a>. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a inf:reference>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
   Examples:
     - Sandy <e>said</e>, <dq>I'm buying the house</dq>
     - Sandy <e>told</e> me that she's buying the house
@@ -10662,7 +10590,7 @@
   AttributeOf:
     - sem:event
   Definition: >-
-    a class of <a>events</a> based on the number of <a>central participant roles</a> in the event, also described as the valency of an event. Events are divided into three valency classes: <a>monovalent events</a>, <a>bivalent events</a>, and <a>trivalent events</a>. (Section 6.1.2)
+    a class of <a>events</a> based on the number of <a>central participant roles</a> in the event, also described as the valency of an event. Events are divided into three valency classes: <a sem:monovalent>monovalent events</a>, <a sem:bivalent>bivalent events</a>, and <a sem:trivalent>trivalent events</a>. (Section 6.1.2)
 
 - Id: cxn:value-term
   Type: cxn
@@ -10782,13 +10710,11 @@
   Definition: >-
     a model of how experiences are expressed in language developed by Chafe (1977 and later publications) and elaborated in Croft (2007a). In this book, one part of this model, <a>particularizing</a>, is described with respect to the structure of <a>referring phrases</a>. (Section 4.1.1)
 
-- Id: sem:weather
+- Id: sem:weather-event
   Type: sem
-  Name: weather
+  Name: weather event
   SubtypeOf:
     - sem:event
-  ValueOf:
-    - sem:avalent
   AssociatedTo:
     - cxn:event-central-construction
   Definition: >-
@@ -10977,6 +10903,8 @@
     - 1st person
   SubtypeOf:
     - sem:person-deixis
+  AttributeOf:
+    - sem:speaker
   Definition: ''
   FromGlossary: false
 
@@ -10987,6 +10915,8 @@
     - 2nd person
   SubtypeOf:
     - sem:person-deixis
+  AttributeOf:
+    - sem:addressee
   Definition: ''
   FromGlossary: false
 
@@ -10997,30 +10927,32 @@
     - 3rd person
   SubtypeOf:
     - sem:person-deixis
+  AttributeOf:
+    - sem:other
   Definition: ''
   FromGlossary: false
 
 - Id: sem:speaker
   Type: sem
   Name: speaker
-  ValueOf:
-    - sem:first-person
+  SubtypeOf:
+    - sem:object-concept
   Definition: ''
   FromGlossary: false
 
 - Id: sem:addressee
   Type: sem
   Name: addressee
-  ValueOf:
-    - sem:second-person
+  SubtypeOf:
+    - sem:object-concept
   Definition: ''
   FromGlossary: false
 
 - Id: sem:other
   Type: sem
   Name: other
-  ValueOf:
-    - sem:third-person
+  SubtypeOf:
+    - sem:object-concept
   Definition: ''
   FromGlossary: false
 
@@ -11043,8 +10975,6 @@
 - Id: sem:manner
   Type: sem
   Name: manner
-  SubtypeOf:
-    - sem:entity
   AttributeOf:
     - sem:event
   Definition: ''
@@ -11099,20 +11029,14 @@
   Name: person
   SubtypeOf:
     - sem:object-concept
-  ValueOf:
-    - sem:human
   Definition: ''
   FromGlossary: false
-
 
 - Id: sem:thing
   Type: sem
   Name: thing
   SubtypeOf:
     - sem:object-concept
-  ValueOf:
-    - sem:animate
-    - sem:inanimate
   Definition: ''
   FromGlossary: false
 
@@ -11121,8 +11045,6 @@
   Name: place
   SubtypeOf:
     - sem:object-concept
-  ValueOf:
-    - sem:inanimate
   Definition: ''
   FromGlossary: false
 
@@ -11203,7 +11125,7 @@
   Type: sem
   Name: vague numeral
   SubtypeOf:
-    - sem:entity
+    - sem:event
   Definition: ''
   FromGlossary: false
 
@@ -11272,9 +11194,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: sem:spieces
+- Id: sem:species
   Type: sem
-  Name: spieces
+  Name: species
   SubtypeOf:
     - sem:event
   Definition: ''
@@ -11398,6 +11320,9 @@
   Name: avalent
   SubtypeOf:
     - sem:valency
+  AttributeOf:
+    - sem:existence-event
+    - sem:weather-event
   Definition: ''
   FromGlossary: false
 
@@ -11407,9 +11332,6 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
-  ValueOf:
-    - sem:bivalent-event
-    - sem:trivalent-event
   Definition: ''
   FromGlossary: false
 
@@ -11435,8 +11357,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:bivalent-event
   Definition: ''
   FromGlossary: false
 
@@ -11446,8 +11366,6 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
-  ValueOf:
-    - sem:bivalent-event
   Definition: ''
   FromGlossary: false
 
@@ -11459,8 +11377,6 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
-  ValueOf:
-    - sem:trivalent-event
   Definition: ''
   FromGlossary: false
 
@@ -11472,8 +11388,6 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
-  ValueOf:
-    - sem:trivalent-event
   Definition: ''
   FromGlossary: false
 
@@ -11482,6 +11396,8 @@
   Name: controlled
   SubtypeOf:
     - sem:causal-control
+  AttributeOf:
+    - sem:controlled-event
   Definition: ''
   FromGlossary: false
 
@@ -11490,6 +11406,8 @@
   Name: uncontrolled
   SubtypeOf:
     - sem:causal-control
+  AttributeOf:
+    - sem:uncontrolled-event
   Definition: ''
   FromGlossary: false
 
@@ -11498,22 +11416,28 @@
   Name: spontaneous
   SubtypeOf:
     - sem:causal-control
+  AttributeOf:
+    - sem:spontaneous-event
   Definition: ''
   FromGlossary: false
 
-- Id: sem:direct
+- Id: sem:direct-causation
   Type: sem
-  Name: direct
+  Name: direct causation
   SubtypeOf:
     - sem:causal-directness
+  AttributeOf:
+    - sem:direct-causation-event
   Definition: ''
   FromGlossary: false
 
-- Id: sem:indirect
+- Id: sem:indirect-causation
   Type: sem
-  Name: indirect
+  Name: indirect causation
   SubtypeOf:
     - sem:causal-directness
+  AttributeOf:
+    - sem:indirect-causation-event
   Definition: ''
   FromGlossary: false
 
@@ -11522,6 +11446,8 @@
   Name: sociative causation
   SubtypeOf:
     - sem:causal-directness
+  AttributeOf:
+    - sem:sociative-causation-event
   Definition: ''
   FromGlossary: false
 
@@ -11530,6 +11456,8 @@
   Name: reflexive
   SubtypeOf:
     - sem:causal-cyclicality
+  AttributeOf:
+    - sem:reflexive-event
   Definition: ''
   FromGlossary: false
 
@@ -11538,6 +11466,8 @@
   Name: reciprocal
   SubtypeOf:
     - sem:causal-cyclicality
+  AttributeOf:
+    - sem:reciprocal-event
   Definition: ''
   FromGlossary: false
 
@@ -11546,6 +11476,8 @@
   Name: chaining
   SubtypeOf:
     - sem:causal-cyclicality
+  AttributeOf:
+    - sem:chaining-event
   Definition: ''
   FromGlossary: false
 
@@ -11554,6 +11486,8 @@
   Name: collective
   SubtypeOf:
     - sem:causal-cyclicality
+  AttributeOf:
+    - sem:collective-event
   Definition: ''
   FromGlossary: false
 
@@ -11562,6 +11496,8 @@
   Name: introverted
   SubtypeOf:
     - sem:causal-cyclicality
+  AttributeOf:
+    - sem:introverted
   Definition: ''
   FromGlossary: false
 
@@ -11570,6 +11506,8 @@
   Name: extroverted
   SubtypeOf:
     - sem:causal-cyclicality
+  AttributeOf:
+    - sem:extroverted-event
   Definition: ''
   FromGlossary: false
 
@@ -11578,6 +11516,8 @@
   Name: attending
   SubtypeOf:
     - sem:causal-directionality
+  AttributeOf:
+    - sem:attending
   Definition: ''
   FromGlossary: false
 
@@ -11586,6 +11526,8 @@
   Name: affecting
   SubtypeOf:
     - sem:causal-directionality
+  AttributeOf:
+    - sem:affecting-event
   Definition: ''
   FromGlossary: false
 
@@ -11594,6 +11536,8 @@
   Name: experience
   SubtypeOf:
     - sem:causal-directionality
+  AttributeOf:
+    - sem:experience-event
   Definition: ''
   FromGlossary: false
 
@@ -11602,6 +11546,8 @@
   Name: manner profile
   SubtypeOf:
     - sem:causal-chain-profile
+  AttributeOf:
+    - sem:manner-event
   Definition: ''
   FromGlossary: false
 
@@ -11610,6 +11556,8 @@
   Name: result profile
   SubtypeOf:
     - sem:causal-chain-profile
+  AttributeOf:
+    - sem:result-event
   Definition: ''
   FromGlossary: false
 
@@ -12828,18 +12776,149 @@
   Definition: ''
   FromGlossary: false
 
-- Id: inf:nonsubject-argument
-  Type: inf
-  Name: nonsubject argument
-  SubtypeOf:
-    - inf:argument
-  Definition: ''
-  FromGlossary: false
-
 - Id: cxn:hanging-topic-construction
   Type: cxn
   Name: hanging topic construction
   SubtypeOf:
     - cxn:topic-comment-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:non-high-topicality
+  Type: inf
+  Name: non-high topicality
+  SubtypeOf:
+    - inf:topicality
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:non-low-topicality
+  Type: inf
+  Name: non-low topicality
+  SubtypeOf:
+    - inf:topicality
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:high-topicality
+  Type: inf
+  Name: high topicality
+  SubtypeOf:
+    - inf:topicality
+    - inf:non-low-topicality
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:mid-topicality
+  Type: inf
+  Name: mid topicality
+  SubtypeOf:
+    - inf:topicality
+    - inf:non-high-topicality
+    - inf:non-low-topicality
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:low-topicality
+  Type: inf
+  Name: low topicality
+  SubtypeOf:
+    - inf:topicality
+    - inf:non-low-topicality
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:highest-topicality
+  Type: inf
+  Name: highest topicality
+  SubtypeOf:
+    - inf:high-topicality
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:high-accessibility
+  Type: inf
+  Name: high accessibility
+  SubtypeOf:
+    - inf:accessibility
+  AttributeOf:
+    - inf:active-referent
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:medium-accessibility
+  Type: inf
+  Name: medium accessibility
+  SubtypeOf:
+    - inf:accessibility
+  AttributeOf:
+    - inf:semi-active-referent
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:low-accessibility
+  Type: inf
+  Name: low accessibility
+  SubtypeOf:
+    - inf:accessibility
+  AttributeOf:
+    - inf:inactive-referent
+    - inf:inferrable-referent
+    - inf:discourse-deixis
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:inceptive
+  Type: sem
+  Name: inceptive
+  SubtypeOf:
+    - sem:phasal-aspect
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:completive
+  Type: sem
+  Name: completive
+  SubtypeOf:
+    - sem:phasal-aspect
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:terminative
+  Type: sem
+  Name: terminative
+  SubtypeOf:
+    - sem:phasal-aspect
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:continuative
+  Type: sem
+  Name: continuative
+  Alias:
+    - sem:preservative
+  SubtypeOf:
+    - sem:phasal-aspect
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:time-reference
+  Type: sem
+  Name: time reference
+  AttributeOf:
+    - sem:utterance-event
+    - sem:propositional-attitude-event
+    - sem:evaluative-event
+    - sem:perception-event
+    - sem:desiderative-event
+    - sem:manipulative-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:orientation
+  Type: sem
+  Name: orientation
+  AttributeOf:
+    - sem:event-relation
   Definition: ''
   FromGlossary: false
