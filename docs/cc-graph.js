@@ -1,4 +1,14 @@
 
+///////////////////////////////////////////////////////////////////////////////
+// Global variables
+
+var ccNodes, ccEdges; // Defined in cc-graph-data.js
+var network;
+var isFiltered;
+
+///////////////////////////////////////////////////////////////////////////////
+// Global options
+
 var networkOptions = {
     edges: {
         width: 3,
@@ -9,6 +19,8 @@ var networkOptions = {
     },
     interaction: {
         hover: true,
+        multiselect: true,
+        tooltipDelay: 1000,
     },
     physics: {
         solver: "forceAtlas2Based", // barnesHut, repulsion
@@ -19,6 +31,8 @@ var networkOptions = {
             theta: 0.3,
             springLength: 100,
         },
+        barnesHut: {
+        },
         repulsion: {
             nodeDistance: 200,
             centralGravity: 0.1,
@@ -27,7 +41,25 @@ var networkOptions = {
     },
 };
 
-var graphNames = {
+var colors = {
+    0: "lightgreen",
+    1: "gold",
+
+    // SubtypeOf: This will inherit from the node color
+    ConstituentOf: "orangered", ExpressionOf: "orangered",
+    HeadOf: "royalblue", ModeledOn: "royalblue", AttributeOf: "royalblue",
+    RoleOf: "mediumorchid", RecruitedFrom: "mediumorchid",
+    FillerOf: "darkgoldenrod", 
+    ValueOf: "slategrey",
+};
+
+var dashes = {
+    ModeledOn: true, RecruitedFrom: true,
+    RoleOf: true, FillerOf: true,
+    AttributeOf: true, ValueOf: true,
+}
+
+var ccNames = {
     cxn: "Constructions",
     str: "Strategies",
     "str+cxn": "Cxn -> Str",
@@ -35,97 +67,70 @@ var graphNames = {
     inf: "Information packaging",
 };
 
-var graphRelations = {
+var ccRelations = {
     cxn: ["SubtypeOf", "ConstituentOf", "HeadOf"],
     str: ["SubtypeOf", "ConstituentOf"],
-    "str+cxn": ["ExpressionOf", "ModeledOn", "RecruitedFrom"],
+    "str+cxn": ["SubtypeOf", "ExpressionOf", "ModeledOn", "RecruitedFrom"],
     sem: ["SubtypeOf", "ConstituentOf", "AttributeOf", "RoleOf", "FillerOf", "ValueOf"],
     inf: ["SubtypeOf", "ConstituentOf", "AttributeOf", "ValueOf"],
 };
 
-var colors = {
-    0: "lightgreen",
-    1: "gold",
 
-    SubtypeOf: "limegreen", ExpressionOf: "limegreen",
-    ConstituentOf: "orangered", ModeledOn: "orangered",
-    HeadOf: "royalblue", RecruitedFrom: "royalblue", AttributeOf: "royalblue",
-    RoleOf: "darkturquoise",
-    FillerOf: "darkorange",
-    ValueOf: "grey",
-};
+///////////////////////////////////////////////////////////////////////////////
+// Utility functions
 
-var ccNodes, ccEdges;
-var network, gNodes, gEdges;
-
-function init() {
+function getGraphTypes() {
     let select = document.getElementById("ccGraphType");
-    let checkboxes = document.getElementById("ccRelations");
-    for (let ccTypes in graphNames) {
-        let ccName = graphNames[ccTypes];
-        select.innerHTML += `<option value="${ccTypes}">${ccName}</option>`;
-        let checked = true;
-        for (let relId of graphRelations[ccTypes]) {
-            if (!document.getElementById(relId)) {
-                checkboxes.innerHTML += 
-                    `<label style="color:${colors[relId]}; display:none">
-                    <input type="checkbox" id="${relId}" onchange="selectGraph()" ${checked?"checked":""}/>
-                    ${relId} &nbsp; </label>`;
-            }
-            checked = false;
+    return select.value ? select.value.split("+") : null;
+}
+
+function getGraphNodeIds() {
+    let nodeIds = {};
+    let ccTypes = getGraphTypes();
+    if (ccTypes) {
+        for (let n of ccNodes) {
+            if (ccTypes.includes(n.type)) nodeIds[n.id] = true;
         }
     }
-    document.getElementById("statistics").innerHTML = `${ccNodes.length} CCs, ${ccEdges.length} edges.`;
-    let container = document.getElementById("ccNetwork");
-    network = new vis.Network(container, {nodes:[], edges:[]}, networkOptions);
-
-    network.on("startStabilizing", function (params) {
-        document.startTime = new Date().getTime();
-        console.log("Stabilization started");
-    });
-    network.on("stabilizationProgress", function (params) {
-        params.time = (new Date().getTime() - document.startTime) / 1000;
-        console.log("Stabilization progress:", params);
-    });
-    network.on("stabilizationIterationsDone", function (params) {
-        params = {};
-        params.time = (new Date().getTime() - document.startTime) / 1000;
-        console.log("Finished stabilization interations:", params);
-    });
-    network.on("stabilized", function (params) {
-        params.time = (new Date().getTime() - document.startTime) / 1000;
-        console.log("Stabilized!", params);
-    });
-    // network.on("dragStart", (params) => {
-    //     network.setOptions({physics: {enabled: false}});
-    // });
-    // network.on("dragEnd", (params) => {
-    //     network.setOptions({physics: {enabled: true}});
-    // });
+    return nodeIds;
 }
 
-function searchCC() {
-    let search_term = document.getElementById("ccSearch").value;
-    search_term = search_term.trim().replace(/\W+/g, ' ');
-    if (search_term.length < 3) {
-        network.unselectAll();
-        return;
-    }
-    search_term = search_term.replaceAll(' ', '.*?');
-    let regex = new RegExp(search_term, 'i');
-    let selected = gNodes.flatMap((n) => {
-        if (!regex.test(n.name) && !regex.test(n.id)) return [];
-        return n.id;
-    });
-    network.setSelection({nodes: selected});
+function getGraphNodes() {
+    let nodeIds = getGraphNodeIds();
+    return ccNodes.filter((n) => nodeIds[n.id]);
 }
 
-function selectGraph() {
+function getGraphEdges() {
+    let ccTypes = getGraphTypes();
+    if (!ccTypes) return [];
+    let relations = getGraphRelations();
+    let nodeIds = {};
+    for (let n of ccNodes) nodeIds[n.id] = ccTypes.includes(n.type);
+    return ccEdges.filter((e) => 
+        relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]
+    );
+}
+
+function getFilteredNodes() {
+    return ccNodes.filter((n) => network.body.nodes[n.id]);
+}
+
+function getFilteredEdges() {
+    return ccEdges.filter((e) => network.body.edges[e.id]);
+}
+
+function isUnconnectedNode(n) {
+    return network.getConnectedEdges(n.id).length === 0;
+}
+
+function getUnconnectedNodes() {
+    return getFilteredNodes().filter(isUnconnectedNode);
+}
+
+function getGraphRelations() {
     let select = document.getElementById("ccGraphType");
-    if (!select.value) return;
-    let ccTypes = select.value.split("+");
-    let relations = graphRelations[select.value];
-
+    let relations = ccRelations[select.value];
+    if (!relations) return [];
     // Only show the checkboxes for the relations that are relevant to this graph.
     for (let lbl of document.getElementById("ccRelations").querySelectorAll("label")) {
         let show = relations.includes(lbl.querySelector("input").id);
@@ -134,64 +139,228 @@ function selectGraph() {
     relations = relations.filter((rel) => document.getElementById(rel).checked);
     if (relations.length === 0) {
         // If no relations are selected, check the first one.
-        let rel = graphRelations[select.value][0];
+        let rel = ccRelations[select.value][0];
         document.getElementById(rel).checked = true;
         relations = [rel];
     }
+    return relations;
+}
 
-    // Use current node positions as starting points for stabilization.
-    let nodePos = {};
-    for (let n of gNodes || []) nodePos[n.id] = network.getPosition(n.id);
+function setNodeLabel(n) {
+    let attr = document.getElementById("ccShow").value;
+    n.label = n[attr].replaceAll("--", "-").replaceAll(" ", "\n");
+    if (attr === "id") n.label = n.label.replaceAll("-", "-\n");
+}
 
-    let showID = document.getElementById("ccShow").value === "id";
-    gNodes = ccNodes.flatMap((n) => {
-        // Select only the nodes of the relevant CC type.
-        if (!ccTypes.includes(n.type)) return [];
-        let lbl = showID ? n.id.replaceAll("-", "-\n") : n.label.replaceAll(" ", "\n");
-        let color = colors[ccTypes.indexOf(n.type)];
-        let n2 = {id: n.id, name: n.label, label: lbl, type: n.type, color: {background: color, border: color}};
-        Object.assign(n2, nodePos[n.id]);
-        return n2;
-    });
-    let nodeIds = gNodes.map((n) => n.id);
+function setNodeColor(n) {
+    let color = colors[getGraphTypes().indexOf(n.type)];
+    n.color = {background: color, border: color};
+}
 
-    gEdges = ccEdges.flatMap((e) => {
-        // Select only the edges that go between two visible nodes.
-        if (!(relations.includes(e.rel) && nodeIds.includes(e.from) && nodeIds.includes(e.to))) return [];
-        let e2 = {from: e.from, to: e.to};
-        e2.color = colors[e.rel];
-        return e2;
-    });
 
-    // Remember the nodes that are not used in this graph.
-    let usedIds = {};
-    for (let e of gEdges) usedIds[e.from] = usedIds[e.to] = true;
-    let unusedNodes = gNodes.filter((n) => !usedIds[n.id]);
-    gNodes = gNodes.filter((n) => usedIds[n.id]);
-    console.log(`${select.options[select.selectedIndex].text}. Edges: ${gEdges.length}. Nodes: ${gNodes.length}. Unused: ${unusedNodes.length}.`);
+///////////////////////////////////////////////////////////////////////////////
+// Initialisation
 
-    // Set the stabilization solver.
-    let solver = document.getElementById("ccSolver").value;
-    let options = {physics: {solver: solver}};
-    network.setOptions(options);
+function init() {
+    for (let e of ccEdges) {
+        if (colors[e.rel]) e.color = colors[e.rel];
+        e.dashes = dashes[e.rel];
+        e.id = `${e.rel}--${e.from}--${e.to}`;
+    }
+    let select = document.getElementById("ccGraphType");
+    let checkboxes = document.getElementById("ccRelations");
+    for (let ccTypes in ccNames) {
+        let ccName = ccNames[ccTypes];
+        select.innerHTML += `<option value="${ccTypes}">${ccName}</option>`;
+        let checked = true;
+        for (let relId of ccRelations[ccTypes]) {
+            if (!document.getElementById(relId)) {
+                let style = (
+                    colors[relId] ? `color:${colors[relId]}`
+                    : `background-image: linear-gradient(to right, ${colors[0]}, ${colors[1]}); background-clip: text; color: rgb(0 0 0 / 40%)`
+                );
+                checkboxes.innerHTML += 
+                    `<label style="display:none">
+                    <input type="checkbox" id="${relId}" onchange="selectRelation()" ${checked?"checked":""}/>
+                    <span style="${style}">${relId}</span> &nbsp; </label>`;
+            }
+            checked = false;
+        }
+    }
+    let container = document.getElementById("ccNetwork");
+    network = new vis.Network(container, {nodes:[], edges:[]}, networkOptions);
+    network.on("selectNode", selectionChanged);
+    network.on("deselectNode", selectionChanged);
+    selectionChanged();
+}
 
-    // Set the new nodes and edges.
-    network.setData({nodes: gNodes, edges: gEdges});
+
+///////////////////////////////////////////////////////////////////////////////
+// Updating the user interface
+
+function selectionChanged() {
+    let hasSelection = network.getSelectedNodes().length > 0;
+    let hasUnconnected = getUnconnectedNodes().length > 0;
+    let willStabilize = document.getElementById("ccStabilize").checked;
+    document.getElementById("ccSolver").disabled = !willStabilize;
+    document.getElementById("ccSearch").disabled = !getGraphTypes();
+    document.getElementById("ccUnconnected").disabled = !hasUnconnected;
+    document.getElementById("ccExpand").disabled = !hasSelection;
+    document.getElementById("ccFilter").disabled = !hasSelection;
+    document.getElementById("ccRemove").disabled = !hasSelection;
+    document.getElementById("ccClear").disabled = !isFiltered;
+    showStatistics();
+}
+
+function showStatistics() {
+    let stat = document.getElementById("statistics");
+    if (!getGraphTypes()) {
+        stat.innerText = `${ccNodes.length} CCs; ${ccEdges.length} relations`;
+        return;
+    }
+    let unconnected = getUnconnectedNodes().length;
+    let selected = network.getSelectedNodes().length;
+    stat.innerText = `${getFilteredNodes().length} nodes`;
+    if (isFiltered) stat.innerText += ` (of ${getGraphNodes().length})`;
+    if (unconnected > 0) stat.innerText += `, ${unconnected} unconnected`;
+    if (selected > 0) stat.innerText += `, ${selected} selected`;
+    stat.innerText += `; ${getFilteredEdges().length} edges`;
+    if (isFiltered) stat.innerText += ` (of ${getGraphEdges().length})`;
+}
+
+function updateNodes() {
+    for (let n of getGraphNodes()) {
+        if (network.body.nodes[n.id]) {
+            Object.assign(n, network.getPosition(n.id));
+        }
+        setNodeLabel(n);
+        setNodeColor(n);
+    }
+}
+
+function updateSolver() {
+    let physics = {};
+    physics.enabled = document.getElementById("ccStabilize").checked;
+    if (physics.enabled) {
+        physics.solver = document.getElementById("ccSolver").value;
+    }
+    network.setOptions({physics: physics});    
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// User interface actions
+
+function searchNodes() {
+    let searchBox = document.getElementById("ccSearch");
+    if (!getGraphTypes()) {
+        searchBox.value = "";
+        return;
+    }
+    let searchTerm = searchBox.value.trim().replace(/\W+/g, ' ');
+    if (searchTerm.length < 3) return;
+    searchTerm = searchTerm.replaceAll(' ', '.*?');
+    let regex = new RegExp(searchTerm, 'i');
+    let selected = getGraphNodes().flatMap((n) => 
+        network.body.nodes[n.id] && (regex.test(n.name) || regex.test(n.id)) ? n.id : []
+    );
+    network.selectNodes(selected);
+    selectionChanged();
+}
+
+function selectUnconnected() {
+    let unconnected = getUnconnectedNodes();
+    if (unconnected.length === 0) return;
+    network.selectNodes(unconnected.map((n) => n.id));
+    selectionChanged();
+}
+
+function expandSelection() {
+    let selected = network.getSelectedNodes();
+    if (selected.length === 0) return;
+    let newnodes = selected.flatMap((n) => network.getConnectedNodes(n));
+    network.selectNodes(selected.concat(newnodes));
+    selectionChanged();
+}
+
+function removeSelected() {
+    let selected = network.getSelectedNodes();
+    if (selected.length === 0) return;
+    network.deleteSelected();
+    network.selectNodes([]);
+    isFiltered = true;
+    selectionChanged();
+}
+
+function clearFilter() {
+    let selected = network.getSelectedNodes();
+    network.setData({nodes: getGraphNodes(), edges: getGraphEdges()});
+    network.selectNodes(selected);
+    isFiltered = false;
     document.getElementById("ccSearch").value = "";
+    selectionChanged();
+}
 
-    // Calculate and show information and statistics.
-    document.getElementById("statistics").innerHTML = `${gNodes.length} CCs, ${gEdges.length} edges.`;
-    unusedNodes.sort((a,b) => a.label.localeCompare(b.label));
-    let unrelated = document.getElementById("ccUnrelated");
-    unrelated.innerHTML = `<h3>${unusedNodes.length} unrelated CCs</h3>`;
-    for (let cct of ccTypes) {
-        let ulist = "";
-        for (let n of unusedNodes) {
-            if (n.type === cct) {
-                ulist += `<li>${n.label.replaceAll("-\n", "-")}</li>`;
+function filterSelected() {
+    let selected = network.getSelectedNodes();
+    if (selected.length === 0) return;
+    let relations = getGraphRelations();
+    let nodeIds = {};
+    let radius = 2;
+    let agenda = selected;
+    for (let i = 0; i < radius; i++) {
+        let newAgenda = [];
+        for (let n of agenda) {
+            if (!nodeIds[n]) {
+                nodeIds[n] = true;
+                for (let e of ccEdges) {
+                    if (relations.includes(e.rel)) {
+                        if (n === e.from) newAgenda.push(e.to);
+                        else if (n === e.to) newAgenda.push(e.from);
+                    }
+                }
             }
         }
-        unrelated.innerHTML += `<strong>${graphNames[cct]}</strong><ul>${ulist}</ul>`;
+        agenda = newAgenda;
     }
+    for (let n of agenda) nodeIds[n] = true;
+
+    let filteredNodes = ccNodes.filter((n) => nodeIds[n.id]);
+    let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
+    network.setData({nodes: filteredNodes, edges: filteredEdges});
+    network.selectNodes(selected);
+    isFiltered = true;
+    selectionChanged();
+}
+
+function changeSettings() {
+    updateNodes();
+    updateSolver();
+    let selected = network.getSelectedNodes();
+    network.setData({nodes: getFilteredNodes(), edges: getFilteredEdges()});
+    network.selectNodes(selected);
+    selectionChanged();
+}
+
+function selectRelation() {
+    updateNodes();
+    updateSolver();
+    let selected = network.getSelectedNodes();
+    if (!isFiltered) {
+        network.setData({nodes: getGraphNodes(), edges: getGraphEdges()});
+        document.getElementById("ccSearch").value = "";
+    } else {
+        let relations = getGraphRelations();
+        let nodes = ccNodes.filter((n) => network.body.nodes[n.id]);
+        let edges = ccEdges.filter((e) => relations.includes(e.rel) && network.body.nodes[e.from] && network.body.nodes[e.to]);
+        network.setData({nodes: nodes, edges: edges});
+    }
+    network.selectNodes(selected);
+    selectionChanged();
+}
+
+function selectGraph() {
+    isFiltered = false;
+    selectRelation();
 }
 
