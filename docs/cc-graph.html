@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="vis-network.min.js"></script>
+<script type="text/javascript" src="cc-graph-data.js"></script>
+<script type="text/javascript" src="cc-graph.js"></script>
+<title>CC network</title>
+<style>
+  body {
+    background-color: gainsboro;
+    margin: 20px;
+    font-family: "Helvetica Neue", Helvetica, Tahomas, Arial, sans-serif;
+  }
+  h1, h2, h3 {
+    margin: 10px 0;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  label {
+    text-wrap: nowrap;
+  }
+  select:hover, input:hover, label:hover {
+    cursor: pointer;
+  }
+  #ccNetwork {
+    width: 90vw;
+    height: 60vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+  }
+  #ccNetwork div.vis-tooltip {
+    max-width: 50%;
+    text-wrap: wrap;
+    font-family: "Helvetica Neue", Helvetica, Tahomas, Arial, sans-serif;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+</style>
+</head>
+
+<body onload="init()">
+  <h1>Visualization of the Comparative Concepts database</h1>
+  <p>Graph: <select id="ccGraphType" onchange="selectGraph()">
+      <option value="" selected disabled>Select a graph</option>
+    </select> &nbsp;
+    <span id="ccRelations"></span>
+  </p>
+  <p>
+    <label>Show:
+      <select id="ccShow" onchange="changeSettings()">
+        <option value="name" selected>Names</option>
+        <option value="id">IDs</option>
+      </select>
+    </label>
+    &nbsp;
+    <label>Stabilize:
+      <input type="checkbox" id="ccStabilize" checked onchange="changeSettings()"/>
+      <select id="ccSolver" onchange="changeSettings()">
+        <option value="forceAtlas2Based" selected>Atlas2</option>
+        <option value="barnesHut">Barnes-Hut</option>
+        <option value="repulsion">Repulsion</option>
+      </select>
+    </label>
+    &nbsp;
+    Search: <input type="search" id="ccSearch" size="30" placeholder="Type at least 3 characters" oninput="searchNodes()"/>
+  </p>
+  <p>
+    <button id="ccUnconnected" onclick="selectUnconnected()">Select unconnected</button>
+    <button id="ccExpandUpwards" onclick="expandSelection('from')">Expand upwards</button>
+    <button id="ccExpandDownwards" onclick="expandSelection('to')">Expand downwards</button>
+    &nbsp;&nbsp;
+    <button id="ccRemoveUnselected" onclick="keepSelected()">Keep selected</button>
+    <button id="ccRemoveSelected" onclick="removeSelected()">Remove selected</button>
+    &nbsp;&nbsp;
+    <button id="ccClear" onclick="clearFilter()">Clear filter</button>
+  </p>
+  <div id="ccNetwork"></div>
+  <p>
+    Graph layout by <a target="_blank" href="https://visjs.github.io/vis-network/docs/network/">Vis-Network</a>.
+    &nbsp; Current graph: <span id="statistics"></span>
+  </p>
+  <p>
+    Use the scroll wheel or pinch to zoom in/out.
+    Click-and-hold to (de)select nodes, click-and-drag to move nodes.
+    Hover over a node to see its definition.
+  </p>
+  <div id="extraInfo"></div>
+</body>
+</html>
