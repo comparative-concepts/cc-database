@@ -3404,6 +3404,7 @@
 - Id: inf:ditransitive-predication
   Type: inf
   Name: ditransitive predication
+  Status: deleted
   SubtypeOf:
     - inf:predication
   AssociatedTo:
@@ -5523,6 +5524,7 @@
 - Id: inf:intransitive-predication
   Type: inf
   Name: intransitive predication
+  Status: deleted
   SubtypeOf:
     - inf:predication
   AssociatedTo:
@@ -9826,6 +9828,7 @@
 - Id: inf:subject-identity
   Type: inf
   Name: subject identity
+  Status: deleted
   SubtypeOf:
     - inf:token-identity
   Definition: ''
@@ -10326,6 +10329,7 @@
 - Id: inf:transitive-predication
   Type: inf
   Name: transitive predication
+  Status: deleted
   SubtypeOf:
     - inf:predication
   AssociatedTo:
@@ -12824,7 +12828,7 @@
   Name: low topicality
   SubtypeOf:
     - inf:topicality
-    - inf:non-low-topicality
+    - inf:non-high-topicality
   Definition: ''
   FromGlossary: false
 
