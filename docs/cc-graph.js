@@ -50,13 +50,11 @@ var colors = {
     HeadOf: "royalblue", ModeledOn: "royalblue", AttributeOf: "royalblue",
     RoleOf: "mediumorchid", RecruitedFrom: "mediumorchid",
     FillerOf: "darkgoldenrod", 
-    ValueOf: "slategrey",
 };
 
 var dashes = {
     ModeledOn: true, RecruitedFrom: true,
     RoleOf: true, FillerOf: true,
-    AttributeOf: true, ValueOf: true,
 }
 
 var ccNames = {
@@ -71,8 +69,8 @@ var ccRelations = {
     cxn: ["SubtypeOf", "ConstituentOf", "HeadOf"],
     str: ["SubtypeOf", "ConstituentOf"],
     "str+cxn": ["SubtypeOf", "ExpressionOf", "ModeledOn", "RecruitedFrom"],
-    sem: ["SubtypeOf", "ConstituentOf", "AttributeOf", "RoleOf", "FillerOf", "ValueOf"],
-    inf: ["SubtypeOf", "ConstituentOf", "AttributeOf", "ValueOf"],
+    sem: ["SubtypeOf", "ConstituentOf", "AttributeOf", "RoleOf", "FillerOf"],
+    inf: ["SubtypeOf", "ConstituentOf", "AttributeOf"],
 };
 
 
