@@ -350,8 +350,14 @@ class CCDB:
                         "to": target,
                         "rel": rel,
                     })
-        print(f"var ccNodes = {json.dumps(nodes)};")
-        print(f"var ccEdges = {json.dumps(edges)};")
+        print(f"var ccNodes = [")
+        for n in nodes:
+            print(f"   {json.dumps(n)},")
+        print("];")
+        print(f"var ccEdges = [")
+        for e in edges:
+            print(f"   {json.dumps(e)},")
+        print("];")
 
     ###########################################################################
     ## Export to Språkbanken Karp JSON-lines format
