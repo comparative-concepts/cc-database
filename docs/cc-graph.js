@@ -196,6 +196,7 @@ function init() {
     network = new vis.Network(container, {nodes:[], edges:[]}, networkOptions);
     network.on("selectNode", selectionChanged);
     network.on("deselectNode", selectionChanged);
+    network.on("dragEnd", selectionChanged);
     selectionChanged();
 }
 

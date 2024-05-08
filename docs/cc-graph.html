@@ -68,8 +68,8 @@
   </p>
   <p>
     <button id="ccUnconnected" onclick="selectUnconnected()">Select unconnected</button>
-    <button id="ccExpandUpwards" onclick="expandSelection('from')">Expand upwards</button>
-    <button id="ccExpandDownwards" onclick="expandSelection('to')">Expand downwards</button>
+    <button id="ccExpandUpwards" onclick="expandSelection('to')">Expand upwards</button>
+    <button id="ccExpandDownwards" onclick="expandSelection('from')">Expand downwards</button>
     &nbsp;&nbsp;
     <button id="ccRemoveUnselected" onclick="keepSelected()">Keep selected</button>
     <button id="ccRemoveSelected" onclick="removeSelected()">Remove selected</button>
@@ -85,6 +85,7 @@
     Use the scroll wheel or pinch to zoom in/out.
     Click-and-hold to (de)select nodes, click-and-drag to move nodes.
     Hover over a node to see its definition.
+    Click on the background to unselect all nodes.
   </p>
   <div id="extraInfo"></div>
 </body>
