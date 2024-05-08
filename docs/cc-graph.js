@@ -18,25 +18,43 @@ var networkOptions = {
         shape: "box",
     },
     interaction: {
-        hover: true,
-        multiselect: true,
-        tooltipDelay: 1000,
+        hover: true, // "nodes use their hover colors when the mouse moves over them"
+        multiselect: true, // "a longheld click (or touch) as well as a control-click will add to the selection"
+        tooltipDelay: 1000, // "the amount of time in milliseconds it takes before the tooltip is shown"
+    },
+    layout: {
+        improvedLayout: true, // "the network will use the Kamada Kawai algorithm for initial layout"
+        clusterThreshold: 1000, // "cluster threshold to which improvedLayout applies"
     },
     physics: {
-        solver: "forceAtlas2Based", // Alternatives: barnesHut, repulsion
+        solver: "forceAtlas2Based",
         stabilization: {
-            iterations: 100,
+            iterations: 100, // "stabilize the network on load up til a maximum number of iterations"
         },
         forceAtlas2Based: {
-            theta: 0.3,
-            springLength: 100,
-        },
-        barnesHut: {
+            theta: 0.5, // "higher values are faster but generate more errors, lower values are slower but with less errors"
+            gravitationalConstant: -50, // "if you want the repulsion to be stronger, decrease the gravitational constant... falloff is linear instead of quadratic"
+            centralGravity: 0.01, // "central gravity attractor to pull the entire network back to the center"
+            springConstant: 0.1, // "higher values mean stronger springs"
+            springLength: 100, // "the rest length of the spring"
+            damping: 0.1, // "how much of the velocity from the previous physics simulation iteration carries over to the next iteration"
+            avoidOverlap: 0, // "if > 0, the size of the node is taken into account"
         },
         repulsion: {
-            nodeDistance: 200,
             centralGravity: 0.1,
             springLength: 100,
+            springConstant: 0.1,
+            nodeDistance: 200, // "range of influence for the repulsion"
+            damping: 0.1,
+        },
+        barnesHut: {
+            theta: 0.5,
+            gravitationalConstant: -10000, // "...falloff is quadratic instead of linear"
+            centralGravity: 1,
+            springLength: 100,
+            springConstant: 0.1,
+            damping: 0.1,
+            avoidOverlap: 0,
         },
     },
 };
@@ -179,6 +197,14 @@ function setNodeColor(n) {
     n.color = {background: color, border: color};
 }
 
+function setGraphData(nodes, edges) {
+    console.log(new Date().toLocaleTimeString(), `Update graph: ${nodes.length} nodes, ${edges.length} edges`);
+    let selected = network.getSelectedNodes();
+    network.setData({nodes: nodes, edges: edges});
+    network.selectNodes(selected);
+    selectionChanged();
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Initialisation
@@ -218,6 +244,8 @@ function init() {
     network.on("selectNode", selectionChanged);
     network.on("deselectNode", selectionChanged);
     network.on("dragEnd", selectionChanged);
+    network.on("startStabilizing", () => console.log(new Date().toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`));
+    network.on("stabilized", (params) => console.log(new Date().toLocaleTimeString(), `Stabilization stopped after ${params.iterations} iterations`));
     selectionChanged();
 }
 
@@ -342,12 +370,9 @@ function removeSelected() {
 
 // Clear the filter - i.e. show the full graph
 function clearFilter() {
-    let selected = network.getSelectedNodes();
-    network.setData({nodes: getGraphNodes(), edges: getGraphEdges()});
-    network.selectNodes(selected);
     isFiltered = false;
     document.getElementById("ccSearch").value = "";
-    selectionChanged();
+    setGraphData(getGraphNodes(), getGraphEdges(), true);
 }
 
 // Remove all nodes from the graph that are not selected and not a neighbor to a selected node
@@ -367,20 +392,15 @@ function keepSelected() {
     }
     let filteredNodes = ccNodes.filter((n) => nodeIds[n.id]);
     let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
-    network.setData({nodes: filteredNodes, edges: filteredEdges});
-    network.selectNodes(selected);
     isFiltered = true;
-    selectionChanged();
+    setGraphData(filteredNodes, filteredEdges, true);
 }
 
 // Things to do when any kind of settings has changed
 function changeSettings() {
     updateNodes();
     updateSolver();
-    let selected = network.getSelectedNodes();
-    network.setData({nodes: getFilteredNodes(), edges: getFilteredEdges()});
-    network.selectNodes(selected);
-    selectionChanged();
+    setGraphData(getFilteredNodes(), getFilteredEdges(), true);
 }
 
 // Update which relations/edges to include in the graph
@@ -388,18 +408,15 @@ function changeSettings() {
 function selectRelation() {
     updateNodes();
     updateSolver();
-    let selected = network.getSelectedNodes();
     if (!isFiltered) {
-        network.setData({nodes: getGraphNodes(), edges: getGraphEdges()});
         document.getElementById("ccSearch").value = "";
+        setGraphData(getGraphNodes(), getGraphEdges(), true);
     } else {
         let relations = getGraphRelations();
         let nodes = ccNodes.filter((n) => network.body.nodes[n.id]);
         let edges = ccEdges.filter((e) => relations.includes(e.rel) && network.body.nodes[e.from] && network.body.nodes[e.to]);
-        network.setData({nodes: nodes, edges: edges});
+        setGraphData(nodes, edges, true);
     }
-    network.selectNodes(selected);
-    selectionChanged();
 }
 
 // Update with a new fresh graph (clearing the selection, if any)
