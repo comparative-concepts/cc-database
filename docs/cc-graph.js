@@ -66,7 +66,7 @@ var colors = {
 
     // Relation/edge colors
     // SubtypeOf will inherit from the node color
-    ConstituentOf: "orangered", ExpressionOf: "orangered",
+    ConstituentOf: "red", ExpressionOf: "red",
     HeadOf: "royalblue", ModeledOn: "royalblue", AttributeOf: "royalblue",
     RoleOf: "mediumorchid", RecruitedFrom: "mediumorchid",
     FillerOf: "darkgoldenrod", 
@@ -260,12 +260,14 @@ function selectionChanged() {
     let willStabilize = document.getElementById("ccStabilize").checked;
     document.getElementById("ccSolver").disabled = !willStabilize;
     document.getElementById("ccSearch").disabled = !getGraphTypes();
-    document.getElementById("ccUnconnected").disabled = !hasUnconnected;
+    document.getElementById("ccClearSelection").disabled = !hasSelection;
+    document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
     document.getElementById("ccExpandUpwards").disabled = !hasSelection;
     document.getElementById("ccExpandDownwards").disabled = !hasSelection;
-    document.getElementById("ccRemoveUnselected").disabled = !hasSelection;
-    document.getElementById("ccRemoveSelected").disabled = !hasSelection;
-    document.getElementById("ccClear").disabled = !isFiltered;
+    document.getElementById("ccClearFilter").disabled = !isFiltered;
+    document.getElementById("ccShowNeighbors").disabled = !isFiltered;
+    document.getElementById("ccHideUnselected").disabled = !hasSelection;
+    document.getElementById("ccHideSelected").disabled = !hasSelection;
     showStatistics();
 }
 
@@ -341,6 +343,12 @@ function searchNodes() {
     selectionChanged();
 }
 
+// Deselect all nodes
+function clearSelection() {
+    network.unselectAll();
+    selectionChanged();
+}
+
 // Select the currently unconnected nodes
 function selectUnconnected() {
     let unconnected = getUnconnectedNodes();
@@ -358,8 +366,15 @@ function expandSelection(direction) {
     selectionChanged();
 }
 
+// Clear the filter - i.e. show the full graph
+function clearFilter() {
+    isFiltered = false;
+    document.getElementById("ccSearch").value = "";
+    setGraphData(getGraphNodes(), getGraphEdges(), true);
+}
+
 // Remove the selected nodes from the current graph
-function removeSelected() {
+function hideSelected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
     network.deleteSelected();
@@ -368,20 +383,22 @@ function removeSelected() {
     selectionChanged();
 }
 
-// Clear the filter - i.e. show the full graph
-function clearFilter() {
-    isFiltered = false;
-    document.getElementById("ccSearch").value = "";
-    setGraphData(getGraphNodes(), getGraphEdges(), true);
-}
-
 // Remove all nodes from the graph that are not selected and not a neighbor to a selected node
-function keepSelected() {
+function hideUnselected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
     let relations = getGraphRelations();
+    let filteredNodes = ccNodes.filter((n) => selected.includes(n.id));
+    let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && selected.includes(e.from) && selected.includes(e.to));
+    isFiltered = true;
+    setGraphData(filteredNodes, filteredEdges, true);
+}
+
+// Expand the graph with nodes that are neighbors to currently visible nodes
+function revealNeighbors() {
+    let relations = getGraphRelations();
     let nodeIds = {};
-    for (let n of selected) {
+    for (let n of network.body.nodeIndices) {
         nodeIds[n] = true;
         for (let e of ccEdges) {
             if (relations.includes(e.rel)) {
@@ -392,7 +409,7 @@ function keepSelected() {
     }
     let filteredNodes = ccNodes.filter((n) => nodeIds[n.id]);
     let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
-    isFiltered = true;
+    isFiltered = filteredNodes.length < getGraphNodes().length;
     setGraphData(filteredNodes, filteredEdges, true);
 }
 
