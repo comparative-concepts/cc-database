@@ -274,6 +274,7 @@ function selectionChanged() {
     document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
     document.getElementById("ccExpandUpwards").disabled = !hasSelection;
     document.getElementById("ccExpandDownwards").disabled = !hasSelection;
+    document.getElementById("ccExpandOutwards").disabled = !hasSelection;
     document.getElementById("ccClearFilter").disabled = !filtered;
     document.getElementById("ccRevealNeighbors").disabled = !filtered;
     document.getElementById("ccHideUnselected").disabled = !hasSelection;
