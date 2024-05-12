@@ -346,8 +346,8 @@ class CCDB:
             for rel in item.Relations:
                 for target in item.Relations.get(rel, []):
                     edges.append({
-                        "from": item.Id,
-                        "to": target,
+                        "from": target,
+                        "to": item.Id,
                         "rel": rel,
                     })
         print(f"var ccNodes = [")
