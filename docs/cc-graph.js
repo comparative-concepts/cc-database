@@ -4,7 +4,6 @@
 
 var ccNodes, ccEdges; // Defined in cc-graph-data.js
 var network;
-var isFiltered;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Global options
@@ -146,6 +145,11 @@ function getFilteredEdges() {
     return ccEdges.filter((e) => network.body.edges[e.id]);
 }
 
+// True if the graph is filtered
+function isFiltered() {
+    return network.body.nodeIndices.length < getGraphNodes().length;
+}
+
 // Test if a given node is unconnected (in the filtered graph)
 function isUnconnectedNode(n) {
     return network.getConnectedEdges(n.id).length === 0;
@@ -197,7 +201,12 @@ function setNodeColor(n) {
     n.color = {background: color, border: color};
 }
 
-function setGraphData(nodes, edges) {
+function setGraphData(nodeIds) {
+    if (!nodeIds) nodeIds = getGraphNodeIds();
+    if (nodeIds instanceof Array) nodeIds = Object.fromEntries(nodeIds.map(n => [n, true]));
+    let relations = getGraphRelations();
+    let nodes = ccNodes.filter((n) => nodeIds[n.id]);
+    let edges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
     console.log(new Date().toLocaleTimeString(), `Update graph: ${nodes.length} nodes, ${edges.length} edges`);
     let selected = network.getSelectedNodes();
     network.setData({nodes: nodes, edges: edges});
@@ -232,7 +241,7 @@ function init() {
                 );
                 checkboxes.innerHTML += 
                     `<label style="display:none">
-                    <input type="checkbox" id="${relId}" onchange="selectRelation()" ${checked?"checked":""}/>
+                    <input type="checkbox" id="${relId}" onchange="changeSettings()" ${checked?"checked":""}/>
                     <span style="${style}">${relId}</span> &nbsp; </label>`;
             }
             checked = false;
@@ -257,6 +266,7 @@ function init() {
 function selectionChanged() {
     let hasSelection = network.getSelectedNodes().length > 0;
     let hasUnconnected = getUnconnectedNodes().length > 0;
+    let filtered = isFiltered();
     let willStabilize = document.getElementById("ccStabilize").checked;
     document.getElementById("ccSolver").disabled = !willStabilize;
     document.getElementById("ccSearch").disabled = !getGraphTypes();
@@ -264,8 +274,8 @@ function selectionChanged() {
     document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
     document.getElementById("ccExpandUpwards").disabled = !hasSelection;
     document.getElementById("ccExpandDownwards").disabled = !hasSelection;
-    document.getElementById("ccClearFilter").disabled = !isFiltered;
-    document.getElementById("ccShowNeighbors").disabled = !isFiltered;
+    document.getElementById("ccClearFilter").disabled = !filtered;
+    document.getElementById("ccRevealNeighbors").disabled = !filtered;
     document.getElementById("ccHideUnselected").disabled = !hasSelection;
     document.getElementById("ccHideSelected").disabled = !hasSelection;
     showStatistics();
@@ -280,12 +290,13 @@ function showStatistics() {
     }
     let unconnected = getUnconnectedNodes().length;
     let selected = network.getSelectedNodes().length;
+    let filtered = isFiltered();
     stat.innerText = `${getFilteredNodes().length} nodes`;
-    if (isFiltered) stat.innerText += ` (of ${getGraphNodes().length})`;
+    if (filtered) stat.innerText += ` (of ${getGraphNodes().length})`;
     if (unconnected > 0) stat.innerText += `, ${unconnected} unconnected`;
     if (selected > 0) stat.innerText += `, ${selected} selected`;
     stat.innerText += `; ${getFilteredEdges().length} edges`;
-    if (isFiltered) stat.innerText += ` (of ${getGraphEdges().length})`;
+    if (filtered) stat.innerText += ` (of ${getGraphEdges().length})`;
 
     let extraInfo = document.getElementById("extraInfo");
     extraInfo.innerHTML = "";
@@ -368,9 +379,8 @@ function expandSelection(direction) {
 
 // Clear the filter - i.e. show the full graph
 function clearFilter() {
-    isFiltered = false;
     document.getElementById("ccSearch").value = "";
-    setGraphData(getGraphNodes(), getGraphEdges(), true);
+    setGraphData();
 }
 
 // Remove the selected nodes from the current graph
@@ -379,7 +389,6 @@ function hideSelected() {
     if (selected.length === 0) return;
     network.deleteSelected();
     network.selectNodes([]);
-    isFiltered = true;
     selectionChanged();
 }
 
@@ -387,11 +396,7 @@ function hideSelected() {
 function hideUnselected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
-    let relations = getGraphRelations();
-    let filteredNodes = ccNodes.filter((n) => selected.includes(n.id));
-    let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && selected.includes(e.from) && selected.includes(e.to));
-    isFiltered = true;
-    setGraphData(filteredNodes, filteredEdges, true);
+    setGraphData(selected);
 }
 
 // Expand the graph with nodes that are neighbors to currently visible nodes
@@ -407,38 +412,20 @@ function revealNeighbors() {
             }
         }
     }
-    let filteredNodes = ccNodes.filter((n) => nodeIds[n.id]);
-    let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
-    isFiltered = filteredNodes.length < getGraphNodes().length;
-    setGraphData(filteredNodes, filteredEdges, true);
+    setGraphData(nodeIds);
 }
 
 // Things to do when any kind of settings has changed
+// The current selected nodes are kept (if any)
 function changeSettings() {
     updateNodes();
     updateSolver();
-    setGraphData(getFilteredNodes(), getFilteredEdges(), true);
-}
-
-// Update which relations/edges to include in the graph
-// The current selected nodes are kept (if any)
-function selectRelation() {
-    updateNodes();
-    updateSolver();
-    if (!isFiltered) {
-        document.getElementById("ccSearch").value = "";
-        setGraphData(getGraphNodes(), getGraphEdges(), true);
-    } else {
-        let relations = getGraphRelations();
-        let nodes = ccNodes.filter((n) => network.body.nodes[n.id]);
-        let edges = ccEdges.filter((e) => relations.includes(e.rel) && network.body.nodes[e.from] && network.body.nodes[e.to]);
-        setGraphData(nodes, edges, true);
-    }
+    setGraphData(network.body.nodes);
 }
 
 // Update with a new fresh graph (clearing the selection, if any)
 function selectGraph() {
-    isFiltered = false;
-    selectRelation();
+    updateNodes();
+    updateSolver();
+    clearFilter();
 }
-
