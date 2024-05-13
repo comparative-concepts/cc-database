@@ -297,7 +297,6 @@ class CCDB:
             self.print_relation_list(relations.get(Relation.ModeledOn), "Modeled on")
             self.print_relation_list(relations.get(Relation.FunctionOf), "Function of")
             self.print_relation_list(relations.get(Relation.AttributeOf), "Attribute of")
-            self.print_relation_list(relations.get(Relation.ValueOf), "Value of")
             self.print_relation_list(relations.get(Relation.RoleOf), "Role of")
             self.print_relation_list(relations.get(Relation.FillerOf), "Filler of")
             self.print_relation_list(relations.get(Relation.AssociatedTo), "Associated")

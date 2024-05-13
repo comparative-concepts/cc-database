@@ -891,6 +891,7 @@
   Name: anterior deranking
   SubtypeOf:
     - str:deranking
+    - str:word-order
   ExpressionOf:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -3143,6 +3144,9 @@
   Name: derived intransitive
   SubtypeOf:
     - str:overt-coding
+    - str:single-role-strategy
+  ExpressionOf:
+    - cxn:reciprocal-construction
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> the <a>intransitive construction</a> for use in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with <a>overt coding</a> of the predicate indicating the <a>reflexive event</a> or <a>reciprocal event</a> type. <i>Examples</i>: Abkhaz <i>l-çə-l-k°abe-yt'</i> <q>she washed herself</q> is an Intransitive Verb form with the Reflexive prefix <i>çə-</i>, and Swahili <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
   Examples:
@@ -6748,8 +6752,7 @@
   Type: str
   Name: noun incorporation
   SubtypeOf:
-    - str:compounding
-    - str:a-p-alignment
+    - str:p-alignment
     - str:subject-predicate-alignment
   ExpressionOf:
     - cxn:thetic-construction
@@ -6902,9 +6905,11 @@
   Examples:
     - Sally threw the letter into <e>the wastebasket</e>
 
-- Id: str:oblique-p-strategy
+- Id: str:p-alignment
   Type: str
-  Name: oblique P strategy
+  Name: P alignment
+  Alias:
+    - oblique P strategy
   SubtypeOf:
     - str:system
   ExpressionOf:
@@ -6931,11 +6936,9 @@
   Examples:
     - Emily viewed the hawk <e>with binoculars</e>
 
-- Id: str:oblique-p-alignment
+- Id: str:oblique-alignment
   Type: str
-  Name: oblique P alignment
-  Alias:
-    - oblique P (dis)alignment (strategy)
+  Name: oblique alignment
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
@@ -6959,7 +6962,7 @@
   Type: str
   Name: omitted P strategy
   SubtypeOf:
-    - str:oblique-p-strategy
+    - str:p-alignment
   ExpressionOf:
     - cxn:antipassive-construction
   Definition: >-
@@ -7033,9 +7036,11 @@
   Examples:
     - I took a red candy and Greg took <e>a green one</e>
 
-- Id: str:overtly-verb-coded-voice-strategy
+- Id: str:overtly-coded-verb
   Type: str
-  Name: overtly verb-coded voice strategy
+  Name: overtly coded verb
+  Alias:
+    - overtly verb-coded voice strategy
   SubtypeOf:
     - str:overt-coding
   ExpressionOf:
@@ -7724,6 +7729,7 @@
   Name: posterior deranking
   SubtypeOf:
     - str:deranking
+    - str:word-order
   ExpressionOf:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -7743,6 +7749,7 @@
     - postnominal (strategy)
   SubtypeOf:
     - str:externally-headed
+    - str:word-order
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
@@ -8063,6 +8070,7 @@
     - prenominal (strategy)
   SubtypeOf:
     - str:externally-headed
+    - str:word-order
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
@@ -9068,6 +9076,7 @@
   Alias:
     - SS
     - same subject
+    - subject identity
   SubtypeOf:
     - inf:token-identity
   Definition: >-
@@ -9824,15 +9833,6 @@
     a <a>complex sentence construction</a> in which the <a>subject</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted the dog and hit the cat</i> is an instance of a subject identity <a>coordinate clause construction</a> -- the subject referent for both <i>patted the dog</i> and <i>hit the cat</i> is Sumie. (Section 16.5)
   Examples:
     - <eSumie >patted the dog and hit the cat</e>
-
-- Id: inf:subject-identity
-  Type: inf
-  Name: subject identity
-  Status: deleted
-  SubtypeOf:
-    - inf:token-identity
-  Definition: ''
-  FromGlossary: false
 
 - Id: cxn:subject-phrase
   Type: cxn
@@ -10784,7 +10784,7 @@
   Type: str
   Name: word order
   SubtypeOf:
-    - str:zero-coding
+    - str:strategy
   ExpressionOf:
     - cxn:construction
   Definition: >-
@@ -10880,9 +10880,11 @@
       Gloss: Purukuparli boss
       Translation: Purukuparli is boss
 
-- Id: str:zero-verb-coded-voice-strategy
+- Id: str:zero-coded-verb
   Type: str
-  Name: zero verb-coded voice strategy
+  Name: zero coded verb
+  Alias:
+    - zero verb-coded voice strategy
   SubtypeOf:
     - str:zero-coding
   ExpressionOf:
@@ -11999,17 +12001,6 @@
     - cxn:reciprocal-construction
   RecruitedFrom:
     - cxn:reflexive-construction
-  Definition: ''
-  FromGlossary: false
-
-- Id: str:overtly-coded-single-role-strategy
-  Type: str
-  Name: overtly coded single role strategy
-  SubtypeOf:
-    - str:overt-coding
-    - str:single-role-strategy
-  ExpressionOf:
-    - cxn:reciprocal-construction
   Definition: ''
   FromGlossary: false
 
