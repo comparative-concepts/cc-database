@@ -1,0 +1,65 @@
+
+body {
+    background-color: lavender;
+    margin: 1.5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300; /* light (falls back to normal=400 if light isn't available */
+}
+
+h1, h2, h3, p, menu {
+    margin: 0.75rem 0;
+}
+
+h1, h2, h3, b, strong {
+    font-weight: 550; /* medium (falls back to bold=700 if medium isn't available) */
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+a {
+    color: darkgreen;
+}
+
+menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    line-height: 1.75;
+}
+
+menu > li {
+    text-wrap: nowrap;
+    padding-right: 0.75rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+select:hover, input:hover, label:hover, button:hover {
+    cursor: pointer;
+}
+
+:disabled:hover {
+    cursor: default !important;
+}
+
+#ccNetwork {
+    width: 100%;
+    height: 60vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#ccNetwork div.vis-tooltip {
+    max-width: 50%;
+    text-wrap: wrap;
+    font-family: "Helvetica Neue", Helvetica, Tahomas, Arial, sans-serif;
+    font-size: 0.8rem;
+    border-radius: 10px;
+}
+

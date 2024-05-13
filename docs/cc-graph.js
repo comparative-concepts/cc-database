@@ -4,7 +4,6 @@
 
 var ccNodes, ccEdges; // Defined in cc-graph-data.js
 var network;
-var isFiltered;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Global options
@@ -18,25 +17,43 @@ var networkOptions = {
         shape: "box",
     },
     interaction: {
-        hover: true,
-        multiselect: true,
-        tooltipDelay: 1000,
+        hover: true, // "nodes use their hover colors when the mouse moves over them"
+        multiselect: true, // "a longheld click (or touch) as well as a control-click will add to the selection"
+        tooltipDelay: 1000, // "the amount of time in milliseconds it takes before the tooltip is shown"
+    },
+    layout: {
+        improvedLayout: true, // "the network will use the Kamada Kawai algorithm for initial layout"
+        clusterThreshold: 1000, // "cluster threshold to which improvedLayout applies"
     },
     physics: {
-        solver: "forceAtlas2Based", // Alternatives: barnesHut, repulsion
+        solver: "forceAtlas2Based",
         stabilization: {
-            iterations: 100,
+            iterations: 100, // "stabilize the network on load up til a maximum number of iterations"
         },
         forceAtlas2Based: {
-            theta: 0.3,
-            springLength: 100,
-        },
-        barnesHut: {
+            theta: 0.5, // "higher values are faster but generate more errors, lower values are slower but with less errors"
+            gravitationalConstant: -50, // "if you want the repulsion to be stronger, decrease the gravitational constant... falloff is linear instead of quadratic"
+            centralGravity: 0.01, // "central gravity attractor to pull the entire network back to the center"
+            springConstant: 0.1, // "higher values mean stronger springs"
+            springLength: 100, // "the rest length of the spring"
+            damping: 0.1, // "how much of the velocity from the previous physics simulation iteration carries over to the next iteration"
+            avoidOverlap: 0, // "if > 0, the size of the node is taken into account"
         },
         repulsion: {
-            nodeDistance: 200,
             centralGravity: 0.1,
             springLength: 100,
+            springConstant: 0.1,
+            nodeDistance: 200, // "range of influence for the repulsion"
+            damping: 0.1,
+        },
+        barnesHut: {
+            theta: 0.5,
+            gravitationalConstant: -10000, // "...falloff is quadratic instead of linear"
+            centralGravity: 1,
+            springLength: 100,
+            springConstant: 0.1,
+            damping: 0.1,
+            avoidOverlap: 0,
         },
     },
 };
@@ -48,7 +65,7 @@ var colors = {
 
     // Relation/edge colors
     // SubtypeOf will inherit from the node color
-    ConstituentOf: "orangered", ExpressionOf: "orangered",
+    ConstituentOf: "red", ExpressionOf: "red",
     HeadOf: "royalblue", ModeledOn: "royalblue", AttributeOf: "royalblue",
     RoleOf: "mediumorchid", RecruitedFrom: "mediumorchid",
     FillerOf: "darkgoldenrod", 
@@ -128,6 +145,11 @@ function getFilteredEdges() {
     return ccEdges.filter((e) => network.body.edges[e.id]);
 }
 
+// True if the graph is filtered
+function isFiltered() {
+    return network.body.nodeIndices.length < getGraphNodes().length;
+}
+
 // Test if a given node is unconnected (in the filtered graph)
 function isUnconnectedNode(n) {
     return network.getConnectedEdges(n.id).length === 0;
@@ -179,6 +201,19 @@ function setNodeColor(n) {
     n.color = {background: color, border: color};
 }
 
+function setGraphData(nodeIds) {
+    if (!nodeIds) nodeIds = getGraphNodeIds();
+    if (nodeIds instanceof Array) nodeIds = Object.fromEntries(nodeIds.map(n => [n, true]));
+    let relations = getGraphRelations();
+    let nodes = ccNodes.filter((n) => nodeIds[n.id]);
+    let edges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
+    console.log(new Date().toLocaleTimeString(), `Update graph: ${nodes.length} nodes, ${edges.length} edges`);
+    let selected = network.getSelectedNodes();
+    network.setData({nodes: nodes, edges: edges});
+    network.selectNodes(selected);
+    selectionChanged();
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Initialisation
@@ -206,7 +241,7 @@ function init() {
                 );
                 checkboxes.innerHTML += 
                     `<label style="display:none">
-                    <input type="checkbox" id="${relId}" onchange="selectRelation()" ${checked?"checked":""}/>
+                    <input type="checkbox" id="${relId}" onchange="changeSettings()" ${checked?"checked":""}/>
                     <span style="${style}">${relId}</span> &nbsp; </label>`;
             }
             checked = false;
@@ -218,6 +253,8 @@ function init() {
     network.on("selectNode", selectionChanged);
     network.on("deselectNode", selectionChanged);
     network.on("dragEnd", selectionChanged);
+    network.on("startStabilizing", () => console.log(new Date().toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`));
+    network.on("stabilized", (params) => console.log(new Date().toLocaleTimeString(), `Stabilization stopped after ${params.iterations} iterations`));
     selectionChanged();
 }
 
@@ -229,15 +266,19 @@ function init() {
 function selectionChanged() {
     let hasSelection = network.getSelectedNodes().length > 0;
     let hasUnconnected = getUnconnectedNodes().length > 0;
+    let filtered = isFiltered();
     let willStabilize = document.getElementById("ccStabilize").checked;
     document.getElementById("ccSolver").disabled = !willStabilize;
     document.getElementById("ccSearch").disabled = !getGraphTypes();
-    document.getElementById("ccUnconnected").disabled = !hasUnconnected;
+    document.getElementById("ccClearSelection").disabled = !hasSelection;
+    document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
     document.getElementById("ccExpandUpwards").disabled = !hasSelection;
     document.getElementById("ccExpandDownwards").disabled = !hasSelection;
-    document.getElementById("ccRemoveUnselected").disabled = !hasSelection;
-    document.getElementById("ccRemoveSelected").disabled = !hasSelection;
-    document.getElementById("ccClear").disabled = !isFiltered;
+    document.getElementById("ccExpandOutwards").disabled = !hasSelection;
+    document.getElementById("ccClearFilter").disabled = !filtered;
+    document.getElementById("ccRevealNeighbors").disabled = !filtered;
+    document.getElementById("ccHideUnselected").disabled = !hasSelection;
+    document.getElementById("ccHideSelected").disabled = !hasSelection;
     showStatistics();
 }
 
@@ -250,12 +291,13 @@ function showStatistics() {
     }
     let unconnected = getUnconnectedNodes().length;
     let selected = network.getSelectedNodes().length;
+    let filtered = isFiltered();
     stat.innerText = `${getFilteredNodes().length} nodes`;
-    if (isFiltered) stat.innerText += ` (of ${getGraphNodes().length})`;
+    if (filtered) stat.innerText += ` (of ${getGraphNodes().length})`;
     if (unconnected > 0) stat.innerText += `, ${unconnected} unconnected`;
     if (selected > 0) stat.innerText += `, ${selected} selected`;
     stat.innerText += `; ${getFilteredEdges().length} edges`;
-    if (isFiltered) stat.innerText += ` (of ${getGraphEdges().length})`;
+    if (filtered) stat.innerText += ` (of ${getGraphEdges().length})`;
 
     let extraInfo = document.getElementById("extraInfo");
     extraInfo.innerHTML = "";
@@ -313,6 +355,12 @@ function searchNodes() {
     selectionChanged();
 }
 
+// Deselect all nodes
+function clearSelection() {
+    network.unselectAll();
+    selectionChanged();
+}
+
 // Select the currently unconnected nodes
 function selectUnconnected() {
     let unconnected = getUnconnectedNodes();
@@ -330,33 +378,33 @@ function expandSelection(direction) {
     selectionChanged();
 }
 
+// Clear the filter - i.e. show the full graph
+function clearFilter() {
+    document.getElementById("ccSearch").value = "";
+    setGraphData();
+}
+
 // Remove the selected nodes from the current graph
-function removeSelected() {
+function hideSelected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
     network.deleteSelected();
     network.selectNodes([]);
-    isFiltered = true;
-    selectionChanged();
-}
-
-// Clear the filter - i.e. show the full graph
-function clearFilter() {
-    let selected = network.getSelectedNodes();
-    network.setData({nodes: getGraphNodes(), edges: getGraphEdges()});
-    network.selectNodes(selected);
-    isFiltered = false;
-    document.getElementById("ccSearch").value = "";
     selectionChanged();
 }
 
 // Remove all nodes from the graph that are not selected and not a neighbor to a selected node
-function keepSelected() {
+function hideUnselected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
+    setGraphData(selected);
+}
+
+// Expand the graph with nodes that are neighbors to currently visible nodes
+function revealNeighbors() {
     let relations = getGraphRelations();
     let nodeIds = {};
-    for (let n of selected) {
+    for (let n of network.body.nodeIndices) {
         nodeIds[n] = true;
         for (let e of ccEdges) {
             if (relations.includes(e.rel)) {
@@ -365,46 +413,20 @@ function keepSelected() {
             }
         }
     }
-    let filteredNodes = ccNodes.filter((n) => nodeIds[n.id]);
-    let filteredEdges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
-    network.setData({nodes: filteredNodes, edges: filteredEdges});
-    network.selectNodes(selected);
-    isFiltered = true;
-    selectionChanged();
+    setGraphData(nodeIds);
 }
 
 // Things to do when any kind of settings has changed
+// The current selected nodes are kept (if any)
 function changeSettings() {
     updateNodes();
     updateSolver();
-    let selected = network.getSelectedNodes();
-    network.setData({nodes: getFilteredNodes(), edges: getFilteredEdges()});
-    network.selectNodes(selected);
-    selectionChanged();
-}
-
-// Update which relations/edges to include in the graph
-// The current selected nodes are kept (if any)
-function selectRelation() {
-    updateNodes();
-    updateSolver();
-    let selected = network.getSelectedNodes();
-    if (!isFiltered) {
-        network.setData({nodes: getGraphNodes(), edges: getGraphEdges()});
-        document.getElementById("ccSearch").value = "";
-    } else {
-        let relations = getGraphRelations();
-        let nodes = ccNodes.filter((n) => network.body.nodes[n.id]);
-        let edges = ccEdges.filter((e) => relations.includes(e.rel) && network.body.nodes[e.from] && network.body.nodes[e.to]);
-        network.setData({nodes: nodes, edges: edges});
-    }
-    network.selectNodes(selected);
-    selectionChanged();
+    setGraphData(network.body.nodes);
 }
 
 // Update with a new fresh graph (clearing the selection, if any)
 function selectGraph() {
-    isFiltered = false;
-    selectRelation();
+    updateNodes();
+    updateSolver();
+    clearFilter();
 }
-
