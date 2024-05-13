@@ -62,7 +62,7 @@
   SubtypeOf:
     - str:reference-tracking-system
   ExpressionOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>system</a> where both the <a>same-subject</a> <a>reference tracking construction</a> and the <a>different-subject</a> reference tracking construction use a <a>deranked strategy</a>. The deranked reference tracking construction may be the same for both same-subject and different-subject constructions. <i>Example</i>: Tamil <i>avaru kadite eɽudiiʈʈu naaval moɽipeyarttaaru</i> <q>He wrote poetry and then translated a novel</q> (same-subject) and <i>naan paɳam kuɖuttu avan sinimaavukku poonaan</i> <q>I gave (him) money and he went to the movie</q> (different-subject) both use the deranked Adverbial Participle predicate forms -- <i>eɽudiiʈʈu</i> <q>write</q> [<sc>adv.part</sc>] and <i>kuɖuttu</i> <q>give</q> [<sc>adv.part</sc>] respectively. If the same-subject and different-subject constructions systematically use different deranked reference tracking constructions, then it is a <a>switch-reference system</a>. (Section 16.3)
   Examples:
@@ -622,7 +622,7 @@
   Type: def
   Name: Agreement Hierarchy
   Definition: >-
-    a typological universal that constrains the <dq>mismatches</dq> that occur in the grammatical categories (typically, <a>number</a> and <a>gender--class</a>) of a <a>pronoun</a> or <a>index</a> and the grammatical categories of a prior <a>referring phrase</a> that <a inf:reference>refers</a> to the same <a>referent</a> as the pronoun or index. The Agreement Hierarchy ranks the constructions as follows: <a>modifier</a> index < <a>predicate</a> index < <a>relative pronoun</a> < <a>personal pronoun</a>. <i>Example</i>: in British English, in <i>this committee</i>, the modifier <i>this</i> must index the committee as a singular, but a following personal pronoun may index the committee as a singular <i>...It...</i> or as a plural <i>...They...</i>, indicating that the committee is a group. The personal pronoun is lower on the Agreement Hierarchy, and therefore is more likely to index a <dq>semantic</dq> value (plural) that is not overtly encoded on the noun. (Section 4.4.4)
+    a typological universal that constrains the <dq>mismatches</dq> that occur in the grammatical categories (typically, <a>number</a> and <a>gender--class</a>) of a <a>pronoun</a> or <a>index</a> and the grammatical categories of a prior <a>referring phrase</a> that <a inf:reference>refers</a> to the same <a>referent</a> as the pronoun or index. The Agreement Hierarchy ranks the constructions as follows: <a>modifier</a> index < <a>predicate</a> index < <a str:relative-pronoun-strategy>relative pronoun</a> < <a>personal pronoun</a>. <i>Example</i>: in British English, in <i>this committee</i>, the modifier <i>this</i> must index the committee as a singular, but a following personal pronoun may index the committee as a singular <i>...It...</i> or as a plural <i>...They...</i>, indicating that the committee is a group. The personal pronoun is lower on the Agreement Hierarchy, and therefore is more likely to index a <dq>semantic</dq> value (plural) that is not overtly encoded on the noun. (Section 4.4.4)
 
 - Id: cxn:alienable-possession-modification-construction
   Type: cxn
@@ -921,7 +921,7 @@
   Type: cxn
   Name: antipassive construction
   SubtypeOf:
-    - cxn:nonbasic-voice-construction
+    - cxn:nonbasic-voice
   Definition: >-
     any <a>construction</a> that is used for a <a>P</a> <a>participant</a> that is less <a>salient</a> than it usually is in the <a>basic voice construction</a>. <i>Example</i>: West Greenlandic <i>inun-nik tuqut-si-vuq</i> <q>He killed people</q>, with an <a cxn:oblique-phrase>oblique</a> <a>flag</a> <i>-nik</i> for the <a>argument phrase</a> expressing P and an <a str:overt-coding>overtly coded</a> <a>verb</a> form with the suffix <i>-si</i>, is an instance of the antipassive construction. (Section 8.4)
   Examples:
@@ -980,8 +980,7 @@
   Alias:
     - putting verb
   SubtypeOf:
-    - cxn:result-verb
-    - cxn:manner-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing an <a>application event</a>. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
 
@@ -989,15 +988,15 @@
   Type: cxn
   Name: applicative construction
   SubtypeOf:
-    - cxn:nonbasic-voice-construction
+    - cxn:nonbasic-voice
   Definition: >-
     a <a>construction</a> describing an <a>event</a> in which a <a>participant</a> other than the <a>P</a> participant is coded as <a inf:object-argument>object</a> -- that is, a non-P participant is <a>salient</a> enough to be expressed as a <a>core argument phrase</a>, specifically object. <i>Example</i>: <i>Fred baked me a shepherd's pie</i>, in which Fred baking the pie is the base event, encodes a non-participant, namely the recipient of the shepherd's pie, as object. (Sections 9.1, 9.3)
   Examples:
     - <e>Fred baked me a shepherd's pie</e>
 
-- Id: cxn:applicative-object
+- Id: cxn:applicative-object-phrase
   Type: cxn
-  Name: applicative object
+  Name: applicative object phrase
   SubtypeOf:
     - cxn:object-phrase
   ConstituentOf:
@@ -1224,7 +1223,7 @@
   Type: cxn
   Name: auxiliary construction
   SubtypeOf:
-    - cxn:eventive-complex-predicate
+    - cxn:complex-predicate
   Definition: >-
     an <a>eventive complex predicate construction</a> in which one <a>element</a> of the <a>construction</a>, the <a>auxiliary</a>, denotes <a>tense</a>, <a>aspect</a>, <a>modality</a>, and/or <a>polarity</a> (typically abbreviated TAMP), and the other element of the construction denotes the <a>event</a> whose tense, aspect, modality, and/or polarity is expressed by the first element. <i>Example</i>: in English <i>She might be sitting in the living room, might be sitting</i> is an example of an auxiliary construction. (Section 13.4)
   Examples:
@@ -1318,7 +1317,7 @@
     - sem:transfer-event
     - sem:experiential-event
   AssociatedTo:
-    - cxn:applicative-object
+    - cxn:applicative-object-phrase
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is positively affected by the outcome of the <a>event</a>. <i>Example</i>: in <i>Terry made lunch for Sandy</i>, Sandy is positively affected by the outcome of the event. (Section 6.1.2)
   Examples:
@@ -1432,7 +1431,7 @@
   Type: cxn
   Name: bodily motion verb
   SubtypeOf:
-    - cxn:introverted-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing a <a>bodily motion event</a>. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
   Examples:
@@ -1469,7 +1468,7 @@
   Type: cxn
   Name: body care verb
   SubtypeOf:
-    - cxn:introverted-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing a <a>body care event</a>. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
   Examples:
@@ -1616,7 +1615,7 @@
   Type: cxn
   Name: causative construction
   SubtypeOf:
-    - cxn:nonbasic-voice-construction
+    - cxn:nonbasic-voice
   AssociatedTo:
     - cxn:ditransitive-construction
   Definition: >-
@@ -1645,7 +1644,7 @@
     - cxn:causative-construction
     - cxn:applicative-construction
   Definition: >-
-    a <a>system</a> in which the <a>causative construction</a> and an <a>applicative construction</a> are identical. <i>Example</i>: Kinyarwanda <i>Umugabo a-ra-andik-iiš-a umugabo ibárúwa</i> <q>The man is making the man write a letter</q> is a causative construction with the overt suffix <i>-iiš</i> on the verb, and <i>Umugabo a-ra-andik-iiš-a ikárámu ibárúwa</i> <q>The man is writing a letter with a pen</q> is an applicative construction with the <a>instrument role</a> expressed as <a>applicative object</a>, with the same suffix <i>-iiš</i> on the verb. (Section 9.3)
+    a <a>system</a> in which the <a>causative construction</a> and an <a>applicative construction</a> are identical. <i>Example</i>: Kinyarwanda <i>Umugabo a-ra-andik-iiš-a umugabo ibárúwa</i> <q>The man is making the man write a letter</q> is a causative construction with the overt suffix <i>-iiš</i> on the verb, and <i>Umugabo a-ra-andik-iiš-a ikárámu ibárúwa</i> <q>The man is writing a letter with a pen</q> is an applicative construction with the <a>instrument role</a> expressed as <a cxn:applicative-object-phrase>applicative object</a>, with the same suffix <i>-iiš</i> on the verb. (Section 9.3)
   Examples:
     - Language: Kinyarwanda
       Example: Umugabo a-ra-andik-iiš-a umugabo ibárúwa
@@ -1751,7 +1750,7 @@
     - assume position verb
     - change in posture verb
   SubtypeOf:
-    - cxn:introverted-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing a <a>change in body position event</a>. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
   Examples:
@@ -1963,8 +1962,7 @@
   Type: cxn
   Name: combining verb
   SubtypeOf:
-    - cxn:result-verb
-    - cxn:manner-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing a <a>combining event</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
 
@@ -2383,7 +2381,7 @@
   SubtypeOf:
     - str:reference-tracking-system
   ExpressionOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>system</a> where a <a>same-subject</a> <a>reference tracking construction</a> uses a <a>deranking strategy</a>, whereas the <a>different-subject</a> reference tracking construction uses a <a>balanced</a> strategy. <i>Example</i>: Wolof <i>dem na ma <b>à o</b> ko</i> <q>I went and called him</q> [same-subject] uses a Serial Marker <i>à</i> and a deranked Subjunctive verb form <i>o</i>; <i>nyeu <b>on na</b> te wakh <b>on na</b> ma ko</i> <q>He came and I told (it to) him</q> uses the balanced construction with the simple verb form, the Past Tense <i>on</i> and the Indicative Marker <i>na</i>. (Section 16.3)
   Examples:
@@ -2400,7 +2398,7 @@
   SubtypeOf:
     - str:reference-tracking-system
   ExpressionOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   AssociatedTo:
     - str:balancing
   Definition: >-
@@ -2824,7 +2822,7 @@
   ConstituentOf:
     - inf:discourse-coherence
   AssociatedTo:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     the act of <a inf:reference>referring</a> to a <a>referent</a> that recurs in different occasions in a stretch of discourse. The stretch of discourse may constitute a single <a>construction</a>, such as a <a>complex sentence construction</a>. This is the primary context in which coreference is discussed in this book. <i>Example</i>: in <i>Jared<sub>i</sub> praised his<sub>i</sub> father, but his<sub>i</sub> father ignored him<sub>i</sub></i>, the referent Jared recurs four times in the sentence, and so represents an example of coreference. In linguistic analysis, coreference is often notated by subscript indexes such as <i>i</i> in the example. (Section 16.1)
   Examples:
@@ -2840,7 +2838,7 @@
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
-    a <a>strategy</a> for the <a>relative clause construction</a> in which the <a>relative clause</a> is juxtaposed to the <a>matrix clause</a> (not unlike the <a>adjoined strategy</a>), the <a>necessarily shared participant</a> is expressed in the relative clause (not unlike the <a>internally headed strategy</a>) accompanied by a relative clause marking morpheme (which may be a <a>relative pronoun</a> form), and the shared participant is also expressed in the matrix clause, as either a <a>noun</a> or a <a>pronoun</a>. <i>Example</i>: Hindi [<i>ādmī ne jis cākū se murgī ko mārāthā</i>] <i>us cākū ko rām ne dekhā</i> <q>Ram saw the knife with which the man killed the chicken</q> is an instance of the correlative strategy: the relative clause <i>ādmī ne jis cākū se murgī ko mārāthā</i> <q>The man killed the chicken with which knife</q> contains the relative clause head <i>cākū</i> <q>knife</q>, modified by the relative pronoun <i>jis</i> <q>which</q>, and is preposed to the matrix clause <i>us cākū ko rām ne dekhā</i> <q>that knife Ram saw</q>, which contains a second expression of the relative clause head <i>us cākū</i> <q>that knife</q>. (Section 19.2.3)
+    a <a>strategy</a> for the <a>relative clause construction</a> in which the <a>relative clause</a> is juxtaposed to the <a>matrix clause</a> (not unlike the <a>adjoined strategy</a>), the <a>necessarily shared participant</a> is expressed in the relative clause (not unlike the <a>internally headed strategy</a>) accompanied by a relative clause marking morpheme (which may be a <a str:relative-pronoun-strategy>relative pronoun</a> form), and the shared participant is also expressed in the matrix clause, as either a <a>noun</a> or a <a>pronoun</a>. <i>Example</i>: Hindi [<i>ādmī ne jis cākū se murgī ko mārāthā</i>] <i>us cākū ko rām ne dekhā</i> <q>Ram saw the knife with which the man killed the chicken</q> is an instance of the correlative strategy: the relative clause <i>ādmī ne jis cākū se murgī ko mārāthā</i> <q>The man killed the chicken with which knife</q> contains the relative clause head <i>cākū</i> <q>knife</q>, modified by the relative pronoun <i>jis</i> <q>which</q>, and is preposed to the matrix clause <i>us cākū ko rām ne dekhā</i> <q>that knife Ram saw</q>, which contains a second expression of the relative clause head <i>us cākū</i> <q>that knife</q>. (Section 19.2.3)
   Examples:
     - Language: Hindi
       Example: <e>[ādmī ne jis cākū se murgī ko mārāthā] us cākū ko rām ne dekhā</e>
@@ -2886,8 +2884,7 @@
   Type: cxn
   Name: damage verb
   SubtypeOf:
-    - cxn:manner-verb
-    - cxn:result-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing a <a>damage event</a>. <i>Example</i>: scratching something is a damage event, and <i>scratch</i> is a damage verb. (Section 7.3.2)
   Examples:
@@ -3346,7 +3343,7 @@
   SubtypeOf:
     - str:reference-tracking-system
   ExpressionOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>system</a> where both <a>same-subject</a> and <a>different-subject</a> <a>reference tracking constructions</a> use the standard discourse reference strategies found in connected discourse. Discourse reference systems are found when both same-subject and different-subject constructions are <a>balanced</a>. <i>Example</i>: in Spanish, <a>syndetic</a> <a>coordinate constructions</a> such as <i>El Gobierno Nacional volvió a prorrogar los actuales mandatos en los sindicatos y Ø<sub>i</sub> suspend<b>ió</b> los preocesos electorales hasta 2021</i> express the same-subject relation in the same way as in connected discourse -- namely, with zero anaphora and subject person indexation on the verb. (Section 16.2)
   Examples:
@@ -4155,7 +4152,7 @@
   SubtypeOf:
     - str:recruitment-strategy
   ExpressionOf:
-    - cxn:possessed-argument-asc
+    - cxn:possessed-argument-construction
   RecruitedFrom:
     - cxn:ditransitive-construction
   Definition: >-
@@ -4796,7 +4793,7 @@
   Type: cxn
   Name: identificational construction
   SubtypeOf:
-    - cxn:nonpredicational-clauses
+    - cxn:nonpredicational-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:identificational>identificational</a> information packaging. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
   Examples:
@@ -5405,7 +5402,7 @@
   SubtypeOf:
     - str:recruitment-strategy
   ExpressionOf:
-    - cxn:possessed-argument-asc
+    - cxn:possessed-argument-construction
   Definition: >-
     a <a>strategy</a> in which an <a sem:object-concept>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
   Examples:
@@ -5611,8 +5608,7 @@
     - killing verb
     - injuring verb
   SubtypeOf:
-    - cxn:manner-verb
-    - cxn:result-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing such a <a>killing/injuring event</a>. <i>Example</i>: stabbing is a killing/injuring event, and <i>stab</i> is a killing/injuring verb. (Section 7.3.2)
   Examples:
@@ -5770,8 +5766,6 @@
     - location(al) construction
     - location(al) clause
     - locative clause
-  SubtypeOf:
-    - cxn:nonprototypical-predication
   Definition: >-
     a <a>clause</a> in which a locative relation is expressed, either <a inf:predicational>predicationally</a> or <a inf:presentational>presentationally</a>. These two types of location clauses are <a>locative predication</a> and <a>presentational locative</a>, respectively. (Section 10.4.1)
 
@@ -6009,6 +6003,7 @@
   Type: cxn
   Name: manner of motion verb
   SubtypeOf:
+    - cxn:verb
     - cxn:manner-verb
   Definition: >-
     the <a>verb</a> expressing a <a>manner of motion event</a>. <i>Example</i>: in <i>Sam strode into the room, stride</i> is a manner of motion verb expressing a manner of motion event. (Sections 7.3.1, 14.2)
@@ -6568,9 +6563,9 @@
   Definition: >-
     an <a>article</a> that is used for an <a>inactive</a> or <a>inferrable referent</a>. (Section 3.3.1)
 
-- Id: cxn:nonbasic-voice-construction
+- Id: cxn:nonbasic-voice
   Type: cxn
-  Name: nonbasic voice construction
+  Name: nonbasic voice
   SubtypeOf:
     - cxn:clause
     - cxn:nonprototypical-construction
@@ -6604,13 +6599,15 @@
         - molod- | young
         - sosna | pine
 
-- Id: cxn:nonpredicational-clauses
+- Id: cxn:nonpredicational-construction
   Type: cxn
-  Name: nonpredicational clauses
+  Name: nonpredicational construction
+  Alias:
+    - nonpredicational clause
   SubtypeOf:
     - cxn:declarative-construction
   Definition: >-
-    <a>clauses</a> that are defined by <a>functions</a> other than the <a inf:topic-comment>topic--comment</a> (<a>predication</a>) function, i.e. clauses that express the <a inf:thetic>thetic</a> or <a inf:identificational>identificational</a> functions. <i>Examples</i>: <i>There's a jaguar!</i> (thetic) and <i>Sally is the winner</i> (identificational) are examples of nonpredicational clauses. (Section 10.1.2)
+    a <a>clause</a> that is defined by a <a>function</a> other than the <a inf:topic-comment>topic--comment</a> (<a>predication</a>) function, i.e. a clause that express the <a inf:thetic>thetic</a> or <a inf:identificational>identificational</a> functions. <i>Examples</i>: <i>There's a jaguar!</i> (thetic) and <i>Sally is the winner</i> (identificational) are examples of nonpredicational clauses. (Section 10.1.2)
   Examples:
     - <e>There's a jaguar!</e>
     - <e>Sally is the winner</e>
@@ -6852,7 +6849,7 @@
   Type: cxn
   Name: object identity construction
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>complex sentence construction</a> in which the <a sem:object-concept>object</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted and Norio hit the dog</i> is an instance of an object identity <a>coordinate clause construction</a> -- the object referent for both clauses is the dog. (Section 16.5)
   Examples:
@@ -7259,7 +7256,7 @@
     - passive--inverse construction
     - passive--inverse voice (construction)
   SubtypeOf:
-    - cxn:nonbasic-voice-construction
+    - cxn:nonbasic-voice
   Definition: >-
     a type of <a>nonbasic voice construction</a> that expresses a situation in which the <a>P</a> <a>participant</a> has a higher discourse <a>salience</a> than the <a>A</a> participant. <i>Example</i>: the English Passive Construction, as in <i>The boys were followed by a mountain lion</i>, is an instance of the passive--inverse voice construction. (Sections 6.3.4, <b>8.3</b>)
   Examples:
@@ -7283,7 +7280,8 @@
   Alias:
     - path (of motion) verb
   SubtypeOf:
-    - cxn:verb
+    - cxn:motion-verb
+    - cxn:result-verb
   Definition: >-
     the <a>verb</a> expressing such a <a>path of motion event</a>. <i>Example</i>: in <i>The guests entered the reception hall, enter</i> is a path of motion verb expressing a path of motion event. (Sections 7.3.1, 14.2)
   Examples:
@@ -7610,8 +7608,6 @@
   Name: possession construction
   Alias:
     - possession clause
-  SubtypeOf:
-    - cxn:nonprototypical-predication
   Definition: >-
     <a>clauses</a> in which a <a>possession relation</a> is expressed, either <a inf:predicational>predicationally</a> or <a inf:presentational>presentationally</a>. These two types of possession clauses are <a cxn:predicational-possession>predicational possession</a> and <a cxn:presentational-possession>presentational possession</a>, respectively. (Section 10.4.2)
 
@@ -7897,7 +7893,7 @@
   Type: cxn
   Name: predicate identity construction
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>complex sentence construction</a> in which the <a>events</a> denoted by the <a>predicate</a> in the two <a>clauses</a> are of the same type. <i>Example</i>: <i>Sumie saw the dog and Norie the cat</i> is an instance of a predicate identity <a>coordinate clause construction</a>: the event denoted by the predicate in both clauses is seeing. (Section 16.5)
   Examples:
@@ -8386,7 +8382,7 @@
   ExpressionOf:
     - cxn:construction
   Definition: >-
-    a phonological <a>strategy</a> typically used for expressing certain <a cxn:nonpredicational-clauses>nonpredicational clause constructions</a> and <a cxn:speech-act-construction>speech act</a> constructions. <i>Example</i>: prosody can be used in English to express a <a cxn:thetic-construction>thetic</a> construction: <i>(What's the matter?) My NECK hurts</i>. (Section 11.3.2)
+    a phonological <a>strategy</a> typically used for expressing certain <a cxn:nonpredicational-construction>nonpredicational clause constructions</a> and <a cxn:speech-act-construction>speech act</a> constructions. <i>Example</i>: prosody can be used in English to express a <a cxn:thetic-construction>thetic</a> construction: <i>(What's the matter?) My NECK hurts</i>. (Section 11.3.2)
   Examples:
     - (What's the matter?) My NECK hurts
 
@@ -8646,10 +8642,11 @@
   Definition: >-
     a point on the scale for a property that indicates a <dq>normal</dq> value for the property concept word. Example: in regard to height of a person, <i>tall/short</i> means <q>taller/shorter than a <dq>normal</dq> height</q>. The reference point is relative: tall for a person is short for a tree. The reference point can be expressed overtly, as in <i>She's kind of short <b>for a basketball player</b></i>. The term <q>reference point</q> is also used as a synonym for <q>anchor</q>; we will avoid that use in this book. (Section 4.1.2)
 
-- Id: cxn:reference-tracking
+- Id: cxn:reference-tracking-construction
   Type: cxn
-  Name: reference tracking
+  Name: reference tracking construction
   Alias:
+    - reference tracking
     - reference-tracking
   SubtypeOf:
     - cxn:complex-sentence
@@ -8701,7 +8698,7 @@
   SubtypeOf:
     - cxn:phrase
   AssociatedTo:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>construction</a> that performs the act of <a>reference</a>. <i>Example</i>: <i>the blue mailboxes</i> is a referring phrase that refers to a group of mailboxes. (Sections 2.2.2, <b>3.1</b>)
   Examples:
@@ -8766,7 +8763,6 @@
   Type: cxn
   Name: relative clause
   SubtypeOf:
-    - cxn:modifier
     - cxn:dependent-clause
     - cxn:attributive-phrase
   ConstituentOf:
@@ -8794,8 +8790,6 @@
     - cxn:referring-phrase
   HeadOf:
     - cxn:relativized-referring-phrase
-  ConstituentOf:
-    - cxn:relative-matrix-clause
   Definition: >-
     the <a>referring phrase</a> that denotes the <a>necessarily shared participant</a> in a <a>relative clause construction</a> -- that is, the <a>participant</a> that plays a <a>semantic role</a> in both the <a>event</a> denoted by the <a>relative clause</a> and the event denoted by the <a>matrix clause</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>the cheesecake</i> is the relative clause head. The relative clause head is an <a inf:reference>argument</a> of the matrix clause predicate, and is <a inf:modification>modified</a> by the relative clause. (Section 19.1)
   Examples:
@@ -8831,6 +8825,7 @@
 - Id: cxn:relative-pronoun
   Type: cxn
   Name: relative pronoun
+  Status: deleted
   SubtypeOf:
     - cxn:anaphoric-pronoun
   ConstituentOf:
@@ -8848,7 +8843,7 @@
   ExpressionOf:
     - cxn:relative-clause-construction
   Definition: >-
-    a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant in the relative clause is expressed by a <a>relative pronoun</a> unique to the relative clause construction. <i>Example</i>: in <i>He stole the emerald</i> [<i>which he gave to his wife</i>], the relative clause is introduced by the relative pronoun <i>which</i>, which refers to the emerald, which is also expressed by the external <a>relative clause head</a> <i>the emerald</i>. The relative pronoun strategy is rare crosslinguistically, and largely restricted to the European area. (Section 19.2.2)
+    a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant in the relative clause is expressed by a <a cxn:pronoun>relative pronoun</a> unique to the relative clause construction. <i>Example</i>: in <i>He stole the emerald</i> [<i>which he gave to his wife</i>], the relative clause is introduced by the relative pronoun <i>which</i>, which refers to the emerald, which is also expressed by the external <a>relative clause head</a> <i>the emerald</i>. The relative pronoun strategy is rare crosslinguistically, and largely restricted to the European area. (Section 19.2.2)
   Examples:
     - He stole the emerald [<e>which</e> he gave to his wife]
 
@@ -8869,7 +8864,7 @@
   ExpressionOf:
     - cxn:equative-construction
   Definition: >-
-    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a str:zero-copula>zero copula strategy</a> is used for <a cxn:predicate-identity-construction>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a inf:free-choice-referent>free</a> (<a cxn:indefinite-pronoun>indefinite head</a>) <a cxn:relative-clause>relative</a> or interrogative-based <a>relative pronoun</a>. (Section 17.2.4)
+    a <a>derived-case strategy</a> for <a>equative constructions</a> which consists of a <a>relative clause</a>-like <a>construction</a> where the <a>matrix clause</a> expresses that the <a>gradable predicative scale</a> applies to the <a>comparee</a>, and a relative clause expresses that the same scale applies to the <a>standard</a>. The relative clause is reduced to a <a>relativizer</a> and an <a>argument phrase</a> expressing the standard; the <a str:zero-copula>zero copula strategy</a> is used for <a cxn:predicate-identity-construction>predicate identity</a>. <i>Example</i>: Lithuanian <i>Šiandien taip šalta kaip vakar</i> <q>Today it is as cold as yesterday</q> is an instance of the relative-based equative strategy: <i>Šiandien taip šalta</i> <q>today [is] so cold</q> is the matrix clause, with the degree marker <i>taip</i> <q>so</q>, and <i>kaip vakar</i> <q>how yesterday</q> is the relative-based clause, with the pronoun <i>kaip</i> <q>how</q>, the standard, <q>yesterday</q>, and a zero predicate. Typically the relative-based equative recruits a correlative relative clause, with a <a inf:free-choice-referent>free</a> (<a cxn:indefinite-pronoun>indefinite head</a>) <a cxn:relative-clause>relative</a> or interrogative-based <a str:relative-pronoun-strategy>relative pronoun</a>. (Section 17.2.4)
   Examples:
     - Language: Lithuanian
       Example: <e>Šiandien taip šalta kaip vakar</e>
@@ -8907,8 +8902,7 @@
   Type: cxn
   Name: removal verb
   SubtypeOf:
-    - cxn:manner-verb
-    - cxn:result-verb
+    - cxn:verb
   Definition: >-
     the <a>verb</a> expressing a <a>removal event</a>. <i>Example</i>: scrubbing is a removal event, and <i>scrub</i> is a removal verb. (Section 7.3.2)
   Examples:
@@ -9828,7 +9822,7 @@
   Type: cxn
   Name: subject identity construction
   SubtypeOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     a <a>complex sentence construction</a> in which the <a>subject</a> <a>referents</a> in the two <a>clauses</a> are <a>coreferential</a>. <i>Example</i>: <i>Sumie patted the dog and hit the cat</i> is an instance of a subject identity <a>coordinate clause construction</a> -- the subject referent for both <i>patted the dog</i> and <i>hit the cat</i> is Sumie. (Section 16.5)
   Examples:
@@ -9857,7 +9851,7 @@
     - str:system
   ExpressionOf:
     - cxn:experiential-construction
-    - cxn:possessed-argument-asc
+    - cxn:possessed-argument-construction
     - cxn:motion-argument-structure-construction
     - cxn:perception-argument-structure-construction
   ModeledOn:
@@ -9973,7 +9967,7 @@
     - light verb construction
     - coverb construction
   SubtypeOf:
-    - cxn:eventive-complex-predicate
+    - cxn:complex-predicate
   Definition: >-
     an <a>eventive complex predicate</a> in which one of the <a>elements</a>, the <a>support verb</a>, has undergone semantic change -- specifically, semantic generalization -- such that it makes a minimal semantic contribution to the <a>meaning</a> of the whole <a>complex predicate</a>. This element no longer denotes a separate subevent of the whole <a>event</a>, unlike in <u>basic</u> <a>eventive complex predicates</a>. The <a>verb</a> <a>forms</a> in a support verb construction are also in a relatively idiosyncratic semantic relationship. <i>Example</i>: in English <i>Frances Patterson underwent an operation at RMH today</i>, <i>underwent an operation</i> is an instance of a support verb construction. The element other than the support verb is often in an <a>action nominal</a> or other form that is unlike the form of a simple (<a>predicated</a>) verb. (Section 13.5)
   Examples:
@@ -9985,7 +9979,7 @@
   SubtypeOf:
     - str:absolute-deranking-system
   ExpressionOf:
-    - cxn:reference-tracking
+    - cxn:reference-tracking-construction
   Definition: >-
     an <a>absolute deranking system</a> where the <a>same-subject</a> and <a>different-subject</a> <a>reference tracking constructions</a> systematically use different <a>deranked</a> constructions. <i>Example</i>: in Tauya <i>nono imai-te-pa ai mene-a-te pai aʔate-pa</i>... <q>She carried the child and came and stayed, they hit [= killed] the pigs and...</q> <i>imai-te-pa</i> [(<sc>3sg</sc>)-carry-get-SS] is a deranked predicate <a>form</a> with the same-subject deranking morpheme <i>-pa</i> since the following subject is also <q>she</q>, and <i>mene-a-te</i> [stay-3sg-DS] is a deranked predicate form with the different-subject deranking morpheme <i>-te</i> since the following subject switches to <q>they</q>. (Section 16.4)
   Examples:
@@ -10153,7 +10147,7 @@
   Type: cxn
   Name: thetic construction
   SubtypeOf:
-    - cxn:nonpredicational-clauses
+    - cxn:nonpredicational-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:thetic>thetic</a> information packaging. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
   Examples:
@@ -10632,7 +10626,7 @@
   AssociatedTo:
     - sem:necessary-participant-sharing
   Definition: >-
-    a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:clause>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
+    a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:clause>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object-phrase>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
   Examples:
     - Language: Luganda
       Example: ekiso [John kyeyattisa enkoko]
@@ -11948,9 +11942,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:possessed-argument-asc
+- Id: cxn:possessed-argument-construction
   Type: cxn
-  Name: possessed argument ASC
+  Name: possessed argument construction
   SubtypeOf:
     - cxn:basic-voice
   Definition: ''
@@ -12715,7 +12709,7 @@
   Type: cxn
   Name: passive-inverse A phrase
   SubtypeOf:
-    - cxn:argument-phrase
+    - cxn:nonsubject-argument-phrase
   ConstituentOf:
     - cxn:passive-inverse-voice
   Definition: ''
@@ -12725,7 +12719,7 @@
   Type: cxn
   Name: passive-inverse P phrase
   SubtypeOf:
-    - cxn:subject-phrase
+    - cxn:core-argument-phrase
   ConstituentOf:
     - cxn:passive-inverse-voice
   Definition: ''
@@ -12758,16 +12752,6 @@
     - cxn:nonsubject-argument-phrase
   ConstituentOf:
     - cxn:causative-construction
-  Definition: ''
-  FromGlossary: false
-
-- Id: cxn:applicative-object-phrase
-  Type: cxn
-  Name: applicative object phrase
-  SubtypeOf:
-    - cxn:object-phrase
-  ConstituentOf:
-    - cxn:applicative-construction
   Definition: ''
   FromGlossary: false
 
@@ -12915,5 +12899,15 @@
   Name: orientation
   AttributeOf:
     - sem:event-relation
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:possessor-argument-phrase
+  Type: cxn
+  Name: possessor argument phrase
+  SubtypeOf:
+    - cxn:argument-phrase
+  ConstituentOf:
+    - cxn:possessed-argument-construction
   Definition: ''
   FromGlossary: false
