@@ -3136,9 +3136,11 @@
   Examples:
     - <e>Reaching the top of the hill, Ron found a stone monument</e>
 
-- Id: str:derived-intransitive
+- Id: str:overtly-coded-single-role-strategy
   Type: str
-  Name: derived intransitive
+  Name: overtly coded single role strategy
+  Alias:
+    - derived intransitive
   SubtypeOf:
     - str:overt-coding
     - str:single-role-strategy
