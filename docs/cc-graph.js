@@ -276,7 +276,9 @@ function selectionChanged() {
     document.getElementById("ccExpandDownwards").disabled = !hasSelection;
     document.getElementById("ccExpandOutwards").disabled = !hasSelection;
     document.getElementById("ccClearFilter").disabled = !filtered;
-    document.getElementById("ccRevealNeighbors").disabled = !filtered;
+    document.getElementById("ccGrowUpwards").disabled = !filtered;
+    document.getElementById("ccGrowDownwards").disabled = !filtered;
+    document.getElementById("ccGrowOutwards").disabled = !filtered;
     document.getElementById("ccHideUnselected").disabled = !hasSelection;
     document.getElementById("ccHideSelected").disabled = !hasSelection;
     showStatistics();
@@ -401,15 +403,15 @@ function hideUnselected() {
 }
 
 // Expand the graph with nodes that are neighbors to currently visible nodes
-function revealNeighbors() {
+function revealNeighbors(direction) {
     let relations = getGraphRelations();
     let nodeIds = {};
     for (let n of network.body.nodeIndices) {
         nodeIds[n] = true;
         for (let e of ccEdges) {
             if (relations.includes(e.rel)) {
-                if (n === e.from) nodeIds[e.to] = true;
-                else if (n === e.to) nodeIds[e.from] = true;
+                if (n === e.from && direction !== 'from') nodeIds[e.to] = true;
+                else if (n === e.to && direction !== 'to') nodeIds[e.from] = true;
             }
         }
     }

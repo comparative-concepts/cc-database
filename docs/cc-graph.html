@@ -17,7 +17,7 @@
       <select id="ccGraphType" onchange="selectGraph()">
         <option value="" selected disabled>Select a graph</option>
       </select>
-      </label>
+      </label> &nbsp;
       <span id="ccRelations"></span>
     </li>
     <li>
@@ -41,9 +41,11 @@
     <li>
       <b>Subgraph:</b>
       <button id="ccClearFilter" onclick="clearFilter()">Clear filter</button>
-      <button id="ccRevealNeighbors" onclick="revealNeighbors()">Reveal neighbors</button>
-      <button id="ccHideUnselected" onclick="hideUnselected()">Hide unselected</button>
-      <button id="ccHideSelected" onclick="hideSelected()">Hide selected</button>
+      <button id="ccGrowUpwards" onclick="revealNeighbors('from')">Grow upwards</button>
+      <button id="ccGrowDownwards" onclick="revealNeighbors('to')">Grow downwards</button>
+      <button id="ccGrowOutwards" onclick="revealNeighbors()">Grow outwards</button>
+      <button id="ccHideUnselected" onclick="hideUnselected()">Remove unselected</button>
+      <button id="ccHideSelected" onclick="hideSelected()">Remove selected</button>
     </li>
     <li>
       <b>Selection:</b> 
