@@ -6,11 +6,11 @@ body {
     font-weight: 300; /* light (falls back to normal=400 if light isn't available */
 }
 
-h1, h2, h3, p, menu {
+h1, h2, h3, p, menu, details {
     margin: 0.75rem 0;
 }
 
-h1, h2, h3, b, strong {
+h1, h2, h3, b, strong, summary {
     font-weight: 550; /* medium (falls back to bold=700 if medium isn't available) */
 }
 
@@ -39,7 +39,7 @@ menu > li {
     width: 100%;
 }
 
-select:hover, input:hover, label:hover, button:hover {
+select:hover, input:hover, label:hover, button:hover, summary:hover {
     cursor: pointer;
 }
 
