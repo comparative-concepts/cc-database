@@ -1,12 +1,45 @@
 # Database of Comparative Concepts
 Cross-linked database of Comparative Concepts, extracted from "Morphosyntax: constructions of the world's languages", by William Croft (2022)
 
+## Usage
+
+You can use this database in the following ways:
+
+- You can [explore the interactive glossary](https://comparative-concepts.github.io/cc-database/), where you can read definitions and see how different CCs relate to each other.
+- You can [play with our interactive visualization](https://comparative-concepts.github.io/cc-database/cc-graph.html), which shows the relations between CCs as self-organizing graphs. You can filter these graphs to focus on just some CCs if you want.
+- You can use the raw database in your own applications. It is stored in YAML, and its structure is described below.
+
+## Organisation of the YAML database
+
+The CC database is stored in a YAML file. 
+Here is an example of a CC entry:
+
+https://github.com/comparative-concepts/cc-database/blob/7d4b779171aa3bbda6147bdcbb797e3da3d30598/cc-database.yaml#L5675-L5686
+
+This says the the unique id is `sem:less-affected-p`, it has the name "**less affected P**" and the type "**sem**". It also has an alternative name, "**LAP**", and is a subtype of `sem:p-role`. The definition is written in a pseudo-html format which can be parsed into correct HTML by the parsing script. Finally there are two example sentences that are extracted from the definition.
+
+### YAML type definition
+
+The YAML database consists of a list of entries of the following form:
+```
+- Id: cc-id (a string)
+  Name: str
+  Alias: list of strings (possibly empty)
+  Type: one of sem/cxn/inf/str/def
+  Definition: pseudo-html string
+  Examples: list of examples, either as plain strings or with information about language, gloss, translation, etc.
+
+  SubtypeOf, ConstituentOf, HeadOf, 
+  AttributeOf, RoleOf, FillerOf,
+  ExpressionOf, ModeledOn, RecruitedFrom: these are the different relations, stored as lists of cc-ids
+```
+
 ## The database parsing script
 
 The script `ccdb_parser.py` parses (and validates) the YAML database and outputs it in different formats. Currently only HTML output is supported.
 
 ```
-usage: ccdb_parser.py [-h] [--format {html,karp,fnbr}] cc_database
+usage: ccdb_parser.py [-h] [--quiet] [--format {html,karp,fnbr,graph}] [--keep-deleted] cc_database
 
 Parse the comparative concepts database and export it in different formats.
 
@@ -15,43 +48,12 @@ positional arguments:
 
 options:
   -h, --help            show this help message and exit
-  --format {html,karp,fnbr}, -f {html,karp,fnbr}
-                        export format
+  --quiet, -q           suppress warnings
+  --format FMT, -f FMT  export format (FMT = html, karp, fnbr, graph)
+  --keep-deleted, -d    keep deleted terms
 ```
 
-There's a Makefile that reads the database and creates the file `docs/index.html` which is then automatically published here: <https://comparative-concepts.github.io/cc-database/>
+There's a Makefile that reads the database and creates the files `docs/index.html` and `docs/cc-graph-data.js`. 
+They are used in the [interactive glossary](https://comparative-concepts.github.io/cc-database>) 
+and the [interactive visualization](https://comparative-concepts.github.io/cc-database/cc-graph.html).
 
-## Organisation of the YAML database
-
-The CC database is stored in a YAML file. 
-Here is an example of a CC entry:
-
-```
-- Id: less affected P [sem]
-  Type: sem
-  InstanceOf: ""
-  Alias:
-    - LAP
-    - less affected P
-  SubtypeOf:
-    - P role [sem]
-  ConstituentOf: []
-  AssociatedTo: []
-  Definition: >-
-    a <a>function</a> related to the function of the <a>antipassive construction</a>, in which the <a>P</a> <a>participant</a> is less <a>affected</a> than it is in the equivalent event expressed by <a>transitive construction</a>. <i>Example</i>: in <i>The coyote chewed on the deer bone</i>, the deer bone is a less affected P participant than in the transitive <i>The coyote chewed the deer bone</i>. (Section 8.4)
-```
-This says the the unique id is "less affected P [sem]", and that it has the type "sem". It also has an alternative name, "LAP", and is a subtype of "P role [sem]". The definition is written in a pseudo-html format which can be parsed into correct HTML by the parsing script. 
-
-### YAML type definition
-
-The YAML database consists of a list of entries of the following form:
-```
-- Id: cc-id (a string)
-  Type: one of sem/cxn/inf/str/def
-  InstanceOf: cc-id (possibly empty)
-  Alias: list of strings (possibly empty)
-  SubtypeOf: list of cc-ids (possibly empty)
-  ConstituentOf: list of cc-ids (possibly empty)
-  AssociatedTo: list of cc-ids (possibly empty)
-  Definition: pseudo-html string
-```
