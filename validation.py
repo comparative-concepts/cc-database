@@ -24,12 +24,11 @@ class Relation(str, Enum):
     ExpressionOf = 'ExpressionOf'
     RecruitedFrom = 'RecruitedFrom'
     ModeledOn = 'ModeledOn'
-    FunctionOf = 'FunctionOf'
     AttributeOf = 'AttributeOf'
     RoleOf = 'RoleOf'
     FillerOf = 'FillerOf'
     HeadOf = 'HeadOf'
-    AssociatedTo = 'AssociatedTo'
+    AssociatedTo = 'AssociatedTo'  # This relation is obsolete and will be replaced
 
 
 class Example(BaseModel):
@@ -45,6 +44,7 @@ class GlossItem(BaseModel):
     Type: CCType
     Definition: str
     FromGlossary: bool = True
+    Status: str = ""
     Alias: list[str] = []
     Examples: list[str | Example] = []
     Relations: dict[Relation, list[str]]
@@ -72,7 +72,6 @@ RELATION_CCTYPES = {
     Relation.ExpressionOf:  {CCType.str:CCType.cxn},
     Relation.RecruitedFrom: {CCType.str:CCType.cxn},
     Relation.ModeledOn:     {CCType.str:CCType.cxn},
-    Relation.FunctionOf:    {CCType.inf:CCType.cxn, CCType.sem:CCType.cxn},
     Relation.AttributeOf:   {CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.RoleOf:        {CCType.sem:CCType.sem},
     Relation.FillerOf:      {CCType.sem:CCType.sem},

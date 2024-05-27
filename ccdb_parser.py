@@ -85,9 +85,9 @@ class CCDB:
                     error(id, f"Could not find any matching id for link '{link}'")
                     linkid = link
                 else:
+                    linkid = linkids[0]
                     if len(linkids) > 1:
                         error(id, f"Ambiguous link '{link}', maps to any of {linkids}")
-                    linkid = linkids[0]
                 links.append(linkid)
                 part = (linkid, name)
             if part:
@@ -254,7 +254,7 @@ class CCDB:
         print('<div id="search"></div>')
         print(f'<h1><a href="#">Database of Comparative Concepts</a></h1>')
         print(f"<p>Extracted and expanded from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
-        print(f'<p>Explore our interactive <a href="/cc-database/cc-graph.html">graph visualization of the CC database</a>.</p>')
+        print(f'<p>Explore our interactive <a href="cc-graph.html">graph visualization of the CC database</a>.</p>')
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
 
         glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1].Name))
@@ -296,7 +296,6 @@ class CCDB:
             self.print_relation_list(relations.get(Relation.ExpressionOf), "Expresses")
             self.print_relation_list(relations.get(Relation.RecruitedFrom), "Recruited from")
             self.print_relation_list(relations.get(Relation.ModeledOn), "Modeled on")
-            self.print_relation_list(relations.get(Relation.FunctionOf), "Function of")
             self.print_relation_list(relations.get(Relation.AttributeOf), "Attribute of")
             self.print_relation_list(relations.get(Relation.RoleOf), "Role of")
             self.print_relation_list(relations.get(Relation.FillerOf), "Filler of")
