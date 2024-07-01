@@ -8,8 +8,8 @@
 <h1><a href="#">Database of Comparative Concepts</a></h1>
 <p>Extracted and expanded from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)
 <p>Explore our interactive <a href="cc-graph.html">graph visualization of the CC database</a>.</p>
-<p><strong>Build date/time:</strong> 2024-07-01 16:48:39</p>
-<p><strong>Statistics:</strong> 1071 CCs, with 1859 typed relations and 3621 links within CC definitions</p>
+<p><strong>Build date/time:</strong> 2024-07-01 19:40:25</p>
+<p><strong>Statistics:</strong> 1080 CCs, with 1861 typed relations and 3623 links within CC definitions</p>
 <div id="glosses">
 <div class="cc" id="sem:a-role">
 <h2 class="name"><a href="#sem:a-role">A role (<i>sem</i>)</a></h2>
@@ -525,7 +525,9 @@
 </td></tr>
 <tr><td class="flex">
 <span> <a href="#cxn:age-term">age term (<i>cxn</i>)</a></span>
+<span> <a href="#cxn:antonym">antonym (<i>cxn</i>)</a></span>
 <span> <a href="#cxn:color-term">color term (<i>cxn</i>)</a></span>
+<span> <a href="#cxn:complementary">complementary (<i>cxn</i>)</a></span>
 <span> <a href="#cxn:dimension-term">dimension term (<i>cxn</i>)</a></span>
 <span> <a href="#cxn:gender-term">gender term (<i>cxn</i>)</a></span>
 <span> <a href="#cxn:human-propensity-term">human propensity term (<i>cxn</i>)</a></span>
@@ -667,6 +669,19 @@
 <tr><th>Id</th> <td class="ccinfo ccid">cxn:admodifier</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">admodifier</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td>
+<strong>admodifier (<i>cxn</i>)</strong>
+</td></tr>
+<tr><td class="flex">
+<span> <a href="#cxn:comparative-form">comparative form (<i>cxn</i>)</a></span>
+<span> <a href="#cxn:downtoner">downtoner (<i>cxn</i>)</a></span>
+<span> <a href="#cxn:intensifier">intensifier (<i>cxn</i>)</a></span>
+<span> <a href="#cxn:measurement">measurement (<i>cxn</i>)</a></span>
+<span> <a href="#cxn:superlative-form">superlative form (<i>cxn</i>)</a></span>
+</td></tr>
+</table></td></tr>
 <tr><th>Partonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -938,6 +953,10 @@
 <tr><td>
 <strong>affectee (<i>sem</i>)</strong>
 </td></tr>
+<tr><td class="flex">
+<span> <a href="#sem:beneficiary">beneficiary (<i>sem</i>)</a></span>
+<span> <a href="#sem:maleficiary">maleficiary (<i>sem</i>)</a></span>
+</td></tr>
 </table></td></tr>
 <tr><th></th><td>
                       <span class="notfound">
@@ -1095,11 +1114,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:agent</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">agent</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>agent (<i>sem</i>)</strong>
@@ -1908,22 +1926,22 @@
                       </span></td></tr>
 </table>
 </div>
-<div class="cc" id="sem:antonym">
-<h2 class="name"><a href="#sem:antonym">antonym (<i>sem</i>)</a></h2>
+<div class="cc" id="cxn:antonym">
+<h2 class="name"><a href="#cxn:antonym">antonym (<i>cxn</i>)</a></h2>
 <table>
-<tr><th>Id</th> <td class="ccinfo ccid">sem:antonym</td></tr>
-<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:antonym</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">antonym</td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:property-concept">property concept (<i>sem</i>)</a></span>
+<span> <a href="#cxn:adjective">adjective (<i>cxn</i>)</a></span>
 </td></tr>
 <tr><td>
-<strong>antonym (<i>sem</i>)</strong>
+<strong>antonym (<i>cxn</i>)</strong>
 </td></tr>
 </table></td></tr>
-<tr><th>Definition</th> <td class="ccinfo definition">opposing values on a gradient scale. <em>Example</em>: <em>tall</em> and <em>short</em> are antonyms on the gradient scale of height. (Section 4.1.2)</td></tr>
+<tr><th>Definition</th> <td class="ccinfo definition">opposing values on a <a href="#sem:gradient">gradient scale</a>. <em>Example</em>: <em>tall</em> and <em>short</em> are antonyms on the gradient scale of height. (Section 4.1.2)</td></tr>
 </table>
 </div>
 <div class="cc" id="sem:apodosis">
@@ -2236,7 +2254,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>arrangement (<i>sem</i>)</strong>
@@ -2660,10 +2678,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:base-event</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">base event</td></tr>
-<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<tr><th>Partonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:causal-structure">causal structure (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>base event (<i>sem</i>)</strong>
@@ -2736,12 +2754,11 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:beneficiary</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">beneficiary</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a> | <a href="#sem:experiential-event">experiential event (<i>sem</i>)</a></td></tr>
 <tr><th>Associated</th> <td class="ccinfo relation"><a href="#cxn:applicative-object-phrase">applicative object phrase (<i>cxn</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:affectee">affectee (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>beneficiary (<i>sem</i>)</strong>
@@ -2822,7 +2839,7 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:bivalent</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">bivalent</td></tr>
-<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:agentive-change-of-state-event">agentive change of state event (<i>sem</i>)</a> | <a href="#sem:application-event">application event (<i>sem</i>)</a> | <a href="#sem:cognition-event">cognition event (<i>sem</i>)</a> | <a href="#sem:combining-event">combining event (<i>sem</i>)</a> | <a href="#sem:contact-by-impact-event">contact by impact event (<i>sem</i>)</a> | <a href="#sem:damage-event">damage event (<i>sem</i>)</a> | <a href="#sem:emotion-event">emotion event (<i>sem</i>)</a> | <a href="#sem:ingestion-event">ingestion event (<i>sem</i>)</a> | <a href="#sem:interaction-event">interaction event (<i>sem</i>)</a> | <a href="#sem:killing-injuring-event">killing/injuring event (<i>sem</i>)</a> | <a href="#sem:motion-event">motion event (<i>sem</i>)</a> | <a href="#sem:perception-event">perception event (<i>sem</i>)</a> | <a href="#sem:possession">possession (<i>sem</i>)</a> | <a href="#sem:pursuit-event">pursuit event (<i>sem</i>)</a> | <a href="#sem:removal-event">removal event (<i>sem</i>)</a> | <a href="#sem:sensation-event">sensation event (<i>sem</i>)</a> | <a href="#sem:caused-motion">caused motion (<i>sem</i>)</a> | <a href="#sem:contact-event">contact event (<i>sem</i>)</a> | <a href="#sem:creation-event">creation event (<i>sem</i>)</a></td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:agentive-change-of-state-event">agentive change of state event (<i>sem</i>)</a> | <a href="#sem:application-event">application event (<i>sem</i>)</a> | <a href="#sem:cognition-event">cognition event (<i>sem</i>)</a> | <a href="#sem:combining-event">combining event (<i>sem</i>)</a> | <a href="#sem:contact-by-impact-event">contact by impact event (<i>sem</i>)</a> | <a href="#sem:damage-event">damage event (<i>sem</i>)</a> | <a href="#sem:emotion-event">emotion event (<i>sem</i>)</a> | <a href="#sem:ingestion-event">ingestion event (<i>sem</i>)</a> | <a href="#sem:interaction-event">interaction event (<i>sem</i>)</a> | <a href="#sem:killing-injuring-event">killing/injuring event (<i>sem</i>)</a> | <a href="#sem:figure-ground-spatial-relation">figure-ground spatial relation (<i>sem</i>)</a> | <a href="#sem:motion-event">motion event (<i>sem</i>)</a> | <a href="#sem:perception-event">perception event (<i>sem</i>)</a> | <a href="#sem:possession">possession (<i>sem</i>)</a> | <a href="#sem:pursuit-event">pursuit event (<i>sem</i>)</a> | <a href="#sem:removal-event">removal event (<i>sem</i>)</a> | <a href="#sem:sensation-event">sensation event (<i>sem</i>)</a> | <a href="#sem:caused-motion">caused motion (<i>sem</i>)</a> | <a href="#sem:contact-event">contact event (<i>sem</i>)</a> | <a href="#sem:creation-event">creation event (<i>sem</i>)</a></td></tr>
 <tr><th>Associated</th> <td class="ccinfo relation"><a href="#cxn:transitive-construction">transitive construction (<i>cxn</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
@@ -3093,6 +3110,19 @@
 <tr><th>Definition</th> <td class="ccinfo definition">a <a href="#str:flagging">flag</a> which occurs as an affix. <em>Example</em>: in Russian <em>kniga Ivan-a</em> <q>John's book</q>, <em>-a</em> is a Genitive case marking suffixed to <em>Ivan</em> <q>John</q>. (Section 4.3)</td></tr>
 </table>
 </div>
+<div class="cc" id="sem:categorical">
+<h2 class="name"><a href="#sem:categorical">categorical (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:categorical</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">categorical</td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:scale">scale (<i>sem</i>)</a></td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
+</table>
+</div>
 <div class="cc" id="sem:causal">
 <h2 class="name"><a href="#sem:causal">causal (<i>sem</i>)</a></h2>
 <table>
@@ -3332,6 +3362,7 @@
 <strong>causal structure (<i>sem</i>)</strong>
 </td></tr>
 <tr><td class="flex">
+<span> <a href="#sem:base-event">base event (<i>sem</i>)</a></span>
 <span> <a href="#sem:causative-event">causative event (<i>sem</i>)</a></span>
 </td></tr>
 </table></td></tr>
@@ -3455,11 +3486,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:cause</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">cause</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>cause (<i>sem</i>)</strong>
@@ -3496,11 +3526,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:causee</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">causee</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a> | <a href="#sem:experiential-event">experiential event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>causee (<i>sem</i>)</strong>
@@ -3545,11 +3574,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:causer</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">causer</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>causer (<i>sem</i>)</strong>
@@ -3601,6 +3629,10 @@
 </td></tr>
 <tr><td>
 <strong>central participant (<i>sem</i>)</strong>
+</td></tr>
+<tr><td class="flex">
+<span> <a href="#sem:endpoint">endpoint (<i>sem</i>)</a></span>
+<span> <a href="#sem:initiator">initiator (<i>sem</i>)</a></span>
 </td></tr>
 </table></td></tr>
 <tr><th>Definition</th> <td class="ccinfo definition">certain <a href="#sem:participant">participants</a> are considered to be more central to the <a href="#sem:event">event</a>, in particular those that initiate the action and those that are most strongly affected by the action. <em>Example</em>: in an eating event, the eater and the food are the more central participants, in that the eater initiates the action and the food is completely affected by the action. In contrast, the place where the eating takes place is a <a href="#sem:peripheral-participant">peripheral participant</a> in the action. (Section 6.1.1)</td></tr>
@@ -4124,11 +4156,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:comitative</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">comitative</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>comitative (<i>sem</i>)</strong>
@@ -4318,6 +4349,27 @@
 </td></tr>
 <tr><td>
 <strong>comparative degree (<i>sem</i>)</strong>
+</td></tr>
+</table></td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
+</table>
+</div>
+<div class="cc" id="cxn:comparative-form">
+<h2 class="name"><a href="#cxn:comparative-form">comparative form (<i>cxn</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:comparative-form</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">comparative form</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#cxn:admodifier">admodifier (<i>cxn</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>comparative form (<i>cxn</i>)</strong>
 </td></tr>
 </table></td></tr>
 <tr><th>Definition</th> <td class="ccinfo definition">a higher value on a <a href="#sem:property-concept">property</a> scale than the comparable value for another object. <em>Example</em>: in <em>more intelligent</em>, <em>more</em> indicates a value higher on the intelligence scale than the comparable value for the person to whom the current referent is being compared. (Section 4.1.2)</td></tr>
@@ -4544,22 +4596,22 @@
 <tr><th>Definition</th> <td class="ccinfo definition">the <a href="#cxn:matrix-clause">matrix clause</a> <span class="separation"/> <a href="#cxn:predicate">predicate</a> in a <a href="#cxn:complement-clause-construction">complement clause construction</a>. <em>Example</em>: in <em>I told her that I would go</em>, <em>told</em> is the complement-taking predicate. (Section 18.2.1)</td></tr>
 </table>
 </div>
-<div class="cc" id="sem:complementary">
-<h2 class="name"><a href="#sem:complementary">complementary (<i>sem</i>)</a></h2>
+<div class="cc" id="cxn:complementary">
+<h2 class="name"><a href="#cxn:complementary">complementary (<i>cxn</i>)</a></h2>
 <table>
-<tr><th>Id</th> <td class="ccinfo ccid">sem:complementary</td></tr>
-<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:complementary</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">complementary</td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:property-concept">property concept (<i>sem</i>)</a></span>
+<span> <a href="#cxn:adjective">adjective (<i>cxn</i>)</a></span>
 </td></tr>
 <tr><td>
-<strong>complementary (<i>sem</i>)</strong>
+<strong>complementary (<i>cxn</i>)</strong>
 </td></tr>
 </table></td></tr>
-<tr><th>Definition</th> <td class="ccinfo definition">opposing values on a scale where there is no gradience, only categorical values (either the object has the value or it doesn't). <em>Example</em>: <em>alive/dead</em> are complementaries in that one is either alive or not. (Section 4.1.2)</td></tr>
+<tr><th>Definition</th> <td class="ccinfo definition">opposing values on a scale where there is no gradience, only <a href="#sem:categorical">categorical</a> values (either the object has the value or it doesn't). <em>Example</em>: <em>alive/dead</em> are complementaries in that one is either alive or not. (Section 4.1.2)</td></tr>
 </table>
 </div>
 <div class="cc" id="inf:complementative">
@@ -5225,6 +5277,7 @@
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>contact by impact event (<i>sem</i>)</strong>
@@ -5282,7 +5335,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>container (<i>sem</i>)</strong>
@@ -5906,6 +5959,7 @@
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>damage event (<i>sem</i>)</strong>
@@ -6106,9 +6160,9 @@
 </td></tr>
 <tr><td class="flex">
 <span> <a href="#sem:comparative-degree">comparative degree (<i>sem</i>)</a></span>
-<span> <a href="#sem:downtoner">downtoner (<i>sem</i>)</a></span>
-<span> <a href="#sem:intensifier">intensifier (<i>sem</i>)</a></span>
-<span> <a href="#sem:measurement">measurement (<i>sem</i>)</a></span>
+<span> <a href="#sem:downtoning">downtoning (<i>sem</i>)</a></span>
+<span> <a href="#sem:intensifying">intensifying (<i>sem</i>)</a></span>
+<span> <a href="#sem:measuring">measuring (<i>sem</i>)</a></span>
 <span> <a href="#sem:superlative-degree">superlative degree (<i>sem</i>)</a></span>
 </td></tr>
 </table></td></tr>
@@ -6170,7 +6224,7 @@
 <strong>degree marker (<i>str</i>)</strong>
 </td></tr>
 </table></td></tr>
-<tr><th>Definition</th> <td class="ccinfo definition">a free morpheme or affix that expresses the relative degree of the gradable predicative scale applied to the comparee, in comparative and equative constructions. <em>Example</em>: in <em>taller</em>, the suffix <em>-er</em> is a degree marker. In addition to comparative and equative degree markers, some languages have a distinct <a href="#sem:superlative-degree">superlative</a> degree marker, such as <em>-est</em> in English <em>tallest</em>. (Section 17.2.2)</td></tr>
+<tr><th>Definition</th> <td class="ccinfo definition">a free morpheme or affix that expresses the relative degree of the gradable predicative scale applied to the comparee, in comparative and equative constructions. <em>Example</em>: in <em>taller</em>, the suffix <em>-er</em> is a degree marker. In addition to comparative and equative degree markers, some languages have a distinct <a href="#cxn:superlative-form">superlative degree marker</a>, such as <em>-est</em> in English <em>tallest</em>. (Section 17.2.2)</td></tr>
 </table>
 </div>
 <div class="cc" id="str:degree-modifier">
@@ -7156,22 +7210,43 @@
 <tr><th>Definition</th> <td class="ccinfo definition">expression of a <a href="#inf:reference">referent</a> twice in a <a href="#cxn:clause">clause</a>, by a <a href="#cxn:referring-phrase">referring phrase</a> and simultaneously by an <a href="#str:index">index</a>. (Section 3.3.3)</td></tr>
 </table>
 </div>
-<div class="cc" id="sem:downtoner">
-<h2 class="name"><a href="#sem:downtoner">downtoner (<i>sem</i>)</a></h2>
+<div class="cc" id="cxn:downtoner">
+<h2 class="name"><a href="#cxn:downtoner">downtoner (<i>cxn</i>)</a></h2>
 <table>
-<tr><th>Id</th> <td class="ccinfo ccid">sem:downtoner</td></tr>
-<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:downtoner</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">downtoner</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#cxn:admodifier">admodifier (<i>cxn</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>downtoner (<i>cxn</i>)</strong>
+</td></tr>
+</table></td></tr>
+<tr><th>Definition</th> <td class="ccinfo definition">a lower than normal value on a <a href="#sem:property-concept">property</a> scale. <em>Example</em>: in <em>somewhat long, somewhat</em> indicates a value shorter than is normal for length. (Section 4.1.2)</td></tr>
+</table>
+</div>
+<div class="cc" id="sem:downtoning">
+<h2 class="name"><a href="#sem:downtoning">downtoning (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:downtoning</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">downtoning</td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:degree">degree (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
-<strong>downtoner (<i>sem</i>)</strong>
+<strong>downtoning (<i>sem</i>)</strong>
 </td></tr>
 </table></td></tr>
-<tr><th>Definition</th> <td class="ccinfo definition">a lower than normal value on a <a href="#sem:property-concept">property</a> scale. <em>Example</em>: in <em>somewhat long, somewhat</em> indicates a value shorter than is normal for length. (Section 4.1.2)</td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
 </table>
 </div>
 <div class="cc" id="str:dual-role-strategy">
@@ -7477,7 +7552,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:participant">participant (<i>sem</i>)</a></span>
+<span> <a href="#sem:central-participant">central participant (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>endpoint (<i>sem</i>)</strong>
@@ -7897,7 +7972,6 @@
 <span> <a href="#sem:agentive-change-of-state-event">agentive change of state event (<i>sem</i>)</a></span>
 <span> <a href="#sem:application-event">application event (<i>sem</i>)</a></span>
 <span> <a href="#sem:attending-event">attending event (<i>sem</i>)</a></span>
-<span> <a href="#sem:base-event">base event (<i>sem</i>)</a></span>
 <span> <a href="#sem:bodily-action">bodily action (<i>sem</i>)</a></span>
 <span> <a href="#sem:bodily-motion-event">bodily motion event (<i>sem</i>)</a></span>
 <span> <a href="#sem:body-care-event">body care event (<i>sem</i>)</a></span>
@@ -7952,10 +8026,6 @@
 <span> <a href="#sem:proportional-quantifier">proportional quantifier (<i>sem</i>)</a></span>
 <span> <a href="#sem:distributive-quantifier">distributive quantifier (<i>sem</i>)</a></span>
 <span> <a href="#sem:ordinal-numeral">ordinal numeral (<i>sem</i>)</a></span>
-<span> <a href="#sem:measure">measure (<i>sem</i>)</a></span>
-<span> <a href="#sem:container">container (<i>sem</i>)</a></span>
-<span> <a href="#sem:group">group (<i>sem</i>)</a></span>
-<span> <a href="#sem:piece">piece (<i>sem</i>)</a></span>
 <span> <a href="#sem:species">species (<i>sem</i>)</a></span>
 <span> <a href="#sem:object-relation">object relation (<i>sem</i>)</a></span>
 <span> <a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a></span>
@@ -7965,7 +8035,7 @@
 <span> <a href="#sem:creation-event">creation event (<i>sem</i>)</a></span>
 <span> <a href="#sem:agentive-experience-event">agentive experience event (<i>sem</i>)</a></span>
 <span> <a href="#sem:agentive-ingestion-event">agentive ingestion event (<i>sem</i>)</a></span>
-<span> <a href="#sem:arrangement">arrangement (<i>sem</i>)</a></span>
+<span> <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></span>
 </td></tr>
 </table></td></tr>
 <tr><th>Partonomy</th> <td class="ccinfo relation"> <table>
@@ -8590,6 +8660,7 @@
 <tr><td class="flex">
 <span> <a href="#sem:cognition-event">cognition event (<i>sem</i>)</a></span>
 <span> <a href="#sem:emotion-event">emotion event (<i>sem</i>)</a></span>
+<span> <a href="#sem:ingestion-event">ingestion event (<i>sem</i>)</a></span>
 <span> <a href="#sem:perception-event">perception event (<i>sem</i>)</a></span>
 <span> <a href="#sem:sensation-event">sensation event (<i>sem</i>)</a></span>
 <span> <a href="#sem:agentive-experience-event">agentive experience event (<i>sem</i>)</a></span>
@@ -8688,7 +8759,7 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:external-cause</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">external cause</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
+<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a> | <a href="#sem:experiential-event">experiential event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -8696,6 +8767,15 @@
 </td></tr>
 <tr><td>
 <strong>external cause (<i>sem</i>)</strong>
+</td></tr>
+<tr><td class="flex">
+<span> <a href="#sem:agent">agent (<i>sem</i>)</a></span>
+<span> <a href="#sem:cause">cause (<i>sem</i>)</a></span>
+<span> <a href="#sem:causee">causee (<i>sem</i>)</a></span>
+<span> <a href="#sem:causer">causer (<i>sem</i>)</a></span>
+<span> <a href="#sem:comitative">comitative (<i>sem</i>)</a></span>
+<span> <a href="#sem:force">force (<i>sem</i>)</a></span>
+<span> <a href="#sem:instrument">instrument (<i>sem</i>)</a></span>
 </td></tr>
 </table></td></tr>
 <tr><th></th><td>
@@ -8997,7 +9077,7 @@
 <table>
 <tr><th>Id</th> <td class="ccinfo ccid">sem:figure-ground-spatial-relation</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
-<th>Alias(es)</th> <td class="ccinfo name">figure-ground spatial relation | figure–ground spatial relation | location | location (relation) | location relation | spatial figure–ground relation</td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">figure-ground spatial relation | figure–ground spatial relation | location relation | spatial figure–ground relation</td></tr>
 <tr><th>Associated</th> <td class="ccinfo relation"><a href="#cxn:locational-construction">locational construction (<i>cxn</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
@@ -9255,11 +9335,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:force</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">force</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>force (<i>sem</i>)</strong>
@@ -9606,6 +9685,19 @@
 <tr><th>Definition</th> <td class="ccinfo definition">in a <a href="#cxn:comparative-construction">comparative construction</a> or an <a href="#cxn:equative-construction">equative construction</a>, the <a href="#cxn:predicate">predicate</a> that defines the <a href="#sem:scalar-model">scale</a> on which the <a href="#sem:comparee">comparee</a> and <a href="#sem:standard">standard</a> are located. <em>Example</em>: in <em>Your cat is as big as my dog</em>, size is the gradable predicative scale on which it is asserted that the position of the cat is the same as the position of the dog. (Section 17.2.1)</td></tr>
 </table>
 </div>
+<div class="cc" id="sem:gradient">
+<h2 class="name"><a href="#sem:gradient">gradient (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:gradient</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">gradient</td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:scale">scale (<i>sem</i>)</a></td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
+</table>
+</div>
 <div class="cc" id="def:grammaticalization">
 <h2 class="name"><a href="#def:grammaticalization">grammaticalization (<i>def</i>)</a></h2>
 <table>
@@ -9674,7 +9766,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>group (<i>sem</i>)</strong>
@@ -11171,6 +11263,7 @@
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:experiential-event">experiential event (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>ingestion event (<i>sem</i>)</strong>
@@ -11206,7 +11299,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:participant">participant (<i>sem</i>)</a></span>
+<span> <a href="#sem:central-participant">central participant (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>initiator (<i>sem</i>)</strong>
@@ -11230,11 +11323,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:instrument</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">instrument</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:external-cause">external cause (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>instrument (<i>sem</i>)</strong>
@@ -11263,22 +11355,43 @@
 <tr><th>Definition</th> <td class="ccinfo definition">the <a href="#str:recruitment-strategy">recruitment</a> of <a href="#str:deranking">deranked</a> <span class="separation"/> <a href="#cxn:clause">clause constructions</a> to express a <strong>nondeclarative main clause function</strong>. <em>Example</em>: <em>No smoking</em> recruits the English Gerund Verb form ending in <em>-ing</em> in order to express an <a href="#cxn:imperative-hortative-construction">imperative</a>. (Section 15.2.3)</td></tr>
 </table>
 </div>
-<div class="cc" id="sem:intensifier">
-<h2 class="name"><a href="#sem:intensifier">intensifier (<i>sem</i>)</a></h2>
+<div class="cc" id="cxn:intensifier">
+<h2 class="name"><a href="#cxn:intensifier">intensifier (<i>cxn</i>)</a></h2>
 <table>
-<tr><th>Id</th> <td class="ccinfo ccid">sem:intensifier</td></tr>
-<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:intensifier</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">intensifier</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#cxn:admodifier">admodifier (<i>cxn</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>intensifier (<i>cxn</i>)</strong>
+</td></tr>
+</table></td></tr>
+<tr><th>Definition</th> <td class="ccinfo definition">a higher than normal value on a <a href="#sem:property-concept">property</a> scale. <em>Example</em>: in <em>very long, very</em> indicates a value longer than normal. (Section 4.1.2)</td></tr>
+</table>
+</div>
+<div class="cc" id="sem:intensifying">
+<h2 class="name"><a href="#sem:intensifying">intensifying (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:intensifying</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">intensifying</td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:degree">degree (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
-<strong>intensifier (<i>sem</i>)</strong>
+<strong>intensifying (<i>sem</i>)</strong>
 </td></tr>
 </table></td></tr>
-<tr><th>Definition</th> <td class="ccinfo definition">a higher than normal value on a <a href="#sem:property-concept">property</a> scale. <em>Example</em>: in <em>very long, very</em> indicates a value longer than normal. (Section 4.1.2)</td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
 </table>
 </div>
 <div class="cc" id="sem:interaction-event">
@@ -11703,6 +11816,7 @@
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>killing/injuring event (<i>sem</i>)</strong>
@@ -12301,11 +12415,10 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:maleficiary</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">maleficiary</td></tr>
-<tr><th>Role of</th> <td class="ccinfo relation"><a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a> | <a href="#sem:spatial-event">spatial event (<i>sem</i>)</a> | <a href="#sem:transfer-event">transfer event (<i>sem</i>)</a> | <a href="#sem:experiential-event">experiential event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a></span>
+<span> <a href="#sem:affectee">affectee (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>maleficiary (<i>sem</i>)</strong>
@@ -12655,7 +12768,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>measure (<i>sem</i>)</strong>
@@ -12685,22 +12798,43 @@
 <tr><th>Definition</th> <td class="ccinfo definition">a <a href="#cxn:mensural-term">mensural term</a> that selects a measured amount of an uncountable <a href="#inf:reference">referent</a>. <em>Example</em>: in <em>six gallons of wine, gallon(s)</em> is a measure term. (Section 4.1.3)</td></tr>
 </table>
 </div>
-<div class="cc" id="sem:measurement">
-<h2 class="name"><a href="#sem:measurement">measurement (<i>sem</i>)</a></h2>
+<div class="cc" id="cxn:measurement">
+<h2 class="name"><a href="#cxn:measurement">measurement (<i>cxn</i>)</a></h2>
 <table>
-<tr><th>Id</th> <td class="ccinfo ccid">sem:measurement</td></tr>
-<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:measurement</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">measurement</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#cxn:admodifier">admodifier (<i>cxn</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>measurement (<i>cxn</i>)</strong>
+</td></tr>
+</table></td></tr>
+<tr><th>Definition</th> <td class="ccinfo definition">a calibratable value on a <a href="#sem:property-concept">property</a> scale. <em>Example</em>: in <em>three feet long, three feet</em> measures the value of length for the object in question. (Section 4.1.2)</td></tr>
+</table>
+</div>
+<div class="cc" id="sem:measuring">
+<h2 class="name"><a href="#sem:measuring">measuring (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:measuring</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">measuring</td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:degree">degree (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
-<strong>measurement (<i>sem</i>)</strong>
+<strong>measuring (<i>sem</i>)</strong>
 </td></tr>
 </table></td></tr>
-<tr><th>Definition</th> <td class="ccinfo definition">a calibratable value on a <a href="#sem:property-concept">property</a> scale. <em>Example</em>: in <em>three feet long, three feet</em> measures the value of length for the object in question. (Section 4.1.2)</td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
 </table>
 </div>
 <div class="cc" id="inf:medium-accessibility">
@@ -12775,6 +12909,34 @@
 </td></tr>
 </table></td></tr>
 <tr><th>Definition</th> <td class="ccinfo definition">a <a href="#str:strategy">strategy</a> used for the <a href="#cxn:mensural-modification-construction">mensural construction</a> that is morphosyntactically similar to the <a href="#str:sortal-classifier">(sortal) classifier strategy</a> used in the language. <em>Example</em>: in Cantonese <em>léuhng wún faahn</em> <q>two bowls of rice</q>, <em>wún</em> <q>bowl</q> is a mensural classifier that recruits the same construction as is used for sortal classifiers in the language. (Section 5.2.2)</td></tr>
+</table>
+</div>
+<div class="cc" id="sem:mensural-concept">
+<h2 class="name"><a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:mensural-concept</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">mensural concept</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>mensural concept (<i>sem</i>)</strong>
+</td></tr>
+<tr><td class="flex">
+<span> <a href="#sem:measure">measure (<i>sem</i>)</a></span>
+<span> <a href="#sem:container">container (<i>sem</i>)</a></span>
+<span> <a href="#sem:group">group (<i>sem</i>)</a></span>
+<span> <a href="#sem:piece">piece (<i>sem</i>)</a></span>
+<span> <a href="#sem:arrangement">arrangement (<i>sem</i>)</a></span>
+</td></tr>
+</table></td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
 </table>
 </div>
 <div class="cc" id="cxn:mensural-modification-construction">
@@ -13156,7 +13318,7 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:monovalent</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">monovalent</td></tr>
-<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:bodily-action">bodily action (<i>sem</i>)</a> | <a href="#sem:bodily-motion-event">bodily motion event (<i>sem</i>)</a> | <a href="#sem:body-care-event">body care event (<i>sem</i>)</a> | <a href="#sem:body-position-event">body position event (<i>sem</i>)</a> | <a href="#sem:change-in-position-event">change in position event (<i>sem</i>)</a> | <a href="#sem:change-of-state-event">change of state event (<i>sem</i>)</a> | <a href="#sem:cognition-event">cognition event (<i>sem</i>)</a> | <a href="#sem:emotion-event">emotion event (<i>sem</i>)</a> | <a href="#sem:figure-ground-spatial-relation">figure-ground spatial relation (<i>sem</i>)</a> | <a href="#sem:ingestion-event">ingestion event (<i>sem</i>)</a> | <a href="#sem:interaction-event">interaction event (<i>sem</i>)</a> | <a href="#sem:motion-event">motion event (<i>sem</i>)</a> | <a href="#sem:perception-event">perception event (<i>sem</i>)</a> | <a href="#sem:possession">possession (<i>sem</i>)</a> | <a href="#sem:pursuit-event">pursuit event (<i>sem</i>)</a> | <a href="#sem:sensation-event">sensation event (<i>sem</i>)</a></td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:state">state (<i>sem</i>)</a> | <a href="#sem:property-concept">property concept (<i>sem</i>)</a> | <a href="#sem:bodily-action">bodily action (<i>sem</i>)</a> | <a href="#sem:bodily-motion-event">bodily motion event (<i>sem</i>)</a> | <a href="#sem:body-care-event">body care event (<i>sem</i>)</a> | <a href="#sem:body-position-event">body position event (<i>sem</i>)</a> | <a href="#sem:change-in-position-event">change in position event (<i>sem</i>)</a> | <a href="#sem:change-of-state-event">change of state event (<i>sem</i>)</a> | <a href="#sem:cognition-event">cognition event (<i>sem</i>)</a> | <a href="#sem:emotion-event">emotion event (<i>sem</i>)</a> | <a href="#sem:figure-ground-spatial-relation">figure-ground spatial relation (<i>sem</i>)</a> | <a href="#sem:ingestion-event">ingestion event (<i>sem</i>)</a> | <a href="#sem:interaction-event">interaction event (<i>sem</i>)</a> | <a href="#sem:motion-event">motion event (<i>sem</i>)</a> | <a href="#sem:perception-event">perception event (<i>sem</i>)</a> | <a href="#sem:possession">possession (<i>sem</i>)</a> | <a href="#sem:pursuit-event">pursuit event (<i>sem</i>)</a> | <a href="#sem:sensation-event">sensation event (<i>sem</i>)</a></td></tr>
 <tr><th>Associated</th> <td class="ccinfo relation"><a href="#cxn:intransitive-construction">intransitive construction (<i>cxn</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
@@ -15120,8 +15282,6 @@
 <tr><td class="flex">
 <span> <a href="#sem:antecedent-role">antecedent role (<i>sem</i>)</a></span>
 <span> <a href="#sem:central-participant">central participant (<i>sem</i>)</a></span>
-<span> <a href="#sem:endpoint">endpoint (<i>sem</i>)</a></span>
-<span> <a href="#sem:initiator">initiator (<i>sem</i>)</a></span>
 <span> <a href="#sem:peripheral-participant">peripheral participant (<i>sem</i>)</a></span>
 <span> <a href="#sem:subsequent-role">subsequent role (<i>sem</i>)</a></span>
 </td></tr>
@@ -15862,7 +16022,7 @@
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
-<span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>piece (<i>sem</i>)</strong>
@@ -17369,20 +17529,19 @@
 <table>
 <tr><th>Id</th> <td class="ccinfo ccid">sem:property-concept</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
-<th>Alias(es)</th> <td class="ccinfo name">property concept | property | property (concept) | quality</td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">property concept | property | quality</td></tr>
 <tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:object-concept">object concept (<i>sem</i>)</a></td></tr>
 <tr><th>Associated</th> <td class="ccinfo relation"><a href="#cxn:adjective">adjective (<i>cxn</i>)</a> | <a href="#cxn:adjectival-phrase">adjectival phrase (<i>cxn</i>)</a> | <a href="#cxn:predicate-adjectival-construction">predicate adjectival construction (<i>cxn</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
 <span> <a href="#sem:event">event (<i>sem</i>)</a></span>
+<span> <a href="#sem:qualitative-event">qualitative event (<i>sem</i>)</a></span>
 </td></tr>
 <tr><td>
 <strong>property concept (<i>sem</i>)</strong>
 </td></tr>
 <tr><td class="flex">
-<span> <a href="#sem:antonym">antonym (<i>sem</i>)</a></span>
-<span> <a href="#sem:complementary">complementary (<i>sem</i>)</a></span>
 <span> <a href="#sem:gender-class">gender–class (<i>sem</i>)</a></span>
 <span> <a href="#sem:material">material (<i>sem</i>)</a></span>
 <span> <a href="#sem:color">color (<i>sem</i>)</a></span>
@@ -17846,6 +18005,10 @@
 <span> <a href="#sem:body-care-event">body care event (<i>sem</i>)</a></span>
 <span> <a href="#sem:body-position-event">body position event (<i>sem</i>)</a></span>
 <span> <a href="#sem:change-of-state-event">change of state event (<i>sem</i>)</a></span>
+<span> <a href="#sem:contact-by-impact-event">contact by impact event (<i>sem</i>)</a></span>
+<span> <a href="#sem:damage-event">damage event (<i>sem</i>)</a></span>
+<span> <a href="#sem:killing-injuring-event">killing/injuring event (<i>sem</i>)</a></span>
+<span> <a href="#sem:property-concept">property concept (<i>sem</i>)</a></span>
 <span> <a href="#sem:state">state (<i>sem</i>)</a></span>
 <span> <a href="#sem:contact-event">contact event (<i>sem</i>)</a></span>
 <span> <a href="#sem:creation-event">creation event (<i>sem</i>)</a></span>
@@ -19290,6 +19453,19 @@
 <tr><th>Definition</th> <td class="ccinfo definition">a range of situations that can be ranked from <q class="dq">weakest</q> to <q class="dq">strongest</q> – that is, least informative to most informative, on some relevant scale for the <a href="#sem:meaning">meaning</a> of a sentence. <em>Example</em>: <em>He won't eat shrimp, let alone squid</em> makes sense by invoking a scalar model of <q class="dq">things that you would not expect someone to be willing to eat</q>, such that being unwilling to eat shrimp is at the <q class="dq">strong</q>, more informative, end of the scalar model, and being unwilling to eat squid is at the <q class="dq">weak</q>, less informative end of the scalar model (in a culture where eating squid is considered more repulsive than eating shrimp). (Section 17.3.3)</td></tr>
 </table>
 </div>
+<div class="cc" id="sem:scale">
+<h2 class="name"><a href="#sem:scale">scale (<i>sem</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">sem:scale</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">scale</td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:property-concept">property concept (<i>sem</i>)</a></td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
+</table>
+</div>
 <div class="cc" id="sem:second-person">
 <h2 class="name"><a href="#sem:second-person">second person (<i>sem</i>)</a></h2>
 <table>
@@ -19475,20 +19651,11 @@
 <strong>semantic role (<i>sem</i>)</strong>
 </td></tr>
 <tr><td class="flex">
-<span> <a href="#sem:agent">agent (<i>sem</i>)</a></span>
-<span> <a href="#sem:beneficiary">beneficiary (<i>sem</i>)</a></span>
-<span> <a href="#sem:cause">cause (<i>sem</i>)</a></span>
-<span> <a href="#sem:causee">causee (<i>sem</i>)</a></span>
-<span> <a href="#sem:causer">causer (<i>sem</i>)</a></span>
-<span> <a href="#sem:comitative">comitative (<i>sem</i>)</a></span>
 <span> <a href="#sem:comparee">comparee (<i>sem</i>)</a></span>
 <span> <a href="#sem:experiencer">experiencer (<i>sem</i>)</a></span>
 <span> <a href="#sem:expertum">expertum (<i>sem</i>)</a></span>
 <span> <a href="#sem:figure">figure (<i>sem</i>)</a></span>
-<span> <a href="#sem:force">force (<i>sem</i>)</a></span>
 <span> <a href="#sem:ground">ground (<i>sem</i>)</a></span>
-<span> <a href="#sem:instrument">instrument (<i>sem</i>)</a></span>
-<span> <a href="#sem:maleficiary">maleficiary (<i>sem</i>)</a></span>
 <span> <a href="#sem:participant-role">participant role (<i>sem</i>)</a></span>
 <span> <a href="#sem:patient">patient (<i>sem</i>)</a></span>
 <span> <a href="#sem:possessor-role">possessor role (<i>sem</i>)</a></span>
@@ -20543,7 +20710,7 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:stative</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">stative</td></tr>
-<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:state">state (<i>sem</i>)</a> | <a href="#sem:property-concept">property concept (<i>sem</i>)</a> | <a href="#sem:object-concept">object concept (<i>sem</i>)</a></td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:state">state (<i>sem</i>)</a> | <a href="#sem:property-concept">property concept (<i>sem</i>)</a> | <a href="#sem:object-concept">object concept (<i>sem</i>)</a> | <a href="#sem:cardinal-numeral">cardinal numeral (<i>sem</i>)</a> | <a href="#sem:vague-numeral">vague numeral (<i>sem</i>)</a> | <a href="#sem:amount">amount (<i>sem</i>)</a> | <a href="#sem:proportional-quantifier">proportional quantifier (<i>sem</i>)</a> | <a href="#sem:distributive-quantifier">distributive quantifier (<i>sem</i>)</a> | <a href="#sem:ordinal-numeral">ordinal numeral (<i>sem</i>)</a> | <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -21057,6 +21224,27 @@
 </td></tr>
 <tr><td>
 <strong>superlative degree (<i>sem</i>)</strong>
+</td></tr>
+</table></td></tr>
+<tr><th></th><td>
+                      <span class="notfound">
+                        Not from the original glossary of <em>Morphosyntax</em>.
+                      </span></td></tr>
+</table>
+</div>
+<div class="cc" id="cxn:superlative-form">
+<h2 class="name"><a href="#cxn:superlative-form">superlative form (<i>cxn</i>)</a></h2>
+<table>
+<tr><th>Id</th> <td class="ccinfo ccid">cxn:superlative-form</td></tr>
+<tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">superlative form</td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#cxn:admodifier">admodifier (<i>cxn</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>superlative form (<i>cxn</i>)</strong>
 </td></tr>
 </table></td></tr>
 <tr><th>Definition</th> <td class="ccinfo definition">the most extreme value on a <a href="#sem:property-concept">property</a> scale for the relevant referents. <em>Example</em>: in <em>most expensive</em>, <em>most</em> indicates the highest value on the expensiveness scale for the relevant set of objects. (Section 4.1.2)</td></tr>
@@ -22095,7 +22283,7 @@
 <tr><th>Id</th> <td class="ccinfo ccid">sem:transitory</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">transitory</td></tr>
-<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:action-concept">action concept (<i>sem</i>)</a></td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:action-concept">action concept (<i>sem</i>)</a> | <a href="#sem:cardinal-numeral">cardinal numeral (<i>sem</i>)</a> | <a href="#sem:vague-numeral">vague numeral (<i>sem</i>)</a> | <a href="#sem:amount">amount (<i>sem</i>)</a> | <a href="#sem:proportional-quantifier">proportional quantifier (<i>sem</i>)</a> | <a href="#sem:distributive-quantifier">distributive quantifier (<i>sem</i>)</a> | <a href="#sem:ordinal-numeral">ordinal numeral (<i>sem</i>)</a> | <a href="#sem:mensural-concept">mensural concept (<i>sem</i>)</a></td></tr>
 <tr><th>Associated</th> <td class="ccinfo relation"><a href="#sem:monovalent">monovalent (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>

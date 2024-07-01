@@ -565,11 +565,7 @@
   Type: sem
   Name: agent
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
+    - sem:external-cause
   Definition: >-
     a <a>semantic role</a> that includes <a>participant roles</a> for a <a>participant</a> that volitionally initiates an event. <i>Example</i>: in <i>Jack broke the window</i>, Jack volitionally initiates the breaking event. (Section 6.1.2)
   Examples:
@@ -929,13 +925,13 @@
       Example: <e>inun-nik tuqut-si-vuq</e>
       Translation: He killed people
 
-- Id: sem:antonym
-  Type: sem
+- Id: cxn:antonym
+  Type: cxn
   Name: antonym
   SubtypeOf:
-    - sem:property-concept
+    - cxn:adjective
   Definition: >-
-    opposing values on a gradient scale. <i>Example</i>: <i>tall</i> and <i>short</i> are antonyms on the gradient scale of height. (Section 4.1.2)
+    opposing values on a <a sem:gradient>gradient scale</a>. <i>Example</i>: <i>tall</i> and <i>short</i> are antonyms on the gradient scale of height. (Section 4.1.2)
   Examples:
     - tall
     - short
@@ -1266,8 +1262,8 @@
 - Id: sem:base-event
   Type: sem
   Name: base event
-  SubtypeOf:
-    - sem:event
+  ConstituentOf:
+    - sem:causal-structure
   Definition: >-
     the <a>event</a> that is expressed in the <a>basic voice construction</a>, with its set of <a sem:central-participant>central</a> and <a>peripheral participants</a> in their prototypical level of <a>salience</a>/<a>topicality</a>, whose <a>valency</a> is considered basic for that event semantic class. <i>Example</i>: in <i>Fred baked me a shepherd's pie</i>, the base event is Fred baking the pie (i.e., excluding transferring the pie to me). (Section 9.1)
   Examples:
@@ -1310,12 +1306,7 @@
   Type: sem
   Name: beneficiary
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
-    - sem:experiential-event
+    - sem:affectee
   AssociatedTo:
     - cxn:applicative-object-phrase
   Definition: >-
@@ -1391,6 +1382,7 @@
     - sem:ingestion-event
     - sem:interaction-event
     - sem:killing-injuring-event
+    - sem:figure-ground-spatial-relation 
     - sem:motion-event
     - sem:perception-event
     - sem:possession
@@ -1657,11 +1649,7 @@
   Type: sem
   Name: cause
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
+    - sem:external-cause
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a>, usually an event, that causes the <a>event</a> expressed by the <a>predicate</a>. <i>Example</i>: in <i>The house collapsed from neglect</i>, the neglect is the cause of the house collapsing. (Section 6.1.2)
   Examples:
@@ -1671,12 +1659,7 @@
   Type: sem
   Name: causee
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
-    - sem:experiential-event
+    - sem:external-cause
   Definition: >-
     in a <a>causative event</a>, the <a>participant role</a> that is the initiator of the <a>causal chain</a> of the <a>base event</a>. <i>Example</i>: in <i>Sandra had Phil sweep the patio</i>, Phil fills the participant role of causee because Phil is the initiator of the sweeping event. The term <q>causee</q> is used only when there is a <a>causer</a> in the event as well. (Section 9.2)
   Examples:
@@ -1686,11 +1669,7 @@
   Type: sem
   Name: causer
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
+    - sem:external-cause
   Definition: >-
     a <a>participant role</a> which names an external cause that brings about an event, and is conceptualized as a <a>central participant</a> in the <a>event</a>. <i>Example</i>: in <i>Harry made the antelope jump</i>, Harry is in the causer role. (Sections 7.4, 9.2)
   Examples:
@@ -1970,11 +1949,7 @@
   Type: sem
   Name: comitative
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
+    - sem:external-cause
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that accompanies another participant, usually the <a>agent</a>. <i>Example</i>: in <i>I went to the concert with Carol</i>, Carol is in the comitative role. (Section 6.1.2)
   Examples:
@@ -2074,6 +2049,14 @@
   Name: comparative degree
   SubtypeOf:
     - sem:degree
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:comparative-form
+  Type: cxn
+  Name: comparative form
+  SubtypeOf:
+    - cxn:admodifier
   Definition: >-
     a higher value on a <a>property</a> scale than the comparable value for another object. <i>Example</i>: in <i>more intelligent</i>, <i>more</i> indicates a value higher on the intelligence scale than the comparable value for the person to whom the current referent is being compared. (Section 4.1.2)
   Examples:
@@ -2164,13 +2147,13 @@
   Examples:
     - I <e>told</e> her that I would go
 
-- Id: sem:complementary
-  Type: sem
+- Id: cxn:complementary
+  Type: cxn
   Name: complementary
   SubtypeOf:
-    - sem:property-concept
+    - cxn:adjective
   Definition: >-
-    opposing values on a scale where there is no gradience, only categorical values (either the object has the value or it doesn't). <i>Example</i>: <i>alive/dead</i> are complementaries in that one is either alive or not. (Section 4.1.2)
+    opposing values on a scale where there is no gradience, only <a>categorical</a> values (either the object has the value or it doesn't). <i>Example</i>: <i>alive/dead</i> are complementaries in that one is either alive or not. (Section 4.1.2)
   Examples:
     - alive
     - dead
@@ -2525,6 +2508,7 @@
     - contact by impact (event)
   SubtypeOf:
     - sem:event
+    - sem:qualitative-event
   Definition: >-
     an <a>event</a> describing contact by impact. <i>Example</i>: hitting is a contact by impact event. (Section 7.3.2)
 
@@ -2877,6 +2861,7 @@
   Name: damage event
   SubtypeOf:
     - sem:event
+    - sem:qualitative-event
   Definition: >-
     an <a>event</a> describing material damage to an <a sem:object-concept>object</a>. <i>Example</i>: scratching something is a damage event. (Section 7.3.2)
 
@@ -2996,7 +2981,7 @@
     - cxn:admodifier
     - cxn:comparative-construction
   Definition: >-
-    a free morpheme or affix that expresses the relative degree of the gradable predicative scale applied to the comparee, in comparative and equative constructions. <i>Example</i>: in <i>taller</i>, the suffix <i>-er</i> is a degree marker. In addition to comparative and equative degree markers, some languages have a distinct <a sem:superlative-degree>superlative</a> degree marker, such as <i>-est</i> in English <i>tallest</i>. (Section 17.2.2)
+    a free morpheme or affix that expresses the relative degree of the gradable predicative scale applied to the comparee, in comparative and equative constructions. <i>Example</i>: in <i>taller</i>, the suffix <i>-er</i> is a degree marker. In addition to comparative and equative degree markers, some languages have a distinct <a cxn:superlative-form>superlative degree marker</a>, such as <i>-est</i> in English <i>tallest</i>. (Section 17.2.2)
   Examples:
     - tall<e>-er</e>
     - tall<e>-est</e>
@@ -3509,15 +3494,23 @@
   Definition: >-
     expression of a <a>referent</a> twice in a <a>clause</a>, by a <a>referring phrase</a> and simultaneously by an <a>index</a>. (Section 3.3.3)
 
-- Id: sem:downtoner
-  Type: sem
+- Id: cxn:downtoner
+  Type: cxn
   Name: downtoner
   SubtypeOf:
-    - sem:degree
+    - cxn:admodifier
   Definition: >-
     a lower than normal value on a <a>property</a> scale. <i>Example</i>: in <i>somewhat long, somewhat</i> indicates a value shorter than is normal for length. (Section 4.1.2)
   Examples:
     - <e>somewhat</e> long
+
+- Id: sem:downtoning
+  Type: sem
+  Name: downtoning
+  SubtypeOf:
+    - sem:degree
+  Definition: ''
+  FromGlossary: false
 
 - Id: str:dual-role-strategy
   Type: str
@@ -3637,7 +3630,7 @@
   Type: sem
   Name: endpoint
   SubtypeOf:
-    - sem:participant
+    - sem:central-participant
   ConstituentOf:
     - sem:causal-chain
   Definition: >-
@@ -4281,7 +4274,7 @@
   Type: sem
   Name: figure-ground spatial relation
   Alias:
-    - location (relation)
+    - location relation
     - figure--ground spatial relation
     - spatial figure--ground relation
   SubtypeOf:
@@ -4397,11 +4390,7 @@
   Type: sem
   Name: force
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
+    - sem:external-cause
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that initiates an event but is not volitional (usually because it is not human), i.e. is not an <a>agent</a>. <i>Example</i>: in <i>Lightning shattered the old tree</i>, the lightning initiates the shattering event but is not an agent. (Section 6.1.2)
   Examples:
@@ -5308,6 +5297,7 @@
   Name: ingestion event
   SubtypeOf:
     - sem:event
+    - sem:experiential-event
   Definition: >-
     an <a>event</a> which describes the ingestion of food or drink by a person or animal, causing the food to disappear but also causing a change in the physiological state of the person/animal. <i>Example</i>: <i>Elena ate a lot of veggie chips</i> is an instance of an ingestion event. (Section 7.4)
   Examples:
@@ -5327,7 +5317,7 @@
   Type: sem
   Name: initiator
   SubtypeOf:
-    - sem:participant
+    - sem:central-participant
   ConstituentOf:
     - sem:causal-chain
   Definition: >-
@@ -5339,11 +5329,7 @@
   Type: sem
   Name: instrument
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
+    - sem:external-cause
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is manipulated by the agent to bring about an <a>event</a>. <i>Example</i>: in <i>Jack broke the window with a rock</i>, the agent (Jack) manipulates the rock to bring about the breaking of the window. (Sections 6.1.2, <b>6.2.1</b>)
   Examples:
@@ -5363,15 +5349,23 @@
   Examples:
     - No smok<e>-ing</e>
 
-- Id: sem:intensifier
-  Type: sem
+- Id: cxn:intensifier
+  Type: cxn
   Name: intensifier
   SubtypeOf:
-    - sem:degree
+    - cxn:admodifier
   Definition: >-
     a higher than normal value on a <a>property</a> scale. <i>Example</i>: in <i>very long, very</i> indicates a value longer than normal. (Section 4.1.2)
   Examples:
     - <e>very</e> long
+
+- Id: sem:intensifying
+  Type: sem
+  Name: intensifying
+  SubtypeOf:
+    - sem:degree
+  Definition: ''
+  FromGlossary: false
 
 - Id: sem:interaction-event
   Type: sem
@@ -5600,6 +5594,7 @@
     - injuring event
   SubtypeOf:
     - sem:event
+    - sem:qualitative-event
   Definition: >-
     an <a>event</a> describing the injuring of an individual, including to the point that the individual dies. <i>Example</i>: stabbing is a killing/injuring event. (Section 7.3.2)
 
@@ -5929,12 +5924,7 @@
   Type: sem
   Name: maleficiary
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
-    - sem:experiential-event
+    - sem:affectee
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is negatively affected by the outcome of the <a>event</a>. <i>Example</i>: in <i>My car broke down on me</i>, I am a maleficiary: I am negatively affected by the outcome of the event. (Section 6.1.2)
   Examples:
@@ -6076,15 +6066,23 @@
   Examples:
     - six <e>gallons</e> of wine
 
-- Id: sem:measurement
-  Type: sem
+- Id: cxn:measurement
+  Type: cxn
   Name: measurement
   SubtypeOf:
-    - sem:degree
+    - cxn:admodifier
   Definition: >-
     a calibratable value on a <a>property</a> scale. <i>Example</i>: in <i>three feet long, three feet</i> measures the value of length for the object in question. (Section 4.1.2)
   Examples:
     - <e>three feet</e> long
+
+- Id: sem:measuring
+  Type: sem
+  Name: measuring
+  SubtypeOf:
+    - sem:degree
+  Definition: ''
+  FromGlossary: false
 
 - Id: str:mensural-classifier
   Type: str
@@ -6294,6 +6292,8 @@
   SubtypeOf:
     - sem:valency
   AttributeOf:
+    - sem:state
+    - sem:property-concept
     - sem:bodily-action
     - sem:bodily-motion-event
     - sem:body-care-event
@@ -6632,7 +6632,7 @@
     - cxn:clause
     - cxn:nonprototypical-construction
   Definition: >-
-    the <a>predication</a> of concepts other than <a>action</a> concepts. The types of nonprototypical predication most commonly described include predication of <a>object concepts</a>, <a>property concepts</a>, <a>location</a>, and <a>possession</a>. <i>Example</i>: <i>Frieda is an engineer</i>, an instance of object predication, is an example of nonprototypical predication. (Section 10.1.1)
+    the <a>predication</a> of concepts other than <a>action</a> concepts. The types of nonprototypical predication most commonly described include predication of <a>object concepts</a>, <a>property concepts</a>, <a sem:figure-ground-spatial-relation>location</a>, and <a>possession</a>. <i>Example</i>: <i>Frieda is an engineer</i>, an instance of object predication, is an example of nonprototypical predication. (Section 10.1.1)
   Examples:
     - <e>Frieda is an engineer</e>
 
@@ -8145,7 +8145,7 @@
     - cxn:presentational-construction
     - cxn:locational-construction
   Definition: >-
-    the <a>construction</a> expressing a <a>presentational</a> information packaging of <a>location</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
+    the <a>construction</a> expressing a <a>presentational</a> information packaging of <a sem:figure-ground-spatial-relation>location</a>. <i>Example</i>: in <i>In the room was a request for breakfast</i>, the request for breakfast is being introduced into the discourse, anchored by its spatial relation to the room. (Sections 10.4.1, 10.4.3)
   Examples:
     - <e>In the room was a request for breakfast</e>
 
@@ -8313,10 +8313,11 @@
   Type: sem
   Name: property concept
   Alias:
-    - property (concept)
+    - property
     - quality
   SubtypeOf:
     - sem:event
+    - sem:qualitative-event
   AttributeOf:
     - sem:object-concept
   AssociatedTo:
@@ -9768,6 +9769,13 @@
     - sem:state
     - sem:property-concept
     - sem:object-concept
+    - sem:cardinal-numeral
+    - sem:vague-numeral
+    - sem:amount
+    - sem:proportional-quantifier
+    - sem:distributive-quantifier
+    - sem:ordinal-numeral
+    - sem:mensural-concept
   Definition: >-
     a concept construed as not involving change over the time course of the <a>event</a>. <i>Example</i>: being tall does not involve any change over the time course being described. (Sections 2.1, 6.2.1)
 
@@ -9962,6 +9970,14 @@
   Name: superlative degree
   SubtypeOf:
     - sem:degree
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:superlative-form
+  Type: cxn
+  Name: superlative form
+  SubtypeOf:
+    - cxn:admodifier
   Definition: >-
     the most extreme value on a <a>property</a> scale for the relevant referents. <i>Example</i>: in <i>most expensive</i>, <i>most</i> indicates the highest value on the expensiveness scale for the relevant set of objects. (Section 4.1.2)
   Examples:
@@ -10388,6 +10404,13 @@
     - sem:transitoriness
   AttributeOf:
     - sem:action-concept
+    - sem:cardinal-numeral
+    - sem:vague-numeral
+    - sem:amount
+    - sem:proportional-quantifier
+    - sem:distributive-quantifier
+    - sem:ordinal-numeral
+    - sem:mensural-concept
   AssociatedTo:
     - sem:monovalent
   Definition: >-
@@ -11188,7 +11211,7 @@
   Type: sem
   Name: measure
   SubtypeOf:
-    - sem:event
+    - sem:mensural-concept
   Definition: ''
   FromGlossary: false
 
@@ -11196,7 +11219,7 @@
   Type: sem
   Name: container
   SubtypeOf:
-    - sem:event
+    - sem:mensural-concept
   Definition: ''
   FromGlossary: false
 
@@ -11204,7 +11227,7 @@
   Type: sem
   Name: group
   SubtypeOf:
-    - sem:event
+    - sem:mensural-concept
   Definition: ''
   FromGlossary: false
 
@@ -11212,7 +11235,7 @@
   Type: sem
   Name: piece
   SubtypeOf:
-    - sem:event
+    - sem:mensural-concept
   Definition: ''
   FromGlossary: false
 
@@ -11220,7 +11243,7 @@
   Type: sem
   Name: species
   SubtypeOf:
-    - sem:event
+    - sem:mensural-concept
   Definition: ''
   FromGlossary: false
 
@@ -11321,6 +11344,7 @@
     - sem:qualitative-event
     - sem:spatial-event
     - sem:transfer-event
+    - sem:experiential-event
   Definition: ''
   FromGlossary: false
 
@@ -11613,7 +11637,7 @@
   Type: sem
   Name: arrangement
   SubtypeOf:
-    - sem:event
+    - sem:mensural-concept
   Definition: ''
   FromGlossary: false
 
@@ -12931,5 +12955,37 @@
     - cxn:argument-phrase
   ConstituentOf:
     - cxn:possessed-argument-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:scale
+  Type: sem
+  Name: scale
+  AttributeOf:
+    - sem:property-concept
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:gradient
+  Type: sem
+  Name: gradient
+  AttributeOf:
+    - sem:scale
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:categorical
+  Type: sem
+  Name: categorical
+  AttributeOf:
+    - sem:scale
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:mensural-concept
+  Type: sem
+  Name: mensural concept
+  SubtypeOf:
+    - sem:event
   Definition: ''
   FromGlossary: false
