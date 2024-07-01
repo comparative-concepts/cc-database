@@ -5797,7 +5797,6 @@
   Name: locational strategy
   Alias:
     - locational (strategy)
-    - verbal copula strategy
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
@@ -6751,7 +6750,7 @@
   Type: str
   Name: noun incorporation
   SubtypeOf:
-    - str:p-alignment
+    - str:object-alignment
     - str:subject-predicate-alignment
   ExpressionOf:
     - cxn:thetic-construction
@@ -6907,10 +6906,11 @@
 - Id: str:p-alignment
   Type: str
   Name: P alignment
+  Status: deleted
   Alias:
     - oblique P strategy
   SubtypeOf:
-    - str:system
+    - str:alignment-system
   ExpressionOf:
     - cxn:antipassive-construction
   ModeledOn:
@@ -6935,6 +6935,22 @@
   Examples:
     - Emily viewed the hawk <e>with binoculars</e>
 
+- Id: str:object-alignment
+  Type: str
+  Name: object alignment
+  SubtypeOf:
+    - str:alignment-system
+  ExpressionOf:
+    - cxn:antipassive-construction  
+    - cxn:experiential-construction
+    - cxn:possessed-argument-construction
+    - cxn:motion-argument-structure-construction
+    - cxn:perception-argument-structure-construction
+  ModeledOn:
+    - cxn:transitive-construction
+  Definition: >-
+    temporary: how the <a sem:p-role>P</a> or other <a inf:high-topicality>most salient</a> nonsubject argument, coded as object in the <a>basic voice</a> <a>transitive construction</a>, is coded, i.e. (more) object-like or (more) oblique-like.
+
 - Id: str:oblique-alignment
   Type: str
   Name: oblique alignment
@@ -6944,7 +6960,8 @@
     - cxn:applicative-construction
   ModeledOn:
     - cxn:basic-voice
-  Definition: ''
+  Definition: >-
+    temporary: how the <a>peripheral participant</a>, coded as oblique in the <a>basic voice construction</a>, is coded, i.e. (more) object-like or (more) oblique-like.
   FromGlossary: false
 
 - Id: str:omitted-a-strategy
@@ -6961,7 +6978,7 @@
   Type: str
   Name: omitted P strategy
   SubtypeOf:
-    - str:p-alignment
+    - str:object-alignment
   ExpressionOf:
     - cxn:antipassive-construction
   Definition: >-
@@ -9085,6 +9102,8 @@
   Name: satellite
   ConstituentOf:
     - str:satellite-framing-strategy
+  ExpressionOf:
+    - cxn:motion-argument-structure-construction
   Definition: >-
     a <a>strategy</a> for expressing a semantic component of an <a>event</a> (such as a <a>motion event</a>) in an <a>element</a> of the <a>clause</a> other than the <a>verb</a>. <i>Example</i>: in <i>Sam strode into the room</i>, the path of motion is expressed not by the verb (<i>stride</i>), but by the <a inf:oblique-argument>oblique</a> <a>flag</a> <i>into (the room)</i>. (Sections 7.3.1, 14.2)
   Examples:
@@ -9847,6 +9866,7 @@
 - Id: str:subject-oblique-strategy
   Type: str
   Name: subject--oblique strategy
+  Status: deleted
   Alias:
     - extended intransitive
   SubtypeOf:
@@ -10677,7 +10697,7 @@
   SubtypeOf:
     - str:copula
   ExpressionOf:
-    - cxn:predicational-location-construction
+    - cxn:nonprototypical-predication
   AssociatedTo:
     - cxn:support-verb
   Definition: >-
