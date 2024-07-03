@@ -1464,7 +1464,7 @@ var ccEdges = [
    {"from": "cxn:negation-construction", "to": "cxn:declarative-negation-construction", "rel": "SubtypeOf"},
    {"from": "cxn:article", "to": "cxn:definite-article", "rel": "SubtypeOf"},
    {"from": "cxn:pronoun", "to": "cxn:definite-pronoun", "rel": "SubtypeOf"},
-   {"from": "sem:property-concept", "to": "sem:degree", "rel": "AttributeOf"},
+   {"from": "sem:scale", "to": "sem:degree", "rel": "AttributeOf"},
    {"from": "str:affixation", "to": "str:degree-affix", "rel": "SubtypeOf"},
    {"from": "cxn:admodifier", "to": "str:degree-affix", "rel": "ExpressionOf"},
    {"from": "str:fixed-case", "to": "str:degree-equative", "rel": "SubtypeOf"},

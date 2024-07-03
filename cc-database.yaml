@@ -2935,7 +2935,7 @@
   Type: sem
   Name: degree
   AttributeOf:
-    - sem:property-concept
+    - sem:scale
   Definition: >-
     for scalar concepts, a value on the scale that may be expressed by a distinct word. <i>Example</i>: in <i>very long</i>, the <a>admodifier</a> <i>very</i> indicates that the value on the scale of length is beyond the normal value implicit in the word <i>long</i>. (Section 2.2.2)
   Examples:
