@@ -3,116 +3,26 @@
 // Global variables
 
 var ccNodes, ccEdges; // Defined in cc-graph-data.js
+var ccGraphs, networkOptions; // Defined in cc-graph-settings.js
 var network;
-
-///////////////////////////////////////////////////////////////////////////////
-// Global options
-
-var networkOptions = {
-    edges: {
-        width: 3,
-        arrows: "to",
-    },
-    nodes: {
-        shape: "box",
-    },
-    interaction: {
-        hover: true, // "nodes use their hover colors when the mouse moves over them"
-        multiselect: true, // "a longheld click (or touch) as well as a control-click will add to the selection"
-        tooltipDelay: 1000, // "the amount of time in milliseconds it takes before the tooltip is shown"
-    },
-    layout: {
-        improvedLayout: true, // "the network will use the Kamada Kawai algorithm for initial layout"
-        clusterThreshold: 1000, // "cluster threshold to which improvedLayout applies"
-    },
-    physics: {
-        solver: "forceAtlas2Based",
-        stabilization: {
-            iterations: 100, // "stabilize the network on load up til a maximum number of iterations"
-        },
-        forceAtlas2Based: {
-            theta: 0.5, // "higher values are faster but generate more errors, lower values are slower but with less errors"
-            gravitationalConstant: -50, // "if you want the repulsion to be stronger, decrease the gravitational constant... falloff is linear instead of quadratic"
-            centralGravity: 0.01, // "central gravity attractor to pull the entire network back to the center"
-            springConstant: 0.1, // "higher values mean stronger springs"
-            springLength: 100, // "the rest length of the spring"
-            damping: 0.1, // "how much of the velocity from the previous physics simulation iteration carries over to the next iteration"
-            avoidOverlap: 0, // "if > 0, the size of the node is taken into account"
-        },
-        repulsion: {
-            centralGravity: 0.1,
-            springLength: 100,
-            springConstant: 0.1,
-            nodeDistance: 200, // "range of influence for the repulsion"
-            damping: 0.1,
-        },
-        barnesHut: {
-            theta: 0.5,
-            gravitationalConstant: -10000, // "...falloff is quadratic instead of linear"
-            centralGravity: 1,
-            springLength: 100,
-            springConstant: 0.1,
-            damping: 0.1,
-            avoidOverlap: 0,
-        },
-    },
-};
-
-var colors = {
-    // Node colors: (1) is only used if there are two CC types
-    0: "lightgreen",
-    1: "gold",
-
-    // Relation/edge colors
-    // SubtypeOf will inherit from the node color
-    ConstituentOf: "red", ExpressionOf: "red",
-    HeadOf: "royalblue", ModeledOn: "royalblue", AttributeOf: "royalblue",
-    RoleOf: "mediumorchid", RecruitedFrom: "mediumorchid",
-    FillerOf: "darkgoldenrod", 
-};
-
-var dashes = {
-    // Which relations should be dashed
-    ModeledOn: true, RecruitedFrom: true,
-    RoleOf: true, FillerOf: true,
-}
-
-var ccNames = {
-    // How the CC's should be shown in the drop-down menu
-    cxn: "Constructions",
-    str: "Strategies",
-    "str+cxn": "Cxn -> Str",
-    sem: "Semantic CCs",
-    inf: "Information packaging",
-};
-
-var ccRelations = {
-    // What relations should be included for each of the CC's
-    cxn: ["SubtypeOf", "ConstituentOf", "HeadOf"],
-    str: ["SubtypeOf", "ConstituentOf"],
-    "str+cxn": ["SubtypeOf", "ExpressionOf", "ModeledOn", "RecruitedFrom"],
-    sem: ["SubtypeOf", "ConstituentOf", "AttributeOf", "RoleOf", "FillerOf"],
-    inf: ["SubtypeOf", "ConstituentOf", "AttributeOf"],
-};
 
 
 ///////////////////////////////////////////////////////////////////////////////
 // Utility functions
 
-// What CC types are included in the graph
-function getGraphTypes() {
+// Get the current selected graph ID
+function getGraph() {
     let select = document.getElementById("ccGraphType");
-    return select.value ? select.value.split("+") : null;
+    return select.value || null;
 }
 
 // An object of the node ids that are in the selected (unfiltered) graph
 function getGraphNodeIds() {
+    if (!getGraph()) return {};
+    let ccTypes = ccGraphs[getGraph()].nodecolors;
     let nodeIds = {};
-    let ccTypes = getGraphTypes();
-    if (ccTypes) {
-        for (let n of ccNodes) {
-            if (ccTypes.includes(n.type)) nodeIds[n.id] = true;
-        }
+    for (let n of ccNodes) {
+        if (ccTypes[n.type] != null) nodeIds[n.id] = true;
     }
     return nodeIds;
 }
@@ -125,11 +35,11 @@ function getGraphNodes() {
 
 // A list of the edges in the selected (unfiltered) graph
 function getGraphEdges() {
-    let ccTypes = getGraphTypes();
-    if (!ccTypes) return [];
+    if (!getGraph()) return [];
+    let ccTypes = ccGraphs[getGraph()].nodecolors;
     let relations = getGraphRelations();
     let nodeIds = {};
-    for (let n of ccNodes) nodeIds[n.id] = ccTypes.includes(n.type);
+    for (let n of ccNodes) nodeIds[n.id] = ccTypes[n.type] != null;
     return ccEdges.filter((e) => 
         relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]
     );
@@ -170,35 +80,37 @@ function getSelectedNodes() {
 // Also decides which checkboxes to show, and
 // it checks the default one if no relation is currently checked
 function getGraphRelations() {
-    let select = document.getElementById("ccGraphType");
-    let relations = ccRelations[select.value];
-    if (!relations) return [];
+    let graph = ccGraphs[getGraph()];
+    if (!graph.edgecolors) return [];
     // Only show the checkboxes for the relations that are relevant to this graph.
     for (let lbl of document.getElementById("ccRelations").querySelectorAll("label")) {
-        let show = relations.includes(lbl.querySelector("input").id);
-        lbl.style.display = show ? "" : "none";
+        let color = graph.edgecolors[lbl.querySelector("input").id];
+        if (color == null) {
+            lbl.style.display = "none";
+        } else {
+            lbl.style.display = "";
+            if (color === 0) {
+                // Inherit label color from node color(s)
+                let nodecolors = Object.values(graph.nodecolors);
+                if (nodecolors.length > 1 && nodecolors[0] !== nodecolors[1]) {
+                    color = `rgb(0 0 0 / 0%); background-image: linear-gradient(to right, ${nodecolors[0]}, ${nodecolors[1]}); background-clip: text;`;
+                } else {
+                    color = nodecolors[0];
+                }
+            }
+            let style = `color: ${color}; filter: brightness(50%) saturate(400%);`;
+            lbl.querySelector("span").style = style;
+        }
     }
-    relations = relations.filter((rel) => document.getElementById(rel).checked);
+    let grelations = Object.keys(graph.edgecolors); 
+    let relations = grelations.filter((rel) => document.getElementById(rel).checked);
     if (relations.length === 0) {
         // If no relations are selected, check the first one.
-        let rel = ccRelations[select.value][0];
+        let rel = grelations[0];
         document.getElementById(rel).checked = true;
         relations = [rel];
     }
     return relations;
-}
-
-// Set the label of the given node, depending on if the user has chosen to show names or ids
-function setNodeLabel(n) {
-    let attr = document.getElementById("ccShow").value;
-    n.label = n[attr].replaceAll("--", "-").replaceAll(" ", "\n");
-    if (attr === "id") n.label = n.label.replaceAll("-", "-\n");
-}
-
-// Set the color of the given node, depending on its CC type and the graph type
-function setNodeColor(n) {
-    let color = colors[getGraphTypes().indexOf(n.type)];
-    n.color = {background: color, border: color};
 }
 
 function setGraphData(nodeIds) {
@@ -221,28 +133,22 @@ function setGraphData(nodeIds) {
 function init() {
     // Set unique ids for all edges
     for (let e of ccEdges) {
-        if (colors[e.rel]) e.color = colors[e.rel];
-        e.dashes = dashes[e.rel];
         e.id = `${e.rel}--${e.from}--${e.to}`;
     }
     // Populate the graph type dropdown menu, and 
     // create checkboxes for all relations
     let select = document.getElementById("ccGraphType");
     let checkboxes = document.getElementById("ccRelations");
-    for (let ccTypes in ccNames) {
-        let ccName = ccNames[ccTypes];
-        select.innerHTML += `<option value="${ccTypes}">${ccName}</option>`;
+    for (let graphID in ccGraphs) {
+        let graph = ccGraphs[graphID];
+        select.innerHTML += `<option value="${graphID}">${graph.name}</option>`;
         let checked = true;
-        for (let relId of ccRelations[ccTypes]) {
+        for (let relId in graph.edgecolors) {
             if (!document.getElementById(relId)) {
-                let style = (
-                    colors[relId] ? `color:${colors[relId]}`
-                    : `background-image: linear-gradient(to right, ${colors[0]}, ${colors[1]}); background-clip: text; color: rgb(0 0 0 / 40%)`
-                );
                 checkboxes.innerHTML += 
                     `<label style="display:none">
                     <input type="checkbox" id="${relId}" onchange="changeSettings()" ${checked?"checked":""}/>
-                    <span style="${style}">${relId}</span> &nbsp; </label>`;
+                    <span>${relId}</span> &nbsp; </label>`;
             }
             checked = false;
         }
@@ -269,7 +175,7 @@ function selectionChanged() {
     let filtered = isFiltered();
     let willStabilize = document.getElementById("ccStabilize").checked;
     document.getElementById("ccSolver").disabled = !willStabilize;
-    document.getElementById("ccSearch").disabled = !getGraphTypes();
+    document.getElementById("ccSearch").disabled = !getGraph();
     document.getElementById("ccClearSelection").disabled = !hasSelection;
     document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
     document.getElementById("ccExpandUpwards").disabled = !hasSelection;
@@ -287,8 +193,8 @@ function selectionChanged() {
 // Show graph statistics and information
 function showStatistics() {
     let stat = document.getElementById("statistics");
-    if (!getGraphTypes()) {
-        stat.innerText = `${ccNodes.length} CCs; ${ccEdges.length} relations`;
+    if (!getGraph()) {
+        stat.innerText = `${ccNodes.length} nodes; ${ccEdges.length} relations`;
         return;
     }
     let unconnected = getUnconnectedNodes().length;
@@ -315,12 +221,32 @@ function showStatistics() {
 
 // Update information about each graph node
 function updateNodes() {
+    let graph = ccGraphs[getGraph()];
     for (let n of getGraphNodes()) {
         if (network.body.nodes[n.id]) {
             Object.assign(n, network.getPosition(n.id));
         }
-        setNodeLabel(n);
-        setNodeColor(n);
+
+        // Set node label
+        let attr = document.getElementById("ccShow").value;
+        n.label = n[attr].replaceAll("--", "-");
+        // Word-wrapping, from: https://www.30secondsofcode.org/js/s/word-wrap/
+        const wordwrap = /(?![^\n]{1,24}$)([^\n]{1,24}[\s-])/g;
+        n.label = n.label.replace(wordwrap, '$1\n');
+
+        // Set node color
+        let color = graph.nodecolors[n.type];
+        let border = graph.nodeborders && graph.nodeborders[n.type] || color;
+        n.color = {background: color, border: border};
+        }
+}
+
+// Update information about each graph edge
+function updateEdges() {
+    let graph = ccGraphs[getGraph()];
+    for (let e of getGraphEdges()) {
+        e.color = graph.edgecolors[e.rel];
+        e.dashes = graph.edgedashes && graph.edgedashes[e.rel];
     }
 }
 
@@ -342,7 +268,7 @@ function updateSolver() {
 // You have to enter at least 3 characters for it to search
 function searchNodes() {
     let searchBox = document.getElementById("ccSearch");
-    if (!getGraphTypes()) {
+    if (!getGraph()) {
         searchBox.value = "";
         return;
     }
@@ -422,6 +348,7 @@ function revealNeighbors(direction) {
 // The current selected nodes are kept (if any)
 function changeSettings() {
     updateNodes();
+    updateEdges();
     updateSolver();
     setGraphData(network.body.nodes);
 }
@@ -429,6 +356,7 @@ function changeSettings() {
 // Update with a new fresh graph (clearing the selection, if any)
 function selectGraph() {
     updateNodes();
+    updateEdges();
     updateSolver();
     clearFilter();
 }
