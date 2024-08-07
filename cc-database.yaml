@@ -717,7 +717,7 @@
   Type: cxn
   Name: amount term
   SubtypeOf:
-    - cxn:quantifier
+    - cxn:quantifier-term
   Definition: >-
     a form used to indicate an imprecise quantity for noncountable entities. <i>Example</i>: in <i>some wine</i>, <i>some</i> is an amount term. (Section 4.1.3)
   Examples:
@@ -3373,7 +3373,7 @@
   Type: cxn
   Name: distributive quantifier term
   SubtypeOf:
-    - cxn:quantifier
+    - cxn:quantifier-term
   Definition: >-
     a form that specifies the members of the set but treats them individually (that is, the <a>predicate</a> applies to the whole set by virtue of applying to the individual members of the set). Example: in <i>Every dog has fleas, every</i> is a distributive quantifier. (Section 4.1.3)
 
@@ -8344,7 +8344,7 @@
   Type: cxn
   Name: proportional quantifier term
   SubtypeOf:
-    - cxn:quantifier
+    - cxn:quantifier-term
   Definition: >-
     a <a>form</a> that specifies the set of instances as a proportion of the whole set of individuals/tokens of the type, or at least the contextually relevant whole set. <i>Example</i>: in <i>few children</i>, <i>few</i> is a proportional quantifier indicating a lesser proportion of the contextually relevant set of children. (Section 4.1.3)
   Examples:
@@ -8544,9 +8544,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:quantifier
+- Id: cxn:quantifier-term
   Type: cxn
-  Name: quantifier
+  Name: quantifier term
   SubtypeOf:
     - cxn:modifier
   HeadOf:
@@ -9217,7 +9217,7 @@
     - inf:anchoring
     - inf:typifying
   Definition: >-
-    a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference>refer</a> to. Usually performed by <a>numerals</a> and <a>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a inf:choosing-contrast>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
+    a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference>refer</a> to. Usually performed by <a>numerals</a> and <a cxn:quantifier-term>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a inf:choosing-contrast>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
 
 - Id: def:semantic-classes
   Type: def
@@ -10623,7 +10623,7 @@
   Type: cxn
   Name: vague numeral term
   SubtypeOf:
-    - cxn:quantifier
+    - cxn:quantifier-term
   Definition: >-
     a <a>form</a> used to select a set of countable entities, but not by their precise cardinality. Example: in <i>several ravens, several</i> is a vague numeral. (Section 4.1.3)
 
