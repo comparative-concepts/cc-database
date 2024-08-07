@@ -2939,7 +2939,7 @@ var ccEdges = [
    {"from": "cxn:argument-phrase", "to": "cxn:possessor-argument-phrase", "rel": "SubtypeOf"},
    {"from": "cxn:possessed-argument-construction", "to": "cxn:possessor-argument-phrase", "rel": "ConstituentOf"},
    {"from": "sem:property-concept", "to": "sem:scale", "rel": "AttributeOf"},
-   {"from": "sem:scale", "to": "sem:gradient", "rel": "AttributeOf"},
-   {"from": "sem:scale", "to": "sem:categorical", "rel": "AttributeOf"},
+   {"from": "sem:scale", "to": "sem:gradient", "rel": "SubtypeOf"},
+   {"from": "sem:scale", "to": "sem:categorical", "rel": "SubtypeOf"},
    {"from": "sem:event", "to": "sem:mensural-concept", "rel": "SubtypeOf"},
 ];

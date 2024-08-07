@@ -12969,7 +12969,7 @@
 - Id: sem:gradient
   Type: sem
   Name: gradient
-  AttributeOf:
+  SubtypeOf:
     - sem:scale
   Definition: ''
   FromGlossary: false
@@ -12977,7 +12977,7 @@
 - Id: sem:categorical
   Type: sem
   Name: categorical
-  AttributeOf:
+  SubtypeOf:
     - sem:scale
   Definition: ''
   FromGlossary: false
