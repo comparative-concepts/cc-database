@@ -4434,9 +4434,9 @@
   Examples:
     - After the fall of the Wall, East Germans were free to travel <e>anywhere</e>
 
-- Id: cxn:free-relative-clause
+- Id: cxn:free-relative-clause-construction
   Type: cxn
-  Name: free relative clause
+  Name: free relative clause construction
   SubtypeOf:
     - cxn:free-modification-construction
     - cxn:relative-clause-construction
