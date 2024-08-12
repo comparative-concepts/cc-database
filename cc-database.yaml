@@ -1345,7 +1345,7 @@
   Alias:
     - binominal lexeme (construction)
   SubtypeOf:
-    - cxn:nominal-modification
+    - cxn:nominal-modification-construction
   Definition: >-
     a <a>typifying</a> (non-anchoring) construction that expresses a unitary concept by means of two object concepts. <i>Example</i>: in French <i>moulin à vent</i> and its English translation <i>windmill</i>, two object concepts, <i>vent/wind</i> and <i>moulin/mill</i>, combine syntactically to express a unitary concept. (Section 5.2.1)
   Examples:
@@ -2962,7 +2962,7 @@
   ExpressionOf:
     - cxn:equative-construction
   Definition: >-
-    a <a>fixed-case strategy</a> in <a>equative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as a <a>nominal modifier</a> of a word denoting <q>degree</q>, <q>manner</q>, or <q>quantity</q>. <i>Example</i>: Harar Oromo <i>isíin akká isaaní d'eertuu</i> <q>She is as tall as them</q> is an instance of the degree equative strategy, with the predicate <i>d'eertuu</i> <q>is tall</q>, and the standard, <i>isaaní</i> <q>they [<sc>gen</sc>]</q>, modifies <i>akká</i> <q>manner</q>. (Section 17.2.4)
+    a <a>fixed-case strategy</a> in <a>equative constructions</a> in which there is a <a>clause</a> which attributes a <a>gradable predicative scale</a> to the <a>comparee</a>, and the <a>standard</a> is expressed as a <a cxn:nominal-attributive-phrase>nominal modifier</a> of a word denoting <q>degree</q>, <q>manner</q>, or <q>quantity</q>. <i>Example</i>: Harar Oromo <i>isíin akká isaaní d'eertuu</i> <q>She is as tall as them</q> is an instance of the degree equative strategy, with the predicate <i>d'eertuu</i> <q>is tall</q>, and the standard, <i>isaaní</i> <q>they [<sc>gen</sc>]</q>, modifies <i>akká</i> <q>manner</q>. (Section 17.2.4)
   Examples:
     - Language: Harar Oromo
       Example: isíin akká isaaní d'eertuu
@@ -5823,7 +5823,7 @@
   Type: cxn
   Name: locative modification construction
   SubtypeOf:
-    - cxn:nominal-modification
+    - cxn:nominal-modification-construction
   Definition: >-
     a <a>referring phrase</a> that expresses a <a>figure--ground spatial relation</a> between the ground <a sem:object-concept>object</a> functioning as the <a>modifier</a> and the figure functioning as the modified <a>referent</a>. <i>Example</i>: <i>the bicycle in the garage</i> is a locative modification construction. (Section 4.1.4)
   Examples:
@@ -5835,7 +5835,7 @@
   Alias:
     - locative (attributive) phrase
   SubtypeOf:
-    - cxn:attributive-phrase
+    - cxn:nominal-attributive-phrase
   ConstituentOf:
     - cxn:locative-modification-construction
   Definition: >-
@@ -6118,7 +6118,6 @@
     - mensural modification (construction)
   SubtypeOf:
     - cxn:modification-construction
-    - cxn:typifying-construction
   Definition: >-
     a <a>non-anchoring construction</a> that has a <a>mensural term</a> as the <a sem:object-concept>object</a> <a>modifier</a> and a (semantic) <a>head</a> <a>referent</a> that is only <a>type identifiable</a>. <i>Example</i>: <i>a piece of cake</i> is a mensural construction in that the object modifier denotes only the type <q>cake</q>. Two strategies for mensural constructions are <a>mensural classifiers</a> and the <a>pseudo-partitive</a>. (Section 5.2.2)
   Examples:
@@ -6474,11 +6473,11 @@
   Examples:
     - <e>If you press this button, the door will open</e>
 
-- Id: cxn:nominal-modification
+- Id: cxn:nominal-modification-construction
   Type: cxn
-  Name: nominal modification
+  Name: nominal modification construction
   Alias:
-    - nominal modifier
+    - nominal modifier construction
   SubtypeOf:
     - cxn:modification-construction
   Definition: >-
@@ -6841,7 +6840,7 @@
   AssociatedTo:
     - cxn:noun
     - cxn:nominal-phrase
-    - cxn:nominal-modification
+    - cxn:nominal-modification-construction
     - cxn:predicate-nominal-construction
   Definition: >-
     concepts belonging to a <a>semantic class</a> including persons, animals, and physical objects of various kinds. <i>Example</i>: both boys and dogs as well as dishes are examples of object concepts. (Sections 2.1 and <b>3.1.2</b>, which includes an enumeration of types of object concepts)
@@ -7488,8 +7487,6 @@
   Name: piece term
   SubtypeOf:
     - cxn:mensural-term
-  ConstituentOf:
-    - cxn:partitive-construction
   Definition: >-
     a <a>mensural term</a> that selects an amount of a <a>referent</a> which is usually a separated, arbitrary part of the object. <i>Example</i>: in <i>a slice of meat, slice</i> is a piece term. (Section 4.1.3)
   Examples:
@@ -7654,7 +7651,7 @@
     - possessive (modification) construction
     - attributive possession construction
   SubtypeOf:
-    - cxn:nominal-modification
+    - cxn:nominal-modification-construction
   Definition: >-
     the <a>nominal modifier construction</a> that expresses a <a>possession relation</a> such that the <a>possessor</a> is the <a>modifier</a> and the <a>possessum</a> is the <a>head</a> (i.e. is the <a>referent expression</a>). <i>Example</i>: <i>Sally's calendar</i> is an instance of possession -- the calendar could be one that she owns, one that she gave me, one that she is holding in a photo of people with calendars, one that she designed or made, one with photos of her, and so on. Many languages have two morphosyntactically distinct possessive modification constructions, an <a>alienable possession construction</a> and an <a>inalienable possession construction</a> (or constructions). (Section 4.1.4)
   Examples:
@@ -7665,9 +7662,10 @@
   Name: possessive attributive phrase
   Alias:
     - possessive modifier phrase
+    - genitive attributive phrase
     - genitive phrase
   SubtypeOf:
-    - cxn:attributive-phrase
+    - cxn:nominal-attributive-phrase
   ConstituentOf:
     - cxn:possessive-modification-construction
   Definition: >-
@@ -7732,6 +7730,8 @@
 - Id: sem:posterior
   Type: sem
   Name: posterior
+  Alias:
+    - sequential
   SubtypeOf:
     - sem:event-relation
   Definition: >-
@@ -9487,7 +9487,7 @@
     - inf:anchoring
     - inf:typifying
   AssociatedTo:
-    - cxn:nominal-modification
+    - cxn:nominal-modification-construction
   Definition: >-
     a subtype of <a>modification</a> that picks out a particular referent by situating it in physical space (<a>deixis</a>) or in the (knowledge/belief) <a>mental space</a> of the interlocutors (<a>information status</a>). (Section 4.1.1)
 
@@ -9774,7 +9774,7 @@
     - sem:amount
     - sem:proportional-quantifier
     - sem:distributive-quantifier
-    - sem:ordinal-numeral
+    - sem:set-member
     - sem:mensural-concept
   Definition: >-
     a concept construed as not involving change over the time course of the <a>event</a>. <i>Example</i>: being tall does not involve any change over the time course being described. (Sections 2.1, 6.2.1)
@@ -10409,7 +10409,7 @@
     - sem:amount
     - sem:proportional-quantifier
     - sem:distributive-quantifier
-    - sem:ordinal-numeral
+    - sem:set-member
     - sem:mensural-concept
   AssociatedTo:
     - sem:monovalent
@@ -11202,7 +11202,7 @@
   Type: sem
   Name: ordinal numeral
   SubtypeOf:
-    - sem:event
+    - sem:set-member
     - sem:numeral
   Definition: ''
   FromGlossary: false
@@ -12987,5 +12987,31 @@
   Name: mensural concept
   SubtypeOf:
     - sem:event
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:nominal-attributive-phrase
+  Type: cxn
+  Name: nominal attributive phrase
+  SubtypeOf:
+    - cxn:attributive-phrase
+  ConstituentOf:
+    - cxn:nominal-modification-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:action-modification-construction
+  Type: cxn
+  Name: action modification construction
+  SubtypeOf:
+    - cxn:modification-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:set-member
+  Type: sem
+  Name: set member
+  SubtypeOf:
+    - sem:set-member
   Definition: ''
   FromGlossary: false
