@@ -3423,7 +3423,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for the expression of <a>motion events</a> in which the <a>path of motion</a> is expressed as (at least) part of the <a>predicate</a> and also as a <a>satellite</a>. <i>Example</i>: in Russian <i>Ja vy-bežal iz doma</i> <q>I ran out of the house</q>, the path of going out of the house is expressed both as part of the <a>verb</a> (the prefix <i>vy-</i> in <i>vy-bežal</i>) and as the <a>flag</a> <i>iz</i>. (Section 14.5)
   Examples:
@@ -4291,7 +4291,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for the expression of <a>motion events</a> in which the <a>predication</a> incorporates the semantic type of the <a>figure</a> of motion. <i>Example</i>: in Atsugewi <i>w'ost'aq'ík: a</i> <q>Runny icky material [e.g. guts] is lying on the ground</q>, the verb <i>st'aq'</i> <q>lie [of runny, icky material]</q> incorporates the semantic type of the figure (the guts) as runny, icky material. (Section 14.5)
   Examples:
@@ -4530,7 +4530,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:non-exhaustive-coordination
+    - cxn:non-exhaustive-list-coordination
   Definition: >-
     a form used as part of a <a>non-exhaustive coordination construction</a> that indicates the non-exhaustiveness of the list. <i>Example</i>: in the non-exhaustive coordination construction in <i>She sold baskets, pots, and stuff / and everything</i>, <i>and stuff</i> or <i>and everything</i> are general extenders. (Section 15.2.2)
   Examples:
@@ -4953,7 +4953,7 @@
   Name: inclusive disjunctive coordination
   SubtypeOf:
     - cxn:disjunctive-coordination
-    - cxn:non-exhaustive-coordination
+    - cxn:non-exhaustive-list-coordination
   Definition: >-
     a type of <a>disjunctive coordination</a> in which any <a>entity</a> enumerated or any combination of the entities enumerated is intended. The simplest case is coordination of two entities where one, the other, or both are intended. <i>Example</i>: <i>Applicants must be a college graduate or have fluency in German</i> is an example of inclusive disjunctive coordination under the assumption that being both a college graduate and fluent in German does not disqualify you from applying. Inclusive disjunctive coordination can be an instance of <a>non-exhaustive list coordination</a>. (Section 15.2.1)
   Examples:
@@ -6520,11 +6520,11 @@
     - Emily sing-s
     - Emily play-s the piano
 
-- Id: cxn:non-exhaustive-coordination
+- Id: cxn:non-exhaustive-list-coordination
   Type: cxn
-  Name: non-exhaustive coordination
+  Name: non-exhaustive list coordination
   Alias:
-    - non-exhaustive (list) coordination
+    - non-exhaustive coordination
     - representative conjunction
   SubtypeOf:
     - cxn:coordinate-clause-construction
@@ -6933,8 +6933,8 @@
     - cxn:antipassive-construction  
     - cxn:experiential-construction
     - cxn:possessed-argument-construction
-    - cxn:motion-argument-structure-construction
-    - cxn:perception-argument-structure-construction
+    - cxn:motion-clause
+    - cxn:perception-clause
   ModeledOn:
     - cxn:transitive-construction
   Definition: >-
@@ -7341,7 +7341,7 @@
     - cxn:verb
   ConstituentOf:
     - cxn:perception-construction
-    - cxn:perception-argument-structure-construction
+    - cxn:perception-clause
   AssociatedTo:
     - sem:perception-event
   Definition: >-
@@ -7357,7 +7357,7 @@
   ExpressionOf:
     - cxn:presentational-construction
   RecruitedFrom:
-    - cxn:perception-argument-structure-construction
+    - cxn:perception-clause
   Definition: >-
     a <a>strategy</a> for the <a>presentational construction</a> in which the <a>referring phrase</a> introducing the <a>referent</a> is expressed as the stimulus of a <a>perception event</a>. <i>Example</i>: an English example from the Pear Stories narrative is <i>and um then you see this little girl. Coming on a bicycle in the opposite direction, ...</i> More grammaticalized versions of this strategy include French <i><b>Voici</b> un coffre ... <b>Voilà</b> un autre coffre</i> <q>Here is a treasure chest ... There is another treasure chest</q>. (Section 10.4.3)
   Examples:
@@ -9094,7 +9094,7 @@
   ConstituentOf:
     - str:satellite-framing-strategy
   ExpressionOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for expressing a semantic component of an <a>event</a> (such as a <a>motion event</a>) in an <a>element</a> of the <a>clause</a> other than the <a>verb</a>. <i>Example</i>: in <i>Sam strode into the room</i>, the path of motion is expressed not by the verb (<i>stride</i>), but by the <a inf:oblique-argument>oblique</a> <a>flag</a> <i>into (the room)</i>. (Sections 7.3.1, 14.2)
   Examples:
@@ -9106,7 +9106,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for expressing <a>events</a> such that the manner of how the event comes about is expressed by a <a>manner verb</a>, and the <a sem:result-event>result state</a> (including also paths of motion) is expressed in a <a>satellite</a>. <i>Example</i>: <i>Sam strode into the room</i> uses the satellite-framing strategy -- <i>stride</i> is a manner of motion verb, and the path of motion is expressed by the oblique phrase <i>into the room</i>. (Section 7.3.1)
   Examples:
@@ -9316,7 +9316,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for expressing an <a>eventive complex predicate</a> with two (or more) <a>elements</a>, each expressing an <a>event</a>, without <a>overt coding</a> of the relation between the two elements via a third linking morpheme. The serial verb strategy -- that is, expression of an eventive complex predicate without an overt linking morpheme -- combines with strategies for expressing the two event elements involving <a str:contiguity-of-serial-verbs>contiguity</a>, <a str:incorporation-of-serial-verbs>incorporation</a>, and <a str:locus-of-inflection-of-serial-verbs>locus of inflection</a>. <i>Example</i>: Sranan <i>Kofi naki Amba kiri</i> <q>Kofi killed [lit. <q>hit kill</q>] Amba</q> contains two event elements, <i>naki</i> <q>hit</q> and <i>kiri</i> <q>kill</q>, without any linking morpheme. (Section 13.2.2)
   Examples:
@@ -9875,8 +9875,8 @@
   ExpressionOf:
     - cxn:experiential-construction
     - cxn:possessed-argument-construction
-    - cxn:motion-argument-structure-construction
-    - cxn:perception-argument-structure-construction
+    - cxn:motion-clause
+    - cxn:perception-clause
   ModeledOn:
     - cxn:transitive-construction
   AssociatedTo:
@@ -10680,7 +10680,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for expressing <a>motion events</a> such that the path of motion is expressed by a <a>path verb</a>. <i>Example</i>: <i>The guests entered the reception hall</i> uses the verb-framing strategy: the path verb <i>enter</i> describes a <a>path of motion event</a>. (Section 7.3.1)
   Examples:
@@ -12034,18 +12034,25 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:motion-argument-structure-construction
+- Id: cxn:motion-clause
   Type: cxn
-  Name: motion argument structure construction
+  Name: motion clause
+  Alias:
+    - motion argument structure construction
+    - motion ASC
   SubtypeOf:
-    - cxn:clause
+    - cxn:verbal-clause
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:perception-argument-structure-construction
+- Id: cxn:perception-clause
   Type: cxn
-  Name: perception argument structure construction
+  Name: perception clause
+  Alias:
+    - perception argument structure construction
+    - perception ASC
   SubtypeOf:
+    - cxn:verbal-clause
     - cxn:experiential-construction
   Definition: ''
   FromGlossary: false
@@ -12727,7 +12734,7 @@
   SubtypeOf:
     - cxn:subject-phrase
   ConstituentOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   Definition: ''
   FromGlossary: false
 
@@ -12738,7 +12745,7 @@
   SubtypeOf:
     - cxn:nonsubject-argument-phrase
   ConstituentOf:
-    - cxn:motion-argument-structure-construction
+    - cxn:motion-clause
   FromGlossary: false
 
 - Id: cxn:passive-inverse-a-phrase
@@ -13003,5 +13010,55 @@
   Name: set member
   SubtypeOf:
     - sem:set-member
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:exhaustive-list
+  Type: sem
+  Name: exhaustive list
+  SubtypeOf:
+    - sem:event-relation
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:non-exhaustive-list
+  Type: sem
+  Name: non-exhaustive list
+  SubtypeOf:
+    - sem:event-relation
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:discourse-link
+  Type: inf
+  Name: discourse link
+  ConstituentOf:
+    - inf:discourse-coherence
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:logophoric-subject-identity
+  Type: inf
+  Name: logophoric subject identity
+  SubtypeOf:
+    - inf:token-identity
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:complement-alignment
+  Type: str
+  Name: complement alignment
+  SubtypeOf:
+    - str:alignment-system
+  ModeledOn:
+    - cxn:complement-clause-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:detached-complement-strategy
+  Type: str
+  Name: detached complement alignment
+  SubtypeOf:
+    - str:complement-alignment
   Definition: ''
   FromGlossary: false
