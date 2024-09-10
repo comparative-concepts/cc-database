@@ -541,8 +541,7 @@
   SubtypeOf:
     - str:simple-strategy
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which one <a>element</a> is an affix on the other. <i>Example</i>: in Somali <i>səʔli-hom</i> [photograph-his], <i>-hom</i> is typically analyzed as an affix expressing the <a>possessor</a>. (Section 4.2)
   Examples:
@@ -1794,7 +1793,6 @@
     - str:indexation
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     an <a>indexical strategy</a> in which a <a>modifier</a>, or sometimes a <a>predicate</a>, is combined with a morpheme that indicates a set of contrasting <a>semantic classes</a> that denote a <a>referent</a> which may also be denoted by an accompanying <a>referring phrase</a>. <i>Example</i>: in Chrau <i>du tong aq</i> <q>one crossbow</q>, <i>tong</i> is a classifier for long objects that refers to the crossbow (<i>aq</i>) and combined with the modifier <i>du</i> <q>one</q>. (Section 4.4.3)
   Examples:
@@ -2275,8 +2273,7 @@
   SubtypeOf:
     - str:simple-strategy
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are combined in a single word. <i>Example</i>: in <i>doorknob</i>, <i>door</i> and <i>knob</i> form an instance of compounding. The term <q>compounding</q> or <q>compound</q> is also used for the <a>typifying construction</a> and the <a>binominal lexeme construction</a>. (Section 4.2)
   Examples:
@@ -4470,8 +4467,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
     - cxn:existential-negation-construction
     - cxn:prohibitive-construction
   Definition: >-
@@ -5111,8 +5107,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   AssociatedTo:
     - str:discourse-reference-system
   Definition: >-
@@ -5579,8 +5574,7 @@
   SubtypeOf:
     - str:simple-strategy
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are simply syntactically juxtaposed without any additional morpheme expressing the propositional act relation. <i>Example</i>: in <i>red ball</i>, the adjective <i>red</i> is simply juxtaposed to the noun <i>ball</i> to indicate that the referent of <i>ball</i> is modified by the property denoted by <i>red</i>. (Section 4.2)
   Examples:
@@ -5729,7 +5723,6 @@
     - str:overt-coding
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     a more highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is an invariant third morpheme that signals the relationship between two <a>elements</a>. <i>Example</i>: in English <i>Jerry's bicycle</i>, the invariant genitive form <i>-'s</i> is a linker. (Section 4.5)
   Examples:
@@ -6510,8 +6503,6 @@
     - str:overt-coding
   ExpressionOf:
     - cxn:referring-phrase
-  AssociatedTo:
-    - cxn:referent-expression
   Definition: >-
     a form that signals that a word is being used to <a inf:reference>refer</a>, typically pertaining to a referent from a nonprototypical <a>semantic class</a> for <a>reference</a>. <i>Example</i>: the suffix <i>-ness</i> in <i>oddness</i> and the suffix <i>-ment</i> in <i>movement</i> are used when a <a>property</a> concept like <q>odd</q> or an <a>action</a> concept like <q>move</q> are being referred to. (Section 3.4.2)
   Examples:
@@ -6587,8 +6578,7 @@
   SubtypeOf:
     - str:indexation
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   Definition: >-
     an <a>indexical strategy</a> in which certain categories, typically <a>number</a> and <a>gender--class</a>, but not the category of <a>person</a>, are encoded in the <a>index</a>. <i>Example</i>: in Russian <i>molod-aja sosna</i> <q>young pine</q>, the suffix <i>-aja</i> on <i>molod-</i> <q>young</q> indexes its <a>referent</a>, also referred to by <i>sosna</i> <q>pine</q>, by <a>number</a> and <a>gender--class</a> (Feminine Singular), and <a>case</a> (Nominative). (Section 4.4.2)
   Examples:
@@ -7039,8 +7029,8 @@
   Type: str
   Name: overtly headed strategy
   Alias:
-    - overtly headed (strategy)
-    - overt (anaphoric) head strategy
+    - overt head strategy
+    - overt anaphoric head strategy
   SubtypeOf:
     - str:overt-coding
   ExpressionOf:
@@ -7402,8 +7392,7 @@
   SubtypeOf:
     - str:indexation
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   Definition: >-
     an <a>indexical strategy</a> in which the category of <a>person</a> is encoded in the <a>index</a>. Other categories, typically <a>number</a> and <a>gender--class</a>, may also be encoded in the index. <i>Example</i>: in Mam <i>t-kamb' meeb'a</i> <q>the orphan's prize</q>, the third person prefix <i>t-</i> on <i>kamb'</i> <q>prize</q> indexes the possessor, who is also referred to by <i>meeb'a</i> <q>orphan</q>. (Section 4.4.1)
   Examples:
@@ -8776,6 +8765,8 @@
   Name: relational strategy
   SubtypeOf:
     - str:overt-coding
+  ExpressionOf:
+    - cxn:complex-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts. Examples of relational strategies include <a>adpositions</a> and <a>case affixes</a>. (Section 4.3)
 
@@ -8935,7 +8926,6 @@
     - str:classifier
   ExpressionOf:
     - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     a <a>sortal classifier</a> that is identical in <a>form</a> to the <a>noun</a> it <a inf:modification>modifies</a>. <i>Example</i>: in Lao <i>hang2 sip2 hang2</i> [nest two <sc>clf</sc>] <q>two nests</q>, the sortal classifier <i>hang2</i> is identical to the noun <i>hang2</i> <q>nest</q>. (Section 4.4.3)
   Examples:
@@ -9441,6 +9431,8 @@
   Name: simple strategy
   SubtypeOf:
     - str:zero-coding
+  ExpressionOf:
+    - cxn:complex-construction
   Definition: >-
     a <a>strategy</a> for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), that does not involve the presence of a third morpheme. Simple strategies include <a>juxtaposition</a>, <a>compounding</a>, and <a>affixation</a>. (Section 4.2)
 
@@ -9507,7 +9499,7 @@
   SubtypeOf:
     - str:classifier
   ExpressionOf:
-    - cxn:numeral-modification-construction
+    - cxn:modification-construction
   Definition: >-
     the third morpheme in a <a>classifier</a> strategy. <i>Example</i>: in Chrau <i>du tong aq</i> <q>one crossbow</q>, <i>tong</i> is a sortal classifier for long objects that refers to the crossbow (<i>aq</i>) and combines with the <a>modifier</a> <i>du</i> <q>one</q>. A sortal classifer contrasts with a <a>mensural classifier</a> in that it does not measure out an amount of the object (crossbow), it simply classifies it by its <a>type</a> or sort. A <a>repeater</a> is a special type of sortal classifier. (Section 5.2.2)
   Examples:
@@ -9521,11 +9513,12 @@
 - Id: str:special-form
   Type: str
   Name: special form
+  Alias:
+    - base modification
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:complex-construction
   Definition: >-
     a highly grammaticalized strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which one of the two <a>elements</a> is in a morphologically distinct form. <i>Example</i>: in Syrian Arabic <i>ʔəṣṣeṭ haz-zalame</i> <q>that fellow's story</q>, the Construct Form <i>ʔəṣṣeṭ</i> <q>story</q> is an example of a special form used in this <a>nominal modifier construction</a>. (Section 4.5)
   Examples:
@@ -10823,9 +10816,9 @@
   Type: str
   Name: word order
   SubtypeOf:
-    - str:strategy
+    - str:encoding-strategy
   ExpressionOf:
-    - cxn:construction
+    - cxn:complex-construction
   Definition: >-
     the relative order of two <a>elements</a> in a <a>construction</a>. <i>Example</i>: in English <i>red book</i>, the <a>adjective</a> <i>red</i> precedes the <a>noun</a> <i>book</i>; but in Spanish <i>libro rojo</i>, the adjective <i>rojo</i> <q>red</q> follows the noun <i>libro</i> <q>book</q>. (Sections <b>4.2</b>, 5.3, 6.2.2)
   Examples:
@@ -10896,9 +10889,6 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:construction
-  AssociatedTo:
-    - str:case-affix
-    - cxn:hanging-topic-phrase
   Definition: >-
     a <a>strategy</a> in which there is no overt <a>form</a> in the <a>construction</a> that encodes the relevant <a>function</a> of the construction. <i>Example</i>: in the English Adjectival Modification Construction illustrated by <i>tall trees</i>, there is no overt form that codes the <a>modification</a> function of the <a>property concept</a> denoted by <i>tall</i>. (Section 2.4)
   Examples:

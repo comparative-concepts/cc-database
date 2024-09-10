@@ -87,13 +87,19 @@ STRUCTURAL_RELATIONS = tuple(
 )
 
 CODEWORDS = {
-    CCType.cxn: ("clause construction expression form phrase predicate pronoun "
+    CCType.cxn: ("clause construction form phrase predicate pronoun "
                  "sentence term verb attributive complement matrix").split(),
     CCType.str: ("affix alignment category classifier co-expression copula incorporation "
                  "indexation marker order position strategy system deranking headed zero").split(),
     CCType.sem: "concept event participant relation role epistemic person".split(),
     CCType.inf: "contrast predication referent".split(),
     CCType.def_: "Hierarchy".split(),
+}
+
+IGNORE_CODEWORDS_CCS = {
+    "def:comparative-concept",
+    "def:form",
+    "def:role"
 }
 
 
@@ -212,6 +218,9 @@ def validate_names_and_aliases(item: GlossItem, glosses: Glosses):
 
 
 def validate_codewords(item: GlossItem):
+    if item.Id in IGNORE_CODEWORDS_CCS:
+        return
+
     for type, codewords in CODEWORDS.items():
         if type != item.Type:
             for cword in codewords:
