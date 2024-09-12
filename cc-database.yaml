@@ -991,16 +991,13 @@
       EquivalentPieces:
         - -ro | her
 
-- Id: str:apposition-strategy
-  Type: str
-  Name: apposition strategy
+- Id: cxn:apposition
+  Type: cxn
+  Name: apposition
   SubtypeOf:
-    - str:encoding-strategy
-  ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:referring-phrase
   Definition: >-
-    a <a>strategy</a> for <a sem:object-concept>object</a> <a>reference</a> in which two or more separate <a>referring phrases</a> juxtaposed to each other refer to the same <a>referent</a>. <i>Example</i>: in <i>my brother, the geophysicist</i>, two separate referring phrases, <i>my brother</i> and <i>the geophysicist</i>, are juxtaposed and refer to the same individual. (Section 5.4)
+    a <a>construction</a> for <a sem:object-concept>object</a> <a>reference</a> in which two or more separate <a>referring phrases</a> juxtaposed to each other refer to the same <a>referent</a>. <i>Example</i>: in <i>my brother, the geophysicist</i>, two separate referring phrases, <i>my brother</i> and <i>the geophysicist</i>, are juxtaposed and refer to the same individual. (Section 5.4)
   Examples:
     - <e>my brother, the geophysicist</e>
 
