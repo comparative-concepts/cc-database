@@ -32,11 +32,9 @@
       Gloss: S/he at home not at home
       Translation: Is s/he at home?
 
-- Id: str:a-p-alignment
+- Id: str:a-p-disalignment
   Type: str
-  Name: A/P alignment
-  Alias:
-    - A/P (dis)alignment (strategy)
+  Name: A/P disalignment
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
@@ -61,8 +59,6 @@
   Name: absolute deranking system
   SubtypeOf:
     - str:reference-tracking-system
-  ExpressionOf:
-    - cxn:reference-tracking-construction
   Definition: >-
     a <a>system</a> where both the <a>same-subject</a> <a>reference tracking construction</a> and the <a>different-subject</a> reference tracking construction use a <a>deranked strategy</a>. The deranked reference tracking construction may be the same for both same-subject and different-subject constructions. <i>Example</i>: Tamil <i>avaru kadite eɽudiiʈʈu naaval moɽipeyarttaaru</i> <q>He wrote poetry and then translated a novel</q> (same-subject) and <i>naan paɳam kuɖuttu avan sinimaavukku poonaan</i> <q>I gave (him) money and he went to the movie</q> (different-subject) both use the deranked Adverbial Participle predicate forms -- <i>eɽudiiʈʈu</i> <q>write</q> [<sc>adv.part</sc>] and <i>kuɖuttu</i> <q>give</q> [<sc>adv.part</sc>] respectively. If the same-subject and different-subject constructions systematically use different deranked reference tracking constructions, then it is a <a>switch-reference system</a>. (Section 16.3)
   Examples:
@@ -115,8 +111,6 @@
     - accusative alignment (system)
   SubtypeOf:
     - str:transitive-alignment
-  ExpressionOf:
-    - cxn:transitive-construction
   Definition: >-
     a <a>system</a> in which the <a>A</a> and <a>S roles</a> are expressed with the same <a>form</a>, but the <a>P role</a> is expressed with a different form. <i>Example</i>: English <a>argument phrases</a> expressing the A and S roles are <a>indexed</a> on Present Tense verbs (<i>Emily sing-s, Emily play-s the piano</i>), while an argument phrase expressing the P role is not indexed (in <i>Emily play-s the piano</i>, the verb does not index <i>the piano</i>). (Section 6.3.1)
   Examples:
@@ -344,8 +338,6 @@
     - adjoined (strategy)
   SubtypeOf:
     - str:non-externally-headed
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>strategy</a> for the <a>relative clause construction</a> in which the <a>relative clause</a> is juxtaposed to the <a>matrix clause</a>. <i>Example</i>: Warlpiri <i>ŋatʲuluɭu ɳa yankiri pantuɳu</i> [<i>kutʲalpa ŋapa ŋaɳu</i>] <q>I speared the emu which was drinking water</q> illustrates the adjoined strategy -- the relative clause <i>kutʲalpa ŋapa ŋaɳu</i> <q>which was drinking water</q> is juxtaposed to the matrix clause <i>ŋatʲuluɭu ɳa yankiri pantuɳu</i> <q>I speared the emu</q>, and not adjacent to the relative clause head <i>yankiri</i> <q>emu</q>. The adjoined strategy is quite rare and largely found in Australian languages, where it is identical to the <u>temporal</u> <a>adverbial clause construction</a> and presumably recruited from it. (Section 19.2.3)
   Examples:
@@ -597,10 +589,6 @@
     - agree/disagree alignment (strategy)
   SubtypeOf:
     - str:polarity-response-alignment
-  ExpressionOf:
-    - cxn:negative-question-polarity-response-construction
-  ModeledOn:
-    - cxn:positive-question-polarity-response-construction
   Definition: >-
     an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer agrees/disagrees with the polarity of the question. <i>Example</i>: in Gulf Arabic, the answers to the negative polarity question <i>maa ʕindik fluus, muu chidhi?</i> <q>You don't have any money, right?</q> are <i>naʕam</i> <q>yes, I have no money</q> (agreeing with the speaker) or <i>bala</i> <q>no, I do have money</q> (disagreeing with the speaker). (Section 12.3.3)
   Examples:
@@ -825,9 +813,7 @@
   Type: str
   Name: animacy-based split ergativity
   SubtypeOf:
-    - str:a-p-alignment
-  ExpressionOf:
-    - cxn:passive-inverse-voice
+    - str:a-p-disalignment
   Definition: >-
     a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding>overt</a> <a>flag</a> of higher-<a>salience</a> <a>P</a> <a>participants</a> and also for lower-salience <a>A</a> <a>participants</a>. <i>Example</i>: in Dyirbal, the Accusative Case suffix <i>-na</i> is used for <a cxn:first-person-pronoun>first</a> and <a cxn:second-person-pronoun>second pronominal</a> P participants, and the Ergative Case suffix <i>-ŋu</i> is used for <a cxn:third-person-pronoun>third person</a> pronominal and <a>common noun</a> A participants. (Section 8.3)
   Examples:
@@ -1008,14 +994,11 @@
       EquivalentPieces:
         - -ro | her
 
-- Id: str:apposition
-  Type: str
+- Id: cxn:apposition
+  Type: cxn
   Name: apposition
   SubtypeOf:
-    - str:encoding-strategy
-  ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
+    - cxn:referring-phrase
   Definition: >-
     a <a>strategy</a> for <a sem:object-concept>object</a> <a>reference</a> in which two or more separate <a>referring phrases</a> juxtaposed to each other refer to the same <a>referent</a>. <i>Example</i>: in <i>my brother, the geophysicist</i>, two separate referring phrases, <i>my brother</i> and <i>the geophysicist</i>, are juxtaposed and refer to the same individual. (Section 5.4)
   Examples:
@@ -1243,8 +1226,6 @@
   Name: balanced, balancing
   SubtypeOf:
     - str:clause-alignment
-  ExpressionOf:
-    - cxn:complex-sentence
   Definition: >-
     a <a>strategy</a> in which the <a>predicate</a> in a <a>complex sentence construction</a> or a <a>complex predicate construction</a> <a>recruits</a> the predicate construction in a simple predication, inflections and all. <i>Example</i>: <i>The robins drank water and the juncos ate fennel seeds</i> is an instance of a balanced <a>coordinate clause construction</a>: <i>drank</i> and <i>ate</i> are in the same <a>form</a> as in the simple predications <i>The robins drank water</i> and <i>The juncos ate fennel seeds</i>. (Sections 14.2, <b>15.2.3</b>)
   Examples:
@@ -1539,9 +1520,6 @@
   Name: case affix
   SubtypeOf:
     - str:flagging
-  ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     a <a>flag</a> which occurs as an affix. <i>Example</i>: in Russian <i>kniga Ivan-a</i> <q>John's book</q>, <i>-a</i> is a Genitive case marking suffixed to <i>Ivan</i> <q>John</q>. (Section 4.3)
   Examples:
@@ -1778,9 +1756,6 @@
   Name: circumposition
   SubtypeOf:
     - str:adposition
-  ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     an <a>adposition</a> which occurs as two morphemes, one before and one after the <a>modifier</a> or <a inf:reference>argument</a> <a>head</a>. <i>Example</i>: in Pashto <i>ter maktaba poori</i> <q>as far as the school</q>, the <a>meaning</a> <q>as far as</q> is expressed by the combination of <i>ter</i> preceding <i>maktaba</i> <q>school</q> and <i>poori</i> following it. (Section 4.3)
   Examples:
@@ -2365,8 +2340,6 @@
     - conditionally deranked
   SubtypeOf:
     - str:reference-tracking-system
-  ExpressionOf:
-    - cxn:reference-tracking-construction
   Definition: >-
     a <a>system</a> where a <a>same-subject</a> <a>reference tracking construction</a> uses a <a>deranking strategy</a>, whereas the <a>different-subject</a> reference tracking construction uses a <a>balanced</a> strategy. <i>Example</i>: Wolof <i>dem na ma <b>à o</b> ko</i> <q>I went and called him</q> [same-subject] uses a Serial Marker <i>à</i> and a deranked Subjunctive verb form <i>o</i>; <i>nyeu <b>on na</b> te wakh <b>on na</b> ma ko</i> <q>He came and I told (it to) him</q> uses the balanced construction with the simple verb form, the Past Tense <i>on</i> and the Indicative Marker <i>na</i>. (Section 16.3)
   Examples:
@@ -2382,8 +2355,6 @@
   Name: conditional discourse reference system
   SubtypeOf:
     - str:reference-tracking-system
-  ExpressionOf:
-    - cxn:reference-tracking-construction
   AssociatedTo:
     - str:balancing
   Definition: >-
@@ -2825,8 +2796,6 @@
     - correlative (strategy)
   SubtypeOf:
     - str:non-externally-headed
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>strategy</a> for the <a>relative clause construction</a> in which the <a>relative clause</a> is juxtaposed to the <a>matrix clause</a> (not unlike the <a>adjoined strategy</a>), the <a>necessarily shared participant</a> is expressed in the relative clause (not unlike the <a>internally headed strategy</a>) accompanied by a relative clause marking morpheme (which may be a <a str:relative-pronoun-strategy>relative pronoun</a> form), and the shared participant is also expressed in the matrix clause, as either a <a>noun</a> or a <a>pronoun</a>. <i>Example</i>: Hindi [<i>ādmī ne jis cākū se murgī ko mārāthā</i>] <i>us cākū ko rām ne dekhā</i> <q>Ram saw the knife with which the man killed the chicken</q> is an instance of the correlative strategy: the relative clause <i>ādmī ne jis cākū se murgī ko mārāthā</i> <q>The man killed the chicken with which knife</q> contains the relative clause head <i>cākū</i> <q>knife</q>, modified by the relative pronoun <i>jis</i> <q>which</q>, and is preposed to the matrix clause <i>us cākū ko rām ne dekhā</i> <q>that knife Ram saw</q>, which contains a second expression of the relative clause head <i>us cākū</i> <q>that knife</q>. (Section 19.2.3)
   Examples:
@@ -2953,7 +2922,7 @@
   SubtypeOf:
     - str:affixation
   ExpressionOf:
-    - cxn:admodifier
+    - cxn:modification-construction
   Definition: >-
     a scalar <a>admodifier</a> expressed by an affix. <i>Example</i>: <i>-er</i> in <i>sillier</i> is a degree affix. (Section 4.1.2)
   Examples:
@@ -3120,8 +3089,6 @@
     - nominalization
   SubtypeOf:
     - str:clause-alignment
-  ExpressionOf:
-    - cxn:complex-sentence
   Definition: >-
     a <a>strategy</a> in which the <a>predicate</a> in a <a>complex sentence</a> or a <a>complex predicate construction</a> does not <a>recruit</a> the predicate construction in a simple predication, in contrast to the <a>balanced</a> strategy. Instead, the deranked predicate either: (i) lacks the inflections of the predicate; (ii) uses different inflections from the predicate; (iii) has an affix that overtly codes its relation to the other predicate; or some combination of these three possibilities. <i>Example</i>: in <i>Reaching the top of the hill, Ron found a stone monument</i>, the predicate <i>reaching</i> is a deranked form: it lacks verbal inflections and is overtly coded by the suffix <i>-ing</i>. Deranked predicate forms are also called infinitives, gerunds, <a>participles</a>, verbal nouns, masdars, <a>action nominals</a>, and nominalizations. (Sections 12.4.2, 14.2, <b>15.2.3</b>)
   Examples:
@@ -3224,9 +3191,7 @@
   Type: str
   Name: differential object marking
   SubtypeOf:
-    - str:a-p-alignment
-  ExpressionOf:
-    - cxn:passive-inverse-voice
+    - str:a-p-disalignment
   Definition: >-
     a strategy that is marginal for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding>overt</a> <a>flag</a> of higher <a def:animacy-hierarchy>animacy</a> / higher <a>information status</a> -- that is, higher-<a>salience</a> -- Ps. <i>Example</i>: in Spanish, <i>El director busca a un empleado</i> <q>The director is looking for a [specific] clerk</q>, the phrase <i>un empleado</i> <q>a clerk</q>, referring to the P participant, uses the overt flag <i>a</i>. Differential object marking is not usually considered a strategy of the passive--inverse construction because the <a>A</a> <a>participant</a> is not reduced in salience, although the P participant is higher in salience. (Section 8.3)
   Examples:
@@ -3337,8 +3302,6 @@
   Name: discourse reference system
   SubtypeOf:
     - str:reference-tracking-system
-  ExpressionOf:
-    - cxn:reference-tracking-construction
   Definition: >-
     a <a>system</a> where both <a>same-subject</a> and <a>different-subject</a> <a>reference tracking constructions</a> use the standard discourse reference strategies found in connected discourse. Discourse reference systems are found when both same-subject and different-subject constructions are <a>balanced</a>. <i>Example</i>: in Spanish, <a>syndetic</a> <a>coordinate constructions</a> such as <i>El Gobierno Nacional volvió a prorrogar los actuales mandatos en los sindicatos y Ø<sub>i</sub> suspend<b>ió</b> los preocesos electorales hasta 2021</i> express the same-subject relation in the same way as in connected discourse -- namely, with zero anaphora and subject person indexation on the verb. (Section 16.2)
   Examples:
@@ -3461,8 +3424,6 @@
   Name: double-coding strategy
   SubtypeOf:
     - str:experiential-alignment
-  ExpressionOf:
-    - cxn:experiential-construction
   Definition: >-
     a <a>strategy</a> used for <a>experiential constructions</a> in which both <a>experiencer</a> and <a>stimulus</a> are expressed with the same <a>core argument phrase</a> (either <a>subject</a> or <a inf:object-argument>object</a>). <i>Example</i>: in the Japanese sentence <i>Dare ga eiga ga suki desu ka</i> <q>Who likes movies?</q>, both the experiencer <i>dare</i> <q>who</q> and the stimulus <i>eiga</i> <q>movie</q> are expressed with the Subject <a>flag</a> <i>ga</i>. (Section 7.4)
   Examples:
@@ -3478,8 +3439,6 @@
   Name: double-oblique strategy
   SubtypeOf:
     - str:experiential-alignment
-  ExpressionOf:
-    - cxn:experiential-construction
   Definition: >-
     a <a>strategy</a> used for <a>experiential constructions</a> in which both <a>experiencer</a> and <a>stimulus</a> are expressed in an <a>oblique argument phrase</a> (the two participant roles are usually expressed with different oblique <a>flags</a>). <i>Example</i>: in Ancient Greek <i>mélei moi toúto:n hô:n ero:táis</i> <q>I care about what you ask</q>, the experiencer argument phrase <i>moi</i> <q>I</q> uses the oblique (Dative) flag, and the stimulus argument phrase <i>toúto:n hô:n ero:táis</i> <q>what you ask</q> uses the oblique (Genitive) flag. (Section 7.4)
   Examples:
@@ -3812,8 +3771,6 @@
     - ergative alignment (system)
   SubtypeOf:
     - str:transitive-alignment
-  ExpressionOf:
-    - cxn:transitive-construction
   Definition: >-
     a <a>system</a> in which the <a>S</a> and <a>P roles</a> are expressed with the same <a>form</a>, but the <a>A role</a> is expressed with a different form. <i>Example</i>: in Yuwaalaraay, <a>argument phrases</a> expressing the A role use the Ergative <a>flag</a> <i>-gu</i>, but argument phrases expressing both the S and P roles use the zero-coded Absolutive flag. (Section 6.3.1)
   Examples:
@@ -4075,8 +4032,6 @@
     - experiencer-subject strategy
   SubtypeOf:
     - str:experiential-alignment
-  ExpressionOf:
-    - cxn:experiential-construction
   Definition: >-
     a <a>strategy</a> for an <a>experiential construction</a> in which the <a>experiencer</a> <a>argument phrase</a> is <a>co-expressed</a> with the <a>subject</a> argument phrase of a <a>transitive</a> or <a>intransitive construction</a>. <i>Example</i>: the <a>argument structure construction</a> found in <i>I fear dogs</i>, with the experiencer argument phrase <i>I</i> co-expressed with the prototypical subject in English, is an instance of the experiencer-oriented strategy. (Section 7.4)
   Examples:
@@ -4176,6 +4131,8 @@
   Name: externally headed
   SubtypeOf:
     - str:encoding-strategy
+  ExpressionOf:
+    - cxn:relative-clause-construction
   AssociatedTo:
     - sem:necessary-participant-sharing
   Definition: >-
@@ -4191,8 +4148,6 @@
   SubtypeOf:
     - str:externally-headed
     - str:word-order
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>word order strategy</a> for <a>externally headed</a> <a>relative clause constructions</a> in which the <a>relative clause</a>, rather than being adjacent to the external <a>relative clause head</a> (either <a>prenominal</a> or <a>postnominal</a>), instead follows the entire <a>matrix clause</a>. <i>Example</i>: <i>I found a linguistics book in a used bookstore last week</i> [<i>that I have been looking for for years</i>] is an instance of the extraposed strategy: the relative clause <i>that I have been looking for for years</i> does not immediately follow the external relative clause head <i>a linguistics book</i>, but instead follows the entire matrix clause <i>I found a linguistics book in a used bookstore last week</i>. (Section 19.2.4)
   Examples:
@@ -4507,8 +4462,6 @@
     - gap (strategy)
   SubtypeOf:
     - str:externally-headed
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant is not expressed at all in the relative clause. <i>Example</i>: <i>I ate the cheesecake</i> [<i>that Carol baked</i>] uses the gap strategy because the shared participant, the cheesecake, is expressed only as the external <a>relative clause head</a>, and not at all in the relative clause <i>that Carol baked</i>. (Section 19.2.2)
   Examples:
@@ -5186,8 +5139,6 @@
     - indirective alignment (system)
   SubtypeOf:
     - str:ditransitive-alignment
-  ExpressionOf:
-    - cxn:ditransitive-construction
   Definition: >-
     a <a>system</a> in which the <a>P</a> and <a>T roles</a> are expressed with the same <a>form</a>, but the <a>R role</a> is expressed with a different form. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the T role (<i>the car</i>) is expressed in the same way as the P role in <i>Randy started the car</i>, and the R role is expressed distinctly, with the <a>flag</a> <i>to</i>. (Section 7.5.2)
   Examples:
@@ -5438,8 +5389,6 @@
     - internally headed (strategy)
   SubtypeOf:
     - str:non-externally-headed
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause construction</a>, in which the <a>relative clause head</a> denoting the shared participant is expressed only inside the <a>relative clause</a>. <i>Example</i>: in Imbabura Quechua [<i>kan kwitsaman kwintuta villashka</i>]<i>-ka ali kwitsami</i> <q>The girl to whom you told the story is a good girl</q>, the relative clause <i>kan kwitsaman kwintuta villashka</i> <q>you told the story to the girl</q> contains the relative clause head <i>kwitsaman</i> <q>(to) the girl</q>, and the girl is not expressed in the <a>matrix clause</a> ... <i>ali kwitsami</i> <q>... is a good girl</q>. The internally headed relative clause as a whole functions as an <a inf:reference>argument</a> of the matrix clause <a>predicate</a> and may be recruited from the <a>complement clause construction</a>. The internally headed strategy is rare but fairly widely dispersed among the languages of the world. (Section 19.2.3)
   Examples:
@@ -6448,8 +6397,6 @@
     - neutral (transitive) alignment (system)
   SubtypeOf:
     - str:transitive-alignment
-  ExpressionOf:
-    - cxn:transitive-construction
   Definition: >-
     a <a>system</a> in which all three of the <a>A</a>, <a>P</a>, and <a>S roles</a> are expressed with the same <a>form</a>. <i>Example</i>: English <a>argument phrases</a> use the same (zero) <a>flag</a> for A, P, and S roles: <i>Jack</i> [A] <i>broke the window</i> [P] and <i>Jack</i> [S] <i>died</i>. (Section 6.3.1)
   Examples:
@@ -6464,8 +6411,6 @@
     - double object alignment (system)
   SubtypeOf:
     - str:ditransitive-alignment
-  ExpressionOf:
-    - cxn:ditransitive-construction
   Definition: >-
     a <a>system</a> in which all three of the <a>P</a>, <a>T</a>, and <a>R roles</a> are expressed with the same <a>form</a>. <i>Example</i>: the English Double Object Construction, as in <i>Carol sent the landlord the check</i>, expresses the T and R roles (<i>the check</i> and <i>the landlord</i>, respectively) in the same way as the P role in <i>Carol wrote the check</i> -- namely, as postverbal <a>argument phrases</a> without a <a>flag</a>. (Section 7.5.2)
   Examples:
@@ -6754,11 +6699,7 @@
   Type: str
   Name: noun incorporation
   SubtypeOf:
-    - str:object-alignment
     - str:subject-predicate-alignment
-  ExpressionOf:
-    - cxn:thetic-construction
-    - cxn:antipassive-construction
   Definition: >-
     a <a>strategy</a> used for a range of <a>functions</a> but mostly for the <a>antipassive construction</a> function, in which the <a>noun</a> expressing the <a>P</a> <a>participant</a> is morphologically reduced and compounded with the <a>verb</a>. <i>Example</i>: in <i>He is off mountain-climbing</i>, the P participant, the mountain, is expressed by the noun <i>mountain</i> compounded with the verb form <i>climbing</i>. (Section 8.4)
   Examples:
@@ -6939,9 +6880,9 @@
   Examples:
     - Emily viewed the hawk <e>with binoculars</e>
 
-- Id: str:object-alignment
+- Id: str:object-disalignment
   Type: str
-  Name: object alignment
+  Name: object disalignment
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
@@ -6955,9 +6896,9 @@
   Definition: >-
     temporary: how the <a sem:p-role>P</a> or other <a inf:high-topicality>most salient</a> nonsubject argument, coded as object in the <a>basic voice</a> <a>transitive construction</a>, is coded, i.e. (more) object-like or (more) oblique-like.
 
-- Id: str:oblique-alignment
+- Id: str:oblique-disalignment
   Type: str
-  Name: oblique alignment
+  Name: oblique disalignment
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
@@ -6972,9 +6913,7 @@
   Type: str
   Name: omitted A strategy
   SubtypeOf:
-    - str:a-p-alignment
-  ExpressionOf:
-    - cxn:passive-inverse-voice
+    - str:a-p-disalignment
   Definition: ''
   FromGlossary: false
 
@@ -6982,9 +6921,7 @@
   Type: str
   Name: omitted P strategy
   SubtypeOf:
-    - str:object-alignment
-  ExpressionOf:
-    - cxn:antipassive-construction
+    - str:object-disalignment
   Definition: >-
     a <a>strategy</a> of the <a>antipassive construction</a> in which the <a>P</a> <a>participant</a> is unexpressed. <i>Example</i>: in <i>She ate</i>, the P participant (the food eaten) is left unexpressed. (Section 8.4)
   Examples:
@@ -7766,8 +7703,6 @@
   SubtypeOf:
     - str:externally-headed
     - str:word-order
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>word order</a> strategy for <a>externally headed</a> <a>relative clause constructions</a> in which the <a>relative clause</a> follows the <a>relative clause head</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is postnominal because it follows <i>the cheesecake</i>. The postnominal strategy is much more common than the <a>prenominal</a> strategy. (Section 19.2.2)
   Examples:
@@ -7778,9 +7713,6 @@
   Name: postposition
   SubtypeOf:
     - str:adposition
-  ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     an <a>adposition</a> which occurs after the <a>head</a> of the <a>referring phrase</a>. <i>Example</i>: in Urarina <i>nii banaao asae</i> <q>under that leaf shelter</q>, <i>asae</i> <q>under</q> follows <i>nii banaao</i> <q>that leaf shelter</q>. (Section 4.3)
   Examples:
@@ -8089,8 +8021,6 @@
   SubtypeOf:
     - str:externally-headed
     - str:word-order
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>word order</a> strategy for <a>externally headed</a> <a>relative clause constructions</a> in which the <a>relative clause</a> precedes the <a>relative clause head</a>. <i>Example</i>: in Turkish [<i>Hasanın Sinana ver-diğ-i</i>] <i>patatesi yedim</i> <q>I ate the potato that Hasan gave to Sinan</q>, the <i>Hasanın Sinana ver-diğ-i</i> <q>[that] Hasan gave to Sinan</q> is prenominal because it precedes the relative clause head <i>patatesi</i> <q>potato</q>. The prenominal strategy is much less common than the <a>postnominal</a> strategy, and is strongly correlated with <a inf:object-argument>object</a>--<a>verb</a> word order. (Section 19.2.2)
   Examples:
@@ -8107,9 +8037,6 @@
   Name: preposition
   SubtypeOf:
     - str:adposition
-  ExpressionOf:
-    - cxn:modification-construction
-    - cxn:clause
   Definition: >-
     an <a>adposition</a> which occurs before the <a>head</a> of the <a>referring phrase</a>. <i>Example</i>: in <i>on the table, on</i> is an adposition that precedes <i>the table</i>. (Section 4.3)
   Examples:
@@ -8279,8 +8206,6 @@
     - pronoun-retention (strategy)
   SubtypeOf:
     - str:externally-headed
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant is expressed in the relative clause by an <a>anaphoric pronoun</a>. <i>Example</i>: the Modern Hebrew construction illustrated by <i>hasarim</i> [<i>she-ha-nasi shalax otam la mitsraim</i>] <q>the ministers that the President sent to Egypt</q>, uses the pronoun-retention strategy: the anaphoric pronoun <i>otam</i> <q>them</q> occurs in the relative clause <i>she-ha-nasi shalax otam la mitsraim</i> <q>that the President sent them to Egypt</q>, and refers to the external <a>relative clause head</a> <i>hasarim</i> <q>the ministers</q>. (Section 19.2.2)
   Examples:
@@ -8866,8 +8791,6 @@
   Name: relative pronoun strategy
   SubtypeOf:
     - str:externally-headed
-  ExpressionOf:
-    - cxn:relative-clause-construction
   Definition: >-
     a <a>strategy</a> for the expression of the <a>necessarily shared participant</a> in the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the participant in the relative clause is expressed by a <a cxn:pronoun>relative pronoun</a> unique to the relative clause construction. <i>Example</i>: in <i>He stole the emerald</i> [<i>which he gave to his wife</i>], the relative clause is introduced by the relative pronoun <i>which</i>, which refers to the emerald, which is also expressed by the external <a>relative clause head</a> <i>the emerald</i>. The relative pronoun strategy is rare crosslinguistically, and largely restricted to the European area. (Section 19.2.2)
   Examples:
@@ -9107,8 +9030,6 @@
   Name: satellite
   ConstituentOf:
     - str:satellite-framing-strategy
-  ExpressionOf:
-    - cxn:motion-clause
   Definition: >-
     a <a>strategy</a> for expressing a semantic component of an <a>event</a> (such as a <a>motion event</a>) in an <a>element</a> of the <a>clause</a> other than the <a>verb</a>. <i>Example</i>: in <i>Sam strode into the room</i>, the path of motion is expressed not by the verb (<i>stride</i>), but by the <a inf:oblique-argument>oblique</a> <a>flag</a> <i>into (the room)</i>. (Sections 7.3.1, 14.2)
   Examples:
@@ -9197,8 +9118,6 @@
     - secundative (ditransitive) alignment (system)
   SubtypeOf:
     - str:ditransitive-alignment
-  ExpressionOf:
-    - cxn:ditransitive-construction
   Definition: >-
     a <a>system</a> in which the <a>P</a> and <a>R roles</a> are expressed with the same <a>form</a>, but the <a>T role</a> is expressed with a different form. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, the <a>index</a> <i>wa-</i> <q><sc>3pl</sc></q> is the same used to index <i>tɨɨri</i> <q>children</q> in <i>uukaraawiciizɨ tɨɨri me-wa-zeiya</i> <q>The women see the children</q>. (Section 7.5.2)
   Examples:
@@ -9558,10 +9477,6 @@
   SubtypeOf:
     - str:overt-coding
     - str:dual-role-strategy
-  ExpressionOf:
-    - cxn:chaining-construction
-    - cxn:reflexive-construction
-    - cxn:reciprocal-construction
   Definition: >-
     the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with a special form functioning as the nonsubject argument phrase. <i>Examples</i>: English <i>I saw myself</i> and <i>Mary and Sue praised each other</i> construe the participants -- I, and Mary and Sue, respectively -- as playing two roles in the seeing and praising event, but with special object forms <i>myself</i> and <i>each other</i> to express that the events are a reflexive event and a reciprocal event, respectively. (Section 7.2)
   Examples:
@@ -9681,8 +9596,6 @@
   Name: split structure
   SubtypeOf:
     - str:subject-predicate-alignment
-  ExpressionOf:
-    - cxn:thetic-construction
   Definition: >-
     a strategy found for the expression of <a>thetic constructions</a>. In a split structure, the information normally expressed as the comment or <a>predicate</a> in a <a>topic--comment construction</a> may be expressed in a different <a>form</a>, usually some sort of <a>subordinate clause</a>-like form. The information normally expressed as the <a>topic</a> in the topic--comment construction may be expressed in a different form, usually with a <a>presentational construction</a>; or both types of information are expressed differently. <i>Example</i>: in French <i>Voilà la sirène | qui hurle</i> [There's a siren | that's wailing] <q>The SIREN is wailing</q>, the <a>interruption</a> thetic construction expresses the participant (the siren) in a presentational construction, and expresses the event in a <a>relative clause construction</a>. (Section 11.3.2)
   Examples:
@@ -9809,8 +9722,6 @@
     - experiencer-object strategy
   SubtypeOf:
     - str:experiential-alignment
-  ExpressionOf:
-    - cxn:experiential-construction
   Definition: >-
     a <a>strategy</a> for an <a>experiential construction</a> in which the <a>stimulus</a> <a>argument phrase</a> is <a>co-expressed</a> with the <a>subject</a> argument phrase of a <a>transitive</a> or <a>intransitive construction</a>. <i>Example</i>: the <a>argument structure construction</a> found in <i>Dogs frighten me</i>, with the stimulus argument phrase <i>Dogs</i> co-expressed with the prototypical subject <a>participant</a> in English, is an instance of the stimulus-oriented strategy. (Section 7.4)
   Examples:
@@ -9889,9 +9800,6 @@
     - cxn:perception-clause
   ModeledOn:
     - cxn:transitive-construction
-  AssociatedTo:
-    - sem:manner-of-motion-event
-    - sem:contact-by-impact-event
   Definition: >-
     an <a cxn:clause>argument structure</a> <a>strategy</a> that <a>co-expresses</a> the first <a>participant role</a> of the <a>event</a> with the <a>subject</a> of the <a>transitive construction</a>, but does not co-express the second participant role with the <a inf:object-argument>object</a> of the transitive construction; that is, the second participant role is expressed by an <a>oblique phrase</a>. <i>Example</i>: <i>She walked toward the tree</i> is an instance of the the subject--oblique strategy for the <a>motion event</a> expressed by <i>walked</i> -- the <a>figure</a> participant <i>She</i> is expressed as a <a>subject phrase</a>, and the <a>ground</a> participant <i>the tree</i> is expressed as an oblique phrase. (Section 7.3.1)
   Examples:
@@ -10446,8 +10354,6 @@
   Name: tripartite alignment
   SubtypeOf:
     - str:transitive-alignment
-  ExpressionOf:
-    - cxn:transitive-construction
   Definition: >-
     a <a>co-expression strategy</a> in which all three of the <a>A</a>, <a>P</a>, and <a>S roles</a> are expressed with different <a>forms</a>. Tripartite alignment is extremely rare. (Section 6.3.1)
 
@@ -10846,10 +10752,6 @@
     - yes/no alignment (strategy)
   SubtypeOf:
     - str:polarity-response-alignment
-  ExpressionOf:
-    - cxn:negative-question-polarity-response-construction
-  ModeledOn:
-    - cxn:positive-question-polarity-response-construction
   Definition: >-
     an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a cxn:polarity-question-construction>polarity question</a> aligns the polarity of the answer, not the polarity of the speaker's question. <i>Example</i>: in English, the answer to the negative polarity question <i>Do you not have any money?</i> where the addressee does not have any money is <i>No</i>; the polarity of the response matches the polarity of the answer (that the addressee does not have any money). (Section 12.3.3)
   Examples:
@@ -10862,10 +10764,6 @@
     - yes/no/disagree alignment (strategy)
   SubtypeOf:
     - str:polarity-response-alignment
-  ExpressionOf:
-    - cxn:negative-question-polarity-response-construction
-  ModeledOn:
-    - cxn:positive-question-polarity-response-construction
   Definition: >-
     an <a>alignment strategy</a> for the <a>polarity response construction</a> in which the answer to a negative <a cxn:polarity-question-construction>polarity question</a> aligns the polarity of the answer when the answer is negative, but uses a special disagreeing form when the answer is positive. <i>Example</i>: in French, when the question is <q>Do you not have any money?</q>, the answer <i>non</i> <q>no</q> indicates that the respondent has no money, but the answer <i>si</i> (different from the positive answer <i>oui</i> <q>yes</q>) indicates that the respondent disagrees with the speaker and indeed does have money. (Section 12.3.3)
   Examples:
@@ -11961,6 +11859,8 @@
   Name: transitive alignment
   SubtypeOf:
     - str:alignment-system
+  ExpressionOf:
+    - cxn:transitive-construction
   ModeledOn:
     - cxn:intransitive-construction
   Definition: ''
@@ -11973,6 +11873,8 @@
     - str:alignment-system
   ModeledOn:
     - cxn:transitive-construction
+  ExpressionOf:
+    - cxn:ditransitive-construction
   Definition: ''
   FromGlossary: false
 
@@ -12009,6 +11911,8 @@
     - experiential (dis)alignment
   SubtypeOf:
     - str:alignment-system
+  ExpressionOf:
+    - cxn:experiential-construction
   ModeledOn:
     - cxn:transitive-construction
   Definition: ''
@@ -12072,6 +11976,8 @@
     - subject-predicate (dis)alignment
   SubtypeOf:
     - str:alignment-system
+  ExpressionOf:
+    - cxn:thetic-construction
   ModeledOn:
     - cxn:basic-voice
   Definition: ''
@@ -12102,8 +12008,6 @@
   Name: non-nominative flag--index
   SubtypeOf:
     - str:subject-predicate-alignment
-  ExpressionOf:
-    - cxn:thetic-construction
   Definition: ''
   FromGlossary: false
 
@@ -12152,6 +12056,10 @@
   Name: polarity response alignment
   SubtypeOf:
     - str:alignment-system
+  ExpressionOf:
+    - cxn:negative-question-polarity-response-construction
+  ModeledOn:
+    - cxn:positive-question-polarity-response-construction
   Definition: ''
   FromGlossary: false
 
@@ -12219,6 +12127,8 @@
     - clause (dis)alignment
   SubtypeOf:
     - str:alignment-system
+  ExpressionOf:
+    - cxn:complex-sentence
   ModeledOn:
     - cxn:declarative-construction
   Definition: ''
@@ -12253,6 +12163,8 @@
   Name: reference tracking system
   SubtypeOf:
     - str:system
+  ExpressionOf:
+    - cxn:reference-tracking-construction
   ModeledOn:
     - cxn:main-clause
   Definition: ''
@@ -12323,6 +12235,8 @@
   Name: non-externally headed
   SubtypeOf:
     - str:encoding-strategy
+  ExpressionOf:
+    - cxn:relative-clause-construction
   Definition: ''
   FromGlossary: false
 
@@ -13039,21 +12953,23 @@
   Definition: ''
   FromGlossary: false
 
-- Id: str:complement-alignment
+- Id: str:complement-disalignment
   Type: str
-  Name: complement alignment
+  Name: complement disalignment
   SubtypeOf:
     - str:alignment-system
-  ModeledOn:
+  ExpressionOf:
     - cxn:complement-clause-construction
+  ModeledOn:
+    - cxn:main-clause
   Definition: ''
   FromGlossary: false
 
 - Id: str:detached-complement-strategy
   Type: str
-  Name: detached complement alignment
+  Name: detached complement strategy
   SubtypeOf:
-    - str:complement-alignment
+    - str:complement-disalignment
   Definition: ''
   FromGlossary: false
 
