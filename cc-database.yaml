@@ -248,14 +248,13 @@
   Name: additive
   SubtypeOf:
     - sem:event-relation
-  AssociatedTo:
-    - cxn:additive-focus-operator
   Definition: >-
     a relation between two or more <a>entities</a> such that the entities are construed as combined in a sort of totality. The additive relation may be construed as a <a>complex figure</a>, as in <i>The robins drank water and the juncos ate fennel seeds</i>, or in a <a>figure--ground</a> relation, as in <i>Besides missing my bus, I got my feet all wet</i>. The additive relation is considered the prototype for <a>conjunctive coordination</a>. (Section 15.2.1)
 
 - Id: cxn:additive-focus-operator
   Type: cxn
   Name: additive focus operator
+  Status: deleted
   Alias:
     - additive (focus) operator
     - inclusive focus operator
@@ -375,6 +374,8 @@
 - Id: cxn:admodifier
   Type: cxn
   Name: admodifier
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:attributive-phrase
   Definition: >-
@@ -541,7 +542,7 @@
   SubtypeOf:
     - str:simple-strategy
   ExpressionOf:
-    - cxn:complex-construction
+    - cxn:modification-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which one <a>element</a> is an affix on the other. <i>Example</i>: in Somali <i>səʔli-hom</i> [photograph-his], <i>-hom</i> is typically analyzed as an affix expressing the <a>possessor</a>. (Section 4.2)
   Examples:
@@ -938,6 +939,8 @@
 - Id: cxn:apodosis-clause
   Type: cxn
   Name: apodosis clause
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:conditional-construction
   Definition: >-
@@ -1194,6 +1197,7 @@
   Type: cxn
   Name: attributive phrase
   SubtypeOf:
+    - cxn:construction
     - cxn:phrase
   ConstituentOf:
     - cxn:modification-construction
@@ -2182,9 +2186,10 @@
   Examples:
     - She thought <e>that</e> he was tired
 
-- Id: cxn:complex-construction
+- Id: 1ction
   Type: cxn
   Name: complex construction
+  Status: deleted
   SubtypeOf:
     - cxn:construction
   Definition: >-
@@ -2261,7 +2266,7 @@
   Type: cxn
   Name: complex sentence
   SubtypeOf:
-    - cxn:complex-construction
+    - cxn:construction
   Definition: >-
     a construction made up of more than one clausal construction. <i>Example</i>: [<i>The birds were singing</i>] [<i>when I went out to get the newspaper</i>] is an instance of a complex sentence construction consisting of two clauses, indicated by square brackets in the example. (Sections 1.3, <b>15.1.1</b>)
   Examples:
@@ -2273,7 +2278,7 @@
   SubtypeOf:
     - str:simple-strategy
   ExpressionOf:
-    - cxn:complex-construction
+    - cxn:modification-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are combined in a single word. <i>Example</i>: in <i>doorknob</i>, <i>door</i> and <i>knob</i> form an instance of compounding. The term <q>compounding</q> or <q>compound</q> is also used for the <a>typifying construction</a> and the <a>binominal lexeme construction</a>. (Section 4.2)
   Examples:
@@ -2672,6 +2677,8 @@
   Name: coordinand
   Alias:
     - conjunct
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:coordinate-construction
     - cxn:coordinate-clause-construction
@@ -2701,6 +2708,8 @@
   Name: coordinate construction
   Alias:
     - coordination
+  SubtypeOf:
+    - cxn:construction
   Definition: >-
     a <a>construction</a> in which two <a>entities</a> are construed as part of a <a>complex figure information packaging</a>. <i>Example</i>: in <i>John, Paul, George, and Ringo</i>, the four <a>referring phrases</a> are combined into a coordinate construction that construes the four referents as part of a complex whole.
   Examples:
@@ -3060,8 +3069,6 @@
   Name: dependent
   SubtypeOf:
     - cxn:element
-  ConstituentOf:
-    - cxn:complex-construction  
   Definition: >-
     any <a>element</a> of a <a>construction</a> that is not the <a>head</a>. <i>Example</i>: in the phrase <i>an ancient watch</i>, <i>ancient</i> and <i>an</i> are dependents. (Section 2.2.1)
   Examples:
@@ -3070,6 +3077,8 @@
 - Id: cxn:dependent-clause
   Type: cxn
   Name: dependent clause
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:complex-sentence
   Definition: >-
@@ -3314,6 +3323,8 @@
 - Id: cxn:discourse-markers
   Type: cxn
   Name: discourse markers
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:complex-sentence
   Definition: >-
@@ -3572,6 +3583,10 @@
 - Id: cxn:element
   Type: cxn
   Name: element
+  SubtypeOf:
+    - cxn:construction
+  ConstituentOf:
+    - cxn:construction
   Definition: >-
     a word or <a>construction</a> that is part of -- that is, functions in a <a>role</a> in -- a <a>construction</a>. <i>Example</i>: in <i>an ancient watch</i>, the elements are <i>an</i>, <i>ancient</i>, and <i>watch</i>. (Section 2.2.1)
   Examples:
@@ -3620,6 +3635,8 @@
   Name: encoding strategy
   SubtypeOf:
     - str:strategy
+  ExpressionOf:
+    - cxn:construction
   Definition: >-
     a <a>strategy</a> for a <a>construction</a> defined by the presence (or absence) of certain <a>morphosyntactic</a> structures that are defined in a <a>crosslinguistically valid</a> fashion. (Section 1.4)
 
@@ -4013,7 +4030,7 @@
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
-    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by adding something else to the rejected component, rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES</i>, the speaker rejects that what John bought was just apples, and adds peaches to what John bought. <i>Also</i> is an <a>additive focus operator</a>. (Section 11.4.1)
+    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by adding something else to the rejected component, rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples. He also bought PEACHES</i>, the speaker rejects that what John bought was just apples, and adds peaches to what John bought. <i>Also</i> is an additive focus operator. (Section 11.4.1)
   Examples:
     - John bought apples. <e>He also bought PEACHES</e>
 
@@ -4278,8 +4295,6 @@
     - sem:event
     - sem:object-relation
     - sem:spatial-event
-  AssociatedTo:
-    - cxn:locational-construction
   Definition: >-
     a spatial relation that holds between two <a sem:object-concept>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
   Examples:
@@ -4378,8 +4393,7 @@
 - Id: cxn:focus-operator
   Type: cxn
   Name: focus operator
-  ConstituentOf:
-    - cxn:focus-element
+  Status: deleted
   Definition: >-
     a <a>construction</a> that indicates the range of the <a>focus</a> of an <a>identificational construction</a>. Focus operators may be <a>additive</a> or <a cxn:restrictive-focus-operator>restrictive</a>. (Section 11.4.1)
 
@@ -4467,9 +4481,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:complex-construction
-    - cxn:existential-negation-construction
-    - cxn:prohibitive-construction
+    - cxn:construction
   Definition: >-
     a highly <a>grammaticalized</a> strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are fused in a single morpheme. <i>Example</i>: Lakhota <i>ina</i> <q>my mother</q> fuses <q>my</q> and <q>mother</q>. (Section 4.5)
   Examples:
@@ -4669,8 +4681,6 @@
   Name: head
   SubtypeOf:
     - cxn:element
-  HeadOf:
-    - cxn:complex-construction
   Definition: >-
     the most contentful word that most closely denotes the same function as the phrase (or clause) as a whole. <i>Example</i>: the head of the phrase <i>an ancient watch</i> is <i>watch</i>. (Section 2.2.1)
   Examples:
@@ -5107,7 +5117,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:complex-construction
+    - cxn:modification-construction
   AssociatedTo:
     - str:discourse-reference-system
   Definition: >-
@@ -5574,7 +5584,7 @@
   SubtypeOf:
     - str:simple-strategy
   ExpressionOf:
-    - cxn:complex-construction
+    - cxn:modification-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which the two <a>elements</a> are simply syntactically juxtaposed without any additional morpheme expressing the propositional act relation. <i>Example</i>: in <i>red ball</i>, the adjective <i>red</i> is simply juxtaposed to the noun <i>ball</i> to indicate that the referent of <i>ball</i> is modified by the property denoted by <i>red</i>. (Section 4.2)
   Examples:
@@ -5896,6 +5906,8 @@
 - Id: cxn:main-clause
   Type: cxn
   Name: main clause
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:complex-sentence
   Definition: >-
@@ -6020,6 +6032,8 @@
 - Id: cxn:matrix-clause
   Type: cxn
   Name: matrix clause
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:complex-sentence
   Definition: >-
@@ -6234,6 +6248,8 @@
 - Id: cxn:modifier
   Type: cxn
   Name: modifier
+  SubtypeOf:
+    - cxn:construction
   HeadOf:
     - cxn:attributive-phrase
   ConstituentOf:
@@ -6577,8 +6593,6 @@
   Name: nonperson indexation
   SubtypeOf:
     - str:indexation
-  ExpressionOf:
-    - cxn:complex-construction
   Definition: >-
     an <a>indexical strategy</a> in which certain categories, typically <a>number</a> and <a>gender--class</a>, but not the category of <a>person</a>, are encoded in the <a>index</a>. <i>Example</i>: in Russian <i>molod-aja sosna</i> <q>young pine</q>, the suffix <i>-aja</i> on <i>molod-</i> <q>young</q> indexes its <a>referent</a>, also referred to by <i>sosna</i> <q>pine</q>, by <a>number</a> and <a>gender--class</a> (Feminine Singular), and <a>case</a> (Nominative). (Section 4.4.2)
   Examples:
@@ -6711,8 +6725,9 @@
 - Id: cxn:noun-complement
   Type: cxn
   Name: noun complement
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
-    - cxn:noun-complement-phrase
     - cxn:noun-complement-clause-construction
   Definition: >-
     the <a inf:modification>modifying</a> <a>clause</a> in a <a>noun complement clause construction</a>. <i>Example</i>: in <i>the fact that the student bought the book, that the student bought the book</i> is the noun complement. (Section 19.2.4)
@@ -7391,8 +7406,6 @@
   Name: person indexation
   SubtypeOf:
     - str:indexation
-  ExpressionOf:
-    - cxn:complex-construction
   Definition: >-
     an <a>indexical strategy</a> in which the category of <a>person</a> is encoded in the <a>index</a>. Other categories, typically <a>number</a> and <a>gender--class</a>, may also be encoded in the index. <i>Example</i>: in Mam <i>t-kamb' meeb'a</i> <q>the orphan's prize</q>, the third person prefix <i>t-</i> on <i>kamb'</i> <q>prize</q> indexes the possessor, who is also referred to by <i>meeb'a</i> <q>orphan</q>. (Section 4.4.1)
   Examples:
@@ -7627,7 +7640,6 @@
     - sem:object-relation
   AssociatedTo:
     - cxn:possessive-modification-construction
-    - cxn:possession-construction
   Definition: >-
     a semantic relation between two objects, prototypically <a>ownership</a>, but also including weaker relations such as temporary ownership and physical contiguity. <i>Example</i>: in <i>I have a pen</i>, there is a possession relation between myself and the pen -- I am the <a>possessor</a> and the pen is the <a>possessum</a>. This possession relation could be full ownership, temporary ownership (someone lent it to me), or physical contiguity (I have a pen at hand). Other object--object relations such as <a>body parts</a>, <a>part--whole</a>, and <a>kinship</a> are generally also included under possession relations. (Section 10.4.2)
   Examples:
@@ -7877,6 +7889,8 @@
 - Id: cxn:predicate
   Type: cxn
   Name: predicate
+  SubtypeOf:
+    - cxn:construction
   HeadOf:
     - cxn:clause
   Definition: >-
@@ -8388,8 +8402,6 @@
   Name: prosody
   SubtypeOf:
     - str:encoding-strategy
-  ExpressionOf:
-    - cxn:construction
   Definition: >-
     a phonological <a>strategy</a> typically used for expressing certain <a cxn:nonpredicational-construction>nonpredicational clause constructions</a> and <a cxn:speech-act-construction>speech act</a> constructions. <i>Example</i>: prosody can be used in English to express a <a cxn:thetic-construction>thetic</a> construction: <i>(What's the matter?) My NECK hurts</i>. (Section 11.3.2)
   Examples:
@@ -8400,6 +8412,8 @@
   Name: protasis clause
   Alias:
     - antecedent
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:conditional-construction
   Definition: >-
@@ -8681,6 +8695,8 @@
 - Id: cxn:referent-expression
   Type: cxn
   Name: referent expression
+  SubtypeOf:
+    - cxn:construction
   HeadOf:
     - cxn:referring-phrase
     - cxn:argument-phrase
@@ -8705,6 +8721,7 @@
   Type: cxn
   Name: referring phrase
   SubtypeOf:
+    - cxn:construction
     - cxn:phrase
   AssociatedTo:
     - cxn:reference-tracking-construction
@@ -8765,8 +8782,6 @@
   Name: relational strategy
   SubtypeOf:
     - str:overt-coding
-  ExpressionOf:
-    - cxn:complex-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that encodes the semantic relation between the two concepts. Examples of relational strategies include <a>adpositions</a> and <a>case affixes</a>. (Section 4.3)
 
@@ -8971,13 +8986,14 @@
   SubtypeOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
-    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by excluding part of the rejected component rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples and peaches. No, he only bought PEACHES</i>, the speaker rejects that what John bought was both apples and peaches, and restricts what John bought to just peaches. <i>Only</i> is a <a>restrictive focus operator</a>. (Section 11.4.1)
+    a subtype of <a>counterpresuppositional contrast</a> in which the sentence rejects a component of a prior assertion by excluding part of the rejected component rather than simply replacing it. <i>Example</i>: in the exchange <i>John bought apples and peaches. No, he only bought PEACHES</i>, the speaker rejects that what John bought was both apples and peaches, and restricts what John bought to just peaches. <i>Only</i> is a restrictive focus operator. (Section 11.4.1)
   Examples:
     - John bought apples and peaches. <e>No, he only bought PEACHES</e>
 
 - Id: cxn:restrictive-focus-operator
   Type: cxn
   Name: restrictive focus operator
+  Status: deleted
   Alias:
     - restrictive (focus) operator
     - exclusive focus operator
@@ -8993,8 +9009,6 @@
   Name: restrictive modification
   SubtypeOf:
     - inf:subcategorizing
-  AssociatedTo:
-    - cxn:restrictive-focus-operator
   Definition: >-
     the prototypical type of <a>modification</a> <a>information packaging</a> <a>function</a> in which the modifying <a>stative</a> concept narrows or restricts the set of possible <a>referents</a> of the <a>object concept</a> it modifies in a <a>referring phrase</a>. <i>Example</i>: in <i>The tall trees block the view, tall</i> restrictively modifies <i>trees</i> in the context where there are tall trees and short trees. (Section 14.3)
   Examples:
@@ -9431,8 +9445,6 @@
   Name: simple strategy
   SubtypeOf:
     - str:zero-coding
-  ExpressionOf:
-    - cxn:complex-construction
   Definition: >-
     a <a>strategy</a> for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), that does not involve the presence of a third morpheme. Simple strategies include <a>juxtaposition</a>, <a>compounding</a>, and <a>affixation</a>. (Section 4.2)
 
@@ -9517,8 +9529,6 @@
     - base modification
   SubtypeOf:
     - str:encoding-strategy
-  ExpressionOf:
-    - cxn:complex-construction
   Definition: >-
     a highly grammaticalized strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which one of the two <a>elements</a> is in a morphologically distinct form. <i>Example</i>: in Syrian Arabic <i>ʔəṣṣeṭ haz-zalame</i> <q>that fellow's story</q>, the Construct Form <i>ʔəṣṣeṭ</i> <q>story</q> is an example of a special form used in this <a>nominal modifier construction</a>. (Section 4.5)
   Examples:
@@ -9902,6 +9912,8 @@
 - Id: cxn:subordinate-clause
   Type: cxn
   Name: subordinate clause
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:complex-sentence
   Definition: >-
@@ -10817,8 +10829,6 @@
   Name: word order
   SubtypeOf:
     - str:encoding-strategy
-  ExpressionOf:
-    - cxn:complex-construction
   Definition: >-
     the relative order of two <a>elements</a> in a <a>construction</a>. <i>Example</i>: in English <i>red book</i>, the <a>adjective</a> <i>red</i> precedes the <a>noun</a> <i>book</i>; but in Spanish <i>libro rojo</i>, the adjective <i>rojo</i> <q>red</q> follows the noun <i>libro</i> <q>book</q>. (Sections <b>4.2</b>, 5.3, 6.2.2)
   Examples:
@@ -10887,8 +10897,6 @@
     - zero code
   SubtypeOf:
     - str:encoding-strategy
-  ExpressionOf:
-    - cxn:construction
   Definition: >-
     a <a>strategy</a> in which there is no overt <a>form</a> in the <a>construction</a> that encodes the relevant <a>function</a> of the construction. <i>Example</i>: in the English Adjectival Modification Construction illustrated by <i>tall trees</i>, there is no overt form that codes the <a>modification</a> function of the <a>property concept</a> denoted by <i>tall</i>. (Section 2.4)
   Examples:
@@ -12535,6 +12543,8 @@
 - Id: cxn:complex-predicate-part
   Type: cxn
   Name: complex predicate part
+  SubtypeOf:
+    - cxn:construction
   ConstituentOf:
     - cxn:complex-predicate
   Definition: ''
@@ -12584,17 +12594,19 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:focus-element
+- Id: cxn:noun-complement-matrix-clause
   Type: cxn
-  Name: focus element
+  Name: noun complement matrix clause
+  SubtypeOf:
+    - cxn:matrix-clause
   ConstituentOf:
-    - cxn:identificational-construction
+    - cxn:noun-complement-clause-construction
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:noun-complement-phrase
+- Id: cxn:noun-complement-referring-phrase
   Type: cxn
-  Name: noun complement phrase
+  Name: noun complement referring phrase
   SubtypeOf:
     - cxn:referring-phrase
   ConstituentOf:
@@ -12602,31 +12614,13 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:noun-complement-phrase-head
+- Id: cxn:noun-complement-head
   Type: cxn
-  Name: noun complement phrase head
+  Name: noun complement head
   SubtypeOf:
     - cxn:referent-expression
   HeadOf:
-    - cxn:noun-complement-phrase
-  Definition: ''
-  FromGlossary: false
-
-- Id: cxn:noun-complement-matrix-clause
-  Type: cxn
-  Name: noun complement matrix clause
-  SubtypeOf:
-    - cxn:matrix-clause
-  HeadOf:
-    - cxn:noun-complement-clause-construction
-  Definition: ''
-  FromGlossary: false
-
-- Id: cxn:presupposed-open-clause
-  Type: cxn
-  Name: presupposed open clause
-  ConstituentOf:
-    - cxn:identificational-construction
+    - cxn:noun-complement-referring-phrase
   Definition: ''
   FromGlossary: false
 
@@ -13060,5 +13054,16 @@
   Name: detached complement alignment
   SubtypeOf:
     - str:complement-alignment
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:negative-fusion
+  Type: str
+  Name: negative fusion
+  SubtypeOf:
+    - str:fusion
+  ExpressionOf:
+    - cxn:existential-negation-construction
+    - cxn:prohibitive-construction
   Definition: ''
   FromGlossary: false
