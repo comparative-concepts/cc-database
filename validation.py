@@ -161,7 +161,7 @@ def expand_alias(alias: str) -> list[str]:
         if not m: 
             return [s]
         prefix = s[:m.start()]
-        alternatives = ["", m.group(1)]
+        alternatives: list[str] = ["", m.group(1)]
         suffixes = expand_parentheses(s[m.end():])
         return [prefix + alt + suf for alt in alternatives for suf in suffixes]
 

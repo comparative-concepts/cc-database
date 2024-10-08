@@ -28,7 +28,7 @@ class CCDB:
     definitions: dict[str, ParsedDefinition]
     links: dict[str, list[str]]
 
-    def __init__(self, glosses: Glosses):
+    def __init__(self, glosses: Glosses) -> None:
         self.glosses = glosses
 
         # All possible names (ids and aliases)
@@ -48,7 +48,7 @@ class CCDB:
             if links: self.links[id] = links
 
 
-    def export(self, format: str):
+    def export(self, format: str) -> None:
         if format == "html":
             self.print_html()
         elif format == "karp":
@@ -71,9 +71,10 @@ class CCDB:
                 link_ref = m.group(1)
                 name = m.group(2)
 
+                linkids: tuple[str, ...]
                 if link_ref:
                     link = link_ref
-                    linkids = [link]
+                    linkids = (link,)
                 else:
                     link = self.clean_link(name)
                     if not link:
@@ -144,7 +145,7 @@ class CCDB:
         return ()
 
     # Used when finding the closest match of a link
-    TYPE_ENDINGS = {
+    TYPE_ENDINGS: dict[str, list[str]] = {
         'cxn': ['construction', 'constructions'],
         'str': ['strategy', 'strategies', 'category', 'categories'],
         'inf': ['construal', 'information packaging', 'referent', 'referents'],
@@ -197,7 +198,7 @@ class CCDB:
         return self.clean_definition_html(''.join(html_parts))
 
 
-    def print_relation_list(self, relations: list[str]|None, name: str):
+    def print_relation_list(self, relations: list[str]|None, name: str) -> None:
         """Prints an html version of a list of related CCs, with links to these CCs."""
         if relations:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation">' +
@@ -205,7 +206,7 @@ class CCDB:
                     '</td></tr>')
 
 
-    def print_hierarchy(self, item: GlossItem, relation_types: list[Relation], name: str):
+    def print_hierarchy(self, item: GlossItem, relation_types: list[Relation], name: str) -> None:
         id = item.Id
         parents = [(parent, rel) for rel in relation_types for parent in item.Relations.get(rel, ())]
         children = [
@@ -251,7 +252,7 @@ class CCDB:
         )
 
 
-    def print_html(self):
+    def print_html(self) -> None:
         """Print the whole database as a single HTML file (to stdout)."""
         print('<!DOCTYPE html>')
         print('<html><head><meta charset="utf-8"/>')
@@ -336,7 +337,7 @@ class CCDB:
     def convert_html_to_text(html: str) -> str:
         return re.sub(r"<[^<>]+>", "", html)
 
-    def export_to_graph(self):
+    def export_to_graph(self) -> None:
         nodes: list[GraphNode] = []
         edges: list[GraphEdge] = []
         for item in self.glosses.values():
@@ -385,11 +386,11 @@ class CCDB:
         return ''.join(karp_parts)
 
 
-    def export_to_karp(self):
+    def export_to_karp(self) -> None:
         """Export the whole database as a single JSON-lines file for use in Karp."""
         for id in sorted(self.glosses, key=str.casefold):
             item: GlossItem = self.glosses[id]
-            out = {
+            out: dict[str, object] = {
                 'Id': item.Id,
                 'Type': item.Type.value,
                 'Name': item.Name,
@@ -404,19 +405,19 @@ class CCDB:
     ###########################################################################
     ## Export to FrameNet Brazil JSON format
 
-    def export_to_fnbr(self):
+    def export_to_fnbr(self) -> None:
         """Export the database to the same JSON format as FrameNet Brazil."""
         # Special cases (e.g., "strategy [def]" is "strategy [str]" in FNBr)
         SPECIAL_FNBR_CCs = {
             id: id.replace('def:', typ.value + ':')
             for typ, id in validation.GENERIC_TYPES.items()
         }
-        out_ccs: list[dict[str, str|list[str]]] = []
+        out_ccs: list[dict[str, object]] = []
         for id in sorted(self.glosses, key=str.casefold):
             item = self.glosses[id]
             if not (item.Type in self.FNBR_TYPES or id in SPECIAL_FNBR_CCs):
                 continue
-            out = {
+            out: dict[str, object] = {
                 'id': SPECIAL_FNBR_CCs.get(item.Id, item.Id),
                 'name': item.Name,
                 'type': self.FNBR_TYPES.get(item.Type, item.Type),
@@ -428,7 +429,7 @@ class CCDB:
                 out['associatedTo'] = [SPECIAL_FNBR_CCs.get(relid, relid) 
                                        for relid in item.Relations[Relation.AssociatedTo]]
             out_ccs.append(out)
-        final_output = {
+        final_output: dict[str, object] = {
             'db-version': "export from cc-database",
             'ccs': out_ccs,
         }
@@ -455,7 +456,7 @@ parser.add_argument('--keep-deleted', '-d', action='store_true', help=f'keep del
 parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
 
-def main(args: argparse.Namespace):
+def main(args: argparse.Namespace) -> None:
     validation.set_error_verbosity(not args.quiet)
     if not args.format:
         print("No output format selected, I will only validate the database.", file=sys.stderr)
