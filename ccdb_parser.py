@@ -371,6 +371,12 @@ class CCDB:
     ## Export to Språkbanken Karp JSON-lines format
 
     @staticmethod
+    def karp_translate(m: re.Match[str]) -> str:
+        tag = m.group(1)
+        if tag == "sc": tag = "caps"
+        return f"[{tag} {m.group(2)}]"
+
+    @staticmethod
     def convert_definition_to_karp(definition: ParsedDefinition) -> str:
         """Convert a CC definition into a Karp-formatted string."""
         karp_parts: list[str] = []
@@ -380,8 +386,11 @@ class CCDB:
                 part = f"[a {part[0]} {part[1]}]"
             else:
                 part = part.replace(r"[", r"\[").replace(r"]", r"\]")
-                part = re.sub(r"<(\w+)>", r"[\1 ", part)
-                part = re.sub(r"</(\w+)>", r"]", part)
+                nsubs = 1
+                while nsubs > 0:
+                    (part, nsubs) = re.subn(r"<(\w+)>([^<>]+?)</\1>", 
+                                            CCDB.karp_translate,
+                                            part)
             karp_parts.append(part)
         return ''.join(karp_parts)
 
