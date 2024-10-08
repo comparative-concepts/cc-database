@@ -90,6 +90,14 @@ class CCDB:
                         error(id, f"Ambiguous link '{link}', maps to any of {linkids}")
                 links.append(linkid)
                 part = (linkid, name)
+            else:
+                # Test that all <x> are matched
+                testpart = part
+                nsubs = 1
+                while nsubs > 0:
+                    (testpart, nsubs) = re.subn(r"<(\w+)>[^<>]+</\1>", "...", testpart)
+                if (m := re.search(r"<\w+>", testpart)):
+                    error(id, f"Unmatched {m.group()} in definition: {testpart}")
             if part:
                 expanded.append(part)
         return expanded, links
