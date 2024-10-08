@@ -1419,7 +1419,7 @@
   SubtypeOf:
     - cxn:experiential-verb
   Definition: >-
-    the <a>predicates</a> that express events in the <a>bodily action<a> event class. <i>Example</i>: coughing is a bodily action, and <i>cough</i> is a bodily action predicate. (Section 6.3.3)
+    the <a>predicates</a> that express events in the <a>bodily action</a> event class. <i>Example</i>: coughing is a bodily action, and <i>cough</i> is a bodily action predicate. (Section 6.3.3)
   Examples:
     - <e>cough</e>
 
@@ -4386,7 +4386,7 @@
   SubtypeOf:
     - cxn:semantically-nonspecific-pronoun
   Definition: >-
-    a <pronoun> that expresses a <a>free choice referent</a>. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
+    a <a>pronoun</a> that expresses a <a>free choice referent</a>. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
   Examples:
     - After the fall of the Wall, East Germans were free to travel <e>anywhere</e>
 
@@ -5096,7 +5096,7 @@
   SubtypeOf:
     - cxn:semantically-nonspecific-pronoun
   Definition: >-
-    a <pronoun> that expresses an <a>indirect negation referent</a>. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
+    a <a>pronoun</a> that expresses an <a>indirect negation referent</a>. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
   Examples:
     - I don't think that <e>anybody</e> has seen it
 
@@ -5178,7 +5178,7 @@
   SubtypeOf:
     - cxn:response-construction
   Definition: >-
-    the <a>construction</a> that expresses the <a inf:information-question-response>answer to an information question<a>. <i>Example</i>: the answer to the English information question <i>Who is coming?</i> could be <i>Sandra is coming, Sandra is</i>, or just <i>Sandra</i>. (Section 12.3.3)
+    the <a>construction</a> that expresses the <a inf:information-question-response>answer to an information question</a>. <i>Example</i>: the answer to the English information question <i>Who is coming?</i> could be <i>Sandra is coming, Sandra is</i>, or just <i>Sandra</i>. (Section 12.3.3)
   Examples:
     - Who is coming?
     - Sandra is coming
@@ -5511,7 +5511,7 @@
   SubtypeOf:
     - cxn:semantically-nonspecific-pronoun
   Definition: >-
-    a <pronoun> that expresses an <a>irrealis referent</a>. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
+    a <a>pronoun</a> that expresses an <a>irrealis referent</a>. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
   Examples:
     - Visit me <e>sometime</e>
 
@@ -8148,7 +8148,7 @@
   ConstituentOf:
     - str:secundative-alignment
   Definition: >-
-    the <a>morphosyntactic</a> category in the <a>secundative alignment system</a> that <a>co-expresses</a> both <a>R</a> and <a>P roles</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, the <a>index</a> <i>wa-</i> <q><sc>3pl</q></sc> is the same used to index <i>tɨɨri</i> <q>children</q> in <i>uukaraawiciizɨ tɨɨri me-wa-zeiya</i> <q>The women see the children</q>, and hence represents the primary object category. (Section 7.5.2)
+    the <a>morphosyntactic</a> category in the <a>secundative alignment system</a> that <a>co-expresses</a> both <a>R</a> and <a>P roles</a>. <i>Example</i>: in Huichol <i>nee uuki uukari ne-wa-puuzeiyastɨa</i> <q>I showed the man to the girls</q>, the <a>index</a> <i>wa-</i> <q><sc>3pl</sc></q> is the same used to index <i>tɨɨri</i> <q>children</q> in <i>uukaraawiciizɨ tɨɨri me-wa-zeiya</i> <q>The women see the children</q>, and hence represents the primary object category. (Section 7.5.2)
   Examples:
     - Language: Huichol
       Example: nee uuki uukari ne-wa-puuzeiyastɨa
