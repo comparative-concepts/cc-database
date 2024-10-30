@@ -198,26 +198,35 @@ class CCDB:
         return self.clean_definition_html(''.join(html_parts))
 
 
-    def print_relation_list(self, relations: list[str]|None, name: str) -> None:
+    def print_relation_list(self, item: GlossItem, relation_type: Relation, direction: str, name: str) -> None:
         """Prints an html version of a list of related CCs, with links to these CCs."""
-        if relations:
+        if direction == "out":
+            relations = item.Relations.get(relation_type, [])
+        else:
+            relations = [
+                otherid
+                for otherid, other in self.glosses.items()
+                if item.Id in other.Relations.get(relation_type, ())
+            ]
+        
+        if len(relations) > 0:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation">' +
                     ' | '.join(map(self.convert_link_to_html, relations)) +
                     '</td></tr>')
 
 
     def print_hierarchy(self, item: GlossItem, relation_types: list[Relation], name: str) -> None:
-        id = item.Id
         parents = [(parent, rel) for rel in relation_types for parent in item.Relations.get(rel, ())]
         children = [
             (chid, rel)
             for rel in relation_types
             for chid, child in self.glosses.items()
-            if id in child.Relations.get(rel, ())
+            if item.Id in child.Relations.get(rel, ())
         ]
+
         if parents or children:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation"> <table>')
-            print(f'<table>')
+            print('<table>')
             if parents:
                 print('<tr><td class="flex">')
                 for parent, rel in parents:
@@ -225,7 +234,7 @@ class CCDB:
                     print(f'<span>{pre_text} {self.convert_link_to_html(parent)}</span>')
                 print('</td></tr>')
             print('<tr><td>')
-            print(self.convert_link_to_html(id, selfid=id))
+            print(self.convert_link_to_html(item.Id, selfid=item.Id))
             print('</td></tr>')
             if children:
                 print('<tr><td class="flex">')
@@ -301,20 +310,27 @@ class CCDB:
                       ' | '.join(map(self.html_friendly_name, aliases)) +
                       '</td></tr>')
 
-            relations = item.Relations
-            self.print_relation_list(relations.get(Relation.ExpressionOf), "Expresses")
-            self.print_relation_list(relations.get(Relation.RecruitedFrom), "Recruited from")
-            self.print_relation_list(relations.get(Relation.ModeledOn), "Modeled on")
-            self.print_relation_list(relations.get(Relation.AttributeOf), "Attribute of")
-            self.print_relation_list(relations.get(Relation.RoleOf), "Role of")
-            self.print_relation_list(relations.get(Relation.FillerOf), "Filler of")
-            self.print_relation_list(relations.get(Relation.AssociatedTo), "Associated")
+            self.print_relation_list(item, Relation.FunctionOf, "out", "Function of")
+            self.print_relation_list(item, Relation.FunctionOf, "in", "Function")
+            self.print_relation_list(item, Relation.ExpressionOf, "out", "Expresses")
+            self.print_relation_list(item, Relation.ExpressionOf, "in", "Expressed by")
+            self.print_relation_list(item, Relation.RecruitedFrom, "out", "Recruited from")
+            self.print_relation_list(item, Relation.RecruitedFrom, "in", "Recruited by")
+            self.print_relation_list(item, Relation.ModeledOn, "out", "Modeled on")
+            self.print_relation_list(item, Relation.ModeledOn, "in", "Modeled of")
+            self.print_relation_list(item, Relation.AttributeOf, "out", "Attribute of")
+            self.print_relation_list(item, Relation.AttributeOf, "in", "Attribute(s)")
+            self.print_relation_list(item, Relation.RoleOf, "out", "Role of")
+            self.print_relation_list(item, Relation.RoleOf, "in", "Role(s)")
+            self.print_relation_list(item, Relation.FillerOf, "out", "Filler of")
+            self.print_relation_list(item, Relation.FillerOf, "in", "Filler(s)")
+            self.print_relation_list(item, Relation.AssociatedTo, "out", "Associated")
 
             self.print_hierarchy(item, [Relation.SubtypeOf], 'Taxonomy')
             self.print_hierarchy(item, [Relation.HeadOf, Relation.ConstituentOf], 'Partonomy')
 
             if id in self.definitions:
-                print(f'<tr><th>Definition</th> <td class="ccinfo definition">' +
+                print('<tr><th>Definition</th> <td class="ccinfo definition">' +
                       self.convert_definition_to_html(self.definitions[id]) +
                       '</td></tr>')
 

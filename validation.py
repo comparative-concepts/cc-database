@@ -28,6 +28,7 @@ class Relation(str, Enum):
     RoleOf = 'RoleOf'
     FillerOf = 'FillerOf'
     HeadOf = 'HeadOf'
+    FunctionOf = 'FunctionOf'
     AssociatedTo = 'AssociatedTo'  # This relation is obsolete and will be replaced
 
 
@@ -75,7 +76,8 @@ RELATION_CCTYPES = {
     Relation.AttributeOf:   {CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.RoleOf:        {CCType.sem:CCType.sem},
     Relation.FillerOf:      {CCType.sem:CCType.sem},
-    Relation.HeadOf:        {CCType.cxn:CCType.cxn}
+    Relation.HeadOf:        {CCType.cxn:CCType.cxn},
+    Relation.FunctionOf:    {CCType.sem:CCType.cxn, CCType.inf:CCType.cxn}
 }
 
 RELATION_KEYS = tuple(RELATION_CCTYPES.keys())
@@ -192,6 +194,7 @@ def run_validators(glosses: Glosses):
         if len(ERROR_SETTINGS['errors']) == current_errors and item.Type != CCType.def_:
             validate_isolated(item, glosses)
             validate_relations_by_cctype(item, glosses)
+            validate_functions(item, glosses)
             validate_strategy_supertypes(item, glosses)
 
 
@@ -296,6 +299,22 @@ def validate_strategy_supertypes(item: GlossItem, glosses: Glosses):
             return
         else:
             validate_strategy_supertypes(glosses[super], glosses)
+
+
+def validate_functions(item: GlossItem, glosses: Glosses):
+    if item.Type != CCType.cxn:
+        return
+
+    not_found = set((CCType.sem, CCType.inf))
+    for _, gloss in glosses.items():
+        relations = gloss.Relations.get(Relation.FunctionOf, ())
+        if gloss.Type in not_found and item.Id in relations:
+            not_found.remove(gloss.Type)
+        if len(not_found) == 0:
+            break
+
+    if len(not_found) > 0:
+        warning("missing function", f"{item.Id!r} is missing function parts: {', '.join(not_found)}")
 
 
 ###############################################################################

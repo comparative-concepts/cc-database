@@ -5,6 +5,10 @@
     - A (role)
   SubtypeOf:
     - sem:valency-role
+  FunctionOf:
+    - cxn:ditransitive-a-phrase
+    - cxn:passive-inverse-a-phrase
+    - cxn:transitive-a-phrase
   RoleOf:
     - sem:agentive-change-of-state-event
   AssociatedTo:
@@ -89,6 +93,8 @@
     - topic continuity
   SubtypeOf:
     - inf:information-status
+  FunctionOf:
+    - cxn:definite-article
   Definition: >-
     the <a>information status</a> of a <a>referent</a> with respect to the hearer's knowledge -- that is, for which the hearer already has a <u>discourse file</u>. Accessibility refers to how easily the referent can be accessed by the hearer, in the speaker's estimation. The accessibility categories described in this book are <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and <a>inferrable</a>. The adjective <q>accessible</q> is also used for the <a>semi-active</a> accessibility status. (Sections 3.1.3, <b>3.3.1</b>)
 
@@ -142,6 +148,9 @@
     - action (concept)
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:verb
+    - cxn:verbal-clause
   AssociatedTo:
     - cxn:complement
     - cxn:relative-clause
@@ -173,6 +182,9 @@
     - in focus
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:anaphoric-pronoun
+    - cxn:definite-pronoun
   AssociatedTo:
     - cxn:anaphoric-pronoun
   Definition: >-
@@ -219,6 +231,8 @@
   Name: actor
   ConstituentOf:
     - inf:theater-metaphor
+  FunctionOf:
+    - cxn:pragmatically-specific-article
   Definition: >-
     the main players in the actions reported in the discourse. Actors are typically <a>human</a> or <a>animate</a> (especially personified animals), are referred to multiple times in the discourse, and are often introduced by special <a>constructions</a>. The term <q>actor</q> is also used for the <a>active category</a>. (Section 3.4.1)
 
@@ -242,6 +256,9 @@
   Name: additive
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:additive-construction
+    - cxn:conjunctive-coordination
   Definition: >-
     a relation between two or more <a>entities</a> such that the entities are construed as combined in a sort of totality. The additive relation may be construed as a <a>complex figure</a>, as in <i>The robins drank water and the juncos ate fennel seeds</i>, or in a <a>figure--ground</a> relation, as in <i>Besides missing my bus, I got my feet all wet</i>. The additive relation is considered the prototype for <a>conjunctive coordination</a>. (Section 15.2.1)
 
@@ -358,6 +375,13 @@
   Name: admodification
   ConstituentOf:
     - inf:modification
+  FunctionOf:
+    - cxn:admodifier
+    - cxn:comparative-form
+    - cxn:downtoner
+    - cxn:intensifier
+    - cxn:measurement
+    - cxn:superlative-form
   Definition: >-
     the <a>information packaging</a> function of qualifying a <a>modifier</a>, usually via semantically expressing <a>degree</a> or hedging of the <a>property</a> denoted by the modifier. <i>Example</i>: in <i>very slow</i>, the degree <a>admodifier</a> <i>very</i> intensifies the value of the speed dimension denoted by <i>slow</i>. (Section 2.2.2)
   Examples:
@@ -509,6 +533,8 @@
   Name: affecting event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:affecting-verb
   AssociatedTo:
     - str:stimulus-oriented-strategy
   Definition: >-
@@ -569,6 +595,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:agentive-change-of-state-verb
   Definition: >-
     a <a>change of state event</a> in which an external volitional <a>agent</a> brings about a change in a <a>patient</a> such that the patient enters a resulting <a>state</a>. <i>Example</i>: the event of a person drying dishes is an agentive change of state event. (Section 6.2.1)
 
@@ -696,6 +724,8 @@
     - alternative question (function)
   SubtypeOf:
     - inf:interrogative
+  FunctionOf:
+    - cxn:alternative-question-construction
   Definition: >-
     an interrogative in which the speaker offers a closed list of alternatives to fill in the unknown piece of information in the propositional content. <i>Example</i>: <i>Do you prefer beer or wine?</i> is an instance of an alternative question construction, where the alternatives offered are beer and wine. (Section 12.3.1)
   Examples:
@@ -786,6 +816,9 @@
   Name: anchoring
   SubtypeOf:
     - inf:modification
+  FunctionOf:
+    - cxn:anchoring-construction
+    - cxn:partitive-construction
   AssociatedTo:
     - cxn:anchoring-construction
   Definition: >-
@@ -863,6 +896,8 @@
   Name: anterior
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:temporal-construction
   Definition: >-
     a temporal sequential relation between two <a>events</a> such that the following event serves as the reference point for the preceding event. <i>Example</i>: in <i>He washed the car before driving to the party</i>, washing the car has an anterior temporal relation with respect to driving to the party. Used to describe a sequential temporal relation between events in a <a>figure--ground information packaging</a>. (Section 15.1.3)
   Examples:
@@ -941,6 +976,8 @@
     - consequent
   ConstituentOf:
     - sem:conditional-relation
+  FunctionOf:
+    - cxn:apodosis-clause
   Definition: >-
     the proposition or event denoted by an <a>apodosis clause</a>. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>the door will open</i> is the apodosis; <i>If you press this button</i> is the <a cxn:protasis-clause>protasis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>apodosis</q> can be distinguished as <q>apodosis proposition</q> or <q>apodosis event</q>. (Section 17.3.1)
   Examples:
@@ -955,6 +992,8 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
+  FunctionOf:
+    - cxn:application-verb
   Definition: >-
     an <a>event</a> describing placing or applying one <a sem:object-concept>object</a> onto (2-dimensional) or into (3-dimensional) another object. <i>Examples</i>: smearing (2-dimensional) and loading (3-dimensional) are application events. (Section 7.3.2)
 
@@ -1011,6 +1050,8 @@
     - nonrestrictive modification
   SubtypeOf:
     - inf:subcategorizing
+  FunctionOf:
+    - cxn:apposition
   Definition: >-
     an <a>information packaging</a> <a>function</a> in which the modifying <a>stative</a> concept does not narrow the set of possible <a>referents</a> of the <a>object concept</a> it modifies in a <a>referring phrase</a>; it simply adds a further description of the referent. <i>Example</i>: in <i>The angry young men left the party</i>, <i>angry</i> is an appositive modifier in the context in which it is adding a further description to the young men leaving the party, rather than specifying a subset of the young men, as with <a>restrictive modification</a>. (Section 14.3)
   Examples:
@@ -1021,6 +1062,8 @@
   Name: apprehensional
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:apprehensional-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event serves as the opposite of the intended outcome of bringing about the other event. In this respect, the apprehensional relation is a <dq>negative</dq> version of the <a>purpose</a> relation. <i>Examples</i>: <i>I grabbed a stick lest he attack me</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>Grab a stick or he will attack you</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the <dq>negatively intended</dq> event is construed as the ground. As with the purpose relation, the apprehensional event is unrealized; the complex figure construal is possible because the <a>matrix clause</a> event is also unrealized. (Section 15.3.1)
   Examples:
@@ -1158,6 +1201,8 @@
   Name: attending event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:attending-verb
   AssociatedTo:
     - cxn:experiential-verb
     - str:experiencer-oriented-strategy
@@ -1355,6 +1400,8 @@
   Name: bivalent
   SubtypeOf:
     - sem:valency
+  FunctionOf:
+    - cxn:transitive-construction
   AttributeOf:
     - sem:agentive-change-of-state-event
     - sem:application-event
@@ -1366,7 +1413,7 @@
     - sem:ingestion-event
     - sem:interaction-event
     - sem:killing-injuring-event
-    - sem:figure-ground-spatial-relation 
+    - sem:figure-ground-spatial-relation
     - sem:motion-event
     - sem:perception-event
     - sem:possession
@@ -1387,6 +1434,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:bodily-predicate
   Definition: >-
     the <a>event</a> class of normally uncontrolled actions involving one's body. <i>Example</i>: coughing is a bodily action. (Section 6.3.3)
 
@@ -1396,6 +1445,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:bodily-motion-verb
   AssociatedTo:
     - str:middle-voice
   Definition: >-
@@ -1432,6 +1483,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:body-care-verb
   AssociatedTo:
     - str:middle-voice
   Definition: >-
@@ -1458,6 +1511,8 @@
     - body part (relation)
   SubtypeOf:
     - sem:possession
+  FunctionOf:
+    - cxn:inalienable-possession-attributive-phrase
   Definition: >-
     a relation between a person and a physical body part of hers or his. Example: <i>the child's arm</i> is a <a>possession construction</a> expressing a body part relation. (Section 4.1.4)
 
@@ -1471,6 +1526,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:body-position-predicate
   Definition: >-
     the event class of maintaining a particular body posture or position. <i>Example</i>: standing is a body position event. (Section 6.3.3)
 
@@ -1533,6 +1590,8 @@
   Name: causal
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:causal-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event causes the other. <i>Example</i>: <i>I left the party because I was tired</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>I was tired and (so) I left the party</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the causing event (the <a sem:protasis>protasis</a>; Section 17.3.2) is construed as the ground, and expressed in the <a>adverbial dependent clause</a>. Causal relations also occur in <a>conditional</a>, <a>concessive</a>, <a>concessive conditional</a>, and <a>comparative conditional constructions</a>. Causal relations are divided into <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, and <a sem:speech-act-causal-relation>speech act relations</a>. (Sections 15.3.1, 17.2.1, 17.3.2)
   Examples:
@@ -1641,6 +1700,8 @@
   Name: causee
   SubtypeOf:
     - sem:external-cause
+  FunctionOf:
+    - cxn:causee-phrase
   Definition: >-
     in a <a>causative event</a>, the <a>participant role</a> that is the initiator of the <a>causal chain</a> of the <a>base event</a>. <i>Example</i>: in <i>Sandra had Phil sweep the patio</i>, Phil fills the participant role of causee because Phil is the initiator of the sweeping event. The term <q>causee</q> is used only when there is a <a>causer</a> in the event as well. (Section 9.2)
   Examples:
@@ -1651,6 +1712,8 @@
   Name: causer
   SubtypeOf:
     - sem:external-cause
+  FunctionOf:
+    - cxn:causer-phrase
   Definition: >-
     a <a>participant role</a> which names an external cause that brings about an event, and is conceptualized as a <a>central participant</a> in the <a>event</a>. <i>Example</i>: in <i>Harry made the antelope jump</i>, Harry is in the causer role. (Sections 7.4, 9.2)
   Examples:
@@ -1661,6 +1724,22 @@
   Name: central participant
   SubtypeOf:
     - sem:participant
+  FunctionOf:
+    - cxn:applicative-object-phrase
+    - cxn:causer-phrase
+    - cxn:core-argument-phrase
+    - cxn:ditransitive-a-phrase
+    - cxn:experiencer-phrase
+    - cxn:figure-phrase
+    - cxn:object-phrase
+    - cxn:p-phrase
+    - cxn:passive-inverse-p-phrase
+    - cxn:r-phrase
+    - cxn:s-phrase
+    - cxn:stimulus-phrase
+    - cxn:subject-phrase
+    - cxn:t-phrase
+    - cxn:transitive-a-phrase
   Definition: >-
     certain <a>participants</a> are considered to be more central to the <a>event</a>, in particular those that initiate the action and those that are most strongly affected by the action. <i>Example</i>: in an eating event, the eater and the food are the more central participants, in that the eater initiates the action and the food is completely affected by the action. In contrast, the place where the eating takes place is a <a>peripheral participant</a> in the action. (Section 6.1.1)
 
@@ -1679,6 +1758,8 @@
   Name: chaining event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:chaining-construction
   Definition: >-
     an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on a third participant in the same way, and so on. That is, each participant in the chain is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action -- except the first in the chain, who is only an initiator, and the last, who is only an endpoint. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
   Examples:
@@ -1694,6 +1775,8 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
+  FunctionOf:
+    - cxn:change-in-position-verb
   AssociatedTo:
     - str:middle-voice
   Definition: >-
@@ -1726,6 +1809,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:change-of-state-verb
   Definition: >-
     an <a>event</a> in which a <a>participant</a>, the <a>patient</a>, undergoes a change such that the patient enters a resulting <a>state</a>, usually a change of physical state. <i>Example</i>: the event of dishes becoming dry is a change of state event. (Sections 6.1.2, <b>6.2.1</b>)
 
@@ -1789,6 +1874,8 @@
     - voice construction
   SubtypeOf:
     - cxn:topic-comment-construction
+  ConstituentOf:
+    - cxn:reference-tracking-construction
   Definition: >-
     a construction that performs the function of <a>predication</a>, including the <a>predicate</a> (which may be a <a>complex predicate</a>) and the <a>referring phrases</a> and other roles dependent on the predication. Example: <i>The birds were singing</i> is an instance of a clausal construction. This is the prototypical function of clauses; there are also <a>nonpredicational clauses</a> that perform different information packaging functions. The prototypical predicational clause is a <a>verbal clause</a>. (Sections 1.3, 2.2.2, 6.1.1)
     <br />
@@ -1853,6 +1940,8 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
+  FunctionOf:
+    - cxn:cognition-verb
   Definition: >-
     an <a>experiential event</a> involving an <a>experiencer</a>'s cognition directed toward a <a>stimulus</a>. <i>Example</i>: <i>Tim thought about the war</i> is an example of a cognition event. (Section 7.4)
   Examples:
@@ -1883,6 +1972,8 @@
   Name: collective event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:collective-construction
   AssociatedTo:
     - cxn:reciprocal-construction
     - cxn:reflexive-construction
@@ -1911,6 +2002,8 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
+  FunctionOf:
+    - cxn:combining-verb
   Definition: >-
     an <a>event</a> describing the combining of two <a sem:object-concept>objects</a>. <i>Example</i>: blending is a combining event. (Section 7.3.2)
 
@@ -1950,6 +2043,9 @@
     - commentative (event)
   SubtypeOf:
     - sem:evaluative-event
+  FunctionOf:
+    - cxn:commentative-construction
+    - cxn:commentative-predicate
   Definition: >-
     an <a>evaluative event</a> in which an evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>positive epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
   Examples:
@@ -1960,7 +2056,7 @@
   Name: commentative predicate
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:commentative-construction
   Definition: >-
     the <a>predicate</a> expressing a <a>commentative event</a>. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
@@ -2006,6 +2102,8 @@
     - comparative conditional (relation)
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:comparative-conditional-construction
   Definition: >-
     a relation between two events, each on a <a>gradable predicative scale</a>, such that an event at one degree on the first predicative scale causes an event at the corresponding degree on the second predicative scale. <i>Example</i>: <i>The longer that Bill had to wait, the angrier he got</i> is an instance of the comparative conditional relation and construction: a degree of length of time that Bill had to wait can (in a <a>generic conditional</a>) or does (in an ordinary, specific <a>conditional</a>) cause the occurrence of the corresponding degree of Bill's anger. (Section 17.4.1)
   Examples:
@@ -2026,6 +2124,8 @@
   Name: comparative degree
   SubtypeOf:
     - sem:degree
+  FunctionOf:
+    - cxn:comparative-form
   Definition: ''
   FromGlossary: false
 
@@ -2054,6 +2154,8 @@
   Name: comparative referent
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:comparative-pronoun
   AssociatedTo:
     - cxn:comparative-pronoun
   Definition: >-
@@ -2179,6 +2281,17 @@
     - symmetric
   SubtypeOf:
     - inf:discourse-coherence
+  FunctionOf:
+    - cxn:adversative-coordination
+    - cxn:conjunctive-coordination
+    - cxn:coordinate-clause-construction
+    - cxn:coordinate-construction
+    - cxn:disjunctive-coordination
+    - cxn:exclusive-disjunctive-coordination
+    - cxn:exhaustive-list-coordination
+    - cxn:inclusive-disjunctive-coordination
+    - cxn:non-exhaustive-list-coordination
+    - cxn:nonclausal-coordination
   AssociatedTo:
     - cxn:coordinate-clause-construction
   Definition: >-
@@ -2283,6 +2396,8 @@
   Name: concessive conditional relation
   Alias:
     - conditional concessive relation
+  FunctionOf:
+    - cxn:concessive-conditional-construction
   Definition: >-
     a <a>causal relation</a> between a set of <a>events</a> that are associated with a <a>scalar model</a> on the one hand, and another event, such that the other event would occur under the entire range of conditions described in the scalar model associated with the first set of events. <i>Example</i>: <i>However much advice you give him, he does exactly what he wants to do</i> is an instance of the concessive conditional relation and construction -- the <a cxn:protasis-clause>protasis</a> <i>However much advice you give him</i> introduces a scalar model of your giving him a full range of amounts of advice; and the <a cxn:apodosis-clause>apodosis</a> <i>he does exactly what he wants to do</i> describes the event that occurs or would occur under any of those conditions. The speaker has a neutral epistemic stance toward the range of events associated with the scalar model. The apodosis has an unexpected causal relation with respect to the set of events that make up the protasis. A concessive conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.3)
   Examples:
@@ -2307,6 +2422,8 @@
     - concessive (relation)
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:concessive-construction
   Definition: >-
     a relation between two <a>events</a> such that there is an expected <a>causal relation</a> between the two events, but the opposite of the second event, expressed in the <a cxn:apodosis-clause>apodosis</a>, unexpectedly occurs. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
   Examples:
@@ -2377,6 +2494,8 @@
   Name: conditional referent
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:conditional-pronoun
   Definition: >-
     an unspecified <a>referent</a> in the <a cxn:protasis-clause>protasis</a> in a <a>conditional construction</a>. <i>Example</i>: in <i>If you hear <b>anything</b>, tell me</i>, <i>anything</i> is a conditional pronoun expressing a referent that is found only in the hypothetical world introduced by the protasis of the conditional construction. (Section 3.5)
   Examples:
@@ -2389,6 +2508,8 @@
     - conditional (relation)
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:conditional-construction
   Definition: >-
     a semantic relation between two <a>events</a> that involves a logical material implication relation between their corresponding <a>propositions</a>, some type of <a>causal relation</a> between the corresponding <a>events</a>, and non-positive <a>epistemic stance</a>. <i>Example</i>: <i>If you press this button, the door will open</i> is an instance of the conditional relation and construction. The causally antecedent proposition is the <a sem:protasis>protasis</a>, and the causally consequent proposition is the <a sem:apodosis>apodosis</a>. A conditional may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a> or <a>speech act causal relation</a>. (Section 17.3.1)
   Examples:
@@ -2457,6 +2578,8 @@
   Name: consecutive
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:conjunctive-coordination
   Definition: >-
     a sequential relation between two <a>events</a>, as expressed by a <a>complex figure</a> construal of the relation between the two events. <i>Example</i>: in <i>He washed the car and drove to the party</i>, the washing of the car and the driving to the party are in a consecutive relation. Used to describe the temporal relation between two events in a <a>complex figure information packaging</a>. (Section 15.1.3)
   Examples:
@@ -2482,6 +2605,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:contact-by-impact-verb
   Definition: >-
     an <a>event</a> describing contact by impact. <i>Example</i>: hitting is a contact by impact event. (Section 7.3.2)
 
@@ -2531,6 +2656,37 @@
     - deictic
   AttributeOf:
     - sem:entity
+  FunctionOf:
+    - cxn:anaphoric-article
+    - cxn:anaphoric-pronoun
+    - cxn:article
+    - cxn:comparative-pronoun
+    - cxn:conditional-pronoun
+    - cxn:definite-article
+    - cxn:definite-pronoun
+    - cxn:determiner
+    - cxn:direct-negation-pronoun
+    - cxn:free-choice-pronoun
+    - cxn:generic-article
+    - cxn:generic-pronoun
+    - cxn:indefinite-article
+    - cxn:indefinite-pronoun
+    - cxn:indirect-negation-pronoun
+    - cxn:interrogative-pronoun
+    - cxn:irrealis-pronoun
+    - cxn:nonanaphoric-definite-article
+    - cxn:pragmatically-nonspecific-article
+    - cxn:pragmatically-nonspecific-pronoun
+    - cxn:pragmatically-specific-article
+    - cxn:pragmatically-specific-pronoun
+    - cxn:pronoun
+    - cxn:proper-noun
+    - cxn:question-pronoun
+    - cxn:semantically-nonspecific-article
+    - cxn:semantically-nonspecific-pronoun
+    - cxn:specific-known-pronoun
+    - cxn:specific-unknown-pronoun
+    - cxn:universal-pronoun
   AssociatedTo:
     - cxn:determiner
     - cxn:pronoun
@@ -2589,6 +2745,8 @@
     - controlled activity
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:controlled-predicate
   Definition: >-
     the <a>event</a> class of agentive processes. <i>Example</i>: running is a controlled activity event. (Section 6.3.3)
 
@@ -2652,7 +2810,6 @@
     - cxn:construction
   ConstituentOf:
     - cxn:coordinate-construction
-    - cxn:coordinate-clause-construction
   Definition: >-
     a component of a <a>coordinate construction</a>. <i>Example</i>: in <i>Jerry played the guitar and Billy was on drums, Jerry played the guitar</i> is one of the coordinands and <i>Billy was on drums</i> is the other coordinand. Since coordination constructions link entities other than <a>events</a> and the clause constructions that express them, coordinands may also be other constructions than clauses -- in particular, coordinands are often <a>referring phrases</a>. (Section 15.2.1)
   Examples:
@@ -2782,6 +2939,8 @@
     - coreferential
   ConstituentOf:
     - inf:discourse-coherence
+  FunctionOf:
+    - cxn:reference-tracking-construction
   AssociatedTo:
     - cxn:reference-tracking-construction
   Definition: >-
@@ -2837,6 +2996,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:damage-verb
   Definition: >-
     an <a>event</a> describing material damage to an <a sem:object-concept>object</a>. <i>Example</i>: scratching something is a damage event. (Section 7.3.2)
 
@@ -2866,6 +3027,10 @@
   Name: declarative
   SubtypeOf:
     - inf:speech-acts
+  FunctionOf:
+    - cxn:declarative-construction
+    - cxn:declarative-negation-construction
+    - cxn:existential-negation-construction
   AssociatedTo:
     - cxn:declarative-construction
   Definition: >-
@@ -2911,6 +3076,8 @@
   Name: degree
   AttributeOf:
     - sem:scale
+  FunctionOf:
+    - cxn:admodifier
   Definition: >-
     for scalar concepts, a value on the scale that may be expressed by a distinct word. <i>Example</i>: in <i>very long</i>, the <a>admodifier</a> <i>very</i> indicates that the value on the scale of length is beyond the normal value implicit in the word <i>long</i>. (Section 2.2.2)
   Examples:
@@ -2983,6 +3150,9 @@
     - situational
   SubtypeOf:
     - sem:contextual
+  FunctionOf:
+    - cxn:demonstrative-attributive
+    - cxn:demonstrative-pronoun
   AssociatedTo:
     - cxn:demonstrative-pronoun
   Definition: >-
@@ -3131,6 +3301,9 @@
     - desiderative (event)
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:desiderative-construction
+    - cxn:desiderative-predicate
   Definition: >-
     an <a>event</a> that expresses a desire toward the realization of a future event that is expressed by the complement. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
   Examples:
@@ -3141,7 +3314,7 @@
   Name: desiderative predicate
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:desiderative-construction
   Definition: >-
     the <a>predicate</a> that expresses a <a>desiderative event</a>. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
@@ -3239,6 +3412,8 @@
   Name: direct negation referent
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:direct-negation-pronoun
   Definition: >-
     an unspecified <a>referent</a> which is in the scope of <a>negation</a> in the same <a>clause</a>. <i>Example</i>: in <i>I noticed nothing</i>, <i>nothing</i> is a direct negation pronoun expressing a referent found only in the negative alternative world to the real world. (Section 3.5)
   Examples:
@@ -3282,6 +3457,8 @@
   Name: discourse deixis
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:definite-pronoun
   Definition: >-
     <a>reference</a> to <a>events</a> or <a>propositions</a> already described in the discourse, in contrast to reference to objects. (Section 3.3.3)
 
@@ -3290,8 +3467,6 @@
   Name: discourse markers
   SubtypeOf:
     - cxn:construction
-  ConstituentOf:
-    - cxn:complex-sentence
   Definition: >-
     a <a>construction</a> that serves a variety of discourse <a>functions</a>, including linking sections of discourse together. <i>Example</i>: in the discourse passage <i>... all you gotta do is put the outdoor condensing unit, ... and refrigerant piping to that coil. So it ... saves-- ... it saves additional work in the future</i>, the word <i>so</i> is a discourse marker that links the preceding section of discourse to the following section. Discourse markers are not discussed in this book except as sources of <a>conjunctions</a>. (Section 15.1.1)
   Examples:
@@ -3315,6 +3490,25 @@
     - discourse relation
   SubtypeOf:
     - inf:information-packaging
+  FunctionOf:
+    - cxn:additive-construction
+    - cxn:apprehensional-construction
+    - cxn:causal-construction
+    - cxn:comparative-conditional-construction
+    - cxn:comparative-construction
+    - cxn:complex-sentence
+    - cxn:concessive-conditional-construction
+    - cxn:concessive-construction
+    - cxn:conditional-construction
+    - cxn:equative-construction
+    - cxn:generic-conditional-construction
+    - cxn:let-alone-construction
+    - cxn:means-construction
+    - cxn:negative-circumstantial-construction
+    - cxn:purpose-construction
+    - cxn:substitutive-construction
+    - cxn:subtractive-construction
+    - cxn:temporal-construction
   Definition: ''
   FromGlossary: false
 
@@ -3476,6 +3670,8 @@
   Name: downtoning
   SubtypeOf:
     - sem:degree
+  FunctionOf:
+    - cxn:downtoner
   Definition: ''
   FromGlossary: false
 
@@ -3513,6 +3709,10 @@
   Name: dynamic
   SubtypeOf:
     - sem:stativity
+  FunctionOf:
+    - cxn:complex-predicate-part
+    - cxn:dynamic-predicate-part
+    - cxn:eventive-complex-predicate
   AttributeOf:
     - sem:action-concept
   Definition: >-
@@ -3544,8 +3744,6 @@
   Name: element
   SubtypeOf:
     - cxn:construction
-  ConstituentOf:
-    - cxn:construction
   Definition: >-
     a word or <a>construction</a> that is part of -- that is, functions in a <a>role</a> in -- a <a>construction</a>. <i>Example</i>: in <i>an ancient watch</i>, the elements are <i>an</i>, <i>ancient</i>, and <i>watch</i>. (Section 2.2.1)
   Examples:
@@ -3574,6 +3772,8 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
+  FunctionOf:
+    - cxn:emotion-verb
   Definition: >-
     an <a>experiential event</a> involving an <a>experiencer</a>'s emotions directed toward a <a>stimulus</a>. <i>Example</i>: <i>He fears dogs</i> is an example of an emotion event. (Section 7.4)
   Examples:
@@ -3618,6 +3818,62 @@
     - entities
   SubtypeOf:
     - sem:meaning
+  FunctionOf:
+    - cxn:adjective-modification-construction
+    - cxn:alienable-possession-modification-construction
+    - cxn:anaphoric-pronoun
+    - cxn:anaphoric-head-construction
+    - cxn:anaphoric-head-relative-clause-construction
+    - cxn:anchoring-construction
+    - cxn:attributive-phrase
+    - cxn:binominal-lexeme
+    - cxn:comparative-pronoun
+    - cxn:conditional-pronoun
+    - cxn:coordinand
+    - cxn:coordinate-construction
+    - cxn:definite-pronoun
+    - cxn:demonstrative-pronoun
+    - cxn:direct-negation-pronoun
+    - cxn:dynamic-predicate-part
+    - cxn:free-choice-pronoun
+    - cxn:free-modification-construction
+    - cxn:free-relative-clause-construction
+    - cxn:generic-pronoun
+    - cxn:hanging-topic-phrase
+    - cxn:inalienable-possession-modification-construction
+    - cxn:indefinite-pronoun
+    - cxn:indirect-negation-pronoun
+    - cxn:interrogative-pronoun
+    - cxn:irrealis-pronoun
+    - cxn:locative-modification-construction
+    - cxn:mensural-modification-construction
+    - cxn:modification-construction
+    - cxn:modifier
+    - cxn:nominal-modification-construction
+    - cxn:noun-complement-referring-phrase
+    - cxn:noun-complement-head
+    - cxn:numeral-modification-construction
+    - cxn:phrase
+    - cxn:possessive-modification-construction
+    - cxn:pragmatically-nonspecific-pronoun
+    - cxn:pragmatically-specific-pronoun
+    - cxn:presentational-construction
+    - cxn:pronoun
+    - cxn:quantifier-modification-construction
+    - cxn:question-pronoun
+    - cxn:referent-expression
+    - cxn:referring-phrase
+    - cxn:relative-clause-head
+    - cxn:relativized-referring-phrase
+    - cxn:semantically-nonspecific-pronoun
+    - cxn:set-member-modification-construction
+    - cxn:specific-known-pronoun
+    - cxn:specific-unknown-pronoun
+    - cxn:topic-phrase
+    - cxn:typifying-construction
+    - cxn:universal-pronoun
+    - cxn:action-modification-construction
+    - cxn:apposition
   Definition: >-
     a superordinate category including <a>object concepts</a>, <a>property concepts</a>, and <a>event concepts</a>. (Section 2.1)
 
@@ -3636,6 +3892,8 @@
   Name: entity-central
   SubtypeOf:
     - inf:thetic
+  FunctionOf:
+    - cxn:entity-central-construction
   Definition: >-
     a type of <a inf:thetic>thetic</a> in which the most important new information being presented is the identity of the <a sem:object-concept>object</a> (entity). <i>Example</i>: <i>There's a snake in the kitchen sink</i> is an instance of an entity-central thetic construction, where the primary new information being presented is the snake. (Sections 10.1.2, <b>11.3.1</b>)
   Examples:
@@ -3731,6 +3989,8 @@
   Name: equational
   SubtypeOf:
     - inf:information-gap
+  FunctionOf:
+    - cxn:equational-construction
   Definition: >-
     a type of <a>identificational information packaging</a> in which two <a>referents</a> that the hearer assumed were different individuals are asserted to be, in fact, one and the same individual. <i>Example</i>: in <i>The Morning Star is the Evening Star</i>, it is asserted that two celestial objects that were once thought to be distinct objects (and given distinct names) are one and the same, namely the planet Venus. (Section 10.1.2)
   Examples:
@@ -3795,6 +4055,9 @@
     - evaluative (event)
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:evaluative-construction
+    - cxn:evaluative-predicate
   Definition: >-
     an <a>event</a> in which an evaluative judgment is made about the truth of the <a>proposition</a> expressed in its <a>complement</a>. Evaluative events may assume different <a>epistemic stances</a> toward the proposition expressed in their complement. <a>Commentative events</a> assume a positive epistemic stance; <a>hoping</a> and <a>fearing events</a> assume a <a>neutral epistemic stance</a>; and <a>wishing events</a> assume a <a>negative epistemic stance</a>. (Section 18.2.2)
 
@@ -3803,7 +4066,7 @@
   Name: evaluative predicate
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:evaluative-construction
   Definition: >-
     a <a>predicate</a> expressing an <a>evaluative event</a>. (Section 18.2.2)
@@ -3821,6 +4084,50 @@
     - sem:entity
   ConstituentOf:
     - sem:propositional-content
+  FunctionOf:
+    - cxn:adverbial-dependent-clause
+    - cxn:adverbial-matrix-clause
+    - cxn:antipassive-construction
+    - cxn:applicative-construction
+    - cxn:argument-complex-predicate
+    - cxn:auxiliary-construction
+    - cxn:basic-voice
+    - cxn:causative-construction
+    - cxn:clause
+    - cxn:complement
+    - cxn:complement-clause-construction
+    - cxn:complement-matrix-clause
+    - cxn:complement-taking-predicate
+    - cxn:complex-predicate
+    - cxn:complex-predicate-part
+    - cxn:dependent-clause
+    - cxn:depictive-complex-predicate
+    - cxn:ditransitive-construction
+    - cxn:eventive-complex-predicate
+    - cxn:interrogative-complement
+    - cxn:intransitive-construction
+    - cxn:main-clause
+    - cxn:manner-complex-predicate
+    - cxn:matrix-clause
+    - cxn:negation-construction
+    - cxn:nonbasic-voice
+    - cxn:noun-complement
+    - cxn:noun-complement-clause-construction
+    - cxn:noun-complement-matrix-clause
+    - cxn:passive-inverse-voice
+    - cxn:predicate
+    - cxn:pronominal-argument-complex-predicate
+    - cxn:relative-clause
+    - cxn:relative-clause-construction
+    - cxn:relative-matrix-clause
+    - cxn:resultative-complex-predicate
+    - cxn:simple-predicate
+    - cxn:stative-complex-predicate
+    - cxn:stative-predicate-part
+    - cxn:subordinate-clause
+    - cxn:support-verb-construction
+    - cxn:transitive-construction
+    - cxn:eventive-predicate-part
   Definition: >-
     a superordinate category including both <a>action concepts</a> and <a>state concepts</a>. The term <q>event</q> has other <a>meanings</a>, including what we call a <a>telic event</a>. Other terms listed above are also used for <q>event</q> as it is defined here. (Sections <b>2.1</b>, <b>6.1.1</b>)
 
@@ -3839,6 +4146,8 @@
   Name: event-central
   SubtypeOf:
     - inf:thetic
+  FunctionOf:
+    - cxn:event-central-construction
   Definition: >-
     a type of <a inf:thetic>thetic</a> in which the more important new information being presented is the <a>event</a> reported. <i>Example</i>: in <i>The PHONE's ringing</i>, the most important new information is the ringing of the phone, not the existence of the phone. (Sections 10.1.2, <b>11.3.1</b>)
   Examples:
@@ -3849,6 +4158,8 @@
   Name: event-oriented
   SubtypeOf:
     - sem:orientation
+  FunctionOf:
+    - cxn:manner-complex-predicate
   AssociatedTo:
     - cxn:manner-complex-predicate
   Definition: >-
@@ -3909,6 +4220,8 @@
   Name: exclamative
   SubtypeOf:
     - inf:speech-acts
+  FunctionOf:
+    - cxn:exclamative-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which expresses a strong emotional reaction to the <a>propositional content</a> that it conveys. More precisely, the exclamative speech act expresses the speaker's surprise toward the <a>degree</a> of a scalar <a>property</a> contained in the propositional content of the speech act; the rest of the propositional content consists of a <a>presupposed open proposition</a>. <i>Example</i>: <i>What a beautiful house!</i> is an instance of an English exclamative construction. (Sections 12.1, 12.5)
   Examples:
@@ -3958,6 +4271,8 @@
     - existential event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:existential-negation-construction
   AssociatedTo:
     - cxn:presentational-location-construction
     - cxn:existential-negation-construction
@@ -3996,6 +4311,8 @@
   Name: experience event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:experience-verb
   AssociatedTo:
     - cxn:experiential-verb
   Definition: >-
@@ -4018,6 +4335,8 @@
   Name: experiencer
   SubtypeOf:
     - sem:semantic-role
+  FunctionOf:
+    - cxn:experiencer-phrase
   RoleOf:
     - sem:experiential-event
   Definition: >-
@@ -4052,6 +4371,9 @@
   Name: experiential event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:experiential-construction
+    - cxn:experiential-verb
   Definition: >-
     an <a>event</a> that involves a human internal mental or bodily experience. (Sections 6.1.2, <b>7.4</b>)
 
@@ -4060,6 +4382,8 @@
   Name: experiential verb
   SubtypeOf:
     - cxn:verb
+  HeadOf:
+    - cxn:experiential-construction
   AssociatedTo:
     - cxn:experiential-construction
   Definition: >-
@@ -4158,6 +4482,8 @@
   Name: extroverted event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:extroverted-verb
   Definition: >-
     an event not normally performed on oneself or on each other. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
   Examples:
@@ -4195,6 +4521,9 @@
   Name: fearing event
   SubtypeOf:
     - sem:evaluative-event
+  FunctionOf:
+    - cxn:fearing-construction
+    - cxn:fearing-predicate
   Definition: >-
     an <a>evaluative event</a> in which a negative evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
   Examples:
@@ -4205,7 +4534,7 @@
   Name: fearing predicate
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:fearing-construction
   Definition: >-
     the <a>predicate</a> expressing a <a>fearing event</a>. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
@@ -4217,6 +4546,8 @@
   Name: figure
   SubtypeOf:
     - sem:semantic-role
+  FunctionOf:
+    - cxn:figure-phrase
   RoleOf:
     - sem:figure-ground-spatial-relation
     - sem:spatial-event
@@ -4232,6 +4563,8 @@
     - asymmetric
   SubtypeOf:
     - inf:discourse-coherence
+  FunctionOf:
+    - cxn:adverbial-clause-construction
   AssociatedTo:
     - cxn:relative-clause-construction
   Definition: >-
@@ -4250,6 +4583,11 @@
     - sem:event
     - sem:object-relation
     - sem:spatial-event
+  FunctionOf:
+    - cxn:locational-construction
+    - cxn:locative-modification-construction
+    - cxn:predicational-location-construction
+    - cxn:presentational-location-construction
   Definition: >-
     a spatial relation that holds between two <a sem:object-concept>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
   Examples:
@@ -4395,6 +4733,9 @@
   Name: free choice referent
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:free-choice-pronoun
+    - cxn:free-modification-construction
   Definition: >-
     an unspecified <a>referent</a> in certain contexts, whose identity can be freely chosen without affecting the truth value of the utterance. <i>Example</i>: in <i>After the fall of the Wall, East Germans were free to travel anywhere</i>, <i>anywhere</i> is a free choice pronoun expressing a referent -- a place -- toward which the agent in the clause, the East Germans, is free to choose to travel. (Section 3.5)
   Examples:
@@ -4486,6 +4827,8 @@
     - class
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:gender-term
   Definition: >-
     a <a>semantic</a> category that is expressed as an <a>indexation feature</a>, and covers both distinctions based primarily on sex and animacy (<q>gender</q>) and distinctions based on animacy, sex, and various semantic properties of inanimate -- or at least nonhuman -- <a sem:object-concept>objects</a>. (Section 4.4.2)
 
@@ -4506,6 +4849,9 @@
   Name: generic referent
   SubtypeOf:
     - inf:information-status
+  FunctionOf:
+    - cxn:generic-pronoun
+    - cxn:indefinite-pronoun
   Definition: >-
     <a>reference</a> to the <a>type</a> itself, and not to a particular <a>referent</a>/<a>token</a> of the type. <i>Example</i>: in the generic use of <i>You can't come to the party without an invitation, you</i> is referring to the general category of people. (Sections 3.1.1, <b>3.6</b>)
   Examples:
@@ -4539,6 +4885,8 @@
     - generic conditional (relation)
   SubtypeOf:
     - sem:conditional-relation
+  FunctionOf:
+    - cxn:generic-conditional-construction
   Definition: >-
     a subtype of the <a>conditional relation</a> in which an event causes another event generically or habitually. <i>Example</i>: <i>If/When/Whenever a dog starts barking, I run away</i> is an instance of a generic conditional relation and construction -- it doesn't describe a specific instance of a dog barking causing me to run away; instead, it describes a general or habitual pattern of this causal sequence of events. (Section 17.3.1)
   Examples:
@@ -4580,6 +4928,9 @@
   Name: ground
   SubtypeOf:
     - sem:semantic-role
+  FunctionOf:
+    - cxn:ground-phrase
+    - cxn:locative-phrase
   RoleOf:
     - sem:figure-ground-spatial-relation
     - sem:spatial-event
@@ -4661,6 +5012,9 @@
     - hoping (event)
   SubtypeOf:
     - sem:evaluative-event
+  FunctionOf:
+    - cxn:hoping-construction
+    - cxn:hoping-predicate
   Definition: >-
     an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
   Examples:
@@ -4671,7 +5025,7 @@
   Name: hoping predicate
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:hoping-construction
   Definition: >-
     the predicate expressing a <a>hoping event</a>. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
@@ -4754,6 +5108,10 @@
   Name: identificational
   SubtypeOf:
     - inf:declarative
+  FunctionOf:
+    - cxn:identificational-construction
+    - cxn:nonpredicational-construction
+    - cxn:polarity-focus-construction
   Definition: >-
     <a>information packaging</a> in which a particular piece of information (the <a>focus</a>) is equated with the <dq>open slot</dq> in a <a>presupposed open proposition</a>. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
   Examples:
@@ -4784,6 +5142,9 @@
   Name: identity unknown
   SubtypeOf:
     - inf:identifiability
+  FunctionOf:
+    - cxn:anaphoric-head-construction
+    - cxn:indefinite-article
   AttributeOf:
     - inf:pragmatically-specific-referent
     - inf:semantically-specific-referent
@@ -4830,6 +5191,9 @@
     - hortative
   SubtypeOf:
     - inf:speech-acts
+  FunctionOf:
+    - cxn:imperative-hortative-construction
+    - cxn:prohibitive-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which requests that the action expressed in the propositional content of the imperative--hortative be carried out, prototypically by the addressee but possibly by other persons. <i>Example</i>: <i>Dance!</i> is an example of the English imperative--hortative construction for the <a cxn:second-person-pronoun>second person</a>, and <i>Let's dance!</i> is an example of the same for the <a cxn:first-person-pronoun>first person</a> <a sem:number>plural</a>. The term <q>hortative</q> is sometimes used for a first person imperative--hortative, and <q>jussive</q> for a third person imperative--hortative. A negative imperative--hortative is a <a inf:prohibitive>prohibitive</a>. (Sections 12.1, 12.4)
   Examples:
@@ -4844,6 +5208,8 @@
     - noncontaining inferrable
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:definite-pronoun
   AssociatedTo:
     - cxn:nonanaphoric-definite-article
   Definition: >-
@@ -5105,6 +5471,8 @@
   Name: indirect negation referent
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:indirect-negation-pronoun
   Definition: >-
     an unspecified <a>referent</a> which is in a <a>clause</a> embedded in a <b>negated</b> clause. <i>Example</i>: in <i>I don't think that anybody has seen it</i>, <i>anybody</i> is an indirect negation pronoun expressing a referent that is found only in the negated <dq>world</dq> of the speaker's beliefs. (Section 3.5)
   Examples:
@@ -5153,6 +5521,10 @@
     - instance
   SubtypeOf:
     - sem:identity
+  FunctionOf:
+    - cxn:human-proper-noun
+    - cxn:place-proper-noun
+    - cxn:proper-noun
   AssociatedTo:
     - cxn:proper-noun
   Definition: >-
@@ -5165,6 +5537,8 @@
     - (containing) inferrable
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:definite-pronoun
   AssociatedTo:
     - cxn:nonanaphoric-definite-article
   Definition: >-
@@ -5192,6 +5566,8 @@
     - information (question) response
   SubtypeOf:
     - inf:response
+  FunctionOf:
+    - cxn:information-question-response-construction
   Definition: >-
     the answer to an <a inf:information-question>information question</a>. <i>Example</i>: the answer to the English information question <i>Who is coming?</i> could be <i>Sandra is coming, Sandra is</i>, or just <i>Sandra</i>. (Section 12.3.3)
   Examples:
@@ -5217,6 +5593,13 @@
     - IP
     - information structure
     - discourse function
+  FunctionOf:
+    - cxn:construction
+    - cxn:dependent
+    - cxn:element
+    - cxn:head
+    - cxn:nonprototypical-construction
+    - cxn:prototypical-construction
   Definition: >-
     the way that the <a>meaning</a> or semantic content is <dq>packaged</dq> for communication in discourse. <i>Example</i>: the <a>property</a> concept <i>huge</i> can be presented or packaged as a <a>predication</a> asserted of an <a sem:object-concept>object</a> (<i>That tree is huge!</i>), or it can be used to <a inf:modification>modify</a> or add information about an object (<i>that huge tree over there</i>). (Sections 1.1, <b>1.3</b>)
 
@@ -5235,6 +5618,8 @@
   Name: information question
   SubtypeOf:
     - inf:interrogative
+  FunctionOf:
+    - cxn:information-question-construction
   Definition: >-
     an <a inf:interrogative>interrogative</a> in which the unknown piece of the <a>propositional content</a> requested of the addressee is a semantic component of the <a>proposition</a> other than its <a>polarity</a>. <i>Example</i>: <i>Who is coming?</i> is an instance of the English information question construction, expecting an answer identifying the person(s) who is/are coming. (Section 12.3.1)
   Examples:
@@ -5245,6 +5630,8 @@
   Name: information status
   AttributeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:article
   Definition: >-
     the information status of a <a>referent</a> in discourse is a characterization of how the interlocutors identify an <a>individual</a> as the intended referent of a <a>referring phrase</a>. Information status represents a subdivision of the <a>information packaging</a> <a>function</a> of <a>reference</a>: a more fine-grained means to pick out the referent. <i>Examples</i>: some examples of information status categories are <a>active</a>, <a>semi-active</a>, <a>inactive</a>, and other categories listed in the third column of Table 3.4. (Section 3.2)
 
@@ -5254,6 +5641,8 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
+  FunctionOf:
+    - cxn:ingestion-verb
   Definition: >-
     an <a>event</a> which describes the ingestion of food or drink by a person or animal, causing the food to disappear but also causing a change in the physiological state of the person/animal. <i>Example</i>: <i>Elena ate a lot of veggie chips</i> is an instance of an ingestion event. (Section 7.4)
   Examples:
@@ -5320,6 +5709,8 @@
   Name: intensifying
   SubtypeOf:
     - sem:degree
+  FunctionOf:
+    - cxn:intensifier
   Definition: ''
   FromGlossary: false
 
@@ -5328,6 +5719,8 @@
   Name: interaction event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:interaction-verb
   Definition: >-
     an <a>event</a> in which one <a>participant</a> acts on a second participant, but the change that occurs to the second participant is at least partly independent of the <a>force</a> <u>transmitted</u> by the first participant. <i>Examples</i>: interaction events include <a>pursuit events</a>, events involving two agents such as ordering someone (to do something) or supervising someone, and events involving an agent and an event, state, social institution, and so on, such as managing a budget, avoiding situations, or conforming to institutional standards. (Section 7.3)
 
@@ -5417,6 +5810,8 @@
   SubtypeOf:
     - inf:speech-acts
     - inf:information-gap
+  FunctionOf:
+    - cxn:interrogative-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which requests information, usually of the addressee, regarding uncertain or unknown information that is part of the <a>propositional content</a> of the question. Interrogatives are divided into <a inf:polarity-question>polarity questions</a>, <a inf:information-question>information questions</a>, and <a inf:alternative-question>alternative questions</a>. (Sections 12.1, 12.3)
 
@@ -5449,6 +5844,9 @@
     - interrogative (information) unit
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:interrogative-complement
+    - cxn:interrogative-pronoun
   Definition: ''
   FromGlossary: false
 
@@ -5490,6 +5888,8 @@
   Name: introverted event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:introverted-verb
   Definition: >-
     an <a>event</a> typically performed on oneself or by oneself, but that could be performed on someone else. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events. (Section 7.2)
 
@@ -5522,6 +5922,9 @@
     - irrealis (referent)
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:free-modification-construction
+    - cxn:irrealis-pronoun
   Definition: >-
     a <a>referent</a> which is in the <dq>world</dq> or <a>mental space</a> representing a person's desire, wish, command, etc. <i>Example</i>: in <i>Visit me sometime</i>, <i>sometime</i> is an irrealis <a>pronoun</a> expressing an irrealis referent -- a time only found in the hoped-for mental space of the speaker's offer. (Section 3.5)
   Examples:
@@ -5548,6 +5951,8 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:killing-injuring-verb
   Definition: >-
     an <a>event</a> describing the injuring of an individual, including to the point that the individual dies. <i>Example</i>: stabbing is a killing/injuring event. (Section 7.3.2)
 
@@ -5571,6 +5976,9 @@
     - kinship (relation)
   SubtypeOf:
     - sem:possession
+  FunctionOf:
+    - cxn:inalienable-possession-attributive-phrase
+    - cxn:kinship-noun
   AssociatedTo:
     - cxn:inalienable-possession-modification-construction
   Definition: >-
@@ -5585,6 +5993,9 @@
     - knowledge (event)
   SubtypeOf:
     - sem:propositional-attitude-event
+  FunctionOf:
+    - cxn:knowledge-construction
+    - cxn:knowledge-predicate
   AssociatedTo:
     - sem:epistemic-stance
   Definition: >-
@@ -5597,7 +6008,7 @@
   Name: knowledge predicate
   SubtypeOf:
     - cxn:propositional-attitude-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:knowledge-construction
   Definition: >-
     the <a>predicate</a> expressing a <a>knowledge event</a>. <i>Example</i>: in <i>Sally knows that Donald won the election</i>, Sally's belief with respect to the proposition that Donald won the election is reported by the speaker; and, in addition, a <a>positive epistemic stance</a> is taken by the speaker toward that proposition (i.e., the speaker believes that Donald indeed won the election). (Section 18.2.2)
@@ -5627,6 +6038,8 @@
     - LAP
   SubtypeOf:
     - sem:p-role
+  FunctionOf:
+    - cxn:antipassive-oblique-phrase
   Definition: >-
     a <a>function</a> related to the function of the <a>antipassive construction</a>, in which the <a>P</a> <a>participant</a> is less <a>affected</a> than it is in the equivalent event expressed by <a>transitive construction</a>. <i>Example</i>: in <i>The coyote chewed on the deer bone</i>, the deer bone is a less affected P participant than in the transitive <i>The coyote chewed the deer bone</i>. (Section 8.4)
   Examples:
@@ -5640,6 +6053,8 @@
     - LIP
   SubtypeOf:
     - sem:p-role
+  FunctionOf:
+    - cxn:antipassive-oblique-phrase
   Definition: >-
     the basic <a>function</a> of the <a>antipassive construction</a>, in which the <a>P</a> <a>participant</a> is less individuated (indefinite, nonspecific, generic, or even simply plural), since less individuation is an indicator of lower <a>salience</a>. <i>Example</i>: in West Greenlandic <i>inun-nik tuqut-si-vuq</i> <q>He killed people</q>, the P participant <q>people</q> is a plural and generic referent. (Section 8.4)
   Examples:
@@ -5871,6 +6286,17 @@
     - (major) propositional act
   SubtypeOf:
     - inf:declarative
+  FunctionOf:
+    - cxn:adverbial-matrix-clause
+    - cxn:complement-clause-construction
+    - cxn:complement-matrix-clause
+    - cxn:coordinand
+    - cxn:dependent-clause
+    - cxn:matrix-clause
+    - cxn:noun-complement-clause-construction
+    - cxn:noun-complement-matrix-clause
+    - cxn:relative-clause-construction
+    - cxn:relative-matrix-clause
   Definition: >-
     the basic <a>information packaging</a> functions that structure <a>phrases</a> and <a>clauses</a>; the propositional acts are <a>reference</a>, <a>predication</a>, and <a>modification</a>. (Section 1.3)
 
@@ -5891,6 +6317,9 @@
     - manipulative (event)
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:manipulative-construction
+    - cxn:manipulative-predicate
   Definition: >-
     an <a>event</a> where an <a>agent</a> acts to bring about the event expressed by the <a>complement</a>. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative events include causative and permissive events. The complement event of manipulative events has <a>dependent time reference</a>. (Section 18.2.2)
   Examples:
@@ -5901,7 +6330,7 @@
   Name: manipulative predicate
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:manipulative-construction
   Definition: >-
     the <a>predicate</a> expressing a <a>manipulative event</a>. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative <a>complement clause constructions</a> overlap with <a>causative constructions</a>. (Section 18.2.2)
@@ -5925,6 +6354,8 @@
   Name: manner event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:manner-verb
   AssociatedTo:
     - cxn:manner-complex-predicate
   Definition: >-
@@ -5939,6 +6370,8 @@
     - manner of motion (event)
   SubtypeOf:
     - sem:motion-event
+  FunctionOf:
+    - cxn:manner-of-motion-verb
   Definition: >-
     an event that describes motion of a <a>figure</a> in terms of how the figure travels. <i>Example</i>: in <i>Sam strode into the room, stride</i> is a manner of motion verb expressing a manner of motion event. (Sections 7.3.1, 14.2)
   Examples:
@@ -5996,6 +6429,13 @@
   Alias:
     - information (content)
     - semantic (content)
+  FunctionOf:
+    - cxn:construction
+    - cxn:dependent
+    - cxn:element
+    - cxn:head
+    - cxn:nonprototypical-construction
+    - cxn:prototypical-construction
   Definition: >-
     the information content that is conventionally conveyed by a <a>construction</a>. <i>Example</i>: a word such as <i>square</i> has the meaning of a particular shape. (Section 1.1)
 
@@ -6006,6 +6446,8 @@
     - positive circumstantial
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:means-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event accompanies the other event and further characterizes the other event in some way. <i>Example</i>: <i>He got into the army by lying about his age</i> is a <a>figure--ground construal</a> of the means relation in an <a>adverbial clause construction</a>, and <i>He lied about his age and got into the army</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the accompanying event is construed as the ground. (Section 15.3.1)
   Examples:
@@ -6037,6 +6479,8 @@
   Name: measuring
   SubtypeOf:
     - sem:degree
+  FunctionOf:
+    - cxn:measurement
   Definition: ''
   FromGlossary: false
 
@@ -6167,6 +6611,63 @@
     - inf:major-propositional-act
   ConstituentOf:
     - inf:reference
+  FunctionOf:
+    - cxn:adjectival-phrase
+    - cxn:adjective
+    - cxn:age-term
+    - cxn:alienable-possession-attributive-phrase
+    - cxn:amount-term
+    - cxn:anaphoric-article
+    - cxn:antonym
+    - cxn:article
+    - cxn:attributive-phrase
+    - cxn:cardinal-numeral-term
+    - cxn:color-term
+    - cxn:complementary
+    - cxn:container-term
+    - cxn:definite-article
+    - cxn:demonstrative-attributive
+    - cxn:determiner
+    - cxn:dimension-term
+    - cxn:distributive-quantifier-term
+    - cxn:form-term
+    - cxn:gender-term
+    - cxn:generic-article
+    - cxn:group-term
+    - cxn:human-propensity-term
+    - cxn:inalienable-possession-attributive-phrase
+    - cxn:indefinite-article
+    - cxn:locative-phrase
+    - cxn:material-term
+    - cxn:measure-term
+    - cxn:mensural-attributive-phrase
+    - cxn:mensural-term
+    - cxn:modifier
+    - cxn:nonanaphoric-definite-article
+    - cxn:noun-complement
+    - cxn:numeral-attributive-phrase
+    - cxn:ordinal-numeral-term
+    - cxn:phrase
+    - cxn:physical-property-term
+    - cxn:piece-term
+    - cxn:possessive-attributive-phrase
+    - cxn:possessive-pronoun
+    - cxn:pragmatically-nonspecific-article
+    - cxn:pragmatically-specific-article
+    - cxn:proportional-quantifier-term
+    - cxn:quantifier-term
+    - cxn:quantifier-attributive-phrase
+    - cxn:reciprocal-construction
+    - cxn:relative-clause
+    - cxn:semantically-nonspecific-article
+    - cxn:set-member-attributive-phrase
+    - cxn:set-member-term
+    - cxn:shape-term
+    - cxn:species-term
+    - cxn:vague-numeral-term
+    - cxn:value-term
+    - cxn:nominal-attributive-phrase
+    - cxn:action-modification-construction
   Definition: >-
     provides additional information about the <a>referent</a> and enriches the specification of the referent for the hearer. Example: in <i>a furry cat</i>, the speaker enriches the specification of the referent in the cat category by the <a>property</a> of being furry. In the <a>file metaphor</a> for describing <a>propositional acts</a>, modification enriches the discourse file; the information it adds to the discourse file is secondary in comparison to <a>predication</a>. (Sections 1.3, <b>2.1</b>)
 
@@ -6201,8 +6702,6 @@
     - cxn:construction
   HeadOf:
     - cxn:attributive-phrase
-  ConstituentOf:
-    - cxn:anaphoric-head-construction
   Definition: >-
     the <a>head</a> of an <a>attributive phrase</a>. <i>Example</i>: in <i>nearly fifty trees</i>, <i>fifty</i> is a modifier. A prototypical modifier, a <a>property concept</a>, is an <a>adjective</a>. (Section 2.2.4)
   Examples:
@@ -6248,6 +6747,8 @@
   Name: monovalent
   SubtypeOf:
     - sem:valency
+  FunctionOf:
+    - cxn:intransitive-construction
   AttributeOf:
     - sem:state
     - sem:property-concept
@@ -6292,6 +6793,9 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
+  FunctionOf:
+    - cxn:motion-clause
+    - cxn:motion-verb
   AssociatedTo:
     - str:middle-voice
   Definition: >-
@@ -6305,6 +6809,8 @@
   Name: motion verb
   SubtypeOf:
     - cxn:verb
+  HeadOf:
+    - cxn:motion-clause
   Definition: >-
     the <a>verb</a> expressing a <a>motion event</a>. <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. (Sections 7.2, 7.3.1, 14.4)
   Examples:
@@ -6345,6 +6851,11 @@
     - negative (polarity)
   SubtypeOf:
     - sem:polarity
+  FunctionOf:
+    - cxn:declarative-negation-construction
+    - cxn:existential-negation-construction
+    - cxn:negation-construction
+    - cxn:prohibitive-construction
   AssociatedTo:
     - cxn:negation-construction
   Definition: >-
@@ -6358,6 +6869,8 @@
   Name: negative circumstantial
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:negative-circumstantial-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event does not accompany the other event and further characterizes the other event in some way. In this respect, the negative circumstantial relation is a <dq>negative</dq> version of the <a>means</a> or positive circumstantial relation. <i>Example</i>: <i>She carried the punch into the living room without spilling a drop</i> is a <a>figure--ground construal</a> of the negative circumstantial relation in an <a>adverbial clause construction</a>, and <i>She carried the punch into the living room, and she didn't spill a drop!</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the non-accompanying event is construed as the ground. (Section 15.3.1)
   Examples:
@@ -6387,6 +6900,8 @@
   Name: negative question polarity response
   SubtypeOf:
     - inf:polarity-response
+  FunctionOf:
+    - cxn:negative-question-polarity-response-construction
   Definition: ''
   FromGlossary: false
 
@@ -6623,6 +7138,9 @@
     - (semantically) nonspecific (indefinite) referent
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:indefinite-pronoun
+    - cxn:semantically-nonspecific-pronoun
   Definition: >-
     the information status of a referent whose identity cannot be known to the speaker and the hearer because the referent is only <a>type identifiable</a>. <i>Example</i>: in <i>A student came to my office</i>, the hearer does not know the identity of the student, and hence that referent is nonspecific. (Section 3.5)
   Examples:
@@ -6781,6 +7299,23 @@
   Name: object concept
   SubtypeOf:
     - sem:entity
+  FunctionOf:
+    - cxn:common-noun
+    - cxn:first-person-pronoun
+    - cxn:locative-phrase
+    - cxn:nominal-phrase
+    - cxn:nonclausal-coordination
+    - cxn:nonprototypical-predication
+    - cxn:noun
+    - cxn:partitive-construction
+    - cxn:personal-pronoun
+    - cxn:possessive-attributive-phrase
+    - cxn:predicate-nominal-construction
+    - cxn:proper-noun
+    - cxn:second-person-pronoun
+    - cxn:third-person-pronoun
+    - cxn:argument-predicate-part
+    - cxn:nominal-attributive-phrase
   FillerOf:
     - sem:participant-role
   AssociatedTo:
@@ -6806,6 +7341,8 @@
   Name: object identity
   SubtypeOf:
     - inf:token-identity
+  FunctionOf:
+    - cxn:object-identity-construction
   Definition: ''
   FromGlossary: false
 
@@ -6886,7 +7423,7 @@
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
-    - cxn:antipassive-construction  
+    - cxn:antipassive-construction
     - cxn:experiential-construction
     - cxn:possessed-argument-construction
     - cxn:motion-clause
@@ -7018,6 +7555,8 @@
     - ownership (relation)
   SubtypeOf:
     - sem:possession
+  FunctionOf:
+    - cxn:alienable-possession-attributive-phrase
   AssociatedTo:
     - cxn:alienable-possession-modification-construction
   Definition: >-
@@ -7033,6 +7572,9 @@
     - O (role)
   SubtypeOf:
     - sem:valency-role
+  FunctionOf:
+    - cxn:p-phrase
+    - cxn:passive-inverse-p-phrase
   RoleOf:
     - sem:agentive-change-of-state-event
   AssociatedTo:
@@ -7085,6 +7627,14 @@
   Name: participant
   ConstituentOf:
     - sem:propositional-content
+  FunctionOf:
+    - cxn:argument-phrase
+    - cxn:causee-phrase
+    - cxn:ground-phrase
+    - cxn:noun-complement-clause-construction
+    - cxn:passive-inverse-a-phrase
+    - cxn:nonsubject-argument-phrase
+    - cxn:possessor-argument-phrase
   FillerOf:
     - sem:participant-role
   Definition: >-
@@ -7110,6 +7660,9 @@
   Name: participant-oriented
   SubtypeOf:
     - sem:orientation
+  FunctionOf:
+    - cxn:depictive-complex-predicate
+    - cxn:resultative-complex-predicate
   AssociatedTo:
     - cxn:resultative-complex-predicate
     - cxn:depictive-complex-predicate
@@ -7229,6 +7782,8 @@
     - path (of motion) (event)
   SubtypeOf:
     - sem:motion-event
+  FunctionOf:
+    - cxn:path-verb
   Definition: >-
     an event that describes motion of a <a>figure</a> along a spatial path relative to a <a>ground</a>. <i>Example</i>: in <i>The guests entered the reception hall, enter</i> is a path of motion verb expressing a path of motion event. (Sections 7.3.1, 14.2)
   Examples:
@@ -7264,7 +7819,7 @@
   Name: perception complement-taking predicate
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:perception-construction
   AssociatedTo:
     - sem:perception-event
@@ -7281,6 +7836,11 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
+  FunctionOf:
+    - cxn:perception-clause
+    - cxn:perception-complement-taking-predicate
+    - cxn:perception-construction
+    - cxn:perception-verb
   Definition: >-
     an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a sem:object-concept>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
@@ -7291,8 +7851,7 @@
   Name: perception verb
   SubtypeOf:
     - cxn:verb
-  ConstituentOf:
-    - cxn:perception-construction
+  HeadOf:
     - cxn:perception-clause
   AssociatedTo:
     - sem:perception-event
@@ -7323,6 +7882,11 @@
   Name: peripheral participant
   SubtypeOf:
     - sem:participant
+  FunctionOf:
+    - cxn:noun-complement-referring-phrase
+    - cxn:noun-complement-head
+    - cxn:oblique-phrase
+    - cxn:antipassive-oblique-phrase
   Definition: >-
     certain <a>participants</a> are considered to be less central to the <a>event</a>, in particular those that do not initiate the event and those that are not strongly affected by the action. <i>Example</i>: in an eating event, the utensils used by the eater and the plate on which the food was located are peripheral participants in the event. Peripheral participants are quite diverse. (Section 6.1.1)
 
@@ -7331,6 +7895,9 @@
   Name: person deixis
   SubtypeOf:
     - sem:contextual
+  FunctionOf:
+    - cxn:personal-pronoun
+    - cxn:possessive-pronoun
   AssociatedTo:
     - str:indexation-feature
     - str:person-indexation
@@ -7426,6 +7993,8 @@
   Name: piece term
   SubtypeOf:
     - cxn:mensural-term
+  HeadOf:
+    - cxn:partitive-construction
   Definition: >-
     a <a>mensural term</a> that selects an amount of a <a>referent</a> which is usually a separated, arbitrary part of the object. <i>Example</i>: in <i>a slice of meat, slice</i> is a piece term. (Section 4.1.3)
   Examples:
@@ -7437,6 +8006,8 @@
   SubtypeOf:
     - sem:mental-space
     - sem:tamp
+  FunctionOf:
+    - cxn:polarity-focus-construction
   AssociatedTo:
     - cxn:polarity-focus-construction
   Definition: >-
@@ -7475,6 +8046,8 @@
     - polarity question (function)
   SubtypeOf:
     - inf:interrogative
+  FunctionOf:
+    - cxn:polarity-question-construction
   Definition: >-
     an <a inf:interrogative>interrogative</a> in which the unknown piece of the <a>propositional content</a> requested of the addressee is the <a>polarity</a> (<a>positive</a> or <a>negative</a>) of the proposition. (Section 12.3.1)
 
@@ -7499,6 +8072,8 @@
     - polarity answer
   SubtypeOf:
     - inf:response
+  FunctionOf:
+    - cxn:polarity-response-construction
   AssociatedTo:
     - inf:polarity-question
   Definition: >-
@@ -7555,6 +8130,8 @@
   Name: positive question polarity response
   SubtypeOf:
     - inf:polarity-response
+  FunctionOf:
+    - cxn:positive-question-polarity-response-construction
   Definition: ''
   FromGlossary: false
 
@@ -7575,6 +8152,13 @@
   SubtypeOf:
     - sem:event
     - sem:object-relation
+  FunctionOf:
+    - cxn:possessed-argument-construction
+    - cxn:possession-construction
+    - cxn:possessive-attributive-phrase
+    - cxn:possessive-pronoun
+    - cxn:predicational-possession
+    - cxn:presentational-possession
   AssociatedTo:
     - cxn:possessive-modification-construction
   Definition: >-
@@ -7642,6 +8226,8 @@
     - possessor (role)
   SubtypeOf:
     - sem:semantic-role
+  FunctionOf:
+    - cxn:possessor-argument-phrase
   RoleOf:
     - sem:possession
   Definition: >-
@@ -7672,6 +8258,9 @@
     - sequential
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:resultative-complex-predicate
+    - cxn:temporal-construction
   Definition: >-
     a temporal sequential relation between two <a>events</a> such that the preceding event serves as the reference point for the following event. <i>Example</i>: in <i>He drove to the party after washing the car</i>, driving to the party has a posterior temporal relation with respect to washing the car. Used to describe a sequential temporal relation between events in a <a>figure--ground information packaging</a>. (Section 15.1.3)
   Examples:
@@ -7732,6 +8321,8 @@
   ConstituentOf:
     - inf:complex-figure
     - inf:figure-ground
+  FunctionOf:
+    - cxn:main-clause
   AssociatedTo:
     - cxn:main-clause
   Definition: >-
@@ -7747,6 +8338,9 @@
     - presuppose
   ConstituentOf:
     - inf:figure-ground
+  FunctionOf:
+    - cxn:adverbial-dependent-clause
+    - cxn:subordinate-clause
   Definition: >-
     the set of <a>propositions</a> evoked by the <a>constructions</a> in a sentence <q>which the speaker assumes the hearer already knows or is ready to take for granted at the time the sentence is uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>I'm grateful that you finished cleaning the house</i>, the proposition that you finished cleaning the house is presupposed, while the proposition that I am grateful about it is <a>asserted</a>. (Section 11.4.1)
   Examples:
@@ -7782,6 +8376,10 @@
     - pragmatically nonspecific (but semantically specific) (indefinite) referent
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:free-modification-construction
+    - cxn:indefinite-pronoun
+    - cxn:pragmatically-nonspecific-pronoun
   Definition: >-
     a <a>referent</a> introduced into the discourse by the speaker that is not normally referred to again in subsequent discourse. The term <q>semantically specific</q> indicates that the referent is not in a nonreal context -- that is, it is not a nonspecific referent. We will use the shorter term <q>pragmatically nonspecific</q> and assume that such referents are also semantically specific. (Section 3.4.1)
 
@@ -7815,6 +8413,10 @@
     - pragmatically specific (indefinite) referent
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:free-modification-construction
+    - cxn:indefinite-pronoun
+    - cxn:pragmatically-specific-pronoun
   Definition: >-
     a referent introduced into the discourse by the speaker that is normally referred to again in subsequent discourse. We will use the shorter term <q>pragmatically specific</q>. (Section 3.4.1)
 
@@ -7825,6 +8427,7 @@
     - cxn:construction
   HeadOf:
     - cxn:clause
+    - cxn:topic-comment-construction
   Definition: >-
     the <a>head</a> of a <a>clause</a>, which is not necessarily an <a>action</a>. <i>Example</i>: in <i>The dog is old, (is) old</i> is the predicate. (Section 2.2.4)
   Examples:
@@ -7858,6 +8461,9 @@
   Name: predicate identity
   SubtypeOf:
     - inf:type-identity
+  FunctionOf:
+    - cxn:object-identity-construction
+    - cxn:predicate-identity-construction
   Definition: ''
   FromGlossary: false
 
@@ -7884,6 +8490,109 @@
     - inf:major-propositional-act
   ConstituentOf:
     - inf:topic-comment
+  FunctionOf:
+    - cxn:affecting-verb
+    - cxn:agentive-change-of-state-verb
+    - cxn:antipassive-construction
+    - cxn:apodosis-clause
+    - cxn:application-verb
+    - cxn:applicative-construction
+    - cxn:argument-complex-predicate
+    - cxn:attending-verb
+    - cxn:auxiliary-construction
+    - cxn:basic-voice
+    - cxn:bodily-motion-verb
+    - cxn:bodily-predicate
+    - cxn:body-care-verb
+    - cxn:body-position-predicate
+    - cxn:causative-construction
+    - cxn:chaining-construction
+    - cxn:change-in-position-verb
+    - cxn:change-of-state-verb
+    - cxn:clause
+    - cxn:cognition-verb
+    - cxn:collective-construction
+    - cxn:combining-verb
+    - cxn:commentative-construction
+    - cxn:commentative-predicate
+    - cxn:complement-taking-predicate
+    - cxn:complex-predicate
+    - cxn:contact-by-impact-verb
+    - cxn:controlled-predicate
+    - cxn:damage-verb
+    - cxn:depictive-complex-predicate
+    - cxn:desiderative-construction
+    - cxn:desiderative-predicate
+    - cxn:ditransitive-construction
+    - cxn:emotion-verb
+    - cxn:evaluative-construction
+    - cxn:evaluative-predicate
+    - cxn:eventive-complex-predicate
+    - cxn:experience-verb
+    - cxn:experiential-construction
+    - cxn:experiential-verb
+    - cxn:extroverted-verb
+    - cxn:fearing-construction
+    - cxn:fearing-predicate
+    - cxn:hoping-construction
+    - cxn:hoping-predicate
+    - cxn:ingestion-verb
+    - cxn:interaction-verb
+    - cxn:intransitive-construction
+    - cxn:introverted-verb
+    - cxn:killing-injuring-verb
+    - cxn:knowledge-construction
+    - cxn:knowledge-predicate
+    - cxn:locational-construction
+    - cxn:manipulative-construction
+    - cxn:manipulative-predicate
+    - cxn:manner-complex-predicate
+    - cxn:manner-of-motion-verb
+    - cxn:manner-verb
+    - cxn:motion-clause
+    - cxn:motion-verb
+    - cxn:nonbasic-voice
+    - cxn:nonprototypical-predication
+    - cxn:passive-inverse-voice
+    - cxn:path-verb
+    - cxn:perception-clause
+    - cxn:perception-complement-taking-predicate
+    - cxn:perception-construction
+    - cxn:perception-verb
+    - cxn:possessed-argument-construction
+    - cxn:possession-construction
+    - cxn:predicate
+    - cxn:predicate-adjectival-construction
+    - cxn:predicate-nominal-construction
+    - cxn:predicational-location-construction
+    - cxn:predicational-possession
+    - cxn:pretense-construction
+    - cxn:pretense-predicate
+    - cxn:pronominal-argument-complex-predicate
+    - cxn:propositional-attitude-construction
+    - cxn:propositional-attitude-predicate
+    - cxn:protasis-clause
+    - cxn:pursuit-verb
+    - cxn:reflexive-construction
+    - cxn:removal-verb
+    - cxn:result-verb
+    - cxn:resultative-complex-predicate
+    - cxn:sensation-verb
+    - cxn:simple-predicate
+    - cxn:spontaneous-verb
+    - cxn:spurious-complex-predicate
+    - cxn:stative-complex-predicate
+    - cxn:support-verb-construction
+    - cxn:temporary-predicate
+    - cxn:transfer-verb
+    - cxn:transitive-construction
+    - cxn:uncontrolled-predicate
+    - cxn:utterance-construction
+    - cxn:utterance-predicate
+    - cxn:verb
+    - cxn:verbal-clause
+    - cxn:wishing-construction
+    - cxn:wishing-predicate
   Definition: >-
     what the speaker is asserting about the referents in a particular utterance. <i>Example</i>: in <i>Masha is nice</i>, the speaker is predicating the <a>property</a> of being nice to the referent Masha. In the <a>file metaphor</a> for describing <a>propositional acts</a>, predication adds information to a referent's discourse file. The predication is the <a>comment</a> in <a>topic--comment information packaging</a>. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -8060,6 +8769,12 @@
   Name: presentational
   SubtypeOf:
     - inf:entity-central
+  FunctionOf:
+    - cxn:locational-construction
+    - cxn:possession-construction
+    - cxn:presentational-construction
+    - cxn:presentational-location-construction
+    - cxn:presentational-possession
   Definition: >-
     a type of <a inf:entity-central>entity-central</a> <a>thetic information packaging</a> that introduces a <a>referent</a> into the discourse, in order to make the identity of the referent known to the hearer. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. (Sections 10.1.2, 10.4)
   Examples:
@@ -8123,6 +8838,9 @@
     - pretence event
   SubtypeOf:
     - sem:propositional-attitude-event
+  FunctionOf:
+    - cxn:pretense-construction
+    - cxn:pretense-predicate
   Definition: >-
     a <a>propositional attitude event</a> in which the speaker, or the <a>experiencer</a> of the pretense event, presents the <a>proposition</a> expressed by the <a>complement</a> as true in an alternative reality or <a>mental space</a>. <i>Example</i>: in <i>Ira pretended that the guests had already left</i>, the proposition that the guests had already left is presented as true in an alternative reality from the shared beliefs of the interlocutors (or, for that matter, Ira). There is a strong implicature that the proposition does not hold in reality (that is, the shared beliefs of the interlocutors). (Section 18.2.2)
   Examples:
@@ -8135,7 +8853,7 @@
     - pretence predicate
   SubtypeOf:
     - cxn:propositional-attitude-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:pretense-construction
   Definition: >-
     a <a>predicate</a> expressing a <a>pretense event</a>. <i>Example</i>: in <i>Ira pretended that the guests had already left</i>, the proposition that the guests had already left is presented as true in an alternative reality from the shared beliefs of the interlocutors (or, for that matter, Ira). There is a strong implicature that the proposition does not hold in reality (that is, the shared beliefs of the interlocutors). (Section 18.2.2)
@@ -8222,6 +8940,8 @@
   Name: prop
   ConstituentOf:
     - inf:theater-metaphor
+  FunctionOf:
+    - cxn:pragmatically-nonspecific-article
   Definition: >-
     a supporting entity that plays a role in the actions reported in the discourse. Props are almost always nonhuman, usually are referred to only once, and are rarely introduced by special <a>constructions</a>. (Section 3.4.1)
 
@@ -8246,6 +8966,14 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:adjectival-phrase
+    - cxn:adjective
+    - cxn:antonym
+    - cxn:complementary
+    - cxn:nonprototypical-predication
+    - cxn:predicate-adjectival-construction
+    - cxn:property-referring-phrase
   AttributeOf:
     - sem:object-concept
   AssociatedTo:
@@ -8293,6 +9021,9 @@
     - propositional attitude (event)
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:propositional-attitude-construction
+    - cxn:propositional-attitude-predicate
   Definition: >-
     an <a>event</a> of thinking, believing, and so on that expresses an attitude of the <a>experiencer</a> toward the truth of the <a>proposition</a> expressed by the <a>complement</a>. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. Special cases of propositional attitude events are <a>knowledge events</a> and <a>pretense events</a>. (Section 18.2.2)
   Examples:
@@ -8303,7 +9034,7 @@
   Name: propositional attitude predicate
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:propositional-attitude-construction
   Definition: >-
     the <a>predicate</a> expressing such a <a>propositional attitude event</a>. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. (Section 18.2.2)
@@ -8315,6 +9046,32 @@
   Name: propositional content
   ConstituentOf:
     - sem:proposition
+  FunctionOf:
+    - cxn:alternative-question-construction
+    - cxn:declarative-construction
+    - cxn:declarative-negation-construction
+    - cxn:entity-central-construction
+    - cxn:equational-construction
+    - cxn:event-central-construction
+    - cxn:exclamative-construction
+    - cxn:existential-negation-construction
+    - cxn:identificational-construction
+    - cxn:imperative-hortative-construction
+    - cxn:information-question-construction
+    - cxn:information-question-response-construction
+    - cxn:interrogative-construction
+    - cxn:negative-question-polarity-response-construction
+    - cxn:nonpredicational-construction
+    - cxn:polarity-focus-construction
+    - cxn:polarity-question-construction
+    - cxn:polarity-response-construction
+    - cxn:positive-question-polarity-response-construction
+    - cxn:prohibitive-construction
+    - cxn:response-construction
+    - cxn:speech-act-construction
+    - cxn:thetic-construction
+    - cxn:topic-comment-construction
+    - cxn:hanging-topic-construction
   Definition: >-
     the semantic content of a <a>clause</a>, separately from whether it is packaged as <a inf:topic-comment>topic--comment</a>, <a inf:thetic>thetic</a>, or <a inf:identificational>identificational</a>. Propositional content corresponds basically to <q>who did what to whom</q>. <i>Example</i>: In <i>There's a coyote running down the street!, It's a coyote that's running down the street</i>, and <i>The coyote is running down the street</i>, the propositional content shared by the thetic, identificational, and topic--comment constructions, respectively, is the current running <a>event</a> with a coyote as the runner and the street as the location of the running. (Section 11.1)
   Examples:
@@ -8351,6 +9108,8 @@
   Name: protasis
   ConstituentOf:
     - sem:conditional-relation
+  FunctionOf:
+    - cxn:protasis-clause
   Definition: >-
     the proposition or <a>event</a> denoted by a <a cxn:protasis-clause>protasis</a> clause. <i>Example</i>: in <i>If you press this button, the door will open</i>, <i>If you press this button</i> is the protasis; <i>the door will open</i> is the <a cxn:apodosis-clause>apodosis</a>. Since the conditional relations are defined in terms of both logical implication and causal relation, the semantic use of <q>protasis</q> can be distinguished as <q>protasis proposition</q> or <q>protasis event</q>. (Section 17.3.1)
   Examples:
@@ -8419,6 +9178,8 @@
   Name: purpose
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:purpose-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event serves as the intended outcome as a result of bringing about the other event. <i>Example</i>: <i>I will grab a stick to defend myself</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>I will grab a stick and defend myself</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the intended event is construed as the ground. The intended event is unrealized, which disfavors a complex figure construal (this problem is avoided in the example here because both events are future events). (Section 15.3.1)
   Examples:
@@ -8430,6 +9191,8 @@
   Name: pursuit event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:pursuit-verb
   Definition: >-
     <a>events</a> in which one <a>participant's</a> motion or location is directed toward another participant. <i>Examples</i>: pursuit events include following, chasing, searching for something, and waiting for someone/something; and <i>follow</i>, <i>chase</i>, <i>search (for)</i>, and <i>wait (for)</i> are pursuit verbs. (Section 7.3.3)
   Examples:
@@ -8497,6 +9260,8 @@
   Name: question referent
   SubtypeOf:
     - inf:nonspecific-referent
+  FunctionOf:
+    - cxn:question-pronoun
   Definition: >-
     an unspecified <a>referent</a> in the scope of <a inf:interrogative>interrogation</a>, especially <a inf:polarity-question>polar</a> <a cxn:interrogative-construction>interrogatives</a>. <i>Example</i>: in <i>Can you hear <b>anything</b>?</i>, <i>anything</i> is a question pronoun expressing a referent that only <dq>exists</dq> in a hypothetical world, the possibility of whose existence is being entertained by the questioner. (Section 3.5)
   Examples:
@@ -8524,6 +9289,8 @@
     - G (role)
   SubtypeOf:
     - sem:valency-role
+  FunctionOf:
+    - cxn:r-phrase
   RoleOf:
     - sem:transfer-event
   AssociatedTo:
@@ -8561,6 +9328,8 @@
   Name: reciprocal event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:reciprocal-construction
   AssociatedTo:
     - str:monoclausal-transitive-reciprocal-strategy
   Definition: >-
@@ -8612,6 +9381,83 @@
     - inf:major-propositional-act
   ConstituentOf:
     - inf:topic-comment
+  FunctionOf:
+    - cxn:adjective-modification-construction
+    - cxn:alienable-possession-modification-construction
+    - cxn:anaphoric-head-construction
+    - cxn:anaphoric-head-relative-clause-construction
+    - cxn:animal-noun
+    - cxn:animal-plant-product-noun
+    - cxn:applicative-object-phrase
+    - cxn:argument-phrase
+    - cxn:associative-construction
+    - cxn:body-part-noun
+    - cxn:causee-phrase
+    - cxn:causer-phrase
+    - cxn:common-noun
+    - cxn:complement
+    - cxn:core-argument-phrase
+    - cxn:demonstrative-pronoun
+    - cxn:ditransitive-a-phrase
+    - cxn:exclusive-pronoun
+    - cxn:experiencer-phrase
+    - cxn:figure-phrase
+    - cxn:first-person-pronoun
+    - cxn:free-modification-construction
+    - cxn:free-relative-clause-construction
+    - cxn:ground-phrase
+    - cxn:hanging-topic-phrase
+    - cxn:human-noun
+    - cxn:human-proper-noun
+    - cxn:inalienable-possession-modification-construction
+    - cxn:inclusive-pronoun
+    - cxn:inclusory-construction
+    - cxn:kinship-noun
+    - cxn:locative-modification-construction
+    - cxn:mensural-modification-construction
+    - cxn:modification-construction
+    - cxn:natural-object-noun
+    - cxn:nominal-modification-construction
+    - cxn:nominal-phrase
+    - cxn:noun
+    - cxn:noun-complement-referring-phrase
+    - cxn:noun-complement-head
+    - cxn:numeral-modification-construction
+    - cxn:object-phrase
+    - cxn:oblique-phrase
+    - cxn:p-phrase
+    - cxn:passive-inverse-a-phrase
+    - cxn:passive-inverse-p-phrase
+    - cxn:personal-pronoun
+    - cxn:phrase
+    - cxn:place-noun
+    - cxn:place-proper-noun
+    - cxn:plant-noun
+    - cxn:possessive-modification-construction
+    - cxn:pronoun
+    - cxn:proper-noun
+    - cxn:property-referring-phrase
+    - cxn:quantifier-modification-construction
+    - cxn:r-phrase
+    - cxn:referent-expression
+    - cxn:referring-phrase
+    - cxn:relative-clause-head
+    - cxn:relativized-referring-phrase
+    - cxn:s-phrase
+    - cxn:second-person-pronoun
+    - cxn:set-member-modification-construction
+    - cxn:social-noun
+    - cxn:stimulus-phrase
+    - cxn:subject-phrase
+    - cxn:t-phrase
+    - cxn:third-person-pronoun
+    - cxn:topic-phrase
+    - cxn:transitive-a-phrase
+    - cxn:universal-pronoun
+    - cxn:antipassive-oblique-phrase
+    - cxn:nonsubject-argument-phrase
+    - cxn:possessor-argument-phrase
+    - cxn:apposition
   Definition: >-
     what the speaker is talking about. <i>Example</i>: in <i>Masha is nice</i>, the speaker is referring to a person named Masha, and Masha is the referent. In the <a>file metaphor</a> for describing <a>propositional acts</a>, reference opens or accesses a discourse file for the referent. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -8623,12 +9469,8 @@
   SubtypeOf:
     - cxn:construction
   HeadOf:
-    - cxn:referring-phrase
-    - cxn:argument-phrase
     - cxn:modification-construction
-  ConstituentOf:
-    - cxn:relative-clause-head
-    - cxn:topic-phrase
+    - cxn:referring-phrase
   Definition: >-
     the <a>head</a> of a <a>referring phrase</a>, which is not necessarily an <a sem:object-concept>object</a>. <i>Example</i>: in <i>Hiking in the desert is wonderful</i>, <i>hiking</i> is a referent expression. (Section 2.2.4)
   Examples:
@@ -8671,6 +9513,8 @@
   Name: reflexive event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:reflexive-construction
   Definition: >-
     an <a>event</a> type in which a <a>participant</a> acts upon themself -- that is, the participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
   Examples:
@@ -8692,6 +9536,8 @@
   Name: relational
   SubtypeOf:
     - sem:relationality
+  FunctionOf:
+    - cxn:discourse-markers
   AttributeOf:
     - sem:action-concept
     - sem:state
@@ -8719,6 +9565,7 @@
   ConstituentOf:
     - cxn:relative-clause-construction
     - cxn:relativized-referring-phrase
+    - cxn:action-modification-construction
   Definition: >-
     the <a>dependent clause</a> in a <a>relative clause construction</a>. The relative clause denotes the <a>event</a> that is used to <a inf:modification>modify</a> the <a>relative clause head</a> <a>referent</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is the relative clause. (Section 19.1)
   Examples:
@@ -8844,6 +9691,8 @@
   SubtypeOf:
     - sem:event
     - sem:spatial-event
+  FunctionOf:
+    - cxn:removal-verb
   Definition: >-
     an <a>event</a> describing removal of an <a sem:object-concept>object</a> from another object. <i>Example</i>: scrubbing is a removal event. (Section 7.3.2)
 
@@ -8898,6 +9747,8 @@
   SubtypeOf:
     - inf:speech-acts
     - inf:information-gap
+  FunctionOf:
+    - cxn:response-construction
   AssociatedTo:
     - inf:interrogative
   Definition: >-
@@ -8942,6 +9793,8 @@
   Name: result event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:result-verb
   Definition: >-
     an <a>event</a> that is described in terms of reaching a result state, often by means of a scalar change (<a>directed change</a>). <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
   Examples:
@@ -8985,6 +9838,8 @@
     - S (role)
   SubtypeOf:
     - sem:valency-role
+  FunctionOf:
+    - cxn:s-phrase
   RoleOf:
     - sem:change-of-state-event
   AssociatedTo:
@@ -9020,6 +9875,8 @@
     - subject identity
   SubtypeOf:
     - inf:token-identity
+  FunctionOf:
+    - cxn:subject-identity-construction
   Definition: >-
     in <a>complex sentence constructions</a> that express <a>reference tracking</a>, the situation where the <a>salient</a> <a>participant</a> in the current <a>clause</a> is indicated to be <a>coreferential</a> with the salient participant in another clause in the construction. The salient participant is typically, but not always, encoded as the <a>subject</a> of the <a>predicate</a>. <i>Example</i>: in <i>Having finished the chapter, Bill went to bed</i>, the zero anaphora in <i>Having finished the chapter</i> signals that the subject referent of finishing the chapter is coreferential with the subject referent of the <a>matrix clause</a>, namely Bill. (Section 16.1)
   Examples:
@@ -9195,6 +10052,8 @@
     - recognitional
   SubtypeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:definite-pronoun
   AssociatedTo:
     - cxn:anaphoric-article
   Definition: >-
@@ -9208,6 +10067,8 @@
   SubtypeOf:
     - sem:event
     - sem:experiential-event
+  FunctionOf:
+    - cxn:sensation-verb
   Definition: >-
     an <a>experiential event</a> involving an internal bodily or physiological sensation. <i>Example</i>: <i>My head aches</i> is an example of a sensation event. (Section 7.4)
   Examples:
@@ -9316,6 +10177,8 @@
   Name: simple contrast
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:adversative-coordination
   Definition: >-
     a semantic relation between two <a>events</a> in which there is only a simple contrast, or a construal of a simple contrast, between the two. Simple contrast is considered the prototype for <a>adversative coordination</a>. <i>Example</i>: Ponapean <i>i laid ah e meir</i> [I fish <sc>conj</sc> he sleep] <q>I fished, but he slept</q>, is an instance of simple contrast. (Section 15.2.1)
   Examples:
@@ -9374,6 +10237,10 @@
     - overlap
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:depictive-complex-predicate
+    - cxn:manner-complex-predicate
+    - cxn:temporal-construction
   Definition: >-
     the semantic relation between two <a>events</a> where two events temporally coincide or overlap. <i>Example</i>: <i>He sang while she played the banjo</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>He sang and she played the banjo</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. (Section 15.3.1)
   Examples:
@@ -9509,6 +10376,8 @@
   Name: specific known referent
   SubtypeOf:
     - inf:semantically-specific-referent
+  FunctionOf:
+    - cxn:specific-known-pronoun
   Definition: >-
     a real-world <a>referent</a> whose identity is known to the speaker but not the hearer. <i>Example</i>: if <i>Masha met with someone near the university</i> is used in a context where the speaker knows the identity of the person Masha met, then <i>someone</i> is a specific known pronoun expressing a specific known referent. (Section 3.5)
   Examples:
@@ -9530,6 +10399,8 @@
   Name: specific unknown referent
   SubtypeOf:
     - inf:semantically-specific-referent
+  FunctionOf:
+    - cxn:specific-unknown-pronoun
   Definition: >-
     a real-world <a>referent</a> whose identity is known neither to the speaker nor to the hearer. <i>Example</i>: if <i>Masha met with somebody near the university</i> is used in a context where the speaker does not know the identity of the person Masha met, then <i>somebody</i> is a specific unknown pronoun expressing a specific unknown referent. (Section 3.5)
   Examples:
@@ -9576,6 +10447,9 @@
   ConstituentOf:
     - inf:complex-figure
     - inf:figure-ground
+  FunctionOf:
+    - cxn:negation-construction
+    - cxn:speech-act-construction
   Definition: >-
     speech acts package the <a>propositional content</a> of the utterance in such a way that the speaker wants or requires an explicit response from the addressee with respect to the propositional content. The speech acts that are most likely to be expressed as distinct constructions are the <a inf:declarative>declarative</a>, the <a inf:interrogative>interrogative</a>, the <a inf:imperative-hortative>imperative--hortative</a> and its negative the <a inf:prohibitive>prohibitive</a>, and the <a inf:exclamative>exclamative</a>. (Section 12.1)
 
@@ -9609,6 +10483,8 @@
   Name: spontaneous event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:spontaneous-verb
   AssociatedTo:
     - str:middle-voice
   Definition: >-
@@ -9673,6 +10549,9 @@
   SubtypeOf:
     - sem:event
     - sem:qualitative-event
+  FunctionOf:
+    - cxn:nonprototypical-predication
+    - cxn:temporary-predicate
   Definition: >-
     a concept which is <a>relational</a> and stative but transitory. <i>Example</i>: being sick or being happy are examples of states -- they are stative, but the states of the object they apply to come and go. (Section 2.1)
 
@@ -9681,6 +10560,8 @@
   Name: stative
   SubtypeOf:
     - sem:stativity
+  FunctionOf:
+    - cxn:stative-predicate-part
   AttributeOf:
     - sem:state
     - sem:property-concept
@@ -9708,6 +10589,8 @@
   Name: stimulus
   SubtypeOf:
     - sem:semantic-role
+  FunctionOf:
+    - cxn:stimulus-phrase
   RoleOf:
     - sem:experiential-event
   Definition: >-
@@ -9846,6 +10729,8 @@
   Name: substitutive
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:substitutive-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event is characterized by the substitution of a second event that is not normally a part of the first event. <i>Example</i>: <i>We barbecued chicken at home instead of going out to eat</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>We didn't go out to eat, and barbecued chicken at home (instead)</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the substituted event is construed as the ground. (Section 15.3.1)
   Examples:
@@ -9857,6 +10742,8 @@
   Name: subtractive
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:subtractive-construction
   Definition: >-
     the semantic relation between two <a>events</a> where one event is additionally characterized by the absence of a second event that is normally a part of the first event. In this respect, the subtractive relation is somewhat like a <dq>negative</dq> version of the <a>additive</a> relation. <i>Example</i>: <i>He did all the problems correctly except (that) he missed the proof on the last one</i> is a <a>figure--ground construal</a> of the simultaneous relation in an <a>adverbial clause construction</a>, and <i>He did all the problems correctly but he missed the proof on the last one</i> is a <a>complex figure construal</a> of the relation in a <a>coordinate clause construction</a>. In the figure--ground construal, the absent event is construed as the ground. (Section 15.3.1)
   Examples:
@@ -9883,6 +10770,8 @@
   Name: superlative degree
   SubtypeOf:
     - sem:degree
+  FunctionOf:
+    - cxn:superlative-form
   Definition: ''
   FromGlossary: false
 
@@ -9974,6 +10863,8 @@
     - T (role)
   SubtypeOf:
     - sem:valency-role
+  FunctionOf:
+    - cxn:t-phrase
   RoleOf:
     - sem:transfer-event
   AssociatedTo:
@@ -10005,6 +10896,8 @@
   Name: TAMP
   SubtypeOf:
     - sem:meaning
+  FunctionOf:
+    - cxn:auxiliary
   AssociatedTo:
     - cxn:auxiliary
   Definition: >-
@@ -10111,6 +11004,9 @@
     - all new
   SubtypeOf:
     - inf:declarative
+  FunctionOf:
+    - cxn:nonpredicational-construction
+    - cxn:thetic-construction
   Definition: >-
     <a>information packaging</a> that does not split the information into a <a>topic</a> and a <a>comment</a>, as is done in the <a inf:topic-comment>topic--comment</a> information packaging. Instead, the information is presented as a single whole, hence the alternative name <q>all new</q>. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
   Examples:
@@ -10209,6 +11105,9 @@
   Name: topic--comment
   SubtypeOf:
     - inf:declarative
+  FunctionOf:
+    - cxn:topic-comment-construction
+    - cxn:hanging-topic-construction
   Definition: >-
     the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a inf:predication>predicated about</a> another concept which is <a inf:reference>referred</a> to (the <a>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
   Examples:
@@ -10236,6 +11135,8 @@
   Name: transfer event
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:transfer-verb
   Definition: >-
     a <a sem:trivalent>trivalent event</a> involving physical transfer, usually also extended to <dq>mental transfer</dq>, that is used in defining the <a>ditransitive construction</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
   Examples:
@@ -10362,6 +11263,8 @@
   Name: trivalent
   SubtypeOf:
     - sem:valency
+  FunctionOf:
+    - cxn:ditransitive-construction
   AttributeOf:
     - sem:transfer-event
     - sem:application-event
@@ -10382,6 +11285,20 @@
     - category
   SubtypeOf:
     - sem:identity
+  FunctionOf:
+    - cxn:animal-noun
+    - cxn:animal-plant-product-noun
+    - cxn:body-part-noun
+    - cxn:common-noun
+    - cxn:generic-article
+    - cxn:generic-pronoun
+    - cxn:human-noun
+    - cxn:kinship-noun
+    - cxn:natural-object-noun
+    - cxn:place-noun
+    - cxn:plant-noun
+    - cxn:social-noun
+    - cxn:universal-pronoun
   Definition: >-
     a general concept that generally subsumes multiple instances (<a>individuals</a>). <i>Example</i>: the category of tables is a type. (Section 3.1.1)
 
@@ -10390,6 +11307,10 @@
   Name: type identifiable
   SubtypeOf:
     - inf:identifiability
+  FunctionOf:
+    - cxn:anaphoric-head-construction
+    - cxn:indefinite-article
+    - cxn:semantically-nonspecific-article
   AttributeOf:
     - inf:nonspecific-referent
   Definition: >-
@@ -10412,6 +11333,9 @@
   Name: typifying
   SubtypeOf:
     - inf:modification
+  FunctionOf:
+    - cxn:binominal-lexeme
+    - cxn:typifying-construction
   AssociatedTo:
     - cxn:typifying-construction
   Definition: >-
@@ -10447,6 +11371,8 @@
     - uncontrolled activity
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:uncontrolled-predicate
   Definition: >-
     the <a>event</a> class of activities not under the control of an <a>agent</a> (apart from uncontrolled <a>bodily actions</a> and <a>change of state</a>). <i>Example</i>: dying is an uncontrolled activity. (Section 6.3.3)
 
@@ -10475,6 +11401,8 @@
   Name: unexpected co-occurrence
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:adversative-coordination
   Definition: >-
     a semantic relation between two <a>events</a> in which two events are juxtposed and the second event is unexpected. Unexpected co-occurrence is often expressed with <a>adversative coordination</a>. <i>Example</i>: Russian <i>Vanja prostudilsja, no poshël v shkolu</i> [Vanja caught_cold <sc>conj</sc> went to school] <q>Vanja caught a cold, but went to school</q> is an instance of the unexpected co-occurrence relation, using a <a>coordinator</a> <i>no</i> which is distinct from the coordinator <i>a</i> which is used for <a>simple contrast</a>. (Section 15.2.1)
   Examples:
@@ -10512,6 +11440,9 @@
     - utterance (event)
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:utterance-construction
+    - cxn:utterance-predicate
   Definition: >-
     an <a>event</a> of saying in which one <a>participant</a> is the <u>speaker</u> of the utterance and another participant is the utterance itself. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. (Section 18.2.2)
   Examples:
@@ -10522,7 +11453,7 @@
   Name: utterance predicate
   SubtypeOf:
     - cxn:complement-taking-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:utterance-construction
   Definition: >-
     the <a>predicate</a> expressing an <a>utterance event</a>. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. Some predicates denoting utterance events include the <u>addressee</u> as an <a inf:reference>argument</a>, as in <i>Sandy told me that she's buying the house</i>. (Section 18.2.2)
@@ -10682,6 +11613,9 @@
   Name: wishing event
   SubtypeOf:
     - sem:evaluative-event
+  FunctionOf:
+    - cxn:wishing-construction
+    - cxn:wishing-predicate
   AssociatedTo:
     - cxn:evaluative-predicate
   Definition: >-
@@ -10694,7 +11628,7 @@
   Name: wishing predicate
   SubtypeOf:
     - cxn:evaluative-predicate
-  ConstituentOf:
+  HeadOf:
     - cxn:wishing-construction
   Definition: >-
     the <a>predicate</a> expressing a <a>wishing event</a>. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
@@ -10844,6 +11778,10 @@
     - 1st person
   SubtypeOf:
     - sem:person-deixis
+  FunctionOf:
+    - cxn:exclusive-pronoun
+    - cxn:first-person-pronoun
+    - cxn:inclusive-pronoun
   AttributeOf:
     - sem:speaker
   Definition: ''
@@ -10856,6 +11794,8 @@
     - 2nd person
   SubtypeOf:
     - sem:person-deixis
+  FunctionOf:
+    - cxn:second-person-pronoun
   AttributeOf:
     - sem:addressee
   Definition: ''
@@ -10868,6 +11808,8 @@
     - 3rd person
   SubtypeOf:
     - sem:person-deixis
+  FunctionOf:
+    - cxn:third-person-pronoun
   AttributeOf:
     - sem:other
   Definition: ''
@@ -10878,6 +11820,10 @@
   Name: speaker
   SubtypeOf:
     - sem:object-concept
+  FunctionOf:
+    - cxn:exclusive-pronoun
+    - cxn:inclusive-pronoun
+    - cxn:inclusory-construction
   Definition: ''
   FromGlossary: false
 
@@ -10886,6 +11832,9 @@
   Name: addressee
   SubtypeOf:
     - sem:object-concept
+  FunctionOf:
+    - cxn:inclusive-pronoun
+    - cxn:inclusory-construction
   Definition: ''
   FromGlossary: false
 
@@ -10894,6 +11843,9 @@
   Name: other
   SubtypeOf:
     - sem:object-concept
+  FunctionOf:
+    - cxn:associative-construction
+    - cxn:inclusory-construction
   Definition: ''
   FromGlossary: false
 
@@ -10954,6 +11906,15 @@
   Name: event relation
   SubtypeOf:
     - sem:entity
+  FunctionOf:
+    - cxn:adverbial-clause-construction
+    - cxn:complex-sentence
+    - cxn:coordinate-clause-construction
+    - cxn:exhaustive-list-coordination
+    - cxn:logophoric-construction
+    - cxn:predicate-identity-construction
+    - cxn:reference-tracking-construction
+    - cxn:subject-identity-construction
   Definition: ''
   FromGlossary: false
 
@@ -10970,6 +11931,11 @@
   Name: person
   SubtypeOf:
     - sem:object-concept
+  FunctionOf:
+    - cxn:human-noun
+    - cxn:human-proper-noun
+    - cxn:kinship-noun
+    - cxn:social-noun
   Definition: ''
   FromGlossary: false
 
@@ -10978,6 +11944,12 @@
   Name: thing
   SubtypeOf:
     - sem:object-concept
+  FunctionOf:
+    - cxn:animal-noun
+    - cxn:animal-plant-product-noun
+    - cxn:body-part-noun
+    - cxn:natural-object-noun
+    - cxn:plant-noun
   Definition: ''
   FromGlossary: false
 
@@ -10986,6 +11958,9 @@
   Name: place
   SubtypeOf:
     - sem:object-concept
+  FunctionOf:
+    - cxn:place-noun
+    - cxn:place-proper-noun
   Definition: ''
   FromGlossary: false
 
@@ -10994,6 +11969,8 @@
   Name: material
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:material-term
   Definition: ''
   FromGlossary: false
 
@@ -11002,6 +11979,8 @@
   Name: color
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:color-term
   Definition: ''
   FromGlossary: false
 
@@ -11010,6 +11989,8 @@
   Name: shape
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:shape-term
   Definition: ''
   FromGlossary: false
 
@@ -11018,6 +11999,8 @@
   Name: age
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:age-term
   Definition: ''
   FromGlossary: false
 
@@ -11026,6 +12009,8 @@
   Name: value
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:value-term
   Definition: ''
   FromGlossary: false
 
@@ -11034,6 +12019,8 @@
   Name: dimension
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:dimension-term
   Definition: ''
   FromGlossary: false
 
@@ -11042,6 +12029,8 @@
   Name: physical property
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:physical-property-term
   Definition: ''
   FromGlossary: false
 
@@ -11050,6 +12039,8 @@
   Name: human propensity
   SubtypeOf:
     - sem:property-concept
+  FunctionOf:
+    - cxn:human-propensity-term
   Definition: ''
   FromGlossary: false
 
@@ -11059,6 +12050,9 @@
   SubtypeOf:
     - sem:event
     - sem:numeral
+  FunctionOf:
+    - cxn:cardinal-numeral-term
+    - cxn:numeral-attributive-phrase
   Definition: ''
   FromGlossary: false
 
@@ -11067,6 +12061,10 @@
   Name: vague numeral
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:quantifier-term
+    - cxn:quantifier-attributive-phrase
+    - cxn:vague-numeral-term
   Definition: ''
   FromGlossary: false
 
@@ -11075,6 +12073,8 @@
   Name: amount
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:amount-term
   Definition: ''
   FromGlossary: false
 
@@ -11083,6 +12083,10 @@
   Name: proportional quantifier
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:proportional-quantifier-term
+    - cxn:quantifier-term
+    - cxn:quantifier-attributive-phrase
   Definition: ''
   FromGlossary: false
 
@@ -11091,6 +12095,10 @@
   Name: distributive quantifier
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:distributive-quantifier-term
+    - cxn:quantifier-term
+    - cxn:quantifier-attributive-phrase
   Definition: ''
   FromGlossary: false
 
@@ -11100,6 +12108,8 @@
   SubtypeOf:
     - sem:set-member
     - sem:numeral
+  FunctionOf:
+    - cxn:ordinal-numeral-term
   Definition: ''
   FromGlossary: false
 
@@ -11108,6 +12118,8 @@
   Name: measure
   SubtypeOf:
     - sem:mensural-concept
+  FunctionOf:
+    - cxn:measure-term
   Definition: ''
   FromGlossary: false
 
@@ -11116,6 +12128,8 @@
   Name: container
   SubtypeOf:
     - sem:mensural-concept
+  FunctionOf:
+    - cxn:container-term
   Definition: ''
   FromGlossary: false
 
@@ -11124,6 +12138,8 @@
   Name: group
   SubtypeOf:
     - sem:mensural-concept
+  FunctionOf:
+    - cxn:group-term
   Definition: ''
   FromGlossary: false
 
@@ -11132,6 +12148,8 @@
   Name: piece
   SubtypeOf:
     - sem:mensural-concept
+  FunctionOf:
+    - cxn:piece-term
   Definition: ''
   FromGlossary: false
 
@@ -11282,6 +12300,9 @@
   Name: inclusive disjunction
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:disjunctive-coordination
+    - cxn:inclusive-disjunctive-coordination
   Definition: ''
   FromGlossary: false
 
@@ -11290,6 +12311,9 @@
   Name: exclusive disjunction
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:disjunctive-coordination
+    - cxn:exclusive-disjunctive-coordination
   Definition: ''
   FromGlossary: false
 
@@ -11510,6 +12534,8 @@
     - comparative (relation)
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:comparative-construction
   Definition: ''
   FromGlossary: false
 
@@ -11518,6 +12544,8 @@
   Name: equative relation
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:equative-construction
   Definition: ''
   FromGlossary: false
 
@@ -11526,6 +12554,8 @@
   Name: let alone relation
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:let-alone-construction
   Definition: ''
   FromGlossary: false
 
@@ -11534,6 +12564,8 @@
   Name: arrangement
   SubtypeOf:
     - sem:mensural-concept
+  FunctionOf:
+    - cxn:form-term
   Definition: ''
   FromGlossary: false
 
@@ -12451,6 +13483,8 @@
   Name: species
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:species-term
   Definition: ''
   FromGlossary: false
 
@@ -12480,8 +13514,8 @@
   SubtypeOf:
     - cxn:complex-predicate-part
   HeadOf:
-    - cxn:support-verb-construction
     - cxn:auxiliary-construction
+    - cxn:support-verb-construction
   ConstituentOf:
     - cxn:argument-complex-predicate
   Definition: ''
@@ -12719,6 +13753,11 @@
   Name: non-high topicality
   SubtypeOf:
     - inf:topicality
+  FunctionOf:
+    - cxn:causee-phrase
+    - cxn:ground-phrase
+    - cxn:passive-inverse-a-phrase
+    - cxn:nonsubject-argument-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12727,6 +13766,11 @@
   Name: non-low topicality
   SubtypeOf:
     - inf:topicality
+  FunctionOf:
+    - cxn:core-argument-phrase
+    - cxn:experiencer-phrase
+    - cxn:passive-inverse-p-phrase
+    - cxn:stimulus-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12736,6 +13780,13 @@
   SubtypeOf:
     - inf:topicality
     - inf:non-low-topicality
+  FunctionOf:
+    - cxn:causer-phrase
+    - cxn:ditransitive-a-phrase
+    - cxn:figure-phrase
+    - cxn:s-phrase
+    - cxn:subject-phrase
+    - cxn:transitive-a-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12746,6 +13797,12 @@
     - inf:topicality
     - inf:non-high-topicality
     - inf:non-low-topicality
+  FunctionOf:
+    - cxn:applicative-object-phrase
+    - cxn:object-phrase
+    - cxn:p-phrase
+    - cxn:r-phrase
+    - cxn:t-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12755,6 +13812,9 @@
   SubtypeOf:
     - inf:topicality
     - inf:non-high-topicality
+  FunctionOf:
+    - cxn:oblique-phrase
+    - cxn:antipassive-oblique-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12763,6 +13823,9 @@
   Name: highest topicality
   SubtypeOf:
     - inf:high-topicality
+  FunctionOf:
+    - cxn:hanging-topic-phrase
+    - cxn:topic-phrase
   Definition: ''
   FromGlossary: false
 
@@ -12781,6 +13844,8 @@
   Name: medium accessibility
   SubtypeOf:
     - inf:accessibility
+  FunctionOf:
+    - cxn:anaphoric-article
   AttributeOf:
     - inf:semi-active-referent
   Definition: ''
@@ -12791,6 +13856,8 @@
   Name: low accessibility
   SubtypeOf:
     - inf:accessibility
+  FunctionOf:
+    - cxn:nonanaphoric-definite-article
   AttributeOf:
     - inf:inactive-referent
     - inf:inferrable-referent
@@ -12876,6 +13943,8 @@
   Name: gradient
   SubtypeOf:
     - sem:scale
+  FunctionOf:
+    - cxn:antonym
   Definition: ''
   FromGlossary: false
 
@@ -12884,6 +13953,8 @@
   Name: categorical
   SubtypeOf:
     - sem:scale
+  FunctionOf:
+    - cxn:complementary
   Definition: ''
   FromGlossary: false
 
@@ -12892,6 +13963,9 @@
   Name: mensural concept
   SubtypeOf:
     - sem:event
+  FunctionOf:
+    - cxn:mensural-attributive-phrase
+    - cxn:mensural-term
   Definition: ''
   FromGlossary: false
 
@@ -12918,6 +13992,9 @@
   Name: set member
   SubtypeOf:
     - sem:set-member
+  FunctionOf:
+    - cxn:set-member-attributive-phrase
+    - cxn:set-member-term
   Definition: ''
   FromGlossary: false
 
@@ -12926,6 +14003,8 @@
   Name: exhaustive list
   SubtypeOf:
     - sem:event-relation
+  FunctionOf:
+    - cxn:non-exhaustive-list-coordination
   Definition: ''
   FromGlossary: false
 
@@ -12942,6 +14021,8 @@
   Name: discourse link
   ConstituentOf:
     - inf:discourse-coherence
+  FunctionOf:
+    - cxn:discourse-markers
   Definition: ''
   FromGlossary: false
 
@@ -12950,6 +14031,8 @@
   Name: logophoric subject identity
   SubtypeOf:
     - inf:token-identity
+  FunctionOf:
+    - cxn:logophoric-construction
   Definition: ''
   FromGlossary: false
 
