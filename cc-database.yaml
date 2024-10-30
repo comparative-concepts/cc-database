@@ -151,11 +151,6 @@
   FunctionOf:
     - cxn:verb
     - cxn:verbal-clause
-  AssociatedTo:
-    - cxn:complement
-    - cxn:relative-clause
-    - cxn:verbal-clause
-    - cxn:verb
   Definition: >-
     a concept belonging to a <a>semantic class</a> that is <a>relational</a>, <a>dynamic</a>, and <a>transitory</a>. <i>Example</i>: motion events such as running, or transfer events such as giving, are action concepts -- they involve change but come to an end. (Section 2.1; <b>Chapters 6--7</b> cover a wide range of action concepts.)
 
@@ -185,8 +180,6 @@
   FunctionOf:
     - cxn:anaphoric-pronoun
     - cxn:definite-pronoun
-  AssociatedTo:
-    - cxn:anaphoric-pronoun
   Definition: >-
     a <a>referent</a> whose <u>discourse file</u> has been opened and which is at the center of the hearer's consciousness. This is the highest <a>accessibility</a> referent at the current point in the discourse. (Section 3.3.1)
 
@@ -212,8 +205,6 @@
     - agentive (category)
   ConstituentOf:
     - str:active-alignment
-  AssociatedTo:
-    - inf:active-referent
   Definition: >-
     the <a>morphosyntactic</a> category in the <a>active alignment system</a> that <a>co-expresses</a> some <a>S roles</a> -- in particular, the S role of <q>walk</q> -- and the <a>A role</a>. <i>Example</i>: in Lakhota, the index <i>ya-</i> <q>you (sg.)</q> in <i>ó-ma-ya-kiye</i> <q>you help/helped me</q> and <i>ya-ʔu</i> <q>you (sg.) are coming</q> expresses the active category. (Section 6.3.3)
   Examples:
@@ -535,8 +526,6 @@
     - sem:event
   FunctionOf:
     - cxn:affecting-verb
-  AssociatedTo:
-    - str:stimulus-oriented-strategy
   Definition: >-
     an <a>experiential event</a> which describes the <a>stimulus</a> causing a change in mental state of the <a>experiencer</a>. <i>Example</i>: <i>The dog surprised me</i> is an instance of an affecting event. (Section 7.4)
   Examples:
@@ -804,8 +793,6 @@
     - inf:reference
   ConstituentOf:
     - inf:anchoring
-  AssociatedTo:
-    - sem:human
   Definition: >-
     an <a sem:object-concept>object</a> that, if its identity is known to speaker and hearer, allows for the identity of a related object to be known to the speaker and hearer. <i>Example</i>: <q>knowing who Peter is we can identify Peter's bag, arm, brother</q> (Koptjevskaja-Tamm 2002:147) -- i.e. Peter serves as the anchor for identifying the bag, arm, or brother. The anchoring function requires that the <a inf:modification>modifying</a> <a sem:object-concept>object</a> concept denote an <a>individual</a> and not a <a>type</a>, and preferably a highly <a>accessible</a> individual. Another term used for <q>anchor</q> is <q>reference point</q>, but the latter term has another use in this book. (Section 5.2.1)
   Examples:
@@ -819,8 +806,6 @@
   FunctionOf:
     - cxn:anchoring-construction
     - cxn:partitive-construction
-  AssociatedTo:
-    - cxn:anchoring-construction
   Definition: >-
     a type of <a>situating</a> in which the <a>referent</a> of the <a sem:object-concept>object</a> <a>modifier</a> serves to identify the referent of the <a>head</a> of the <a>modification construction</a>. (Sections 4.1.1, <b>4.1.4</b>)
 
@@ -1203,9 +1188,6 @@
     - sem:event
   FunctionOf:
     - cxn:attending-verb
-  AssociatedTo:
-    - cxn:experiential-verb
-    - str:experiencer-oriented-strategy
   Definition: >-
     an <a>experiential event</a> which describes the <a>experiencer</a> directing her/his attention to the <a>stimulus</a>. <i>Example</i>: <i>I am looking at the sandhill crane</i> is an instance of an attending event. (Section 7.4)
   Examples:
@@ -1336,8 +1318,6 @@
   Name: beneficiary
   SubtypeOf:
     - sem:affectee
-  AssociatedTo:
-    - cxn:applicative-object-phrase
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is positively affected by the outcome of the <a>event</a>. <i>Example</i>: in <i>Terry made lunch for Sandy</i>, Sandy is positively affected by the outcome of the event. (Section 6.1.2)
   Examples:
@@ -1423,8 +1403,6 @@
     - sem:caused-motion
     - sem:contact-event
     - sem:creation-event
-  AssociatedTo:
-    - cxn:transitive-construction
   Definition: >-
     an event with a <a>valency</a> of two -- that is, with two <a>central participant roles</a>. <i>Example</i>: drinking is a bivalent event, with the two central roles of drinker and drink. (Section 6.1.2)
 
@@ -1447,8 +1425,6 @@
     - sem:qualitative-event
   FunctionOf:
     - cxn:bodily-motion-verb
-  AssociatedTo:
-    - str:middle-voice
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving an internal bodily motion. <i>Example</i>: <i>stretch out (oneself)</i> expresses a bodily motion event. (Section 7.2)
   Examples:
@@ -1485,8 +1461,6 @@
     - sem:qualitative-event
   FunctionOf:
     - cxn:body-care-verb
-  AssociatedTo:
-    - str:middle-voice
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving a person acting on that person's own body, generally for grooming or hygiene. <i>Examples</i>: <i>shave</i> and <i>wash (oneself)</i> express body care events. (Section 7.2)
   Examples:
@@ -1648,8 +1622,6 @@
   Name: causative construction
   SubtypeOf:
     - cxn:nonbasic-voice
-  AssociatedTo:
-    - cxn:ditransitive-construction
   Definition: >-
     a <a>construction</a> describing an <a>event</a>, in which an external cause has been <dq>added</dq> to the <a>base event</a>, and the external cause is <a>salient</a> enough to be expressed as a <a>core argument phrase</a>, specifically the <a>subject</a>. <i>Example</i>: <i>I made Fred wash the car</i> is an instance of a causative construction in which Fred washing the car is the base event, and an external cause (me) is added and is encoded as the subject. (Sections 9.1, 9.2)
   Examples:
@@ -1660,8 +1632,6 @@
   Name: causative event
   ConstituentOf:
     - sem:causal-structure
-  AssociatedTo:
-    - cxn:causative-construction
   Definition: >-
     an <a>event</a> consisting of a <a>salient</a> external <a>causer</a> <a>participant role</a> added to the <a>causal chain</a> of a <a>base event</a>. <i>Example</i>: <i>Fred made me fill out the questionnaire</i> is a causative event since an external causer (Fred) is added to the base event of filling out the questionnaire. (Section 9.2)
   Examples:
@@ -1777,8 +1747,6 @@
     - sem:spatial-event
   FunctionOf:
     - cxn:change-in-position-verb
-  AssociatedTo:
-    - str:middle-voice
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving a person changing their bodily position. <i>Example</i>: <i>sit</i> and <i>lean</i> express change in body posture events. (Section 7.2)
   Examples:
@@ -1974,9 +1942,6 @@
     - sem:event
   FunctionOf:
     - cxn:collective-construction
-  AssociatedTo:
-    - cxn:reciprocal-construction
-    - cxn:reflexive-construction
   Definition: >-
     an <a>event</a> type in which two <a>participants</a> both play the same role in two related events (that is, they do it <dq>together</dq>). <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
   Examples:
@@ -2068,8 +2033,6 @@
   Name: common noun
   SubtypeOf:
     - cxn:noun
-  AssociatedTo:
-    - cxn:determiner
   Definition: >-
     a linguistic <a>form</a> that usually <a inf:reference>refers</a> to <a>individuals</a>, via the <u>category</u> that the individual belongs to. Often referred to as just <a>noun</a>. <i>Example</i>: <i>cat</i> is usually used to refer to a particular cat via the category of felines. Note that being a common noun is a function of a form; one can use the form <i>city</i> to refer to an individual city -- for example in the San Francisco Bay Area, <i>the City</i> refers to the city of San Francisco. (Section 3.1.1)
   Examples:
@@ -2155,8 +2118,6 @@
   SubtypeOf:
     - inf:nonspecific-referent
   FunctionOf:
-    - cxn:comparative-pronoun
-  AssociatedTo:
     - cxn:comparative-pronoun
   Definition: >-
     an unspecified <a>referent</a> occurring in the <a>standard</a> of comparison in a <a>comparative construction</a>. <i>Example</i>: in <i>The boy runs as fast as anyone in his class</i>, <i>anyone</i> is a comparative pronoun expressing a hypothetical referent selected from the class representing the standard to which the boy's running is being compared. (Section 3.5)
@@ -2244,8 +2205,6 @@
     - predicative complement
   SubtypeOf:
     - inf:subcategorizing
-  AssociatedTo:
-    - cxn:stative-complex-predicate
   Definition: >-
     an <a>information packaging</a> <a>function</a> in which specification of the modifying <a>stative</a> concept is required by the <a>predicate</a>. <i>Example</i>: in English <i>I consider John intelligent</i>, the property of intelligence is necessarily specified of the participant John by the main predicate of attributing a property to a participant. (Section 14.3)
   Examples:
@@ -2292,8 +2251,6 @@
     - cxn:inclusive-disjunctive-coordination
     - cxn:non-exhaustive-list-coordination
     - cxn:nonclausal-coordination
-  AssociatedTo:
-    - cxn:coordinate-clause-construction
   Definition: >-
     a construal or <a>information packaging</a> of two <a>events</a> such that the two events are construed as parts of a complex whole. <i>Example</i>: in <i>Jim was promoted and Cindy quit</i>, the events of Jim being promoted and Cindy quitting are conceived of as parts of a complex whole (e.g. a causal sequence). A complex figure packaging construes the events as equal in status, and also requires a common denominator for the two events. This information packaging is found in <a>coordinate constructions</a>. (Section 15.1.3)
   Examples:
@@ -2408,8 +2365,6 @@
   Name: concessive construction
   SubtypeOf:
     - cxn:complex-sentence
-  AssociatedTo:
-    - cxn:adversative-coordination
   Definition: >-
     the construction that expresses a <a>concessive relation</a>.. <i>Example</i>: <i>Although it was raining, I went out</i> is an instance of a concessive relation and construction: the expected causal relation is that rain would lead to my staying in; but in fact I went out. The speaker has a <a>positive epistemic stance</a> toward the concessive construction. A concessive may express a <a sem:content-causal-relation>content</a>, <a sem:epistemic-causal-relation>epistemic</a>, or <a>speech act causal relation</a>. (Section 17.3.2)
   Examples:
@@ -2558,8 +2513,6 @@
     - str:overt-coding
   ConstituentOf:
     - str:syndetic
-  AssociatedTo:
-    - cxn:discourse-markers
   Definition: >-
     a free morpheme or clitic that encodes the relation between the <a>events</a> denoted by the two <a>clauses</a> in a <a>complex sentence construction</a>. A conjunction in a <a>coordinate clause construction</a> is a <a>coordinator</a>; in an <a>adverbial clause construction</a>, it is an <a>adverbializer</a>; in a <a>complement clause construction</a>, it is a <a>complementizer</a>; and in a <a>relative clause construction</a>, it is a <a>relativizer</a>. (Section 15.2.2)
 
@@ -2687,9 +2640,6 @@
     - cxn:specific-known-pronoun
     - cxn:specific-unknown-pronoun
     - cxn:universal-pronoun
-  AssociatedTo:
-    - cxn:determiner
-    - cxn:pronoun
   Definition: >-
     an entity defined relative to some factor in the speech act context. <i>Examples</i>: <i>this table</i> is defined as a table but relative to the location of the speaker (<i>this</i> expresses the contextual component); <i>the table</i> is defined as a table relative to the shared knowledge of speaker and hearer (<i>the</i> expresses the contextual component). (Section 3.1.1)
   Examples:
@@ -2941,8 +2891,6 @@
     - inf:discourse-coherence
   FunctionOf:
     - cxn:reference-tracking-construction
-  AssociatedTo:
-    - cxn:reference-tracking-construction
   Definition: >-
     the act of <a inf:reference>referring</a> to a <a>referent</a> that recurs in different occasions in a stretch of discourse. The stretch of discourse may constitute a single <a>construction</a>, such as a <a>complex sentence construction</a>. This is the primary context in which coreference is discussed in this book. <i>Example</i>: in <i>Jared<sub>i</sub> praised his<sub>i</sub> father, but his<sub>i</sub> father ignored him<sub>i</sub></i>, the referent Jared recurs four times in the sentence, and so represents an example of coreference. In linguistic analysis, coreference is often notated by subscript indexes such as <i>i</i> in the example. (Section 16.1)
   Examples:
@@ -3031,8 +2979,6 @@
     - cxn:declarative-construction
     - cxn:declarative-negation-construction
     - cxn:existential-negation-construction
-  AssociatedTo:
-    - cxn:declarative-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which simply asserts its <a>propositional content</a>. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. (Section 12.1)
   Examples:
@@ -3153,8 +3099,6 @@
   FunctionOf:
     - cxn:demonstrative-attributive
     - cxn:demonstrative-pronoun
-  AssociatedTo:
-    - cxn:demonstrative-pronoun
   Definition: >-
     a <a>contextual</a> factor defined in terms of the speech act event. We will use the term in its narrow sense of spatial location relative to the speaker and addressee in the speech event. <i>Example</i>: in <i>that book, that</i> is picking out the book deictically, via its location relative to the speaker. (Section 3.1.1)
   Examples:
@@ -3176,8 +3120,6 @@
   Name: demonstrative pronoun
   SubtypeOf:
     - cxn:pronoun
-  AssociatedTo:
-    - cxn:demonstrative-attributive
   Definition: >-
     a <a>deictic</a> <a>contextual</a> expression that stands alone as a <a>referring phrase</a>. <i>Example</i>: in <i>This is a collared lizard</i>, <i>This</i> is a demonstrative pronoun. (Sections 3.1.1, 3.1.3, 3.2)
   Examples:
@@ -3330,8 +3272,6 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:topic-comment-construction
-  AssociatedTo:
-    - str:doubling
   Definition: >-
     a strategy for expressing a <a>topic</a> in which the topic <a>referring phrase</a> differs from the expression of a prototypical <a>subject</a> phrase. <i>Example</i>: in German <i>Peter, ich habe ihn heute nicht getroffen</i> <q>Peter, I have not met him today</q>, the topic phrase <i>Peter</i> is in intial position, prosodically separated from the rest of the clause, and there is a <a>pronoun</a> <i>ihn</i> <q>him</q> referring to Peter in the clause. Not all detached topics have all three of the <a>morphosyntactic</a> properties of the German example; there is a continuum from the prototypical subject/topic phrase and a <dq>fully</dq> detached topic phrase. (Section 11.2.2)
   Examples:
@@ -3560,8 +3500,6 @@
   Status: deleted
   SubtypeOf:
     - inf:predication
-  AssociatedTo:
-    - cxn:ditransitive-construction
   Definition: >-
     a <a>predication</a> predicated of three <a>salient</a> <a inf:reference>arguments</a>. <i>Example</i>: in <i>Sarah sent Jerry a letter</i>, sending is a ditransitive predication because it is predicated of three arguments, Sarah, Jerry, and the letter. (Section 6.1.2)
   Examples:
@@ -3650,8 +3588,6 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:clause
-  AssociatedTo:
-    - cxn:pronoun
   Definition: >-
     expression of a <a>referent</a> twice in a <a>clause</a>, by a <a>referring phrase</a> and simultaneously by an <a>index</a>. (Section 3.3.3)
 
@@ -3925,9 +3861,6 @@
     - epistemic modal(ity)
   SubtypeOf:
     - sem:modality
-  AssociatedTo:
-    - cxn:interrogative-construction
-    - cxn:identificational-construction
   Definition: >-
     a type of <a>modality</a> that expresses the attitude of a speaker or other conceiver toward the truth of the situation described in the clause -- that is, degree of certainty that the situation is true. <i>Example</i>: <i>Jerry might get his hair cut</i> is an instance of epistemic modality -- the speaker is expressing a relatively neutral attitude toward whether the future situation will actually come about. Epistemic modality is construed broadly in this textbook, to include <a>objective</a> as well as <a>subjective</a> characterization of the epistemic modal attitude. (Sections 12.1, 12.3.4)
   Examples:
@@ -3977,8 +3910,6 @@
   Name: equational construction
   SubtypeOf:
     - cxn:identificational-construction
-  AssociatedTo:
-    - cxn:predicate-nominal-construction
   Definition: >-
     the <a>construction</a> that expresses an <a inf:equational>equational</a> information packaging. <i>Example</i>: in <i>The Morning Star is the Evening Star</i>, it is asserted that two celestial objects that were once thought to be distinct objects (and given distinct names) are one and the same, namely the planet Venus. (Section 10.1.2)
   Examples:
@@ -4160,8 +4091,6 @@
     - sem:orientation
   FunctionOf:
     - cxn:manner-complex-predicate
-  AssociatedTo:
-    - cxn:manner-complex-predicate
   Definition: >-
     a stative <a>element</a> in a <a>stative complex predicate</a> that describes a <a>state</a> of the <a>event</a> denoted by the complex predicate. <i>Example</i>: in English <i>I ate the carrots slowly, slowly</i> is a property of the event of eating. Event-oriented contrasts with <a>participant-oriented</a>. (Section 14.1)
   Examples:
@@ -4273,9 +4202,6 @@
     - sem:event
   FunctionOf:
     - cxn:existential-negation-construction
-  AssociatedTo:
-    - cxn:presentational-location-construction
-    - cxn:existential-negation-construction
   Definition: >-
     a situation in which the existence of some entity is presented. Existential situations favor a <a inf:thetic>thetic</a> construal. <i>Example</i>: <i>There are apples in the kitchen</i> expresses the existence of the relevant set of apples. (Section 11.3.1)
   Examples:
@@ -4313,8 +4239,6 @@
     - sem:event
   FunctionOf:
     - cxn:experience-verb
-  AssociatedTo:
-    - cxn:experiential-verb
   Definition: >-
     an <a>experiential event</a> which describes the state holding between an <a>experiencer</a> directing her/his attention to a <a>stimulus</a> and the stimulus altering the mental state of the experiencer (or the inception of such a state). <i>Example</i>: <i>I saw the dog</i> is an instance of an experience event. (Section 7.4)
   Examples:
@@ -4383,8 +4307,6 @@
   SubtypeOf:
     - cxn:verb
   HeadOf:
-    - cxn:experiential-construction
-  AssociatedTo:
     - cxn:experiential-construction
   Definition: >-
     a <a>verb</a> that expresses an <a>experiential event</a>. Experiential events include <a>perception events</a>, <a>cognition events</a>, <a>emotion events</a>, and <a sem:sensation-event>(bodily) sensation events</a>; <a>ingestion events</a> also exhibit some semantic similarities to experiential events. (Sections 6.1.2, <b>7.4</b>)
@@ -4457,8 +4379,6 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:relative-clause-construction
-  AssociatedTo:
-    - sem:necessary-participant-sharing
   Definition: >-
     a <a>relative clause construction</a> in which the <a>relative clause head</a> is expressed as an <a inf:reference>argument</a> of the <a>matrix clause</a> <a>predicate</a>. <i>Example</i>: in <i>I ate the cheesecake</i> [<i>that Carol baked</i>], <i>that Carol baked</i> is an externally headed relative clause; the relative clause head is <i>the cheesecake</i>, which is the Direct Object of the matrix predicate <i>ate</i>. The externally headed strategy is by far the most common strategy for relative clause constructions. Externally headed relative clauses may be <a>prenominal</a>, <a>postnominal</a>, or <a>extraposed</a>. Externally headed relative clauses may use a <a>gap</a>, <a>pronoun-retention</a>, or <a>relative pronoun strategy</a>. (Section 19.2.2)
   Examples:
@@ -4565,8 +4485,6 @@
     - inf:discourse-coherence
   FunctionOf:
     - cxn:adverbial-clause-construction
-  AssociatedTo:
-    - cxn:relative-clause-construction
   Definition: >-
     a construal or <a>information packaging</a> of two <a>events</a> such that one event (the <a>ground</a>) serves as the reference point for the other event (the <a>figure</a>). <i>Example</i>: in <i>Cindy quit after Jim was promoted</i>, the two events are in a figure--ground packaging, such that Jim's being promoted serves as the reference point for the time of Cindy's quitting. This is an extension of the figure--ground construal beyond spatial relations. This information packaging is found in <a>adverbial clause constructions</a>. (Section 15.1.3)
   Examples:
@@ -4747,12 +4665,6 @@
   SubtypeOf:
     - cxn:free-modification-construction
     - cxn:relative-clause-construction
-  AssociatedTo:
-    - cxn:interrogative-pronoun
-    - cxn:generic-conditional-construction
-    - cxn:equative-construction
-    - cxn:concessive-conditional-construction
-    - cxn:concessive-construction
   Definition: >-
     a <a>relative clause construction</a> in which the head has one of several possible <a cxn:indefinite-pronoun>indefinite</a> functions -- that is, <a inf:specific-known-referent>specific</a>, <a inf:irrealis-referent>irrealis</a>, <a inf:free-choice-referent>free choice</a>, and/or <a cxn:universal-pronoun>universal</a>. <i>Example</i>: in <i>Take what(ever) you like</i>, <i>what(ever) you like</i> is a free relative clause using a <a>headless strategy</a>, and in <i>Take anything you like</i>, <i>anything you like</i> is a free relative clause using an <a>overt head strategy</a>. (Section 19.4)
   Examples:
@@ -4934,8 +4846,6 @@
   RoleOf:
     - sem:figure-ground-spatial-relation
     - sem:spatial-event
-  AssociatedTo:
-    - cxn:locative-phrase
   Definition: >-
     the reference point for locating a <a>figure</a> in a spatial scene. <i>Example</i>: in <i>Meagan ran into the cave</i>, the cave serves as the ground for locating the path of motion of Meagan. (Sections 7.3.1, 14.5)
   Examples:
@@ -5210,8 +5120,6 @@
     - inf:reference
   FunctionOf:
     - cxn:definite-pronoun
-  AssociatedTo:
-    - cxn:nonanaphoric-definite-article
   Definition: >-
     a <a>referent</a> for which the speaker and hearer have a <u>discourse file</u> (also described as: the referent is in the speaker's long-term memory) but which generally has not been activated in the discourse, at least not recently. (Section 3.3.1)
 
@@ -5224,8 +5132,6 @@
     - stative category
   ConstituentOf:
     - str:active-alignment
-  AssociatedTo:
-    - inf:inactive-referent
   Definition: >-
     the category in the <a>active alignment system</a> that <a>co-expresses</a> some <a>S roles</a> -- in particular, the S role of <q>die</q> -- and the <a>P role</a>. <i>Example</i>: in Lakhota, the index <i>ma-</i> <q>I/me</q> in <i>ó-ma-ya-kiye</i> <q>you help / helped me</q> and <i>ma-khuže</i> <q>I am sick</q> expresses the inactive category. (Section 6.3.3)
   Examples:
@@ -5421,8 +5327,6 @@
   Name: indexed
   SubtypeOf:
     - str:overt-coding
-  AssociatedTo:
-    - sem:participant-oriented
   Definition: >-
     a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> <a>indexes</a> an <a inf:reference>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
 
@@ -5437,8 +5341,6 @@
     - str:encoding-strategy
   ExpressionOf:
     - cxn:modification-construction
-  AssociatedTo:
-    - str:discourse-reference-system
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that refers to the referent. The third morpheme is called an <a>index</a>. <i>Example</i>: Spanish <i>las chicas cantaban</i> <q>the girls were singing</q> uses indexation to express the relation between the singing and the singers (the girls), with the 3rd person plural suffix <i>-an</i>. Indexation usually expresses the categories of <a>person</a>, <a>number</a>, and/or <a>gender--class</a>. Since <a>personal pronouns</a> usually express only those categories, personal pronouns are arguably also indexes. Often the referent/argument is left unexpressed when the indexical strategy is employed -- hence, the referent/argument is expressed only by the index. Indexical strategies include <a>person indexation</a>, <a>nonperson indexation</a>, and <a>classifiers</a>. (Sections 3.3.2, 4.4, 6.2.2)
   Examples:
@@ -5525,8 +5427,6 @@
     - cxn:human-proper-noun
     - cxn:place-proper-noun
     - cxn:proper-noun
-  AssociatedTo:
-    - cxn:proper-noun
   Definition: >-
     a particular entity with its own identity. <i>Examples</i>: a particular person such as Charlie Chaplin, or a specific table, are individuals. (Section 3.1.1)
 
@@ -5539,8 +5439,6 @@
     - inf:reference
   FunctionOf:
     - cxn:definite-pronoun
-  AssociatedTo:
-    - cxn:nonanaphoric-definite-article
   Definition: >-
     a <a>referent</a> whose identity can be inferred via the <a>type</a> described by the <a>referring phrase</a>. Example: in <i>the bowl of noodles on the kitchen counter</i>, the identity of the referent can be inferred from the type description (is a bowl, contains noodles, is on the kitchen counter) even if the referent has not previously been mentioned. Inferrable referents are very similar to <a>inactive</a> referents (which are sometimes called noncontaining inferrables) and may not be clearly distinguishable from them. (Section 3.3.1)
 
@@ -5876,8 +5774,6 @@
   Status: deleted
   SubtypeOf:
     - inf:predication
-  AssociatedTo:
-    - cxn:intransitive-construction
   Definition: >-
     a <a>predication</a> predicated of one <a>salient</a> <a inf:reference>argument</a>. <i>Example</i>: in <i>Sarah is swimming</i>, swimming is an intransitive predication because it is predicated of one argument, Sarah. (Section 6.1.2)
   Examples:
@@ -5979,8 +5875,6 @@
   FunctionOf:
     - cxn:inalienable-possession-attributive-phrase
     - cxn:kinship-noun
-  AssociatedTo:
-    - cxn:inalienable-possession-modification-construction
   Definition: >-
     a relation that holds between a person and certain other persons by biological relations, or social relations such as marriage, and other socially defined kin relations. <i>Example</i>: <i>my mother</i> is an instance of a <a>possession construction</a> expressing a kinship relation. (Section 4.1.4)
   Examples:
@@ -5996,8 +5890,6 @@
   FunctionOf:
     - cxn:knowledge-construction
     - cxn:knowledge-predicate
-  AssociatedTo:
-    - sem:epistemic-stance
   Definition: >-
     a <a>propositional attitude event</a> in which a <a>positive epistemic stance</a> toward the relevant <a>proposition</a> expressed is presupposed to be taken by the <u>speaker</u>. <i>Example</i>: in <i>Sally knows that Donald won the election</i>, Sally's belief with respect to the proposition that Donald won the election is reported by the speaker; and, in addition, a <a>positive epistemic stance</a> is taken by the speaker toward that proposition (i.e., the speaker believes that Donald indeed won the election). (Section 18.2.2)
   Examples:
@@ -6356,8 +6248,6 @@
     - sem:event
   FunctionOf:
     - cxn:manner-verb
-  AssociatedTo:
-    - cxn:manner-complex-predicate
   Definition: >-
     an event that is described in terms of the manner by which the process progresses (or is brought about by an external cause). <i>Example</i>: in <i>She smeared jam on the toast</i>, the event is described in terms of the manner by which the jam is applied to the toast. (Section 7.3.2)
   Examples:
@@ -6586,7 +6476,6 @@
   SubtypeOf:
     - sem:mental-space
   AssociatedTo:
-    - cxn:thetic-construction
     - cxn:exclamative-construction
   Definition: >-
     a speaker attitude of surprise toward the <a>propositional content</a> in the speaker's utterance. <i>Example</i>: Lhasa Tibetan has a distinct <a>construction</a> for expressing the mirative function with the form <i>'dug</i>: <i>nga-rdngul tog=tsam <b>'dug</b></i> <q>I have some money</q> expresses not only that the speaker has money, but that she is surprised to find this out. (Sections 12.1, 12.5.2)
@@ -6768,8 +6657,6 @@
     - sem:possession
     - sem:pursuit-event
     - sem:sensation-event
-  AssociatedTo:
-    - cxn:intransitive-construction
   Definition: >-
     an event with a <a>valency</a> of one -- that is, with one <a>central participant role</a>. <i>Example</i>: sleeping is a monovalent event. (Section 6.1.2)
 
@@ -6796,8 +6683,6 @@
   FunctionOf:
     - cxn:motion-clause
     - cxn:motion-verb
-  AssociatedTo:
-    - str:middle-voice
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
   Examples:
@@ -6856,8 +6741,6 @@
     - cxn:existential-negation-construction
     - cxn:negation-construction
     - cxn:prohibitive-construction
-  AssociatedTo:
-    - cxn:negation-construction
   Definition: >-
     indicates that the situation expressed in the utterance is false. <i>Example</i>: <i>Kit didn't find his glasses</i> expresses that Kit finding his glasses is false. This is the prototypical use of negative polarity. Negative polarity may be used to reject other aspects of the construal of the situation expressed in the utterance, as in <i>Kit didn't like the movie -- he loved it!</i> (where the degree expressed by <i>like</i> is the information rejected). (Section 12.1)
   Examples:
@@ -7014,8 +6897,6 @@
   Name: non-indexed
   SubtypeOf:
     - str:zero-coding
-  AssociatedTo:
-    - sem:event-oriented
   Definition: >-
     a <a>strategy</a> in which the <a>stative</a> <a>predicate</a> in a <a>stative complex predicate construction</a> does not <a>index</a> an <a inf:reference>argument</a> of the other (<a>dynamic</a>) predicate in the construction. (Section 14.2)
 
@@ -7318,11 +7199,6 @@
     - cxn:nominal-attributive-phrase
   FillerOf:
     - sem:participant-role
-  AssociatedTo:
-    - cxn:noun
-    - cxn:nominal-phrase
-    - cxn:nominal-modification-construction
-    - cxn:predicate-nominal-construction
   Definition: >-
     concepts belonging to a <a>semantic class</a> including persons, animals, and physical objects of various kinds. <i>Example</i>: both boys and dogs as well as dishes are examples of object concepts. (Sections 2.1 and <b>3.1.2</b>, which includes an enumeration of types of object concepts)
 
@@ -7557,8 +7433,6 @@
     - sem:possession
   FunctionOf:
     - cxn:alienable-possession-attributive-phrase
-  AssociatedTo:
-    - cxn:alienable-possession-modification-construction
   Definition: >-
     a culturally sanctioned relation of control between a person and a physical object, such as an artifact, foodstuff, or shelter, or a more abstract object of value such as shares in a company. <i>Example</i>: in a common interpretation of <i>Sally's truck</i>, Sally owns the truck. (Section 4.1.4)
   Examples:
@@ -7603,8 +7477,6 @@
     - part--whole (relation)
   SubtypeOf:
     - sem:possession
-  AssociatedTo:
-    - cxn:inalienable-possession-modification-construction
   Definition: >-
     a relation between an <a sem:object-concept>object</a>, particularly an <a>inanimate</a> object, and a part of that object. <i>Example</i>: <i>a drawer of the desk</i> is a <a>possession construction</a> expressing a part--whole relation. The part--whole relation is a generalization of the <a>body part relation</a>. (Section 4.1.4)
   Examples:
@@ -7663,9 +7535,6 @@
   FunctionOf:
     - cxn:depictive-complex-predicate
     - cxn:resultative-complex-predicate
-  AssociatedTo:
-    - cxn:resultative-complex-predicate
-    - cxn:depictive-complex-predicate
   Definition: >-
     a stative <a>element</a> in a <a>stative complex predicate</a> that describes a <a>state</a> of one of the <a>participants</a> in the <a>event</a> denoted by the complex predicate. <i>Example</i>: in English <i>I ate the carrots raw</i>, <i>raw</i> is a property of the carrots, not the event of eating. Contrasts with <a>event-oriented</a>. (Section 14.1)
   Examples:
@@ -7821,8 +7690,6 @@
     - cxn:complement-taking-predicate
   HeadOf:
     - cxn:perception-construction
-  AssociatedTo:
-    - sem:perception-event
   Definition: >-
     A perception complement-taking predicate is a <a>predicate</a> that expresses perceiving an event, which is expressed as the <a>complement</a> event of the predicate. <i>Example</i>: in <i>We watched the elk graze in the caldera</i>, watched denotes a perception event. The complement event has <a>dependent time reference</a>; the complement event must be occurring at the same time as the perceiving event (although modern media allowing watching a prior event via a recording). (Section 18.2.2)
   Examples:
@@ -7853,8 +7720,6 @@
     - cxn:verb
   HeadOf:
     - cxn:perception-clause
-  AssociatedTo:
-    - sem:perception-event
   Definition: >-
     a perception verb is a <a>verb</a> that expresses the event of perceiving an object. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
@@ -7898,10 +7763,6 @@
   FunctionOf:
     - cxn:personal-pronoun
     - cxn:possessive-pronoun
-  AssociatedTo:
-    - str:indexation-feature
-    - str:person-indexation
-    - cxn:personal-pronoun
   Definition: >-
     a semantic category found in personal pronouns and indexation, specifying the referent with respect to their role in the <a>speech act situation</a>. The basic values are <a>first person</a>, <a>second person</a>, and <a>third person</a>. (Section 3.1.1)
 
@@ -8008,8 +7869,6 @@
     - sem:tamp
   FunctionOf:
     - cxn:polarity-focus-construction
-  AssociatedTo:
-    - cxn:polarity-focus-construction
   Definition: >-
     a category that describes the truth/falsity of the situation expressed in the utterance. Polarity is either <a>positive</a> or <a>negative</a>. (Section 12.1)
 
@@ -8074,8 +7933,6 @@
     - inf:response
   FunctionOf:
     - cxn:polarity-response-construction
-  AssociatedTo:
-    - inf:polarity-question
   Definition: >-
     the <u>answer</u> to a <a inf:polarity-question>polarity question</a>. <i>Example</i>: the polarity response to <i>Do you have any money?</i> in English is <i>Yes (I do)</i> or <i>No (I don't)</i>. (This is excluding other less cooperative responses such as <i>I don't know</i> or <i>It's none of your business</i>.) (Section 12.3.3)
   Examples:
@@ -8159,8 +8016,6 @@
     - cxn:possessive-pronoun
     - cxn:predicational-possession
     - cxn:presentational-possession
-  AssociatedTo:
-    - cxn:possessive-modification-construction
   Definition: >-
     a semantic relation between two objects, prototypically <a>ownership</a>, but also including weaker relations such as temporary ownership and physical contiguity. <i>Example</i>: in <i>I have a pen</i>, there is a possession relation between myself and the pen -- I am the <a>possessor</a> and the pen is the <a>possessum</a>. This possession relation could be full ownership, temporary ownership (someone lent it to me), or physical contiguity (I have a pen at hand). Other object--object relations such as <a>body parts</a>, <a>part--whole</a>, and <a>kinship</a> are generally also included under possession relations. (Section 10.4.2)
   Examples:
@@ -8322,8 +8177,6 @@
     - inf:complex-figure
     - inf:figure-ground
   FunctionOf:
-    - cxn:main-clause
-  AssociatedTo:
     - cxn:main-clause
   Definition: >-
     the <a>information</a> added to the discourse context when a <u>sentence</u> is uttered, or, more precisely, <q>the proposition expressed by a sentence which the hearer is expected to know or take for granted as a result of hearing the sentence uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>Alarms ringing, the burglar fled</i>, the <a>clause</a> <i>the burglar fled</i> is pragmatically asserted. The criterion typically used for pragmatic assertion is that the content of a sentence can be negated or questioned, though other criteria are sometimes used, such as hedging. (Sections 13.2.1, <b>15.1.2</b>)
@@ -8756,8 +8609,6 @@
   Name: presentational construction
   SubtypeOf:
     - cxn:entity-central-construction
-  AssociatedTo:
-    - cxn:predicate-nominal-construction
   Definition: >-
     the <a>construction</a> that expresses a <a inf:presentational>presentational</a> information packaging. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. Subtypes of the presentational construction are the <a cxn:presentational-location-construction>presentational location</a> and the <a>presentational possession constructions</a>. (Sections 10.1.2, 10.4)
   Examples:
@@ -8976,10 +8827,6 @@
     - cxn:property-referring-phrase
   AttributeOf:
     - sem:object-concept
-  AssociatedTo:
-    - cxn:adjective
-    - cxn:adjectival-phrase
-    - cxn:predicate-adjectival-construction
   Definition: >-
     a concept belonging to a <a>semantic class</a> of <a>relational</a>, 1-dimensional, usually scalar, and usually stable concepts. <i>Examples</i>: age, height, shape, and so on are property concepts -- they are defined on a 1-dimensional scale, and many of them are stable properties of the <a sem:object-concept>object</a> they apply to. (Sections 2.1, and <b>4.1.1</b>, which includes an enumeration of types of property concepts)
 
@@ -9250,8 +9097,6 @@
   Name: question pronoun
   SubtypeOf:
     - cxn:semantically-nonspecific-pronoun
-  AssociatedTo:
-    - cxn:information-question-construction
   Definition: >-
     a <a>pronoun</a> that expresses a <a>question referent</a>. (Section 3.5)
 
@@ -9330,8 +9175,6 @@
     - sem:event
   FunctionOf:
     - cxn:reciprocal-construction
-  AssociatedTo:
-    - str:monoclausal-transitive-reciprocal-strategy
   Definition: >-
     an <a>event</a> type in which one <a>participant</a> acts upon another participant, and the second participant acts on the first in the same way. That is, each participant is both the <a>initiator</a> and <a>endpoint</a> of <a>transmission of force</a> for the same type of action. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
   Examples:
@@ -9490,8 +9333,6 @@
   SubtypeOf:
     - cxn:construction
     - cxn:phrase
-  AssociatedTo:
-    - cxn:reference-tracking-construction
   Definition: >-
     a <a>construction</a> that performs the act of <a>reference</a>. <i>Example</i>: <i>the blue mailboxes</i> is a referring phrase that refers to a group of mailboxes. (Sections 2.2.2, <b>3.1</b>)
   Examples:
@@ -9749,8 +9590,6 @@
     - inf:information-gap
   FunctionOf:
     - cxn:response-construction
-  AssociatedTo:
-    - inf:interrogative
   Definition: >-
     the answer to an <a inf:interrogative>interrogative</a> (question) <a inf:speech-acts>speech act</a>. Like interrogatives, responses are divided into <a inf:polarity-response>polarity responses</a> and <a inf:information-question-response>information (question) responses</a>.
 
@@ -10054,8 +9893,6 @@
     - inf:reference
   FunctionOf:
     - cxn:definite-pronoun
-  AssociatedTo:
-    - cxn:anaphoric-article
   Definition: >-
     a <a>referent</a> whose <u>discourse file</u> has been activated (i.e. it is in short-term memory), but is not at the center of the hearer's consciousness at the current point in the discourse. The term <q>recognitional</q> is used for a referent so peripheral to the hearer's consciousness that the speaker is unsure whether the hearer remembers it. (Section 3.3.1)
 
@@ -10276,8 +10113,6 @@
     - inf:modification
     - inf:anchoring
     - inf:typifying
-  AssociatedTo:
-    - cxn:nominal-modification-construction
   Definition: >-
     a subtype of <a>modification</a> that picks out a particular referent by situating it in physical space (<a>deixis</a>) or in the (knowledge/belief) <a>mental space</a> of the interlocutors (<a>information status</a>). (Section 4.1.1)
 
@@ -10485,8 +10320,6 @@
     - sem:event
   FunctionOf:
     - cxn:spontaneous-verb
-  AssociatedTo:
-    - str:middle-voice
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving a <a>participant</a> that undergoes a change without an external cause. <i>Examples</i>: dying and melting are spontaneous events. (Sections 6.3.4, 7.2)
 
@@ -10629,8 +10462,6 @@
   Name: subcategorizing
   SubtypeOf:
     - inf:modification
-  AssociatedTo:
-    - cxn:adjective
   Definition: >-
     a subtype of <a>modification</a> supporting the basic <u>categorizing</u> function of <a>common nouns</a>. Usually performed by <a>property</a> concepts. (Sections 4.1.1, <b>4.1.2</b>)
 
@@ -10693,8 +10524,6 @@
   Name: subjective
   SubtypeOf:
     - sem:epistemic-modality
-  AssociatedTo:
-    - cxn:exclamative-construction
   Definition: >-
     describing an entity from the implicit perspective of the speaker and the speech event, e.g. the speech event time. <i>Example</i>: in the subjective <a>epistemic modal</a> <a>construction</a> <i>Wendy might be in Santa Fe</i>, the uncertainty about Wendy being in Santa Fe is that of the speaker at the time of the speech event, although neither of these pieces of information (the speaker or the time of the speech event) are explicitly expressed in the sentence. (Section 12.3.4)
   Examples:
@@ -10897,8 +10726,6 @@
   SubtypeOf:
     - sem:meaning
   FunctionOf:
-    - cxn:auxiliary
-  AssociatedTo:
     - cxn:auxiliary
   Definition: >-
     an abbreviation for the set of <a>semantic</a> categories of <a>tense</a>, <a>aspect</a>, <a>modality</a>, and <a>polarity</a>, which primarily describe certain semantic characteristics of the <a>event</a> denoted by a <a>predicate</a>. TAMP is morphosyntactically generally associated with the predicate, typically as a predicate inflection or expressed in an <a>auxiliary construction</a>. (Section 13.1.2)
@@ -11150,8 +10977,6 @@
   Name: transfer verb
   SubtypeOf:
     - cxn:verb
-  AssociatedTo:
-    - cxn:ditransitive-construction
   Definition: >-
     a <a>verb</a> that expresses a <a>transfer event</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
   Examples:
@@ -11178,8 +11003,6 @@
   Status: deleted
   SubtypeOf:
     - inf:predication
-  AssociatedTo:
-    - cxn:transitive-construction
   Definition: >-
     a <a>predication</a> predicated of two <a>salient</a> <a inf:reference>arguments</a>. <i>Example</i>: in <i>Sarah wrote the letter</i>, writing is a transitive predication because it is predicated of two arguments, Sarah and the letter. (Section 6.1.2)
   Examples:
@@ -11225,8 +11048,6 @@
     - sem:distributive-quantifier
     - sem:set-member
     - sem:mensural-concept
-  AssociatedTo:
-    - sem:monovalent
   Definition: >-
     a concept that describes something that <dq>comes and goes</dq> over time. <i>Example</i>: being cold is a state that may be true of a person at some point in time, but not true at another point in time. (Section 2.1)
 
@@ -11273,8 +11094,6 @@
     - sem:caused-motion
     - sem:agentive-experience-event
     - sem:agentive-ingestion-event
-  AssociatedTo:
-    - cxn:ditransitive-construction
   Definition: >-
     an event with a <a>valency</a> of three -- that is, with three <a>central participant roles</a>. <i>Example</i>: giving is a trivalent event. (Section 6.1.2)
 
@@ -11335,8 +11154,6 @@
     - inf:modification
   FunctionOf:
     - cxn:binominal-lexeme
-    - cxn:typifying-construction
-  AssociatedTo:
     - cxn:typifying-construction
   Definition: >-
     the <a>information packaging</a> <a>function</a> whereby an <a sem:object-concept>object</a> <a>modifier</a> subclassifies the <a>object concept</a> of the <a>head</a> <a>noun</a> that it <a inf:modification>modifies</a>. <i>Example</i>: in <i>women's magazine</i>, the object modifier expressed by <i>women's</i> subclassifies the type of magazine that the <a>referring phrase</a> as a whole refers to. Typifying is the object modifying variant of the <a>subcategorizing</a> function.
@@ -11510,8 +11327,6 @@
     - str:overt-coding
   ExpressionOf:
     - cxn:relative-clause-construction
-  AssociatedTo:
-    - sem:necessary-participant-sharing
   Definition: >-
     a <a>strategy</a> for the expression of the <a>semantic role</a> of the <a>relative clause head</a> in the event denoted by the <a>relative clause</a> of an <a>externally headed</a> <a>relative clause construction</a>, in which the <a>predicate</a> of the relative clause uses different <a cxn:clause>voice</a> <a>forms</a> in order to specify the semantic role of the shared participant in the relative clause event. <i>Example</i>: in Luganda <i>ekiso</i> [<i>John kyeyattisa enkoko</i>] <q>the knife with which John killed the chicken</q>, the predicate <i>kyeyattisa</i> <q>killed</q> contains the <a sem:instrument>instrumental</a> <a cxn:applicative-object-phrase>applicative</a> suffix <i>-is</i> that indicates that the <a>relative clause head</a> <i>ekiso</i> <q>knife</q> denotes the <a>instrument</a> participant in the killing event. Comrie (2003b) restricts verb-coding strategies to languages which use voice forms that are exclusively found in relative clause constructions (and thus would exclude the Luganda example); we follow the broader definition introduced in Keenan (1972). (Section 19.3)
   Examples:
@@ -11563,8 +11378,6 @@
     - str:copula
   ExpressionOf:
     - cxn:nonprototypical-predication
-  AssociatedTo:
-    - cxn:support-verb
   Definition: >-
     a <a>strategy</a> used for <a>nonprototypical predication</a>, which uses a morpheme different from the <a sem:object-concept>object</a> concept word, the <a>copula</a>, which is inflected for at least some of the categories that prototypical <a>predication</a> <a>constructions</a> in the language -- that is, predication constructions headed by a <a>verb</a> -- also inflect for. Example: in the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, <i>is</i> is a copula that inflects for <a>person</a>, <a>number</a>, and <a>tense</a> like English Verbs do. (Sections 1.4, <b>10.2</b>)
 
@@ -11600,8 +11413,6 @@
   Name: weather event
   SubtypeOf:
     - sem:event
-  AssociatedTo:
-    - cxn:event-central-construction
   Definition: >-
     a situation type describing the weather that is typically construed as <a inf:thetic>thetic</a>. <i>Examples</i>: <i>It's raining</i> and <i>The wind is blowing</i> are expressions of weather. Weather is sometimes described as an <a>event</a> without any (<a>salient</a>) <a>participants</a>. Its tendency to be construed as thetic is attributed to the fact that weather is difficult to divide into a <a>topic</a> and a <a>comment</a> and be construed as <a>topic--comment information packaging</a>. (Sections 11.3.1, 11.3.3)
   Examples:
@@ -11616,8 +11427,6 @@
   FunctionOf:
     - cxn:wishing-construction
     - cxn:wishing-predicate
-  AssociatedTo:
-    - cxn:evaluative-predicate
   Definition: >-
     an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the wishing event is made, and there is a <a>negative epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
   Examples:
