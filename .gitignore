@@ -9,6 +9,8 @@ local*
 # Windows specific files
 [Dd]esktop.ini
 
+# VSCode specific files
+.vscode/
 
 ### Python ignores, simplified from here: https://github.com/github/gitignore/blob/main/Python.gitignore
 
