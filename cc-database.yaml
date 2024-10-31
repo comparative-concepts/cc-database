@@ -36,9 +36,9 @@
       Gloss: S/he at home not at home
       Translation: Is s/he at home?
 
-- Id: str:a-p-disalignment
+- Id: str:passive-inverse-alignment
   Type: str
-  Name: A/P disalignment
+  Name: passive-inverse alignment
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
@@ -831,7 +831,7 @@
   Type: str
   Name: animacy-based split ergativity
   SubtypeOf:
-    - str:a-p-disalignment
+    - str:passive-inverse-alignment
   Definition: >-
     a <a>strategy</a> for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding>overt</a> <a>flag</a> of higher-<a>salience</a> <a>P</a> <a>participants</a> and also for lower-salience <a>A</a> <a>participants</a>. <i>Example</i>: in Dyirbal, the Accusative Case suffix <i>-na</i> is used for <a cxn:first-person-pronoun>first</a> and <a cxn:second-person-pronoun>second pronominal</a> P participants, and the Ergative Case suffix <i>-ŋu</i> is used for <a cxn:third-person-pronoun>third person</a> pronominal and <a>common noun</a> A participants. (Section 8.3)
   Examples:
@@ -2671,13 +2671,11 @@
   Definition: >-
     a discourse context in which there is shared information between two propositions but some information contrasts between the two. The two major types of contrast are <a>counterpresuppositional contrast</a> (the one usually meant with the term <q>contrast</q>) and <a>parallel contrast</a>. (Section 11.4.1)
 
-- Id: str:control-based-causative-strategies
+- Id: str:control-based-strategy
   Type: str
-  Name: control-based causative strategies
+  Name: control-based strategy
   SubtypeOf:
-    - str:encoding-strategy
-  ExpressionOf:
-    - cxn:causative-construction
+    - str:causative-alignment
   Definition: >-
     <u>monoclausal</u> <a>strategies</a> for the <a>causative construction</a> in which the <a>causee</a> is coded differently depending on how much control the causee has in the outcome of the event. <i>Example</i>: in Hungarian, there is a contrast between encoding the causee in the Accusative Case when the causee has no control (<i>Köhögtettem a gyerek<b>-et</b></i> <q>I made the boy [<sc>acc</sc>] cough</q>) and encoding the causee in the Instrumental Case when the causee has some control over the outcome (<i>Köhögtettem a gyerek-<b>kel</b></i> <q>I had the boy [<sc>inst</sc>] cough</q>). (Section 9.2)
   Examples:
@@ -3304,7 +3302,7 @@
   Type: str
   Name: differential object marking
   SubtypeOf:
-    - str:a-p-disalignment
+    - str:passive-inverse-alignment
   Definition: >-
     a strategy that is marginal for the <a>passive--inverse voice construction</a> in which there is a distinct, <a str:overt-coding>overt</a> <a>flag</a> of higher <a def:animacy-hierarchy>animacy</a> / higher <a>information status</a> -- that is, higher-<a>salience</a> -- Ps. <i>Example</i>: in Spanish, <i>El director busca a un empleado</i> <q>The director is looking for a [specific] clerk</q>, the phrase <i>un empleado</i> <q>a clerk</q>, referring to the P participant, uses the overt flag <i>a</i>. Differential object marking is not usually considered a strategy of the passive--inverse construction because the <a>A</a> <a>participant</a> is not reduced in salience, although the P participant is higher in salience. (Section 8.3)
   Examples:
@@ -7098,6 +7096,8 @@
   Type: str
   Name: noun incorporation
   SubtypeOf:
+    - str:antipassive-alignment
+    - str:applicative-alignment
     - str:subject-predicate-alignment
   Definition: >-
     a <a>strategy</a> used for a range of <a>functions</a> but mostly for the <a>antipassive construction</a> function, in which the <a>noun</a> expressing the <a>P</a> <a>participant</a> is morphologically reduced and compounded with the <a>verb</a>. <i>Example</i>: in <i>He is off mountain-climbing</i>, the P participant, the mountain, is expressed by the noun <i>mountain</i> compounded with the verb form <i>climbing</i>. (Section 8.4)
@@ -7293,25 +7293,9 @@
   Examples:
     - Emily viewed the hawk <e>with binoculars</e>
 
-- Id: str:object-disalignment
+- Id: str:applicative-alignment
   Type: str
-  Name: object disalignment
-  SubtypeOf:
-    - str:alignment-system
-  ExpressionOf:
-    - cxn:antipassive-construction
-    - cxn:experiential-construction
-    - cxn:possessed-argument-construction
-    - cxn:motion-clause
-    - cxn:perception-clause
-  ModeledOn:
-    - cxn:transitive-construction
-  Definition: >-
-    temporary: how the <a sem:p-role>P</a> or other <a inf:high-topicality>most salient</a> nonsubject argument, coded as object in the <a>basic voice</a> <a>transitive construction</a>, is coded, i.e. (more) object-like or (more) oblique-like.
-
-- Id: str:oblique-disalignment
-  Type: str
-  Name: oblique disalignment
+  Name: applicative alignment
   SubtypeOf:
     - str:alignment-system
   ExpressionOf:
@@ -7326,7 +7310,7 @@
   Type: str
   Name: omitted A strategy
   SubtypeOf:
-    - str:a-p-disalignment
+    - str:passive-inverse-alignment
   Definition: ''
   FromGlossary: false
 
@@ -7334,7 +7318,7 @@
   Type: str
   Name: omitted P strategy
   SubtypeOf:
-    - str:object-disalignment
+    - str:antipassive-alignment
   Definition: >-
     a <a>strategy</a> of the <a>antipassive construction</a> in which the <a>P</a> <a>participant</a> is unexpressed. <i>Example</i>: in <i>She ate</i>, the P participant (the food eaten) is left unexpressed. (Section 8.4)
   Examples:
@@ -7613,7 +7597,7 @@
   Type: cxn
   Name: partitive construction
   SubtypeOf:
-    - cxn:anchoring-construction
+    - cxn:nominal-modification-construction
   Definition: >-
     an <a>anchoring construction</a> that has a <a cxn:piece-term>piece</a> <a>noun</a> as the <a>head</a> <a>referent</a> and an <a>anchor</a> as the <a>modifier</a>. Example: <i>a piece of the cake</i> is a partitive construction in that the <a sem:object-concept>object</a> modifier <i>of the cake</i> is a particular <a>individual</a> and hence functions as an anchor. (Section 5.2.2)
 
@@ -8016,6 +8000,7 @@
     - cxn:possessive-pronoun
     - cxn:predicational-possession
     - cxn:presentational-possession
+    - cxn:possessive-modification-construction
   Definition: >-
     a semantic relation between two objects, prototypically <a>ownership</a>, but also including weaker relations such as temporary ownership and physical contiguity. <i>Example</i>: in <i>I have a pen</i>, there is a possession relation between myself and the pen -- I am the <a>possessor</a> and the pen is the <a>possessum</a>. This possession relation could be full ownership, temporary ownership (someone lent it to me), or physical contiguity (I have a pen at hand). Other object--object relations such as <a>body parts</a>, <a>part--whole</a>, and <a>kinship</a> are generally also included under possession relations. (Section 10.4.2)
   Examples:
@@ -11014,15 +10999,11 @@
   Definition: >-
     a ranking of <a>events</a> by their likelihood to be expressed by the <a>transitive construction</a> (the <dq>more transitive</dq> end of the hierarchy) or a <a str:subject-oblique-strategy>subject--oblique</a> <a>construction</a> (the <dq>less transitive</dq> end of the hierarchy). (Section 7.3.3)
 
-- Id: str:transitivity-based-causative-strategies
+- Id: str:transitivity-based-strategy
   Type: str
-  Name: transitivity-based causative strategies
+  Name: transitivity-based strategy
   SubtypeOf:
-    - str:system
-  ExpressionOf:
-    - cxn:causative-construction
-  ModeledOn:
-    - cxn:basic-voice
+    - str:causative-alignment
   Definition: >-
     <u>monoclausal</u> <a>strategies</a> for the <a>causative construction</a> in which the <a>causee</a> in the <a>causative event</a> is coded differently depending on the <a>valency</a> of the corresponding <a>base event</a>. <i>Example</i>: in Turkish, the causee in a causative event is encoded in the Accusative Case if the base event is <a>monovalent</a> (<i>Ali Hasan<b>-t</b> öl-dür-dü</i> <q>Ali killed Hasan [<sc>acc</sc>]</q>), and in the Dative Case if the base event is <a>bivalent</a> (<i>Dişçi mektub-u müdür<b>-e</b> imzala-t-tí</i> <q>The dentist got the director [<sc>dat</sc>] to sign the letter</q>). (Section 9.2)
   Examples:
@@ -13800,7 +13781,7 @@
   Type: sem
   Name: set member
   SubtypeOf:
-    - sem:set-member
+    - sem:event
   FunctionOf:
     - cxn:set-member-attributive-phrase
     - cxn:set-member-term
@@ -13873,5 +13854,46 @@
   ExpressionOf:
     - cxn:existential-negation-construction
     - cxn:prohibitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:antipassive-alignment
+  Type: str
+  Name: antipassive alignment
+  SubtypeOf:
+    - str:alignment-system
+  ExpressionOf:
+    - cxn:antipassive-construction
+  ModeledOn:
+    - cxn:transitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:causative-alignment
+  Type: str
+  Name: causative alignment
+  SubtypeOf:
+    - str:alignment-system
+  ExpressionOf:
+    - cxn:causative-construction
+  ModeledOn:
+    - cxn:basic-voice
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:oblique-p-strategy
+  Type: str
+  Name: oblique P strategy
+  SubtypeOf:
+    - str:antipassive-alignment
+    - str:applicative-alignment
+  Definition: ''
+  FromGlossary: false
+
+- Id: str:base-object-inertia
+  Type: str
+  Name: base object inertia
+  SubtypeOf:
+    - str:applicative-alignment
   Definition: ''
   FromGlossary: false
