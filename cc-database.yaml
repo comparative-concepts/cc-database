@@ -368,11 +368,6 @@
     - inf:modification
   FunctionOf:
     - cxn:admodifier
-    - cxn:comparative-form
-    - cxn:downtoner
-    - cxn:intensifier
-    - cxn:measurement
-    - cxn:superlative-form
   Definition: >-
     the <a>information packaging</a> function of qualifying a <a>modifier</a>, usually via semantically expressing <a>degree</a> or hedging of the <a>property</a> denoted by the modifier. <i>Example</i>: in <i>very slow</i>, the degree <a>admodifier</a> <i>very</i> intensifies the value of the speed dimension denoted by <i>slow</i>. (Section 2.2.2)
   Examples:
@@ -1695,19 +1690,13 @@
   SubtypeOf:
     - sem:participant
   FunctionOf:
-    - cxn:applicative-object-phrase
     - cxn:causer-phrase
     - cxn:core-argument-phrase
     - cxn:ditransitive-a-phrase
-    - cxn:experiencer-phrase
     - cxn:figure-phrase
-    - cxn:object-phrase
     - cxn:p-phrase
-    - cxn:passive-inverse-p-phrase
     - cxn:r-phrase
     - cxn:s-phrase
-    - cxn:stimulus-phrase
-    - cxn:subject-phrase
     - cxn:t-phrase
     - cxn:transitive-a-phrase
   Definition: >-
@@ -2241,16 +2230,10 @@
   SubtypeOf:
     - inf:discourse-coherence
   FunctionOf:
-    - cxn:adversative-coordination
-    - cxn:conjunctive-coordination
-    - cxn:coordinate-clause-construction
     - cxn:coordinate-construction
     - cxn:disjunctive-coordination
-    - cxn:exclusive-disjunctive-coordination
     - cxn:exhaustive-list-coordination
-    - cxn:inclusive-disjunctive-coordination
     - cxn:non-exhaustive-list-coordination
-    - cxn:nonclausal-coordination
   Definition: >-
     a construal or <a>information packaging</a> of two <a>events</a> such that the two events are construed as parts of a complex whole. <i>Example</i>: in <i>Jim was promoted and Cindy quit</i>, the events of Jim being promoted and Cindy quitting are conceived of as parts of a complex whole (e.g. a causal sequence). A complex figure packaging construes the events as equal in status, and also requires a common denominator for the two events. This information packaging is found in <a>coordinate constructions</a>. (Section 15.1.3)
   Examples:
@@ -2610,36 +2593,13 @@
   AttributeOf:
     - sem:entity
   FunctionOf:
-    - cxn:anaphoric-article
-    - cxn:anaphoric-pronoun
-    - cxn:article
-    - cxn:comparative-pronoun
-    - cxn:conditional-pronoun
     - cxn:definite-article
-    - cxn:definite-pronoun
     - cxn:determiner
-    - cxn:direct-negation-pronoun
-    - cxn:free-choice-pronoun
     - cxn:generic-article
-    - cxn:generic-pronoun
     - cxn:indefinite-article
-    - cxn:indefinite-pronoun
-    - cxn:indirect-negation-pronoun
-    - cxn:interrogative-pronoun
-    - cxn:irrealis-pronoun
-    - cxn:nonanaphoric-definite-article
-    - cxn:pragmatically-nonspecific-article
-    - cxn:pragmatically-nonspecific-pronoun
-    - cxn:pragmatically-specific-article
-    - cxn:pragmatically-specific-pronoun
     - cxn:pronoun
     - cxn:proper-noun
     - cxn:question-pronoun
-    - cxn:semantically-nonspecific-article
-    - cxn:semantically-nonspecific-pronoun
-    - cxn:specific-known-pronoun
-    - cxn:specific-unknown-pronoun
-    - cxn:universal-pronoun
   Definition: >-
     an entity defined relative to some factor in the speech act context. <i>Examples</i>: <i>this table</i> is defined as a table but relative to the location of the speaker (<i>this</i> expresses the contextual component); <i>the table</i> is defined as a table relative to the shared knowledge of speaker and hearer (<i>the</i> expresses the contextual component). (Section 3.1.1)
   Examples:
@@ -2975,7 +2935,6 @@
     - inf:speech-acts
   FunctionOf:
     - cxn:declarative-construction
-    - cxn:declarative-negation-construction
     - cxn:existential-negation-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which simply asserts its <a>propositional content</a>. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. (Section 12.1)
@@ -3429,24 +3388,8 @@
   SubtypeOf:
     - inf:information-packaging
   FunctionOf:
-    - cxn:additive-construction
-    - cxn:apprehensional-construction
-    - cxn:causal-construction
-    - cxn:comparative-conditional-construction
-    - cxn:comparative-construction
     - cxn:complex-sentence
-    - cxn:concessive-conditional-construction
-    - cxn:concessive-construction
-    - cxn:conditional-construction
-    - cxn:equative-construction
     - cxn:generic-conditional-construction
-    - cxn:let-alone-construction
-    - cxn:means-construction
-    - cxn:negative-circumstantial-construction
-    - cxn:purpose-construction
-    - cxn:substitutive-construction
-    - cxn:subtractive-construction
-    - cxn:temporal-construction
   Definition: ''
   FromGlossary: false
 
@@ -3753,61 +3696,27 @@
   SubtypeOf:
     - sem:meaning
   FunctionOf:
-    - cxn:adjective-modification-construction
-    - cxn:alienable-possession-modification-construction
-    - cxn:anaphoric-pronoun
-    - cxn:anaphoric-head-construction
+    - cxn:action-modification-construction
     - cxn:anaphoric-head-relative-clause-construction
-    - cxn:anchoring-construction
-    - cxn:attributive-phrase
-    - cxn:binominal-lexeme
-    - cxn:comparative-pronoun
-    - cxn:conditional-pronoun
     - cxn:coordinand
     - cxn:coordinate-construction
-    - cxn:definite-pronoun
-    - cxn:demonstrative-pronoun
-    - cxn:direct-negation-pronoun
     - cxn:dynamic-predicate-part
-    - cxn:free-choice-pronoun
     - cxn:free-modification-construction
-    - cxn:free-relative-clause-construction
-    - cxn:generic-pronoun
-    - cxn:hanging-topic-phrase
-    - cxn:inalienable-possession-modification-construction
-    - cxn:indefinite-pronoun
-    - cxn:indirect-negation-pronoun
-    - cxn:interrogative-pronoun
-    - cxn:irrealis-pronoun
-    - cxn:locative-modification-construction
-    - cxn:mensural-modification-construction
-    - cxn:modification-construction
     - cxn:modifier
     - cxn:nominal-modification-construction
     - cxn:noun-complement-referring-phrase
-    - cxn:noun-complement-head
     - cxn:numeral-modification-construction
     - cxn:phrase
-    - cxn:possessive-modification-construction
-    - cxn:pragmatically-nonspecific-pronoun
-    - cxn:pragmatically-specific-pronoun
     - cxn:presentational-construction
     - cxn:pronoun
     - cxn:quantifier-modification-construction
     - cxn:question-pronoun
     - cxn:referent-expression
-    - cxn:referring-phrase
     - cxn:relative-clause-head
     - cxn:relativized-referring-phrase
-    - cxn:semantically-nonspecific-pronoun
     - cxn:set-member-modification-construction
-    - cxn:specific-known-pronoun
-    - cxn:specific-unknown-pronoun
     - cxn:topic-phrase
     - cxn:typifying-construction
-    - cxn:universal-pronoun
-    - cxn:action-modification-construction
-    - cxn:apposition
   Definition: >-
     a superordinate category including <a>object concepts</a>, <a>property concepts</a>, and <a>event concepts</a>. (Section 2.1)
 
@@ -4014,49 +3923,28 @@
   ConstituentOf:
     - sem:propositional-content
   FunctionOf:
-    - cxn:adverbial-dependent-clause
-    - cxn:adverbial-matrix-clause
-    - cxn:antipassive-construction
-    - cxn:applicative-construction
-    - cxn:argument-complex-predicate
-    - cxn:auxiliary-construction
-    - cxn:basic-voice
-    - cxn:causative-construction
     - cxn:clause
-    - cxn:complement
     - cxn:complement-clause-construction
-    - cxn:complement-matrix-clause
-    - cxn:complement-taking-predicate
-    - cxn:complex-predicate
     - cxn:complex-predicate-part
     - cxn:dependent-clause
-    - cxn:depictive-complex-predicate
     - cxn:ditransitive-construction
     - cxn:eventive-complex-predicate
     - cxn:interrogative-complement
     - cxn:intransitive-construction
     - cxn:main-clause
-    - cxn:manner-complex-predicate
     - cxn:matrix-clause
     - cxn:negation-construction
-    - cxn:nonbasic-voice
     - cxn:noun-complement
     - cxn:noun-complement-clause-construction
-    - cxn:noun-complement-matrix-clause
     - cxn:passive-inverse-voice
     - cxn:predicate
     - cxn:pronominal-argument-complex-predicate
-    - cxn:relative-clause
     - cxn:relative-clause-construction
-    - cxn:relative-matrix-clause
-    - cxn:resultative-complex-predicate
-    - cxn:simple-predicate
     - cxn:stative-complex-predicate
     - cxn:stative-predicate-part
     - cxn:subordinate-clause
     - cxn:support-verb-construction
     - cxn:transitive-construction
-    - cxn:eventive-predicate-part
   Definition: >-
     a superordinate category including both <a>action concepts</a> and <a>state concepts</a>. The term <q>event</q> has other <a>meanings</a>, including what we call a <a>telic event</a>. Other terms listed above are also used for <q>event</q> as it is defined here. (Sections <b>2.1</b>, <b>6.1.1</b>)
 
@@ -4502,8 +4390,6 @@
   FunctionOf:
     - cxn:locational-construction
     - cxn:locative-modification-construction
-    - cxn:predicational-location-construction
-    - cxn:presentational-location-construction
   Definition: >-
     a spatial relation that holds between two <a sem:object-concept>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
   Examples:
@@ -5017,7 +4903,6 @@
   SubtypeOf:
     - inf:declarative
   FunctionOf:
-    - cxn:identificational-construction
     - cxn:nonpredicational-construction
     - cxn:polarity-focus-construction
   Definition: >-
@@ -5101,7 +4986,6 @@
     - inf:speech-acts
   FunctionOf:
     - cxn:imperative-hortative-construction
-    - cxn:prohibitive-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which requests that the action expressed in the propositional content of the imperative--hortative be carried out, prototypically by the addressee but possibly by other persons. <i>Example</i>: <i>Dance!</i> is an example of the English imperative--hortative construction for the <a cxn:second-person-pronoun>second person</a>, and <i>Let's dance!</i> is an example of the same for the <a cxn:first-person-pronoun>first person</a> <a sem:number>plural</a>. The term <q>hortative</q> is sometimes used for a first person imperative--hortative, and <q>jussive</q> for a third person imperative--hortative. A negative imperative--hortative is a <a inf:prohibitive>prohibitive</a>. (Sections 12.1, 12.4)
   Examples:
@@ -5422,8 +5306,6 @@
   SubtypeOf:
     - sem:identity
   FunctionOf:
-    - cxn:human-proper-noun
-    - cxn:place-proper-noun
     - cxn:proper-noun
   Definition: >-
     a particular entity with its own identity. <i>Examples</i>: a particular person such as Charlie Chaplin, or a specific table, are individuals. (Section 3.1.1)
@@ -5491,11 +5373,7 @@
     - discourse function
   FunctionOf:
     - cxn:construction
-    - cxn:dependent
-    - cxn:element
     - cxn:head
-    - cxn:nonprototypical-construction
-    - cxn:prototypical-construction
   Definition: >-
     the way that the <a>meaning</a> or semantic content is <dq>packaged</dq> for communication in discourse. <i>Example</i>: the <a>property</a> concept <i>huge</i> can be presented or packaged as a <a>predication</a> asserted of an <a sem:object-concept>object</a> (<i>That tree is huge!</i>), or it can be used to <a inf:modification>modify</a> or add information about an object (<i>that huge tree over there</i>). (Sections 1.1, <b>1.3</b>)
 
@@ -6177,16 +6055,12 @@
   SubtypeOf:
     - inf:declarative
   FunctionOf:
-    - cxn:adverbial-matrix-clause
     - cxn:complement-clause-construction
-    - cxn:complement-matrix-clause
     - cxn:coordinand
     - cxn:dependent-clause
     - cxn:matrix-clause
     - cxn:noun-complement-clause-construction
-    - cxn:noun-complement-matrix-clause
     - cxn:relative-clause-construction
-    - cxn:relative-matrix-clause
   Definition: >-
     the basic <a>information packaging</a> functions that structure <a>phrases</a> and <a>clauses</a>; the propositional acts are <a>reference</a>, <a>predication</a>, and <a>modification</a>. (Section 1.3)
 
@@ -6319,11 +6193,7 @@
     - semantic (content)
   FunctionOf:
     - cxn:construction
-    - cxn:dependent
-    - cxn:element
     - cxn:head
-    - cxn:nonprototypical-construction
-    - cxn:prototypical-construction
   Definition: >-
     the information content that is conventionally conveyed by a <a>construction</a>. <i>Example</i>: a word such as <i>square</i> has the meaning of a particular shape. (Section 1.1)
 
@@ -6499,62 +6369,36 @@
   ConstituentOf:
     - inf:reference
   FunctionOf:
-    - cxn:adjectival-phrase
-    - cxn:adjective
+    - cxn:action-modification-construction
     - cxn:age-term
-    - cxn:alienable-possession-attributive-phrase
-    - cxn:amount-term
-    - cxn:anaphoric-article
     - cxn:antonym
-    - cxn:article
-    - cxn:attributive-phrase
-    - cxn:cardinal-numeral-term
     - cxn:color-term
     - cxn:complementary
-    - cxn:container-term
     - cxn:definite-article
-    - cxn:demonstrative-attributive
     - cxn:determiner
     - cxn:dimension-term
-    - cxn:distributive-quantifier-term
-    - cxn:form-term
     - cxn:gender-term
     - cxn:generic-article
-    - cxn:group-term
     - cxn:human-propensity-term
-    - cxn:inalienable-possession-attributive-phrase
     - cxn:indefinite-article
-    - cxn:locative-phrase
     - cxn:material-term
-    - cxn:measure-term
     - cxn:mensural-attributive-phrase
-    - cxn:mensural-term
     - cxn:modifier
-    - cxn:nonanaphoric-definite-article
+    - cxn:nominal-attributive-phrase
     - cxn:noun-complement
     - cxn:numeral-attributive-phrase
-    - cxn:ordinal-numeral-term
     - cxn:phrase
     - cxn:physical-property-term
     - cxn:piece-term
-    - cxn:possessive-attributive-phrase
     - cxn:possessive-pronoun
-    - cxn:pragmatically-nonspecific-article
-    - cxn:pragmatically-specific-article
-    - cxn:proportional-quantifier-term
-    - cxn:quantifier-term
     - cxn:quantifier-attributive-phrase
     - cxn:reciprocal-construction
     - cxn:relative-clause
-    - cxn:semantically-nonspecific-article
     - cxn:set-member-attributive-phrase
-    - cxn:set-member-term
     - cxn:shape-term
     - cxn:species-term
     - cxn:vague-numeral-term
     - cxn:value-term
-    - cxn:nominal-attributive-phrase
-    - cxn:action-modification-construction
   Definition: >-
     provides additional information about the <a>referent</a> and enriches the specification of the referent for the hearer. Example: in <i>a furry cat</i>, the speaker enriches the specification of the referent in the cat category by the <a>property</a> of being furry. In the <a>file metaphor</a> for describing <a>propositional acts</a>, modification enriches the discourse file; the information it adds to the discourse file is secondary in comparison to <a>predication</a>. (Sections 1.3, <b>2.1</b>)
 
@@ -6735,10 +6579,7 @@
   SubtypeOf:
     - sem:polarity
   FunctionOf:
-    - cxn:declarative-negation-construction
-    - cxn:existential-negation-construction
     - cxn:negation-construction
-    - cxn:prohibitive-construction
   Definition: >-
     indicates that the situation expressed in the utterance is false. <i>Example</i>: <i>Kit didn't find his glasses</i> expresses that Kit finding his glasses is false. This is the prototypical use of negative polarity. Negative polarity may be used to reject other aspects of the construal of the situation expressed in the utterance, as in <i>Kit didn't like the movie -- he loved it!</i> (where the degree expressed by <i>like</i> is the information rejected). (Section 12.1)
   Examples:
@@ -7181,22 +7022,14 @@
   SubtypeOf:
     - sem:entity
   FunctionOf:
-    - cxn:common-noun
-    - cxn:first-person-pronoun
-    - cxn:locative-phrase
+    - cxn:argument-predicate-part
+    - cxn:nominal-attributive-phrase
     - cxn:nominal-phrase
     - cxn:nonclausal-coordination
     - cxn:nonprototypical-predication
     - cxn:noun
     - cxn:partitive-construction
     - cxn:personal-pronoun
-    - cxn:possessive-attributive-phrase
-    - cxn:predicate-nominal-construction
-    - cxn:proper-noun
-    - cxn:second-person-pronoun
-    - cxn:third-person-pronoun
-    - cxn:argument-predicate-part
-    - cxn:nominal-attributive-phrase
   FillerOf:
     - sem:participant-role
   Definition: >-
@@ -7489,8 +7322,6 @@
     - cxn:ground-phrase
     - cxn:noun-complement-clause-construction
     - cxn:passive-inverse-a-phrase
-    - cxn:nonsubject-argument-phrase
-    - cxn:possessor-argument-phrase
   FillerOf:
     - sem:participant-role
   Definition: >-
@@ -7732,10 +7563,9 @@
   SubtypeOf:
     - sem:participant
   FunctionOf:
-    - cxn:noun-complement-referring-phrase
     - cxn:noun-complement-head
+    - cxn:noun-complement-referring-phrase
     - cxn:oblique-phrase
-    - cxn:antipassive-oblique-phrase
   Definition: >-
     certain <a>participants</a> are considered to be less central to the <a>event</a>, in particular those that do not initiate the event and those that are not strongly affected by the action. <i>Example</i>: in an eating event, the utensils used by the eater and the plate on which the food was located are peripheral participants in the event. Peripheral participants are quite diverse. (Section 6.1.1)
 
@@ -7997,9 +7827,6 @@
     - cxn:possessed-argument-construction
     - cxn:possession-construction
     - cxn:possessive-attributive-phrase
-    - cxn:possessive-pronoun
-    - cxn:predicational-possession
-    - cxn:presentational-possession
     - cxn:possessive-modification-construction
   Definition: >-
     a semantic relation between two objects, prototypically <a>ownership</a>, but also including weaker relations such as temporary ownership and physical contiguity. <i>Example</i>: in <i>I have a pen</i>, there is a possession relation between myself and the pen -- I am the <a>possessor</a> and the pen is the <a>possessum</a>. This possession relation could be full ownership, temporary ownership (someone lent it to me), or physical contiguity (I have a pen at hand). Other object--object relations such as <a>body parts</a>, <a>part--whole</a>, and <a>kinship</a> are generally also included under possession relations. (Section 10.4.2)
@@ -8329,108 +8156,42 @@
   ConstituentOf:
     - inf:topic-comment
   FunctionOf:
-    - cxn:affecting-verb
-    - cxn:agentive-change-of-state-verb
-    - cxn:antipassive-construction
     - cxn:apodosis-clause
-    - cxn:application-verb
-    - cxn:applicative-construction
-    - cxn:argument-complex-predicate
-    - cxn:attending-verb
-    - cxn:auxiliary-construction
-    - cxn:basic-voice
-    - cxn:bodily-motion-verb
-    - cxn:bodily-predicate
-    - cxn:body-care-verb
-    - cxn:body-position-predicate
-    - cxn:causative-construction
     - cxn:chaining-construction
-    - cxn:change-in-position-verb
-    - cxn:change-of-state-verb
     - cxn:clause
-    - cxn:cognition-verb
     - cxn:collective-construction
-    - cxn:combining-verb
-    - cxn:commentative-construction
-    - cxn:commentative-predicate
-    - cxn:complement-taking-predicate
-    - cxn:complex-predicate
-    - cxn:contact-by-impact-verb
-    - cxn:controlled-predicate
-    - cxn:damage-verb
-    - cxn:depictive-complex-predicate
     - cxn:desiderative-construction
     - cxn:desiderative-predicate
     - cxn:ditransitive-construction
-    - cxn:emotion-verb
     - cxn:evaluative-construction
     - cxn:evaluative-predicate
     - cxn:eventive-complex-predicate
-    - cxn:experience-verb
     - cxn:experiential-construction
-    - cxn:experiential-verb
-    - cxn:extroverted-verb
-    - cxn:fearing-construction
-    - cxn:fearing-predicate
-    - cxn:hoping-construction
-    - cxn:hoping-predicate
-    - cxn:ingestion-verb
-    - cxn:interaction-verb
     - cxn:intransitive-construction
-    - cxn:introverted-verb
-    - cxn:killing-injuring-verb
-    - cxn:knowledge-construction
-    - cxn:knowledge-predicate
     - cxn:locational-construction
     - cxn:manipulative-construction
     - cxn:manipulative-predicate
-    - cxn:manner-complex-predicate
-    - cxn:manner-of-motion-verb
-    - cxn:manner-verb
     - cxn:motion-clause
-    - cxn:motion-verb
-    - cxn:nonbasic-voice
-    - cxn:nonprototypical-predication
     - cxn:passive-inverse-voice
-    - cxn:path-verb
-    - cxn:perception-clause
     - cxn:perception-complement-taking-predicate
     - cxn:perception-construction
-    - cxn:perception-verb
     - cxn:possessed-argument-construction
     - cxn:possession-construction
     - cxn:predicate
     - cxn:predicate-adjectival-construction
     - cxn:predicate-nominal-construction
-    - cxn:predicational-location-construction
-    - cxn:predicational-possession
-    - cxn:pretense-construction
-    - cxn:pretense-predicate
     - cxn:pronominal-argument-complex-predicate
     - cxn:propositional-attitude-construction
     - cxn:propositional-attitude-predicate
     - cxn:protasis-clause
-    - cxn:pursuit-verb
     - cxn:reflexive-construction
-    - cxn:removal-verb
-    - cxn:result-verb
-    - cxn:resultative-complex-predicate
     - cxn:sensation-verb
-    - cxn:simple-predicate
-    - cxn:spontaneous-verb
-    - cxn:spurious-complex-predicate
     - cxn:stative-complex-predicate
     - cxn:support-verb-construction
-    - cxn:temporary-predicate
-    - cxn:transfer-verb
     - cxn:transitive-construction
-    - cxn:uncontrolled-predicate
     - cxn:utterance-construction
     - cxn:utterance-predicate
     - cxn:verb
-    - cxn:verbal-clause
-    - cxn:wishing-construction
-    - cxn:wishing-predicate
   Definition: >-
     what the speaker is asserting about the referents in a particular utterance. <i>Example</i>: in <i>Masha is nice</i>, the speaker is predicating the <a>property</a> of being nice to the referent Masha. In the <a>file metaphor</a> for describing <a>propositional acts</a>, predication adds information to a referent's discourse file. The predication is the <a>comment</a> in <a>topic--comment information packaging</a>. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -8609,8 +8370,6 @@
     - cxn:locational-construction
     - cxn:possession-construction
     - cxn:presentational-construction
-    - cxn:presentational-location-construction
-    - cxn:presentational-possession
   Definition: >-
     a type of <a inf:entity-central>entity-central</a> <a>thetic information packaging</a> that introduces a <a>referent</a> into the discourse, in order to make the identity of the referent known to the hearer. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. (Sections 10.1.2, 10.4)
   Examples:
@@ -8805,10 +8564,7 @@
   FunctionOf:
     - cxn:adjectival-phrase
     - cxn:adjective
-    - cxn:antonym
-    - cxn:complementary
     - cxn:nonprototypical-predication
-    - cxn:predicate-adjectival-construction
     - cxn:property-referring-phrase
   AttributeOf:
     - sem:object-concept
@@ -8879,31 +8635,14 @@
   ConstituentOf:
     - sem:proposition
   FunctionOf:
-    - cxn:alternative-question-construction
-    - cxn:declarative-construction
     - cxn:declarative-negation-construction
-    - cxn:entity-central-construction
-    - cxn:equational-construction
-    - cxn:event-central-construction
-    - cxn:exclamative-construction
-    - cxn:existential-negation-construction
-    - cxn:identificational-construction
-    - cxn:imperative-hortative-construction
-    - cxn:information-question-construction
-    - cxn:information-question-response-construction
-    - cxn:interrogative-construction
-    - cxn:negative-question-polarity-response-construction
     - cxn:nonpredicational-construction
     - cxn:polarity-focus-construction
     - cxn:polarity-question-construction
-    - cxn:polarity-response-construction
     - cxn:positive-question-polarity-response-construction
     - cxn:prohibitive-construction
-    - cxn:response-construction
     - cxn:speech-act-construction
-    - cxn:thetic-construction
     - cxn:topic-comment-construction
-    - cxn:hanging-topic-construction
   Definition: >-
     the semantic content of a <a>clause</a>, separately from whether it is packaged as <a inf:topic-comment>topic--comment</a>, <a inf:thetic>thetic</a>, or <a inf:identificational>identificational</a>. Propositional content corresponds basically to <q>who did what to whom</q>. <i>Example</i>: In <i>There's a coyote running down the street!, It's a coyote that's running down the street</i>, and <i>The coyote is running down the street</i>, the propositional content shared by the thetic, identificational, and topic--comment constructions, respectively, is the current running <a>event</a> with a coyote as the runner and the street as the location of the running. (Section 11.1)
   Examples:
@@ -9210,82 +8949,45 @@
   ConstituentOf:
     - inf:topic-comment
   FunctionOf:
-    - cxn:adjective-modification-construction
-    - cxn:alienable-possession-modification-construction
-    - cxn:anaphoric-head-construction
     - cxn:anaphoric-head-relative-clause-construction
     - cxn:animal-noun
     - cxn:animal-plant-product-noun
-    - cxn:applicative-object-phrase
-    - cxn:argument-phrase
-    - cxn:associative-construction
+    - cxn:antipassive-oblique-phrase
     - cxn:body-part-noun
-    - cxn:causee-phrase
     - cxn:causer-phrase
-    - cxn:common-noun
     - cxn:complement
     - cxn:core-argument-phrase
-    - cxn:demonstrative-pronoun
     - cxn:ditransitive-a-phrase
-    - cxn:exclusive-pronoun
-    - cxn:experiencer-phrase
     - cxn:figure-phrase
-    - cxn:first-person-pronoun
     - cxn:free-modification-construction
-    - cxn:free-relative-clause-construction
-    - cxn:ground-phrase
-    - cxn:hanging-topic-phrase
     - cxn:human-noun
-    - cxn:human-proper-noun
-    - cxn:inalienable-possession-modification-construction
     - cxn:inclusive-pronoun
-    - cxn:inclusory-construction
     - cxn:kinship-noun
-    - cxn:locative-modification-construction
-    - cxn:mensural-modification-construction
-    - cxn:modification-construction
     - cxn:natural-object-noun
     - cxn:nominal-modification-construction
-    - cxn:nominal-phrase
-    - cxn:noun
+    - cxn:nonsubject-argument-phrase
     - cxn:noun-complement-referring-phrase
-    - cxn:noun-complement-head
     - cxn:numeral-modification-construction
-    - cxn:object-phrase
-    - cxn:oblique-phrase
     - cxn:p-phrase
-    - cxn:passive-inverse-a-phrase
-    - cxn:passive-inverse-p-phrase
-    - cxn:personal-pronoun
     - cxn:phrase
     - cxn:place-noun
-    - cxn:place-proper-noun
     - cxn:plant-noun
-    - cxn:possessive-modification-construction
+    - cxn:possessor-argument-phrase
     - cxn:pronoun
     - cxn:proper-noun
-    - cxn:property-referring-phrase
     - cxn:quantifier-modification-construction
     - cxn:r-phrase
     - cxn:referent-expression
-    - cxn:referring-phrase
     - cxn:relative-clause-head
     - cxn:relativized-referring-phrase
     - cxn:s-phrase
     - cxn:second-person-pronoun
     - cxn:set-member-modification-construction
     - cxn:social-noun
-    - cxn:stimulus-phrase
-    - cxn:subject-phrase
     - cxn:t-phrase
     - cxn:third-person-pronoun
     - cxn:topic-phrase
     - cxn:transitive-a-phrase
-    - cxn:universal-pronoun
-    - cxn:antipassive-oblique-phrase
-    - cxn:nonsubject-argument-phrase
-    - cxn:possessor-argument-phrase
-    - cxn:apposition
   Definition: >-
     what the speaker is talking about. <i>Example</i>: in <i>Masha is nice</i>, the speaker is referring to a person named Masha, and Masha is the referent. In the <a>file metaphor</a> for describing <a>propositional acts</a>, reference opens or accesses a discourse file for the referent. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -10268,7 +9970,6 @@
     - inf:complex-figure
     - inf:figure-ground
   FunctionOf:
-    - cxn:negation-construction
     - cxn:speech-act-construction
   Definition: >-
     speech acts package the <a>propositional content</a> of the utterance in such a way that the speaker wants or requires an explicit response from the addressee with respect to the propositional content. The speech acts that are most likely to be expressed as distinct constructions are the <a inf:declarative>declarative</a>, the <a inf:interrogative>interrogative</a>, the <a inf:imperative-hortative>imperative--hortative</a> and its negative the <a inf:prohibitive>prohibitive</a>, and the <a inf:exclamative>exclamative</a>. (Section 12.1)
@@ -10919,7 +10620,6 @@
     - inf:declarative
   FunctionOf:
     - cxn:topic-comment-construction
-    - cxn:hanging-topic-construction
   Definition: >-
     the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a inf:predication>predicated about</a> another concept which is <a inf:reference>referred</a> to (the <a>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
   Examples:
@@ -11086,18 +10786,9 @@
   SubtypeOf:
     - sem:identity
   FunctionOf:
-    - cxn:animal-noun
-    - cxn:animal-plant-product-noun
-    - cxn:body-part-noun
     - cxn:common-noun
     - cxn:generic-article
     - cxn:generic-pronoun
-    - cxn:human-noun
-    - cxn:kinship-noun
-    - cxn:natural-object-noun
-    - cxn:place-noun
-    - cxn:plant-noun
-    - cxn:social-noun
     - cxn:universal-pronoun
   Definition: >-
     a general concept that generally subsumes multiple instances (<a>individuals</a>). <i>Example</i>: the category of tables is a type. (Section 3.1.1)
@@ -11569,9 +11260,7 @@
   SubtypeOf:
     - sem:person-deixis
   FunctionOf:
-    - cxn:exclusive-pronoun
     - cxn:first-person-pronoun
-    - cxn:inclusive-pronoun
   AttributeOf:
     - sem:speaker
   Definition: ''
@@ -11697,13 +11386,8 @@
   SubtypeOf:
     - sem:entity
   FunctionOf:
-    - cxn:adverbial-clause-construction
     - cxn:complex-sentence
-    - cxn:coordinate-clause-construction
     - cxn:exhaustive-list-coordination
-    - cxn:logophoric-construction
-    - cxn:predicate-identity-construction
-    - cxn:reference-tracking-construction
     - cxn:subject-identity-construction
   Definition: ''
   FromGlossary: false
@@ -11852,8 +11536,8 @@
   SubtypeOf:
     - sem:event
   FunctionOf:
-    - cxn:quantifier-term
     - cxn:quantifier-attributive-phrase
+    - cxn:quantifier-term
     - cxn:vague-numeral-term
   Definition: ''
   FromGlossary: false
@@ -11875,8 +11559,8 @@
     - sem:event
   FunctionOf:
     - cxn:proportional-quantifier-term
-    - cxn:quantifier-term
     - cxn:quantifier-attributive-phrase
+    - cxn:quantifier-term
   Definition: ''
   FromGlossary: false
 
@@ -11887,8 +11571,8 @@
     - sem:event
   FunctionOf:
     - cxn:distributive-quantifier-term
-    - cxn:quantifier-term
     - cxn:quantifier-attributive-phrase
+    - cxn:quantifier-term
   Definition: ''
   FromGlossary: false
 
@@ -11948,6 +11632,8 @@
   Name: species
   SubtypeOf:
     - sem:mensural-concept
+  FunctionOf:
+    - cxn:species-term
   Definition: ''
   FromGlossary: false
 
@@ -13544,9 +13230,6 @@
   SubtypeOf:
     - inf:topicality
   FunctionOf:
-    - cxn:causee-phrase
-    - cxn:ground-phrase
-    - cxn:passive-inverse-a-phrase
     - cxn:nonsubject-argument-phrase
   Definition: ''
   FromGlossary: false
@@ -13558,9 +13241,6 @@
     - inf:topicality
   FunctionOf:
     - cxn:core-argument-phrase
-    - cxn:experiencer-phrase
-    - cxn:passive-inverse-p-phrase
-    - cxn:stimulus-phrase
   Definition: ''
   FromGlossary: false
 
@@ -13571,12 +13251,7 @@
     - inf:topicality
     - inf:non-low-topicality
   FunctionOf:
-    - cxn:causer-phrase
-    - cxn:ditransitive-a-phrase
-    - cxn:figure-phrase
-    - cxn:s-phrase
     - cxn:subject-phrase
-    - cxn:transitive-a-phrase
   Definition: ''
   FromGlossary: false
 
@@ -13588,11 +13263,7 @@
     - inf:non-high-topicality
     - inf:non-low-topicality
   FunctionOf:
-    - cxn:applicative-object-phrase
     - cxn:object-phrase
-    - cxn:p-phrase
-    - cxn:r-phrase
-    - cxn:t-phrase
   Definition: ''
   FromGlossary: false
 
@@ -13604,7 +13275,6 @@
     - inf:non-high-topicality
   FunctionOf:
     - cxn:oblique-phrase
-    - cxn:antipassive-oblique-phrase
   Definition: ''
   FromGlossary: false
 
@@ -13614,7 +13284,6 @@
   SubtypeOf:
     - inf:high-topicality
   FunctionOf:
-    - cxn:hanging-topic-phrase
     - cxn:topic-phrase
   Definition: ''
   FromGlossary: false
