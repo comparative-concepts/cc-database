@@ -40,7 +40,7 @@ function getGraphEdges() {
     let relations = getGraphRelations();
     let nodeIds = {};
     for (let n of ccNodes) nodeIds[n.id] = ccTypes[n.type] != null;
-    return ccEdges.filter((e) => 
+    return ccEdges.filter((e) =>
         relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]
     );
 }
@@ -102,11 +102,11 @@ function getGraphRelations() {
             lbl.querySelector("span").style = style;
         }
     }
-    let grelations = Object.keys(graph.edgecolors); 
+    let grelations = Object.keys(graph.edgecolors);
     let relations = grelations.filter((rel) => document.getElementById(rel).checked);
     if (relations.length === 0) {
-        // If no relations are selected, check the first one.
-        let rel = grelations[0];
+        // If no relations are selected, use the default relation.
+        let rel = graph.defaultrelation;
         document.getElementById(rel).checked = true;
         relations = [rel];
     }
@@ -135,22 +135,20 @@ function init() {
     for (let e of ccEdges) {
         e.id = `${e.rel}--${e.from}--${e.to}`;
     }
-    // Populate the graph type dropdown menu, and 
+    // Populate the graph type dropdown menu, and
     // create checkboxes for all relations
     let select = document.getElementById("ccGraphType");
     let checkboxes = document.getElementById("ccRelations");
     for (let graphID in ccGraphs) {
         let graph = ccGraphs[graphID];
         select.innerHTML += `<option value="${graphID}">${graph.name}</option>`;
-        let checked = true;
         for (let relId in graph.edgecolors) {
             if (!document.getElementById(relId)) {
-                checkboxes.innerHTML += 
+                checkboxes.innerHTML +=
                     `<label style="display:none">
-                    <input type="checkbox" id="${relId}" onchange="changeSettings()" ${checked?"checked":""}/>
+                    <input type="checkbox" id="${relId}" onchange="changeSettings()"/>
                     <span>${relId}</span> &nbsp; </label>`;
             }
-            checked = false;
         }
     }
     // Create the global network object, and add event listeners
@@ -257,7 +255,7 @@ function updateSolver() {
     if (physics.enabled) {
         physics.solver = document.getElementById("ccSolver").value;
     }
-    network.setOptions({physics: physics});    
+    network.setOptions({physics: physics});
 }
 
 
@@ -276,7 +274,7 @@ function searchNodes() {
     if (searchTerm.length < 3) return;
     searchTerm = searchTerm.replaceAll(' ', '.*?');
     let regex = new RegExp(searchTerm, 'i');
-    let selected = getGraphNodes().flatMap((n) => 
+    let selected = getGraphNodes().flatMap((n) =>
         network.body.nodes[n.id] && (regex.test(n.name) || regex.test(n.id)) ? n.id : []
     );
     network.selectNodes(selected);
@@ -297,7 +295,7 @@ function selectUnconnected() {
     selectionChanged();
 }
 
-// Expand the selection with the neighbor nodes in the direction of "to" or "from" 
+// Expand the selection with the neighbor nodes in the direction of "to" or "from"
 function expandSelection(direction) {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;

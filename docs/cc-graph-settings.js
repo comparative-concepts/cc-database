@@ -6,6 +6,7 @@ var ccGraphs = {};
 
 ccGraphs.cxn = {
     name: "Constructions",
+    defaultrelation: "SubtypeOf",
     nodecolors: {
         cxn: "LightGreen",
     },
@@ -18,6 +19,7 @@ ccGraphs.cxn = {
 
 ccGraphs.str = {
     name: "Strategies",
+    defaultrelation: "SubtypeOf",
     nodecolors: {
         str: "Gold",
     },
@@ -27,23 +29,9 @@ ccGraphs.str = {
     },
 };
 
-ccGraphs.cxn_str = {
-    name: "Constructions & Strategies",
-    nodecolors: {
-        cxn: "LightGreen",
-        str: "Gold",
-    },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node colors
-        ExpressionOf: "RoyalBlue",
-        ModeledOn: "Red",
-        RecruitedFrom: "MediumOrchid",
-    },
-    edgedashes: {ModeledOn: true, RecruitedFrom: true},
-};
-
 ccGraphs.sem = {
     name: "Semantic CCs",
+    defaultrelation: "SubtypeOf",
     nodecolors: {
         sem: "LightGray",
     },
@@ -59,6 +47,7 @@ ccGraphs.sem = {
 
 ccGraphs.inf = {
     name: "Information packaging",
+    defaultrelation: "SubtypeOf",
     nodecolors: {
         inf: "Khaki",
     },
@@ -66,6 +55,48 @@ ccGraphs.inf = {
         SubtypeOf: 0,  // inherit from node color
         ConstituentOf: "RoyalBlue",
         AttributeOf: "Red",
+    },
+};
+
+ccGraphs.cxn_str = {
+    name: "Cxn ↔︎ Strategies",
+    defaultrelation: "ExpressionOf",
+    nodecolors: {
+        cxn: "LightGreen",
+        str: "Gold",
+    },
+    edgecolors: {
+        SubtypeOf: 0,  // inherit from node colors
+        ExpressionOf: "RoyalBlue",
+        ModeledOn: "Red",
+        RecruitedFrom: "MediumOrchid",
+    },
+    edgedashes: {ModeledOn: true, RecruitedFrom: true},
+};
+
+ccGraphs.cxn_sem = {
+    name: "Cxn ↔︎ Semantic CCs",
+    defaultrelation: "FunctionOf",
+    nodecolors: {
+        cxn: "LightGreen",
+        sem: "LightGray",
+    },
+    edgecolors: {
+        SubtypeOf: 0,  // inherit from node colors
+        FunctionOf: "MediumOrchid",
+    },
+};
+
+ccGraphs.cxn_inf = {
+    name: "Cxn ↔︎ Inf.packaging",
+    defaultrelation: "FunctionOf",
+    nodecolors: {
+        cxn: "LightGreen",
+        inf: "Khaki",
+    },
+    edgecolors: {
+        SubtypeOf: 0,  // inherit from node colors
+        FunctionOf: "MediumOrchid",
     },
 };
 
