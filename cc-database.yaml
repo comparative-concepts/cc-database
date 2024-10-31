@@ -1690,15 +1690,7 @@
   SubtypeOf:
     - sem:participant
   FunctionOf:
-    - cxn:causer-phrase
     - cxn:core-argument-phrase
-    - cxn:ditransitive-a-phrase
-    - cxn:figure-phrase
-    - cxn:p-phrase
-    - cxn:r-phrase
-    - cxn:s-phrase
-    - cxn:t-phrase
-    - cxn:transitive-a-phrase
   Definition: >-
     certain <a>participants</a> are considered to be more central to the <a>event</a>, in particular those that initiate the action and those that are most strongly affected by the action. <i>Example</i>: in an eating event, the eater and the food are the more central participants, in that the eater initiates the action and the food is completely affected by the action. In contrast, the place where the eating takes place is a <a>peripheral participant</a> in the action. (Section 6.1.1)
 
@@ -2231,9 +2223,6 @@
     - inf:discourse-coherence
   FunctionOf:
     - cxn:coordinate-construction
-    - cxn:disjunctive-coordination
-    - cxn:exhaustive-list-coordination
-    - cxn:non-exhaustive-list-coordination
   Definition: >-
     a construal or <a>information packaging</a> of two <a>events</a> such that the two events are construed as parts of a complex whole. <i>Example</i>: in <i>Jim was promoted and Cindy quit</i>, the events of Jim being promoted and Cindy quitting are conceived of as parts of a complex whole (e.g. a causal sequence). A complex figure packaging construes the events as equal in status, and also requires a common denominator for the two events. This information packaging is found in <a>coordinate constructions</a>. (Section 15.1.3)
   Examples:
@@ -2593,13 +2582,9 @@
   AttributeOf:
     - sem:entity
   FunctionOf:
-    - cxn:definite-article
     - cxn:determiner
-    - cxn:generic-article
-    - cxn:indefinite-article
     - cxn:pronoun
     - cxn:proper-noun
-    - cxn:question-pronoun
   Definition: >-
     an entity defined relative to some factor in the speech act context. <i>Examples</i>: <i>this table</i> is defined as a table but relative to the location of the speaker (<i>this</i> expresses the contextual component); <i>the table</i> is defined as a table relative to the shared knowledge of speaker and hearer (<i>the</i> expresses the contextual component). (Section 3.1.1)
   Examples:
@@ -2935,7 +2920,6 @@
     - inf:speech-acts
   FunctionOf:
     - cxn:declarative-construction
-    - cxn:existential-negation-construction
   Definition: >-
     a <a inf:speech-acts>speech act</a> which simply asserts its <a>propositional content</a>. <i>Example</i>: The English sentence <i>Sandra picked up the children</i> is an instance of a declarative speech act. (Section 12.1)
   Examples:
@@ -3389,7 +3373,6 @@
     - inf:information-packaging
   FunctionOf:
     - cxn:complex-sentence
-    - cxn:generic-conditional-construction
   Definition: ''
   FromGlossary: false
 
@@ -3588,7 +3571,6 @@
     - sem:stativity
   FunctionOf:
     - cxn:complex-predicate-part
-    - cxn:dynamic-predicate-part
     - cxn:eventive-complex-predicate
   AttributeOf:
     - sem:action-concept
@@ -3696,27 +3678,13 @@
   SubtypeOf:
     - sem:meaning
   FunctionOf:
-    - cxn:action-modification-construction
-    - cxn:anaphoric-head-relative-clause-construction
     - cxn:coordinand
     - cxn:coordinate-construction
     - cxn:dynamic-predicate-part
-    - cxn:free-modification-construction
     - cxn:modifier
-    - cxn:nominal-modification-construction
-    - cxn:noun-complement-referring-phrase
-    - cxn:numeral-modification-construction
     - cxn:phrase
     - cxn:presentational-construction
-    - cxn:pronoun
-    - cxn:quantifier-modification-construction
-    - cxn:question-pronoun
     - cxn:referent-expression
-    - cxn:relative-clause-head
-    - cxn:relativized-referring-phrase
-    - cxn:set-member-modification-construction
-    - cxn:topic-phrase
-    - cxn:typifying-construction
   Definition: >-
     a superordinate category including <a>object concepts</a>, <a>property concepts</a>, and <a>event concepts</a>. (Section 2.1)
 
@@ -3923,28 +3891,16 @@
   ConstituentOf:
     - sem:propositional-content
   FunctionOf:
-    - cxn:clause
     - cxn:complement-clause-construction
     - cxn:complex-predicate-part
     - cxn:dependent-clause
-    - cxn:ditransitive-construction
-    - cxn:eventive-complex-predicate
-    - cxn:interrogative-complement
-    - cxn:intransitive-construction
     - cxn:main-clause
     - cxn:matrix-clause
-    - cxn:negation-construction
     - cxn:noun-complement
     - cxn:noun-complement-clause-construction
-    - cxn:passive-inverse-voice
     - cxn:predicate
-    - cxn:pronominal-argument-complex-predicate
     - cxn:relative-clause-construction
-    - cxn:stative-complex-predicate
-    - cxn:stative-predicate-part
     - cxn:subordinate-clause
-    - cxn:support-verb-construction
-    - cxn:transitive-construction
   Definition: >-
     a superordinate category including both <a>action concepts</a> and <a>state concepts</a>. The term <q>event</q> has other <a>meanings</a>, including what we call a <a>telic event</a>. Other terms listed above are also used for <q>event</q> as it is defined here. (Sections <b>2.1</b>, <b>6.1.1</b>)
 
@@ -4903,8 +4859,8 @@
   SubtypeOf:
     - inf:declarative
   FunctionOf:
+    - cxn:identificational-construction
     - cxn:nonpredicational-construction
-    - cxn:polarity-focus-construction
   Definition: >-
     <a>information packaging</a> in which a particular piece of information (the <a>focus</a>) is equated with the <dq>open slot</dq> in a <a>presupposed open proposition</a>. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
   Examples:
@@ -5373,7 +5329,6 @@
     - discourse function
   FunctionOf:
     - cxn:construction
-    - cxn:head
   Definition: >-
     the way that the <a>meaning</a> or semantic content is <dq>packaged</dq> for communication in discourse. <i>Example</i>: the <a>property</a> concept <i>huge</i> can be presented or packaged as a <a>predication</a> asserted of an <a sem:object-concept>object</a> (<i>That tree is huge!</i>), or it can be used to <a inf:modification>modify</a> or add information about an object (<i>that huge tree over there</i>). (Sections 1.1, <b>1.3</b>)
 
@@ -6193,7 +6148,6 @@
     - semantic (content)
   FunctionOf:
     - cxn:construction
-    - cxn:head
   Definition: >-
     the information content that is conventionally conveyed by a <a>construction</a>. <i>Example</i>: a word such as <i>square</i> has the meaning of a particular shape. (Section 1.1)
 
@@ -6369,36 +6323,10 @@
   ConstituentOf:
     - inf:reference
   FunctionOf:
-    - cxn:action-modification-construction
-    - cxn:age-term
-    - cxn:antonym
-    - cxn:color-term
-    - cxn:complementary
-    - cxn:definite-article
-    - cxn:determiner
-    - cxn:dimension-term
-    - cxn:gender-term
-    - cxn:generic-article
-    - cxn:human-propensity-term
-    - cxn:indefinite-article
-    - cxn:material-term
-    - cxn:mensural-attributive-phrase
     - cxn:modifier
-    - cxn:nominal-attributive-phrase
     - cxn:noun-complement
-    - cxn:numeral-attributive-phrase
     - cxn:phrase
-    - cxn:physical-property-term
-    - cxn:piece-term
-    - cxn:possessive-pronoun
-    - cxn:quantifier-attributive-phrase
     - cxn:reciprocal-construction
-    - cxn:relative-clause
-    - cxn:set-member-attributive-phrase
-    - cxn:shape-term
-    - cxn:species-term
-    - cxn:vague-numeral-term
-    - cxn:value-term
   Definition: >-
     provides additional information about the <a>referent</a> and enriches the specification of the referent for the hearer. Example: in <i>a furry cat</i>, the speaker enriches the specification of the referent in the cat category by the <a>property</a> of being furry. In the <a>file metaphor</a> for describing <a>propositional acts</a>, modification enriches the discourse file; the information it adds to the discourse file is secondary in comparison to <a>predication</a>. (Sections 1.3, <b>2.1</b>)
 
@@ -7318,10 +7246,7 @@
     - sem:propositional-content
   FunctionOf:
     - cxn:argument-phrase
-    - cxn:causee-phrase
-    - cxn:ground-phrase
     - cxn:noun-complement-clause-construction
-    - cxn:passive-inverse-a-phrase
   FillerOf:
     - sem:participant-role
   Definition: >-
@@ -8157,41 +8082,17 @@
     - inf:topic-comment
   FunctionOf:
     - cxn:apodosis-clause
-    - cxn:chaining-construction
     - cxn:clause
-    - cxn:collective-construction
     - cxn:desiderative-construction
-    - cxn:desiderative-predicate
-    - cxn:ditransitive-construction
     - cxn:evaluative-construction
-    - cxn:evaluative-predicate
-    - cxn:eventive-complex-predicate
-    - cxn:experiential-construction
-    - cxn:intransitive-construction
     - cxn:locational-construction
     - cxn:manipulative-construction
-    - cxn:manipulative-predicate
-    - cxn:motion-clause
-    - cxn:passive-inverse-voice
-    - cxn:perception-complement-taking-predicate
     - cxn:perception-construction
-    - cxn:possessed-argument-construction
     - cxn:possession-construction
     - cxn:predicate
-    - cxn:predicate-adjectival-construction
-    - cxn:predicate-nominal-construction
-    - cxn:pronominal-argument-complex-predicate
     - cxn:propositional-attitude-construction
-    - cxn:propositional-attitude-predicate
     - cxn:protasis-clause
-    - cxn:reflexive-construction
-    - cxn:sensation-verb
-    - cxn:stative-complex-predicate
-    - cxn:support-verb-construction
-    - cxn:transitive-construction
     - cxn:utterance-construction
-    - cxn:utterance-predicate
-    - cxn:verb
   Definition: >-
     what the speaker is asserting about the referents in a particular utterance. <i>Example</i>: in <i>Masha is nice</i>, the speaker is predicating the <a>property</a> of being nice to the referent Masha. In the <a>file metaphor</a> for describing <a>propositional acts</a>, predication adds information to a referent's discourse file. The predication is the <a>comment</a> in <a>topic--comment information packaging</a>. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -8635,14 +8536,7 @@
   ConstituentOf:
     - sem:proposition
   FunctionOf:
-    - cxn:declarative-negation-construction
-    - cxn:nonpredicational-construction
-    - cxn:polarity-focus-construction
-    - cxn:polarity-question-construction
-    - cxn:positive-question-polarity-response-construction
-    - cxn:prohibitive-construction
     - cxn:speech-act-construction
-    - cxn:topic-comment-construction
   Definition: >-
     the semantic content of a <a>clause</a>, separately from whether it is packaged as <a inf:topic-comment>topic--comment</a>, <a inf:thetic>thetic</a>, or <a inf:identificational>identificational</a>. Propositional content corresponds basically to <q>who did what to whom</q>. <i>Example</i>: In <i>There's a coyote running down the street!, It's a coyote that's running down the street</i>, and <i>The coyote is running down the street</i>, the propositional content shared by the thetic, identificational, and topic--comment constructions, respectively, is the current running <a>event</a> with a coyote as the runner and the street as the location of the running. (Section 11.1)
   Examples:
@@ -8949,45 +8843,8 @@
   ConstituentOf:
     - inf:topic-comment
   FunctionOf:
-    - cxn:anaphoric-head-relative-clause-construction
-    - cxn:animal-noun
-    - cxn:animal-plant-product-noun
-    - cxn:antipassive-oblique-phrase
-    - cxn:body-part-noun
-    - cxn:causer-phrase
-    - cxn:complement
-    - cxn:core-argument-phrase
-    - cxn:ditransitive-a-phrase
-    - cxn:figure-phrase
-    - cxn:free-modification-construction
-    - cxn:human-noun
-    - cxn:inclusive-pronoun
-    - cxn:kinship-noun
-    - cxn:natural-object-noun
-    - cxn:nominal-modification-construction
-    - cxn:nonsubject-argument-phrase
-    - cxn:noun-complement-referring-phrase
-    - cxn:numeral-modification-construction
-    - cxn:p-phrase
     - cxn:phrase
-    - cxn:place-noun
-    - cxn:plant-noun
-    - cxn:possessor-argument-phrase
-    - cxn:pronoun
-    - cxn:proper-noun
-    - cxn:quantifier-modification-construction
-    - cxn:r-phrase
     - cxn:referent-expression
-    - cxn:relative-clause-head
-    - cxn:relativized-referring-phrase
-    - cxn:s-phrase
-    - cxn:second-person-pronoun
-    - cxn:set-member-modification-construction
-    - cxn:social-noun
-    - cxn:t-phrase
-    - cxn:third-person-pronoun
-    - cxn:topic-phrase
-    - cxn:transitive-a-phrase
   Definition: >-
     what the speaker is talking about. <i>Example</i>: in <i>Masha is nice</i>, the speaker is referring to a person named Masha, and Masha is the referent. In the <a>file metaphor</a> for describing <a>propositional acts</a>, reference opens or accesses a discourse file for the referent. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -11387,8 +11244,6 @@
     - sem:entity
   FunctionOf:
     - cxn:complex-sentence
-    - cxn:exhaustive-list-coordination
-    - cxn:subject-identity-construction
   Definition: ''
   FromGlossary: false
 
