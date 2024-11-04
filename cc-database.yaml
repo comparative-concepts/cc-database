@@ -1203,7 +1203,6 @@
   Name: attributive phrase
   SubtypeOf:
     - cxn:construction
-    - cxn:phrase
   ConstituentOf:
     - cxn:modification-construction
   Definition: >-
@@ -2203,7 +2202,7 @@
   Examples:
     - She thought <e>that</e> he was tired
 
-- Id: 1ction
+- Id: cxn:complex-construction
   Type: cxn
   Name: complex construction
   Status: deleted
@@ -3683,7 +3682,6 @@
     - cxn:coordinate-construction
     - cxn:dynamic-predicate-part
     - cxn:modifier
-    - cxn:phrase
     - cxn:presentational-construction
     - cxn:referent-expression
     - cxn:referring-phrase
@@ -5802,7 +5800,7 @@
   Type: def
   Name: lexicalize, lexicalization
   Definition: >-
-    the diachronic process by which a complex <a>morphosyntactic</a> structure develops an idiosyncratic <a>meaning</a>, and so comes to form one unit, in the sense of a pairing of a <a>form</a> and a unitary, unanalyzable meaning. <i>Example</i>: the English <a>phrase</a> <i>jack-in-the-pulpit</i> has lexicalized to denote a particular species of plant. There is usually an earlier stage where the <a>elements</a> of the <a>complex predicate</a> have an identifiable meaning, even if the meaning of the whole is idiosyncratic. For example <i>red-winged blackbird</i> describes a specific species of bird, but the phrase is partially analyzable in that the bird is mostly black but has a patch of red on its wings. A lexicalized structure may come to be fixed in the order of its elements, and altered or reduced in form, for example the farewell <i>goodbye</i> which originated in the phrase <i>God be with ye</i> (and has now been further reduced to <i>bye</i>). (Sections 13.1.2, 13.4)
+    the diachronic process by which a complex <a>morphosyntactic</a> structure develops an idiosyncratic <a>meaning</a>, and so comes to form one unit, in the sense of a pairing of a <a>form</a> and a unitary, unanalyzable meaning. <i>Example</i>: the English phrase <i>jack-in-the-pulpit</i> has lexicalized to denote a particular species of plant. There is usually an earlier stage where the <a>elements</a> of the <a>complex predicate</a> have an identifiable meaning, even if the meaning of the whole is idiosyncratic. For example <i>red-winged blackbird</i> describes a specific species of bird, but the phrase is partially analyzable in that the bird is mostly black but has a patch of red on its wings. A lexicalized structure may come to be fixed in the order of its elements, and altered or reduced in form, for example the farewell <i>goodbye</i> which originated in the phrase <i>God be with ye</i> (and has now been further reduced to <i>bye</i>). (Sections 13.1.2, 13.4)
 
 - Id: inf:link
   Type: inf
@@ -6020,7 +6018,7 @@
     - cxn:noun-complement-clause-construction
     - cxn:relative-clause-construction
   Definition: >-
-    the basic <a>information packaging</a> functions that structure <a>phrases</a> and <a>clauses</a>; the propositional acts are <a>reference</a>, <a>predication</a>, and <a>modification</a>. (Section 1.3)
+    the basic <a>information packaging</a> functions that structure phrases and <a>clauses</a>; the propositional acts are <a>reference</a>, <a>predication</a>, and <a>modification</a>. (Section 1.3)
 
 - Id: sem:maleficiary
   Type: sem
@@ -6329,7 +6327,6 @@
     - cxn:attributive-phrase
     - cxn:modifier
     - cxn:noun-complement
-    - cxn:phrase
     - cxn:reciprocal-construction
   Definition: >-
     provides additional information about the <a>referent</a> and enriches the specification of the referent for the hearer. Example: in <i>a furry cat</i>, the speaker enriches the specification of the referent in the cat category by the <a>property</a> of being furry. In the <a>file metaphor</a> for describing <a>propositional acts</a>, modification enriches the discourse file; the information it adds to the discourse file is secondary in comparison to <a>predication</a>. (Sections 1.3, <b>2.1</b>)
@@ -7576,6 +7573,7 @@
 - Id: cxn:phrase
   Type: cxn
   Name: phrase
+  Status: deleted
   Definition: >-
     a construction used for <a>reference</a> or <a>modification</a> (of a referent). <i>Example</i>: <i>the furry kitten</i> is an instance of a phrasal construction. (Section 1.3)
   Examples:
@@ -8850,7 +8848,6 @@
     - inf:topic-comment
   FunctionOf:
     - cxn:argument-phrase
-    - cxn:phrase
     - cxn:referent-expression
     - cxn:referring-phrase
   Definition: >-
@@ -8884,7 +8881,6 @@
   Name: referring phrase
   SubtypeOf:
     - cxn:construction
-    - cxn:phrase
   Definition: >-
     a <a>construction</a> that performs the act of <a>reference</a>. <i>Example</i>: <i>the blue mailboxes</i> is a referring phrase that refers to a group of mailboxes. (Sections 2.2.2, <b>3.1</b>)
   Examples:
@@ -9337,7 +9333,7 @@
   ExpressionOf:
     - cxn:auxiliary-construction
   Definition: >-
-    a <a>strategy</a> in which the <a>element</a> in question is positioned after the first element in the <a>phrase</a> or <a>clause</a>. <i>Example</i>: in Tohono O'odham <i>ban 'o g cu: wĭ huhu'id</i> [coyote <sc>aux</sc> <sc>def</sc> jackrabbit chase] <q>The coyote is chasing the jackrabbit</q>, the auxiliary <i>o'</i> is in second position in the clause. (Section 13.4)
+    a <a>strategy</a> in which the <a>element</a> in question is positioned after the first element in the phrase or <a>clause</a>. <i>Example</i>: in Tohono O'odham <i>ban 'o g cu: wĭ huhu'id</i> [coyote <sc>aux</sc> <sc>def</sc> jackrabbit chase] <q>The coyote is chasing the jackrabbit</q>, the auxiliary <i>o'</i> is in second position in the clause. (Section 13.4)
   Examples:
     - Language: Tohono O'odham
       Example: "ban 'o g cu: wĭ huhu'id"
@@ -10991,7 +10987,7 @@
   ExpressionOf:
     - cxn:presentational-possession
   Definition: >-
-    a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed in a <a>subject phrase</a>, and the <a>possessum</a> is expressed in a <a>comitative</a> <a>phrase</a>. <i>Example</i>: Amele <i>ija sigin <b>ca</b></i> [I knife <b>with</b>] <q>I have a knife</q> [lit. <q>I am with a knife</q>] is an instance of the with-possessive strategy. (Section 10.4.2)
+    a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed in a <a>subject phrase</a>, and the <a>possessum</a> is expressed in a <a>comitative</a> <a cxn:referring-phrase>phrase</a>. <i>Example</i>: Amele <i>ija sigin <b>ca</b></i> [I knife <b>with</b>] <q>I have a knife</q> [lit. <q>I am with a knife</q>] is an instance of the with-possessive strategy. (Section 10.4.2)
   Examples:
     - Language: Amele
       Example: <e>ija sigin ca</e>
