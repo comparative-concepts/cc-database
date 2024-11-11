@@ -37,7 +37,7 @@ menu > li {
 
 .flex-break {
     flex-basis: 100%;
-    height: 0;  
+    height: 0;
 }
 
 select:hover, input:hover, label:hover, button:hover, summary:hover {

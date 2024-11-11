@@ -62,8 +62,8 @@ GENERIC_TYPES = {
 }
 
 STRATEGY_TYPES = (
-    'str:system', 
-    'str:encoding-strategy', 
+    'str:system',
+    'str:encoding-strategy',
     'str:recruitment-strategy',
 )
 
@@ -113,7 +113,7 @@ def parse_yaml_database(glossfile: str | Path, keep_deleted: bool = False) -> Gl
     glosses: Glosses = {}
     with open(glossfile) as F:
         for item in yaml.load(F, Loader=yaml.CLoader):
-            if not keep_deleted and item.get('Status') == "deleted": 
+            if not keep_deleted and item.get('Status') == "deleted":
                 continue
             try:
                 gitem = convert_glossitem(item)
@@ -160,7 +160,7 @@ def expand_alias(alias: str) -> list[str]:
     """
     def expand_parentheses(s: str) -> list[str]:
         m = re.search(r"\(([^()]+)\)", s)
-        if not m: 
+        if not m:
             return [s]
         prefix = s[:m.start()]
         alternatives: list[str] = ["", m.group(1)]
@@ -201,10 +201,10 @@ def validate_names_and_aliases(item: GlossItem, glosses: Glosses):
     # the name must be unique among names (with the same type)
     id = item.Id
     for id2, item2 in glosses.items():
-        if id < id2: 
-            if item.Type == item2.Type and item.Name == item2.Name: 
+        if id < id2:
+            if item.Type == item2.Type and item.Name == item2.Name:
                 error("duplicate name", f"{item.Name!r} is the name of {id!r} and {id2!r}, both of type {item.Type}")
-            elif item.Name == item2.Name: 
+            elif item.Name == item2.Name:
                 warning("duplicate name", f"{item.Name!r} is the name of {id!r} and {id2!r}")
     # a name should not be an alias
     for id2, item2 in glosses.items():

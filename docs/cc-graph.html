@@ -66,25 +66,25 @@
     <li>
       <b>Subgraph:</b>
       <button id="ccClearFilter" onclick="clearFilter()">Clear</button>
-      &nbsp; grow: 
+      &nbsp; grow:
       <button id="ccGrowUpwards" onclick="revealNeighbors('from')">upwards</button>
       <button id="ccGrowDownwards" onclick="revealNeighbors('to')">downwards</button>
       <button id="ccGrowOutwards" onclick="revealNeighbors()">outwards</button>
-      &nbsp; remove: 
+      &nbsp; remove:
       <button id="ccHideUnselected" onclick="hideUnselected()">unselected</button>
       <button id="ccHideSelected" onclick="hideSelected()">selected</button>
     </li>
     <li>
-      <b>Selection:</b> 
+      <b>Selection:</b>
       <button id="ccClearSelection" onclick="clearSelection()">Clear</button>
       <button id="ccSelectUnconnected" onclick="selectUnconnected()">Unconnected</button>
-      &nbsp; expand: 
+      &nbsp; expand:
       <button id="ccExpandUpwards" onclick="expandSelection('from')">upwards</button>
       <button id="ccExpandDownwards" onclick="expandSelection('to')">downwards</button>
       <button id="ccExpandOutwards" onclick="expandSelection()">outwards</button>
     </li>
     <li>
-      search: 
+      search:
       <input type="search" id="ccSearch" size="30" placeholder="Type at least 3 characters" oninput="searchNodes()"/>
     </li>
   </menu>
@@ -97,8 +97,8 @@
 
   <div id="extraInfo"></div>
 
-  <p><b>Visualization:</b> 
-    &copy;2024 <a target="_blank" href="https://github.com/heatherleaf">Peter Ljunglöf</a>, 
+  <p><b>Visualization:</b>
+    &copy;2024 <a target="_blank" href="https://github.com/heatherleaf">Peter Ljunglöf</a>,
     using the graph library
     <a target="_blank" href="https://visjs.github.io/vis-network/docs/network/">Vis-Network</a>.
   </p>

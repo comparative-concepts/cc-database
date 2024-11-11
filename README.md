@@ -11,7 +11,7 @@ You can use this database in the following ways:
 
 ## Organisation of the YAML database
 
-The CC database is stored in a YAML file. 
+The CC database is stored in a YAML file.
 Here is an example of a CC entry:
 
 https://github.com/comparative-concepts/cc-database/blob/7d4b779171aa3bbda6147bdcbb797e3da3d30598/cc-database.yaml#L5675-L5686
@@ -29,7 +29,7 @@ The YAML database consists of a list of entries of the following form:
   Definition: pseudo-html string
   Examples: list of examples, either as plain strings or with information about language, gloss, translation, etc.
 
-  SubtypeOf, ConstituentOf, HeadOf, 
+  SubtypeOf, ConstituentOf, HeadOf,
   AttributeOf, RoleOf, FillerOf,
   ExpressionOf, ModeledOn, RecruitedFrom: these are the different relations, stored as lists of cc-ids
 ```
@@ -53,7 +53,7 @@ options:
   --keep-deleted, -d    keep deleted terms
 ```
 
-There's a Makefile that reads the database and creates the files `docs/index.html` and `docs/cc-graph-data.js`. 
-They are used in the [interactive glossary](https://comparative-concepts.github.io/cc-database>) 
+There's a Makefile that reads the database and creates the files `docs/index.html` and `docs/cc-graph-data.js`.
+They are used in the [interactive glossary](https://comparative-concepts.github.io/cc-database>)
 and the [interactive visualization](https://comparative-concepts.github.io/cc-database/cc-graph.html).
 

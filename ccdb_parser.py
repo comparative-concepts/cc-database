@@ -38,7 +38,7 @@ class CCDB:
                 allnames.setdefault(name.casefold(), set()).add(id)
         self.allnames = {name: tuple(ids) for name, ids in allnames.items()}
 
-        # Expand all definitions by converting abbreviated links 
+        # Expand all definitions by converting abbreviated links
         # "<a>name</a>" and "<a alias>name</a>" into the form "<a id>name</a>"
         self.definitions = {}
         self.links = {}
@@ -158,7 +158,7 @@ class CCDB:
 
     def expand_link(self, id: str, name: str|None = None) -> str:
         """Expand an abbreviated link "<a>name</a>" into the form "<a id>name</a>"."""
-        if name is None: 
+        if name is None:
             name = id
         if id in self.glosses:
             return f'<a {id}>{name}</a>'
@@ -178,7 +178,7 @@ class CCDB:
 
     def convert_link_to_html(self, id: str, name: str|None = None, selfid: str|None = None) -> str:
         """Convert a CC link into HTML, with an actual link to the CC in the database."""
-        if name is None: 
+        if name is None:
             item = self.glosses[id]
             name = f"{item.Name} [{item.Type.value}]"
         html_name = self.html_friendly_name(name)
@@ -208,7 +208,7 @@ class CCDB:
                 for otherid, other in self.glosses.items()
                 if item.Id in other.Relations.get(relation_type, ())
             ]
-        
+
         if len(relations) > 0:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation">' +
                     ' | '.join(map(self.convert_link_to_html, relations)) +
@@ -279,7 +279,7 @@ class CCDB:
 
         nlinks = sum(len(links) for links in self.links.values())
         ntypedlinks = sum(len(relids) for _, item in glossitems for relids in item.Relations.values())
-        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, ' 
+        print(f'<p><strong>Statistics:</strong> {len(glossitems)} CCs, '
               f'with {ntypedlinks} typed relations and {nlinks} links within CC definitions</p>')
 
         print('<div id="glosses">')
@@ -404,7 +404,7 @@ class CCDB:
                 part = part.replace(r"[", r"\[").replace(r"]", r"\]")
                 nsubs = 1
                 while nsubs > 0:
-                    (part, nsubs) = re.subn(r"<(\w+)>([^<>]+?)</\1>", 
+                    (part, nsubs) = re.subn(r"<(\w+)>([^<>]+?)</\1>",
                                             CCDB.karp_translate,
                                             part)
             karp_parts.append(part)
@@ -422,7 +422,7 @@ class CCDB:
                 'Alias': item.Alias,
                 'SubtypeOf': item.Relations.get(Relation.SubtypeOf, []),
             }
-            if id in self.definitions: 
+            if id in self.definitions:
                 out['Definition'] = self.convert_definition_to_karp(self.definitions[id])
             print(json.dumps(out))
 
@@ -447,11 +447,11 @@ class CCDB:
                 'name': item.Name,
                 'type': self.FNBR_TYPES.get(item.Type, item.Type),
                 'definition': item.Definition,
-                'subTypeOf': [SPECIAL_FNBR_CCs.get(relid, relid) 
+                'subTypeOf': [SPECIAL_FNBR_CCs.get(relid, relid)
                               for relid in item.Relations.get(Relation.SubtypeOf, [])],
             }
             if Relation.AssociatedTo in item.Relations:
-                out['associatedTo'] = [SPECIAL_FNBR_CCs.get(relid, relid) 
+                out['associatedTo'] = [SPECIAL_FNBR_CCs.get(relid, relid)
                                        for relid in item.Relations[Relation.AssociatedTo]]
             out_ccs.append(out)
         final_output: dict[str, object] = {

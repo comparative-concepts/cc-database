@@ -49,7 +49,7 @@ function init_searchfilter() {
             let content = merge_cc_elements(splitchar, elem.getElementsByClassName(type));
             cc[type] = content;
         }
-        ALL_CCS.push(cc); 
+        ALL_CCS.push(cc);
     }
 
     let checkboxes_types = CC_TYPES.map((type, i) =>
