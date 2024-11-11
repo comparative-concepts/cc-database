@@ -357,10 +357,12 @@ class CCDB:
         nodes: list[GraphNode] = []
         edges: list[GraphEdge] = []
         for item in self.glosses.values():
-            title = item.Name
+            title = f"{item.Name} ({item.Type.value})"
             defn = self.definitions.get(item.Id)
             if defn:
                 title += "\n\n" + self.convert_html_to_text(self.convert_definition_to_html(defn))
+            else:
+                title += "\n[definition missing]"
             nodes.append({
                 "id": item.Id,
                 "name": item.Name,
