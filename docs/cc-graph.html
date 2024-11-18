@@ -65,7 +65,7 @@
     </li>
     <li>
       <b>Subgraph:</b>
-      <button id="ccClearFilter" onclick="clearFilter()">Clear</button>
+      <button id="ccClearFilter" onclick="clearFilter()">clear</button>
       &nbsp; grow:
       <button id="ccGrowUpwards" onclick="revealNeighbors('from')">upwards</button>
       <button id="ccGrowDownwards" onclick="revealNeighbors('to')">downwards</button>
@@ -76,8 +76,9 @@
     </li>
     <li>
       <b>Selection:</b>
-      <button id="ccClearSelection" onclick="clearSelection()">Clear</button>
-      <button id="ccSelectUnconnected" onclick="selectUnconnected()">Unconnected</button>
+      <button id="ccClearSelection" onclick="clearSelection()">clear</button>
+      <button id="ccSelectVisible" onclick="selectVisible()">all visible</button>
+      <button id="ccSelectUnconnected" onclick="selectUnconnected()">unconnected</button>
       &nbsp; expand:
       <button id="ccExpandUpwards" onclick="expandSelection('from')">upwards</button>
       <button id="ccExpandDownwards" onclick="expandSelection('to')">downwards</button>

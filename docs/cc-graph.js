@@ -169,12 +169,14 @@ function init() {
 // Enable/disable UI elements depending on the current selection, unconnected nodes, etc.
 function selectionChanged() {
     let hasSelection = network.getSelectedNodes().length > 0;
+    let hasUnselected = network.getSelectedNodes().length < getFilteredNodes().length;
     let hasUnconnected = getUnconnectedNodes().length > 0;
     let filtered = isFiltered();
     let willStabilize = document.getElementById("ccStabilize").checked;
     document.getElementById("ccSolver").disabled = !willStabilize;
     document.getElementById("ccSearch").disabled = !getGraph();
     document.getElementById("ccClearSelection").disabled = !hasSelection;
+    document.getElementById("ccSelectVisible").disabled = !hasUnselected;
     document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
     document.getElementById("ccExpandUpwards").disabled = !hasSelection;
     document.getElementById("ccExpandDownwards").disabled = !hasSelection;
@@ -288,6 +290,14 @@ function clearSelection() {
     selectionChanged();
 }
 
+// Select all visible nodes
+function selectVisible() {
+    let visible = getFilteredNodes();
+    if (visible.length === 0) return;
+    network.selectNodes(visible.map((n) => n.id));
+    selectionChanged();
+}
+
 // Select the currently unconnected nodes
 function selectUnconnected() {
     let unconnected = getUnconnectedNodes();
@@ -331,16 +341,19 @@ function hideUnselected() {
 function revealNeighbors(direction) {
     let relations = getGraphRelations();
     let nodeIds = {};
-    for (let n of network.body.nodeIndices) {
-        nodeIds[n] = true;
+    for (let n of getSelectedNodes()) {
         for (let e of ccEdges) {
             if (relations.includes(e.rel)) {
-                if (n === e.from && direction !== 'from') nodeIds[e.to] = true;
-                else if (n === e.to && direction !== 'to') nodeIds[e.from] = true;
+                if (n.id === e.from && direction !== 'from') nodeIds[e.to] = true;
+                else if (n.id === e.to && direction !== 'to') nodeIds[e.from] = true;
             }
         }
     }
-    setGraphData(nodeIds);
+    if (Object.keys(nodeIds).length > 0) {
+        for (let n of network.body.nodeIndices)
+            nodeIds[n] = true;
+        setGraphData(nodeIds);
+    }
 }
 
 // Things to do when any kind of settings has changed
