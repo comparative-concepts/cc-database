@@ -245,6 +245,7 @@ function updateEdges() {
     for (let e of getGraphEdges()) {
         e.color = graph.edgecolors[e.rel];
         e.dashes = graph.edgedashes && graph.edgedashes[e.rel];
+        if (graph.edgereversed && graph.edgereversed[e.rel]) e.arrows = 'from';
     }
 }
 

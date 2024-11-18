@@ -72,6 +72,7 @@ ccGraphs.cxn_str = {
         RecruitedFrom: "MediumOrchid",
     },
     edgedashes: {ModeledOn: true, RecruitedFrom: true},
+    edgereversed: {ModeledOn: true, RecruitedFrom: true},
 };
 
 // ccGraphs.cxn_sem = {
