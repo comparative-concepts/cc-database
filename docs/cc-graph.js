@@ -325,9 +325,10 @@ function clearFilter() {
 function hideSelected() {
     let selected = network.getSelectedNodes();
     if (selected.length === 0) return;
-    network.deleteSelected();
+    let visible = getFilteredNodes().map((n) => n.id);
+    let remaining = visible.filter((n) => !selected.includes(n));
     network.selectNodes([]);
-    selectionChanged();
+    setGraphData(remaining);
 }
 
 // Remove all nodes from the graph that are not selected and not a neighbor to a selected node
