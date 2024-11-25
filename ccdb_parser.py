@@ -271,8 +271,10 @@ class CCDB:
         print('</head><body>')
         print('<div id="search"></div>')
         print(f'<h1><a href="#">Database of Comparative Concepts</a></h1>')
-        print(f"<p>Extracted and expanded from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022)")
-        print(f'<p>Explore our interactive <a href="cc-graph.html">graph visualization of the CC database</a>.</p>')
+        print(f"<p>Extracted and expanded from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022).")
+        print(f'In addition to this database, you can also explore our interactive <a href="cc-graph.html">graph visualization of the CC database</a>.')
+        print(f'You can also <a href="https://github.com/comparative-concepts/cc-database">look at the source code</a>,')
+        print(f'and if you have a suggestion, please <a href="https://github.com/comparative-concepts/cc-database/issues">open an issue</a>.</p>')
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
 
         glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1].Name))
