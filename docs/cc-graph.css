@@ -64,3 +64,17 @@ select:hover, input:hover, label:hover, button:hover, summary:hover {
     border-radius: 10px;
 }
 
+@media (min-width: 120vh) {
+    #ccNetwork {
+        width: 70%;
+        float: left;
+        margin-right: 0.75rem;
+    }
+}
+
+footer {
+    clear: both;
+    /* This is to get margin/padding to work, see here: https://stackoverflow.com/a/4198306 */
+    border: 1px solid transparent;
+}
+
