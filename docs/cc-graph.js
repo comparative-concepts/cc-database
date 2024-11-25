@@ -141,13 +141,16 @@ function init() {
     let checkboxes = document.getElementById("ccRelations");
     for (let graphID in ccGraphs) {
         let graph = ccGraphs[graphID];
-        select.innerHTML += `<option value="${graphID}">${graph.name}</option>`;
+        select.innerHTML += mkElem('option', {value:graphID}, graph.name);
         for (let relId in graph.edgecolors) {
             if (!document.getElementById(relId)) {
                 checkboxes.innerHTML +=
-                    `<label style="display:none">
-                    <input type="checkbox" id="${relId}" onchange="changeSettings()"/>
-                    <span>${relId}</span> &nbsp; </label>`;
+                    mkElem("label", {style:"display:none"},
+                        mkElem("input", {type:"checkbox", id:relId, onchange:"changeSettings()"}),
+                        " ",
+                        mkElem("span", relId),
+                        " &nbsp ",
+                    );
             }
         }
     }
@@ -192,30 +195,44 @@ function selectionChanged() {
 
 // Show graph statistics and information
 function showStatistics() {
-    let stat = document.getElementById("statistics");
+    let graphInfo = document.getElementById("infoGraph");
+    let graphInfoText = mkElem("b", "Current graph: ");
     if (!getGraph()) {
-        stat.innerText = `${ccNodes.length} nodes; ${ccEdges.length} relations`;
+        graphInfoText += `${ccNodes.length} nodes; ${ccEdges.length} relations`;
+        graphInfo.innerHTML = mkElem("p", graphInfoText);
         return;
     }
-    let unconnected = getUnconnectedNodes().length;
-    let selected = network.getSelectedNodes().length;
+    let unconnected = getUnconnectedNodes();
+    let selected = getSelectedNodes();
     let filtered = isFiltered();
-    stat.innerText = `${getFilteredNodes().length} nodes`;
-    if (filtered) stat.innerText += ` (of ${getGraphNodes().length})`;
-    if (unconnected > 0) stat.innerText += `, ${unconnected} unconnected`;
-    if (selected > 0) stat.innerText += `, ${selected} selected`;
-    stat.innerText += `; ${getFilteredEdges().length} edges`;
-    if (filtered) stat.innerText += ` (of ${getGraphEdges().length})`;
+    graphInfoText += `${getFilteredNodes().length} nodes`;
+    if (filtered) graphInfoText += ` (of ${getGraphNodes().length})`;
+    if (unconnected.length > 0) graphInfoText += `, ${unconnected.length} unconnected`;
+    if (selected.length > 0) graphInfoText += `, ${selected.length} selected`;
+    graphInfoText += `; ${getFilteredEdges().length} edges`;
+    if (filtered) graphInfoText += ` (of ${getGraphEdges().length})`;
+    graphInfo.innerHTML = mkElem("p", graphInfoText);
 
-    let extraInfo = document.getElementById("extraInfo");
-    extraInfo.innerHTML = "";
-    if (selected > 0) {
-        let info = getSelectedNodes().map((n) => n.label).join(", ").replaceAll("-\n", "-").replaceAll("\n", " ");
-        extraInfo.innerHTML += `<p><b>Selected:</b> ${info}</p>`;
-    }
-    if (unconnected > 0) {
-        let info = getUnconnectedNodes().map((n) => n.label).join(", ").replaceAll("-\n", "-").replaceAll("\n", " ");
-        extraInfo.innerHTML += `<p><b>Unconnected:</b> ${info}</p>`;
+    for (const [nodes, title] of [[selected, "Selected"], [unconnected, "Unconnected"]]) {
+        let infoNode = document.getElementById("info" + title);
+        if (nodes === selected && nodes.length === 1) {
+            const node = nodes[0];
+            infoNode.innerHTML = mkElem("p",
+                mkElem("b", linkToCC(node, `${node.name} (${node.type})`), ": "),
+                removeLinks(node.definition) || "[no definition]",
+            );
+            console.log(infoNode.innerHTML)
+        } else if (nodes.length > 0) {
+            infoNode.innerHTML = mkElem("p",
+                mkElem("b", title + ": "),
+                ": ",
+                nodes.map(
+                    (n) => linkToCC(n, n.name)
+                ).join(", "),
+            );
+        } else {
+            infoNode.innerHTML = "";
+        }
     }
 }
 
@@ -229,16 +246,23 @@ function updateNodes() {
 
         // Set node label
         let attr = document.getElementById("ccShow").value;
-        n.label = n[attr].replaceAll("--", "-");
         // Word-wrapping, from: https://www.30secondsofcode.org/js/s/word-wrap/
         const wordwrap = /(?![^\n]{1,24}$)([^\n]{1,24}[\s-])/g;
-        n.label = n.label.replace(wordwrap, '$1\n');
+        n.label = n[attr].replace(wordwrap, '$1\n');
 
         // Set node color
         let color = graph.nodecolors[n.type];
         let border = graph.nodeborders && graph.nodeborders[n.type] || color;
         n.color = {background: color, border: border};
-        }
+
+        // This is what is shown when you hover over a node
+        n.title = document.createElement("div");
+        n.title.innerHTML = mkElem("span",
+            mkElem("b", `${n.name} (${n.type})`),
+            "<br/>",
+            removeLinks(n.definition) || "[no definition]",
+        );
+    }
 }
 
 // Update information about each graph edge
@@ -377,4 +401,33 @@ function selectGraph() {
     updateEdges();
     updateSolver();
     clearFilter();
+}
+
+
+/* ------------------------------------------------------------------------- */
+// HTML utilities
+
+function mkElem(elem, attrs, ...content) {
+    if (attrs == null) attrs = {};
+    if (typeof attrs === 'string') {
+        content = [attrs].concat(content);
+        attrs = {};
+    }
+    attrs = Object.keys(attrs).map((k) => ` ${k}="${attrs[k]}"`).join('');
+    content = content.join('');
+    return `<${elem}${attrs}>${content}</${elem}>`;
+}
+
+function linkToCC(node, ...content) {
+    let attrs = {target: "CC-database", href: "index.html"};
+    if (node) attrs.href += "#" + node.id;
+    return mkElem("a", attrs, ...content);
+}
+
+function removeLinks(html) {
+    return html.replaceAll(/<a [^<>]+>|<\/a>/g, "");
+}
+
+function convertHTMLtoText(html) {
+    return html.replaceAll(/<[a-zA-Z/].*?>/g, "");
 }

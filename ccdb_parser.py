@@ -18,7 +18,7 @@ ParsedDefinition = list[str | tuple[str, str]]
 OutputFormats = ['html', 'karp', 'fnbr', 'graph']
 
 # Graph nodes and edges
-GraphNode = TypedDict("GraphNode", {"id": str, "name": str, "type": str, "title": str})
+GraphNode = TypedDict("GraphNode", {"id": str, "name": str, "type": str, "definition": str})
 GraphEdge = TypedDict("GraphEdge", {"from": str, "to": str, "rel": str})
 
 
@@ -349,25 +349,20 @@ class CCDB:
     ###########################################################################
     ## Export to a graph as Javascript objects
 
-    @staticmethod
-    def convert_html_to_text(html: str) -> str:
-        return re.sub(r"<[^<>]+>", "", html)
-
     def export_to_graph(self) -> None:
         nodes: list[GraphNode] = []
         edges: list[GraphEdge] = []
         for item in self.glosses.values():
-            title = f"{item.Name} ({item.Type.value})"
             defn = self.definitions.get(item.Id)
             if defn:
-                title += "\n\n" + self.convert_html_to_text(self.convert_definition_to_html(defn))
+                defn = self.convert_definition_to_html(defn)
             else:
-                title += "\n[definition missing]"
+                defn = ""
             nodes.append({
                 "id": item.Id,
-                "name": item.Name,
+                "name": self.html_friendly_name(item.Name),
                 "type": item.Type,
-                "title": title,
+                "definition": defn,
             })
             for rel in item.Relations:
                 for target in item.Relations.get(rel, []):

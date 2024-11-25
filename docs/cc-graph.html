@@ -12,7 +12,7 @@
 </head>
 
 <body onload="init()">
-  <h1>Visualization of the <a href="index.html">Comparative Concepts database</a></h1>
+  <h1>Visualization of the <a target="CC-database" href="index.html">Comparative Concepts database</a></h1>
 
   <details>
     <summary>Instructions</summary>
@@ -91,17 +91,16 @@
   </menu>
 
   <div id="ccNetwork"></div>
+  <div id="infoGraph"></div>
+  <div id="infoSelected"></div>
+  <div id="infoUnconnected"></div>
 
-  <p>
-    <b>Current graph:</b> <span id="statistics"></span>
-  </p>
-
-  <div id="extraInfo"></div>
-
-  <p><b>Visualization:</b>
-    &copy;2024 <a target="_blank" href="https://github.com/heatherleaf">Peter Ljunglöf</a>,
-    using the graph library
-    <a target="_blank" href="https://visjs.github.io/vis-network/docs/network/">Vis-Network</a>.
-  </p>
+  <footer>
+    <p><b>Visualization:</b>
+      &copy;2024 <a target="_blank" href="https://github.com/heatherleaf">Peter Ljunglöf</a>,
+      using the graph library
+      <a target="_blank" href="https://visjs.github.io/vis-network/docs/network/">Vis-Network</a>.
+    </p>
+  </footer>
 </body>
 </html>
