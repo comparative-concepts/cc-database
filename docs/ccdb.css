@@ -63,6 +63,16 @@ q.dq {
     content: " · ";
 }
 
+#search details > summary {
+    float: right;
+    font-size: 150%;
+    list-style-type: none;
+}
+
+#search details > summary:hover {
+    cursor: pointer;
+}
+
 #search {
     position: fixed;
     top: 10px;

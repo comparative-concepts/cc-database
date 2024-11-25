@@ -53,8 +53,8 @@ function init_searchfilter() {
     }
 
     let checkboxes_types = CC_TYPES.map((type, i) =>
-        `<label><input id="type-${type.replace(' ', '-')}" type="checkbox" checked/> ${type}</label>
-        ${(i+1) % 3 == 0 ? '<br/> &emsp; ' : ''}`
+        `${i && i % 3 == 0 ? '<br/>' : ''}
+        <label><input id="type-${type.replace(' ', '-')}" type="checkbox" checked/> ${type}</label>`
     );
 
     let checkboxes_filters = FILTER_TYPES.map((type, i) =>
@@ -66,11 +66,12 @@ function init_searchfilter() {
     );
 
     document.getElementById('search').innerHTML = `
-        Show <br/>&emsp; ${checkboxes_types.join('\n')} <br/>
-        Find a ${checkboxes_filters.join('\n')} <br/>
-        that ${radioboxes.join('\n')} <br/>
-        <input id="search-box" type="search"/> <br/>
-        <span id="search-info"></span>
+        <details><summary>🔎</summary>
+        <div>${checkboxes_types.join('\n')}</div>
+        <div>Find a ${checkboxes_filters.join('\n')}<br/>
+        that ${radioboxes.join('\n')}</div>
+        <div><input id="search-box" type="search"/></div>
+        <div id="search-info"></div></details>
     `.trim();
 
     for (let key of CC_TYPES) {
