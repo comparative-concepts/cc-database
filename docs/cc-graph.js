@@ -342,11 +342,12 @@ function hideUnselected() {
 function revealNeighbors(direction) {
     let relations = getGraphRelations();
     let nodeIds = {};
-    if (getSelectedNodes().length === 0) {
-        // If no nodes are selected, select all visible and grow from them
-        network.selectNodes(getFilteredNodes().map((n) => n.id));
+    let nodesToGrow = getSelectedNodes();
+    if (nodesToGrow.length === 0) {
+        // If no nodes are selected, grow from all visible nodes
+        nodesToGrow = getFilteredNodes();
     }
-    for (let n of getSelectedNodes()) {
+    for (let n of nodesToGrow) {
         for (let e of ccEdges) {
             if (relations.includes(e.rel)) {
                 if (n.id === e.from && direction !== 'from') nodeIds[e.to] = true;
