@@ -51,6 +51,8 @@
 - Id: inf:aboutness
   Type: inf
   Name: about, aboutness
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:topic-comment
   Definition: >-
@@ -364,6 +366,8 @@
 - Id: inf:admodification
   Type: inf
   Name: admodification
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:modification
   FunctionOf:
@@ -684,6 +688,8 @@
 - Id: inf:alternative-proposition
   Type: inf
   Name: alternative proposition
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:counterpresuppositional-contrast
   Definition: >-
@@ -2219,7 +2225,7 @@
   Alias:
     - symmetric
   SubtypeOf:
-    - inf:discourse-coherence
+    - inf:discourse-connection
   FunctionOf:
     - cxn:coordinate-construction
   Definition: >-
@@ -2829,6 +2835,8 @@
   Name: coreference
   Alias:
     - coreferential
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:discourse-coherence
   FunctionOf:
@@ -3369,7 +3377,7 @@
   Alias:
     - discourse relation
   SubtypeOf:
-    - inf:information-packaging
+    - inf:discourse-structure
   FunctionOf:
     - cxn:complex-sentence
   Definition: ''
@@ -4325,7 +4333,7 @@
   Alias:
     - asymmetric
   SubtypeOf:
-    - inf:discourse-coherence
+    - inf:discourse-connection
   FunctionOf:
     - cxn:adverbial-clause-construction
   Definition: >-
@@ -4419,6 +4427,8 @@
 - Id: inf:focus
   Type: inf
   Name: focus
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:identificational
   Definition: >-
@@ -5357,6 +5367,8 @@
 - Id: inf:information-status
   Type: inf
   Name: information status
+  SubtypeOf:
+    - inf:discourse-structure
   AttributeOf:
     - inf:reference
   FunctionOf:
@@ -6007,6 +6019,8 @@
   Name: major propositional act
   Alias:
     - (major) propositional act
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:topic-comment
   FunctionOf:
@@ -7685,6 +7699,8 @@
 - Id: inf:poset
   Type: inf
   Name: poset
+  SubtypeOf:
+    - inf:discourse-structure
   Definition: >-
     a partially ordered set of discourse entities. The partial ordering is defined by some sort of semantic relation, such as part--whole or type--subtype. <i>Example</i>: in the exchange <i>Do you like this album? Yeah, this song I really like</i>, the album mentioned in the first turn and the song mentioned in the second turn are members of a poset which is defined by a <a>part--whole relation</a> (the album is the whole, and the song is a part of the album). (Section 11.2.3)
   Examples:
@@ -8321,6 +8337,8 @@
   Name: presupposed open proposition
   Alias:
     - POP
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:identificational
   Definition: >-
@@ -9245,6 +9263,8 @@
   Alias:
     - salience
     - salient
+  SubtypeOf:
+    - inf:discourse-structure
   AttributeOf:
     - inf:reference
   Definition: >-
@@ -9826,9 +9846,10 @@
 - Id: inf:speech-acts
   Type: inf
   Name: speech acts
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
-    - inf:complex-figure
-    - inf:figure-ground
+    - inf:discourse-coherence
   FunctionOf:
     - cxn:speech-act-construction
   Definition: >-
@@ -10343,6 +10364,8 @@
 - Id: inf:theater-metaphor
   Type: inf
   Name: theater metaphor
+  SubtypeOf:
+    - inf:discourse-structure
   AttributeOf:
     - inf:reference
   Definition: >-
@@ -13335,6 +13358,8 @@
 - Id: inf:discourse-connection
   Type: inf
   Name: discourse connection
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:discourse-coherence
   FunctionOf:
@@ -13421,5 +13446,13 @@
   Name: base object inertia
   SubtypeOf:
     - str:applicative-alignment
+  Definition: ''
+  FromGlossary: false
+
+- Id: inf:discourse-structure
+  Type: inf
+  Name: discourse structure
+  SubtypeOf:
+    - inf:information-packaging
   Definition: ''
   FromGlossary: false
