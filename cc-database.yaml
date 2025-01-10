@@ -4861,7 +4861,6 @@
     - inf:declarative
   FunctionOf:
     - cxn:identificational-construction
-    - cxn:nonpredicational-construction
   Definition: >-
     <a>information packaging</a> in which a particular piece of information (the <a>focus</a>) is equated with the <dq>open slot</dq> in a <a>presupposed open proposition</a>. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
   Examples:
@@ -6008,8 +6007,8 @@
   Name: major propositional act
   Alias:
     - (major) propositional act
-  SubtypeOf:
-    - inf:declarative
+  ConstituentOf:
+    - inf:topic-comment
   FunctionOf:
     - cxn:complement-clause-construction
     - cxn:coordinand
@@ -10379,7 +10378,6 @@
   SubtypeOf:
     - inf:declarative
   FunctionOf:
-    - cxn:nonpredicational-construction
     - cxn:thetic-construction
   Definition: >-
     <a>information packaging</a> that does not split the information into a <a>topic</a> and a <a>comment</a>, as is done in the <a inf:topic-comment>topic--comment</a> information packaging. Instead, the information is presented as a single whole, hence the alternative name <q>all new</q>. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
@@ -13334,9 +13332,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: inf:discourse-link
+- Id: inf:discourse-connection
   Type: inf
-  Name: discourse link
+  Name: discourse connection
   ConstituentOf:
     - inf:discourse-coherence
   FunctionOf:
