@@ -15,7 +15,7 @@ from validation import CCType, Relation, Glosses, GlossItem, error
 ParsedDefinition = list[str | tuple[str, str]]
 
 # The different formats that we can export the database to
-OutputFormats = ['html', 'karp', 'fnbr', 'graph']
+OutputFormats = ['html', 'json', 'fnbr', 'graph']
 
 # Graph nodes and edges
 GraphNode = TypedDict("GraphNode", {"id": str, "name": str, "type": str, "definition": str})
@@ -48,11 +48,12 @@ class CCDB:
             if links: self.links[id] = links
 
 
-    def export(self, format: str) -> None:
+    def export(self, args: argparse.Namespace) -> None:
+        format = args.format
         if format == "html":
             self.print_html()
-        elif format == "karp":
-            self.export_to_karp()
+        elif format == "json":
+            self.export_to_json(args.keys)
         elif format == "fnbr":
             self.export_to_fnbr()
         elif format == "graph":
@@ -383,47 +384,17 @@ class CCDB:
         print("];")
 
     ###########################################################################
-    ## Export to Språkbanken Karp JSON-lines format
+    ## Export to a JSON list of CCs
 
-    @staticmethod
-    def karp_translate(m: re.Match[str]) -> str:
-        tag = m.group(1)
-        if tag == "sc": tag = "caps"
-        return f"[{tag} {m.group(2)}]"
-
-    @staticmethod
-    def convert_definition_to_karp(definition: ParsedDefinition) -> str:
-        """Convert a CC definition into a Karp-formatted string."""
-        karp_parts: list[str] = []
-        for part in definition:
-            if isinstance(part, tuple):
-                assert "[" not in part[1] and "]" not in part[1], f"[] in link name: {part}"
-                part = f"[a {part[0]} {part[1]}]"
-            else:
-                part = part.replace(r"[", r"\[").replace(r"]", r"\]")
-                nsubs = 1
-                while nsubs > 0:
-                    (part, nsubs) = re.subn(r"<(\w+)>([^<>]+?)</\1>",
-                                            CCDB.karp_translate,
-                                            part)
-            karp_parts.append(part)
-        return ''.join(karp_parts)
-
-
-    def export_to_karp(self) -> None:
-        """Export the whole database as a single JSON-lines file for use in Karp."""
+    def export_to_json(self, keys: list[str]) -> None:
+        """Export the whole database as a JSON list with specified keys."""
+        cclist: list[dict[str, str]] = []
         for id in sorted(self.glosses, key=str.casefold):
             item: GlossItem = self.glosses[id]
-            out: dict[str, object] = {
-                'Id': item.Id,
-                'Type': item.Type.value,
-                'Name': item.Name,
-                'Alias': item.Alias,
-                'SubtypeOf': item.Relations.get(Relation.SubtypeOf, []),
-            }
-            if id in self.definitions:
-                out['Definition'] = self.convert_definition_to_karp(self.definitions[id])
-            print(json.dumps(out))
+            cclist.append({
+                key: getattr(item, key) for key in keys
+            })
+        print(json.dumps(cclist))
 
 
     ###########################################################################
@@ -476,6 +447,8 @@ class CCDB:
 parser = argparse.ArgumentParser(description='Parse the comparative concepts database and export it in different formats.')
 parser.add_argument('--quiet', '-q', action='store_true', help=f'suppress warnings')
 parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
+parser.add_argument('--keys', nargs='+', default=['Id'],
+                    help=f'keys to include in JSON output (for format "json"; default: only CC-Id)')
 parser.add_argument('--keep-deleted', '-d', action='store_true', help=f'keep deleted terms')
 parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
@@ -486,11 +459,11 @@ def main(args: argparse.Namespace) -> None:
         print("No output format selected, I will only validate the database.", file=sys.stderr)
     glosses: Glosses = validation.parse_yaml_database(args.cc_database, args.keep_deleted)
     validation.validate_database(glosses)
-    validation.reset_errors_and_warnings()
-    ccdb = CCDB(glosses)
     if args.format:
-        ccdb.export(args.format)
-    validation.report_errors_and_warnings(f"exporting to {args.format} format")
+        validation.reset_errors_and_warnings()
+        ccdb = CCDB(glosses)
+        ccdb.export(args)
+        validation.report_errors_and_warnings(f"exporting to {args.format} format")
 
 
 if __name__ == '__main__':
