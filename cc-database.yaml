@@ -398,7 +398,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed not by an <a>argument phrase</a> but with a <a>possessive modification construction</a>. <i>Example</i>: Mokilese <i>mine woaroa-n woal-o war</i> [exist <sc>clf-3sg</sc> man-that canoe] <q>That man has a canoe</q> [lit. <q>That man's canoe exists</q>] is an instance of the adnominal possessive strategy. The adnominal possessive strategy is an instance of the <a>internal possessor strategy</a>. (Section 10.4.2)
   Examples:
@@ -2801,7 +2801,7 @@
   ExpressionOf:
     - cxn:stative-complex-predicate
   Definition: >-
-    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> recruits a <a>nonprototypical predication</a> construction that employs a <a>copula</a>, and in addition the copula is in a <a>deranked</a> form. <i>Example</i>: in Malayalam <i>aval bhamgiy-aayi prasamgiccu</i> <q>She spoke beautifully</q>, <i>bhamgiy</i> <q>beauty</q> is suffixed with a deranked form of the copula <i>-aayi</i>. (Section 14.2)
+    a <a>strategy</a> used in the <a>stative complex predicate construction</a> in which the <a cxn:manner-complex-predicate>manner</a> (more generally, <a>stative</a>) <u>component</u> recruits a <a>nonprototypical predication construction</a> that employs a <a>copula</a>, and in addition the copula is in a <a>deranked</a> form. <i>Example</i>: in Malayalam <i>aval bhamgiy-aayi prasamgiccu</i> <q>She spoke beautifully</q>, <i>bhamgiy</i> <q>beauty</q> is suffixed with a deranked form of the copula <i>-aayi</i>. (Section 14.2)
   Examples:
     - Language: Malayalam
       Example: aval bhamgiy-aayi prasamgiccu
@@ -3690,7 +3690,6 @@
     - cxn:coordinate-construction
     - cxn:dynamic-predicate-part
     - cxn:modifier
-    - cxn:presentational-construction
     - cxn:referent-expression
     - cxn:referring-phrase
   Definition: >-
@@ -4353,8 +4352,9 @@
     - sem:object-relation
     - sem:spatial-event
   FunctionOf:
-    - cxn:locational-construction
     - cxn:locative-modification-construction
+    - cxn:predicational-location-construction
+    - cxn:presentational-location-construction
   Definition: >-
     a spatial relation that holds between two <a sem:object-concept>objects</a> such that the ground object functions as a reference point for locating the figure. <i>Example</i>: <i>the bicycle in the garage</i> is a <a>locative modification construction</a> that expresses a figure--ground spatial relation between the bicycle and the garage. (Sections 4.1.4, 10.4.1)
   Examples:
@@ -4735,7 +4735,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed in a <a>subject phrase</a>, and the <a>possessum</a> in an <a>object phrase</a>. <i>Example</i>: English <i>Kerry has a laptop</i> is an instance of the have-possessive strategy. (Section 10.4.2)
   Examples:
@@ -5878,7 +5878,7 @@
   SubtypeOf:
     - str:recruitment-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   RecruitedFrom:
     - cxn:presentational-location-construction
   Definition: >-
@@ -5897,7 +5897,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> what was originally a <a>locative predication construction</a> for other <a>predication</a> <a>constructions</a>, both <a>prototypical</a> and <a>nonprototypical predication constructions</a>. An originally locative predication construction employs a <a cxn:locative-phrase>location predicate</a>, typically a <a cxn:body-position-predicate>body position verb</a>. <i>Example</i>: Amele <i>uqa me bil-i-a</i> [he good sit-<sc>3sg-prs</sc>] <q>He is good</q> recruits the locative predication construction with the posture verb <q>sit</q> for property predication. (Section 10.2)
   Examples:
@@ -6748,9 +6748,9 @@
   Examples:
     - <e>Sam is a barber</e>
 
-- Id: cxn:nonprototypical-predication
+- Id: cxn:nonprototypical-predication-construction
   Type: cxn
-  Name: nonprototypical predication
+  Name: nonprototypical predication construction
   Alias:
     - nonverbal predication
   SubtypeOf:
@@ -6826,9 +6826,9 @@
   SubtypeOf:
     - str:copula
   ExpressionOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
-    the <a>strategy</a> for <a>nonprototypical predication</a> that employs an uninflecting <a>copula</a>, typically derived from a <a cxn:personal-pronoun>personal</a> or <a>demonstrative pronoun</a>, <a>topic</a> <u>marker</u>, or <a>focus marker</a>. <i>Example</i>: Nakanai <i>eia <b>la</b> taua sesele</i> <q>he is truly a spirit</q> uses the demonstrative form <i>la</i> for object predication. (Section 10.2)
+    the <a>strategy</a> for <a cxn:nonprototypical-predication-construction>nonprototypical predication</a> that employs an uninflecting <a>copula</a>, typically derived from a <a cxn:personal-pronoun>personal</a> or <a>demonstrative pronoun</a>, <a>topic</a> <u>marker</u>, or <a>focus marker</a>. <i>Example</i>: Nakanai <i>eia <b>la</b> taua sesele</i> <q>he is truly a spirit</q> uses the demonstrative form <i>la</i> for object predication. (Section 10.2)
   Examples:
     - Language: Nakanai
       Example: <e>eia la taua sesele</e>
@@ -6968,10 +6968,10 @@
     - cxn:nominal-attributive-phrase
     - cxn:nominal-phrase
     - cxn:nonclausal-coordination
-    - cxn:nonprototypical-predication
     - cxn:noun
     - cxn:partitive-construction
     - cxn:personal-pronoun
+    - cxn:predicate-nominal-construction
   FillerOf:
     - sem:participant-role
   Definition: >-
@@ -7754,7 +7754,7 @@
   Alias:
     - possession clause
   Definition: >-
-    <a>clauses</a> in which a <a>possession relation</a> is expressed, either <a inf:predicational>predicationally</a> or <a inf:presentational>presentationally</a>. These two types of possession clauses are <a cxn:predicational-possession>predicational possession</a> and <a cxn:presentational-possession>presentational possession</a>, respectively. (Section 10.4.2)
+    <a>clauses</a> in which a <a>possession relation</a> is expressed, either <a inf:predicational>predicationally</a> or <a inf:presentational>presentationally</a>. These two types of possession clauses are <a cxn:predicational-possession-construction>predicational possession</a> and <a cxn:presentational-possession-construction>presentational possession</a>, respectively. (Section 10.4.2)
 
 - Id: sem:possession
   Type: sem
@@ -7767,9 +7767,10 @@
     - sem:object-relation
   FunctionOf:
     - cxn:possessed-argument-construction
-    - cxn:possession-construction
     - cxn:possessive-attributive-phrase
     - cxn:possessive-modification-construction
+    - cxn:predicational-possession-construction
+    - cxn:presentational-possession-construction
   Definition: >-
     a semantic relation between two objects, prototypically <a>ownership</a>, but also including weaker relations such as temporary ownership and physical contiguity. <i>Example</i>: in <i>I have a pen</i>, there is a possession relation between myself and the pen -- I am the <a>possessor</a> and the pen is the <a>possessum</a>. This possession relation could be full ownership, temporary ownership (someone lent it to me), or physical contiguity (I have a pen at hand). Other object--object relations such as <a>body parts</a>, <a>part--whole</a>, and <a>kinship</a> are generally also included under possession relations. (Section 10.4.2)
   Examples:
@@ -8047,7 +8048,7 @@
     - predicate adjectival (construction)
     - property predication (construction)
   SubtypeOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
     a <a>clause construction</a> defined by the function of <a inf:predication>predicating</a> a <a>property concept</a> of a <a>referent</a> -- that is, asserting that a property applies to the referent. <i>Example</i>: <i>Sarah is intelligent</i> is an example of an English predicate adjectival construction: it predicates intelligence of Sarah. (Sections 1.5, <b>2.2.5</b>, <b>10.3</b>)
   Examples:
@@ -8081,7 +8082,7 @@
     - object predication construction
     - predicational construction
   SubtypeOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
     a <a>clause construction</a> defined by the function of <a inf:predication>predicating</a> an <a>object concept</a> of a <a>referent</a> -- that is, asserting what object category the referent belongs to. <i>Example</i>: <i>Ira is a writer</i> is an example of an English predicate nominal construction; it predicates that the referent of <i>Ira</i> belongs to the category of writer. <a>Predicational construction</a> is another term for a predicate nominal construction. Sometimes <q>predicate nominal</q> is used to cover predicational, <a cxn:presentational-construction>presentational</a> and <a cxn:equational-construction>equational</a> constructions; we will use it in the narrow sense only. (Sections 1.4, <b>2.2.5</b>, <b>10.3</b>)
   Examples:
@@ -8102,10 +8103,8 @@
     - cxn:clause
     - cxn:desiderative-construction
     - cxn:evaluative-construction
-    - cxn:locational-construction
     - cxn:manipulative-construction
     - cxn:perception-construction
-    - cxn:possession-construction
     - cxn:predicate
     - cxn:propositional-attitude-construction
     - cxn:protasis-clause
@@ -8141,7 +8140,7 @@
   Alias:
     - locative predication
   SubtypeOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
     - cxn:locational-construction
   Definition: >-
     the <a>construction</a> expressing a <a inf:predicational-location>predicational location</a> <a>function</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
@@ -8179,13 +8178,13 @@
     - The large bowl was on the table
     - There's a snake in the back yard
 
-- Id: cxn:predicational-possession
+- Id: cxn:predicational-possession-construction
   Type: cxn
-  Name: predicational possession
+  Name: predicational possession construction
   Alias:
     - belong possession
   SubtypeOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
     - cxn:possession-construction
   Definition: >-
     a <a>possession clause</a> in which <a>ownership</a> of the <a>possessum</a> by the <a>possessor</a> is <a>predicated</a> of the possessum. <i>Example</i>: in <i>That laptop belongs to Kerry</i>, ownership of the laptop by Kerry is predicated of the laptop. <i>That laptop is Kerry's</i> is also treated as an instance of a predicational possession construction, <a>recruiting</a> the <a>strategy</a> of a <a>nonprototypical predication construction</a>; but it might be better analyzed as having <a>equational information packaging</a>. (Section 10.4.2)
@@ -8214,7 +8213,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessum</a> is <u>incorporated</u> as part of the possessive <a>predicate</a>. <i>Examples</i>: Tundra Yukaghir <i>mārqa-n lāme-n'-ŋi</i> [one dog-with-<sc>3pl.intr</sc>] <q>They had one dog</q> is an instance of the flexional (inflected) subtype of the predicativization possessive strategy, and Pitjantjatjara <i>ngankulukula-tjara</i> [I spear-<sc>proprietive</sc>] <q>I have a spear</q> [lit. <q>I am spear-having</q>] is an instance of the copular/zero (uninflected) subtype of the strategy. (Section 10.4.2)
   Examples:
@@ -8285,8 +8284,6 @@
   SubtypeOf:
     - inf:entity-central
   FunctionOf:
-    - cxn:locational-construction
-    - cxn:possession-construction
     - cxn:presentational-construction
   Definition: >-
     a type of <a inf:entity-central>entity-central</a> <a>thetic information packaging</a> that introduces a <a>referent</a> into the discourse, in order to make the identity of the referent known to the hearer. <i>Example</i>: <i>There's my bicycle</i> and <i>In the corner sat a mouse</i> are sentences that express the presentational information packaging function. (Sections 10.1.2, 10.4)
@@ -8316,9 +8313,9 @@
   Examples:
     - <e>In the room was a request for breakfast</e>
 
-- Id: cxn:presentational-possession
+- Id: cxn:presentational-possession-construction
   Type: cxn
-  Name: presentational possession
+  Name: presentational possession construction
   Alias:
     - have possession
   SubtypeOf:
@@ -8484,8 +8481,8 @@
   FunctionOf:
     - cxn:adjectival-phrase
     - cxn:adjective
-    - cxn:nonprototypical-predication
     - cxn:property-referring-phrase
+    - cxn:predicate-adjectival-construction
   AttributeOf:
     - sem:object-concept
   Definition: >-
@@ -8555,9 +8552,7 @@
   ConstituentOf:
     - sem:proposition
   FunctionOf:
-    - cxn:declarative-construction
     - cxn:speech-act-construction
-    - cxn:topic-comment-construction
   Definition: >-
     the semantic content of a <a>clause</a>, separately from whether it is packaged as <a inf:topic-comment>topic--comment</a>, <a inf:thetic>thetic</a>, or <a inf:identificational>identificational</a>. Propositional content corresponds basically to <q>who did what to whom</q>. <i>Example</i>: In <i>There's a coyote running down the street!, It's a coyote that's running down the street</i>, and <i>The coyote is running down the street</i>, the propositional content shared by the thetic, identificational, and topic--comment constructions, respectively, is the current running <a>event</a> with a coyote as the runner and the street as the location of the running. (Section 11.1)
   Examples:
@@ -9839,7 +9834,7 @@
   Alias:
     - speech act (construction)
   SubtypeOf:
-    - cxn:main-clause
+    - cxn:construction
   Definition: >-
     the <a>constructions</a> used to express <a inf:speech-acts>speech acts</a> functions. (Section 12.1)
 
@@ -9950,7 +9945,7 @@
     - sem:event
     - sem:qualitative-event
   FunctionOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
     - cxn:temporary-predicate
   Definition: >-
     a concept which is <a>relational</a> and stative but transitory. <i>Example</i>: being sick or being happy are examples of states -- they are stative, but the states of the object they apply to come and go. (Section 2.1)
@@ -10475,7 +10470,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed as a <a>topic phrase</a>, and the <a>possessum</a> is expressed in a <a>subject phrase</a>, usually the subject of a <a>verb</a> glossed as <q>exist</q>. <i>Example</i>: Cupeño <i>neʔ ne-mixen ʔiket miyexwe</i> [I my net is] <q>I have a net</q> is an instance of the topic possessive strategy, with <q>I</q> expressed in a topic phrase and <q>my net</q> in a subject phrase. (Section 10.4.2)
   Examples:
@@ -10513,7 +10508,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessum</a> is expressed in a <a>subject phrase</a>, usually the subject of a <a>verb</a> glossed as <q>exist</q>, and the <a>possessor</a> is expressed both as a <a>topic phrase</a> and as a <a cxn:locative-phrase>locative</a> <a>argument phrase</a> (like the <a>locational possessive strategy</a>) <a>coreferential</a> with the topic phrase. <i>Example</i>: Eastern Tarafit <i>lɣula ttuɣa ɣr-es idž n wəzɛuq</i> [ogress was at-her one of little_donkey] <q>The ogress had a little donkey</q> is an instance of the topic-locational hybrid possessive strategy: the ogress is expressed as both a topic phrase <i>lɣula</i> and as a coreferential locative argument phrase <i>ɣr-es</i> <q>at her</q>. (Section 10.4.2)
   Examples:
@@ -10931,9 +10926,9 @@
   SubtypeOf:
     - str:copula
   ExpressionOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
-    a <a>strategy</a> used for <a>nonprototypical predication</a>, which uses a morpheme different from the <a sem:object-concept>object</a> concept word, the <a>copula</a>, which is inflected for at least some of the categories that prototypical <a>predication</a> <a>constructions</a> in the language -- that is, predication constructions headed by a <a>verb</a> -- also inflect for. Example: in the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, <i>is</i> is a copula that inflects for <a>person</a>, <a>number</a>, and <a>tense</a> like English Verbs do. (Sections 1.4, <b>10.2</b>)
+    a <a>strategy</a> used for <a cxn:nonprototypical-predication-construction>nonprototypical predication</a>, which uses a morpheme different from the <a sem:object-concept>object</a> concept word, the <a>copula</a>, which is inflected for at least some of the categories that prototypical <a>predication</a> <a>constructions</a> in the language -- that is, predication constructions headed by a <a>verb</a> -- also inflect for. Example: in the English Predicate Nominal Construction, illustrated by <i>Sam is a bloodhound</i>, <i>is</i> is a copula that inflects for <a>person</a>, <a>number</a>, and <a>tense</a> like English Verbs do. (Sections 1.4, <b>10.2</b>)
 
 - Id: str:verbal-strategy
   Type: str
@@ -10941,9 +10936,9 @@
   SubtypeOf:
     - str:zero-coding
   ExpressionOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
-    the <a>strategy</a> of <a>recruiting</a> what was originally the <a>action</a> <a>predication</a> <a>construction</a> for <a>nonprototypical predication</a>. It is presumed that an originally action predication construction lacks an <a>auxiliary</a>, and it expresses certain grammatical categories, in particular <a>person indexation</a> and <a>negation</a>. <i>Example</i>: Nahuatl <i>ni-ti:citl</i> [<sc>1sg</sc>-doctor] <q>I am a doctor</q> recruits the action predication construction for <a sem:object-concept>object</a> <a>predication</a>; cf. <i>ni-cho:ca</i> [<sc>1sg</sc>-cry] <q>I am crying</q>. (Section 10.2)
+    the <a>strategy</a> of <a>recruiting</a> what was originally the <a>action</a> <a>predication</a> <a>construction</a> for <a cxn:nonprototypical-predication-construction>nonprototypical predication</a>. It is presumed that an originally action predication construction lacks an <a>auxiliary</a>, and it expresses certain grammatical categories, in particular <a>person indexation</a> and <a>negation</a>. <i>Example</i>: Nahuatl <i>ni-ti:citl</i> [<sc>1sg</sc>-doctor] <q>I am a doctor</q> recruits the action predication construction for <a sem:object-concept>object</a> <a>predication</a>; cf. <i>ni-cho:ca</i> [<sc>1sg</sc>-cry] <q>I am crying</q>. (Section 10.2)
   Examples:
     - Language: Nahuatl
       Example: <e>ni-ti:citl</e>
@@ -11006,7 +11001,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:presentational-possession
+    - cxn:presentational-possession-construction
   Definition: >-
     a <a>strategy</a> for the <a>presentational possession construction</a> in which the <a>possessor</a> is expressed in a <a>subject phrase</a>, and the <a>possessum</a> is expressed in a <a>comitative</a> <a cxn:referring-phrase>phrase</a>. <i>Example</i>: Amele <i>ija sigin <b>ca</b></i> [I knife <b>with</b>] <q>I have a knife</q> [lit. <q>I am with a knife</q>] is an instance of the with-possessive strategy. (Section 10.4.2)
   Examples:
@@ -11103,7 +11098,7 @@
   SubtypeOf:
     - str:zero-coding
   ExpressionOf:
-    - cxn:nonprototypical-predication
+    - cxn:nonprototypical-predication-construction
   Definition: >-
     the <a>strategy</a> of <a>recruiting</a> a <a>construction</a> without any overt coding of <a>predication</a> (i.e. no <a>copula</a>), and without any inflection, for different types of predication. <i>Example</i>: Tiwi <i>purukupaɹli maɹtina</i> <q>Purukuparli is boss</q> simply juxtaposes the referring phrases for <q>Purukuparli</q> and <q>boss</q>. (Section 10.2)
   Examples:
