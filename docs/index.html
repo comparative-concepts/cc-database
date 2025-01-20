@@ -10,8 +10,8 @@
 In addition to this database, you can also explore our interactive <a href="cc-graph.html">graph visualization of the CC database</a>.
 You can also <a href="https://github.com/comparative-concepts/cc-database">look at the source code</a>,
 and if you have a suggestion, please <a href="https://github.com/comparative-concepts/cc-database/issues">open an issue</a>.</p>
-<p><strong>Build date/time:</strong> 2025-01-17 11:01:59</p>
-<p><strong>Statistics:</strong> 1087 CCs, with 2090 typed relations and 3604 links within CC definitions</p>
+<p><strong>Build date/time:</strong> 2025-01-20 10:27:38</p>
+<p><strong>Statistics:</strong> 1087 CCs, with 2096 typed relations and 3604 links within CC definitions</p>
 <div id="glosses">
 <div class="cc" id="sem:a-role">
 <h2 class="name"><a href="#sem:a-role">A role (<i>sem</i>)</a></h2>
@@ -653,6 +653,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">admodification</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:admodifier">admodifier (<i>cxn</i>)</a></td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-presupposition">pragmatic presupposition (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -1403,6 +1404,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">inf:alternative-proposition</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">alternative proposition</td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-presupposition">pragmatic presupposition (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -2342,7 +2344,6 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">cxn:argument-predicate-part</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">argument predicate part</td></tr>
-<tr><th>Function</th> <td class="ccinfo relation"><a href="#sem:object-concept">object concept (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -5048,7 +5049,6 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">cxn:complex-predicate-part</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">complex predicate part</td></tr>
-<tr><th>Function</th> <td class="ccinfo relation"><a href="#sem:dynamic">dynamic (<i>sem</i>)</a> | <a href="#sem:event">event (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -7334,6 +7334,8 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <span> <a href="#inf:information-status">information status (<i>inf</i>)</a></span>
 <span> <a href="#inf:major-propositional-act">major propositional act (<i>inf</i>)</a></span>
 <span> <a href="#inf:poset">poset (<i>inf</i>)</a></span>
+<span> <a href="#inf:pragmatic-assertion">pragmatic assertion (<i>inf</i>)</a></span>
+<span> <a href="#inf:pragmatic-presupposition">pragmatic presupposition (<i>inf</i>)</a></span>
 <span> <a href="#inf:presupposed-open-proposition">presupposed open proposition (<i>inf</i>)</a></span>
 <span> <a href="#inf:topicality">topicality, topical (<i>inf</i>)</a></span>
 <span> <a href="#inf:speech-acts">speech acts (<i>inf</i>)</a></span>
@@ -7743,7 +7745,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">sem:dynamic</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">dynamic</td></tr>
-<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:complex-predicate-part">complex predicate part (<i>cxn</i>)</a> | <a href="#cxn:eventive-complex-predicate">eventive complex predicate (<i>cxn</i>)</a></td></tr>
+<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:dynamic-predicate-part">dynamic predicate part (<i>cxn</i>)</a></td></tr>
 <tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#sem:action-concept">action concept (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
@@ -7763,7 +7765,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">cxn:dynamic-predicate-part</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">dynamic predicate part</td></tr>
-<tr><th>Function</th> <td class="ccinfo relation"><a href="#sem:entity">entity (<i>sem</i>)</a></td></tr>
+<tr><th>Function</th> <td class="ccinfo relation"><a href="#sem:dynamic">dynamic (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -8008,7 +8010,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">sem:entity</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">entity | entities</td></tr>
-<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:attributive-phrase">attributive phrase (<i>cxn</i>)</a> | <a href="#cxn:coordinand">coordinand (<i>cxn</i>)</a> | <a href="#cxn:coordinate-construction">coordinate construction (<i>cxn</i>)</a> | <a href="#cxn:dynamic-predicate-part">dynamic predicate part (<i>cxn</i>)</a> | <a href="#cxn:modifier">modifier (<i>cxn</i>)</a> | <a href="#cxn:referent-expression">referent expression (<i>cxn</i>)</a> | <a href="#cxn:referring-phrase">referring phrase (<i>cxn</i>)</a></td></tr>
+<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:attributive-phrase">attributive phrase (<i>cxn</i>)</a> | <a href="#cxn:coordinand">coordinand (<i>cxn</i>)</a> | <a href="#cxn:coordinate-construction">coordinate construction (<i>cxn</i>)</a> | <a href="#cxn:modifier">modifier (<i>cxn</i>)</a> | <a href="#cxn:referent-expression">referent expression (<i>cxn</i>)</a> | <a href="#cxn:referring-phrase">referring phrase (<i>cxn</i>)</a></td></tr>
 <tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#sem:contextual">contextual (<i>sem</i>)</a> | <a href="#sem:number">number (<i>sem</i>)</a> | <a href="#sem:identity">identity (<i>sem</i>)</a> | <a href="#sem:relationality">relationality (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
@@ -8402,7 +8404,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">sem:event</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">event | SOA | event (concept) | event concept | eventuality | situation | state of affairs</td></tr>
-<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:complement-clause-construction">complement clause construction (<i>cxn</i>)</a> | <a href="#cxn:complex-predicate-part">complex predicate part (<i>cxn</i>)</a> | <a href="#cxn:clause">clause (<i>cxn</i>)</a> | <a href="#cxn:dependent-clause">dependent clause (<i>cxn</i>)</a> | <a href="#cxn:main-clause">main clause (<i>cxn</i>)</a> | <a href="#cxn:matrix-clause">matrix clause (<i>cxn</i>)</a> | <a href="#cxn:noun-complement">noun complement (<i>cxn</i>)</a> | <a href="#cxn:noun-complement-clause-construction">noun complement clause construction (<i>cxn</i>)</a> | <a href="#cxn:predicate">predicate (<i>cxn</i>)</a> | <a href="#cxn:relative-clause-construction">relative clause construction (<i>cxn</i>)</a> | <a href="#cxn:subordinate-clause">subordinate clause (<i>cxn</i>)</a></td></tr>
+<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:complement-clause-construction">complement clause construction (<i>cxn</i>)</a> | <a href="#cxn:clause">clause (<i>cxn</i>)</a> | <a href="#cxn:dependent-clause">dependent clause (<i>cxn</i>)</a> | <a href="#cxn:main-clause">main clause (<i>cxn</i>)</a> | <a href="#cxn:matrix-clause">matrix clause (<i>cxn</i>)</a> | <a href="#cxn:noun-complement">noun complement (<i>cxn</i>)</a> | <a href="#cxn:noun-complement-clause-construction">noun complement clause construction (<i>cxn</i>)</a> | <a href="#cxn:predicate">predicate (<i>cxn</i>)</a> | <a href="#cxn:relative-clause-construction">relative clause construction (<i>cxn</i>)</a> | <a href="#cxn:subordinate-clause">subordinate clause (<i>cxn</i>)</a></td></tr>
 <tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#sem:valency">valency, valency class (<i>sem</i>)</a> | <a href="#sem:manner">manner (<i>sem</i>)</a></td></tr>
 <tr><th>Role(s)</th> <td class="ccinfo relation"><a href="#sem:participant-role">participant role (<i>sem</i>)</a> | <a href="#sem:semantic-role">semantic role (<i>sem</i>)</a> | <a href="#sem:valency-role">valency role (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
@@ -8621,7 +8623,6 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">cxn:eventive-complex-predicate</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:construction">construction</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">eventive complex predicate</td></tr>
-<tr><th>Function</th> <td class="ccinfo relation"><a href="#sem:dynamic">dynamic (<i>sem</i>)</a></td></tr>
 <tr><th>Expressed by</th> <td class="ccinfo relation"><a href="#str:contiguity-of-serial-verbs">contiguity of serial verbs (<i>str</i>)</a> | <a href="#str:incorporation-of-serial-verbs">incorporation of serial verbs (<i>str</i>)</a> | <a href="#str:locus-of-inflection-of-serial-verbs">locus of inflection of serial verbs (<i>str</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
@@ -9762,6 +9763,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">inf:focus</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">focus</td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-assertion">pragmatic assertion (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -13777,6 +13779,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">modification</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:attributive-phrase">attributive phrase (<i>cxn</i>)</a> | <a href="#cxn:modifier">modifier (<i>cxn</i>)</a> | <a href="#cxn:noun-complement">noun complement (<i>cxn</i>)</a> | <a href="#cxn:reciprocal-construction">reciprocal construction (<i>cxn</i>)</a></td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-presupposition">pragmatic presupposition (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -15354,7 +15357,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">sem:object-concept</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:meaning">meaning</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">object concept</td></tr>
-<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:argument-predicate-part">argument predicate part (<i>cxn</i>)</a> | <a href="#cxn:nominal-attributive-phrase">nominal attributive phrase (<i>cxn</i>)</a> | <a href="#cxn:nominal-phrase">nominal phrase (<i>cxn</i>)</a> | <a href="#cxn:nonclausal-coordination">nonclausal coordination (<i>cxn</i>)</a> | <a href="#cxn:noun">noun (<i>cxn</i>)</a> | <a href="#cxn:partitive-construction">partitive construction (<i>cxn</i>)</a> | <a href="#cxn:personal-pronoun">personal pronoun (<i>cxn</i>)</a> | <a href="#cxn:predicate-nominal-construction">predicate nominal construction (<i>cxn</i>)</a></td></tr>
+<tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:nominal-attributive-phrase">nominal attributive phrase (<i>cxn</i>)</a> | <a href="#cxn:nominal-phrase">nominal phrase (<i>cxn</i>)</a> | <a href="#cxn:nonclausal-coordination">nonclausal coordination (<i>cxn</i>)</a> | <a href="#cxn:noun">noun (<i>cxn</i>)</a> | <a href="#cxn:partitive-construction">partitive construction (<i>cxn</i>)</a> | <a href="#cxn:personal-pronoun">personal pronoun (<i>cxn</i>)</a> | <a href="#cxn:predicate-nominal-construction">predicate nominal construction (<i>cxn</i>)</a></td></tr>
 <tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#sem:nonrelational">nonrelational (<i>sem</i>)</a> | <a href="#sem:property-concept">property concept (<i>sem</i>)</a> | <a href="#sem:persistent">persistent (<i>sem</i>)</a> | <a href="#sem:stative">stative (<i>sem</i>)</a> | <a href="#sem:animacy">animacy (<i>sem</i>)</a></td></tr>
 <tr><th>Filler of</th> <td class="ccinfo relation"><a href="#sem:participant-role">participant role (<i>sem</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
@@ -17549,8 +17552,18 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <table>
 <tr><th>Id</th> <td class="ccinfo ccid">inf:pragmatic-assertion</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
-<th>Alias(es)</th> <td class="ccinfo name">pragmatic assertion | (pragmatic) assertion | (pragmatically) assert | assert | assertion | pragmatically assert</td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">pragmatic assertion | pragmatically asserted</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:main-clause">main clause (<i>cxn</i>)</a></td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#inf:thetic">thetic (<i>inf</i>)</a> | <a href="#inf:focus">focus (<i>inf</i>)</a> | <a href="#inf:predication">predication, predicational (<i>inf</i>)</a></td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#inf:discourse-structure">discourse structure (<i>inf</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>pragmatic assertion (<i>inf</i>)</strong>
+</td></tr>
+</table></td></tr>
 <tr><th>Partonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -17569,8 +17582,18 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <table>
 <tr><th>Id</th> <td class="ccinfo ccid">inf:pragmatic-presupposition</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
-<th>Alias(es)</th> <td class="ccinfo name">pragmatic presupposition | presuppose | presupposition</td></tr>
+<th>Alias(es)</th> <td class="ccinfo name">pragmatic presupposition | pragmatically non-asserted | presuppose | presupposition</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:adverbial-dependent-clause">adverbial dependent clause (<i>cxn</i>)</a> | <a href="#cxn:subordinate-clause">subordinate clause (<i>cxn</i>)</a></td></tr>
+<tr><th>Attribute of</th> <td class="ccinfo relation"><a href="#inf:admodification">admodification (<i>inf</i>)</a> | <a href="#inf:alternative-proposition">alternative proposition (<i>inf</i>)</a> | <a href="#inf:presupposed-open-proposition">presupposed open proposition (<i>inf</i>)</a> | <a href="#inf:reference">reference, referent (<i>inf</i>)</a> | <a href="#inf:modification">modification (<i>inf</i>)</a></td></tr>
+<tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
+<table>
+<tr><td class="flex">
+<span> <a href="#inf:discourse-structure">discourse structure (<i>inf</i>)</a></span>
+</td></tr>
+<tr><td>
+<strong>pragmatic presupposition (<i>inf</i>)</strong>
+</td></tr>
+</table></td></tr>
 <tr><th>Partonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -17817,6 +17840,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">predication, predicational | (object) predication | comment | object predication | predication | predicational</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:apodosis-clause">apodosis clause (<i>cxn</i>)</a> | <a href="#cxn:clause">clause (<i>cxn</i>)</a> | <a href="#cxn:desiderative-construction">desiderative construction (<i>cxn</i>)</a> | <a href="#cxn:evaluative-construction">evaluative construction (<i>cxn</i>)</a> | <a href="#cxn:manipulative-construction">manipulative construction (<i>cxn</i>)</a> | <a href="#cxn:perception-construction">perception construction (<i>cxn</i>)</a> | <a href="#cxn:predicate">predicate (<i>cxn</i>)</a> | <a href="#cxn:propositional-attitude-construction">propositional attitude construction (<i>cxn</i>)</a> | <a href="#cxn:protasis-clause">protasis clause (<i>cxn</i>)</a> | <a href="#cxn:utterance-construction">utterance construction (<i>cxn</i>)</a></td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-assertion">pragmatic assertion (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -18084,6 +18108,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Id</th> <td class="ccinfo ccid">inf:presupposed-open-proposition</td></tr>
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">presupposed open proposition | POP</td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-presupposition">pragmatic presupposition (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -19372,7 +19397,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">reference, referent | reference | referent | topic</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:argument-phrase">argument phrase (<i>cxn</i>)</a> | <a href="#cxn:referent-expression">referent expression (<i>cxn</i>)</a> | <a href="#cxn:referring-phrase">referring phrase (<i>cxn</i>)</a></td></tr>
-<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:information-status">information status (<i>inf</i>)</a> | <a href="#inf:topicality">topicality, topical (<i>inf</i>)</a> | <a href="#inf:theater-metaphor">theater metaphor (<i>inf</i>)</a></td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:information-status">information status (<i>inf</i>)</a> | <a href="#inf:pragmatic-presupposition">pragmatic presupposition (<i>inf</i>)</a> | <a href="#inf:topicality">topicality, topical (<i>inf</i>)</a> | <a href="#inf:theater-metaphor">theater metaphor (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">
@@ -22674,6 +22699,7 @@ and if you have a suggestion, please <a href="https://github.com/comparative-con
 <tr><th>Type</th> <td class="ccinfo type"><a href="#def:information-packaging">information packaging</a></td></tr>
 <th>Alias(es)</th> <td class="ccinfo name">thetic | all new</td></tr>
 <tr><th>Function of</th> <td class="ccinfo relation"><a href="#cxn:thetic-construction">thetic construction (<i>cxn</i>)</a></td></tr>
+<tr><th>Attribute(s)</th> <td class="ccinfo relation"><a href="#inf:pragmatic-assertion">pragmatic assertion (<i>inf</i>)</a></td></tr>
 <tr><th>Taxonomy</th> <td class="ccinfo relation"> <table>
 <table>
 <tr><td class="flex">

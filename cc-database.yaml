@@ -3577,8 +3577,7 @@
   SubtypeOf:
     - sem:stativity
   FunctionOf:
-    - cxn:complex-predicate-part
-    - cxn:eventive-complex-predicate
+    - cxn:dynamic-predicate-part
   AttributeOf:
     - sem:action-concept
   Definition: >-
@@ -3688,7 +3687,6 @@
     - cxn:attributive-phrase
     - cxn:coordinand
     - cxn:coordinate-construction
-    - cxn:dynamic-predicate-part
     - cxn:modifier
     - cxn:referent-expression
     - cxn:referring-phrase
@@ -3899,7 +3897,6 @@
     - sem:propositional-content
   FunctionOf:
     - cxn:complement-clause-construction
-    - cxn:complex-predicate-part
     - cxn:clause
     - cxn:dependent-clause
     - cxn:main-clause
@@ -6964,7 +6961,6 @@
   SubtypeOf:
     - sem:entity
   FunctionOf:
-    - cxn:argument-predicate-part
     - cxn:nominal-attributive-phrase
     - cxn:nominal-phrase
     - cxn:nonclausal-coordination
@@ -7926,11 +7922,16 @@
   Type: inf
   Name: pragmatic assertion
   Alias:
-    - (pragmatic) assertion
-    - (pragmatically) assert
+    - pragmatically asserted
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:complex-figure
     - inf:figure-ground
+  AttributeOf:
+    - inf:thetic
+    - inf:focus
+    - inf:predication
   FunctionOf:
     - cxn:main-clause
   Definition: >-
@@ -7942,15 +7943,24 @@
   Type: inf
   Name: pragmatic presupposition
   Alias:
+    - pragmatically non-asserted
     - presupposition
     - presuppose
+  SubtypeOf:
+    - inf:discourse-structure
   ConstituentOf:
     - inf:figure-ground
+  AttributeOf:
+    - inf:admodification
+    - inf:alternative-proposition
+    - inf:presupposed-open-proposition
+    - inf:reference
+    - inf:modification
   FunctionOf:
     - cxn:adverbial-dependent-clause
     - cxn:subordinate-clause
   Definition: >-
-    the set of <a>propositions</a> evoked by the <a>constructions</a> in a sentence <q>which the speaker assumes the hearer already knows or is ready to take for granted at the time the sentence is uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>I'm grateful that you finished cleaning the house</i>, the proposition that you finished cleaning the house is presupposed, while the proposition that I am grateful about it is <a>asserted</a>. (Section 11.4.1)
+    the set of <a>propositions</a> evoked by the <a>constructions</a> in a sentence <q>which the speaker assumes the hearer already knows or is ready to take for granted at the time the sentence is uttered</q> (Lambrecht 1994:52). <i>Example</i>: in <i>I'm grateful that you finished cleaning the house</i>, the proposition that you finished cleaning the house is presupposed, while the proposition that I am grateful about it is <a inf:pragmatic-assertion>asserted</a>. (Section 11.4.1)
   Examples:
     - <e>I'm grateful that you finished cleaning the house</e>
 
