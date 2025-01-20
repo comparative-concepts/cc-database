@@ -151,7 +151,6 @@
   SubtypeOf:
     - sem:event
   FunctionOf:
-    - cxn:verb
     - cxn:verbal-clause
   Definition: >-
     a concept belonging to a <a>semantic class</a> that is <a>relational</a>, <a>dynamic</a>, and <a>transitory</a>. <i>Example</i>: motion events such as running, or transfer events such as giving, are action concepts -- they involve change but come to an end. (Section 2.1; <b>Chapters 6--7</b> cover a wide range of action concepts.)
@@ -1996,7 +1995,6 @@
     - sem:evaluative-event
   FunctionOf:
     - cxn:commentative-construction
-    - cxn:commentative-predicate
   Definition: >-
     an <a>evaluative event</a> in which an evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>positive epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Nancy is glad that Joe won the election</i>, the commentative predicate <i>is glad</i> expresses Nancy's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe indeed won the election. (Section 18.2.2)
   Examples:
@@ -3192,7 +3190,6 @@
     - sem:event
   FunctionOf:
     - cxn:desiderative-construction
-    - cxn:desiderative-predicate
   Definition: >-
     an <a>event</a> that expresses a desire toward the realization of a future event that is expressed by the complement. <i>Example</i>: in <i>Meagan wants to climb Mt. Baldy on Saturday, wants</i> denotes a desiderative event. Noonan (2007:135) includes intending events in the category of desiderative events. (Section 18.2.2)
   Examples:
@@ -3686,8 +3683,6 @@
     - cxn:attributive-phrase
     - cxn:coordinand
     - cxn:coordinate-construction
-    - cxn:modifier
-    - cxn:referent-expression
     - cxn:referring-phrase
   Definition: >-
     a superordinate category including <a>object concepts</a>, <a>property concepts</a>, and <a>event concepts</a>. (Section 2.1)
@@ -3867,7 +3862,6 @@
     - sem:event
   FunctionOf:
     - cxn:evaluative-construction
-    - cxn:evaluative-predicate
   Definition: >-
     an <a>event</a> in which an evaluative judgment is made about the truth of the <a>proposition</a> expressed in its <a>complement</a>. Evaluative events may assume different <a>epistemic stances</a> toward the proposition expressed in their complement. <a>Commentative events</a> assume a positive epistemic stance; <a>hoping</a> and <a>fearing events</a> assume a <a>neutral epistemic stance</a>; and <a>wishing events</a> assume a <a>negative epistemic stance</a>. (Section 18.2.2)
 
@@ -3902,7 +3896,6 @@
     - cxn:matrix-clause
     - cxn:noun-complement
     - cxn:noun-complement-clause-construction
-    - cxn:predicate
     - cxn:relative-clause-construction
     - cxn:subordinate-clause
   Definition: >-
@@ -4143,7 +4136,6 @@
     - sem:event
   FunctionOf:
     - cxn:experiential-construction
-    - cxn:experiential-verb
   Definition: >-
     an <a>event</a> that involves a human internal mental or bodily experience. (Sections 6.1.2, <b>7.4</b>)
 
@@ -4289,7 +4281,6 @@
     - sem:evaluative-event
   FunctionOf:
     - cxn:fearing-construction
-    - cxn:fearing-predicate
   Definition: >-
     an <a>evaluative event</a> in which a negative evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill fears that Donald has won the election</i>, the commentative predicate <i>fears</i> expresses Jill's evaluation of Donald's winning the election, and also presupposes that the speaker does not know whether Donald has won the election. (Section 18.2.2)
   Examples:
@@ -4771,7 +4762,6 @@
     - sem:evaluative-event
   FunctionOf:
     - cxn:hoping-construction
-    - cxn:hoping-predicate
   Definition: >-
     an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the commentative event is made, and there is a <a>neutral epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill hopes that Joe won the election</i>, the commentative predicate <i>hopes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker does not know whether Joe has won the election. (Section 18.2.2)
   Examples:
@@ -5728,7 +5718,6 @@
     - sem:propositional-attitude-event
   FunctionOf:
     - cxn:knowledge-construction
-    - cxn:knowledge-predicate
   Definition: >-
     a <a>propositional attitude event</a> in which a <a>positive epistemic stance</a> toward the relevant <a>proposition</a> expressed is presupposed to be taken by the <u>speaker</u>. <i>Example</i>: in <i>Sally knows that Donald won the election</i>, Sally's belief with respect to the proposition that Donald won the election is reported by the speaker; and, in addition, a <a>positive epistemic stance</a> is taken by the speaker toward that proposition (i.e., the speaker believes that Donald indeed won the election). (Section 18.2.2)
   Examples:
@@ -6048,7 +6037,6 @@
     - sem:event
   FunctionOf:
     - cxn:manipulative-construction
-    - cxn:manipulative-predicate
   Definition: >-
     an <a>event</a> where an <a>agent</a> acts to bring about the event expressed by the <a>complement</a>. <i>Example</i>: in <i>Bruce convinced Greg to take him to San Rafael, convinced</i> denotes a manipulative event. Manipulative events include causative and permissive events. The complement event of manipulative events has <a>dependent time reference</a>. (Section 18.2.2)
   Examples:
@@ -6334,7 +6322,6 @@
     - inf:reference
   FunctionOf:
     - cxn:attributive-phrase
-    - cxn:modifier
     - cxn:noun-complement
     - cxn:reciprocal-construction
   Definition: >-
@@ -6462,7 +6449,6 @@
     - sem:spatial-event
   FunctionOf:
     - cxn:motion-clause
-    - cxn:motion-verb
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
   Examples:
@@ -6963,7 +6949,6 @@
     - cxn:nominal-attributive-phrase
     - cxn:nominal-phrase
     - cxn:nonclausal-coordination
-    - cxn:noun
     - cxn:partitive-construction
     - cxn:personal-pronoun
     - cxn:predicate-nominal-construction
@@ -7454,9 +7439,7 @@
     - sem:experiential-event
   FunctionOf:
     - cxn:perception-clause
-    - cxn:perception-complement-taking-predicate
     - cxn:perception-construction
-    - cxn:perception-verb
   Definition: >-
     an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a sem:object-concept>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
@@ -7497,7 +7480,6 @@
   SubtypeOf:
     - sem:participant
   FunctionOf:
-    - cxn:noun-complement-head
     - cxn:noun-complement-referring-phrase
     - cxn:oblique-phrase
   Definition: >-
@@ -8114,7 +8096,6 @@
     - cxn:evaluative-construction
     - cxn:manipulative-construction
     - cxn:perception-construction
-    - cxn:predicate
     - cxn:propositional-attitude-construction
     - cxn:protasis-clause
     - cxn:utterance-construction
@@ -8361,7 +8342,6 @@
     - sem:propositional-attitude-event
   FunctionOf:
     - cxn:pretense-construction
-    - cxn:pretense-predicate
   Definition: >-
     a <a>propositional attitude event</a> in which the speaker, or the <a>experiencer</a> of the pretense event, presents the <a>proposition</a> expressed by the <a>complement</a> as true in an alternative reality or <a>mental space</a>. <i>Example</i>: in <i>Ira pretended that the guests had already left</i>, the proposition that the guests had already left is presented as true in an alternative reality from the shared beliefs of the interlocutors (or, for that matter, Ira). There is a strong implicature that the proposition does not hold in reality (that is, the shared beliefs of the interlocutors). (Section 18.2.2)
   Examples:
@@ -8489,7 +8469,6 @@
     - sem:qualitative-event
   FunctionOf:
     - cxn:adjectival-phrase
-    - cxn:adjective
     - cxn:property-referring-phrase
     - cxn:predicate-adjectival-construction
   AttributeOf:
@@ -8537,7 +8516,6 @@
     - sem:event
   FunctionOf:
     - cxn:propositional-attitude-construction
-    - cxn:propositional-attitude-predicate
   Definition: >-
     an <a>event</a> of thinking, believing, and so on that expresses an attitude of the <a>experiencer</a> toward the truth of the <a>proposition</a> expressed by the <a>complement</a>. <i>Example</i>: in <i>Aram thought that the pianist was very good</i>, the <a>complement-taking predicate</a> <i>thought</i> denotes a propositional attitude event. Special cases of propositional attitude events are <a>knowledge events</a> and <a>pretense events</a>. (Section 18.2.2)
   Examples:
@@ -8869,7 +8847,6 @@
     - inf:topic-comment
   FunctionOf:
     - cxn:argument-phrase
-    - cxn:referent-expression
     - cxn:referring-phrase
   Definition: >-
     what the speaker is talking about. <i>Example</i>: in <i>Masha is nice</i>, the speaker is referring to a person named Masha, and Masha is the referent. In the <a>file metaphor</a> for describing <a>propositional acts</a>, reference opens or accesses a discourse file for the referent. (Sections 1.3, <b>2.1</b>)
@@ -10817,7 +10794,6 @@
     - sem:event
   FunctionOf:
     - cxn:utterance-construction
-    - cxn:utterance-predicate
   Definition: >-
     an <a>event</a> of saying in which one <a>participant</a> is the <u>speaker</u> of the utterance and another participant is the utterance itself. <i>Example</i>: in <i>Sandy said, <dq>I'm buying the house</dq>, said</i> denotes the utterance event. (Section 18.2.2)
   Examples:
@@ -10984,7 +10960,6 @@
     - sem:evaluative-event
   FunctionOf:
     - cxn:wishing-construction
-    - cxn:wishing-predicate
   Definition: >-
     an <a>evaluative event</a> in which a positive evaluative judgment about a <a>proposition</a> expressed by the <a>complement</a> of the wishing event is made, and there is a <a>negative epistemic stance</a> by the speaker toward the proposition. <i>Example</i>: in <i>Jill wishes that Joe had won the election</i>, the wishing predicate <i>wishes</i> expresses Jill's evaluation of Joe's winning the election, and also presupposes that the speaker believes that Joe didn't win the election. (Section 18.2.2)
   Examples:
@@ -11409,7 +11384,6 @@
     - sem:event
     - sem:numeral
   FunctionOf:
-    - cxn:cardinal-numeral-term
     - cxn:numeral-attributive-phrase
   Definition: ''
   FromGlossary: false
@@ -11421,7 +11395,6 @@
     - sem:event
   FunctionOf:
     - cxn:quantifier-attributive-phrase
-    - cxn:quantifier-term
     - cxn:vague-numeral-term
   Definition: ''
   FromGlossary: false
@@ -11444,7 +11417,6 @@
   FunctionOf:
     - cxn:proportional-quantifier-term
     - cxn:quantifier-attributive-phrase
-    - cxn:quantifier-term
   Definition: ''
   FromGlossary: false
 
@@ -11456,7 +11428,6 @@
   FunctionOf:
     - cxn:distributive-quantifier-term
     - cxn:quantifier-attributive-phrase
-    - cxn:quantifier-term
   Definition: ''
   FromGlossary: false
 
@@ -11507,7 +11478,7 @@
   SubtypeOf:
     - sem:mensural-concept
   FunctionOf:
-    - cxn:piece-term
+    - cxn:partitive-construction
   Definition: ''
   FromGlossary: false
 
@@ -12838,16 +12809,6 @@
   Definition: ''
   FromGlossary: false
 
-- Id: sem:species
-  Type: sem
-  Name: species
-  SubtypeOf:
-    - sem:event
-  FunctionOf:
-    - cxn:species-term
-  Definition: ''
-  FromGlossary: false
-
 - Id: cxn:complex-predicate-part
   Type: cxn
   Name: complex predicate part
@@ -13308,7 +13269,6 @@
     - sem:event
   FunctionOf:
     - cxn:mensural-attributive-phrase
-    - cxn:mensural-term
   Definition: ''
   FromGlossary: false
 
@@ -13337,7 +13297,6 @@
     - sem:event
   FunctionOf:
     - cxn:set-member-attributive-phrase
-    - cxn:set-member-term
   Definition: ''
   FromGlossary: false
 
