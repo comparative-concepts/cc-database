@@ -1438,7 +1438,6 @@ var ccEdges = [
    {"from": "sem:entity", "to": "sem:contextual", "rel": "AttributeOf"},
    {"from": "cxn:determiner", "to": "sem:contextual", "rel": "FunctionOf"},
    {"from": "cxn:pronoun", "to": "sem:contextual", "rel": "FunctionOf"},
-   {"from": "cxn:proper-noun", "to": "sem:contextual", "rel": "FunctionOf"},
    {"from": "str:serial-verb-strategy", "to": "str:contiguity-of-serial-verbs", "rel": "SubtypeOf"},
    {"from": "cxn:eventive-complex-predicate", "to": "str:contiguity-of-serial-verbs", "rel": "ExpressionOf"},
    {"from": "cxn:auxiliary-construction", "to": "str:contiguity-of-serial-verbs", "rel": "ExpressionOf"},

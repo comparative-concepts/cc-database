@@ -2589,7 +2589,6 @@
   FunctionOf:
     - cxn:determiner
     - cxn:pronoun
-    - cxn:proper-noun
   Definition: >-
     an entity defined relative to some factor in the speech act context. <i>Examples</i>: <i>this table</i> is defined as a table but relative to the location of the speaker (<i>this</i> expresses the contextual component); <i>the table</i> is defined as a table relative to the shared knowledge of speaker and hearer (<i>the</i> expresses the contextual component). (Section 3.1.1)
   Examples:

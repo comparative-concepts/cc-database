@@ -113,6 +113,7 @@ ccGraphs.cxn_sem_inf = {
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
+        HeadOf: "Red",
         FunctionOf: "MediumOrchid",
         ConstituentOf: "RoyalBlue",
     },
