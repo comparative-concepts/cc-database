@@ -67,6 +67,7 @@ ccGraphs.cxn_str = {
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
+        HeadOf: "Khaki",
         ExpressionOf: "RoyalBlue",
         ModeledOn: "Red",
         RecruitedFrom: "MediumOrchid",
