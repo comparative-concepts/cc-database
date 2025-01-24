@@ -26,7 +26,6 @@ class Relation(str, Enum):
     ModeledOn = 'ModeledOn'
     AttributeOf = 'AttributeOf'
     RoleOf = 'RoleOf'
-    FillerOf = 'FillerOf'
     HeadOf = 'HeadOf'
     FunctionOf = 'FunctionOf'
     AssociatedTo = 'AssociatedTo'  # This relation is obsolete and will be replaced
@@ -75,7 +74,6 @@ RELATION_CCTYPES = {
     Relation.ModeledOn:     {CCType.str:CCType.cxn},
     Relation.AttributeOf:   {CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.RoleOf:        {CCType.sem:CCType.sem},
-    Relation.FillerOf:      {CCType.sem:CCType.sem},
     Relation.HeadOf:        {CCType.cxn:CCType.cxn},
     Relation.FunctionOf:    {CCType.sem:CCType.cxn, CCType.inf:CCType.cxn}
 }

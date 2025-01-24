@@ -325,8 +325,6 @@ class CCDB:
             self.print_relation_list(item, Relation.AttributeOf, "in", "Attribute(s)")
             self.print_relation_list(item, Relation.RoleOf, "out", "Role of")
             self.print_relation_list(item, Relation.RoleOf, "in", "Role(s)")
-            self.print_relation_list(item, Relation.FillerOf, "out", "Filler of")
-            self.print_relation_list(item, Relation.FillerOf, "in", "Filler(s)")
             self.print_relation_list(item, Relation.AssociatedTo, "out", "Associated")
 
             self.print_hierarchy(item, [Relation.SubtypeOf], 'Taxonomy')

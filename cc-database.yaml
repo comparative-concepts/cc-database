@@ -868,7 +868,7 @@
   Type: sem
   Name: antecedent role
   SubtypeOf:
-    - sem:participant
+    - sem:peripheral-participant
   ConstituentOf:
     - sem:causal-chain
   Definition: >-
@@ -1692,7 +1692,7 @@
   Type: sem
   Name: central participant
   SubtypeOf:
-    - sem:participant
+    - sem:participant-role
   FunctionOf:
     - cxn:core-argument-phrase
   Definition: >-
@@ -6948,8 +6948,6 @@
     - cxn:partitive-construction
     - cxn:personal-pronoun
     - cxn:predicate-nominal-construction
-  FillerOf:
-    - sem:participant-role
   Definition: >-
     concepts belonging to a <a>semantic class</a> including persons, animals, and physical objects of various kinds. <i>Example</i>: both boys and dogs as well as dishes are examples of object concepts. (Sections 2.1 and <b>3.1.2</b>, which includes an enumeration of types of object concepts)
 
@@ -7232,13 +7230,12 @@
 - Id: sem:participant
   Type: sem
   Name: participant
+  Status: deleted
   ConstituentOf:
     - sem:propositional-content
   FunctionOf:
     - cxn:argument-phrase
     - cxn:noun-complement-clause-construction
-  FillerOf:
-    - sem:participant-role
   Definition: >-
     <a>entities</a> that play a role in an <a>event</a>. <i>Example</i>: in <i>Janet set the books on the floor</i>, Janet, the books, and the floor are participants in the setting event. (Section 6.1.1)
   Examples:
@@ -7248,14 +7245,18 @@
   Type: sem
   Name: participant role
   Alias:
+    - participant
     - microrole
     - Frame Element
   SubtypeOf:
     - sem:semantic-role
   RoleOf:
     - sem:event
+  FunctionOf:
+    - cxn:argument-phrase
+    - cxn:noun-complement-clause-construction
   Definition: >-
-    the role that a particular <a>participant</a> performs in an <a>event</a> -- specifically, what the participant does, or has done to them, in the course of the event. <i>Example</i>: in the eating event, there is an <q>eater</q> participant role and a <q>food</q> participant role, and different things happen with the <q>eater</q> and the <q>food</q> in the eating event. (Sections 6.1.1, 6.1.2)
+    the role that a particular participant performs in an <a>event</a> -- specifically, what the participant does, or has done to them, in the course of the event. <i>Example</i>: in the eating event, there is an <q>eater</q> participant role and a <q>food</q> participant role, and different things happen with the <q>eater</q> and the <q>food</q> in the eating event. (Sections 6.1.1, 6.1.2)
 
 - Id: sem:participant-oriented
   Type: sem
@@ -7474,7 +7475,7 @@
   Type: sem
   Name: peripheral participant
   SubtypeOf:
-    - sem:participant
+    - sem:participant-role
   FunctionOf:
     - cxn:noun-complement-referring-phrase
     - cxn:oblique-phrase
@@ -10081,7 +10082,7 @@
   Type: sem
   Name: subsequent role
   SubtypeOf:
-    - sem:participant
+    - sem:participant-role
   ConstituentOf:
     - sem:causal-chain
   Definition: >-

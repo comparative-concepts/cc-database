@@ -30,7 +30,7 @@ The YAML database consists of a list of entries of the following form:
   Examples: list of examples, either as plain strings or with information about language, gloss, translation, etc.
 
   SubtypeOf, ConstituentOf, HeadOf,
-  AttributeOf, RoleOf, FillerOf,
+  AttributeOf, RoleOf,
   ExpressionOf, ModeledOn, RecruitedFrom: these are the different relations, stored as lists of cc-ids
 ```
 

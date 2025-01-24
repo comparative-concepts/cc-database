@@ -15,7 +15,7 @@ assignees: ''
 
 ### What relations to other CCs should it have?
 [In particular, what CC is it a subtype of, and what other CCs are subtypes of it?
-But also describe if it should have other relations, e.g., ConstituentOf, ExpressionOf, RecruitedFrom, ModeledOn, AttributeOf, RoleOf, FillerOf, or HeadOf]
+But also describe if it should have other relations, e.g., ConstituentOf, ExpressionOf, RecruitedFrom, ModeledOn, AttributeOf, RoleOf, or HeadOf]
 
 ### Why are there no existing CCs that can be used instead?
 [What existing CCs have you considered and why can't they be used instead of the new one]

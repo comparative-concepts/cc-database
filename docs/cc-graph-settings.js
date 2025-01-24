@@ -40,9 +40,8 @@ ccGraphs.sem = {
         ConstituentOf: "RoyalBlue",
         AttributeOf: "Red",
         RoleOf: "LimeGreen",
-        FillerOf: "MediumOrchid",
     },
-    edgedashes: {RoleOf: true, FillerOf: true},
+    edgedashes: {RoleOf: true },
 };
 
 ccGraphs.inf = {
