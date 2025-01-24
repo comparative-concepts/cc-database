@@ -2103,7 +2103,6 @@ var ccEdges = [
    {"from": "sem:possession", "to": "sem:part-whole-relation", "rel": "SubtypeOf"},
    {"from": "str:encoding-strategy", "to": "str:partially-merged-argument-structure-strategy", "rel": "SubtypeOf"},
    {"from": "cxn:complement-clause-construction", "to": "str:partially-merged-argument-structure-strategy", "rel": "ExpressionOf"},
-   {"from": "sem:semantic-role", "to": "sem:participant-role", "rel": "SubtypeOf"},
    {"from": "sem:event", "to": "sem:participant-role", "rel": "RoleOf"},
    {"from": "cxn:argument-phrase", "to": "sem:participant-role", "rel": "FunctionOf"},
    {"from": "cxn:noun-complement-clause-construction", "to": "sem:participant-role", "rel": "FunctionOf"},

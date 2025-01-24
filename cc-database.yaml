@@ -7248,8 +7248,6 @@
     - participant
     - microrole
     - Frame Element
-  SubtypeOf:
-    - sem:semantic-role
   RoleOf:
     - sem:event
   FunctionOf:
