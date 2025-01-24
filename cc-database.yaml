@@ -6320,7 +6320,6 @@
   FunctionOf:
     - cxn:attributive-phrase
     - cxn:noun-complement
-    - cxn:reciprocal-construction
   Definition: >-
     provides additional information about the <a>referent</a> and enriches the specification of the referent for the hearer. Example: in <i>a furry cat</i>, the speaker enriches the specification of the referent in the cat category by the <a>property</a> of being furry. In the <a>file metaphor</a> for describing <a>propositional acts</a>, modification enriches the discourse file; the information it adds to the discourse file is secondary in comparison to <a>predication</a>. (Sections 1.3, <b>2.1</b>)
 
@@ -8022,7 +8021,6 @@
   SubtypeOf:
     - cxn:construction
   HeadOf:
-    - cxn:clause
     - cxn:topic-comment-construction
   Definition: >-
     the <a>head</a> of a <a>clause</a>, which is not necessarily an <a>action</a>. <i>Example</i>: in <i>The dog is old, (is) old</i> is the predicate. (Section 2.2.4)
@@ -9236,6 +9234,8 @@
     - inf:discourse-structure
   AttributeOf:
     - inf:reference
+  FunctionOf:
+    - cxn:argument-phrase
   Definition: >-
     the degree of attention directed to a <a>referent</a> by the interlocutors at a given point in the discourse. <i>Example</i>: it is generally the case that, in a sentence like <i>He ate the cookies</i>, the <a>subject</a> referent is more salient than the <a inf:object-argument>object</a> referent in discourse. Salience is also considered to vary across different <a>object concepts</a>, other things being equal: people are more interested in other people, somewhat less so in <a>animate</a> objects, and less still in <a>inanimate</a> objects. Salience is the motivation for the <a>Animacy Hierarchy</a> and the <a>Extended Animacy Hierarchy</a>. (Section 6.1.1)
   Examples:
