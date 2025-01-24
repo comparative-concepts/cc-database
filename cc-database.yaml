@@ -250,7 +250,7 @@
     - sem:event-relation
   FunctionOf:
     - cxn:additive-construction
-    - cxn:conjunctive-coordination
+    - cxn:additive-coordination
   Definition: >-
     a relation between two or more <a>entities</a> such that the entities are construed as combined in a sort of totality. The additive relation may be construed as a <a>complex figure</a>, as in <i>The robins drank water and the juncos ate fennel seeds</i>, or in a <a>figure--ground</a> relation, as in <i>Besides missing my bus, I got my feet all wet</i>. The additive relation is considered the prototype for <a>conjunctive coordination</a>. (Section 15.2.1)
 
@@ -2507,7 +2507,7 @@
   SubtypeOf:
     - sem:event-relation
   FunctionOf:
-    - cxn:conjunctive-coordination
+    - cxn:consecutive-coordination
   Definition: >-
     a sequential relation between two <a>events</a>, as expressed by a <a>complex figure</a> construal of the relation between the two events. <i>Example</i>: in <i>He washed the car and drove to the party</i>, the washing of the car and the driving to the party are in a consecutive relation. Used to describe the temporal relation between two events in a <a>complex figure information packaging</a>. (Section 15.1.3)
   Examples:
@@ -4857,6 +4857,7 @@
     - inf:declarative
   FunctionOf:
     - cxn:identificational-construction
+    - cxn:interrogative-complement
   Definition: >-
     <a>information packaging</a> in which a particular piece of information (the <a>focus</a>) is equated with the <dq>open slot</dq> in a <a>presupposed open proposition</a>. The presupposed open proposition may be evoked by an alternative proposition that differs from the identificational construction by only the focus. <i>Example</i>: in <i>It was Ollie who was playing the piano</i>, the information in the identificational construction is divided into the presupposed open proposition <q>X was playing the piano</q>, and the focused information Ollie, and what is being asserted is <q>X = Ollie</q>. The term <q>focus</q> is sometimes used as a synonym for <q>identificational</q>, but this term is used differently here. (Sections 10.1.2, 11.1, <b>11.4.1</b>)
   Examples:
@@ -5572,7 +5573,6 @@
   SubtypeOf:
     - inf:reference
   FunctionOf:
-    - cxn:interrogative-complement
     - cxn:interrogative-pronoun
   Definition: ''
   FromGlossary: false
@@ -6009,12 +6009,9 @@
   ConstituentOf:
     - inf:topic-comment
   FunctionOf:
-    - cxn:complement-clause-construction
     - cxn:coordinand
     - cxn:dependent-clause
     - cxn:matrix-clause
-    - cxn:noun-complement-clause-construction
-    - cxn:relative-clause-construction
   Definition: >-
     the basic <a>information packaging</a> functions that structure phrases and <a>clauses</a>; the propositional acts are <a>reference</a>, <a>predication</a>, and <a>modification</a>. (Section 1.3)
 
@@ -8061,7 +8058,6 @@
   SubtypeOf:
     - inf:type-identity
   FunctionOf:
-    - cxn:object-identity-construction
     - cxn:predicate-identity-construction
   Definition: ''
   FromGlossary: false
@@ -8090,15 +8086,7 @@
   ConstituentOf:
     - inf:topic-comment
   FunctionOf:
-    - cxn:apodosis-clause
     - cxn:clause
-    - cxn:desiderative-construction
-    - cxn:evaluative-construction
-    - cxn:manipulative-construction
-    - cxn:perception-construction
-    - cxn:propositional-attitude-construction
-    - cxn:protasis-clause
-    - cxn:utterance-construction
   Definition: >-
     what the speaker is asserting about the referents in a particular utterance. <i>Example</i>: in <i>Masha is nice</i>, the speaker is predicating the <a>property</a> of being nice to the referent Masha. In the <a>file metaphor</a> for describing <a>propositional acts</a>, predication adds information to a referent's discourse file. The predication is the <a>comment</a> in <a>topic--comment information packaging</a>. (Sections 1.3, <b>2.1</b>)
   Examples:
@@ -9563,7 +9551,7 @@
   SubtypeOf:
     - sem:event-relation
   FunctionOf:
-    - cxn:adversative-coordination
+    - cxn:simple-contrast-coordination
   Definition: >-
     a semantic relation between two <a>events</a> in which there is only a simple contrast, or a construal of a simple contrast, between the two. Simple contrast is considered the prototype for <a>adversative coordination</a>. <i>Example</i>: Ponapean <i>i laid ah e meir</i> [I fish <sc>conj</sc> he sleep] <q>I fished, but he slept</q>, is an instance of simple contrast. (Section 15.2.1)
   Examples:
@@ -10754,7 +10742,7 @@
   SubtypeOf:
     - sem:event-relation
   FunctionOf:
-    - cxn:adversative-coordination
+    - cxn:unexpected-co-occurrence-coordination
   Definition: >-
     a semantic relation between two <a>events</a> in which two events are juxtposed and the second event is unexpected. Unexpected co-occurrence is often expressed with <a>adversative coordination</a>. <i>Example</i>: Russian <i>Vanja prostudilsja, no poshël v shkolu</i> [Vanja caught_cold <sc>conj</sc> went to school] <q>Vanja caught a cold, but went to school</q> is an instance of the unexpected co-occurrence relation, using a <a>coordinator</a> <i>no</i> which is distinct from the coordinator <i>a</i> which is used for <a>simple contrast</a>. (Section 15.2.1)
   Examples:
@@ -11632,7 +11620,6 @@
   SubtypeOf:
     - sem:event-relation
   FunctionOf:
-    - cxn:disjunctive-coordination
     - cxn:inclusive-disjunctive-coordination
   Definition: ''
   FromGlossary: false
@@ -11643,7 +11630,6 @@
   SubtypeOf:
     - sem:event-relation
   FunctionOf:
-    - cxn:disjunctive-coordination
     - cxn:exclusive-disjunctive-coordination
   Definition: ''
   FromGlossary: false
@@ -13417,5 +13403,37 @@
   Name: discourse structure
   SubtypeOf:
     - inf:information-packaging
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:additive-coordination
+  Type: cxn
+  Name: additive coordination
+  SubtypeOf:
+    - cxn:conjunctive-coordination
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:consecutive-coordination
+  Type: cxn
+  Name: consecutive coordination
+  SubtypeOf:
+    - cxn:conjunctive-coordination
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:simple-contrast-coordination
+  Type: cxn
+  Name: simple contrast coordination
+  SubtypeOf:
+    - cxn:adversative-coordination
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:unexpected-co-occurrence-coordination
+  Type: cxn
+  Name: unexpected co-occurrence coordination
+  SubtypeOf:
+    - cxn:adversative-coordination
   Definition: ''
   FromGlossary: false
