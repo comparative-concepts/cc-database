@@ -75,34 +75,6 @@ ccGraphs.cxn_str = {
     edgereversed: {ModeledOn: true, RecruitedFrom: true},
 };
 
-// ccGraphs.cxn_sem = {
-//     name: "Cxn ↔︎ Semantic CCs",
-//     defaultrelation: "FunctionOf",
-//     nodecolors: {
-//         cxn: "LightGreen",
-//         sem: "LightGray",
-//     },
-//     edgecolors: {
-//         SubtypeOf: 0,  // inherit from node colors
-//         FunctionOf: "MediumOrchid",
-//         ConstituentOf: "RoyalBlue",
-//     },
-// };
-
-// ccGraphs.cxn_inf = {
-//     name: "Cxn ↔︎ Inf.packaging",
-//     defaultrelation: "FunctionOf",
-//     nodecolors: {
-//         cxn: "LightGreen",
-//         inf: "Khaki",
-//     },
-//     edgecolors: {
-//         SubtypeOf: 0,  // inherit from node colors
-//         FunctionOf: "MediumOrchid",
-//         ConstituentOf: "RoyalBlue",
-//     },
-// };
-
 ccGraphs.cxn_sem_inf = {
     name: "Cxn ↔︎ Sem. + Inf.",
     defaultrelation: "FunctionOf",
