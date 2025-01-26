@@ -64,6 +64,14 @@ select:hover, input:hover, label:hover, button:hover, summary:hover {
     border-radius: 10px;
 }
 
+#ccRelations input[type=checkbox] ~ span {
+    border-bottom: solid 1.5px;
+}
+
+#ccRelations input[type=checkbox] ~ span.dashedBorder {
+    border-bottom-style: dashed;
+}
+
 @media (min-width: 120vh) {
     #ccNetwork {
         width: 70%;

@@ -273,6 +273,11 @@ function updateEdges() {
         e.dashes = graph.edgedashes && graph.edgedashes[e.rel];
         if (graph.edgereversed && graph.edgereversed[e.rel]) e.arrows = 'from';
     }
+    for (const checkbox of document.querySelectorAll('#ccRelations input[type=checkbox]')) {
+        const rel = checkbox.id;
+        const dashed = graph.edgedashes && graph.edgedashes[rel] || false;
+        checkbox.nextElementSibling.classList.toggle("dashedBorder", dashed);
+    }
 }
 
 // Update the solving algorithm
