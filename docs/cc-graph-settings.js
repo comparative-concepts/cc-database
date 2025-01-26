@@ -41,7 +41,7 @@ ccGraphs.sem = {
         AttributeOf: "Red",
         RoleOf: "LimeGreen",
     },
-    edgedashes: {RoleOf: true },
+    edgedashes: {AttributeOf: true, RoleOf: true},
 };
 
 ccGraphs.inf = {
@@ -55,6 +55,7 @@ ccGraphs.inf = {
         ConstituentOf: "RoyalBlue",
         AttributeOf: "Red",
     },
+    edgedashes: {AttributeOf: true},
 };
 
 ccGraphs.cxn_str = {
@@ -66,12 +67,13 @@ ccGraphs.cxn_str = {
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
+        ConstituentOf: "RoyalBlue",
         HeadOf: "Khaki",
         ExpressionOf: "RoyalBlue",
         ModeledOn: "Red",
         RecruitedFrom: "MediumOrchid",
     },
-    edgedashes: {ModeledOn: true, RecruitedFrom: true},
+    edgedashes: {ExpressionOf: true, ModeledOn: true, RecruitedFrom: true},
     edgereversed: {ModeledOn: true, RecruitedFrom: true},
 };
 
@@ -89,6 +91,7 @@ ccGraphs.cxn_sem_inf = {
         FunctionOf: "MediumOrchid",
         ConstituentOf: "RoyalBlue",
     },
+    edgedashes: {FunctionOf: true},
 };
 
 
