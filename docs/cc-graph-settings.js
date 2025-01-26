@@ -67,8 +67,6 @@ ccGraphs.cxn_str = {
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
-        ConstituentOf: "RoyalBlue",
-        HeadOf: "Khaki",
         ExpressionOf: "RoyalBlue",
         ModeledOn: "Red",
         RecruitedFrom: "MediumOrchid",
@@ -87,9 +85,9 @@ ccGraphs.cxn_sem_inf = {
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
+        ConstituentOf: "RoyalBlue",
         HeadOf: "Red",
         FunctionOf: "MediumOrchid",
-        ConstituentOf: "RoyalBlue",
     },
     edgedashes: {FunctionOf: true},
 };
