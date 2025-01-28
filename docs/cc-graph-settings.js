@@ -2,18 +2,34 @@
 ///////////////////////////////////////////////////////////////////////////////
 // The different graphs
 
+const COLORS = {
+    //                      // Closest MacOS color names:
+    LightGreen: "#a0f000",  // #8efa00 (Lime)
+    Orange:     "#ffc000",  // #ff9300 (Tangerine)
+    LightGray:  "#d8c8c8",  // #c0c0c0 (Magnesium)
+    Yellow:     "#f0d050",  // #ffd479 (Cantaloupe)
+    Blue:       "#0080ff",  // #0096ff (Aqua)
+    Purple:     "#c040ff",  // #9437ff (Grape)
+    Magenta:    "#ff40ff",  // #ff40ff (Magenta)
+    Green:      "#00c000",  // #008f00 (Clover)
+    Red:        "#ff3000",  // #ff2600 (Maraschino)
+    Teal:       "#0080b0",  // #009193 (Teal)
+    Olive:      "#909000",  // #929000 (Aspargus)
+    Brown:      "#a05000",  // #945200 (Mocha)
+};
+
 var ccGraphs = {};
 
 ccGraphs.cxn = {
     name: "Constructions",
     defaultrelation: "SubtypeOf",
     nodecolors: {
-        cxn: "LightGreen",
+        cxn: COLORS.LightGreen,
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: "RoyalBlue",
-        HeadOf: "Red",
+        ConstituentOf: COLORS.Blue,
+        HeadOf: COLORS.Purple,
     },
 };
 
@@ -21,11 +37,11 @@ ccGraphs.str = {
     name: "Strategies",
     defaultrelation: "SubtypeOf",
     nodecolors: {
-        str: "Gold",
+        str: COLORS.Orange,
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: "RoyalBlue",
+        ConstituentOf: COLORS.Blue,
     },
 };
 
@@ -33,13 +49,13 @@ ccGraphs.sem = {
     name: "Semantic CCs",
     defaultrelation: "SubtypeOf",
     nodecolors: {
-        sem: "LightGray",
+        sem: COLORS.LightGray,
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: "RoyalBlue",
-        AttributeOf: "Red",
-        RoleOf: "LimeGreen",
+        ConstituentOf: COLORS.Blue,
+        AttributeOf: COLORS.Green,
+        RoleOf: COLORS.Magenta,
     },
 };
 
@@ -47,12 +63,12 @@ ccGraphs.inf = {
     name: "Information packaging",
     defaultrelation: "SubtypeOf",
     nodecolors: {
-        inf: "Khaki",
+        inf: COLORS.Yellow,
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: "RoyalBlue",
-        AttributeOf: "Red",
+        ConstituentOf: COLORS.Blue,
+        AttributeOf: COLORS.Green,
     },
 };
 
@@ -60,14 +76,14 @@ ccGraphs.cxn_str = {
     name: "Cxn ↔︎ Strategies",
     defaultrelation: "ExpressionOf",
     nodecolors: {
-        cxn: "LightGreen",
-        str: "Gold",
+        cxn: COLORS.LightGreen,
+        str: COLORS.Orange,
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
-        ExpressionOf: "RoyalBlue",
-        ModeledOn: "Red",
-        RecruitedFrom: "MediumOrchid",
+        ExpressionOf: COLORS.Red,
+        ModeledOn: COLORS.Teal,
+        RecruitedFrom: COLORS.Olive,
     },
     edgedashes: {ExpressionOf: true, ModeledOn: true, RecruitedFrom: true},
     edgereversed: {ModeledOn: true, RecruitedFrom: true},
@@ -77,15 +93,15 @@ ccGraphs.cxn_sem_inf = {
     name: "Cxn ↔︎ Sem. + Inf.",
     defaultrelation: "FunctionOf",
     nodecolors: {
-        cxn: "LightGreen",
-        inf: "Khaki",
-        sem: "LightGray",
+        cxn: COLORS.LightGreen,
+        inf: COLORS.Yellow,
+        sem: COLORS.LightGray,
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors
-        ConstituentOf: "RoyalBlue",
-        HeadOf: "Red",
-        FunctionOf: "MediumOrchid",
+        ConstituentOf: COLORS.Blue,
+        HeadOf: COLORS.Purple,
+        FunctionOf: COLORS.Brown,
     },
     edgedashes: {FunctionOf: true},
 };
