@@ -41,7 +41,6 @@ ccGraphs.sem = {
         AttributeOf: "Red",
         RoleOf: "LimeGreen",
     },
-    edgedashes: {AttributeOf: true, RoleOf: true},
 };
 
 ccGraphs.inf = {
@@ -55,7 +54,6 @@ ccGraphs.inf = {
         ConstituentOf: "RoyalBlue",
         AttributeOf: "Red",
     },
-    edgedashes: {AttributeOf: true},
 };
 
 ccGraphs.cxn_str = {
@@ -80,8 +78,8 @@ ccGraphs.cxn_sem_inf = {
     defaultrelation: "FunctionOf",
     nodecolors: {
         cxn: "LightGreen",
-        sem: "LightGray",
         inf: "Khaki",
+        sem: "LightGray",
     },
     edgecolors: {
         SubtypeOf: 0,  // inherit from node colors

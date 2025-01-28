@@ -89,6 +89,7 @@ function getGraphRelations() {
             lbl.style.display = "none";
         } else {
             lbl.style.display = "";
+            let bordercolor = color;
             if (color === 0) {
                 // Inherit label color from node color(s)
                 let nodecolors = Object.values(graph.nodecolors);
@@ -97,8 +98,9 @@ function getGraphRelations() {
                 } else {
                     color = nodecolors[0];
                 }
+                bordercolor = nodecolors[0];
             }
-            let style = `color: ${color}; filter: brightness(50%) saturate(400%);`;
+            let style = `color: ${color}; filter: brightness(50%) saturate(400%); border-bottom-color: ${bordercolor}`;
             lbl.querySelector("span").style = style;
         }
     }
