@@ -18,6 +18,8 @@ const COLORS = {
     Brown:      "#a05000",  // #945200 (Mocha)
 };
 
+var ccReversedEdges = {ModeledOn: true, RecruitedFrom: true};
+
 var ccGraphs = {};
 
 ccGraphs.cxn = {
@@ -86,7 +88,6 @@ ccGraphs.cxn_str = {
         RecruitedFrom: COLORS.Olive,
     },
     edgedashes: {ExpressionOf: true, ModeledOn: true, RecruitedFrom: true},
-    edgereversed: {ModeledOn: true, RecruitedFrom: true},
 };
 
 ccGraphs.cxn_sem_inf = {

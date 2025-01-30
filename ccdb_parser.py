@@ -19,7 +19,7 @@ OutputFormats = ['html', 'json', 'fnbr', 'graph']
 
 # Graph nodes and edges
 GraphNode = TypedDict("GraphNode", {"id": str, "name": str, "type": str, "definition": str})
-GraphEdge = TypedDict("GraphEdge", {"from": str, "to": str, "rel": str})
+GraphEdge = TypedDict("GraphEdge", {"start": str, "end": str, "rel": str})
 
 
 class CCDB:
@@ -368,8 +368,8 @@ class CCDB:
             for rel in item.Relations:
                 for target in item.Relations.get(rel, []):
                     edges.append({
-                        "from": target,
-                        "to": item.Id,
+                        "start": target,
+                        "end": item.Id,
                         "rel": rel,
                     })
         print(f"var ccNodes = [")

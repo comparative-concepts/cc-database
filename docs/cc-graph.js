@@ -3,7 +3,7 @@
 // Global variables
 
 var ccNodes, ccEdges; // Defined in cc-graph-data.js
-var ccGraphs, networkOptions; // Defined in cc-graph-settings.js
+var ccGraphs, ccReversedEdges, networkOptions; // Defined in cc-graph-settings.js
 var network;
 
 
@@ -133,10 +133,7 @@ function setGraphData(nodeIds) {
 // Initialisation
 
 function init() {
-    // Set unique ids for all edges
-    for (let e of ccEdges) {
-        e.id = `${e.rel}--${e.from}--${e.to}`;
-    }
+    initGraphData();
     // Populate the graph type dropdown menu, and
     // create checkboxes for all relations
     let select = document.getElementById("ccGraphType");
@@ -165,6 +162,19 @@ function init() {
     network.on("startStabilizing", () => console.log(new Date().toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`));
     network.on("stabilized", (params) => console.log(new Date().toLocaleTimeString(), `Stabilization stopped after ${params.iterations} iterations`));
     selectionChanged();
+}
+
+function initGraphData() {
+    for (const e of ccEdges) {
+        // Set the direction of the edge
+        if (e.rel in ccReversedEdges) {
+            e.from = e.end; e.to = e.start;
+        } else {
+            e.from = e.start; e.to = e.end;
+        }
+        // Set a unique id for the edge
+        e.id = `${e.rel}--${e.from}--${e.to}`;
+    }
 }
 
 
@@ -272,7 +282,6 @@ function updateEdges() {
     for (let e of getGraphEdges()) {
         e.color = graph.edgecolors[e.rel];
         e.dashes = graph.edgedashes && graph.edgedashes[e.rel];
-        if (graph.edgereversed && graph.edgereversed[e.rel]) e.arrows = 'from';
     }
     for (const checkbox of document.querySelectorAll('#ccRelations input[type=checkbox]')) {
         const rel = checkbox.id;
