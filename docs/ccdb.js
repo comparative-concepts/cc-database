@@ -188,7 +188,6 @@ function filter_ccs() {
             }
         } else {
             elem.style.display = 'none';
-            console.log(cc);
         }
     }
 
