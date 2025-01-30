@@ -16,95 +16,68 @@ const COLORS = {
     Teal:       "#0080b0",  // #009193 (Teal)
     Olive:      "#909000",  // #929000 (Aspargus)
     Brown:      "#a05000",  // #945200 (Mocha)
+    Black:      "#000000",  // #000000 (Black)
 };
 
-var ccReversedEdges = {ModeledOn: true, RecruitedFrom: true};
+var ccSettings = {};
 
-var ccGraphs = {};
-
-ccGraphs.cxn = {
-    name: "Constructions",
-    defaultrelation: "SubtypeOf",
-    nodecolors: {
-        cxn: COLORS.LightGreen,
-    },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: COLORS.Blue,
-        HeadOf: COLORS.Purple,
-    },
+ccSettings.nodes = {
+    cxn: {color: COLORS.LightGreen},
+    str: {color: COLORS.Orange},
+    sem: {color: COLORS.LightGray},
+    inf: {color: COLORS.Yellow},
 };
 
-ccGraphs.str = {
-    name: "Strategies",
-    defaultrelation: "SubtypeOf",
-    nodecolors: {
-        str: COLORS.Orange,
-    },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: COLORS.Blue,
-    },
+ccSettings.edges = {
+    SubtypeOf:     {color: 0},  // inherit from node color
+    ConstituentOf: {color: COLORS.Blue},
+    HeadOf:        {color: COLORS.Purple},
+    AttributeOf:   {color: COLORS.Green},
+    RoleOf:        {color: COLORS.Magenta},
+    ExpressionOf:  {color: COLORS.Red,   dashed: true},
+    ModeledOn:     {color: COLORS.Teal,  dashed: true, reversed: true},
+    RecruitedFrom: {color: COLORS.Olive, dashed: true, reversed: true},
+    FunctionOf:    {color: COLORS.Brown, dashed: true},
+    AssociatedTo:  {color: COLORS.Black, dashed: true},
 };
 
-ccGraphs.sem = {
-    name: "Semantic CCs",
-    defaultrelation: "SubtypeOf",
-    nodecolors: {
-        sem: COLORS.LightGray,
+ccSettings.graphs = {
+    cxn: {
+        name: "Constructions",
+        defaultrelation: "SubtypeOf",
+        nodes: {cxn: true},
+        edges: {SubtypeOf: true, ConstituentOf: true, HeadOf: true},
     },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: COLORS.Blue,
-        AttributeOf: COLORS.Green,
-        RoleOf: COLORS.Magenta,
+    str: {
+        name: "Strategies",
+        defaultrelation: "SubtypeOf",
+        nodes: {str: true},
+        edges: {SubtypeOf: true, ConstituentOf: true},
     },
-};
-
-ccGraphs.inf = {
-    name: "Information packaging",
-    defaultrelation: "SubtypeOf",
-    nodecolors: {
-        inf: COLORS.Yellow,
+    sem: {
+        name: "Semantic CCs",
+        defaultrelation: "SubtypeOf",
+        nodes: {sem: true},
+        edges: {SubtypeOf: true, ConstituentOf: true, AttributeOf: true, RoleOf: true},
     },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node color
-        ConstituentOf: COLORS.Blue,
-        AttributeOf: COLORS.Green,
+    inf: {
+        name: "Information packaging",
+        defaultrelation: "SubtypeOf",
+        nodes: {inf: true},
+        edges: {SubtypeOf: true, ConstituentOf: true, AttributeOf: true},
     },
-};
-
-ccGraphs.cxn_str = {
-    name: "Cxn ↔︎ Strategies",
-    defaultrelation: "ExpressionOf",
-    nodecolors: {
-        cxn: COLORS.LightGreen,
-        str: COLORS.Orange,
+    cxn_str: {
+        name: "Cxn ↔︎ Strategies",
+        defaultrelation: "ExpressionOf",
+        nodes: {cxn: true, str: true},
+        edges: {SubtypeOf: true, ExpressionOf: true, ModeledOn: true, RecruitedFrom: true},
     },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node colors
-        ExpressionOf: COLORS.Red,
-        ModeledOn: COLORS.Teal,
-        RecruitedFrom: COLORS.Olive,
+    cxn_sem_inf: {
+        name: "Cxn ↔︎ Sem. + Inf.",
+        defaultrelation: "FunctionOf",
+        nodes: {cxn: true, inf: true, sem: true},
+        edges: {SubtypeOf: true, ConstituentOf: true, HeadOf: true, FunctionOf: true},
     },
-    edgedashes: {ExpressionOf: true, ModeledOn: true, RecruitedFrom: true},
-};
-
-ccGraphs.cxn_sem_inf = {
-    name: "Cxn ↔︎ Sem. + Inf.",
-    defaultrelation: "FunctionOf",
-    nodecolors: {
-        cxn: COLORS.LightGreen,
-        inf: COLORS.Yellow,
-        sem: COLORS.LightGray,
-    },
-    edgecolors: {
-        SubtypeOf: 0,  // inherit from node colors
-        ConstituentOf: COLORS.Blue,
-        HeadOf: COLORS.Purple,
-        FunctionOf: COLORS.Brown,
-    },
-    edgedashes: {FunctionOf: true},
 };
 
 
