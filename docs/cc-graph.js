@@ -223,7 +223,6 @@ function showStatistics() {
                 mkElem("b", linkToCC(node, `${node.name} (${node.type})`), ": "),
                 removeLinks(node.definition) || "[no definition]",
             );
-            console.log(infoNode.innerHTML)
         } else if (nodes.length > 0) {
             infoNode.innerHTML = mkElem("p",
                 mkElem("b", title + ": "),
