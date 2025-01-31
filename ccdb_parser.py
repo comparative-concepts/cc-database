@@ -325,7 +325,6 @@ class CCDB:
             self.print_relation_list(item, Relation.AttributeOf, "in", "Attribute(s)")
             self.print_relation_list(item, Relation.RoleOf, "out", "Role of")
             self.print_relation_list(item, Relation.RoleOf, "in", "Role(s)")
-            self.print_relation_list(item, Relation.AssociatedTo, "out", "Associated")
 
             self.print_hierarchy(item, [Relation.SubtypeOf], 'Taxonomy')
             self.print_hierarchy(item, [Relation.HeadOf, Relation.ConstituentOf], 'Partonomy')
@@ -418,9 +417,6 @@ class CCDB:
                 'subTypeOf': [SPECIAL_FNBR_CCs.get(relid, relid)
                               for relid in item.Relations.get(Relation.SubtypeOf, [])],
             }
-            if Relation.AssociatedTo in item.Relations:
-                out['associatedTo'] = [SPECIAL_FNBR_CCs.get(relid, relid)
-                                       for relid in item.Relations[Relation.AssociatedTo]]
             out_ccs.append(out)
         final_output: dict[str, object] = {
             'db-version': "export from cc-database",

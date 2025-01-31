@@ -11,10 +11,6 @@
     - cxn:transitive-a-phrase
   RoleOf:
     - sem:agentive-change-of-state-event
-  AssociatedTo:
-    - str:active-category
-    - str:ergative-category
-    - str:nominative-category
   Definition: >-
     the <a>agent</a> or agent-like <a>central participant role</a> in the prototypical <a sem:bivalent>bivalent event</a> (that is, a breaking event) or the prototypical <a sem:trivalent>trivalent event</a> (that is, a giving event). <i>Examples</i>: in <i>Jack broke the window</i>, Jack plays the A role in the breaking event; and in <i>Jill gave Joe the keys</i>, Jill plays the A role in the giving event. (Section 6.3.1)
   Examples:
@@ -2402,8 +2398,6 @@
   Name: conditional discourse reference system
   SubtypeOf:
     - str:reference-tracking-system
-  AssociatedTo:
-    - str:balancing
   Definition: >-
     a <a>system</a> where a <a>same-subject</a> <a>reference tracking construction</a> uses a different <a>strategy</a> from the standard discourse reference strategies found in connected discourse. This is essentially the use of <a>zero anaphora</a> in the same-subject reference tracking construction that is conditional on the construction rather than on the discourse context. <i>Example</i>: the coordination clause construction illustrated in <i>Bilbo<sub>i</sub> found a ring and Ø<sub>i</sub> put it in his pocket</i> uses zero anaphora in the second clause; zero anaphora is not generally allowed in discourse reference (*<i>Put it in his pocket</i>). (Section 16.2)
   Examples:
@@ -6292,8 +6286,6 @@
   Name: mirative
   SubtypeOf:
     - sem:mental-space
-  AssociatedTo:
-    - cxn:exclamative-construction
   Definition: >-
     a speaker attitude of surprise toward the <a>propositional content</a> in the speaker's utterance. <i>Example</i>: Lhasa Tibetan has a distinct <a>construction</a> for expressing the mirative function with the form <i>'dug</i>: <i>nga-rdngul tog=tsam <b>'dug</b></i> <q>I have some money</q> expresses not only that the speaker has money, but that she is surprised to find this out. (Sections 12.1, 12.5.2)
   Examples:
@@ -6912,8 +6904,6 @@
   Name: number
   AttributeOf:
     - sem:entity
-  AssociatedTo:
-    - str:indexation-feature
   Definition: >-
     a semantic category that is often (though not always) expressed as an inflectional category, that denotes the cardinality of a referent. Typical values for number inflections are singular, plural, and dual, although there are other rarer values. <a>Indexation</a> frequently indicates the number of the referent. (Section 4.4)
 
@@ -7184,12 +7174,6 @@
     - cxn:passive-inverse-p-phrase
   RoleOf:
     - sem:agentive-change-of-state-event
-  AssociatedTo:
-    - str:absolutive-category
-    - str:accusative-category
-    - str:direct-object-category
-    - str:inactive-category
-    - str:primary-object-category
   Definition: >-
     the <a>patient</a> or patient-like <a>central participant role</a> in the prototypical <a sem:bivalent>bivalent event</a> (that is, a breaking event). <i>Example</i>: in <i>Jack broke the window</i>, the window plays the P role in the breaking event. (Section 6.3.1)
   Examples:
@@ -8744,9 +8728,6 @@
     - cxn:r-phrase
   RoleOf:
     - sem:transfer-event
-  AssociatedTo:
-    - str:indirect-object-category
-    - str:primary-object-category
   Definition: >-
     the recipient <a>central participant role</a> in a <a>transfer event</a> -- that is, the <a>participant</a> that receives the theme (<a>T</a>) from the agent. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, Randy's daughter is in the R role. (Section 7.5.2)
   Examples:
@@ -9212,11 +9193,6 @@
     - cxn:s-phrase
   RoleOf:
     - sem:change-of-state-event
-  AssociatedTo:
-    - str:active-category
-    - str:absolutive-category
-    - str:inactive-category
-    - str:nominative-category
   Definition: >-
     the one <a>central participant role</a> in a <a sem:monovalent>monovalent event</a>. <i>Example</i>: in <i>Jack ran</i> or <i>Jack died</i>, Jack plays the S role in the running and dying events, respectively. It is not entirely clear what event best serves as the exemplar monovalent event for defining the S role (Sections 6.3.1, 6.3.3)
   Examples:
@@ -10231,9 +10207,6 @@
     - cxn:t-phrase
   RoleOf:
     - sem:transfer-event
-  AssociatedTo:
-    - str:direct-object-category
-    - str:secondary-object-category
   Definition: >-
     the <a>theme</a> <a>central participant role</a> in a <a>transfer event</a> -- that is, the <a>participant</a> that is transferred from the <a>agent</a> (<a>A</a>) to the <a>recipient</a> (<a>R</a>). <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the car is in the T role. (Section 7.5.2)
   Examples:

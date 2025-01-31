@@ -28,7 +28,6 @@ class Relation(str, Enum):
     RoleOf = 'RoleOf'
     HeadOf = 'HeadOf'
     FunctionOf = 'FunctionOf'
-    AssociatedTo = 'AssociatedTo'  # This relation is obsolete and will be replaced
 
 
 class Example(BaseModel):

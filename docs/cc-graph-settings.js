@@ -38,7 +38,6 @@ ccSettings.edges = {
     ModeledOn:     {color: COLORS.Teal,  dashed: true, reversed: true},
     RecruitedFrom: {color: COLORS.Olive, dashed: true, reversed: true},
     FunctionOf:    {color: COLORS.Brown, dashed: true},
-    AssociatedTo:  {color: COLORS.Black, dashed: true},
 };
 
 ccSettings.graphs = {
