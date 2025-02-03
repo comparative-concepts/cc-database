@@ -5169,6 +5169,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
+    - cxn:clause
     - cxn:modification-construction
   Definition: >-
     a strategy for encoding the relation in <a>major propositional acts</a> (<a>modifier</a>--<a>referent</a>, <a>predicate</a>--<a inf:reference>argument</a>), in which there is a third morpheme that refers to the referent. The third morpheme is called an <a>index</a>. <i>Example</i>: Spanish <i>las chicas cantaban</i> <q>the girls were singing</q> uses indexation to express the relation between the singing and the singers (the girls), with the 3rd person plural suffix <i>-an</i>. Indexation usually expresses the categories of <a>person</a>, <a>number</a>, and/or <a>gender--class</a>. Since <a>personal pronouns</a> usually express only those categories, personal pronouns are arguably also indexes. Often the referent/argument is left unexpressed when the indexical strategy is employed -- hence, the referent/argument is expressed only by the index. Indexical strategies include <a>person indexation</a>, <a>nonperson indexation</a>, and <a>classifiers</a>. (Sections 3.3.2, 4.4, 6.2.2)

@@ -1796,6 +1796,7 @@ var ccEdges = [
    {"start": "str:indexation", "end": "str:indexation-feature", "rel": "ConstituentOf"},
    {"start": "str:overt-coding", "end": "str:indexed", "rel": "SubtypeOf"},
    {"start": "str:encoding-strategy", "end": "str:indexation", "rel": "SubtypeOf"},
+   {"start": "cxn:clause", "end": "str:indexation", "rel": "ExpressionOf"},
    {"start": "cxn:modification-construction", "end": "str:indexation", "rel": "ExpressionOf"},
    {"start": "sem:event", "end": "sem:indirect-causation-event", "rel": "SubtypeOf"},
    {"start": "cxn:semantically-nonspecific-pronoun", "end": "cxn:indirect-negation-pronoun", "rel": "SubtypeOf"},
