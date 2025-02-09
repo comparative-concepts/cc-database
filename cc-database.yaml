@@ -474,7 +474,7 @@
   Name: adverbial matrix clause
   SubtypeOf:
     - cxn:matrix-clause
-  ConstituentOf:
+  HeadOf:
     - cxn:adverbial-clause-construction
   Definition: ''
   FromGlossary: false
@@ -1823,8 +1823,6 @@
     - voice construction
   SubtypeOf:
     - cxn:topic-comment-construction
-  ConstituentOf:
-    - cxn:reference-tracking-construction
   Definition: >-
     a construction that performs the function of <a>predication</a>, including the <a>predicate</a> (which may be a <a>complex predicate</a>) and the <a>referring phrases</a> and other roles dependent on the predication. Example: <i>The birds were singing</i> is an instance of a clausal construction. This is the prototypical function of clauses; there are also <a>nonpredicational clauses</a> that perform different information packaging functions. The prototypical predicational clause is a <a>verbal clause</a>. (Sections 1.3, 2.2.2, 6.1.1)
     <br />
@@ -3450,7 +3448,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     a <a>strategy</a> for the expression of <a>motion events</a> in which the <a>path of motion</a> is expressed as (at least) part of the <a>predicate</a> and also as a <a>satellite</a>. <i>Example</i>: in Russian <i>Ja vy-bežal iz doma</i> <q>I ran out of the house</q>, the path of going out of the house is expressed both as part of the <a>verb</a> (the prefix <i>vy-</i> in <i>vy-bežal</i>) and as the <a>flag</a> <i>iz</i>. (Section 14.5)
   Examples:
@@ -4347,7 +4345,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     a <a>strategy</a> for the expression of <a>motion events</a> in which the <a>predication</a> incorporates the semantic type of the <a>figure</a> of motion. <i>Example</i>: in Atsugewi <i>w'ost'aq'ík: a</i> <q>Runny icky material [e.g. guts] is lying on the ground</q>, the verb <i>st'aq'</i> <q>lie [of runny, icky material]</q> incorporates the semantic type of the figure (the guts) as runny, icky material. (Section 14.5)
   Examples:
@@ -5941,6 +5939,7 @@
   Name: logophoric construction
   SubtypeOf:
     - cxn:subject-identity-construction
+    - cxn:complement-clause-construction
   Definition: >-
     the construction in a <a>logophoric system</a> for <a>complement clause constructions</a> that is used when a <a>participant</a> in the <a>complement</a> <a>event</a> is <a>coreferential</a> with the <u>speaker</u>, <u>addressee</u>, or <a>experiencer</a> of an <a>utterance</a>, <a>propositional attitude</a>, <a>knowledge</a>, or <a>commentative event</a>. <i>Example</i>: Donno Sɔ <i>Oumar Anta inyemɛñ waa be gi</i> <q>Oumar<sub>i</sub> said that Anta had seen him<sub>i</sub></q> is an instance of the logophoric construction -- the reference to Oumar in the complement clause uses a special <a>pronoun</a> form <i>inyemɛñ</i>. (Section 18.4.2)
   Examples:
@@ -6437,7 +6436,7 @@
     - sem:event
     - sem:spatial-event
   FunctionOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     a <a sem:monovalent>monovalent event</a> involving motion of a <a>participant</a> from one place to another (translational motion). <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. Motion events contrast with <a>bodily motion events</a>: motion events involve movement from one location to another, whereas bodily motion events involve internal motion of a body part. Motion events may express <a>path of motion</a> or <a>manner of motion</a>, or both. Motion events may be divided into <a>departure</a>, <a>passing</a>, and <a>arrival</a> phases of the path of motion. (Sections 7.2, 7.3.1, 14.4)
   Examples:
@@ -6450,7 +6449,7 @@
   SubtypeOf:
     - cxn:verb
   HeadOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     the <a>verb</a> expressing a <a>motion event</a>. <i>Examples</i>: <i>fly</i> and <i>go</i> express motion events. (Sections 7.2, 7.3.1, 14.4)
   Examples:
@@ -6822,7 +6821,7 @@
   Type: cxn
   Name: noun complement
   SubtypeOf:
-    - cxn:construction
+    - cxn:dependent-clause
   ConstituentOf:
     - cxn:noun-complement-clause-construction
   Definition: >-
@@ -9249,7 +9248,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     a <a>strategy</a> for expressing <a>events</a> such that the manner of how the event comes about is expressed by a <a>manner verb</a>, and the <a sem:result-event>result state</a> (including also paths of motion) is expressed in a <a>satellite</a>. <i>Example</i>: <i>Sam strode into the room</i> uses the satellite-framing strategy -- <i>stride</i> is a manner of motion verb, and the path of motion is expressed by the oblique phrase <i>into the room</i>. (Section 7.3.1)
   Examples:
@@ -9459,7 +9458,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     a <a>strategy</a> for expressing an <a>eventive complex predicate</a> with two (or more) <a>elements</a>, each expressing an <a>event</a>, without <a>overt coding</a> of the relation between the two elements via a third linking morpheme. The serial verb strategy -- that is, expression of an eventive complex predicate without an overt linking morpheme -- combines with strategies for expressing the two event elements involving <a str:contiguity-of-serial-verbs>contiguity</a>, <a str:incorporation-of-serial-verbs>incorporation</a>, and <a str:locus-of-inflection-of-serial-verbs>locus of inflection</a>. <i>Example</i>: Sranan <i>Kofi naki Amba kiri</i> <q>Kofi killed [lit. <q>hit kill</q>] Amba</q> contains two event elements, <i>naki</i> <q>hit</q> and <i>kiri</i> <q>kill</q>, without any linking morpheme. (Section 13.2.2)
   Examples:
@@ -10022,7 +10021,7 @@
   ExpressionOf:
     - cxn:experiential-construction
     - cxn:possessed-argument-construction
-    - cxn:motion-clause
+    - cxn:motion-construction
     - cxn:perception-clause
   ModeledOn:
     - cxn:transitive-construction
@@ -10839,7 +10838,7 @@
   SubtypeOf:
     - str:encoding-strategy
   ExpressionOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: >-
     a <a>strategy</a> for expressing <a>motion events</a> such that the path of motion is expressed by a <a>path verb</a>. <i>Example</i>: <i>The guests entered the reception hall</i> uses the verb-framing strategy: the path verb <i>enter</i> describes a <a>path of motion event</a>. (Section 7.3.1)
   Examples:
@@ -12268,14 +12267,14 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:motion-clause
+- Id: cxn:motion-construction
   Type: cxn
-  Name: motion clause
+  Name: motion construction
   Alias:
     - motion argument structure construction
     - motion ASC
   SubtypeOf:
-    - cxn:verbal-clause
+    - cxn:basic-voice
   Definition: ''
   FromGlossary: false
 
@@ -12827,7 +12826,7 @@
   Name: noun complement matrix clause
   SubtypeOf:
     - cxn:matrix-clause
-  ConstituentOf:
+  HeadOf:
     - cxn:noun-complement-clause-construction
   Definition: ''
   FromGlossary: false
@@ -12873,6 +12872,8 @@
 - Id: cxn:s-phrase
   Type: cxn
   Name: S phrase
+  Alias:
+    - S argument phrase
   SubtypeOf:
     - cxn:subject-phrase
   ConstituentOf:
@@ -12882,7 +12883,9 @@
 
 - Id: cxn:transitive-a-phrase
   Type: cxn
-  Name: transitive A-phrase
+  Name: transitive A phrase
+  Alias:
+    - transitive A argument phrase
   SubtypeOf:
     - cxn:subject-phrase
   ConstituentOf:
@@ -12892,7 +12895,9 @@
 
 - Id: cxn:p-phrase
   Type: cxn
-  Name: P-phrase
+  Name: P phrase
+  Alias:
+    - P argument phrase
   SubtypeOf:
     - cxn:object-phrase
   ConstituentOf:
@@ -12902,7 +12907,9 @@
 
 - Id: cxn:ditransitive-a-phrase
   Type: cxn
-  Name: ditransitive A-phrase
+  Name: ditransitive A phrase
+  Alias:
+    - ditransitive A argument phrase
   SubtypeOf:
     - cxn:subject-phrase
   ConstituentOf:
@@ -12912,7 +12919,9 @@
 
 - Id: cxn:t-phrase
   Type: cxn
-  Name: T-phrase
+  Name: T phrase
+  Alias:
+    - T argument phrase
   SubtypeOf:
     - cxn:object-phrase
   ConstituentOf:
@@ -12922,7 +12931,9 @@
 
 - Id: cxn:r-phrase
   Type: cxn
-  Name: R-phrase
+  Name: R phrase
+  Alias:
+    - R argument phrase
   SubtypeOf:
     - cxn:object-phrase
   ConstituentOf:
@@ -12956,7 +12967,7 @@
   SubtypeOf:
     - cxn:subject-phrase
   ConstituentOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   Definition: ''
   FromGlossary: false
 
@@ -12967,12 +12978,14 @@
   SubtypeOf:
     - cxn:nonsubject-argument-phrase
   ConstituentOf:
-    - cxn:motion-clause
+    - cxn:motion-construction
   FromGlossary: false
 
 - Id: cxn:passive-inverse-a-phrase
   Type: cxn
   Name: passive-inverse A phrase
+  Alias:
+    - passive-inverse A argument phrase
   SubtypeOf:
     - cxn:nonsubject-argument-phrase
   ConstituentOf:
@@ -13408,5 +13421,15 @@
   Name: unexpected co-occurrence coordination
   SubtypeOf:
     - cxn:adversative-coordination
+  Definition: ''
+  FromGlossary: false
+
+- Id: cxn:partitive-phrase
+  Type: cxn
+  Name: partitive phrase
+  SubtypeOf:
+    - cxn:nominal-attributive-phrase
+  ConstituentOf:
+    - cxn:partitive-construction
   Definition: ''
   FromGlossary: false
