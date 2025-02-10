@@ -785,10 +785,6 @@
 - Id: inf:anchor
   Type: inf
   Name: anchor
-  SubtypeOf:
-    - inf:reference
-  ConstituentOf:
-    - inf:anchoring
   Definition: >-
     an <a sem:object-concept>object</a> that, if its identity is known to speaker and hearer, allows for the identity of a related object to be known to the speaker and hearer. <i>Example</i>: <q>knowing who Peter is we can identify Peter's bag, arm, brother</q> (Koptjevskaja-Tamm 2002:147) -- i.e. Peter serves as the anchor for identifying the bag, arm, or brother. The anchoring function requires that the <a inf:modification>modifying</a> <a sem:object-concept>object</a> concept denote an <a>individual</a> and not a <a>type</a>, and preferably a highly <a>accessible</a> individual. Another term used for <q>anchor</q> is <q>reference point</q>, but the latter term has another use in this book. (Section 5.2.1)
   Examples:
@@ -797,6 +793,7 @@
 - Id: inf:anchoring
   Type: inf
   Name: anchoring
+  Status: deleted
   SubtypeOf:
     - inf:modification
   FunctionOf:
@@ -2322,6 +2319,8 @@
   Name: concessive conditional relation
   Alias:
     - conditional concessive relation
+  SubtypeOf:
+    - sem:event-relation
   FunctionOf:
     - cxn:concessive-conditional-construction
   Definition: >-
@@ -4590,7 +4589,7 @@
   Type: inf
   Name: generic referent
   SubtypeOf:
-    - inf:information-status
+    - inf:reference
   FunctionOf:
     - cxn:generic-pronoun
     - cxn:indefinite-pronoun
@@ -5467,7 +5466,7 @@
   Name: internal possessor strategy
   SubtypeOf:
     - str:recruitment-strategy
-  ExpressionOf:
+  RecruitedFrom:
     - cxn:possessed-argument-construction
   Definition: >-
     a <a>strategy</a> in which an <a sem:object-concept>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
@@ -7232,6 +7231,8 @@
     - participant
     - microrole
     - Frame Element
+  ConstituentOf:
+    - sem:propositional-content
   RoleOf:
     - sem:event
   FunctionOf:
@@ -9271,8 +9272,8 @@
   Type: sem
   Name: scalar model
   AttributeOf:
-    - sem:conditional-relation
     - sem:comparative-conditional-relation
+    - sem:concessive-conditional-relation
     - sem:let-alone-relation
   Definition: >-
     a range of situations that can be ranked from <dq>weakest</dq> to <dq>strongest</dq> -- that is, least informative to most informative, on some relevant scale for the <a>meaning</a> of a sentence. <i>Example</i>: <i>He won't eat shrimp, let alone squid</i> makes sense by invoking a scalar model of <dq>things that you would not expect someone to be willing to eat</dq>, such that being unwilling to eat shrimp is at the <dq>strong</dq>, more informative, end of the scalar model, and being unwilling to eat squid is at the <dq>weak</dq>, less informative end of the scalar model (in a culture where eating squid is considered more repulsive than eating shrimp). (Section 17.3.3)
@@ -9345,8 +9346,6 @@
   Name: selecting
   SubtypeOf:
     - inf:modification
-    - inf:anchoring
-    - inf:typifying
   Definition: >-
     a subtype of <a>modification</a> that picks out the <a>instance</a>, or set of instances, of the <a>type</a> that the speaker intends to <a inf:reference>refer</a> to. Usually performed by <a>numerals</a> and <a cxn:quantifier-term>quantifiers</a>, as well other related concepts. (Dik 1997 uses <q>selecting</q> for <a inf:choosing-contrast>choosing</a>.) (Sections 4.1.1, <b>4.1.3</b>)
 
@@ -9621,10 +9620,13 @@
 - Id: inf:situating
   Type: inf
   Name: situating
+  Alias:
+    - anchoring
   SubtypeOf:
     - inf:modification
-    - inf:anchoring
-    - inf:typifying
+  FunctionOf:
+    - cxn:anchoring-construction
+    - cxn:partitive-construction
   Definition: >-
     a subtype of <a>modification</a> that picks out a particular referent by situating it in physical space (<a>deixis</a>) or in the (knowledge/belief) <a>mental space</a> of the interlocutors (<a>information status</a>). (Section 4.1.1)
 
@@ -9972,8 +9974,13 @@
 - Id: inf:subcategorizing
   Type: inf
   Name: subcategorizing
+  Alias:
+    - typifying
   SubtypeOf:
     - inf:modification
+  FunctionOf:
+    - cxn:binominal-lexeme
+    - cxn:typifying-construction
   Definition: >-
     a subtype of <a>modification</a> supporting the basic <u>categorizing</u> function of <a>common nouns</a>. Usually performed by <a>property</a> concepts. (Sections 4.1.1, <b>4.1.2</b>)
 
@@ -10646,6 +10653,7 @@
 - Id: inf:typifying
   Type: inf
   Name: typifying
+  Status: deleted
   SubtypeOf:
     - inf:modification
   FunctionOf:
@@ -11911,6 +11919,8 @@
     - str:alignment-system
   ModeledOn:
     - cxn:prototypical-construction
+  ExpressionOf:
+    - cxn:nonprototypical-construction
   Definition: ''
   FromGlossary: false
 
