@@ -4,7 +4,7 @@
   Alias:
     - A (role)
   SubtypeOf:
-    - sem:valency-role
+    - sem:agent
   FunctionOf:
     - cxn:ditransitive-a-phrase
     - cxn:passive-inverse-a-phrase
@@ -52,7 +52,7 @@
   ConstituentOf:
     - inf:topic-comment
   Definition: >-
-    the relation between what is expressed in a <a cxn:topic-comment-construction>topic--comment</a> sentence and the <a>referent</a> or <a>topic</a> that the comment or <a>predication</a> is predicated of. <i>Example</i>: in <i>The coyote ran across the lawn</i>, the sentence is about the coyote. Aboutness is intended to capture the notion that an utterance is relevant to <q>a matter of standing interest or concern</q> (Strawson 1964:97). (Section 11.2.1)
+    the relation between what is expressed in a <a cxn:topic-comment-construction>topic--comment</a> sentence and the <a>referent</a> or <a inf:reference>topic</a> that the comment or <a>predication</a> is predicated of. <i>Example</i>: in <i>The coyote ran across the lawn</i>, the sentence is about the coyote. Aboutness is intended to capture the notion that an utterance is relevant to <q>a matter of standing interest or concern</q> (Strawson 1964:97). (Section 11.2.1)
   Examples:
     - The <e>coyote</e> ran across the lawn
 
@@ -576,7 +576,6 @@
   Type: sem
   Name: agentive change of state event
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:agentive-change-of-state-verb
@@ -968,7 +967,6 @@
     - application (event)
     - putting event
   SubtypeOf:
-    - sem:event
     - sem:spatial-event
   FunctionOf:
     - cxn:application-verb
@@ -1374,27 +1372,6 @@
     - sem:valency
   FunctionOf:
     - cxn:transitive-construction
-  AttributeOf:
-    - sem:agentive-change-of-state-event
-    - sem:application-event
-    - sem:cognition-event
-    - sem:combining-event
-    - sem:contact-by-impact-event
-    - sem:damage-event
-    - sem:emotion-event
-    - sem:ingestion-event
-    - sem:interaction-event
-    - sem:killing-injuring-event
-    - sem:figure-ground-spatial-relation
-    - sem:motion-event
-    - sem:perception-event
-    - sem:possession
-    - sem:pursuit-event
-    - sem:removal-event
-    - sem:sensation-event
-    - sem:caused-motion
-    - sem:contact-event
-    - sem:creation-event
   Definition: >-
     an event with a <a>valency</a> of two -- that is, with two <a>central participant roles</a>. <i>Example</i>: drinking is a bivalent event, with the two central roles of drinker and drink. (Section 6.1.2)
 
@@ -1402,7 +1379,6 @@
   Type: sem
   Name: bodily action
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:bodily-predicate
@@ -1413,8 +1389,7 @@
   Type: sem
   Name: bodily motion event
   SubtypeOf:
-    - sem:event
-    - sem:qualitative-event
+    - sem:spatial-event
   FunctionOf:
     - cxn:bodily-motion-verb
   Definition: >-
@@ -1449,7 +1424,6 @@
     - body care (event)
     - grooming event
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:body-care-verb
@@ -1490,8 +1464,7 @@
     - maintain position event
     - locative stative event
   SubtypeOf:
-    - sem:event
-    - sem:qualitative-event
+    - sem:spatial-event
   FunctionOf:
     - cxn:body-position-predicate
   Definition: >-
@@ -1721,7 +1694,6 @@
     - assume position event
     - change in posture event
   SubtypeOf:
-    - sem:event
     - sem:spatial-event
   FunctionOf:
     - cxn:change-in-position-verb
@@ -1753,7 +1725,6 @@
     - change of state (event)
     - COS (event)
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:change-of-state-verb
@@ -1882,7 +1853,6 @@
   Alias:
     - cognition (event)
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   FunctionOf:
     - cxn:cognition-verb
@@ -1941,7 +1911,6 @@
   Alias:
     - combining (event)
   SubtypeOf:
-    - sem:event
     - sem:spatial-event
   FunctionOf:
     - cxn:combining-verb
@@ -2522,7 +2491,6 @@
   Alias:
     - contact by impact (event)
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:contact-by-impact-verb
@@ -2880,7 +2848,6 @@
   Type: sem
   Name: damage event
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:damage-verb
@@ -3208,7 +3175,7 @@
   ExpressionOf:
     - cxn:topic-comment-construction
   Definition: >-
-    a strategy for expressing a <a>topic</a> in which the topic <a>referring phrase</a> differs from the expression of a prototypical <a>subject</a> phrase. <i>Example</i>: in German <i>Peter, ich habe ihn heute nicht getroffen</i> <q>Peter, I have not met him today</q>, the topic phrase <i>Peter</i> is in intial position, prosodically separated from the rest of the clause, and there is a <a>pronoun</a> <i>ihn</i> <q>him</q> referring to Peter in the clause. Not all detached topics have all three of the <a>morphosyntactic</a> properties of the German example; there is a continuum from the prototypical subject/topic phrase and a <dq>fully</dq> detached topic phrase. (Section 11.2.2)
+    a strategy for expressing a <a inf:reference>topic</a> in which the topic <a>referring phrase</a> differs from the expression of a prototypical <a>subject</a> phrase. <i>Example</i>: in German <i>Peter, ich habe ihn heute nicht getroffen</i> <q>Peter, I have not met him today</q>, the topic phrase <i>Peter</i> is in intial position, prosodically separated from the rest of the clause, and there is a <a>pronoun</a> <i>ihn</i> <q>him</q> referring to Peter in the clause. Not all detached topics have all three of the <a>morphosyntactic</a> properties of the German example; there is a continuum from the prototypical subject/topic phrase and a <dq>fully</dq> detached topic phrase. (Section 11.2.2)
   Examples:
     - Language: German
       Example: <e>Peter, ich habe ihn heute nicht getroffen</e>
@@ -3622,7 +3589,6 @@
   Type: sem
   Name: emotion event
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   FunctionOf:
     - cxn:emotion-verb
@@ -4029,7 +3995,7 @@
   Alias:
     - existential event
   SubtypeOf:
-    - sem:event
+    - sem:qualitative-event
   FunctionOf:
     - cxn:existential-negation-construction
   Definition: >-
@@ -4088,7 +4054,7 @@
   Type: sem
   Name: experiencer
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
   FunctionOf:
     - cxn:experiencer-phrase
   RoleOf:
@@ -4144,7 +4110,7 @@
   Type: sem
   Name: expertum
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
   RoleOf:
     - sem:experiential-event
   Definition: >-
@@ -4297,7 +4263,6 @@
   FunctionOf:
     - cxn:figure-phrase
   RoleOf:
-    - sem:figure-ground-spatial-relation
     - sem:spatial-event
   Definition: >-
     the object in a spatial scene whose location or path of motion is being described relative to a <a>ground</a>. <i>Example</i>: in <i>Meagan ran into the cave</i>, Meagan is the figure, and her path of motion is described relative to the location of the cave. (Sections 7.3.1, 14.5)
@@ -4326,8 +4291,6 @@
     - figure--ground spatial relation
     - spatial figure--ground relation
   SubtypeOf:
-    - sem:event
-    - sem:object-relation
     - sem:spatial-event
   FunctionOf:
     - cxn:locative-modification-construction
@@ -4673,7 +4636,6 @@
     - cxn:ground-phrase
     - cxn:locative-phrase
   RoleOf:
-    - sem:figure-ground-spatial-relation
     - sem:spatial-event
   Definition: >-
     the reference point for locating a <a>figure</a> in a spatial scene. <i>Example</i>: in <i>Meagan ran into the cave</i>, the cave serves as the ground for locating the path of motion of Meagan. (Sections 7.3.1, 14.5)
@@ -4698,7 +4660,7 @@
   ConstituentOf:
     - cxn:hanging-topic-construction
   Definition: >-
-    a phrase that expresses a <a>topic</a> that is not a <a>participant</a> in the <a>predicated</a> <a>event</a>. <i>Example</i>: in Mandarin Chinese <i>xiàng bizi cháng</i> [elephant nose long] <q>Elephant's noses are long / Elephants have long noses</q>, <i>xiàng</i> <q>elephant</q> is a topic but not a participant in the predicated event <i>cháng</i> <q>be long</q>. Hanging topics may use a <a>detached topic phrase</a> strategy. (Section 11.2.3)
+    a phrase that expresses a <a inf:reference>topic</a> that is not a <a>participant</a> in the <a>predicated</a> <a>event</a>. <i>Example</i>: in Mandarin Chinese <i>xiàng bizi cháng</i> [elephant nose long] <q>Elephant's noses are long / Elephants have long noses</q>, <i>xiàng</i> <q>elephant</q> is a topic but not a participant in the predicated event <i>cháng</i> <q>be long</q>. Hanging topics may use a <a>detached topic phrase</a> strategy. (Section 11.2.3)
   Examples:
     - Language: Mandarin
       Example: <e>xiàng bizi cháng</e>
@@ -5359,7 +5321,6 @@
   Type: sem
   Name: ingestion event
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   FunctionOf:
     - cxn:ingestion-verb
@@ -5438,7 +5399,7 @@
   Type: sem
   Name: interaction event
   SubtypeOf:
-    - sem:event
+    - sem:social-event
   FunctionOf:
     - cxn:interaction-verb
   Definition: >-
@@ -5469,7 +5430,7 @@
   RecruitedFrom:
     - cxn:possessed-argument-construction
   Definition: >-
-    a <a>strategy</a> in which an <a sem:object-concept>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
+    a <a>strategy</a> in which an <a sem:object-concept>object</a> in an <a>ownership</a>, <a>body part</a>, <a>kinship</a>, etc., relation -- that is, a relation typically expressed in a <a>possessive modification construction</a> -- to a <a>participant</a> in an <a>event</a> (normally in the <a>P role</a> or sometimes the <a>S role</a> of the event) is expressed with a possessive modification construction, even if the object in that relation is also itself a participant in the event. <i>Example</i>: in Mokilese <i>ngoah insigeh-di kijinlikkoan-oaw nih-mw</i> <q>I wrote a letter to / for you</q>, <i>nih-mw</i> [<sc>clf-2sg.poss</sc>] <q>your</q> is a possessive modifier of <i>kijinlikkoan-oaw</i> <q>a letter</q>, even though the addressee is also a central participant in the <a sem:transfer-of-possession-event>transfer event</a>. This Mokilese example is also an instance of the <a>internal recipient strategy</a>, but the internal possessor strategy also includes the expression of objects in an ownership, etc., relation that are not (necessarily) also participants in the event. The <a>adnominal possessive strategy</a> is also an instance of the internal possessor strategy. (Section 7.5.3)
   Examples:
     - Language: Mokilese
       Example: <e>ngoah insigeh-di kijinlikkoan-oaw nih-mw</e>
@@ -5666,7 +5627,6 @@
     - killing event
     - injuring event
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:killing-injuring-verb
@@ -6393,24 +6353,7 @@
   FunctionOf:
     - cxn:intransitive-construction
   AttributeOf:
-    - sem:state
-    - sem:property-concept
-    - sem:bodily-action
-    - sem:bodily-motion-event
-    - sem:body-care-event
-    - sem:body-position-event
-    - sem:change-in-position-event
-    - sem:change-of-state-event
-    - sem:cognition-event
-    - sem:emotion-event
-    - sem:figure-ground-spatial-relation
-    - sem:ingestion-event
-    - sem:interaction-event
-    - sem:motion-event
-    - sem:perception-event
-    - sem:possession
-    - sem:pursuit-event
-    - sem:sensation-event
+    - sem:event
   Definition: >-
     an event with a <a>valency</a> of one -- that is, with one <a>central participant role</a>. <i>Example</i>: sleeping is a monovalent event. (Section 6.1.2)
 
@@ -6432,7 +6375,6 @@
   Alias:
     - motion (event)
   SubtypeOf:
-    - sem:event
     - sem:spatial-event
   FunctionOf:
     - cxn:motion-construction
@@ -6797,7 +6739,7 @@
   ExpressionOf:
     - cxn:nonprototypical-predication-construction
   Definition: >-
-    the <a>strategy</a> for <a cxn:nonprototypical-predication-construction>nonprototypical predication</a> that employs an uninflecting <a>copula</a>, typically derived from a <a cxn:personal-pronoun>personal</a> or <a>demonstrative pronoun</a>, <a>topic</a> <u>marker</u>, or <a>focus marker</a>. <i>Example</i>: Nakanai <i>eia <b>la</b> taua sesele</i> <q>he is truly a spirit</q> uses the demonstrative form <i>la</i> for object predication. (Section 10.2)
+    the <a>strategy</a> for <a cxn:nonprototypical-predication-construction>nonprototypical predication</a> that employs an uninflecting <a>copula</a>, typically derived from a <a cxn:personal-pronoun>personal</a> or <a>demonstrative pronoun</a>, <a  inf:reference>topic</a> <u>marker</u>, or <a>focus marker</a>. <i>Example</i>: Nakanai <i>eia <b>la</b> taua sesele</i> <q>he is truly a spirit</q> uses the demonstrative form <i>la</i> for object predication. (Section 10.2)
   Examples:
     - Language: Nakanai
       Example: <e>eia la taua sesele</e>
@@ -6910,7 +6852,7 @@
   Type: sem
   Name: numeral
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   Definition: >-
     a word that specifies the precise cardinality of a set of referents. Numerals most typically are packaged as modifiers. Two common types of numerals are <a sem:cardinal-numeral>cardinal numerals</a> and <a sem:ordinal-numeral>ordinal numerals</a> (there are other types not discussed here); see also <a sem:vague-numeral>vague numerals</a>. <i>Example</i>: in <i>three women, three</i> is a cardinal numeral functioning as a modifier of <i>women</i>. (Section 4.1.3)
   Examples:
@@ -7167,7 +7109,7 @@
     - P (role)
     - O (role)
   SubtypeOf:
-    - sem:valency-role
+    - sem:patient
   FunctionOf:
     - cxn:p-phrase
     - cxn:passive-inverse-p-phrase
@@ -7362,7 +7304,9 @@
   Type: sem
   Name: path event
   Alias:
-    - path (of motion) (event)
+    - path
+    - path of motion
+    - path of motion event
   SubtypeOf:
     - sem:motion-event
   FunctionOf:
@@ -7389,7 +7333,7 @@
   Type: sem
   Name: patient
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
   RoleOf:
     - sem:qualitative-event
   Definition: >-
@@ -7415,7 +7359,6 @@
   Alias:
     - perception (event)
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   FunctionOf:
     - cxn:perception-clause
@@ -7720,8 +7663,7 @@
     - possession (relation)
     - possessive relation
   SubtypeOf:
-    - sem:event
-    - sem:object-relation
+    - sem:social-event
   FunctionOf:
     - cxn:possessed-argument-construction
     - cxn:possessive-attributive-phrase
@@ -7786,13 +7728,13 @@
   Definition: ''
   FromGlossary: false
 
-- Id: sem:possessor-role
+- Id: sem:possessor
   Type: sem
-  Name: possessor role
+  Name: possessor
   Alias:
-    - possessor (role)
+    - possessor role
   SubtypeOf:
-    - sem:semantic-role
+    - sem:co-agent
   FunctionOf:
     - cxn:possessor-argument-phrase
   RoleOf:
@@ -7802,15 +7744,15 @@
   Examples:
     - <e>I</e> have a car
 
-- Id: sem:possessum-role
+- Id: sem:possessum
   Type: sem
-  Name: possessum role
+  Name: possessum
   Alias:
-    - possessum (role)
+    - possessum role
     - possessed role
     - possessee role
   SubtypeOf:
-    - sem:semantic-role
+    - sem:theme
   RoleOf:
     - sem:possession
   Definition: >-
@@ -8435,7 +8377,6 @@
     - property
     - quality
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:adjectival-phrase
@@ -8628,7 +8569,7 @@
   Type: sem
   Name: pursuit event
   SubtypeOf:
-    - sem:event
+    - sem:spatial-event
   FunctionOf:
     - cxn:pursuit-verb
   Definition: >-
@@ -8724,13 +8665,13 @@
     - R (role)
     - G (role)
   SubtypeOf:
-    - sem:valency-role
+    - sem:recipient
   FunctionOf:
     - cxn:r-phrase
   RoleOf:
-    - sem:transfer-event
+    - sem:transfer-of-possession-event
   Definition: >-
-    the recipient <a>central participant role</a> in a <a>transfer event</a> -- that is, the <a>participant</a> that receives the theme (<a>T</a>) from the agent. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, Randy's daughter is in the R role. (Section 7.5.2)
+    the recipient <a>central participant role</a> in a <a sem:transfer-of-possession-event>transfer event</a> -- that is, the <a>participant</a> that receives the theme (<a>T</a>) from the agent. <i>Example</i>: in <i>Randy gave the car to his daughter</i>, Randy's daughter is in the R role. (Section 7.5.2)
   Examples:
     - Randy gave the car to <e>his daughter</e>
 
@@ -8738,9 +8679,7 @@
   Type: sem
   Name: recipient
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:transfer-event
+    - sem:co-agent
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that receives an <a>entity</a> from another participant. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the accountant is the recipient of the forms sent. (Section 6.1.2)
   Examples:
@@ -9044,7 +8983,6 @@
   Alias:
     - removal (event)
   SubtypeOf:
-    - sem:event
     - sem:spatial-event
   FunctionOf:
     - cxn:removal-verb
@@ -9190,7 +9128,7 @@
   Alias:
     - S (role)
   SubtypeOf:
-    - sem:valency-role
+    - sem:undergoer
   FunctionOf:
     - cxn:s-phrase
   RoleOf:
@@ -9413,7 +9351,6 @@
   Alias:
     - (bodily) sensation event
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   FunctionOf:
     - cxn:sensation-verb
@@ -9820,7 +9757,7 @@
   SubtypeOf:
     - str:subject-predicate-alignment
   Definition: >-
-    a strategy found for the expression of <a>thetic constructions</a>. In a split structure, the information normally expressed as the comment or <a>predicate</a> in a <a>topic--comment construction</a> may be expressed in a different <a>form</a>, usually some sort of <a>subordinate clause</a>-like form. The information normally expressed as the <a>topic</a> in the topic--comment construction may be expressed in a different form, usually with a <a>presentational construction</a>; or both types of information are expressed differently. <i>Example</i>: in French <i>Voilà la sirène | qui hurle</i> [There's a siren | that's wailing] <q>The SIREN is wailing</q>, the <a>interruption</a> thetic construction expresses the participant (the siren) in a presentational construction, and expresses the event in a <a>relative clause construction</a>. (Section 11.3.2)
+    a strategy found for the expression of <a>thetic constructions</a>. In a split structure, the information normally expressed as the comment or <a>predicate</a> in a <a>topic--comment construction</a> may be expressed in a different <a>form</a>, usually some sort of <a>subordinate clause</a>-like form. The information normally expressed as the <a  inf:reference>topic</a> in the topic--comment construction may be expressed in a different form, usually with a <a>presentational construction</a>; or both types of information are expressed differently. <i>Example</i>: in French <i>Voilà la sirène | qui hurle</i> [There's a siren | that's wailing] <q>The SIREN is wailing</q>, the <a>interruption</a> thetic construction expresses the participant (the siren) in a presentational construction, and expresses the event in a <a>relative clause construction</a>. (Section 11.3.2)
   Examples:
     - Language: Frech
       Example: <e>Voilà la sirène | qui hurle</e>
@@ -9894,7 +9831,6 @@
     - transitory state
     - temporary state
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   FunctionOf:
     - cxn:nonprototypical-predication-construction
@@ -9935,7 +9871,7 @@
   Type: sem
   Name: stimulus
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
   FunctionOf:
     - cxn:stimulus-phrase
   RoleOf:
@@ -10210,13 +10146,13 @@
   Alias:
     - T (role)
   SubtypeOf:
-    - sem:valency-role
+    - sem:theme
   FunctionOf:
     - cxn:t-phrase
   RoleOf:
-    - sem:transfer-event
+    - sem:transfer-of-possession-event
   Definition: >-
-    the <a>theme</a> <a>central participant role</a> in a <a>transfer event</a> -- that is, the <a>participant</a> that is transferred from the <a>agent</a> (<a>A</a>) to the <a>recipient</a> (<a>R</a>). <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the car is in the T role. (Section 7.5.2)
+    the <a>theme</a> <a>central participant role</a> in a <a sem:transfer-of-possession-event>transfer event</a> -- that is, the <a>participant</a> that is transferred from the <a>agent</a> (<a>A</a>) to the <a>recipient</a> (<a>R</a>). <i>Example</i>: in <i>Randy gave the car to his daughter</i>, the car is in the T role. (Section 7.5.2)
   Examples:
     - Randy gave <e>the car</e> to his daughter
 
@@ -10324,11 +10260,9 @@
   Type: sem
   Name: theme
   SubtypeOf:
-    - sem:semantic-role
-  RoleOf:
-    - sem:transfer-event
+    - sem:undergoer
   Definition: >-
-    a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is the transferred <a>entity</a> in a <a>transfer event</a>. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the entity transferred is the forms. The term <q>theme</q> is also used for the participant functioning as the <a>figure</a> in <a>motion</a>, <a>application</a>, <a>removal</a>, and other events involving the movement of the participant. (Section 6.1.2)
+    a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is the transferred <a>entity</a> in a <a sem:transfer-of-possession-event>transfer event</a>. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the entity transferred is the forms. The term <q>theme</q> is also used for the participant functioning as the <a>figure</a> in <a>motion</a>, <a>application</a>, <a>removal</a>, and other events involving the movement of the participant. (Section 6.1.2)
   Examples:
     - I sent <e>the forms</e> to the accountant
 
@@ -10352,7 +10286,7 @@
   FunctionOf:
     - cxn:thetic-construction
   Definition: >-
-    <a>information packaging</a> that does not split the information into a <a>topic</a> and a <a>comment</a>, as is done in the <a inf:topic-comment>topic--comment</a> information packaging. Instead, the information is presented as a single whole, hence the alternative name <q>all new</q>. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
+    <a>information packaging</a> that does not split the information into a <a inf:reference>topic</a> and a <a>comment</a>, as is done in the <a inf:topic-comment>topic--comment</a> information packaging. Instead, the information is presented as a single whole, hence the alternative name <q>all new</q>. <i>Example</i>: <i>TRUMP was elected!</i> (with accent on <i>Trump</i>), uttered on November 9, 2016, is thetic, in that this information is expressed as all new -- in this case because it was unexpected at the time. (Sections 10.1.2, 11.1, <b>11.3.1</b>)
   Examples:
     - <e>TRUMP was elected!</e>
 
@@ -10407,7 +10341,7 @@
   ConstituentOf:
     - cxn:topic-comment-construction
   Definition: >-
-    a <a>referring phrase</a> that refers to the <a>topic</a>, usually applied to a phrase that is distinct in <a>form</a> and <a>role</a> from the subject phrase. <i>Example</i>: in Japanese <i>Nihon wa syuto ga sumiyoi</i> <q>As for Japan, its capital is a good place to live</q>, <i>Nihon wa</i> [Japan <sc>top</sc>] is a topic phrase marked by the topic marker <i>wa</i>.
+    a <a>referring phrase</a> that refers to the <a inf:reference>topic</a>, usually applied to a phrase that is distinct in <a>form</a> and <a>role</a> from the subject phrase. <i>Example</i>: in Japanese <i>Nihon wa syuto ga sumiyoi</i> <q>As for Japan, its capital is a good place to live</q>, <i>Nihon wa</i> [Japan <sc>top</sc>] is a topic phrase marked by the topic marker <i>wa</i>.
   Examples:
     - Language: Japanese
       Example: <e>Nihon wa</e> syuto ga sumiyoi
@@ -10452,7 +10386,7 @@
   FunctionOf:
     - cxn:topic-comment-construction
   Definition: >-
-    the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a inf:predication>predicated about</a> another concept which is <a inf:reference>referred</a> to (the <a>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
+    the <a>information packaging</a> in which one concept (the <a>comment</a>) is <a inf:predication>predicated about</a> another concept which is <a inf:reference>referred</a> to (the <a inf:reference>topic</a>). <i>Example</i>: <i>The bus stopped</i> is an instance of a topic--comment construction in which <i>stopped</i> is the comment and <i>The bus</i> is the topic. Topic--comment information packaging is basically synonymous with <a>predication</a>; the term <q>topic--comment</q> highlights the fact that a predication is a predication about a <a>referent</a>. (Sections 2.2.2, 10.1.2, 11.1, <b>11.2.1</b>)
   Examples:
     - The bus <e>stopped</e>
 
@@ -10473,11 +10407,11 @@
       EquivalentPieces:
         - ɣr-es | at her
 
-- Id: sem:transfer-event
+- Id: sem:transfer-of-possession-event
   Type: sem
-  Name: transfer event
+  Name: transfer of possession event
   SubtypeOf:
-    - sem:event
+    - sem:social-event
   FunctionOf:
     - cxn:transfer-verb
   Definition: >-
@@ -10494,7 +10428,7 @@
   SubtypeOf:
     - cxn:verb
   Definition: >-
-    a <a>verb</a> that expresses a <a>transfer event</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
+    a <a>verb</a> that expresses a <a sem:transfer-of-possession-event>transfer event</a>. <i>Examples</i>: giving and sending are physical transfer events (and <i>give</i> and <i>send</i> are transfer verbs), and showing and telling are <dq>mental transfer</dq> events (and <i>show</i> and <i>tell</i> are <dq>mental transfer</dq> verbs). (Section 7.5.1)
   Examples:
     - <e>give</e>
     - <e>send</e>
@@ -10598,14 +10532,6 @@
     - sem:valency
   FunctionOf:
     - cxn:ditransitive-construction
-  AttributeOf:
-    - sem:transfer-event
-    - sem:application-event
-    - sem:combining-event
-    - sem:removal-event
-    - sem:caused-motion
-    - sem:agentive-experience-event
-    - sem:agentive-ingestion-event
   Definition: >-
     an event with a <a>valency</a> of three -- that is, with three <a>central participant roles</a>. <i>Example</i>: giving is a trivalent event. (Section 6.1.2)
 
@@ -10915,9 +10841,9 @@
   Type: sem
   Name: weather event
   SubtypeOf:
-    - sem:event
+    - sem:qualitative-event
   Definition: >-
-    a situation type describing the weather that is typically construed as <a inf:thetic>thetic</a>. <i>Examples</i>: <i>It's raining</i> and <i>The wind is blowing</i> are expressions of weather. Weather is sometimes described as an <a>event</a> without any (<a>salient</a>) <a>participants</a>. Its tendency to be construed as thetic is attributed to the fact that weather is difficult to divide into a <a>topic</a> and a <a>comment</a> and be construed as <a>topic--comment information packaging</a>. (Sections 11.3.1, 11.3.3)
+    a situation type describing the weather that is typically construed as <a inf:thetic>thetic</a>. <i>Examples</i>: <i>It's raining</i> and <i>The wind is blowing</i> are expressions of weather. Weather is sometimes described as an <a>event</a> without any (<a>salient</a>) <a>participants</a>. Its tendency to be construed as thetic is attributed to the fact that weather is difficult to divide into a <a inf:reference>topic</a> and a <a>comment</a> and be construed as <a>topic--comment information packaging</a>. (Sections 11.3.1, 11.3.3)
   Examples:
     - <e>It's raining</e>
     - <e>The wind is blowing</e>
@@ -11350,7 +11276,7 @@
   Type: sem
   Name: cardinal numeral
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
     - sem:numeral
   FunctionOf:
     - cxn:numeral-attributive-phrase
@@ -11361,7 +11287,7 @@
   Type: sem
   Name: vague numeral
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   FunctionOf:
     - cxn:quantifier-attributive-phrase
     - cxn:vague-numeral-term
@@ -11372,7 +11298,7 @@
   Type: sem
   Name: amount
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   FunctionOf:
     - cxn:amount-term
   Definition: ''
@@ -11382,7 +11308,7 @@
   Type: sem
   Name: proportional quantifier
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   FunctionOf:
     - cxn:proportional-quantifier-term
     - cxn:quantifier-attributive-phrase
@@ -11393,7 +11319,7 @@
   Type: sem
   Name: distributive quantifier
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   FunctionOf:
     - cxn:distributive-quantifier-term
     - cxn:quantifier-attributive-phrase
@@ -11458,14 +11384,6 @@
     - sem:mensural-concept
   FunctionOf:
     - cxn:species-term
-  Definition: ''
-  FromGlossary: false
-
-- Id: sem:object-relation
-  Type: sem
-  Name: object relation
-  SubtypeOf:
-    - sem:event
   Definition: ''
   FromGlossary: false
 
@@ -11552,13 +11470,10 @@
 - Id: sem:external-cause
   Type: sem
   Name: external cause
+  Alias:
+    - proto-agent
   SubtypeOf:
     - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
-    - sem:experiential-event
   Definition: ''
   FromGlossary: false
 
@@ -11567,11 +11482,6 @@
   Name: affectee
   SubtypeOf:
     - sem:semantic-role
-  RoleOf:
-    - sem:qualitative-event
-    - sem:spatial-event
-    - sem:transfer-event
-    - sem:experiential-event
   Definition: ''
   FromGlossary: false
 
@@ -11580,9 +11490,6 @@
   Name: avalent
   SubtypeOf:
     - sem:valency
-  AttributeOf:
-    - sem:existence-event
-    - sem:weather-event
   Definition: ''
   FromGlossary: false
 
@@ -11590,7 +11497,6 @@
   Type: sem
   Name: caused motion
   SubtypeOf:
-    - sem:event
     - sem:spatial-event
   Definition: ''
   FromGlossary: false
@@ -11619,7 +11525,6 @@
   Type: sem
   Name: contact event
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   Definition: ''
   FromGlossary: false
@@ -11628,7 +11533,6 @@
   Type: sem
   Name: creation event
   SubtypeOf:
-    - sem:event
     - sem:qualitative-event
   Definition: ''
   FromGlossary: false
@@ -11639,7 +11543,6 @@
   Alias:
     - agentive experience (event)
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   Definition: ''
   FromGlossary: false
@@ -11650,7 +11553,6 @@
   Alias:
     - agentive ingestion (event)
   SubtypeOf:
-    - sem:event
     - sem:experiential-event
   Definition: ''
   FromGlossary: false
@@ -11864,14 +11766,6 @@
     - sem:mensural-concept
   FunctionOf:
     - cxn:form-term
-  Definition: ''
-  FromGlossary: false
-
-- Id: sem:valency-role
-  Type: sem
-  Name: valency role
-  RoleOf:
-    - sem:event
   Definition: ''
   FromGlossary: false
 
@@ -13249,7 +13143,7 @@
   Type: sem
   Name: mensural concept
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   FunctionOf:
     - cxn:mensural-attributive-phrase
   Definition: ''
@@ -13277,7 +13171,7 @@
   Type: sem
   Name: set member
   SubtypeOf:
-    - sem:event
+    - sem:quantitative-relation
   FunctionOf:
     - cxn:set-member-attributive-phrase
   Definition: ''
@@ -13442,5 +13336,107 @@
     - cxn:nominal-attributive-phrase
   ConstituentOf:
     - cxn:partitive-construction
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:quantitative-relation
+  Type: sem
+  Name: quantitative relation
+  SubtypeOf:
+    - sem:event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:social-event
+  Type: sem
+  Name: social event
+  SubtypeOf:
+    - sem:event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:communication-event
+  Type: sem
+  Name: communication event
+  SubtypeOf:
+    - sem:social-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:social-role-event
+  Type: sem
+  Name: social role event
+  SubtypeOf:
+    - sem:social-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:undergoer
+  Type: sem
+  Name: undergoer
+  Alias:
+    - proto-patient
+  SubtypeOf:
+    - sem:semantic-role
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:co-agent
+  Type: sem
+  Name: co-agent
+  SubtypeOf:
+    - sem:undergoer
+  RoleOf:
+    - sem:social-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:occupant
+  Type: sem
+  Name: occupant
+  SubtypeOf:
+    - sem:co-agent
+  RoleOf:
+    - sem:social-role-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:addressee-role
+  Type: sem
+  Name: addressee role
+  SubtypeOf:
+    - sem:co-agent
+  RoleOf:
+    - sem:communication-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:message
+  Type: sem
+  Name: message
+  SubtypeOf:
+    - sem:theme
+  RoleOf:
+    - sem:communication-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:topic
+  Type: sem
+  Name: topic
+  SubtypeOf:
+    - sem:theme
+  RoleOf:
+    - sem:communication-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:social-role
+  Type: sem
+  Name: social role
+  SubtypeOf:
+    - sem:theme
+  RoleOf:
+    - sem:social-role-event
   Definition: ''
   FromGlossary: false
