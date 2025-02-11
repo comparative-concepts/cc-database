@@ -1204,6 +1204,7 @@ var ccEdges = [
    {"start": "cxn:modification-construction", "end": "cxn:anaphoric-head-construction", "rel": "SubtypeOf"},
    {"start": "cxn:anaphoric-head-construction", "end": "cxn:anaphoric-head-relative-clause-construction", "rel": "SubtypeOf"},
    {"start": "cxn:relative-clause-construction", "end": "cxn:anaphoric-head-relative-clause-construction", "rel": "SubtypeOf"},
+   {"start": "inf:situating", "end": "inf:anchor", "rel": "ConstituentOf"},
    {"start": "cxn:modification-construction", "end": "cxn:anchoring-construction", "rel": "SubtypeOf"},
    {"start": "str:passive-inverse-alignment", "end": "str:animacy-based-split-ergativity", "rel": "SubtypeOf"},
    {"start": "sem:animacy", "end": "sem:animate", "rel": "SubtypeOf"},

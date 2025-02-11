@@ -784,6 +784,8 @@
 - Id: inf:anchor
   Type: inf
   Name: anchor
+  ConstituentOf:
+    - inf:situating
   Definition: >-
     an <a sem:object-concept>object</a> that, if its identity is known to speaker and hearer, allows for the identity of a related object to be known to the speaker and hearer. <i>Example</i>: <q>knowing who Peter is we can identify Peter's bag, arm, brother</q> (Koptjevskaja-Tamm 2002:147) -- i.e. Peter serves as the anchor for identifying the bag, arm, or brother. The anchoring function requires that the <a inf:modification>modifying</a> <a sem:object-concept>object</a> concept denote an <a>individual</a> and not a <a>type</a>, and preferably a highly <a>accessible</a> individual. Another term used for <q>anchor</q> is <q>reference point</q>, but the latter term has another use in this book. (Section 5.2.1)
   Examples:
