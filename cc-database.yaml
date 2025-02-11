@@ -7346,7 +7346,7 @@
   SubtypeOf:
     - cxn:complement-taking-predicate
   HeadOf:
-    - cxn:perception-construction
+    - cxn:perception-complement-clause-construction
   Definition: >-
     A perception complement-taking predicate is a <a>predicate</a> that expresses perceiving an event, which is expressed as the <a>complement</a> event of the predicate. <i>Example</i>: in <i>We watched the elk graze in the caldera</i>, watched denotes a perception event. The complement event has <a>dependent time reference</a>; the complement event must be occurring at the same time as the perceiving event (although modern media allowing watching a prior event via a recording). (Section 18.2.2)
   Examples:
@@ -7361,7 +7361,7 @@
     - sem:experiential-event
   FunctionOf:
     - cxn:perception-clause
-    - cxn:perception-construction
+    - cxn:perception-complement-clause-construction
   Definition: >-
     an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a sem:object-concept>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
@@ -12188,7 +12188,6 @@
     - perception ASC
   SubtypeOf:
     - cxn:verbal-clause
-    - cxn:experiential-construction
   Definition: ''
   FromGlossary: false
 
@@ -12645,9 +12644,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: cxn:perception-construction
+- Id: cxn:perception-complement-clause-construction
   Type: cxn
-  Name: perception construction
+  Name: perception complement clause construction
   SubtypeOf:
     - cxn:complement-clause-construction
   Definition: ''
