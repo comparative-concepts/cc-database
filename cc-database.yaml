@@ -154,8 +154,6 @@
 - Id: str:action-nominal
   Type: str
   Name: action nominal
-  Alias:
-    - nominalization
   ConstituentOf:
     - str:deranking
   ExpressionOf:
@@ -1944,7 +1942,7 @@
   ConstituentOf:
     - inf:topic-comment
   Definition: >-
-    in a <a>topic--comment information packaging</a>, the comment is the information that is predicated of the <a>topic</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is the comment that is predicated of Bill. Comment is basically synonymous with <a>predication</a>. (Section 10.1.2)
+    in a <a>topic--comment information packaging</a>, the comment is the information that is predicated of the <a inf:high-topicality>topic</a>. <i>Example</i>: in <i>Bill is a teacher</i>, being a teacher is the comment that is predicated of Bill. Comment is basically synonymous with <a>predication</a>. (Section 10.1.2)
   Examples:
     - Bill <e>is a teacher</e>
 
@@ -3087,7 +3085,7 @@
   Name: depictive complex predicate
   Alias:
     - depictive (complex predicate)
-    - (depictive) secondary predicate
+    - depictive secondary predicate
   SubtypeOf:
     - cxn:stative-complex-predicate
   Definition: >-
@@ -4917,8 +4915,7 @@
   Type: str
   Name: inactive category
   Alias:
-    - patientive
-    - undergoer
+    - patientive category
     - stative category
   ConstituentOf:
     - str:active-alignment
@@ -8056,7 +8053,7 @@
   Name: predicational location
   Status: deleted
   Definition: >-
-    a spatial location situation with a <a inf:predicational>predicational</a> (<a inf:topic-comment>topic--comment</a>) <a>information packaging</a>, such that the <a>figure</a> in the spatial relation is the <a>topic</a> and its location (including the <a>ground</a>) is the <a>comment</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
+    a spatial location situation with a <a inf:predicational>predicational</a> (<a inf:topic-comment>topic--comment</a>) <a>information packaging</a>, such that the <a>figure</a> in the spatial relation is the <a inf:high-topicality>topic</a> and its location (including the <a>ground</a>) is the <a>comment</a>. <i>Example</i>: <i>The pot is on the table</i> is an instance of the predicational locative construction. (Section 10.4.1)
   Examples:
     - <e>The pot is on the table</e>
 
@@ -8747,8 +8744,6 @@
 - Id: inf:reference
   Type: inf
   Name: reference, referent
-  Alias:
-    - topic
   SubtypeOf:
     - inf:major-propositional-act
   ConstituentOf:
@@ -9108,7 +9103,7 @@
   Name: resultative complex predicate
   Alias:
     - resultative (complex predicate)
-    - (resultative) secondary predicate
+    - resultative secondary predicate
   SubtypeOf:
     - cxn:stative-complex-predicate
   Definition: >-
@@ -11034,7 +11029,7 @@
   FunctionOf:
     - cxn:second-person-pronoun
   AttributeOf:
-    - sem:addressee
+    - sem:hearer
   Definition: ''
   FromGlossary: false
 
@@ -11064,9 +11059,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: sem:addressee
+- Id: sem:hearer
   Type: sem
-  Name: addressee
+  Name: hearer
   SubtypeOf:
     - sem:object-concept
   FunctionOf:
@@ -13403,9 +13398,9 @@
   Definition: ''
   FromGlossary: false
 
-- Id: sem:addressee-role
+- Id: sem:addressee
   Type: sem
-  Name: addressee role
+  Name: addressee
   SubtypeOf:
     - sem:co-agent
   RoleOf:
