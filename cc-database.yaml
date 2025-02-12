@@ -4259,7 +4259,7 @@
   Type: sem
   Name: figure
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
   FunctionOf:
     - cxn:figure-phrase
   RoleOf:
@@ -4631,7 +4631,7 @@
   Type: sem
   Name: ground
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
   FunctionOf:
     - cxn:ground-phrase
     - cxn:locative-phrase
