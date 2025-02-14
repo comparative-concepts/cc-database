@@ -1079,7 +1079,7 @@ var ccNodes = [
    {"id": "sem:topic", "name": "topic", "type": "sem", "definition": ""},
    {"id": "sem:social-role", "name": "social role", "type": "sem", "definition": ""},
    {"id": "sem:eventive-participant-event", "name": "eventive participant event", "type": "sem", "definition": ""},
-   {"id": "sem:eventive-perception-event", "name": "eventive perception-event", "type": "sem", "definition": ""},
+   {"id": "sem:eventive-perception-event", "name": "eventive perception event", "type": "sem", "definition": ""},
 ];
 var ccEdges = [
    {"start": "sem:agent", "end": "sem:a-role", "rel": "SubtypeOf"},
@@ -2417,7 +2417,6 @@ var ccEdges = [
    {"start": "str:strategy", "end": "str:system", "rel": "SubtypeOf"},
    {"start": "str:encoding-strategy", "end": "str:tag", "rel": "SubtypeOf"},
    {"start": "cxn:interrogative-construction", "end": "str:tag", "rel": "ExpressionOf"},
-   {"start": "sem:meaning", "end": "sem:tamp", "rel": "SubtypeOf"},
    {"start": "cxn:auxiliary", "end": "sem:tamp", "rel": "FunctionOf"},
    {"start": "str:indexation", "end": "str:target", "rel": "ConstituentOf"},
    {"start": "sem:telicity", "end": "sem:telic", "rel": "SubtypeOf"},

@@ -10198,8 +10198,6 @@
 - Id: sem:tamp
   Type: sem
   Name: TAMP
-  SubtypeOf:
-    - sem:meaning
   FunctionOf:
     - cxn:auxiliary
   Definition: >-
@@ -13472,7 +13470,7 @@
 
 - Id: sem:eventive-perception-event
   Type: sem
-  Name: eventive perception-event
+  Name: eventive perception event
   SubtypeOf:
     - sem:eventive-participant-event
   FunctionOf:
