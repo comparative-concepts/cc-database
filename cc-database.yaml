@@ -514,6 +514,7 @@
 - Id: sem:affecting-event
   Type: sem
   Name: affecting event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -531,7 +532,7 @@
   SubtypeOf:
     - cxn:experiential-verb
   Definition: >-
-    a <a>verb</a> that expresses an <a>affecting event</a>. <i>Example</i>: <i>The dog surprised me</i> is an instance of an affecting event, and <i>surprise</i> is an affecting verb. (Section 7.4)
+    a <a>verb</a> that expresses an <a sem:affecting>affecting event</a>. <i>Example</i>: <i>The dog surprised me</i> is an instance of an affecting event, and <i>surprise</i> is an affecting verb. (Section 7.4)
   Examples:
     - The dog <e>surprised</e> me
 
@@ -1175,6 +1176,7 @@
 - Id: sem:attending-event
   Type: sem
   Name: attending event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -1190,7 +1192,7 @@
   SubtypeOf:
     - cxn:experiential-verb
   Definition: >-
-    a <a>verb</a> that expresses an <a>attending event</a>. <i>Example</i>: <i>I am looking at the sandhill crane</i> is an instance of an attending event, and <i>look (at)</i> is an attending verb. (Section 7.4)
+    a <a>verb</a> that expresses an <a sem:attending>attending event</a>. <i>Example</i>: <i>I am looking at the sandhill crane</i> is an instance of an attending event, and <i>look (at)</i> is an attending verb. (Section 7.4)
   Examples:
     - I am <e>looking at</e> the sandhill crane
 
@@ -1671,13 +1673,14 @@
   SubtypeOf:
     - cxn:basic-voice
   Definition: >-
-    the <a>construction</a> expressing such a <a>chaining event</a>. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
+    the <a>construction</a> expressing such a <a sem:chaining>chaining event</a>. <i>Example</i>: in <i>The guests followed one another into the room</i>, each guest is a follower and a <dq>followee</dq>, except the first and last in the chain. It is also possible to have a closed chain, as in people following each other in a circle, in which all participants are both initiator and endpoint. (Section 7.2)
   Examples:
     - <e>The guests followed one another into the room</e>
 
 - Id: sem:chaining-event
   Type: sem
   Name: chaining event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -1878,13 +1881,14 @@
   SubtypeOf:
     - cxn:basic-voice
   Definition: >-
-    the <a>construction</a> expressing a <a>collective event</a>. <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
+    the <a>construction</a> expressing a <a sem:collective>collective event</a>. <i>Example</i>: in <i>Mary and Sue left together</i>, Mary leaves and Sue leaves, and the two leaving events are connected. (Section 7.2)
   Examples:
     - <e>Mary and Sue left together</e>
 
 - Id: sem:collective-event
   Type: sem
   Name: collective event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -2597,6 +2601,7 @@
 - Id: sem:controlled-event
   Type: sem
   Name: controlled event
+  Status: deleted
   Alias:
     - controlled activity
   SubtypeOf:
@@ -2612,7 +2617,7 @@
   SubtypeOf:
     - cxn:predicate
   Definition: >-
-    the <a>predicates</a> that express events in the <a>controlled activity</a> class. <i>Example</i>: running is a controlled activity event, and <i>run</i> is a controlled activity predicate. (Section 6.3.3)
+    the <a>predicates</a> that express events in the <a sem:controlled>controlled activity</a> class. <i>Example</i>: running is a controlled activity event, and <i>run</i> is a controlled activity predicate. (Section 6.3.3)
   Examples:
     - <e>run</e>
 
@@ -3122,7 +3127,7 @@
   ExpressionOf:
     - cxn:reciprocal-construction
   Definition: >-
-    the <a>strategy</a> of <a>recruiting</a> the <a>intransitive construction</a> for use in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with <a>overt coding</a> of the predicate indicating the <a>reflexive event</a> or <a>reciprocal event</a> type. <i>Examples</i>: Abkhaz <i>l-çə-l-k°abe-yt'</i> <q>she washed herself</q> is an Intransitive Verb form with the Reflexive prefix <i>çə-</i>, and Swahili <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
+    the <a>strategy</a> of <a>recruiting</a> the <a>intransitive construction</a> for use in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with <a>overt coding</a> of the predicate indicating the <a sem:reflexive>reflexive event</a> or <a reciprocal>reciprocal event</a> type. <i>Examples</i>: Abkhaz <i>l-çə-l-k°abe-yt'</i> <q>she washed herself</q> is an Intransitive Verb form with the Reflexive prefix <i>çə-</i>, and Swahili <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
   Examples:
     - Language: Abkhaz
       Example: <e>l-çə-l-k°abe-yt'</e>
@@ -3147,7 +3152,7 @@
   Alias:
     - desiderative (event)
   SubtypeOf:
-    - sem:event
+    - sem:eventive-participant-event
   FunctionOf:
     - cxn:desiderative-construction
   Definition: >-
@@ -3234,6 +3239,7 @@
 - Id: sem:direct-causation-event
   Type: sem
   Name: direct causation event
+  Status: deleted
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -3510,7 +3516,7 @@
   RecruitedFrom:
     - cxn:transitive-construction
   Definition: >-
-    the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: the Sa verb form <i>ir-ben-ir</i> [<sc>3du</sc>-shoot-<sc>3du</sc>] <q>They shoot them / they shoot themselves / they shoot each other</q> construes the plural participants as playing distinct roles, and thereby uses the transitive construction (<q>They shoot them</q>) to express either a reflexive event (<q>They shoot themselves</q>) or a reciprocal event (<q>They shoot each other</q>). (Section 7.2)
+    the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a sem:reciprocal>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: the Sa verb form <i>ir-ben-ir</i> [<sc>3du</sc>-shoot-<sc>3du</sc>] <q>They shoot them / they shoot themselves / they shoot each other</q> construes the plural participants as playing distinct roles, and thereby uses the transitive construction (<q>They shoot them</q>) to express either a reflexive event (<q>They shoot themselves</q>) or a reciprocal event (<q>They shoot each other</q>). (Section 7.2)
   Examples:
     - Language: Sa
       Example: ir-ben-ir
@@ -3818,7 +3824,7 @@
   Alias:
     - evaluative (event)
   SubtypeOf:
-    - sem:event
+    - sem:eventive-participant-event
   FunctionOf:
     - cxn:evaluative-construction
   Definition: >-
@@ -4033,6 +4039,7 @@
 - Id: sem:experience-event
   Type: sem
   Name: experience event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -4048,7 +4055,7 @@
   SubtypeOf:
     - cxn:experiential-verb
   Definition: >-
-    a <a>verb</a> that expresses an <a>experience event</a>. <i>Example</i>: <i>I saw the dog</i> is an instance of an experience event, and <i>see</i> is an experience verb. (Section 7.4)
+    a <a>verb</a> that expresses an <a sem:experience>experience event</a>. <i>Example</i>: <i>I saw the dog</i> is an instance of an experience event, and <i>see</i> is an experience verb. (Section 7.4)
   Examples:
     - I <e>saw</e> the dog
 
@@ -4198,6 +4205,7 @@
 - Id: sem:extroverted-event
   Type: sem
   Name: extroverted event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -4214,7 +4222,7 @@
   SubtypeOf:
     - cxn:verb
   Definition: >-
-    a <a>verb</a> expressing an <a>extroverted event</a>. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
+    a <a>verb</a> expressing an <a sem:extroverted>extroverted event</a>. <i>Examples</i>: seeing something vs. oneself, or loving someone vs. oneself (or even each other), are instances of extroverted events, and <i>see</i> and <i>love</i> are extroverted verbs. (Section 7.2)
   Examples:
     - <e>see</e>
     - <e>love</e>
@@ -5142,6 +5150,7 @@
 - Id: sem:indirect-causation-event
   Type: sem
   Name: indirect causation-event
+  Status: deleted
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -5566,6 +5575,7 @@
 - Id: sem:introverted-event
   Type: sem
   Name: introverted event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -5579,7 +5589,7 @@
   SubtypeOf:
     - cxn:verb
   Definition: >-
-    a <a>verb</a> expressing an <a>introverted event</a>. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events, and <i>shave</i>, <i>lay (down)</i>, and <i>quarrel</i> are introverted verbs. (Section 7.2)
+    a <a>verb</a> expressing an <a sem:introverted>introverted event</a>. <i>Examples</i>: shaving oneself vs. shaving someone else, laying down vs. laying someone else down, or quarreling (with each other) are instances of introverted events, and <i>shave</i>, <i>lay (down)</i>, and <i>quarrel</i> are introverted verbs. (Section 7.2)
   Examples:
     - <e>shave</e>
     - <e>lay (down)</e>
@@ -5986,7 +5996,7 @@
   Alias:
     - manipulative (event)
   SubtypeOf:
-    - sem:event
+    - sem:eventive-participant-event
   FunctionOf:
     - cxn:manipulative-construction
   Definition: >-
@@ -6021,6 +6031,7 @@
 - Id: sem:manner-event
   Type: sem
   Name: manner event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -6061,7 +6072,7 @@
   SubtypeOf:
     - cxn:verb
   Definition: >-
-    a <a>verb</a> expressing a <a>manner event</a>. <i>Example</i>: in <i>She smeared jam on the toast</i>, the event is described in terms of the manner by which the jam is applied to the toast. (Section 7.3.2)
+    a <a>verb</a> expressing a <a sem:manner-profile>manner event</a>. <i>Example</i>: in <i>She smeared jam on the toast</i>, the event is described in terms of the manner by which the jam is applied to the toast. (Section 7.3.2)
   Examples:
     - She <e>smeared</e> jam on the toast
 
@@ -8427,7 +8438,7 @@
   Alias:
     - propositional attitude (event)
   SubtypeOf:
-    - sem:event
+    - sem:eventive-participant-event
   FunctionOf:
     - cxn:propositional-attitude-construction
   Definition: >-
@@ -8704,13 +8715,14 @@
   SubtypeOf:
     - cxn:basic-voice
   Definition: >-
-    the <a>construction</a> expressing such a <a>reciprocal event</a>. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
+    the <a>construction</a> expressing such a <a sem:reciprocal>reciprocal event</a>. <i>Example</i>: in <i>Mary and Sue praised each other</i>, Mary praises Sue and Sue praises Mary. (Section 7.2)
   Examples:
     - <e>Mary and Sue praised each other</e>
 
 - Id: sem:reciprocal-event
   Type: sem
   Name: reciprocal event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -8807,7 +8819,7 @@
   SubtypeOf:
     - cxn:basic-voice
   Definition: >-
-    the <a>construction</a> expressing a <a>reflexive event</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
+    the <a>construction</a> expressing a <a sem:reflexive>reflexive event</a>. <i>Examples</i>: reflexive events may be direct, when there is no other participant, as in <i>I saw myself</i>; or indirect, when there is another participant in an intermediate position in the <a>causal chain</a>, as in <i>Sally baked a cake for herself</i>, whose causal structure is Sally --> cake --> Sally. (Section 7.2)
   Examples:
     - <e>I saw myself</e>
     - <e>Sally baked a cake for herself</e>
@@ -8815,6 +8827,7 @@
 - Id: sem:reflexive-event
   Type: sem
   Name: reflexive event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -9093,6 +9106,7 @@
 - Id: sem:result-event
   Type: sem
   Name: result event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -9108,7 +9122,7 @@
   SubtypeOf:
     - cxn:verb
   Definition: >-
-    the <a>verb</a> expressing a <a>result event</a>. <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
+    the <a>verb</a> expressing a <a sem:result-profile>result event</a>. <i>Example</i>: in <i>Peter broke the window</i>, the event is described in terms of the result state that is reached (a broken window). (Section 7.3.2)
   Examples:
     - <e>Peter broke the window</e>
 
@@ -9554,7 +9568,7 @@
   RecruitedFrom:
     - cxn:intransitive-construction
   Definition: >-
-    the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as a single <a>role</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by a single <a>argument phrase</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: English <i>Sam shaved</i> and <i>Mary and Sue met</i> construe the participants -- Sam, and Mary and Sue, respectively -- as playing a single role in the shaving and meeting events. The single role strategy may also be overtly coded: the Abkhaz Reflexive <i>l-c̜ə-l-k°abe-yt'</i> <q>She washed (herself)</q> is an Intransitive Verb form with the Reflexive prefix <i>c̜ə-</i>, and the Swahili Reciprocal <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
+    the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as a single <a>role</a> in a <a>reflexive</a> or <a sem:reciprocal>reciprocal event</a>; hence, it is expressed by a single <a>argument phrase</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>. <i>Examples</i>: English <i>Sam shaved</i> and <i>Mary and Sue met</i> construe the participants -- Sam, and Mary and Sue, respectively -- as playing a single role in the shaving and meeting events. The single role strategy may also be overtly coded: the Abkhaz Reflexive <i>l-c̜ə-l-k°abe-yt'</i> <q>She washed (herself)</q> is an Intransitive Verb form with the Reflexive prefix <i>c̜ə-</i>, and the Swahili Reciprocal <i>wa-na-pend-an-a</i> <q>they love each other</q> is an Intransitive Verb form with the Reciprocal suffix <i>-an</i>. (Section 7.2)
   Examples:
     - <e>Sam shaved</e>
     - <e>Mary and Sue met</e>
@@ -9581,6 +9595,7 @@
 - Id: sem:sociative-causation-event
   Type: sem
   Name: sociative causation-event
+  Status: deleted
   SubtypeOf:
     - sem:event
   Definition: >-
@@ -9642,7 +9657,7 @@
     - str:overt-coding
     - str:dual-role-strategy
   Definition: >-
-    the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with a special form functioning as the nonsubject argument phrase. <i>Examples</i>: English <i>I saw myself</i> and <i>Mary and Sue praised each other</i> construe the participants -- I, and Mary and Sue, respectively -- as playing two roles in the seeing and praising event, but with special object forms <i>myself</i> and <i>each other</i> to express that the events are a reflexive event and a reciprocal event, respectively. (Section 7.2)
+    the <a>strategy</a> of construing the <u>affected</u> <a>subject</a> <a>participant</a> as playing two distinct <a>roles</a> in a <a>reflexive</a> or <a sem:reciprocal>reciprocal event</a>; hence, it is expressed by two distinct <a>argument phrases</a> in a <a>reflexive construction</a> or a <a>reciprocal construction</a>, but with a special form functioning as the nonsubject argument phrase. <i>Examples</i>: English <i>I saw myself</i> and <i>Mary and Sue praised each other</i> construe the participants -- I, and Mary and Sue, respectively -- as playing two roles in the seeing and praising event, but with special object forms <i>myself</i> and <i>each other</i> to express that the events are a reflexive event and a reciprocal event, respectively. (Section 7.2)
   Examples:
     - <e>I saw myself</e>
     - <e>Mary and Sue praised each other</e>
@@ -9778,6 +9793,7 @@
 - Id: sem:spontaneous-event
   Type: sem
   Name: spontaneous event
+  Status: deleted
   SubtypeOf:
     - sem:event
   FunctionOf:
@@ -9791,7 +9807,7 @@
   SubtypeOf:
     - cxn:verb
   Definition: >-
-    the <a>verb</a> expressing a <a>spontaneous event</a>. <i>Examples</i>: dying and melting are spontaneous events, and <i>die</i> and <i>melt</i> are spontaneous event verbs. (Sections 6.3.4, 7.2)
+    the <a>verb</a> expressing a <a sem:spontaneous>spontaneous event</a>. <i>Examples</i>: dying and melting are spontaneous events, and <i>die</i> and <i>melt</i> are spontaneous event verbs. (Sections 6.3.4, 7.2)
   Examples:
     - <e>die</e>
     - <e>melt</e>
@@ -10633,6 +10649,7 @@
 - Id: sem:uncontrolled-event
   Type: sem
   Name: uncontrolled event
+  Status: deleted
   Alias:
     - uncontrolled activity
   SubtypeOf:
@@ -10648,7 +10665,7 @@
   SubtypeOf:
     - cxn:predicate
   Definition: >-
-    the <a>predicates</a> that express the class of <a>uncontrolled activity</a> events. <i>Example</i>: dying is an uncontrolled activity, and <i>die</i> is an uncontrolled activity predicate. (Section 6.3.3)
+    the <a>predicates</a> that express the class of <a sem:uncontrolled>uncontrolled activity</a> events. <i>Example</i>: dying is an uncontrolled activity, and <i>die</i> is an uncontrolled activity predicate. (Section 6.3.3)
   Examples:
     - <e>die</e>
 
@@ -10705,7 +10722,7 @@
   Alias:
     - utterance (event)
   SubtypeOf:
-    - sem:event
+    - sem:eventive-participant-event
   FunctionOf:
     - cxn:utterance-construction
   Definition: >-
@@ -11580,8 +11597,8 @@
   Name: controlled
   SubtypeOf:
     - sem:causal-control
-  AttributeOf:
-    - sem:controlled-event
+  FunctionOf:
+    - cxn:controlled-predicate
   Definition: ''
   FromGlossary: false
 
@@ -11590,8 +11607,8 @@
   Name: uncontrolled
   SubtypeOf:
     - sem:causal-control
-  AttributeOf:
-    - sem:uncontrolled-event
+  FunctionOf:
+    - cxn:uncontrolled-predicate
   Definition: ''
   FromGlossary: false
 
@@ -11600,8 +11617,8 @@
   Name: spontaneous
   SubtypeOf:
     - sem:causal-control
-  AttributeOf:
-    - sem:spontaneous-event
+  FunctionOf:
+    - cxn:spontaneous-verb
   Definition: ''
   FromGlossary: false
 
@@ -11610,8 +11627,6 @@
   Name: direct causation
   SubtypeOf:
     - sem:causal-directness
-  AttributeOf:
-    - sem:direct-causation-event
   Definition: ''
   FromGlossary: false
 
@@ -11620,8 +11635,6 @@
   Name: indirect causation
   SubtypeOf:
     - sem:causal-directness
-  AttributeOf:
-    - sem:indirect-causation-event
   Definition: ''
   FromGlossary: false
 
@@ -11630,8 +11643,6 @@
   Name: sociative causation
   SubtypeOf:
     - sem:causal-directness
-  AttributeOf:
-    - sem:sociative-causation-event
   Definition: ''
   FromGlossary: false
 
@@ -11640,8 +11651,8 @@
   Name: reflexive
   SubtypeOf:
     - sem:causal-cyclicality
-  AttributeOf:
-    - sem:reflexive-event
+  FunctionOf:
+    - cxn:reflexive-construction
   Definition: ''
   FromGlossary: false
 
@@ -11650,8 +11661,8 @@
   Name: reciprocal
   SubtypeOf:
     - sem:causal-cyclicality
-  AttributeOf:
-    - sem:reciprocal-event
+  FunctionOf:
+    - cxn:reciprocal-construction
   Definition: ''
   FromGlossary: false
 
@@ -11660,8 +11671,8 @@
   Name: chaining
   SubtypeOf:
     - sem:causal-cyclicality
-  AttributeOf:
-    - sem:chaining-event
+  FunctionOf:
+    - cxn:chaining-construction
   Definition: ''
   FromGlossary: false
 
@@ -11670,8 +11681,8 @@
   Name: collective
   SubtypeOf:
     - sem:causal-cyclicality
-  AttributeOf:
-    - sem:collective-event
+  FunctionOf:
+    - cxn:collective-construction
   Definition: ''
   FromGlossary: false
 
@@ -11680,8 +11691,8 @@
   Name: introverted
   SubtypeOf:
     - sem:causal-cyclicality
-  AttributeOf:
-    - sem:introverted-event
+  FunctionOf:
+    - cxn:introverted-verb
   Definition: ''
   FromGlossary: false
 
@@ -11690,8 +11701,8 @@
   Name: extroverted
   SubtypeOf:
     - sem:causal-cyclicality
-  AttributeOf:
-    - sem:extroverted-event
+  FunctionOf:
+    - cxn:extroverted-verb
   Definition: ''
   FromGlossary: false
 
@@ -11700,8 +11711,8 @@
   Name: attending
   SubtypeOf:
     - sem:causal-directionality
-  AttributeOf:
-    - sem:attending-event
+  FunctionOf:
+    - cxn:attending-verb
   Definition: ''
   FromGlossary: false
 
@@ -11710,8 +11721,8 @@
   Name: affecting
   SubtypeOf:
     - sem:causal-directionality
-  AttributeOf:
-    - sem:affecting-event
+  FunctionOf:
+    - cxn:affecting-verb
   Definition: ''
   FromGlossary: false
 
@@ -11720,8 +11731,8 @@
   Name: experience
   SubtypeOf:
     - sem:causal-directionality
-  AttributeOf:
-    - sem:experience-event
+  FunctionOf:
+    - cxn:experience-verb
   Definition: ''
   FromGlossary: false
 
@@ -11730,8 +11741,8 @@
   Name: manner profile
   SubtypeOf:
     - sem:causal-chain-profile
-  AttributeOf:
-    - sem:manner-event
+  FunctionOf:
+    - cxn:manner-verb
   Definition: ''
   FromGlossary: false
 
@@ -11740,8 +11751,8 @@
   Name: result profile
   SubtypeOf:
     - sem:causal-chain-profile
-  AttributeOf:
-    - sem:result-event
+  FunctionOf:
+    - cxn:result-verb
   Definition: ''
   FromGlossary: false
 
@@ -13453,5 +13464,13 @@
     - sem:semantic-role
   RoleOf:
     - sem:social-role-event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:eventive-participant-event
+  Type: sem
+  Name: eventive participant event
+  SubtypeOf:
+    - sem:event
   Definition: ''
   FromGlossary: false
