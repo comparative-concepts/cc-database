@@ -1635,6 +1635,7 @@
   Name: causee
   SubtypeOf:
     - sem:external-cause
+    - sem:co-actor
   FunctionOf:
     - cxn:causee-phrase
   Definition: >-
@@ -1930,6 +1931,7 @@
   Name: comitative
   SubtypeOf:
     - sem:external-cause
+    - sem:co-actor
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that accompanies another participant, usually the <a>agent</a>. <i>Example</i>: in <i>I went to the concert with Carol</i>, Carol is in the comitative role. (Section 6.1.2)
   Examples:
@@ -4055,6 +4057,7 @@
   Name: experiencer
   SubtypeOf:
     - sem:undergoer
+    - sem:co-actor
   FunctionOf:
     - cxn:experiencer-phrase
   RoleOf:
@@ -4110,7 +4113,7 @@
   Type: sem
   Name: expertum
   SubtypeOf:
-    - sem:undergoer
+    - sem:semantic-role
   RoleOf:
     - sem:experiential-event
   Definition: >-
@@ -4631,7 +4634,7 @@
   Type: sem
   Name: ground
   SubtypeOf:
-    - sem:undergoer
+    - sem:semantic-role
   FunctionOf:
     - cxn:ground-phrase
     - cxn:locative-phrase
@@ -7733,7 +7736,8 @@
   Alias:
     - possessor role
   SubtypeOf:
-    - sem:co-agent
+    - sem:undergoer
+    - sem:co-actor
   FunctionOf:
     - cxn:possessor-argument-phrase
   RoleOf:
@@ -7751,7 +7755,7 @@
     - possessed role
     - possessee role
   SubtypeOf:
-    - sem:theme
+    - sem:undergoer
   RoleOf:
     - sem:possession
   Definition: >-
@@ -8660,6 +8664,7 @@
 - Id: sem:r-role
   Type: sem
   Name: R role
+  Status: deleted
   Alias:
     - R (role)
     - G (role)
@@ -8677,8 +8682,17 @@
 - Id: sem:recipient
   Type: sem
   Name: recipient
+  Alias:
+    - R
+    - G
+    - R role
+    - G role
   SubtypeOf:
-    - sem:co-agent
+    - sem:co-actor
+  FunctionOf:
+    - cxn:r-phrase
+  RoleOf:
+    - sem:transfer-of-possession-event
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that receives an <a>entity</a> from another participant. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the accountant is the recipient of the forms sent. (Section 6.1.2)
   Examples:
@@ -10140,6 +10154,7 @@
 - Id: sem:t-role
   Type: sem
   Name: T role
+  Status: deleted
   Alias:
     - T (role)
   SubtypeOf:
@@ -10256,8 +10271,15 @@
 - Id: sem:theme
   Type: sem
   Name: theme
+  Alias:
+    - T
+    - T role
   SubtypeOf:
     - sem:undergoer
+  FunctionOf:
+    - cxn:t-phrase
+  RoleOf:
+    - sem:transfer-of-possession-event
   Definition: >-
     a <a>semantic role</a> including <a>participant roles</a> for a <a>participant</a> that is the transferred <a>entity</a> in a <a sem:transfer-of-possession-event>transfer event</a>. <i>Example</i>: in <i>I sent the forms to the accountant</i>, the entity transferred is the forms. The term <q>theme</q> is also used for the participant functioning as the <a>figure</a> in <a>motion</a>, <a>application</a>, <a>removal</a>, and other events involving the movement of the participant. (Section 6.1.2)
   Examples:
@@ -11467,8 +11489,6 @@
 - Id: sem:external-cause
   Type: sem
   Name: external cause
-  Alias:
-    - proto-agent
   SubtypeOf:
     - sem:semantic-role
   Definition: ''
@@ -11478,7 +11498,8 @@
   Type: sem
   Name: affectee
   SubtypeOf:
-    - sem:semantic-role
+    - sem:undergoer
+    - sem:co-actor
   Definition: ''
   FromGlossary: false
 
@@ -13370,18 +13391,16 @@
 - Id: sem:undergoer
   Type: sem
   Name: undergoer
-  Alias:
-    - proto-patient
   SubtypeOf:
     - sem:semantic-role
   Definition: ''
   FromGlossary: false
 
-- Id: sem:co-agent
+- Id: sem:co-actor
   Type: sem
-  Name: co-agent
+  Name: co-actor
   SubtypeOf:
-    - sem:undergoer
+    - sem:semantic-role
   RoleOf:
     - sem:social-event
   Definition: ''
@@ -13391,7 +13410,7 @@
   Type: sem
   Name: occupant
   SubtypeOf:
-    - sem:co-agent
+    - sem:co-actor
   RoleOf:
     - sem:social-role-event
   Definition: ''
@@ -13401,7 +13420,7 @@
   Type: sem
   Name: addressee
   SubtypeOf:
-    - sem:co-agent
+    - sem:co-actor
   RoleOf:
     - sem:communication-event
   Definition: ''
@@ -13411,7 +13430,7 @@
   Type: sem
   Name: message
   SubtypeOf:
-    - sem:theme
+    - sem:undergoer
   RoleOf:
     - sem:communication-event
   Definition: ''
@@ -13421,7 +13440,7 @@
   Type: sem
   Name: topic
   SubtypeOf:
-    - sem:theme
+    - sem:undergoer
   RoleOf:
     - sem:communication-event
   Definition: ''
@@ -13431,7 +13450,7 @@
   Type: sem
   Name: social role
   SubtypeOf:
-    - sem:theme
+    - sem:semantic-role
   RoleOf:
     - sem:social-role-event
   Definition: ''
