@@ -1079,6 +1079,7 @@ var ccNodes = [
    {"id": "sem:topic", "name": "topic", "type": "sem", "definition": ""},
    {"id": "sem:social-role", "name": "social role", "type": "sem", "definition": ""},
    {"id": "sem:eventive-participant-event", "name": "eventive participant event", "type": "sem", "definition": ""},
+   {"id": "sem:eventive-perception-event", "name": "eventive perception-event", "type": "sem", "definition": ""},
 ];
 var ccEdges = [
    {"start": "sem:agent", "end": "sem:a-role", "rel": "SubtypeOf"},
@@ -1329,7 +1330,6 @@ var ccEdges = [
    {"start": "cxn:semantically-nonspecific-pronoun", "end": "cxn:comparative-pronoun", "rel": "SubtypeOf"},
    {"start": "inf:nonspecific-referent", "end": "inf:comparative-referent", "rel": "SubtypeOf"},
    {"start": "cxn:comparative-pronoun", "end": "inf:comparative-referent", "rel": "FunctionOf"},
-   {"start": "sem:semantic-role", "end": "sem:comparee", "rel": "SubtypeOf"},
    {"start": "sem:comparative-relation", "end": "sem:comparee", "rel": "RoleOf"},
    {"start": "sem:equative-relation", "end": "sem:comparee", "rel": "RoleOf"},
    {"start": "cxn:dependent-clause", "end": "cxn:complement", "rel": "SubtypeOf"},
@@ -2036,7 +2036,6 @@ var ccEdges = [
    {"start": "cxn:perception-complement-clause-construction", "end": "cxn:perception-complement-taking-predicate", "rel": "HeadOf"},
    {"start": "sem:experiential-event", "end": "sem:perception-event", "rel": "SubtypeOf"},
    {"start": "cxn:perception-clause", "end": "sem:perception-event", "rel": "FunctionOf"},
-   {"start": "cxn:perception-complement-clause-construction", "end": "sem:perception-event", "rel": "FunctionOf"},
    {"start": "cxn:verb", "end": "cxn:perception-verb", "rel": "SubtypeOf"},
    {"start": "cxn:perception-clause", "end": "cxn:perception-verb", "rel": "HeadOf"},
    {"start": "str:recruitment-strategy", "end": "str:perception-verb-strategy", "rel": "SubtypeOf"},
@@ -2367,7 +2366,6 @@ var ccEdges = [
    {"start": "sem:object-concept", "end": "sem:persistent", "rel": "AttributeOf"},
    {"start": "str:serial-verb-strategy", "end": "str:stamp-strategy", "rel": "SubtypeOf"},
    {"start": "cxn:auxiliary-construction", "end": "str:stamp-strategy", "rel": "ExpressionOf"},
-   {"start": "sem:semantic-role", "end": "sem:standard", "rel": "SubtypeOf"},
    {"start": "sem:comparative-relation", "end": "sem:standard", "rel": "RoleOf"},
    {"start": "sem:equative-relation", "end": "sem:standard", "rel": "RoleOf"},
    {"start": "sem:qualitative-event", "end": "sem:state", "rel": "SubtypeOf"},
@@ -3006,4 +3004,6 @@ var ccEdges = [
    {"start": "sem:semantic-role", "end": "sem:social-role", "rel": "SubtypeOf"},
    {"start": "sem:social-role-event", "end": "sem:social-role", "rel": "RoleOf"},
    {"start": "sem:event", "end": "sem:eventive-participant-event", "rel": "SubtypeOf"},
+   {"start": "sem:eventive-participant-event", "end": "sem:eventive-perception-event", "rel": "SubtypeOf"},
+   {"start": "cxn:perception-complement-clause-construction", "end": "sem:eventive-perception-event", "rel": "FunctionOf"},
 ];

@@ -2077,8 +2077,6 @@
 - Id: sem:comparee
   Type: sem
   Name: comparee
-  SubtypeOf:
-    - sem:semantic-role
   RoleOf:
     - sem:comparative-relation
     - sem:equative-relation
@@ -7375,7 +7373,6 @@
     - sem:experiential-event
   FunctionOf:
     - cxn:perception-clause
-    - cxn:perception-complement-clause-construction
   Definition: >-
     an <a>experiential event</a> involving one (or more) of the sensory modalities and directed toward a <a>stimulus</a>. The stimulus may be either an <a sem:object-concept>object</a> or an <a>event</a>. <i>Example</i>: <i>Tim heard the macaw</i> is an example of a perception event, and <i>hear</i> is the perception verb (Section 7.4).
   Examples:
@@ -9840,8 +9837,6 @@
 - Id: sem:standard
   Type: sem
   Name: standard
-  SubtypeOf:
-    - sem:semantic-role
   RoleOf:
     - sem:comparative-relation
     - sem:equative-relation
@@ -13472,5 +13467,15 @@
   Name: eventive participant event
   SubtypeOf:
     - sem:event
+  Definition: ''
+  FromGlossary: false
+
+- Id: sem:eventive-perception-event
+  Type: sem
+  Name: eventive perception-event
+  SubtypeOf:
+    - sem:eventive-participant-event
+  FunctionOf:
+    - cxn:perception-complement-clause-construction
   Definition: ''
   FromGlossary: false
