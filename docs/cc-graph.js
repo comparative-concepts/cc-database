@@ -114,9 +114,17 @@ function getGraphRelations() {
     return relations;
 }
 
-function setGraphData(nodeIds) {
-    if (!nodeIds) nodeIds = getGraphNodeIds();
-    if (nodeIds instanceof Array) nodeIds = Object.fromEntries(nodeIds.map(n => [n, true]));
+function setGraphData(nodeIds, donotRemember = false) {
+    if (nodeIds?.length > 0) {
+        nodeIds = Object.fromEntries(nodeIds.map(n => [n, true]));
+    } else {
+        // Select the whole graph if no nodes are specified
+        nodeIds = getGraphNodeIds();
+    }
+    if (Object.keys(nodeIds).toSorted().toString() === network.body.nodeIndices.toSorted().toString()) {
+        // Don't do anything if the graph isn't changed
+        return;
+    }
     const relations = getGraphRelations();
     const nodes = ccNodes.filter((n) => nodeIds[n.id]);
     const edges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
@@ -125,6 +133,110 @@ function setGraphData(nodeIds) {
     network.setData({nodes: nodes, edges: edges});
     network.selectNodes(selected);
     selectionChanged();
+    // The default is to remember the new state in the browser history
+    if (!donotRemember) pushCurrentState();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Storing the current state in the URL and allow for undo
+
+// Initialise the browser history, and the load graph specified in the URL hash
+function initHistory() {
+    window.addEventListener("popstate", (event) => {
+        updateGraphFromState(event.state);
+    });
+    const url = new URL(window.location.href);
+    const state = decodeState(url.hash);
+    if (state) updateGraphFromState(state);
+    else location.hash = "";
+}
+
+// Remember the current graph in the browser history, and the URL hash
+function pushCurrentState() {
+    const state = getCurrentState()
+    const url = new URL(window.location.href);
+    url.hash = encodeState(state);
+    history.pushState(state, "", url.href);
+}
+
+// Load the graph specified in a given state
+function updateGraphFromState(state) {
+    if (!state) return;
+    document.getElementById("ccGraphType").value = state.graph;
+    for (const rel in ccSettings.edges) {
+        document.getElementById(rel).checked = state.relations.includes(rel);
+    }
+    updateGraph();
+    const nodes = state.nodes.map((n) => ccNodes[n].id);
+    // Set the graph, but make sure not to push the state to the browser history
+    setGraphData(nodes, donotRemember = true);
+}
+
+// Get the current state of the graph
+function getCurrentState() {
+    const nodes = [];
+    if (isFiltered()) {
+        for (let n = 0; n < ccNodes.length; n++) {
+            if (ccNodes[n].id in network.body.nodes) {
+                nodes.push(n);
+            }
+        }
+    }
+    return {graph: getGraph(), relations: getGraphRelations(), nodes: nodes};
+}
+
+// Encode a graph state into a URL query/hash string
+function encodeState(state) {
+    const params = new URLSearchParams();
+    params.set("g", state.graph);
+    params.set("r", state.relations.join(" "));
+    if (isFiltered()) {
+        const buffer = new Uint8Array(Math.ceil(ccNodes.length / 8));
+        for (let n of state.nodes) {
+            const bin = Math.trunc(n / 8);
+            const mask = 1 << (n % 8);
+            buffer[bin] |= mask;
+        }
+        params.set("h", toBase64(buffer));
+    }
+    return params.toString();
+}
+ // Decode a URL query/hash string into a graph state
+function decodeState(encoded) {
+    encoded = encoded.replace("#", "");
+    if (!encoded) return;
+    const params = new URLSearchParams(encoded);
+    const graph = params.get("g");
+    if (!(graph in ccSettings.graphs)) {
+        console.warn("Unrecognised graph:", graph);
+        return;
+    }
+    const relations = (params.get("r") || "").split(/ +/);
+    const nodes = [];
+    const base64 = params.get("h");
+    if (base64) {
+        const buffer = fromBase64(base64);
+        for (let n = 0; n < ccNodes.length; n++) {
+            const bin = Math.trunc(n / 8);
+            const mask = 1 << (n % 8);
+            if (buffer[bin] & mask) nodes.push(n);
+        }
+    }
+    return {graph: graph, relations: relations, nodes: nodes};
+}
+
+// Encode a byte array in query-safe base64 character encoding
+function toBase64(buffer) {
+    const base64 = btoa(String.fromCharCode(...buffer));
+    // "+/=" are treated specially in query-strings, so replace them
+    return base64.replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "~");
+}
+
+// Decode a query-safe base64 string into a byte array
+function fromBase64(encoded) {
+    const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/").replaceAll("~", "=");
+    return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
 }
 
 
@@ -161,6 +273,7 @@ function init() {
     network.on("startStabilizing", () => console.log(new Date().toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`));
     network.on("stabilized", (params) => console.log(new Date().toLocaleTimeString(), `Stabilization stopped after ${params.iterations} iterations`));
     selectionChanged();
+    initHistory();
 }
 
 function initGraphData() {
@@ -244,6 +357,13 @@ function showStatistics() {
             infoNode.innerHTML = "";
         }
     }
+}
+
+// Update information about graph nodes, edges, and the solver
+function updateGraph() {
+    updateNodes();
+    updateEdges();
+    updateSolver();
 }
 
 // Update information about each graph node
@@ -394,24 +514,20 @@ function revealNeighbors(direction) {
     if (Object.keys(nodeIds).length > 0) {
         for (const n of network.body.nodeIndices)
             nodeIds[n] = true;
-        setGraphData(nodeIds);
+        setGraphData(Object.keys(nodeIds));
     }
 }
 
 // Things to do when any kind of settings has changed
 // The current selected nodes are kept (if any)
 function changeSettings() {
-    updateNodes();
-    updateEdges();
-    updateSolver();
-    setGraphData(network.body.nodes);
+    updateGraph();
+    setGraphData(network.body.nodeIndices);
 }
 
 // Update with a new fresh graph (clearing the selection, if any)
 function selectGraph() {
-    updateNodes();
-    updateEdges();
-    updateSolver();
+    updateGraph();
     clearFilter();
 }
 
