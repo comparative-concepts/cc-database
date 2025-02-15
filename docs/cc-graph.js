@@ -146,15 +146,17 @@ function initHistory() {
     const state = decodeState(url.hash);
     if (state) updateGraphFromState(state);
     else location.hash = "";
+    pushCurrentState(true);
 }
 
 // Remember the current graph in the browser history, and the URL hash
-function pushCurrentState() {
+function pushCurrentState(force = false) {
     const state = getCurrentState()
     const url = new URL(window.location.href);
     url.hash = encodeState(state);
-    if (url.hash !== window.location.hash)
+    if (force || url.hash !== window.location.hash) {
         history.pushState(state, "", url.href);
+    }
 }
 
 // Load the graph specified in a given state
@@ -167,7 +169,7 @@ function updateGraphFromState(state) {
     updateGraph();
     const nodes = state.nodes.map((n) => ccNodes[n].id);
     // Set the graph, but make sure not to push the state to the browser history
-    setGraphData(nodes, rememberState = false);
+    setGraphData(nodes, false);
 }
 
 // Get the current state of the graph
