@@ -372,10 +372,12 @@ class CCDB:
                         "rel": rel,
                     })
         print(f"var ccNodes = [")
+        nodes.sort(key=lambda n: n['id'])
         for n in nodes:
             print(f"   {json.dumps(n)},")
         print("];")
         print(f"var ccEdges = [")
+        edges.sort(key=lambda e: (e['start'], e['end'], e['rel']))
         for e in edges:
             print(f"   {json.dumps(e)},")
         print("];")
