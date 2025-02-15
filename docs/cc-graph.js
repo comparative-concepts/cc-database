@@ -114,16 +114,12 @@ function getGraphRelations() {
     return relations;
 }
 
-function setGraphData(nodeIds, donotRemember = false) {
+function setGraphData(nodeIds, rememberState = true) {
     if (nodeIds?.length > 0) {
         nodeIds = Object.fromEntries(nodeIds.map(n => [n, true]));
     } else {
         // Select the whole graph if no nodes are specified
         nodeIds = getGraphNodeIds();
-    }
-    if (Object.keys(nodeIds).toSorted().toString() === network.body.nodeIndices.toSorted().toString()) {
-        // Don't do anything if the graph isn't changed
-        return;
     }
     const relations = getGraphRelations();
     const nodes = ccNodes.filter((n) => nodeIds[n.id]);
@@ -134,7 +130,7 @@ function setGraphData(nodeIds, donotRemember = false) {
     network.selectNodes(selected);
     selectionChanged();
     // The default is to remember the new state in the browser history
-    if (!donotRemember) pushCurrentState();
+    if (rememberState) pushCurrentState();
 }
 
 
@@ -157,7 +153,8 @@ function pushCurrentState() {
     const state = getCurrentState()
     const url = new URL(window.location.href);
     url.hash = encodeState(state);
-    history.pushState(state, "", url.href);
+    if (url.hash !== window.location.hash)
+        history.pushState(state, "", url.href);
 }
 
 // Load the graph specified in a given state
@@ -170,7 +167,7 @@ function updateGraphFromState(state) {
     updateGraph();
     const nodes = state.nodes.map((n) => ccNodes[n].id);
     // Set the graph, but make sure not to push the state to the browser history
-    setGraphData(nodes, donotRemember = true);
+    setGraphData(nodes, rememberState = false);
 }
 
 // Get the current state of the graph
