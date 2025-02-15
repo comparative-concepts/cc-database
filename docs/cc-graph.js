@@ -230,12 +230,12 @@ function decodeState(encoded) {
 function toBase64(buffer) {
     const base64 = btoa(String.fromCharCode(...buffer));
     // "+/=" are treated specially in query-strings, so replace them
-    return base64.replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "~");
+    return base64.replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", ".");
 }
 
 // Decode a query-safe base64 string into a byte array
 function fromBase64(encoded) {
-    const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/").replaceAll("~", "=");
+    const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/").replaceAll(".", "=");
     return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
 }
 
