@@ -167,7 +167,12 @@ function updateGraphFromState(state) {
         document.getElementById(rel).checked = state.relations.includes(rel);
     }
     updateGraph();
-    const nodes = state.nodes.map((n) => ccNodes[n].id);
+    const possibleNodeIds = getGraphNodeIds();
+    const nodes = state.nodes.flatMap((n) => {
+        // Only show the nodes that are in the selected graph
+        const id = ccNodes[n].id;
+        return id in possibleNodeIds ? id : [];
+    });
     // Set the graph, but make sure not to push the state to the browser history
     setGraphData(nodes, false);
 }
@@ -191,13 +196,27 @@ function encodeState(state) {
     params.set("g", state.graph);
     params.set("r", state.relations.join(" "));
     if (isFiltered()) {
-        const buffer = new Uint8Array(Math.ceil(ccNodes.length / 8));
-        for (let n of state.nodes) {
-            const bin = Math.trunc(n / 8);
-            const mask = 1 << (n % 8);
-            buffer[bin] |= mask;
+        if (state.nodes.length * 2 < ccNodes.length / 6) {
+            // We encode the list of node numbers instead of the bit array.
+            // We need two base64 chars to store each node,
+            // this gives 2*6 = 12 bits, so we can handle 2^12 = 4096 nodes.
+            const buffer = [];
+            for (const n of state.nodes) {
+                const base64 = toBase64([0, Math.trunc(n / 256), n % 256]);
+                buffer.push(base64.substring(2));
+            }
+            params.set("n", buffer.join(""));
+        } else {
+            // We encode the bit array instead of the node numbers.
+            // We can store 6 bits in each base64 char.
+            const buffer = new Uint8Array(Math.ceil(ccNodes.length / 8));
+            for (let n of state.nodes) {
+                const bin = Math.trunc(n / 8);
+                const mask = 1 << (n % 8);
+                buffer[bin] |= mask;
+            }
+            params.set("h", toBase64(buffer));
         }
-        params.set("h", toBase64(buffer));
     }
     return params.toString();
 }
@@ -213,16 +232,27 @@ function decodeState(encoded) {
     }
     const relations = (params.get("r") || "").split(/ +/);
     const nodes = [];
-    const base64 = params.get("h");
-    if (base64) {
-        const buffer = fromBase64(base64);
-        if (buffer) {
-            for (let n = 0; n < ccNodes.length; n++) {
-                const bin = Math.trunc(n / 8);
-                const mask = 1 << (n % 8);
-                if (buffer[bin] & mask) nodes.push(n);
+    try {
+        if (params.get("n")) {
+            // The string encodes the list of node numbers instead of the bit array.
+            for (const s of params.get("n").match(/.{2}/g)) {
+                const [_, high, low] = fromBase64("AA" + s);
+                nodes.push(high * 256 + low);
+            }
+        } else if (params.get("h")) {
+            // The string encodes the bit array instead of the list of node numbers.
+            const buffer = fromBase64(params.get("h"));
+            if (buffer) {
+                for (let n = 0; n < ccNodes.length; n++) {
+                    const bin = Math.trunc(n / 8);
+                    const mask = 1 << (n % 8);
+                    if (buffer[bin] & mask) nodes.push(n);
+                }
             }
         }
+    } catch (err) {
+        console.warn(err);
+        nodes.length = 0;
     }
     return {graph: graph, relations: relations, nodes: nodes};
 }
@@ -235,14 +265,9 @@ function toBase64(buffer) {
 }
 
 // Decode a query-safe base64 string into a byte array
-// Return null if there's a decoding error
 function fromBase64(encoded) {
     const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/");
-    try {
-        return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
-    } catch (err) {
-        console.warn(err);
-    }
+    return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
 }
 
 
