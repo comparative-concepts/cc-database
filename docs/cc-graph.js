@@ -217,10 +217,12 @@ function decodeState(encoded) {
     const base64 = params.get("h");
     if (base64) {
         const buffer = fromBase64(base64);
-        for (let n = 0; n < ccNodes.length; n++) {
-            const bin = Math.trunc(n / 8);
-            const mask = 1 << (n % 8);
-            if (buffer[bin] & mask) nodes.push(n);
+        if (buffer) {
+            for (let n = 0; n < ccNodes.length; n++) {
+                const bin = Math.trunc(n / 8);
+                const mask = 1 << (n % 8);
+                if (buffer[bin] & mask) nodes.push(n);
+            }
         }
     }
     return {graph: graph, relations: relations, nodes: nodes};
@@ -230,13 +232,18 @@ function decodeState(encoded) {
 function toBase64(buffer) {
     const base64 = btoa(String.fromCharCode(...buffer));
     // "+/=" are treated specially in query-strings, so replace them
-    return base64.replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", ".");
+    return base64.replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "");
 }
 
 // Decode a query-safe base64 string into a byte array
+// Return null if there's a decoding error
 function fromBase64(encoded) {
-    const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/").replaceAll(".", "=");
-    return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
+    const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/");
+    try {
+        return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
+    } catch (err) {
+        console.warn(err);
+    }
 }
 
 
