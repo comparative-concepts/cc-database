@@ -143,9 +143,12 @@ function initHistory() {
         updateGraphFromState(event.state);
     });
     const url = new URL(window.location.href);
-    const state = decodeState(url.hash);
-    if (state) updateGraphFromState(state);
-    else location.hash = "";
+    try {
+        updateGraphFromState(decodeState(url.hash));
+    } catch (err) {
+        alert(`Malformed state in URL!\n${err}`);
+        selectGraph();
+    }
     pushCurrentState(true);
 }
 
@@ -162,46 +165,46 @@ function pushCurrentState(force = false) {
 // Load the graph specified in a given state
 function updateGraphFromState(state) {
     if (!state) return;
+    if (!(state.graph in ccSettings.graphs)) {
+        throw new TypeError(`Unrecognised graph: ${state.graph}`);
+    }
     document.getElementById("ccGraphType").value = state.graph;
     for (const rel in ccSettings.edges) {
         document.getElementById(rel).checked = state.relations.includes(rel);
     }
     updateGraph();
     const possibleNodeIds = getGraphNodeIds();
-    const nodes = state.nodes.flatMap((n) => {
-        // Only show the nodes that are in the selected graph
-        const id = ccNodes[n].id;
-        return id in possibleNodeIds ? id : [];
-    });
+    for (const nodeId of state.nodes) {
+        if (!(nodeId in possibleNodeIds))
+            throw new TypeError(`Node ${nodeId} is not in graph ${state.graph}`);
+    }
     // Set the graph, but make sure not to push the state to the browser history
-    setGraphData(nodes, false);
+    setGraphData(state.nodes, false);
 }
 
 // Get the current state of the graph
 function getCurrentState() {
-    const nodes = [];
-    if (isFiltered()) {
-        for (let n = 0; n < ccNodes.length; n++) {
-            if (ccNodes[n].id in network.body.nodes) {
-                nodes.push(n);
-            }
-        }
-    }
+    if (!getGraph()) return null;
+    const nodes = isFiltered() ? network.body.nodeIndices : null;
     return {graph: getGraph(), relations: getGraphRelations(), nodes: nodes};
 }
 
 // Encode a graph state into a URL query/hash string
 function encodeState(state) {
+    if (!state) return "";
     const params = new URLSearchParams();
     params.set("g", state.graph);
     params.set("r", state.relations.join(" "));
-    if (isFiltered()) {
-        if (state.nodes.length * 2 < ccNodes.length / 6) {
+    if (state.nodes?.length > 0) {
+        const nodes = Object.fromEntries(state.nodes.map((id) => [id, true]));
+        const nodeNumbers = ccNodes.flatMap((node, n) => node.id in nodes ? n : []);
+        nodeNumbers.sort();
+        if (nodeNumbers.length * 2 < ccNodes.length / 6) {
             // We encode the list of node numbers instead of the bit array.
             // We need two base64 chars to store each node,
             // this gives 2*6 = 12 bits, so we can handle 2^12 = 4096 nodes.
             const buffer = [];
-            for (const n of state.nodes) {
+            for (const n of nodeNumbers) {
                 const base64 = toBase64([0, Math.trunc(n / 256), n % 256]);
                 buffer.push(base64.substring(2));
             }
@@ -210,7 +213,7 @@ function encodeState(state) {
             // We encode the bit array instead of the node numbers.
             // We can store 6 bits in each base64 char.
             const buffer = new Uint8Array(Math.ceil(ccNodes.length / 8));
-            for (let n of state.nodes) {
+            for (const n of nodeNumbers) {
                 const bin = Math.trunc(n / 8);
                 const mask = 1 << (n % 8);
                 buffer[bin] |= mask;
@@ -220,40 +223,33 @@ function encodeState(state) {
     }
     return params.toString();
 }
- // Decode a URL query/hash string into a graph state
+
+// Decode a URL query/hash string into a graph state
 function decodeState(encoded) {
     encoded = encoded.replace("#", "");
     if (!encoded) return;
     const params = new URLSearchParams(encoded);
     const graph = params.get("g");
-    if (!(graph in ccSettings.graphs)) {
-        console.warn("Unrecognised graph:", graph);
-        return;
-    }
     const relations = (params.get("r") || "").split(/ +/);
-    const nodes = [];
-    try {
-        if (params.get("n")) {
-            // The string encodes the list of node numbers instead of the bit array.
-            for (const s of params.get("n").match(/.{2}/g)) {
-                const [_, high, low] = fromBase64("AA" + s);
-                nodes.push(high * 256 + low);
-            }
-        } else if (params.get("h")) {
-            // The string encodes the bit array instead of the list of node numbers.
-            const buffer = fromBase64(params.get("h"));
-            if (buffer) {
-                for (let n = 0; n < ccNodes.length; n++) {
-                    const bin = Math.trunc(n / 8);
-                    const mask = 1 << (n % 8);
-                    if (buffer[bin] & mask) nodes.push(n);
-                }
+    const nodeNumbers = [];
+    if (params.get("n")) {
+        // The string encodes the list of node numbers instead of the bit array.
+        for (const s of params.get("n").match(/.{2}/g)) {
+            const [_, high, low] = fromBase64("AA" + s);
+            nodeNumbers.push(high * 256 + low);
+        }
+    } else if (params.get("h")) {
+        // The string encodes the bit array instead of the list of node numbers.
+        const buffer = fromBase64(params.get("h"));
+        if (buffer) {
+            for (let n = 0; n < ccNodes.length; n++) {
+                const bin = Math.trunc(n / 8);
+                const mask = 1 << (n % 8);
+                if (buffer[bin] & mask) nodeNumbers.push(n);
             }
         }
-    } catch (err) {
-        console.warn(err);
-        nodes.length = 0;
     }
+    const nodes = nodeNumbers.map((n) => ccNodes[n].id);
     return {graph: graph, relations: relations, nodes: nodes};
 }
 
