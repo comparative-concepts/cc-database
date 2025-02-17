@@ -1,3 +1,4 @@
+var ccVersion = '1.0';
 var ccNodes = [
    {"id": "cxn:action-modification-construction", "name": "action modification construction", "type": "cxn", "definition": ""},
    {"id": "cxn:additive-construction", "name": "additive construction", "type": "cxn", "definition": ""},
