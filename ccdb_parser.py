@@ -24,12 +24,14 @@ GraphEdge = TypedDict("GraphEdge", {"start": str, "end": str, "rel": str})
 
 class CCDB:
     glosses: Glosses
+    version: str
     allnames: dict[str, tuple[str,...]]
     definitions: dict[str, ParsedDefinition]
     links: dict[str, list[str]]
 
-    def __init__(self, glosses: Glosses) -> None:
+    def __init__(self, glosses: Glosses, version: str) -> None:
         self.glosses = glosses
+        self.version = version
 
         # All possible names (ids and aliases)
         allnames: dict[str, set[str]] = {}
@@ -276,6 +278,7 @@ class CCDB:
         print(f'In addition to this database, you can also explore our interactive <a href="cc-graph.html">graph visualization of the CC database</a>.')
         print(f'You can also <a href="https://github.com/comparative-concepts/cc-database">look at the source code</a>,')
         print(f'and if you have a suggestion, please <a href="https://github.com/comparative-concepts/cc-database/issues">open an issue</a>.</p>')
+        print(f'<p><strong>Database version:</strong> {self.version}</p>')
         print(f'<p><strong>Build date/time:</strong> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>')
 
         glossitems = sorted(self.glosses.items(), key=lambda it:str.casefold(it[1].Name))
@@ -371,6 +374,7 @@ class CCDB:
                         "end": item.Id,
                         "rel": rel,
                     })
+        print(f"var ccVersion = {self.version!r};")
         print(f"var ccNodes = [")
         nodes.sort(key=lambda n: n['id'])
         for n in nodes:
@@ -393,7 +397,10 @@ class CCDB:
             cclist.append({
                 key: getattr(item, key) for key in keys
             })
-        print(json.dumps(cclist))
+        print(json.dumps({
+            'db-version': self.version,
+            'ccs': cclist,
+        }))
 
 
     ###########################################################################
@@ -421,7 +428,7 @@ class CCDB:
             }
             out_ccs.append(out)
         final_output: dict[str, object] = {
-            'db-version': "export from cc-database",
+            'db-version': self.version,
             'ccs': out_ccs,
         }
         jout = json.dumps(final_output, indent=2)
@@ -457,7 +464,8 @@ def main(args: argparse.Namespace) -> None:
     validation.validate_database(glosses)
     if args.format:
         validation.reset_errors_and_warnings()
-        ccdb = CCDB(glosses)
+        with open(args.cc_database.with_suffix('.version')) as version:
+            ccdb = CCDB(glosses, version.read().strip())
         ccdb.export(args)
         validation.report_errors_and_warnings(f"exporting to {args.format} format")
 
