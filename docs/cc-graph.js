@@ -124,13 +124,27 @@ function setGraphData(nodeIds, rememberState = true) {
     const relations = getGraphRelations();
     const nodes = ccNodes.filter((n) => nodeIds[n.id]);
     const edges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
-    console.log(new Date().toLocaleTimeString(), `Update graph: ${nodes.length} nodes, ${edges.length} edges`);
     const selected = network.getSelectedNodes();
-    network.setData({nodes: nodes, edges: edges});
-    network.selectNodes(selected);
-    selectionChanged();
-    // The default is to remember the new state in the browser history
-    if (rememberState) pushCurrentState();
+
+    // Show the spinning wheel
+    const spinner = document.getElementById("ccSpinningWheel");
+    spinner.style.display = "";
+    setTimeout(() => {
+        const startTime = new Date();
+        console.log(startTime.toLocaleTimeString(), `Update graph: ${nodes.length} nodes, ${edges.length} edges`);
+        network.setData({nodes: nodes, edges: edges});
+        const endTime = new Date();
+        const elapsedTime = (endTime.valueOf()-startTime.valueOf())/1000;
+        const speed = nodes.length / elapsedTime;
+        console.log(endTime.toLocaleTimeString(), `Graph updated in ${elapsedTime.toFixed(2)} s, ${speed.toFixed(1)} nodes/s`);
+
+        network.selectNodes(selected);
+        selectionChanged();
+        // The default is to remember the new state in the browser history
+        if (rememberState) pushCurrentState();
+        // Remove the spinning wheel 0.5 seconds after the network is loaded
+        setTimeout(() => {spinner.style.display = "none"}, 500);
+    }, 10);
 }
 
 
