@@ -285,6 +285,8 @@ function fromBase64(encoded) {
 // Initialisation
 
 function init() {
+    // Hide the graph loader (spinning wheel) from the start
+    document.getElementById("ccSpinningWheel").style.display = "none";
     initGraphData();
     // Populate the graph type dropdown menu, and
     // create checkboxes for all relations
