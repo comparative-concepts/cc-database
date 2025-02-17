@@ -69,7 +69,7 @@ ccSettings.graphs = {
         name: "Cxn ↔︎ Strategies",
         defaultrelation: "ExpressionOf",
         nodes: {cxn: true, str: true},
-        edges: {SubtypeOf: true, ExpressionOf: true, ModeledOn: true, RecruitedFrom: true},
+        edges: {SubtypeOf: true, ExpressionOf: true, ModeledOn: true, RecruitedFrom: true, ConstituentOf: true, HeadOf: true},
     },
     cxn_sem_inf: {
         name: "Cxn ↔︎ Sem. + Inf.",
