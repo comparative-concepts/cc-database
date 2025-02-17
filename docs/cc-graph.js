@@ -297,8 +297,21 @@ function init() {
     network.on("selectNode", selectionChanged);
     network.on("deselectNode", selectionChanged);
     network.on("dragEnd", selectionChanged);
-    network.on("startStabilizing", () => console.log(new Date().toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`));
-    network.on("stabilized", (params) => console.log(new Date().toLocaleTimeString(), `Stabilization stopped after ${params.iterations} iterations`));
+
+    let stabilizationStartTime = null;
+    network.on("startStabilizing", () => {
+        stabilizationStartTime = new Date();
+        console.log(stabilizationStartTime.toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`);
+    });
+    network.on("stabilized", (params) => {
+        const stabilizationEndTime = new Date();
+        const elapsedTime = stabilizationStartTime ? (stabilizationEndTime.valueOf() - stabilizationStartTime.valueOf())/1000 : NaN;
+        const speed = params.iterations / elapsedTime;
+        console.log(stabilizationEndTime.toLocaleTimeString(),
+            `Stabilization stopped after ${params.iterations} iterations, ${elapsedTime.toFixed(1)} s, ${speed.toFixed(1)} iter/s`
+        );
+    });
+
     selectionChanged();
     initHistory();
 }
