@@ -179,6 +179,9 @@ function pushCurrentState(force = false) {
 // Load the graph specified in a given state
 function updateGraphFromState(state) {
     if (!state) return;
+    if (state.version !== ccVersion) {
+        throw new TypeError(`Wrong database version: ${state.version}`);
+    }
     if (!(state.graph in ccSettings.graphs)) {
         throw new TypeError(`Unrecognised graph: ${state.graph}`);
     }
@@ -200,13 +203,14 @@ function updateGraphFromState(state) {
 function getCurrentState() {
     if (!getGraph()) return null;
     const nodes = isFiltered() ? network.body.nodeIndices : null;
-    return {graph: getGraph(), relations: getGraphRelations(), nodes: nodes};
+    return {version: ccVersion, graph: getGraph(), relations: getGraphRelations(), nodes: nodes};
 }
 
 // Encode a graph state into a URL query/hash string
 function encodeState(state) {
     if (!state) return "";
     const params = new URLSearchParams();
+    params.set("v", state.version);
     params.set("g", state.graph);
     params.set("r", state.relations.join(" "));
     if (state.nodes?.length > 0) {
@@ -243,7 +247,8 @@ function decodeState(encoded) {
     encoded = encoded.replace("#", "");
     if (!encoded) return;
     const params = new URLSearchParams(encoded);
-    const graph = params.get("g");
+    const version = (params.get("v") || "").trim();
+    const graph = (params.get("g") || "").trim();
     const relations = (params.get("r") || "").split(/ +/);
     const nodeNumbers = [];
     if (params.get("n")) {
@@ -264,7 +269,7 @@ function decodeState(encoded) {
         }
     }
     const nodes = nodeNumbers.map((n) => ccNodes[n].id);
-    return {graph: graph, relations: relations, nodes: nodes};
+    return {version: version, graph: graph, relations: relations, nodes: nodes};
 }
 
 // Encode a byte array in query-safe base64 character encoding
@@ -375,6 +380,8 @@ function selectionChanged() {
 
 // Show graph statistics and information
 function showStatistics() {
+    document.getElementById("infoVersion").innerHTML =
+        mkElem("p", mkElem("b", "Database version: "), ccVersion);
     const graphInfo = document.getElementById("infoGraph");
     let graphInfoText = mkElem("b", "Current graph: ");
     if (!getGraph()) {
