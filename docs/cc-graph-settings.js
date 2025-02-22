@@ -29,15 +29,15 @@ ccSettings.nodes = {
 };
 
 ccSettings.edges = {
-    SubtypeOf:     {color: 0},  // inherit from node color
-    ConstituentOf: {color: COLORS.Blue},
-    HeadOf:        {color: COLORS.Purple},
-    AttributeOf:   {color: COLORS.Green},
-    RoleOf:        {color: COLORS.Magenta},
-    ExpressionOf:  {color: COLORS.Red,   dashed: true},
-    ModeledOn:     {color: COLORS.Teal,  dashed: true, reversed: true},
-    RecruitedFrom: {color: COLORS.Olive, dashed: true, reversed: true},
-    FunctionOf:    {color: COLORS.Brown, dashed: true},
+    SubtypeOf:     {name: "Subtype",     color: 0},  // inherit from node color
+    ConstituentOf: {name: "Constituent", color: COLORS.Blue},
+    HeadOf:        {name: "Head",        color: COLORS.Purple},
+    AttributeOf:   {name: "Attribute",   color: COLORS.Green},
+    RoleOf:        {name: "Role",        color: COLORS.Magenta},
+    ExpressionOf:  {name: "Expression",  color: COLORS.Red,   dashed: true},
+    ModeledOn:     {name: "Model",       color: COLORS.Teal,  dashed: true, reversed: true},
+    RecruitedFrom: {name: "Recruitment", color: COLORS.Olive, dashed: true, reversed: true},
+    FunctionOf:    {name: "Function",    color: COLORS.Brown, dashed: true},
 };
 
 ccSettings.graphs = {

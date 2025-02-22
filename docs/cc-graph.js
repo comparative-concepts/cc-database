@@ -306,7 +306,7 @@ function init() {
                     mkElem("label", {style:"display:none"},
                         mkElem("input", {type:"checkbox", id:relId, onchange:"changeSettings()"}),
                         " ",
-                        mkElem("span", relId),
+                        mkElem("span", ccSettings.edges[relId].name || relId),
                         " &nbsp ",
                     );
             }
