@@ -2,9 +2,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Global variables
 
-var ccNodes, ccEdges; // Defined in cc-graph-data.js
-var ccSettings, ccGraphs, ccReversedEdges, networkOptions; // Defined in cc-graph-settings.js
-var network;
+var DATA;     // Defined by graph-data.js
+var SETTINGS; // Defined by graph-settings.js
+var network;  // Defined by vis-network.js
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -12,17 +12,17 @@ var network;
 
 // Get the current selected graph ID
 function getGraph() {
-    const select = document.getElementById("ccGraphType");
+    const select = document.getElementById("gvGraphType");
     return select.value || null;
 }
 
 // An object of the node ids that are in the selected (unfiltered) graph
 function getGraphNodeIds() {
     if (!getGraph()) return {};
-    const ccTypes = ccSettings.graphs[getGraph()].nodes;
+    const nodeTypes = SETTINGS.graphs[getGraph()].nodes;
     const nodeIds = {};
-    for (const n of ccNodes) {
-        if (ccTypes[n.type] != null) nodeIds[n.id] = true;
+    for (const n of DATA.nodes) {
+        if (nodeTypes[n.type] != null) nodeIds[n.id] = true;
     }
     return nodeIds;
 }
@@ -30,29 +30,29 @@ function getGraphNodeIds() {
 // A list of the nodes in the selected (unfiltered) graph
 function getGraphNodes() {
     const nodeIds = getGraphNodeIds();
-    return ccNodes.filter((n) => nodeIds[n.id]);
+    return DATA.nodes.filter((n) => nodeIds[n.id]);
 }
 
 // A list of the edges in the selected (unfiltered) graph
 function getGraphEdges() {
     if (!getGraph()) return [];
-    const ccTypes = ccSettings.graphs[getGraph()].nodes;
+    const nodeTypes = SETTINGS.graphs[getGraph()].nodes;
     const relations = getGraphRelations();
     const nodeIds = {};
-    for (const n of ccNodes) nodeIds[n.id] = ccTypes[n.type] != null;
-    return ccEdges.filter((e) =>
+    for (const n of DATA.nodes) nodeIds[n.id] = nodeTypes[n.type] != null;
+    return DATA.edges.filter((e) =>
         relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]
     );
 }
 
 // A list of the filtered nodes - the nodes that are shown
 function getFilteredNodes() {
-    return ccNodes.filter((n) => network.body.nodes[n.id]);
+    return DATA.nodes.filter((n) => network.body.nodes[n.id]);
 }
 
 // A list of the filtered edges - the edges that are shown
 function getFilteredEdges() {
-    return ccEdges.filter((e) => network.body.edges[e.id]);
+    return DATA.edges.filter((e) => network.body.edges[e.id]);
 }
 
 // True if the graph is filtered
@@ -80,20 +80,20 @@ function getSelectedNodes() {
 // Also decides which checkboxes to show, and
 // it checks the default one if no relation is currently checked
 function getGraphRelations() {
-    const graph = ccSettings.graphs[getGraph()];
+    const graph = SETTINGS.graphs[getGraph()];
     if (!graph) return [];
     // Only show the checkboxes for the relations that are relevant to this graph.
-    for (const lbl of document.getElementById("ccRelations").querySelectorAll("label")) {
+    for (const lbl of document.getElementById("gvRelations").querySelectorAll("label")) {
         const rel = lbl.querySelector("input").id;
         if (!graph.edges[rel]) {
             lbl.style.display = "none";
         } else {
             lbl.style.display = "";
-            let color = ccSettings.edges[rel].color;
+            let color = SETTINGS.edges[rel].color;
             let bordercolor = color;
             if (color === 0) {
                 // Inherit label color from node color(s)
-                const nodecolors = Object.keys(graph.nodes).map((n) => ccSettings.nodes[n].color);
+                const nodecolors = Object.keys(graph.nodes).map((n) => SETTINGS.nodes[n].color);
                 bordercolor = color = nodecolors[0];
                 if (nodecolors.length > 1) {
                     color = `rgb(0 0 0 / 0%); background-image: linear-gradient(to right, ${nodecolors[0]}, ${nodecolors[1]}); background-clip: text;`;
@@ -122,12 +122,12 @@ function setGraphData(nodeIds, rememberState = true) {
         nodeIds = getGraphNodeIds();
     }
     const relations = getGraphRelations();
-    const nodes = ccNodes.filter((n) => nodeIds[n.id]);
-    const edges = ccEdges.filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
+    const nodes = getGraphNodes().filter((n) => nodeIds[n.id]);
+    const edges = getGraphEdges().filter((e) => relations.includes(e.rel) && nodeIds[e.from] && nodeIds[e.to]);
     const selected = network.getSelectedNodes();
 
     // Show the spinning wheel
-    const spinner = document.getElementById("ccSpinningWheel");
+    const spinner = document.getElementById("gvSpinningWheel");
     spinner.style.display = "";
     setTimeout(() => {
         const startTime = new Date();
@@ -179,14 +179,14 @@ function pushCurrentState(force = false) {
 // Load the graph specified in a given state
 function updateGraphFromState(state) {
     if (!state) return;
-    if (state.version !== ccVersion) {
+    if (state.version && state.version !== DATA.version) {
         throw new TypeError(`Wrong database version: ${state.version}`);
     }
-    if (!(state.graph in ccSettings.graphs)) {
+    if (!(state.graph in SETTINGS.graphs)) {
         throw new TypeError(`Unrecognised graph: ${state.graph}`);
     }
-    document.getElementById("ccGraphType").value = state.graph;
-    for (const rel in ccSettings.edges) {
+    document.getElementById("gvGraphType").value = state.graph;
+    for (const rel in SETTINGS.edges) {
         document.getElementById(rel).checked = state.relations.includes(rel);
     }
     updateGraph();
@@ -203,24 +203,24 @@ function updateGraphFromState(state) {
 function getCurrentState() {
     if (!getGraph()) return null;
     const nodes = isFiltered() ? network.body.nodeIndices : null;
-    return {version: ccVersion, graph: getGraph(), relations: getGraphRelations(), nodes: nodes};
+    return {version: DATA.version, graph: getGraph(), relations: getGraphRelations(), nodes: nodes};
 }
 
 // Encode a graph state into a URL query/hash string
 function encodeState(state) {
     if (!state) return "";
     const params = new URLSearchParams();
-    params.set("v", state.version);
+    if (state.version) params.set("v", state.version);
     params.set("g", state.graph);
     params.set("r", state.relations.join(" "));
     if (state.nodes?.length > 0) {
         const nodes = Object.fromEntries(state.nodes.map((id) => [id, true]));
-        const nodeNumbers = ccNodes.flatMap((node, n) => node.id in nodes ? n : []);
+        const nodeNumbers = DATA.nodes.flatMap((node, n) => node.id in nodes ? n : []);
         nodeNumbers.sort();
-        if (nodeNumbers.length * 2 < ccNodes.length / 6) {
+        if (DATA.nodes.length < 2**12 && nodeNumbers.length * 2 < DATA.nodes.length / 6) {
             // We encode the list of node numbers instead of the bit array.
             // We need two base64 chars to store each node,
-            // this gives 2*6 = 12 bits, so we can handle 2^12 = 4096 nodes.
+            // this gives 2*6 = 12 bits, so we can handle up to 2^12 = 4096 nodes.
             const buffer = [];
             for (const n of nodeNumbers) {
                 const base64 = toBase64([0, Math.trunc(n / 256), n % 256]);
@@ -230,7 +230,7 @@ function encodeState(state) {
         } else {
             // We encode the bit array instead of the node numbers.
             // We can store 6 bits in each base64 char.
-            const buffer = new Uint8Array(Math.ceil(ccNodes.length / 8));
+            const buffer = new Uint8Array(Math.ceil(DATA.nodes.length / 8));
             for (const n of nodeNumbers) {
                 const bin = Math.trunc(n / 8);
                 const mask = 1 << (n % 8);
@@ -261,14 +261,14 @@ function decodeState(encoded) {
         // The string encodes the bit array instead of the list of node numbers.
         const buffer = fromBase64(params.get("h"));
         if (buffer) {
-            for (let n = 0; n < ccNodes.length; n++) {
+            for (let n = 0; n < DATA.nodes.length; n++) {
                 const bin = Math.trunc(n / 8);
                 const mask = 1 << (n % 8);
                 if (buffer[bin] & mask) nodeNumbers.push(n);
             }
         }
     }
-    const nodes = nodeNumbers.map((n) => ccNodes[n].id);
+    const nodes = nodeNumbers.map((n) => DATA.nodes[n].id);
     return {version: version, graph: graph, relations: relations, nodes: nodes};
 }
 
@@ -289,16 +289,16 @@ function fromBase64(encoded) {
 ///////////////////////////////////////////////////////////////////////////////
 // Initialisation
 
-function init() {
+function initialize() {
     // Hide the graph loader (spinning wheel) from the start
-    document.getElementById("ccSpinningWheel").style.display = "none";
+    document.getElementById("gvSpinningWheel").style.display = "none";
     initGraphData();
     // Populate the graph type dropdown menu, and
     // create checkboxes for all relations
-    const select = document.getElementById("ccGraphType");
-    const checkboxes = document.getElementById("ccRelations");
-    for (const graphID in ccSettings.graphs) {
-        const graph = ccSettings.graphs[graphID];
+    const select = document.getElementById("gvGraphType");
+    const checkboxes = document.getElementById("gvRelations");
+    for (const graphID in SETTINGS.graphs) {
+        const graph = SETTINGS.graphs[graphID];
         select.innerHTML += mkElem('option', {value:graphID}, graph.name);
         for (const relId in graph.edges) {
             if (!document.getElementById(relId)) {
@@ -306,15 +306,15 @@ function init() {
                     mkElem("label", {style:"display:none"},
                         mkElem("input", {type:"checkbox", id:relId, onchange:"changeSettings()"}),
                         " ",
-                        mkElem("span", ccSettings.edges[relId].name || relId),
+                        mkElem("span", SETTINGS.edges[relId]?.name || relId),
                         " &nbsp ",
                     );
             }
         }
     }
     // Create the global network object, and add event listeners
-    const container = document.getElementById("ccNetwork");
-    network = new vis.Network(container, {nodes:[], edges:[]}, networkOptions);
+    const container = document.getElementById("gvNetwork");
+    network = new vis.Network(container, {nodes:[], edges:[]}, SETTINGS.network);
     network.on("selectNode", selectionChanged);
     network.on("deselectNode", selectionChanged);
     network.on("dragEnd", selectionChanged);
@@ -322,7 +322,7 @@ function init() {
     let stabilizationStartTime = null;
     network.on("startStabilizing", () => {
         stabilizationStartTime = new Date();
-        console.log(stabilizationStartTime.toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("ccSolver").value}`);
+        console.log(stabilizationStartTime.toLocaleTimeString(), `Stabilizing using solver ${document.getElementById("gvSolver").value}`);
     });
     network.on("stabilized", (params) => {
         const stabilizationEndTime = new Date();
@@ -338,9 +338,9 @@ function init() {
 }
 
 function initGraphData() {
-    for (const e of ccEdges) {
+    for (const e of DATA.edges) {
         // Set the direction of the edge
-        if (ccSettings.edges[e.rel].reversed) {
+        if (SETTINGS.edges[e.rel].reversed) {
             e.from = e.end; e.to = e.start;
         } else {
             e.from = e.start; e.to = e.end;
@@ -360,32 +360,32 @@ function selectionChanged() {
     const hasUnselected = network.getSelectedNodes().length < getFilteredNodes().length;
     const hasUnconnected = getUnconnectedNodes().length > 0;
     const filtered = isFiltered();
-    const willStabilize = document.getElementById("ccStabilize").checked;
-    document.getElementById("ccSolver").disabled = !willStabilize;
-    document.getElementById("ccSearch").disabled = !getGraph();
-    document.getElementById("ccClearSelection").disabled = !hasSelection;
-    document.getElementById("ccSelectVisible").disabled = !hasUnselected;
-    document.getElementById("ccSelectUnconnected").disabled = !hasUnconnected;
-    document.getElementById("ccExpandUpwards").disabled = !hasSelection;
-    document.getElementById("ccExpandDownwards").disabled = !hasSelection;
-    document.getElementById("ccExpandOutwards").disabled = !hasSelection;
-    document.getElementById("ccClearFilter").disabled = !filtered;
-    document.getElementById("ccGrowUpwards").disabled = !filtered;
-    document.getElementById("ccGrowDownwards").disabled = !filtered;
-    document.getElementById("ccGrowOutwards").disabled = !filtered;
-    document.getElementById("ccHideUnselected").disabled = !hasSelection;
-    document.getElementById("ccHideSelected").disabled = !hasSelection;
+    const willStabilize = document.getElementById("gvStabilize").checked;
+    document.getElementById("gvSolver").disabled = !willStabilize;
+    document.getElementById("gvSearch").disabled = !getGraph();
+    document.getElementById("gvClearSelection").disabled = !hasSelection;
+    document.getElementById("gvSelectVisible").disabled = !hasUnselected;
+    document.getElementById("gvSelectUnconnected").disabled = !hasUnconnected;
+    document.getElementById("gvExpandUpwards").disabled = !hasSelection;
+    document.getElementById("gvExpandDownwards").disabled = !hasSelection;
+    document.getElementById("gvExpandOutwards").disabled = !hasSelection;
+    document.getElementById("gvClearFilter").disabled = !filtered;
+    document.getElementById("gvGrowUpwards").disabled = !filtered;
+    document.getElementById("gvGrowDownwards").disabled = !filtered;
+    document.getElementById("gvGrowOutwards").disabled = !filtered;
+    document.getElementById("gvHideUnselected").disabled = !hasSelection;
+    document.getElementById("gvHideSelected").disabled = !hasSelection;
     showStatistics();
 }
 
 // Show graph statistics and information
 function showStatistics() {
     document.getElementById("infoVersion").innerHTML =
-        mkElem("p", mkElem("b", "Database version: "), ccVersion);
+        DATA.version ? mkElem("p", mkElem("b", "Database version: "), DATA.version) : "";
     const graphInfo = document.getElementById("infoGraph");
     let graphInfoText = mkElem("b", "Current graph: ");
     if (!getGraph()) {
-        graphInfoText += `${ccNodes.length} nodes; ${ccEdges.length} relations`;
+        graphInfoText += `${DATA.nodes.length} nodes; ${DATA.edges.length} relations`;
         graphInfo.innerHTML = mkElem("p", graphInfoText);
         return;
     }
@@ -404,16 +404,17 @@ function showStatistics() {
         const infoNode = document.getElementById("info" + title);
         if (nodes === selected && nodes.length === 1) {
             const node = nodes[0];
+            const infoAttr = SETTINGS?.general?.info?.attribute;
             infoNode.innerHTML = mkElem("p",
-                mkElem("b", linkToCC(node, `${node.name} (${node.type})`), ": "),
-                removeLinks(node.definition) || "[no definition]",
+                mkElem("b", linkToNodeInfo(node, `${node.name} (${node.type})`), ": "),
+                removeLinks(node[infoAttr]) || SETTINGS?.general?.info?.unkonwn || "",
             );
         } else if (nodes.length > 0) {
             infoNode.innerHTML = mkElem("p",
                 mkElem("b", title + ": "),
                 ": ",
                 nodes.map(
-                    (n) => linkToCC(n, n.name)
+                    (n) => linkToNodeInfo(n, n.name)
                 ).join(", "),
             );
         } else {
@@ -437,22 +438,23 @@ function updateNodes() {
         }
 
         // Set node label
-        const attr = document.getElementById("ccShow").value;
+        const attr = document.getElementById("gvShow").value;
         // Word-wrapping, from: https://www.30secondsofcode.org/js/s/word-wrap/
         const wordwrap = /(?![^\n]{1,24}$)([^\n]{1,24}[\s-])/g;
         n.label = n[attr].replace(wordwrap, '$1\n');
 
         // Set node color
-        const color = ccSettings.nodes[n.type].color;
-        const border = ccSettings.nodes[n.type].border || color;
+        const color = SETTINGS.nodes[n.type].color;
+        const border = SETTINGS.nodes[n.type].border || color;
         n.color = {background: color, border: border};
 
         // This is what is shown when you hover over a node
         n.title = document.createElement("div");
+        const infoAttr = SETTINGS?.general?.info?.attribute;
         n.title.innerHTML = mkElem("span",
             mkElem("b", `${n.name} (${n.type})`),
             "<br/>",
-            removeLinks(n.definition) || "[no definition]",
+            removeLinks(n[infoAttr]) || SETTINGS?.general?.info?.unkonwn || "",
         );
     }
 }
@@ -460,12 +462,12 @@ function updateNodes() {
 // Update information about each graph edge
 function updateEdges() {
     for (const e of getGraphEdges()) {
-        e.color = ccSettings.edges[e.rel].color;
-        e.dashes = ccSettings.edges[e.rel].dashed;
+        e.color = SETTINGS.edges[e.rel].color;
+        e.dashes = SETTINGS.edges[e.rel].dashed;
     }
     for (const checkbox of document.querySelectorAll('#ccRelations input[type=checkbox]')) {
         const rel = checkbox.id;
-        const dashed = ccSettings.edges[rel].dashed || false;
+        const dashed = SETTINGS.edges[rel].dashed || false;
         checkbox.nextElementSibling.classList.toggle("dashedBorder", dashed);
     }
 }
@@ -473,9 +475,9 @@ function updateEdges() {
 // Update the solving algorithm
 function updateSolver() {
     const physics = {};
-    physics.enabled = document.getElementById("ccStabilize").checked;
+    physics.enabled = document.getElementById("gvStabilize").checked;
     if (physics.enabled) {
-        physics.solver = document.getElementById("ccSolver").value;
+        physics.solver = document.getElementById("gvSolver").value;
     }
     network.setOptions({physics: physics});
 }
@@ -487,7 +489,7 @@ function updateSolver() {
 // Select the nodes that match what is written in the search box
 // You have to enter at least 3 characters for it to search
 function searchNodes() {
-    const searchBox = document.getElementById("ccSearch");
+    const searchBox = document.getElementById("gvSearch");
     if (!getGraph()) {
         searchBox.value = "";
         return;
@@ -536,7 +538,7 @@ function expandSelection(direction) {
 
 // Clear the filter - i.e. show the full graph
 function clearFilter() {
-    document.getElementById("ccSearch").value = "";
+    document.getElementById("gvSearch").value = "";
     setGraphData();
 }
 
@@ -567,7 +569,7 @@ function revealNeighbors(direction) {
         nodesToGrow = getFilteredNodes();
     }
     for (const n of nodesToGrow) {
-        for (const e of ccEdges) {
+        for (const e of DATA.edges) {
             if (relations.includes(e.rel)) {
                 if (n.id === e.from && direction !== 'from') nodeIds[e.to] = true;
                 else if (n.id === e.to && direction !== 'to') nodeIds[e.from] = true;
@@ -609,13 +611,20 @@ function mkElem(elem, attrs, ...content) {
     return `<${elem}${attrs}>${content}</${elem}>`;
 }
 
-function linkToCC(node, ...content) {
-    const attrs = {target: "CC-database", href: "index.html"};
-    if (node) attrs.href += "#" + node.id;
+function linkToNodeInfo(node, ...content) {
+    const linkAttr = SETTINGS?.general?.links?.attribute;
+    if (!node[linkAttr]) {
+        return mkElem("span", ...content);
+    }
+    const attrs = {
+        href: (SETTINGS?.general?.links?.baseURL || "") + node[linkAttr],
+        target: SETTINGS?.general?.links?.target || "_blank",
+    };
     return mkElem("a", attrs, ...content);
 }
 
 function removeLinks(html) {
+    if (!html) return "";
     return html.replaceAll(/<a [^<>]+>|<\/a>/g, "");
 }
 

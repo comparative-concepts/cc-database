@@ -1,5 +1,6 @@
-var ccVersion = '1.0';
-var ccNodes = [
+var DATA = {};
+DATA.version = '1.0';
+DATA.nodes = [
    {"id": "cxn:action-modification-construction", "name": "action modification construction", "type": "cxn", "definition": ""},
    {"id": "cxn:additive-construction", "name": "additive construction", "type": "cxn", "definition": ""},
    {"id": "cxn:additive-coordination", "name": "additive coordination", "type": "cxn", "definition": ""},
@@ -1082,7 +1083,7 @@ var ccNodes = [
    {"id": "str:zero-coding", "name": "zero coding, zero coded", "type": "str", "definition": "a <a href=\"#str:strategy\">strategy</a> in which there is no overt <a href=\"#def:form\">form</a> in the <a href=\"#cxn:construction\">construction</a> that encodes the relevant <a href=\"#def:function\">function</a> of the construction. <em>Example</em>: in the English Adjectival Modification Construction illustrated by <em>tall trees</em>, there is no overt form that codes the <a href=\"#inf:modification\">modification</a> function of the <a href=\"#sem:property-concept\">property concept</a> denoted by <em>tall</em>. (Section 2.4)"},
    {"id": "str:zero-copula", "name": "zero copula", "type": "str", "definition": "the <a href=\"#str:strategy\">strategy</a> of <a href=\"#str:recruitment-strategy\">recruiting</a> a <a href=\"#cxn:construction\">construction</a> without any overt coding of <a href=\"#inf:predication\">predication</a> (i.e. no <a href=\"#str:copula\">copula</a>), and without any inflection, for different types of predication. <em>Example</em>: Tiwi <em>purukupa\u0279li ma\u0279tina</em> <q>Purukuparli is boss</q> simply juxtaposes the referring phrases for <q>Purukuparli</q> and <q>boss</q>. (Section 10.2)"},
 ];
-var ccEdges = [
+DATA.edges = [
    {"start": "cxn:action-modification-construction", "end": "cxn:relative-clause", "rel": "ConstituentOf"},
    {"start": "cxn:additive-construction", "end": "sem:additive", "rel": "FunctionOf"},
    {"start": "cxn:additive-coordination", "end": "sem:additive", "rel": "FunctionOf"},

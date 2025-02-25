@@ -48,18 +48,18 @@ select:hover, input:hover, label:hover, button:hover, summary:hover {
     cursor: default !important;
 }
 
-#ccContainer {
+#gvContainer {
     border: 1px solid black;
     border-radius: 10px;
     background-color: white;
 }
 
-#ccContainer > div {
+#gvContainer > div {
     width: 100%;
     height: 60vh;
 }
 
-#ccContainer div.vis-tooltip {
+#gvContainer div.vis-tooltip {
     max-width: 50%;
     text-wrap: wrap;
     font-family: "Helvetica Neue", Helvetica, Tahomas, Arial, sans-serif;
@@ -67,16 +67,16 @@ select:hover, input:hover, label:hover, button:hover, summary:hover {
     border-radius: 10px;
 }
 
-#ccRelations input[type=checkbox] ~ span {
+#gvRelations input[type=checkbox] ~ span {
     border-bottom: solid 1.5px;
 }
 
-#ccRelations input[type=checkbox] ~ span.dashedBorder {
+#gvRelations input[type=checkbox] ~ span.dashedBorder {
     border-bottom-style: dashed;
 }
 
 @media (min-width: 120vh) {
-    #ccContainer {
+    #gvContainer {
         width: 70%;
         float: left;
         margin-right: 0.75rem;
@@ -91,22 +91,22 @@ footer {
 
 /* Animated spinning wheel on top of the network SVG to show when the graph is loading */
 
-#ccContainer {
+#gvContainer {
     display: grid;
 }
 
-#ccContainer > div {
+#gvContainer > div {
     grid-column: 1;
     grid-row: 1;
 }
 
-#ccSpinningWheel {
+#gvSpinningWheel {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#ccSpinningWheel > div {
+#gvSpinningWheel > div {
     border: 16px solid aliceblue;
     border-top-color: lightskyblue;
     border-radius: 50%;

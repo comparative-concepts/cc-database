@@ -374,13 +374,14 @@ class CCDB:
                         "end": item.Id,
                         "rel": rel,
                     })
-        print(f"var ccVersion = {self.version!r};")
-        print(f"var ccNodes = [")
+        print("var DATA = {};")
+        print(f"DATA.version = {self.version!r};")
+        print(f"DATA.nodes = [")
         nodes.sort(key=lambda n: n['id'])
         for n in nodes:
             print(f"   {json.dumps(n)},")
         print("];")
-        print(f"var ccEdges = [")
+        print(f"DATA.edges = [")
         edges.sort(key=lambda e: (e['start'], e['end'], e['rel']))
         for e in edges:
             print(f"   {json.dumps(e)},")
