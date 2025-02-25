@@ -114,7 +114,7 @@ function getGraphRelations() {
     return relations;
 }
 
-function setGraphData(nodeIds, rememberState = true) {
+function setGraphData(nodeIds, rememberState = true, forceRemember = false) {
     if (nodeIds?.length > 0) {
         nodeIds = Object.fromEntries(nodeIds.map(n => [n, true]));
     } else {
@@ -141,7 +141,7 @@ function setGraphData(nodeIds, rememberState = true) {
         network.selectNodes(selected);
         selectionChanged();
         // The default is to remember the new state in the browser history
-        if (rememberState) pushCurrentState();
+        if (rememberState) pushCurrentState(forceRemember);
         // Remove the spinning wheel 0.5 seconds after the network is loaded
         setTimeout(() => {spinner.style.display = "none"}, 500);
     }, 10);
@@ -154,16 +154,15 @@ function setGraphData(nodeIds, rememberState = true) {
 // Initialise the browser history, and the load graph specified in the URL hash
 function initHistory() {
     window.addEventListener("popstate", (event) => {
-        updateGraphFromState(event.state);
+        updateGraphFromState(event.state, false);
     });
     const url = new URL(window.location.href);
     try {
-        updateGraphFromState(decodeState(url.hash));
+        updateGraphFromState(decodeState(url.hash), true);
     } catch (err) {
         alert(`Malformed state in URL!\n${err}`);
         selectGraph();
     }
-    pushCurrentState(true);
 }
 
 // Remember the current graph in the browser history, and the URL hash
@@ -177,7 +176,7 @@ function pushCurrentState(force = false) {
 }
 
 // Load the graph specified in a given state
-function updateGraphFromState(state) {
+function updateGraphFromState(state, rememberState = true) {
     if (!state) return;
     if (state.version && state.version !== DATA.version) {
         throw new TypeError(`Wrong database version: ${state.version}`);
@@ -190,13 +189,15 @@ function updateGraphFromState(state) {
         document.getElementById(rel).checked = state.relations.includes(rel);
     }
     updateGraph();
-    const possibleNodeIds = getGraphNodeIds();
-    for (const nodeId of state.nodes) {
-        if (!(nodeId in possibleNodeIds))
-            throw new TypeError(`Node ${nodeId} is not in graph ${state.graph}`);
+    if (state.nodes?.length > 0) {
+        const possibleNodeIds = getGraphNodeIds();
+        for (const nodeId of state.nodes) {
+            if (!(nodeId in possibleNodeIds))
+                throw new TypeError(`Node ${nodeId} is not in graph ${state.graph}`);
+        }
     }
     // Set the graph, but make sure not to push the state to the browser history
-    setGraphData(state.nodes, false);
+    setGraphData(state.nodes, rememberState, true);
 }
 
 // Get the current state of the graph
@@ -217,7 +218,10 @@ function encodeState(state) {
         const nodes = Object.fromEntries(state.nodes.map((id) => [id, true]));
         const nodeNumbers = DATA.nodes.flatMap((node, n) => node.id in nodes ? n : []);
         nodeNumbers.sort();
-        if (DATA.nodes.length < 2**12 && nodeNumbers.length * 2 < DATA.nodes.length / 6) {
+        if (state.nodes.length === 1) {
+            // If there is only one visible node we store its id verbatim.
+            params.set("id", state.nodes[0]);
+        } else if (DATA.nodes.length < 2**12 && nodeNumbers.length * 2 < DATA.nodes.length / 6) {
             // We encode the list of node numbers instead of the bit array.
             // We need two base64 chars to store each node,
             // this gives 2*6 = 12 bits, so we can handle up to 2^12 = 4096 nodes.
@@ -239,7 +243,7 @@ function encodeState(state) {
             params.set("h", toBase64(buffer));
         }
     }
-    return params.toString();
+    return dontPercentEncodeSafeChars(params.toString());
 }
 
 // Decode a URL query/hash string into a graph state
@@ -250,12 +254,15 @@ function decodeState(encoded) {
     const version = (params.get("v") || "").trim();
     const graph = (params.get("g") || "").trim();
     const relations = (params.get("r") || "").split(/ +/);
-    const nodeNumbers = [];
-    if (params.get("n")) {
+    const nodes = [];
+    if (params.get("id")) {
+        nodes.push(params.get("id"));
+    } else if (params.get("n")) {
         // The string encodes the list of node numbers instead of the bit array.
         for (const s of params.get("n").match(/.{2}/g)) {
             const [_, high, low] = fromBase64("AA" + s);
-            nodeNumbers.push(high * 256 + low);
+            const n = high * 256 + low;
+            nodes.push(DATA.nodes[n].id);
         }
     } else if (params.get("h")) {
         // The string encodes the bit array instead of the list of node numbers.
@@ -264,11 +271,10 @@ function decodeState(encoded) {
             for (let n = 0; n < DATA.nodes.length; n++) {
                 const bin = Math.trunc(n / 8);
                 const mask = 1 << (n % 8);
-                if (buffer[bin] & mask) nodeNumbers.push(n);
+                if (buffer[bin] & mask) nodes.push(DATA.nodes[n].id);
             }
         }
     }
-    const nodes = nodeNumbers.map((n) => DATA.nodes[n].id);
     return {version: version, graph: graph, relations: relations, nodes: nodes};
 }
 
@@ -283,6 +289,15 @@ function toBase64(buffer) {
 function fromBase64(encoded) {
     const base64 = encoded.replaceAll("-", "+").replaceAll("_", "/");
     return Uint8Array.from(atob(base64), (c) => c.charCodeAt());
+}
+
+// Don't percent encode some safe characters
+function dontPercentEncodeSafeChars(query) {
+    const okQueryChars = ":;,/!@()";
+    for (const ch of okQueryChars) {
+        query = query.replaceAll(encodeURIComponent(ch), ch);
+    }
+    return query;
 }
 
 
