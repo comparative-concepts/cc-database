@@ -1,122 +1,25 @@
 
-body {
-    background-color: aliceblue;
-    margin: 1.5rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300; /* light (falls back to normal=400 if light isn't available */
-}
+/* Overriding the default graph-visualizer CSS */
 
-h1, h2, h3, p, menu, details {
-    margin: 0.75rem 0;
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: aliceblue;
+    font-weight: 300; /* light (falls back to normal=400 if light isn't available */
 }
 
 h1, h2, h3, b, strong, summary {
     font-weight: 550; /* medium (falls back to bold=700 if medium isn't available) */
 }
 
-h1 {
-    font-size: 1.5em;
-}
-
 a {
     color: darkgreen;
-}
-
-menu {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    line-height: 1.75;
-}
-
-menu > li {
-    text-wrap: nowrap;
-    padding-right: 0.75rem;
-}
-
-.flex-break {
-    flex-basis: 100%;
-    height: 0;
-}
-
-select:hover, input:hover, label:hover, button:hover, summary:hover {
-    cursor: pointer;
-}
-
-:disabled:hover {
-    cursor: default !important;
-}
-
-#gvContainer {
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: white;
-}
-
-#gvContainer > div {
-    width: 100%;
-    height: 60vh;
-}
-
-#gvContainer div.vis-tooltip {
-    max-width: 50%;
-    text-wrap: wrap;
-    font-family: "Helvetica Neue", Helvetica, Tahomas, Arial, sans-serif;
-    font-size: 0.8rem;
-    border-radius: 10px;
-}
-
-#gvRelations input[type=checkbox] ~ span {
-    border-bottom: solid 1.5px;
-}
-
-#gvRelations input[type=checkbox] ~ span.dashedBorder {
-    border-bottom-style: dashed;
-}
-
-@media (min-width: 120vh) {
-    #gvContainer {
-        width: 70%;
-        float: left;
-        margin-right: 0.75rem;
-    }
-}
-
-footer {
-    clear: both;
-    /* This is to get margin/padding to work, see here: https://stackoverflow.com/a/4198306 */
-    border: 1px solid transparent;
-}
-
-/* Animated spinning wheel on top of the network SVG to show when the graph is loading */
-
-#gvContainer {
-    display: grid;
-}
-
-#gvContainer > div {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#gvSpinningWheel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #gvSpinningWheel > div {
     border: 16px solid aliceblue;
     border-top-color: lightskyblue;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg) }
-    100% { transform: rotate(360deg) }
+#gvContainer div.vis-tooltip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-

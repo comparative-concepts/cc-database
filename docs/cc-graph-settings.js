@@ -105,21 +105,27 @@ SETTINGS.general = {
 
 SETTINGS.network = {
     edges: {
-        width: 3,                // "width of the edge"
-        arrows: "to",            // "for example: 'to, from, middle'  or 'to;from', any combination is fine"
+        width: 3,                         // "width of the edge"
+        arrows: "to",                     // "for example: 'to, from, middle'  or 'to;from', any combination is fine"
     },
     nodes: {
-        borderWidth: 1,          // "width of the border of the node"
-        shape: "box",            // "the types with the label inside of it are: ellipse, circle, database, box, text"
+        borderWidth: 1,                   // "width of the border of the node"
+        shape: "box",                     // "the types with the label inside of it are: ellipse, circle, database, box, text"
+        font: {
+            face: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+                                          // "font face (or font family) of the label text"
+            size: 14,                     // "size (in pixels) of the label text"
+            color: "black",               // "color of the label text"
+        },
     },
     interaction: {
-        hover: true,             // "nodes use their hover colors when the mouse moves over them"
-        multiselect: true,       // "a longheld click (or touch) as well as a control-click will add to the selection"
-        tooltipDelay: 1000,      // "the amount of time in milliseconds it takes before the tooltip is shown"
+        hover: true,                      // "nodes use their hover colors when the mouse moves over them"
+        multiselect: true,                // "a longheld click (or touch) as well as a control-click will add to the selection"
+        tooltipDelay: 1000,               // "the amount of time in milliseconds it takes before the tooltip is shown"
     },
     layout: {
-        improvedLayout: true,    // "the network will use the Kamada Kawai algorithm for initial layout"
-        clusterThreshold: 1000,  // "cluster threshold to which improvedLayout applies"
+        improvedLayout: true,             // "the network will use the Kamada Kawai algorithm for initial layout"
+        clusterThreshold: 1000,           // "cluster threshold to which improvedLayout applies"
     },
     physics: {
         solver: "forceAtlas2Based",       // Default solver
