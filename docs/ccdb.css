@@ -88,3 +88,16 @@ q.dq {
 #search-box {
     width: 100%;
 }
+
+.graphSymbol {
+    padding-left: 5px;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+}
+
+#gvSymbol {
+     stroke-width: 2px;
+     stroke: LinkText;
+     fill: LinkText;
+}

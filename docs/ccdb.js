@@ -87,6 +87,7 @@ function init_searchfilter() {
     for (const elem of document.getElementById('search').getElementsByTagName('input')) {
         elem.addEventListener('input', filter_ccs);
     }
+    window.addEventListener('hashchange', filter_ccs);
     filter_ccs();
 }
 
@@ -112,7 +113,7 @@ function filter_ccs() {
     if (current_elem) {
         const current_name = current_elem.querySelector('.name');
         new Mark(current_name).markRanges([{
-            start: 0, length: current_name.innerText.length,
+            start: 0, length: current_name.innerText.trim().length,
         }]);
     }
 
