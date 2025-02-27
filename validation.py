@@ -5,7 +5,7 @@ import yaml
 from enum import Enum
 from pathlib import Path
 from typing import Any
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, ConfigDict, ValidationError
 
 
 ###############################################################################
@@ -31,6 +31,7 @@ class Relation(str, Enum):
 
 
 class Example(BaseModel):
+    model_config = ConfigDict(extra='forbid')
     Example: str
     Language: str
     Gloss: str = ""
@@ -38,6 +39,7 @@ class Example(BaseModel):
     EquivalentPieces: list[str] = []
 
 class GlossItem(BaseModel):
+    model_config = ConfigDict(extra='forbid')
     Id: str
     Name: str
     Type: CCType
