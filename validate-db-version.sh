@@ -14,9 +14,10 @@ fi
 
 newids=_new_cc_ids.txt
 oldids=_old_cc_ids.txt
+perlcmd='print "\n$1" if /^- Id: +(.+)/; print ":DELETED" if /^ +Status: +deleted/'
 
-cat              cc-database.yaml | perl -ne 'print "$1\n" if /^- Id: +(.+)/' | sort > $newids
-git show $commit:cc-database.yaml | perl -ne 'print "$1\n" if /^- Id: +(.+)/' | sort > $oldids
+cat              cc-database.yaml | perl -ne "$perlcmd" | sort > $newids
+git show $commit:cc-database.yaml | perl -ne "$perlcmd" | sort > $oldids
 
 if ( cmp -s $newids $oldids )
 then
