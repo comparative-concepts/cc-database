@@ -91,7 +91,7 @@ SETTINGS.graphs = {
 SETTINGS.general = {
     info: {
         attribute: "definition",     // which attribute in DATA.nodes contains the on-hover information?
-        unkonwn: "[no definition]",  // info to show if missing
+        unknown: "[no definition]",  // info to show if missing
     },
     links: {
         attribute: "id",             // which attribute in DATA.nodes contains the outgoing link?
