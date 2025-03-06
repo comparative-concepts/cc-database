@@ -3,7 +3,6 @@ import sys
 import re
 import json
 import argparse
-from typing import TypedDict
 from pathlib import Path
 from datetime import datetime
 
@@ -16,10 +15,6 @@ ParsedDefinition = list[str | tuple[str, str]]
 
 # The different formats that we can export the database to
 OutputFormats = ['html', 'json', 'fnbr', 'graph']
-
-# Graph nodes and edges
-GraphNode = TypedDict("GraphNode", {"id": str, "name": str, "type": str, "definition": str})
-GraphEdge = TypedDict("GraphEdge", {"start": str, "end": str, "rel": str})
 
 # The URL to the visualization graph, and symbol to show
 GraphURL = "cc-graph.html"
@@ -387,20 +382,21 @@ class CCDB:
     ## Export to a graph as Javascript objects
 
     def export_to_graph(self) -> None:
-        nodes: list[GraphNode] = []
-        edges: list[GraphEdge] = []
+        nodes: list[dict[str, object]] = []
+        edges: list[dict[str, object]] = []
         for item in self.glosses.values():
-            defn = self.definitions.get(item.Id)
-            if defn:
-                defn = self.convert_definition_to_html(defn)
-            else:
-                defn = ""
-            nodes.append({
+            node: dict[str, object] = {
                 "id": item.Id,
                 "name": self.html_friendly_name(item.Name),
                 "type": item.Type,
-                "definition": defn,
-            })
+            }
+            if item.Alias:
+                node["alias"] = item.Alias
+            if not item.FromGlossary:
+                node["notOriginal"] = True
+            if item.Id in self.definitions:
+                node["definition"] = self.convert_definition_to_html(self.definitions[item.Id])
+            nodes.append(node)
             for rel in item.Relations:
                 for target in item.Relations.get(rel, []):
                     edges.append({
@@ -411,7 +407,7 @@ class CCDB:
         print("var DATA = {};")
         print(f"DATA.version = {self.version!r};")
         print(f"DATA.nodes = [")
-        nodes.sort(key=lambda n: n['id'])
+        nodes.sort(key=lambda n: str(n['id']))
         for n in nodes:
             print(f"   {json.dumps(n)},")
         print("];")

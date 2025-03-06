@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script src="mark.min.js"></script>
+  <script src="cc-graph-data.js"></script>
+  <script src="cc-database.js"></script>
+  <link rel="stylesheet" href="cc-database.css"/>
+  <title>CC database</title>
+</head>
+
+<body>
+  <details id="search"><summary>🔎</summary>
+    <div>
+      <label><input type="checkbox" name="cctype" value="cxn" checked/> construction</label>
+      <label><input type="checkbox" name="cctype" value="str" checked/> strategy</label>
+      <label><input type="checkbox" name="cctype" value="sem" checked/> meaning</label>
+      <br/>
+      <label><input type="checkbox" name="cctype" value="inf" checked/> information packaging</label>
+      <label><input type="checkbox" name="cctype" value="def" checked/> definition</label>
+    </div>
+    <div>
+      Find a
+      <label><input type="checkbox" name="filtertype" value="name" checked/> name</label>
+      <label><input type="checkbox" name="filtertype" value="relation"/> relation</label>
+      <label><input type="checkbox" name="filtertype" value="definition"/> definition</label>
+      <br/>
+      that
+      <label><input type="radio" name="matchtype" value="contains" checked/> contains</label>
+      <label><input type="radio" name="matchtype" value="startswith"/> starts with</label>
+      <label><input type="radio" name="matchtype" value="wordstarts"/> words start with</label>
+    </div>
+    <div><input id="search-box" type="search"/></div>
+    <div id="search-info"></div>
+  </details>
+
+  <h1><a href="#">Database of Comparative Concepts</a></h1>
+  <p>
+    Extracted and expanded from the appendix of <em>Morphosyntax: Constructions of the World's Languages</em>, by William Croft (2022).
+    In addition to this database, you can also explore our interactive <a target="CC-graph" href="cc-graph.html">graph visualization of the CC database</a>.
+    You can also <a href="https://github.com/comparative-concepts/cc-database">look at the source code</a>,
+    and if you have a suggestion, please <a href="https://github.com/comparative-concepts/cc-database/issues">open an issue</a>.
+  </p>
+  <p><strong>Database version:</strong> <span id="db-version">1.0</span></p>
+  <p><strong>Build date/time:</strong> <span id="build-date">2025 12:08:26</span></p>
+  <p><strong>Statistics:</strong> <span id="db-statistics">1081 CCs, with 1923 typed relations and 3526 links within CC definitions</span></p>
+
+  <div id="glosses">
+  </div>
+
+  <template id="cc-entry-template">
+    <div class="cc">
+      <h2 class="name">
+        <a class="cc-header-name"></a>
+        <a class="cc-header-graph" target="CC-graph">
+          <svg class="graphSymbol" viewBox="-5 -5 65 65"><use href="#gvSymbol"/></svg>
+        </a>
+      </h2>
+      <dl class="cc-information">
+        <div type="cc-id"><dt>Id</dt><dd class="cc-info ccid"></dd></div>
+        <div type="cc-type"><dt>Type</dt><dd class="cc-info type"></dd></div>
+        <div type="cc-alias"><dt>Alias(es)</dt><dd class="cc-info name"></dd></div>
+        <div type="cc-relation" relation="FunctionOf" direction="out"><dt>Function of</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="FunctionOf" direction="in"><dt>Function</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="ExpressionOf" direction="out"><dt>Expresses</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="ExpressionOf" direction="in"><dt>Expressed by</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="RecruitedFrom" direction="out"><dt>Recruited from</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="RecruitedFrom" direction="in"><dt>Recruited by</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="ModeledOn" direction="out"><dt>Modeled on</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="ModeledOn" direction="in"><dt>Modeled of</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="AttributeOf" direction="out"><dt>Attribute of</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="AttributeOf" direction="in"><dt>Attribute(s)</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="RoleOf" direction="out"><dt>Role of</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-relation" relation="RoleOf" direction="in"><dt>Role(s)</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-hierarchy" relation="SubtypeOf"><dt>Taxonomy</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-hierarchy" relation="ConstituentOf HeadOf"><dt>Partonomy</dt><dd class="cc-info relation"></dd></div>
+        <div type="cc-definition"><dt>Definition</dt><dd class="cc-info definition"></dd></div>
+        <div type="cc-not-original"><dt></dt><dd class="cc-info"><span class="notfound">
+          Not from the original glossary of <em>Morphosyntax</em>.
+        </span></dd></div>
+      </dl>
+      <!-- <table class="cc-information">
+        <tr type="cc-id"><th>Id</th> <td class="cc-info ccid"></td></tr>
+        <tr type="cc-type"><th>Type</th> <td class="cc-info type"></td></tr>
+        <tr type="cc-alias"><th>Alias(es)</th> <td class="cc-info name"></td></tr>
+
+        <tr type="cc-relation" relation="FunctionOf" direction="out"><th>Function of</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="FunctionOf" direction="in"><th>Function</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="ExpressionOf" direction="out"><th>Expresses</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="ExpressionOf" direction="in"><th>Expressed by</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="RecruitedFrom" direction="out"><th>Recruited from</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="RecruitedFrom" direction="in"><th>Recruited by</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="ModeledOn" direction="out"><th>Modeled on</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="ModeledOn" direction="in"><th>Modeled of</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="AttributeOf" direction="out"><th>Attribute of</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="AttributeOf" direction="in"><th>Attribute(s)</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="RoleOf" direction="out"><th>Role of</th> <td class="cc-info relation"></td></tr>
+        <tr type="cc-relation" relation="RoleOf" direction="in"><th>Role(s)</th> <td class="cc-info relation"></td></tr>
+
+        <tr type="cc-hierarchy" relation="SubtypeOf"><th>Taxonomy</th> <td class="cc-info relation"><table></table></td></tr>
+        <tr type="cc-hierarchy" relation="ConstituentOf HeadOf"><th>Partonomy</th> <td class="cc-info relation"><table></table></td></tr>
+        <tr type="cc-definition"><th>Definition</th> <td class="cc-info definition"></td></tr>
+        <tr type="cc-not-original"><th></th> <td class="cc-info"><span class="notfound">
+          Not from the original glossary of <em>Morphosyntax</em>.
+        </span></td></tr>
+      </table> -->
+    </div>
+  </template>
+
+  <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 65 65">
+    <defs>
+      <path id="gvSymbol" d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+        s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+        c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+        C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+        c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+        v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+        s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+        C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+        S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+        s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+        s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"/>
+    </defs>
+  </svg>
+
+</body></html>
