@@ -406,6 +406,8 @@ class CCDB:
                     })
         print("var DATA = {};")
         print(f"DATA.version = {self.version!r};")
+        now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
+        print(f"DATA.builddate = {now!r};")
         print(f"DATA.nodes = [")
         nodes.sort(key=lambda n: str(n['id']))
         for n in nodes:

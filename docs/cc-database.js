@@ -11,17 +11,20 @@ DATA.types = {
 };
 
 function initialize() {
-    const t0 = new Date().getTime();
+    const startTime = new Date().getTime();
     build_table();
     init_linktitles();
     init_searchfilter();
-    console.log(new Date().getTime() - t0);
+    const elapsedTime = new Date().getTime() - startTime;
+    console.log(`Finished initialization in ${elapsedTime/1000} s`);
 }
 
 
 function build_table() {
     document.getElementById("db-version").innerText = DATA.version;
-    const template = document.getElementById("cc-entry-template");
+    document.getElementById("db-build-date").innerText = DATA.builddate;
+    document.getElementById("db-statistics").innerText =
+        `${DATA.nodes.length} CCs, with ${DATA.edges.length} typed relations`;
 
     DATA.concepts = {};
     for (const cc of DATA.nodes) {
@@ -37,6 +40,7 @@ function build_table() {
         (DATA.relations[e.rel].end[e.end] ??= []).push(e.start);
     }
 
+    const template = document.getElementById("cc-entry-template");
     DATA.nodes.sort((a,b) => Intl.Collator().compare(a.name,b.name));
     for (const cc of DATA.nodes) {
         const elem = build_cc_item(cc, template);
@@ -147,22 +151,14 @@ function set_link_title(event) {
     const url = new URL(event.target.href);
     const id = url.hash.replace("#", "");
     const cc = DATA.concepts[id];
-    if (!cc) return;
-    let hovertext = stripHTML(ccName(id));
-    if (cc.definition) hovertext += "\n\n" + stripHTML(cc.definition);
-    event.target.title = hovertext;
+    if (cc) {
+        event.target.title = cc.name.toUpperCase() + "\n" + stripHTML(cc.definition || "[no definition]");
+    }
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////
 // Searching/filtering CCs
-
-const CC_TYPES = ['construction', 'strategy', 'meaning', 'information packaging', 'definition', 'other']
-const FILTER_TYPES = ['name', 'relation', 'definition'];
-const MATCH_TYPES = ['contains', 'starts with', 'words start with']
-const TYPE = {}
-const SEARCH = {};
-const ALL_CCS = [];
 
 function init_searchfilter() {
     for (const id in DATA.concepts) {
