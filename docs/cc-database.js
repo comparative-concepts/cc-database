@@ -24,7 +24,7 @@ function build_table() {
     document.getElementById("db-version").innerText = DATA.version;
     document.getElementById("db-build-date").innerText = DATA.builddate;
     document.getElementById("db-statistics").innerText =
-        `${DATA.nodes.length} CCs, with ${DATA.edges.length} typed relations`;
+        `${DATA.nodes.length} CCs, with ${DATA.edges.length} relations`;
 
     DATA.concepts = {};
     for (const cc of DATA.nodes) {
@@ -108,13 +108,15 @@ function build_cc_item(cc, template) {
                 row.remove();
                 break;
             }
+            let html = "";
             if (parents.length) {
-                elem.innerHTML += `<div class="boxes">` + parents.map(ccLink).join("") + `</div>`;
+                html += `<div class="boxes">` + parents.map(ccLink).join("") + `</div>`;
             }
-            elem.innerHTML += `<div><strong>${ccName(cc.id)}</strong></div>`;
+            html += `<div><span><strong>${ccName(cc.id)}</strong></span></div>`;
             if (children.length) {
-                elem.innerHTML += `<div class="boxes">` + children.map(ccLink).join("") + `</div>`;
+                html += `<div class="boxes">` + children.map(ccLink).join("") + `</div>`;
             }
+            elem.innerHTML = html;
             break;
         }
     }

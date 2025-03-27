@@ -17,13 +17,8 @@ body {
     padding-bottom: 0.5em;
 }
 
-.cc-info table {
-    border-collapse: collapse;
-}
-
-.cc-info table td {
-    padding: 0;
-    text-align: center;
+.cc-info {
+    width: fit-content;
 }
 
 .boxes {
@@ -43,7 +38,7 @@ body {
 }
 
 .cc-info > div > span {
-    flex-grow: 1;
+    flex: 1 1 auto;
     text-align: center;
     padding: 2px 10px;
 }
