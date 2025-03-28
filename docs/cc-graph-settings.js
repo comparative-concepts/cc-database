@@ -95,7 +95,7 @@ SETTINGS.general = {
     },
     links: {
         attribute: "id",             // which attribute in DATA.nodes contains the outgoing link?
-        baseURL: "index.html#",
+        baseURL: "cc-database.html#",
         target: "CC-database",
     },
 };
