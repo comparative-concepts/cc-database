@@ -13,7 +13,11 @@ docs/index.html: cc-database.yaml ccdb_parser.py
 	python3 ccdb_parser.py --quiet --format html $< > $@
 
 docs/cc-graph-data.js: cc-database.yaml ccdb_parser.py
-	python3 ccdb_parser.py --quiet --format graph $< > $@
+	python3 ccdb_parser.py --quiet --format json \
+		--keys Id Name Type Alias FromGlossary Definition Status \
+		--relations all \
+		--js-object DATA \
+		--html -- $< > $@
 
 docs/cc-simple-list.json: cc-database.yaml ccdb_parser.py
-	python3 ccdb_parser.py --quiet --format json --keys Id Name Type -- $< > $@
+	python3 ccdb_parser.py --quiet --format json --keys Id Name Type --compact -- $< > $@

@@ -7,7 +7,7 @@ from pathlib import Path
 from datetime import datetime
 
 import validation
-from validation import CCType, Relation, Glosses, GlossItem, error
+from validation import CCType, Relation, Glosses, GlossItem, Example, error
 
 
 # A parsed definition is a list of either strings or links (as pairs of strings)
@@ -74,11 +74,9 @@ class CCDB:
         if format == "html":
             self.print_html()
         elif format == "json":
-            self.export_to_json(args.keys)
+            self.export_to_json(args)
         elif format == "fnbr":
             self.export_to_fnbr()
-        elif format == "graph":
-            self.export_to_graph()
 
 
     ###########################################################################
@@ -175,49 +173,84 @@ class CCDB:
         'def': [],
     }
 
+
     ###########################################################################
-    ## HTML export
+    ## Convert to HTML or plain text
 
     @staticmethod
-    def html_friendly_name(name: str) -> str:
-        """Make CC names (ids, aliases) html-friendly."""
-        return (name
-            .replace('---', '\u2014') # em-dash
-            .replace('--', '\u2013') # en-dash
-            .replace('[', '(<i>').replace(']', '</i>)')
-        )
+    def convert_name(name: str, type: str = "", html: bool = True) -> str:
+        """Make CC names (ids, aliases) html- or text-friendly."""
+        name = name.replace('---', '\u2014') # em-dash
+        name = name.replace('--', '\u2013') # en-dash
+        if not type:
+            return name
+        elif html:
+            return f"{name} (<i>{type}</i>)"
+        else:
+            return f"{name} ({type})"
 
 
-    def convert_link_to_html(self, id: str, name: str|None = None, selfid: str|None = None) -> str:
-        """Convert a CC link into HTML, with an actual link to the CC in the database."""
+    def convert_link(self, id: str, name: str|None = None, selfid: str|None = None, html: bool = True) -> str:
+        """Convert a CC link into plain text, or HTML with an actual link to the CC in the database."""
         if name is None:
             item = self.glosses[id]
-            name = f"{item.Name} [{item.Type.value}]"
-        html_name = self.html_friendly_name(name)
-        if id == selfid:
-            return f'<strong>{html_name}</strong>'
+            name = self.convert_name(item.Name, item.Type.value, html=html)
         else:
-            return f'<a href="#{id}">{html_name}</a>'
+            name = self.convert_name(name, html=html)
+        if not html:
+            return name
+        elif id == selfid:
+            return f'<strong>{name}</strong>'
+        else:
+            return f'<a href="#{id}">{name}</a>'
 
 
-    def convert_graphlink_to_html(self, id: str) -> str:
-        """Convert a CC id into a HTML link to a graph containing just that CC."""
-        item = self.glosses[id]
-        if item.Type == CCType.def_:
-            # The definitions are not in any of the graphs, so don't return a link
-            return ""
-        return f'<a target="CC-graph" href="{GraphURL}#g={item.Type.value}&id={id}">{GraphSymbolUse}</a>'
-
-
-    def convert_definition_to_html(self, definition: ParsedDefinition) -> str:
-        """Convert a CC definition into HTML, with actual links to the CCs in the database."""
-        html_parts: list[str] = []
+    def convert_definition(self, definition: ParsedDefinition, html: bool = True) -> str:
+        """Convert a CC definition into plain text, or HTML with actual links to the CCs in the database."""
+        parts: list[str] = []
         for part in definition:
             if isinstance(part, tuple):
-                part = self.convert_link_to_html(*part)
-            html_parts.append(part)
-        return self.clean_definition_html(''.join(html_parts))
+                part = self.convert_link(*part, html=html)
+            parts.append(part)
+        return "".join(parts) # self.clean_object(''.join(parts))
 
+
+    @staticmethod
+    def clean_text(text: str, html: bool = True) -> str:
+        if html:
+            return (text
+                .replace('</a> <a', '</a> <span class="separation"/> <a')
+                .replace('<dq>', '<q class="dq">').replace('</dq>', '</q>')
+                .replace('<sc>', '<span class="sc">').replace('</sc>', '</span>')
+                .replace('<b>', '<strong>').replace('</b>', '</strong>')
+                .replace('<i>', '<em>').replace('</i>', '</em>')
+                .replace('<e>', '<em>').replace('</e>', '</em>')
+                .replace('-->', '&rarr;')
+                .replace('& ', '&amp; ').replace('< ', '&lt; ').replace(' >', ' &gt;')
+                .replace('---', '\u2014') # em-dash
+                .replace('--', '\u2013') # en-dash
+            )
+        else:
+            return re.sub(r"</?\w[^<>]+>", "", text
+                .replace('-->', '\u2192') # rightwards arrow
+                .replace('---', '\u2014') # em-dash
+                .replace('--', '\u2013') # en-dash
+            )
+
+    @classmethod
+    def clean_object(cls, obj: object, html: bool = True) -> object:
+        """Standard HTML/text conversions."""
+        if isinstance(obj, str):
+            return cls.clean_text(obj, html=html)
+        if isinstance(obj, (list, tuple, set)):
+            return type(obj)(cls.clean_object(x) for x in obj)  # type: ignore
+        if isinstance(obj, dict):
+            return {key: cls.clean_object(value, html=html) for key, value in obj.items()}  # type: ignore
+        return obj
+
+
+    ###########################################################################
+    ## HTML export
 
     def print_relation_list(self, item: GlossItem, relation_type: Relation, direction: str, name: str) -> None:
         """Prints an html version of a list of related CCs, with links to these CCs."""
@@ -232,7 +265,7 @@ class CCDB:
 
         if len(relations) > 0:
             print(f'<tr><th>{name}</th> <td class="ccinfo relation">' +
-                    ' | '.join(map(self.convert_link_to_html, relations)) +
+                    ' | '.join(map(self.convert_link, relations)) +
                     '</td></tr>')
 
 
@@ -246,40 +279,24 @@ class CCDB:
         ]
 
         if parents or children:
-            print(f'<tr><th>{name}</th> <td class="ccinfo relation"> <table>')
+            print(f'<tr><th>{name}</th> <td class="ccinfo relation">')
             print('<table>')
             if parents:
                 print('<tr><td class="flex">')
                 for parent, rel in parents:
                     pre_text = '<i>(head)</i>' if rel == Relation.HeadOf else ''
-                    print(f'<span>{pre_text} {self.convert_link_to_html(parent)}</span>')
+                    print(f'<span>{pre_text} {self.convert_link(parent)}</span>')
                 print('</td></tr>')
             print('<tr><td>')
-            print(self.convert_link_to_html(item.Id, selfid=item.Id))
+            print(self.convert_link(item.Id, selfid=item.Id))
             print('</td></tr>')
             if children:
                 print('<tr><td class="flex">')
                 for child, rel in children:
                     pre_text = '<i>(head)</i>' if rel == Relation.HeadOf else ''
-                    print(f'<span>{pre_text} {self.convert_link_to_html(child)}</span>')
+                    print(f'<span>{pre_text} {self.convert_link(child)}</span>')
                 print('</td></tr>')
             print('</table></td></tr>')
-
-
-    @staticmethod
-    def clean_definition_html(definition: str) -> str:
-        """Standard HTML conversions."""
-        return (definition
-            .replace('</a> <a', '</a> <span class="separation"/> <a')
-            .replace('<dq>', '<q class="dq">').replace('</dq>', '</q>')
-            .replace('<sc>', '<span class="sc">').replace('</sc>', '</span>')
-            .replace('<b>', '<strong>').replace('</b>', '</strong>')
-            .replace('<i>', '<em>').replace('</i>', '</em>')
-            .replace('-->', '&rarr;')
-            .replace('& ', '&amp; ').replace('< ', '&lt; ').replace(' >', ' &gt;')
-            .replace('---', '\u2014') # em-dash
-            .replace('--', '\u2013') # en-dash
-        )
 
 
     def print_html(self) -> None:
@@ -310,7 +327,7 @@ class CCDB:
         print('<div id="glosses">')
         for id, item in glossitems:
             print(f'<div class="cc" id="{id}">')
-            print(f'<h2 class="name">{self.convert_link_to_html(id)} {self.convert_graphlink_to_html(id)}</h2>')
+            print(f'<h2 class="name">{self.convert_link(id)} {self.convert_graphlink_to_html(id)}</h2>')
             print(f'<table>')
 
             print(f'<tr><th>Id</th> <td class="ccinfo ccid">{id}</td></tr>')
@@ -320,7 +337,7 @@ class CCDB:
                 if entry:
                     _, _, entryname = entry.partition(":")
                     entryname = entryname.replace("-", " ")
-                    type = self.convert_link_to_html(entry, entryname)
+                    type = self.convert_link(entry, entryname)
                 elif item.Type == CCType.def_:
                     # Just a better alias for the HTML
                     type = 'definition'
@@ -332,7 +349,7 @@ class CCDB:
             aliases: list[str] = [item.Name] + item.Alias
             if aliases:
                 print('<th>Alias(es)</th> <td class="ccinfo name">' +
-                      ' | '.join(map(self.html_friendly_name, aliases)) +
+                      ' | '.join(map(self.convert_name, aliases)) +
                       '</td></tr>')
 
             self.print_relation_list(item, Relation.FunctionOf, "out", "Function of")
@@ -353,7 +370,7 @@ class CCDB:
 
             if id in self.definitions:
                 print('<tr><th>Definition</th> <td class="ccinfo definition">' +
-                      self.convert_definition_to_html(self.definitions[id]) +
+                      self.convert_definition(self.definitions[id]) +
                       '</td></tr>')
 
             if not item.FromGlossary:
@@ -368,62 +385,80 @@ class CCDB:
         print('</body></html>')
 
 
-    ###########################################################################
-    ## Export to a graph as Javascript objects
+    def convert_graphlink_to_html(self, id: str, html: bool = True) -> str:
+        """Convert a CC id into a HTML link to a graph containing just that CC."""
+        item = self.glosses[id]
+        if item.Type == CCType.def_:
+            # The definitions are not in any of the graphs, so don't return a link
+            return ""
+        return f'<a target="CC-graph" href="{GraphURL}#g={item.Type.value}&id={id}">{GraphSymbolUse}</a>'
 
-    def export_to_graph(self) -> None:
+
+    ###########################################################################
+    ## Export to JSON or Javascript objects
+
+    def export_to_json(self, args: argparse.Namespace) -> None:
         nodes: list[dict[str, object]] = []
         edges: list[dict[str, object]] = []
         for item in self.glosses.values():
-            node: dict[str, object] = {
-                "id": item.Id,
-                "name": self.html_friendly_name(item.Name),
-                "type": item.Type,
-            }
-            if item.Alias:
-                node["alias"] = item.Alias
-            if not item.FromGlossary:
-                node["notOriginal"] = True
-            if item.Id in self.definitions:
-                node["definition"] = self.convert_definition_to_html(self.definitions[item.Id])
+            node: dict[str, object] = {}
+            if "all" in args.keys:
+                args.keys = list(key for key, _ in item if key != "Relations")
+            for key in args.keys:
+                value = getattr(item, key)
+                if key == "Definition" and item.Id in self.definitions:
+                    value = self.convert_definition(self.definitions[item.Id], html=args.html)
+                if key == "Examples":
+                    value = [
+                        (ex.__dict__ if isinstance(ex, Example) else ex)
+                        for ex in value
+                    ]
+                if key == "FromGlossary":
+                    if not value:
+                        node["notOriginal"] = True
+                elif value:
+                    node[key.lower()] = self.clean_object(value, html=args.html)
             nodes.append(node)
-            for rel in item.Relations:
-                for target in item.Relations.get(rel, []):
+            if "all" in args.relations:
+                args.relations = list(Relation)
+            for rel in args.relations:
+                for target in item.Relations.get(Relation(rel), []):
                     edges.append({
                         "start": target,
                         "end": item.Id,
                         "rel": rel,
                     })
-        print("var DATA = {};")
-        print(f"DATA.version = {self.version!r};")
-        now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
-        print(f"DATA.builddate = {now!r};")
-        print(f"DATA.nodes = [")
         nodes.sort(key=lambda n: str(n['id']))
-        for n in nodes:
-            print(f"   {json.dumps(n)},")
-        print("];")
-        print(f"DATA.edges = [")
         edges.sort(key=lambda e: (e['start'], e['end'], e['rel']))
-        for e in edges:
-            print(f"   {json.dumps(e)},")
-        print("];")
+        data: dict[str, object] = {
+            "version": self.version,
+            "builddate": datetime.now().strftime("%Y-%m-%d, %H:%M:%S"),
+        }
+        if nodes:
+            data["nodes"] = nodes
+        if edges:
+            data["edges"] = edges
+        self.print_json(data, args)
 
-    ###########################################################################
-    ## Export to a JSON list of CCs
 
-    def export_to_json(self, keys: list[str]) -> None:
-        """Export the whole database as a JSON list with specified keys."""
-        cclist: list[dict[str, str]] = []
-        for id in sorted(self.glosses, key=str.casefold):
-            item: GlossItem = self.glosses[id]
-            cclist.append({
-                key: getattr(item, key) for key in keys
-            })
-        print(json.dumps({
-            'db-version': self.version,
-            'ccs': cclist,
-        }))
+    @staticmethod
+    def print_json(data: dict[str, object], args: argparse.Namespace):
+        if args.js_object:
+            print(f"var {args.js_object} = ", end="")
+        if args.compact:
+            print(json.dumps(data), end="")
+        else:
+            print("{")
+            for key, value in data.items():
+                if isinstance(value, list):
+                    print(f"    {json.dumps(key)}: [")
+                    for v in value:  # type: ignore
+                        print(f"        {json.dumps(v)},")
+                    print("    ],")
+                else:
+                    print(f"    {json.dumps(key)}: {json.dumps(value)},")
+            print("}", end="")
+        print(";" if args.js_object else "")
 
 
     ###########################################################################
@@ -473,8 +508,14 @@ class CCDB:
 parser = argparse.ArgumentParser(description='Parse the comparative concepts database and export it in different formats.')
 parser.add_argument('--quiet', '-q', action='store_true', help=f'suppress warnings')
 parser.add_argument('--format', '-f', choices=OutputFormats, help=f'export format')
-parser.add_argument('--keys', nargs='+', default=['Id'],
-                    help=f'keys to include in JSON output (for format "json"; default: only CC-Id)')
+parser.add_argument('--keys', '-k', nargs='+', default=['Id'],
+                    help=f'keys to include in JSON output, or "all" (default: only "Id")')
+parser.add_argument('--relations', '-r', nargs='*', default=[],
+                    help=f'relations to include in JSON output, or "all" (default: no relations)')
+parser.add_argument('--js-object', '-j', type=str,
+                    help=f'name Javascript object to store the data (default: output json)')
+parser.add_argument('--html', action='store_true', help=f'html in value strings (default: plain text)')
+parser.add_argument('--compact', action='store_true', help=f'compact JSON output (default: indented)')
 parser.add_argument('--keep-deleted', '-d', action='store_true', help=f'keep deleted terms')
 parser.add_argument('cc_database', type=Path, help='YAML database of comparative concepts')
 
