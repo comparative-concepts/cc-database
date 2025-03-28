@@ -178,16 +178,6 @@ class CCDB:
     ###########################################################################
     ## HTML export
 
-    def expand_link(self, id: str, name: str|None = None) -> str:
-        """Expand an abbreviated link "<a>name</a>" into the form "<a id>name</a>"."""
-        if name is None:
-            name = id
-        if id in self.glosses:
-            return f'<a {id}>{name}</a>'
-        else:
-            return f'<notfound><a {id}>{name}</a></notfound>'
-
-
     @staticmethod
     def html_friendly_name(name: str) -> str:
         """Make CC names (ids, aliases) html-friendly."""
