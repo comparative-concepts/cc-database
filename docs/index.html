@@ -8,7 +8,9 @@
 <body>
   If you are not redirected automatically, please follow this <a href="cc-database.html">link to the CC database</a>.
   <script>
-    window.location = window.location.href.replace("index.html", "cc-database.html");
+    const url = new URL(window.location.href);
+    url.pathname = url.pathname.replace(/[^/]*$/, "cc-database.html");
+    window.location = url.href;
   </script>
 </body>
 </html>
