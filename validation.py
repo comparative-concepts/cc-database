@@ -17,6 +17,7 @@ class CCType(str, Enum):
     sem = 'sem'
     inf = 'inf'
     def_ = 'def'
+    section = 'section'
 
 class Relation(str, Enum):
     SubtypeOf = 'SubtypeOf'
@@ -28,6 +29,7 @@ class Relation(str, Enum):
     RoleOf = 'RoleOf'
     HeadOf = 'HeadOf'
     FunctionOf = 'FunctionOf'
+    Sections = 'Sections'
 
 
 class Example(BaseModel):
@@ -43,12 +45,12 @@ class GlossItem(BaseModel):
     Id: str
     Name: str
     Type: CCType
-    Definition: str
+    Definition: str = ""
     FromGlossary: bool = True
     Status: str = ""
     Alias: list[str] = []
     Examples: list[str | Example] = []
-    Relations: dict[Relation, list[str]]
+    Relations: dict[Relation, list[str]] = {}
 
 Glosses = dict[str, GlossItem]
 
@@ -67,7 +69,7 @@ STRATEGY_TYPES = (
     'str:recruitment-strategy',
 )
 
-RELATION_CCTYPES = {
+RELATION_CCTYPES: dict[Relation, dict[CCType, CCType]] = {
     Relation.SubtypeOf:     {CCType.cxn:CCType.cxn, CCType.str:CCType.str, CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.ConstituentOf: {CCType.cxn:CCType.cxn, CCType.str:CCType.str, CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.ExpressionOf:  {CCType.str:CCType.cxn},
@@ -76,7 +78,8 @@ RELATION_CCTYPES = {
     Relation.AttributeOf:   {CCType.inf:CCType.inf, CCType.sem:CCType.sem},
     Relation.RoleOf:        {CCType.sem:CCType.sem},
     Relation.HeadOf:        {CCType.cxn:CCType.cxn},
-    Relation.FunctionOf:    {CCType.sem:CCType.cxn, CCType.inf:CCType.cxn}
+    Relation.FunctionOf:    {CCType.sem:CCType.cxn, CCType.inf:CCType.cxn},
+    Relation.Sections:      {CCType.cxn:CCType.section, CCType.str:CCType.section, CCType.inf:CCType.section, CCType.sem:CCType.section, CCType.section:CCType.section},
 }
 
 RELATION_KEYS = tuple(RELATION_CCTYPES.keys())
@@ -120,8 +123,29 @@ def parse_yaml_database(glossfile: str | Path, keep_deleted: bool = False) -> Gl
                 glosses[gitem.Id] = gitem
             except ValidationError as e:
                 error(f"while parsing {item.get('Id')!r}", str(e))
+    add_sections(glosses)
     report_errors_and_warnings("parsing the YAML database")
     return glosses
+
+
+BOOK_ID = "book"
+
+def add_sections(glosses: Glosses):
+    glosses[BOOK_ID] = GlossItem(Id=BOOK_ID, Name="Book", Type=CCType.section)
+    for item in list(glosses.values()):
+        for section in item.Relations.get(Relation.Sections, ()):
+            secparts = section.split(".")
+            for i in range(len(secparts)):
+                sec = ".".join(secparts[:i+1])
+                if sec not in glosses:
+                    secname = ("Section " if i > 0 else "Chapter ") + sec
+                    parent = ".".join(secparts[:i]) if i > 0 else BOOK_ID
+                    glosses[sec] = GlossItem(
+                        Id = sec,
+                        Name = secname,
+                        Type = CCType.section,
+                        Relations = {Relation.Sections: [parent]},
+                    )
 
 
 def convert_glossitem(item: dict[str, Any]) -> GlossItem:
@@ -234,6 +258,10 @@ def validate_codewords(item: GlossItem):
 def validate_consistent_name_and_id(item: GlossItem):
     id = item.Id
     name = item.Name.lower()
+    if item.Type is CCType.section:
+        if id != BOOK_ID and not re.match(r"^[0-9.]+$", id):
+            error("section unknown chars", f"{id!r} contains non-permitted chars")
+        return
     id_type, _, id_name = id.partition(":")
     if not re.match(r"^[a-z-]+$", id_name):
         error("id unknown chars", f"{id!r} contains non-permitted chars")
@@ -256,7 +284,7 @@ def validate_link_ids(item: GlossItem, glosses: Glosses):
     # check that ids exits
     for rel, relids in item.Relations.items():
         for relid in relids:
-            if relid and relid not in glosses:
+            if rel != "Sections" and relid and relid not in glosses:
                 error("missing id", f"id {relid!r} doesn't exist, refered to from {item.Id!r} relation {rel.value!r}")
 
 

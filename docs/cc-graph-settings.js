@@ -21,6 +21,7 @@ const COLORS = {
     Olive:      "#909000",  // #929000 (Aspargus)
     Brown:      "#a05000",  // #945200 (Mocha)
     Black:      "#000000",  // #000000 (Black)
+    White:      "#ffffff",  // #ffffff (White)
 };
 
 // Attributes for the different node types
@@ -30,6 +31,7 @@ SETTINGS.nodes = {
     str: {color: COLORS.Orange},
     sem: {color: COLORS.LightGray},
     inf: {color: COLORS.Yellow},
+    section: {color: COLORS.Black, font: {color: COLORS.White}},
 };
 
 // Attributes for the different edge types (relations)
@@ -44,6 +46,7 @@ SETTINGS.edges = {
     ModeledOn:     {name: "Model",       color: COLORS.Teal,  dashed: true, reversed: true},
     RecruitedFrom: {name: "Recruitment", color: COLORS.Olive, dashed: true, reversed: true},
     FunctionOf:    {name: "Function",    color: COLORS.Brown, dashed: true},
+    Sections:      {name: "Section",     color: COLORS.Black, dashed: true},
 };
 
 // Attributes for the different graphs
@@ -85,6 +88,12 @@ SETTINGS.graphs = {
         nodes: {cxn: true, inf: true, sem: true},
         edges: {SubtypeOf: true, ConstituentOf: true, HeadOf: true, FunctionOf: true},
     },
+    sections: {
+        name: "CCs by book section",
+        defaultrelation: "Sections",
+        nodes: {section: true, cxn: true, str: true, inf: true, sem: true},
+        edges: {Sections: true, SubtypeOf: true, ConstituentOf: true, HeadOf: true},
+    }
 };
 
 // General settings

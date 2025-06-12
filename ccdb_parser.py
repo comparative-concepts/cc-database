@@ -168,7 +168,7 @@ class CCDB:
         """Convert a CC link into plain text, or HTML with an actual link to the CC in the database."""
         if name is None:
             item = self.glosses[id]
-            name = self.convert_name(item.Name, item.Type.value, html=html)
+            name = self.convert_name(item.Name, getattr(item.Type, 'value', ''), html=html)
         else:
             name = self.convert_name(name, html=html)
         if not html:
