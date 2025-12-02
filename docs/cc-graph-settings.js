@@ -27,11 +27,11 @@ const COLORS = {
 // Attributes for the different node types
 // Currently supporting: color, border (default=color)
 SETTINGS.nodes = {
-    cxn: {color: COLORS.LightGreen},
-    str: {color: COLORS.Orange},
-    sem: {color: COLORS.LightGray},
-    inf: {color: COLORS.Yellow},
-    section: {color: COLORS.Black, font: {color: COLORS.White}},
+    cxn: {name: "Construction", color: COLORS.LightGreen},
+    str: {name: "Strategy", color: COLORS.Orange},
+    sem: {name: "Semantics", color: COLORS.LightGray},
+    inf: {name: "Information packaging", color: COLORS.Yellow},
+    section: {name: "Book section", color: COLORS.Black, font: {color: COLORS.White}},
 };
 
 // Attributes for the different edge types (relations)
@@ -46,58 +46,20 @@ SETTINGS.edges = {
     ModeledOn:     {name: "Model",       color: COLORS.Teal,  dashed: true, reversed: true},
     RecruitedFrom: {name: "Recruitment", color: COLORS.Olive, dashed: true, reversed: true},
     FunctionOf:    {name: "Function",    color: COLORS.Brown, dashed: true},
-    Sections:      {name: "Section",     color: COLORS.Black, dashed: true},
-};
-
-// Attributes for the different graphs
-// Currently supporting: name, defaultrelation, nodes, edges
-SETTINGS.graphs = {
-    cxn: {
-        name: "Constructions",
-        defaultrelation: "SubtypeOf",
-        nodes: {cxn: true},
-        edges: {SubtypeOf: true, ConstituentOf: true, HeadOf: true},
-    },
-    str: {
-        name: "Strategies",
-        defaultrelation: "SubtypeOf",
-        nodes: {str: true},
-        edges: {SubtypeOf: true, ConstituentOf: true},
-    },
-    sem: {
-        name: "Semantic CCs",
-        defaultrelation: "SubtypeOf",
-        nodes: {sem: true},
-        edges: {SubtypeOf: true, ConstituentOf: true, AttributeOf: true, RoleOf: true},
-    },
-    inf: {
-        name: "Information packaging",
-        defaultrelation: "SubtypeOf",
-        nodes: {inf: true},
-        edges: {SubtypeOf: true, ConstituentOf: true, AttributeOf: true},
-    },
-    cxn_str: {
-        name: "Cxn ↔︎ Strategies",
-        defaultrelation: "ExpressionOf",
-        nodes: {cxn: true, str: true},
-        edges: {SubtypeOf: true, ExpressionOf: true, ModeledOn: true, RecruitedFrom: true, ConstituentOf: true, HeadOf: true},
-    },
-    cxn_sem_inf: {
-        name: "Cxn ↔︎ Sem. + Inf.",
-        defaultrelation: "FunctionOf",
-        nodes: {cxn: true, inf: true, sem: true},
-        edges: {SubtypeOf: true, ConstituentOf: true, HeadOf: true, FunctionOf: true},
-    },
-    sections: {
-        name: "CCs by book section",
-        defaultrelation: "Sections",
-        nodes: {section: true, cxn: true, str: true, inf: true, sem: true},
-        edges: {Sections: true, SubtypeOf: true, ConstituentOf: true, HeadOf: true},
-    }
+    Sections:      {name: "Book section",color: COLORS.Black, dashed: true},
 };
 
 // General settings
 SETTINGS.general = {
+    nodes: {
+        label: "name",     // Which node attribute to put in the node label
+        title: "Concepts", // The title that will be printed before the checkboxes
+        default: ["cxn", "str", "sem", "inf"],
+    },
+    edges: {
+        title: "Relations",      // The title that will be printed before the checkboxes
+        default: ["SubtypeOf"],  // Which checkbox(es) should be checked by default
+    },
     info: {
         attribute: "definition",     // which attribute in DATA.nodes contains the on-hover information?
         unknown: "[no definition]",  // info to show if missing

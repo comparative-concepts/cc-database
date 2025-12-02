@@ -19,8 +19,8 @@
     <summary>Instructions</summary>
     <p>What the controls mean:</p>
     <ul>
-      <li><b>Graph</b>: Here you select one of six different graph types. When you have selected one, you can decide which relations you want to see.</li>
-      <li><b>Show</b>: Should the nodes show the ids or the names of the CCs?</li>
+      <li><b>Types</b>: Which node types you want to see.</li>
+      <li><b>Relations</b>: Which edge relations you want to see.</li>
       <li><b>Stabilize</b>: You can turn off the auto-stabilization here, or decide which algorithm it should use.</li>
       <li><b>Subgraph</b>: Here you can decide if you want to show just a part of the nodes in the graph (together with their relations).</li>
       <li><b>Selection</b>: Here you can select graph nodes in different ways.</li>
@@ -38,56 +38,52 @@
   </details>
 
   <menu>
-    <li><label><b>Graph:</b>
-      <select id="gvGraphType" onchange="selectGraph()">
-        <option value="" selected disabled>Select a graph</option>
-      </select>
-      </label> &nbsp;
-      <span id="gvRelations"></span>
+    <li id="gvTypes">
     </li>
-    <span class="flex-break"></span>
-    <li>
-      <label><b>Show:</b>
-        <select id="gvShow" onchange="changeSettings()">
-          <option value="name" selected>Names</option>
-          <option value="id">IDs</option>
-        </select>
-      </label>
+    <li id="gvRelations">
     </li>
+  </menu>
+  <menu>
     <li>
       <label><b>Stabilize:</b>
-        <input type="checkbox" id="gvStabilize" checked onchange="changeSettings()"/>
-      </label>
       <select id="gvSolver" onchange="changeSettings()">
         <option value="forceAtlas2Based" selected>Atlas2</option>
         <option value="repulsion">Repulsion</option>
         <option value="barnesHut">Barnes-Hut</option>
+          <option value="">No stabilization</option>
       </select>
+      </label>
     </li>
     <li>
-      <b>Subgraph:</b>
+      <label><b>Subgraph:</b>
       <button id="gvClearFilter" onclick="clearFilter()">clear</button>
-      &nbsp; grow:
+      </label>
+      <label>grow:
       <button id="gvGrowUpwards" onclick="revealNeighbors('from')">upwards</button>
       <button id="gvGrowDownwards" onclick="revealNeighbors('to')">downwards</button>
       <button id="gvGrowOutwards" onclick="revealNeighbors()">outwards</button>
-      &nbsp; remove:
+      </label>
+      <label>remove:
       <button id="gvHideUnselected" onclick="hideUnselected()">unselected</button>
       <button id="gvHideSelected" onclick="hideSelected()">selected</button>
+      </label>
     </li>
     <li>
-      <b>Selection:</b>
+      <label><b>Selection:</b>
       <button id="gvClearSelection" onclick="clearSelection()">clear</button>
       <button id="gvSelectVisible" onclick="selectVisible()">all visible</button>
       <button id="gvSelectUnconnected" onclick="selectUnconnected()">unconnected</button>
-      &nbsp; expand:
+      </label>
+      <label>expand:
       <button id="gvExpandUpwards" onclick="expandSelection('from')">upwards</button>
       <button id="gvExpandDownwards" onclick="expandSelection('to')">downwards</button>
       <button id="gvExpandOutwards" onclick="expandSelection()">outwards</button>
+      </label>
     </li>
     <li>
-      search:
+      <label><b>Search:</b>
       <input type="search" id="gvSearch" size="30" placeholder="Type at least 3 characters" oninput="searchNodes()"/>
+      </label>
     </li>
   </menu>
 
